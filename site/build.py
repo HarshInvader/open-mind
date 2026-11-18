@@ -180,18 +180,6 @@ def finding_card(f, link=True):
     return f'<li class="mini">{FG.finding_fig(f["n"])}<div><h3>{h}</h3><p>{md(f["gist"])}</p></div></li>'
 
 
-SIGNS = [  # the frieze: things this project studies, each in a 48-unit box
-    '<path d="M8 18h22v22H8zM18 8h22v22H18zM8 18l10-10M30 18l10-10M30 40l10-10M8 40l10-10"/>',  # Necker cube
-    '<path d="M2 24c3 0 3-5 6-5s3 10 6 10 3-10 6-10 3 10 6 10 3-5 6-5"/><path d="M34 24c4 0 4-12 7-12s3 24 7 24"/>',  # waking to slow waves
-    '<path d="M4 24C10 14 17 10 24 10S38 14 44 24C38 34 31 38 24 38S10 34 4 24Z"/><circle cx="24" cy="24" r="6"/>',  # seeing
-    '<path d="M31 7a17 17 0 1 0 11 29A14 14 0 0 1 31 7Z"/>',  # sleep
-    '<path d="M7 10h34v21H23l-8 8v-8H7z"/><path d="M15 20.5h2M23 20.5h2M31 20.5h2"/>',  # the report on waking
-    '<path d="M13 15h22M13 15l-6-6M13 15l-6 6M35 15l6-6M35 15l6 6M13 34h22M13 34l6-6M13 34l6 6M35 34l-6-6M35 34l-6 6"/>',  # an illusion
-    '<circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="3.5"/><path d="M24 12V4"/>',  # an electrode
-    '<path d="M2 26c5 0 5-16 11-16s5 30 11 30 6-22 11-22 6 8 11 8"/>',  # a slow wave
-]
-
-
 def page_index():
     d = F()
     n_found = len(d["findings"]) + len(d.get("closed", []))
@@ -205,7 +193,6 @@ def page_index():
             '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
             '<div class="actions"><a class="btn primary" href="contribute.html">Contribute</a><a class="btn" href="findings.html">Read the findings</a></div>'
             f'</div>{art}</section>')
-    band = CH.frieze(SIGNS, "A band of the signs of this project: a Necker cube, brain waves, an eye, the moon, a speech bubble, an illusion and an electrode")
     s1 = block("01", "The question", "h-question", "Nobody knows which brain activity makes an experience",
                '<div class="split"><div class="say">'
                "<p>You are having experiences right now: sights, sounds, thoughts. Each comes from activity in your brain, but nobody can say which activity.</p>"
@@ -233,7 +220,7 @@ def page_index():
     s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
                '<div class="say"><p>Point a Claude Fable or Opus class agent at an open task. Or bring data, or a careful eye.</p></div>'
                '<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>')
-    return hero + band + s1 + s2 + s3 + s4 + s5 + s6
+    return hero + s1 + s2 + s3 + s4 + s5 + s6
 
 
 # ---------------------------------------------------------------- findings
