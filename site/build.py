@@ -60,6 +60,7 @@ def md(s):
     """Tiny inline markup: **bold**, `code`."""
     s = re.sub(r"&quot;(.+?)&quot;", "\u201c\\1\u201d", E(s))
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", r'<a href="\2">\1</a>', s)  # [text](url)
     return re.sub(r"`(.+?)`", r"<code>\1</code>", s)
 
 
@@ -236,7 +237,7 @@ NOVELTY = {"new": ("New", "We know of no earlier report of this."),
            "known": ("Known", "Already reported by others; we re-tested it with stricter rules."),
            "tests": ("Tests a claim", "A published claim that we put to a test.")}
 TAGS = {"out": "Ruled out", "wait": "Can't test yet", "weak": "Weakened", "ns": "Not supported", "open": "Still open", "part": "Works in part"}
-KNOWN_FIGS = [FG.fig_two_questions, FG.fig_seen_missed, FG.fig_echo, FG.fig_covert, FG.fig_report]
+KNOWN_FIGS = [FG.fig_two_questions, FG.fig_seen_missed, FG.fig_levels, FG.fig_echo, FG.fig_covert, FG.fig_report]
 
 
 def meter(level):
@@ -344,13 +345,16 @@ def page_approach():
     raise_ = "".join(f"<li>{md(x)}</li>" for x in C["raise_odds"])
     out = head("Approach", "A theory counts as most accurate only if it explains the known facts and predicts data it never saw",
                "No theory has done this yet. " + md(C["approach_lede"]),
-               jump([("goal", "The goal"), ("rules", "Five rules"), ("traps", "Traps"), ("h-build", "Our own theory"), ("h-not", "Not claimed")]))
+               jump([("goal", "The goal"), ("rules", "Five rules"), ("traps", "Traps"), ("h-level", "Level"), ("h-build", "Our own theory"), ("h-not", "Not claimed")]))
     out += block("01", "Goal", "goal", "“Most accurate” means all eight of these tests are passed",
                  f'<ol class="crit">{crit}</ol>' + FG.odds_figure(C["odds"]) + f'<h3>What would raise the odds most</h3><ul class="mk">{raise_}</ul>',
                  C["criteria_intro"])
     out += block("02", "Rules", "rules", "Five rules stop a good-looking result from fooling us", FG.rules_figure(C["rules"]))
     out += block("03", "Traps", "traps", "Most measures can be fooled by sleepiness, small samples or flexible analysis",
                  '<div class="split"><div class="say">' + f'<ul class="mk">{traps}</ul></div><div class="figs">{FG.spectrum_figure()}</div></div>')
+    L = C["levels"]
+    lv = "".join(f"<li><strong>{E(a)}</strong> {md(b)}</li>" for a, b in L["points"])
+    out += block("04", "Level", "h-level", L["title"], f'<div class="split"><div class="say"><ul class="mk">{lv}</ul></div><div class="figs">{FG.fig_levels(ours=True)}</div></div>', L["intro"])
     bt = {t["title"][:2]: t for t in TASKS if re.match(r"B\d ", t["title"])}
     st = lambda k: {"done": ("Done", "ok"), "run": ("In progress", "warn"), "open": ("Open", "open")}[bt[k]["state"]] if k in bt else ("", "open")
     steps = [("Constraint ledger", "Every robust finding a true theory must explain, graded by evidence and backed by a checked source. Target: 40 or more.", *st("B1")),
@@ -358,11 +362,11 @@ def page_approach():
              ("Data-driven ingredients", f"On the {FG.num(FG.jload('experiments/ground_truth/counts.json')['l2_cases'])} report-labelled awakenings, held out by person and lab, find signals that predict reported experience beyond the spectrum.", *st("B3")),
              ("Our own theory", "One to three explicit theories: mechanism, necessary and sufficient conditions, three or more risky predictions no rival makes. Sealed by hash, argued against by rival agents.", *st("B4")),
              ("Test it like the others", "Run the sealed predictions on held-out data and on data released later (COGITATE experiment 2, INTREPID). Red team. Pass or fail goes on the scoreboard.", *st("B5"))]
-    out += block("04", "Build", "h-build", "Testing theories only shows which fail, so we are also building one",
+    out += block("05", "Build", "h-build", "Testing theories only shows which fail, so we are also building one",
                  FG.fig(FG.flow(steps, "Five steps from a list of facts to a tested theory"), "Five steps from the facts to a tested theory of our own",
                         "Status from the live task board, " + FG.code("board/board.db") + ". Plan: " + FG.code("docs/PLAN.md") + ", track B."),
                  "Any theory, ours included, is scored by agents who did not write it, may not be revised after its predictions are opened without a new hash and a new test, and goes into the list of closed routes if it fails.")
-    out += block("05", "Not claimed", "h-not", "Even a winning theory would not explain why experience exists", f'<ul class="mk">{nots}</ul>')
+    out += block("06", "Not claimed", "h-not", "Even a winning theory would not explain why experience exists", f'<ul class="mk">{nots}</ul>')
     return out
 
 

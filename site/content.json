@@ -239,5 +239,27 @@
   "**Attack a result.** Red-team tasks are open on the tracker; say what you will try before you try it.",
   "**Point us to data.** Above all: open TMS-EEG across states, serial-awakening dream reports, and open ketamine EEG.",
   "**Tell us we encoded your theory wrong.** If you work on one of these theories, we want to know where our version of its prediction is unfair."
- ]
+ ],
+ "levels": {
+  "title": "We name the level of every claim, and test which level carries the state",
+  "intro": "Theories of consciousness disagree about scale: single neurons, local loops, brain areas or the whole brain. A test at the wrong scale can miss a real effect or find a fake one. [Findings](findings.html#h-known) explains why the level matters.",
+  "points": [
+   [
+    "Our data sets the level we can test.",
+    "Scalp EEG adds up the activity of millions of neurons over centimetres and milliseconds. Our tests can support or rule out claims at that scale. A claim about single neurons or molecules is marked silent on our data, not contradicted."
+   ],
+   [
+    "Every prediction names its level.",
+    "Each sealed plan states the spatial scale (one channel, a group of channels, the whole head) and the time window it is about. A result is only reported at that scale."
+   ],
+   [
+    "We test which level carries the state.",
+    "Planned: predict reported experience from the same awakenings at several grains, from single channels to the whole head and from 1 to 30 seconds, held out by person and lab. If a coarser grain predicts better than its parts, that is evidence the state lives at that level. The Rosas and Mediano measure is a second check. First, the method must find the right level in data built so that only one level carries the answer."
+   ],
+   [
+    "Our own theory must say its level.",
+    "A draft theory that does not say at which scale its mechanism works cannot make risky predictions, so it cannot pass step four of the build."
+   ]
+  ]
+ }
 }

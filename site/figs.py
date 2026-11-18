@@ -414,3 +414,30 @@ def board_map(tasks, milestones):
            f'<span><i class="k open"></i>Open {n["open"]}</span></div>')
     return fig(f'<div class="bmap" role="img" aria-label="{E(lab)}">{rows}</div>{key}',
                f"{n['done']} of {len(tasks)} tasks done, {n['open']} open to take", "Data: the live task board, " + code("board/board.db") + ", one tile per task.")
+
+
+def fig_levels(ours=False):
+    """Findings 01 (known, third item) and Approach 04: the ladder of scales, with where each approach looks.
+    Placements are the theories' own stated scales; EEG's scale is physics (summed activity of many neurons)."""
+    rungs = ["Whole-brain activity", "Brain areas", "Local circuits", "Single neurons", "Synapses", "Molecules"]
+    tags = {0: ("EEG, PCI" + (", our tests" if ours else ""), True), 1: ("Workspace theory", False),
+            2: ("Recurrent processing theory", False), 5: ("Where anaesthetics act", False)}
+    top, gap = 22, 30
+    body = '<path d="M30 %d V%d" class="s-line"/>' % (top, top + gap * 5)
+    for i, r in enumerate(rungs):
+        y = top + i * gap
+        acc = tags.get(i, ("", False))[1]
+        body += f'<circle cx="30" cy="{y}" r="{5.5 if acc else 4.5}" class="{"f-acc" if acc else "card"}"/>' + T(44, y + 4, r, "t-b" if acc else "t")
+        if i in tags:
+            body += f'<path d="M188 {y} H196" class="s-mute"/>' + T(200, y + 4, tags[i][0], "t-s acc" if acc else "t-s")
+    # integrated information theory: it looks for the level itself (where integrated information peaks)
+    body += (f'<path d="M12 {top} V{top + gap * 5}" class="s-acc arr2"/>' + f'<path d="M8 {top + 6} L12 {top} L16 {top + 6}" class="s-acc"/>'
+             + f'<path d="M8 {top + gap * 5 - 6} L12 {top + gap * 5} L16 {top + gap * 5 - 6}" class="s-acc"/>'
+             + T(12, top + gap * 5 + 30, "Double arrow: integrated information theory.", "t-s acc")
+             + T(12, top + gap * 5 + 44, "Experience sits at whichever level carries the", "t-s")
+             + T(12, top + gap * 5 + 58, "most integrated information, so it must be found.", "t-s"))
+    src = ("Illustration. Placements follow each theory's own account; the level search is from Hoel, Albantakis, Marshall and Tononi, 2016.")
+    return fig(svg("0 0 360 236", body, "Illustration: a ladder of scales from molecules to whole-brain activity. EEG and PCI measure whole-brain activity, "
+                   "workspace theory works with brain areas, recurrent processing theory with local circuits, and anaesthetics act on molecules. "
+                   "Integrated information theory says the right level must be found."),
+               "Each theory, and each measure, looks at its own level", src)

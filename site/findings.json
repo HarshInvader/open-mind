@@ -20,6 +20,16 @@
    ]
   },
   {
+   "h": "Every study picks a level of explanation, often without saying so",
+   "paras": [
+    "Water can be described as molecules bumping into each other or as a flowing fluid. Both descriptions are true. To understand how a wave breaks you use fluid dynamics; tracking every molecule would not help. In 1972 the physicist Philip Anderson made the general point in [More is different](https://doi.org/10.1126/science.177.4047.393): knowing the laws of the parts does not give you the laws of the whole.",
+    "The brain has the same choice of levels: molecules, synapses, single neurons, local circuits, brain areas and whole-brain activity, each over milliseconds to seconds. The search for neural correlates usually works at the level of brain areas and moments in time. That is a choice, and a correlate found at one level can disappear or change at another.",
+    "Which level is right can be studied. In 2013 Erik Hoel, Larissa Albantakis and Giulio Tononi showed in simple model systems that a coarser description can carry more cause-and-effect information than the finer one beneath it: [macro can beat micro](https://doi.org/10.1073/pnas.1314922110). In 2016 the same group, with William Marshall, found the same for integrated information, which can [peak at a coarser level](https://doi.org/10.1093/nc/niw012). For integrated information theory the level of experience is where that peak falls, so it has to be found, not assumed.",
+    "The wrong level can mislead even with plenty of data. In 2017 Eric Jonas and Konrad Kording applied standard neuroscience analyses to a classic microprocessor whose workings are fully known. The analyses found structure in the data but [did not reveal how the chip processes information](https://doi.org/10.1371/journal.pcbi.1005268).",
+    "In 2020 Fernando Rosas, Pedro Mediano and colleagues gave a way to [measure, from recorded data](https://doi.org/10.1371/journal.pcbi.1008289), whether a large-scale feature predicts a system's future beyond what its parts do, and applied it to recordings from the brain surface. That turns \"which level?\" into something we can test."
+   ]
+  },
+  {
    "h": "Consciousness can be switched off, and measured at the bedside",
    "paras": [
     "Dreamless sleep, general anaesthesia and coma all take consciousness away while the brain stays active. That makes them natural test cases.",
