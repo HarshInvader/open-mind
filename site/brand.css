@@ -18,10 +18,8 @@
   --chart: #12151A; --grid: #1C2229; --grid-b: #29313A; --glow: #E5A54B; --glow-soft: rgb(229 165 75 / 0.11); --trace: #4A525E;
   color-scheme: dark; }
 
-/* divider: a brain-wave trace that runs from waking ripples into slow sleep waves */
-main section + section::before { background: var(--trace); height: 16px;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 169 16'%3E%3Cpath d='M0 8l3-3 3 6 3-5 3 4 3-4 3 5 3-6 3 5 3-3 3 3 4-4 4 5 4-5 4 4 5-3 6 3c8 0 8-6 16-6s8 12 16 12 8-12 16-12 8 12 16 12 8-6 16-6' fill='none' stroke='%23000' stroke-width='1.4' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 169px 16px;
-          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 169 16'%3E%3Cpath d='M0 8l3-3 3 6 3-5 3 4 3-4 3 5 3-6 3 5 3-3 3 3 4-4 4 5 4-5 4 4 5-3 6 3c8 0 8-6 16-6s8 12 16 12 8-12 16-12 8 12 16 12 8-6 16-6' fill='none' stroke='%23000' stroke-width='1.4' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 169px 16px; }
+/* divider: a plain hairline between sections */
+main section + section::before { height: 1px; background: var(--line); }
 
 /* list marker: an EEG electrode, a ring with a contact in the middle */
 main ul.mk > li::before { width: 10px; height: 10px; border-radius: 50%; top: 0.5em;
