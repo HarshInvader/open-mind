@@ -1,0 +1,421 @@
+{
+  "title": "What we know about consciousness",
+  "lede": "What thirty-five years of brain science have established, what is still argued over, which approaches have been tried, and what our own tests add so far.",
+  "known_title": "What scientists agree on",
+  "known": [
+    {
+      "h": "Two questions: are you conscious, and of what",
+      "paras": [
+        "In this science, \"consciousness\" means experience: there is something it is like to be you right now. It does not mean intelligence or self-awareness.",
+        "Researchers split it into two questions. The first is whether someone is conscious at all, as in waking versus deep sleep. This is often called the **level** or **state** of consciousness. The second is what they are conscious of, such as a face, a sound or a dream. This is the **content**.",
+        "Clinicians make a related split. In 2005 Steven Laureys described wakefulness and awareness as two separate parts. A patient in a vegetative state is awake but shows no awareness."
+      ]
+    },
+    {
+      "h": "The search for the brain activity that goes with experience",
+      "paras": [
+        "In 1990 Francis Crick and Christof Koch published \"Towards a neurobiological theory of consciousness\". The research programme that followed set out to find the **neural correlates of consciousness**: the minimum brain mechanisms that are enough for a specific experience.",
+        "The usual method compares two cases where the input stays the same but the experience changes. A picture flashed briefly is sometimes seen and sometimes missed. Whatever differs in the brain between \"seen\" and \"missed\" is a candidate correlate.",
+        "This approach is now standard. In 2016 Koch, Marcello Massimini, Melanie Boly and Giulio Tononi reviewed its progress. They also listed several candidate markers that had turned out to be illusory."
+      ]
+    },
+    {
+      "h": "Consciousness can be switched off, and measured at the bedside",
+      "paras": [
+        "Dreamless sleep, general anaesthesia and coma all take consciousness away while the brain stays active. That makes them natural test cases.",
+        "In 2005 Massimini and colleagues tapped the brain with a magnetic pulse (TMS) and recorded the response with EEG. Awake, the response travelled to connected areas several centimetres away. In non-REM sleep it stayed local and died out quickly.",
+        "In 2013 Adenauer Casali and colleagues turned this into a score, the **perturbational complexity index (PCI)**. It measures how rich and hard to compress the brain's echo is. It separated waking from non-REM sleep and anaesthesia in single people.",
+        "In 2016 Silvia Casarotto and colleagues set a cutoff using 150 people whose state was known from their own reports. That cutoff caught 94.7% of minimally conscious patients. It also placed 9 of 43 patients diagnosed as vegetative in the range of conscious people."
+      ]
+    },
+    {
+      "h": "Some patients who cannot move are aware",
+      "paras": [
+        "In 2006 Adrian Owen and colleagues scanned a woman diagnosed as vegetative. When asked to imagine playing tennis or walking around her home, her brain activated the same areas as healthy volunteers.",
+        "In 2010 Martin Monti and colleagues ran the same tasks on 54 patients. Five could change their brain activity on request. One answered yes-or-no questions this way in the scanner, but no form of communication could be set up at the bedside.",
+        "In 2024 Yelena Bodien and colleagues tested 353 patients at six centres. Among the 241 who showed no response to commands, 60 (25%) performed a mental task on fMRI or EEG. Behaviour alone underestimates awareness."
+      ]
+    },
+    {
+      "h": "Report is the only window, and it is not perfect",
+      "paras": [
+        "Experience is private. The only direct evidence of what someone experiences is what they tell us, by speaking, pressing a button or answering after waking.",
+        "That creates a problem. Brain activity that goes with a report may come from the act of reporting, not from the experience. In 2015 Naotsugu Tsuchiya, Melanie Wilke, Stefan Frässle and Victor Lamme argued that this has biased the field. They called for **no-report** designs, where people see things without having to report them.",
+        "For sleep and anaesthesia, the best available evidence is a report given afterwards. People are woken and asked what, if anything, was going through their mind. Our project uses that delayed report as its ground truth, not behaviour and not the EEG."
+      ]
+    }
+  ],
+  "disputed": [
+    {
+      "h": "Why is there experience at all?",
+      "paras": [
+        "In 1995 the philosopher David Chalmers separated the \"easy problems\" of consciousness from the \"hard problem\". The easy problems ask how the brain tells stimuli apart, reports its own states and controls behaviour. The hard problem asks why any of that is accompanied by experience.",
+        "No experiment has settled the hard problem, and none of the tests on this site try to. They ask a narrower question: can brain data tell whether, and what, someone is experiencing?"
+      ]
+    },
+    {
+      "h": "Front or back of the brain?",
+      "paras": [
+        "One camp holds that experience depends mainly on the back of the cortex, a \"posterior hot zone\" that includes sensory areas. The other holds that the prefrontal cortex is needed.",
+        "In 2017 the Journal of Neuroscience printed the two sides together. Boly, Massimini, Tsuchiya, Bradley Postle, Koch and Tononi argued for the back. Brian Odegaard, Robert Knight and Hakwan Lau asked whether a few null results should be enough to rule out the front.",
+        "The large COGITATE study (2025) did not end the argument. It found information about what people saw in visual and temporal areas, and also in inferior frontal cortex."
+      ]
+    },
+    {
+      "h": "Are there \"levels\" of consciousness?",
+      "paras": [
+        "Doctors and scientists often talk about a single level of consciousness that goes up and down, from coma to full alertness.",
+        "In 2016 Tim Bayne, Jakob Hohwy and Adrian Owen argued that this picture does not hold up. States such as sleep, sedation and brain injury, they said, differ along several dimensions at once. A single number could hide those differences.",
+        "This matters for us. If there is no single level, no one measure should be expected to rank every state correctly."
+      ]
+    },
+    {
+      "h": "Is integrated information theory science?",
+      "paras": [
+        "In September 2023 a group of researchers posted an open letter calling integrated information theory (IIT) pseudoscience. It followed press coverage that described IIT as a leading, tested theory.",
+        "In 2025 a follow-up in Nature Neuroscience argued that the theory's core claims cannot be tested, even in principle.",
+        "Underneath is a broader question: what counts as a fair test of any theory of consciousness? That is why we judge every theory only by predictions sealed before the data are opened."
+      ]
+    },
+    {
+      "h": "Could an AI be conscious?",
+      "paras": [
+        "In 2023 Patrick Butlin, Robert Long and 17 co-authors derived \"indicator properties\" from several brain theories and checked several AI systems against them. They concluded that no current AI system was conscious. They also saw no obvious technical barrier to building one that meets the indicators.",
+        "That approach assumes the right computation is what matters. IIT disagrees: it ties experience to the physical cause-and-effect structure of a system, not to the software it runs. So the theories can give opposite answers for the same machine.",
+        "There is no agreed test. An AI saying it feels something is not evidence, because it was trained on human text that says so."
+      ]
+    }
+  ],
+  "tried_intro": "The major approaches since the 1990s, what each tried, and what happened. Most are still open or work only in part. **Works in part** means it does some of what it claims. **Weakened** means a later result cut into it. **Still open** means no decisive test yet.",
+  "tried": [
+    {
+      "approach": "Find the brain activity that goes with experience",
+      "who": "Francis Crick and Christof Koch, then most of the field",
+      "when": "1990 onwards",
+      "idea": "Compare brain activity when the same input is seen and when it is missed. The difference should point to the activity behind experience.",
+      "outcome": "It produced many reliable differences between seen and unseen. But a 2016 review by Koch and colleagues found that several markers had proved illusory, and many may reflect reporting rather than experience.",
+      "status": "part"
+    },
+    {
+      "approach": "Global workspace theory",
+      "who": "Bernard Baars; Stanislas Dehaene and Jean-Pierre Changeux",
+      "when": "1988 onwards; brain model 1998",
+      "idea": "Most processing is unconscious and local. Something becomes conscious when it is broadcast across a brain-wide network, with a sudden \"ignition\" of activity in frontal and parietal areas.",
+      "outcome": "It explains a great deal of lab data on seeing versus missing a stimulus. In the COGITATE test (2025) one of its key predictions failed: the expected frontal flare-up when a picture disappeared was mostly absent. Two 2026 reanalyses of the same data lean back towards it.",
+      "status": "part"
+    },
+    {
+      "approach": "The P3b brain wave as a sign of conscious access",
+      "who": "Claire Sergent, Stanislas Dehaene, Jean-Pierre Changeux and others; challenged by Michael Pitts, Stephen Metzler and Steven Hillyard",
+      "when": "2005 to 2011; challenged 2014",
+      "idea": "In 2005 Sergent and colleagues found that from about 270 ms after a word appeared, a late wave of brain activity followed only words people saw. The P3b, a large EEG wave peaking around 0.4 s, became a leading proposed marker of the moment something becomes conscious.",
+      "outcome": "When people saw a stimulus but did not need to report it, the P3b was absent (Pitts and colleagues, 2014). An earlier wave at the back of the head, at about 200-240 ms, remained. So the P3b seems tied to reporting, not to seeing itself.",
+      "status": "weak"
+    },
+    {
+      "approach": "No-report experiments",
+      "who": "Naotsugu Tsuchiya, Melanie Wilke, Stefan Frässle, Victor Lamme and others",
+      "when": "2010s onwards",
+      "idea": "Separate the activity behind an experience from the activity behind reporting it, by designing tasks where people see things without being asked about them.",
+      "outcome": "They removed some candidate markers, such as the P3b. But without a report, experimenters must infer what was seen in other ways, and that inference can be questioned.",
+      "status": "part"
+    },
+    {
+      "approach": "Integrated information theory (IIT) and Φ",
+      "who": "Giulio Tononi; version 4.0 by Larissa Albantakis, Tononi and colleagues",
+      "when": "2004; IIT 4.0 in 2023",
+      "idea": "Start from what experience is like and derive what a physical system must be like to have it. The amount of consciousness is a quantity, **Φ (phi)**: how much a system's causes and effects cannot be split into independent parts.",
+      "outcome": "Φ cannot be computed for a brain. The reference software, PyPhi, takes time that grows exponentially with size, which limits exact answers to about 10-12 elements. So only rough stand-ins can be tested. In COGITATE, IIT's prediction of sustained synchrony at the back of the brain was not found.",
+      "status": "open"
+    },
+    {
+      "approach": "Stand-ins for Φ from ordinary brain recordings",
+      "who": "André Nilsen, Alessandro Arena and Johan Storm; Andrea Luppi and colleagues",
+      "when": "2024; 2026",
+      "idea": "Estimate integrated information from EEG or fMRI and check that it falls when consciousness is lost.",
+      "outcome": "The stand-ins disagree. In rats, integration estimates from spontaneous EEG generally **rose** under propofol and sevoflurane. In fMRI across humans, monkeys, marmosets and mice, integration **broke down** under anaesthesia. Which way a proxy moves depends on the method.",
+      "status": "weak"
+    },
+    {
+      "approach": "Recurrent processing theory",
+      "who": "Victor Lamme and Pieter Roelfsema",
+      "when": "2000 onwards",
+      "idea": "A first fast sweep of activity through the visual system is unconscious. Seeing begins when later areas feed signals back to earlier ones. No frontal broadcast is needed.",
+      "outcome": "The seen-but-unreported wave at the back of the head (Pitts 2014) fits it. But Pitts and colleagues note it might reflect attention to objects instead. We found no large adversarial test of it with published results.",
+      "status": "open"
+    },
+    {
+      "approach": "Higher-order theories",
+      "who": "David Rosenthal; Hakwan Lau; Richard Brown, Lau and Joseph LeDoux",
+      "when": "2011 review; 2019 review",
+      "idea": "A state is conscious when the brain also represents itself as being in that state. This points to the prefrontal cortex and to confidence judgements.",
+      "outcome": "Lau and Rosenthal (2011) reviewed supporting evidence and defended the view against critics. It was not one of the two theories tested in COGITATE. We could not confirm reports that a large adversarial test of it is running.",
+      "status": "open"
+    },
+    {
+      "approach": "Predictive processing",
+      "who": "Jakob Hohwy, Anil Seth, Karl Friston and others",
+      "when": "2010s onwards",
+      "idea": "The brain constantly predicts its input. What we experience is the brain's best guess, shaped by those predictions.",
+      "outcome": "It is a broad framework, which makes sharp tests hard. The INTREPID collaboration published its agreed plan in May 2026, pitting IIT against two predictive theories. No results yet.",
+      "status": "open"
+    },
+    {
+      "approach": "Attention schema theory",
+      "who": "Michael Graziano and Taylor Webb",
+      "when": "2015",
+      "idea": "The brain keeps a simplified model of its own attention, as it keeps a model of the body. That model is what leads us to say we have experience.",
+      "outcome": "It predicts that attention can work without awareness but will be poorly controlled. Its authors say some evidence fits. We found no large pre-registered test of it.",
+      "status": "open"
+    },
+    {
+      "approach": "Dendritic integration theory",
+      "who": "Jaan Aru, Mototaka Suzuki and Matthew Larkum",
+      "when": "2020",
+      "idea": "Consciousness depends on large cortical neurons joining signals from below (the senses) and from above (the rest of the cortex) in their long branches.",
+      "outcome": "In mice, three different anaesthetics cut the link between the top branches and the cell body of these neurons (Suzuki and Larkum, 2020). The work is mostly in animals, and the theory's predictions for human EEG are not yet tested.",
+      "status": "open"
+    },
+    {
+      "approach": "Quantum consciousness (Orch-OR)",
+      "who": "Stuart Hameroff and Roger Penrose",
+      "when": "mid-1990s; review 2014",
+      "idea": "Quantum states in microtubules, tiny tubes inside neurons, collapse in a specific way proposed by Lajos Diósi and Penrose. Each collapse would be a moment of experience.",
+      "outcome": "In 2000 Max Tegmark calculated that such quantum states would decay in 10^-13 to 10^-20 s, far faster than neurons act. In 2021 an experiment under the Gran Sasso mountain ruled out the simplest, parameter-free version of the Diósi-Penrose collapse. In 2024 a microtubule-stabilising drug delayed anaesthetic knockout in rats by 69 s on average. That fits a role for microtubules but does not test the quantum part. No experiment has shown quantum coherence tied to experience.",
+      "status": "weak"
+    },
+    {
+      "approach": "COGITATE: two theories tested head to head",
+      "who": "Cogitate Consortium",
+      "when": "Published April 2025",
+      "idea": "Proponents of global workspace theory and IIT agreed in advance which results would count against each theory. Then 256 people viewed pictures while scanned with fMRI (120), MEG (102) or electrodes in the brain (34).",
+      "outcome": "Neither theory won. IIT was challenged by the lack of sustained synchrony at the back of the brain. Global workspace theory was challenged by the general lack of a frontal flare-up when a picture disappeared.",
+      "status": "part"
+    },
+    {
+      "approach": "Reanalyses of the COGITATE data",
+      "who": "Kavindu Bandara, Elise Rowe and Marta Garrido; Annie Bryant and Christopher Whyte",
+      "when": "2026",
+      "idea": "Analyse the same public recordings with different methods.",
+      "outcome": "Bandara and colleagues (a preprint, not peer reviewed) found the frontal flare-up at both picture onset and offset, which the original analysis missed. Bryant and Whyte tried 246 connectivity measures and gave tentative support to global workspace theory. The conclusion depends on the method chosen.",
+      "status": "open"
+    },
+    {
+      "approach": "Perturbational complexity index (PCI)",
+      "who": "Adenauer Casali, Silvia Casarotto, Marcello Massimini and colleagues",
+      "when": "2013; validated 2016",
+      "idea": "Tap the brain with a magnetic pulse and measure how complex the EEG echo is. A conscious brain should give a rich, hard-to-compress response.",
+      "outcome": "The best-validated measure so far. A cutoff set in 150 people who could report gave perfect separation in that group, then caught 94.7% of minimally conscious patients. It needs TMS equipment, and we found no open dataset of this kind.",
+      "status": "part"
+    },
+    {
+      "approach": "Predicting PCI from resting EEG",
+      "who": "Charlotte Maschke, Stefanie Blain-Moraes and colleagues; Derek Newman and colleagues",
+      "when": "2024; 2026",
+      "idea": "If ordinary resting EEG could stand in for the magnetic-pulse test, many more patients and datasets could be checked.",
+      "outcome": "In 15 healthy adults under three anaesthetics, it predicted PCI closely. In 26 brain-injured patients (a 2026 preprint), the prediction did not hold across the whole group, only in subgroups.",
+      "status": "part"
+    },
+    {
+      "approach": "Signal complexity and the \"entropic brain\"",
+      "who": "Michael Schartner, Robin Carhart-Harris, Anil Seth and colleagues",
+      "when": "2014 onwards",
+      "idea": "Conscious brains produce varied, hard-to-compress signals. Lempel-Ziv complexity, a compression score, should fall in anaesthesia and rise under psychedelics.",
+      "outcome": "Complexity fell under propofol (2015) and rose above normal waking under ketamine, LSD and psilocybin (2017). But in 2025 Maschke and colleagues showed, in 303 patients, that the score largely tracked a simpler property of the signal: how fast power falls with frequency (r = 0.86). Once that was controlled, its diagnostic value vanished.",
+      "status": "weak"
+    },
+    {
+      "approach": "The slope of the EEG spectrum",
+      "who": "Michele Colombo, Marcello Massimini, Simone Sarasso and colleagues",
+      "when": "2019",
+      "idea": "How fast EEG power falls off with frequency, the spectral exponent, may itself mark whether consciousness is present.",
+      "outcome": "It separated waking and ketamine from xenon and propofol, and correlated strongly with PCI. The study had 5 people per drug. It is the simple baseline every fancier measure now has to beat.",
+      "status": "part"
+    },
+    {
+      "approach": "EEG classifiers for brain-injured patients",
+      "who": "Jacobo Sitt, Denis Engemann and colleagues",
+      "when": "2014; 2018",
+      "idea": "Combine many EEG markers in a machine-learning classifier to tell vegetative from minimally conscious patients.",
+      "outcome": "Sitt and colleagues screened markers in 181 recordings. Engemann and colleagues used 327 patient recordings and 66 controls and reached an AUC of 0.73 to 0.78 across sites (1.0 is perfect, 0.5 is chance). Useful, but far from a bedside verdict.",
+      "status": "part"
+    },
+    {
+      "approach": "Reading dreams from the sleeping brain",
+      "who": "Horikawa, Kamitani and colleagues; Francesca Siclari, Giulio Tononi and colleagues; the DREAM database team",
+      "when": "2013; 2017; 2025",
+      "idea": "Wake sleepers, ask what they experienced, and see whether the brain activity just before predicts the report.",
+      "outcome": "Horikawa decoded the content of sleep-onset imagery from fMRI (2013). Siclari found less slow activity at the back of the head before dream reports, and used it to predict them live. The DREAM database (2025) pooled 505 people and 2,643 awakenings from 20 studies. In the six datasets it analysed, EEG predicted dream versus no dream only weakly: mean AUC 0.586 in non-REM sleep and 0.700 in REM.",
+      "status": "part"
+    },
+    {
+      "approach": "Ketamine: unresponsive but dreaming",
+      "who": "Simone Sarasso, Marcello Massimini and colleagues",
+      "when": "2015",
+      "idea": "Find a case where behaviour and experience come apart, and see which measures follow experience.",
+      "outcome": "Under ketamine, 18 volunteers' brains gave a wake-like response to the magnetic pulse, and afterwards people reported long, vivid dreams. Propofol and xenon gave neither. The key later analyses (2019, 2024) reuse the same small group of volunteers, so this rests on one cohort.",
+      "status": "open"
+    },
+    {
+      "approach": "Dreaming under sedation",
+      "who": "Imad Bajwa, André Nilsen, Johan Storm, Bjørn Juel and colleagues",
+      "when": "2025",
+      "idea": "Sedate volunteers with propofol, wake them, and ask whether they experienced anything. Do complexity measures follow the reports?",
+      "outcome": "Both PCI and EEG complexity fell with sedation. Neither told \"I was dreaming\" from \"nothing\" within sedation. Only 5 awakenings gave a clear \"nothing\", so only a large difference could have been detected.",
+      "status": "open"
+    },
+    {
+      "approach": "Indicators of consciousness in AI",
+      "who": "Patrick Butlin, Robert Long and colleagues",
+      "when": "2023 report; peer-reviewed method 2026",
+      "idea": "Derive indicator properties from brain theories, then check an AI system's internal workings against them, rather than trusting what it says.",
+      "outcome": "The 2023 report found no current AI system conscious but no obvious barrier to building one that meets the indicators. The verdict depends on which theories are right, which is exactly what is unsettled.",
+      "status": "open"
+    }
+  ],
+  "ours_intro": "So far these are measurements of the ground we stand on, not tests of a theory. The first sealed tests are running. Each result appears here once it lands, whichever way it goes.",
+  "findings": [
+    {
+      "n": 1,
+      "level": "descriptive",
+      "novelty": "partly",
+      "head": "Open data with reports covers sleep and anaesthesia, not brain injury",
+      "gist": "We looked for open brain recordings where people later said whether they had experienced anything. We found them for sleep and anaesthesia. We found none for brain-injured patients and none for ketamine.",
+      "title": "Open, report-graded EEG exists for 2 of the 3 families our goal requires",
+      "plain": "Seven open datasets meet our rules: three from anaesthesia and four from sleep. No fully open EEG set for disorders of consciousness was found. The only set with reports after ketamine is restricted. Our own goal asked for three families, so it fails as written and needs rescoping. The DREAM database alone gives about 2,000 open awakenings with reports, enough to compare dream and no-dream within one sleep stage.",
+      "prior": "The DREAM team (Wong and colleagues, 2025) pooled the sleep data. New here: a check of all three families against the same openness and size rules.",
+      "nums": "7 qualifying datasets, 2 families. DREAM records table: 3,191 awakenings (1,953 experience, 860 no experience, 316 without recall); within stage, e.g. Tononi N2 344 vs 309, LODE 118 vs 58",
+      "caveat": "No EEG was downloaded yet, so channel quality and event timing are unchecked. OpenNeuro's search returned nothing to an anonymous query, so other anaesthesia or ketamine sets may have been missed.",
+      "folders": [
+        "experiments/dataset_audit"
+      ]
+    },
+    {
+      "n": 2,
+      "level": "descriptive",
+      "novelty": "partly",
+      "head": "The ketamine evidence is one small group of people",
+      "gist": "Three well-known papers show that measures follow experience under ketamine. All three use the same volunteers, so they count as one result, not three.",
+      "title": "Sarasso 2015, Colombo 2019 and Maschke 2024 share one propofol-xenon-ketamine cohort",
+      "plain": "Ketamine is the classic case where people stop responding but report vivid dreams afterwards. The PCI result, the spectral-slope result and the criticality result all draw on the same Milan and Liège volunteers. Under our rules, data from the same lab is a near-copy. An independent ketamine dataset with reports is needed.",
+      "prior": "Each paper states where its data came from. New here: counting them as one cohort when weighing the evidence.",
+      "nums": "Colombo 2019: 5 per drug; Maschke 2024: 15 subjects, 5 per drug; Sarasso 2015: 18 volunteers",
+      "folders": [
+        "experiments/research_sweep"
+      ]
+    },
+    {
+      "n": 3,
+      "level": "descriptive",
+      "novelty": "known",
+      "head": "Splitting by time slices instead of by person fakes a result",
+      "gist": "We built fake data with no real effect. Training and testing on slices from the same people made it look strong. Splitting by person made it look like chance, as it should.",
+      "title": "An epoch-level split inflates AUC from chance to 0.92 on data with no state effect",
+      "plain": "If slices of one person's recording land in both training and test sets, a classifier can learn to recognise the person instead of the state. Our checking toolkit flagged this every time. It also caught a subject re-uploaded under a new name, the same lab on both sides of a transfer test, and a pre-registration edited after sealing.",
+      "prior": "This kind of leakage is well known in machine learning. New here only as a check that our own tools catch it.",
+      "nums": "Leaked split: AUC 0.92, flagged in 5 of 5 folds. Subject split: AUC 0.63 (one draw; the spread for 10 vs 10 subjects is about 0.13). 20 synthetic subjects × 30 epochs",
+      "caveat": "Synthetic data only. The fingerprint check catches exact or rescaled copies, not re-filtered or re-referenced copies of the same recording.",
+      "folders": [
+        "experiments/rules"
+      ]
+    },
+    {
+      "n": 4,
+      "level": "descriptive",
+      "novelty": "new",
+      "head": "About 2,400 open test cases where sleep and experience can disagree, all from sleep",
+      "gist": "We labelled every recording in the open datasets by what tells us the person's experience. 2,417 are awakenings from sleep followed by a report of experience or no experience. None comes from anaesthesia.",
+      "title": "2,417 open delayed-report (L2) cases exist, all of them DREAM sleep awakenings",
+      "plain": "An L2 case is an awakening where the person was asleep, so unresponsive, and then said whether anything had been going through their mind. These are the cases where behaviour and experience can come apart. All 2,417 come from the DREAM database. Non-REM stage 2 sleep is well covered. REM has few \"nothing\" reports. The open anaesthesia recordings rest on behaviour alone, so drug cases such as ketamine or dreaming under propofol cannot be scored recording by recording on open data.",
+      "prior": "The DREAM team (Wong and colleagues, 2025) pooled and classified the reports. New here: one table that grades every open recording by its kind of ground truth and counts the cases usable for a held-out test.",
+      "nums": "3,679 rows labelled; 488 behaviour-only; 3,191 delayed-report. L2 cases 2,417: 1,601 experience, 816 no experience; 446 subjects. By stage (experience / no experience): N1 132 / 18, N2 894 / 595, N3 103 / 109, REM 472 / 94. 160 subject × stage cells with both report types (131 subjects). Anaesthesia rows with a per-recording report: 0",
+      "caveat": "DREAM labels are taken as published; no study's raw reports were re-read. Stage is DREAM's \"last sleep stage\" field. No EEG was downloaded.",
+      "folders": [
+        "experiments/ground_truth"
+      ]
+    },
+    {
+      "n": 5,
+      "level": "descriptive",
+      "novelty": "new",
+      "head": "19 of 20 DREAM packages can be downloaded without asking",
+      "gist": "We checked every dataset in the DREAM dream database live. All but one are open to anyone, so the dream versus no-dream test does not depend on anyone granting access.",
+      "title": "19 of 20 DREAM packages are open under CC BY 4.0, with partial downloads working",
+      "plain": "Each open package answered a partial-download test or a public-record check. The one package that needs a request (SCANDataset) adds little: REM 44 experience vs 2 no experience. Most REM \"nothing\" reports sit in one 6.4 GB package from Rome (Multiple awakenings, 29), and deep-sleep (N3) data rests mostly on one set (DATA1, 46 vs 87).",
+      "prior": "DREAM's own registry lists each package as open or by request. New here: a live check that the open ones really download.",
+      "nums": "19 of 20 open (CC BY 4.0); 3 packages with an old file-embargo flag returned HTTP 206; Kumral et al. 2023 open on FreiData",
+      "folders": [
+        "experiments/data_access"
+      ]
+    }
+  ],
+  "closed_intro": "No measure has been tested yet. These routes are closed for now because the open data cannot decide them. Each says what would reopen it.",
+  "closed": [
+    {
+      "route": "Testing measures on brain-injured patients with open EEG",
+      "why": "We found no fully open EEG dataset for disorders of consciousness. So the third family our goal requires cannot be tested.",
+      "tag": "wait",
+      "reopen": "An openly released patient EEG set with clinical diagnoses."
+    },
+    {
+      "route": "The ketamine case on independent open data",
+      "why": "No open EEG set from a lab other than Milan has reports collected after unresponsive ketamine anaesthesia. The only set with such reports (Zenodo 806176) is restricted and comes from the same Milan cohort as the published results. Our access request was submitted on 18 Nov 2026 and is pending. One open, independent set exists (Farnes et al. 2020, Oslo, 10 subjects), but its ketamine dose was subanaesthetic, so the subjects stayed responsive.",
+      "tag": "wait",
+      "reopen": "An open ketamine EEG set with delayed reports from a different group of volunteers, or the pending Milan data with per-subject report labels."
+    },
+    {
+      "route": "Scoring drug dissociations recording by recording",
+      "why": "Of the open anaesthesia recordings (ds005620, Chennu 2016, ds004541), none carries a report for each recording; they rest on behaviour only. ds005620 gives only group counts: 24 of 29 informative awakenings under propofol reported experience, with 5 clear \"nothing\" reports. So a measure can be checked against that group rate, but not scored on single recordings.",
+      "tag": "wait",
+      "reopen": "Release of ds005620's per-awakening labels, or another sedation study with a report for each recording."
+    }
+  ],
+  "reversed": [],
+  "outputs": [
+    {
+      "title": "A red-teamed benchmark of published consciousness measures",
+      "what": "Which published measures still tell conscious from unconscious once the EEG spectrum is controlled, tested on data split by person and by lab. The first two pre-registrations (complexity versus spectral slope, and a surrogate check, on Sleep-EDF) were sealed on 18 Nov 2026.",
+      "status": "In progress"
+    },
+    {
+      "title": "The negative atlas",
+      "what": "Every closed route, each with the effect size the test could have caught. Empty until the first measure tests land.",
+      "status": "Planned"
+    },
+    {
+      "title": "A census of open data with reports",
+      "what": "Which open datasets let you test consciousness against what people later reported, with sizes and licences. First version done: `docs/DATASETS.md`.",
+      "status": "First version done"
+    },
+    {
+      "title": "Leak-proof evaluation tools",
+      "what": "Code that splits by person or lab, catches duplicate recordings and checks that pre-registrations were not edited after sealing. It passed a dry run on planted leaks.",
+      "status": "Built"
+    },
+    {
+      "title": "Do Φ stand-ins track true Φ?",
+      "what": "Checking proxies for integrated information on small networks where Φ can be computed exactly, before any proxy is used on brain data. Pre-registration sealed on 18 Nov 2026.",
+      "status": "In progress"
+    },
+    {
+      "title": "One sealed test per theory on open data",
+      "what": "A risky prediction for each theory, sealed before the data are opened. The first three (IIT and global workspace on dream reports, the entropic brain under propofol) were sealed on 18 Nov 2026.",
+      "status": "In progress"
+    },
+    {
+      "title": "A sealed multiverse reanalysis of COGITATE",
+      "what": "Run many defensible analysis choices on the COGITATE data, including those of the 2026 reanalyses, and report the share that supports each theory.",
+      "status": "Planned"
+    },
+    {
+      "title": "Predictions registered before new data appear",
+      "what": "Hashed predictions for COGITATE experiment 2 and INTREPID, made before their data are released.",
+      "status": "Planned"
+    },
+    {
+      "title": "A map of where the theories disagree",
+      "what": "The cases (ketamine, REM sleep, psychedelics, levels of sedation) where measures from different theories give opposite answers. These become the next sealed tests.",
+      "status": "Planned"
+    }
+  ]
+}

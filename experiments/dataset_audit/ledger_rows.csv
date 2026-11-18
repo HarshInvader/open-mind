@@ -1,0 +1,2 @@
+id,claim,area,file,statistic,p_value,p_source,ci,n,distinct_subjects,split,mode,family,family_size,replicated_independently,readme_claim,ground_truth,q_global,q_area,q_hier,q_all,note
+audit_t2,at least 4 open datasets across 3 consciousness families qualify,dataset_audit,docs/DATASETS.md,7 datasets across 2 families (FAIL on families),,,,7 datasets,,none,exploratory,,,,R2 data criterion,none,,,,,"not a statistical test; DoC and ketamine have no open data"

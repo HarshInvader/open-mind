@@ -1,0 +1,263 @@
+{"file": "s01_ep01.edf", "bytes": 3162425, "tainted_bytes": 29, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s01_ep02.edf", "bytes": 3180107, "tainted_bytes": 44, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s01_ep03.edf", "bytes": 3137449, "tainted_bytes": 72, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s01_ep04.edf", "bytes": 3176053, "tainted_bytes": 215, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s01_ep05.edf", "bytes": 3132841, "tainted_bytes": 70, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s01_ep06.edf", "bytes": 3221031, "tainted_bytes": 42, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s02_ep01.edf", "bytes": 7720840, "tainted_bytes": 49, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s02_ep02.edf", "bytes": 3106376, "tainted_bytes": 38, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s02_ep03.edf", "bytes": 3110422, "tainted_bytes": 42, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s02_ep04.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s02_ep05.edf", "bytes": 3061751, "tainted_bytes": 112, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s02_ep06.edf", "bytes": 3080187, "tainted_bytes": 42, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s02_ep07.edf", "bytes": 3128407, "tainted_bytes": 37, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s02_ep08.edf", "bytes": 3136473, "tainted_bytes": 36, "status": "ok", "n_ref": 147, "fs": 500.0}
+{"file": "s02_ep09.edf", "bytes": 3145905, "tainted_bytes": 7, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s02_ep10.edf", "bytes": 3163084, "tainted_bytes": 7, "status": "ok", "n_ref": 143, "fs": 500.0}
+{"file": "s03_ep01.edf", "bytes": 3010651, "tainted_bytes": 73, "status": "ok", "n_ref": 140, "fs": 500.0}
+{"file": "s03_ep02.edf", "bytes": 2937420, "tainted_bytes": 47, "status": "ok", "n_ref": 135, "fs": 500.0}
+{"file": "s03_ep03.edf", "bytes": 2863712, "tainted_bytes": 61, "status": "ok", "n_ref": 135, "fs": 500.0}
+{"file": "s03_ep04.edf", "bytes": 2892127, "tainted_bytes": 86, "status": "ok", "n_ref": 132, "fs": 500.0}
+{"file": "s03_ep05.edf", "bytes": 2859117, "tainted_bytes": 19, "status": "ok", "n_ref": 134, "fs": 500.0}
+{"file": "s03_ep06.edf", "bytes": 2773089, "tainted_bytes": 77, "status": "ok", "n_ref": 130, "fs": 500.0}
+{"file": "s03_ep07.edf", "bytes": 2843244, "tainted_bytes": 3070, "status": "ok", "n_ref": 131, "fs": 500.0}
+{"file": "s03_ep08.edf", "bytes": 2760823, "tainted_bytes": 4027, "status": "ok", "n_ref": 128, "fs": 500.0}
+{"file": "s03_ep09.edf", "bytes": 81310851, "tainted_bytes": 0, "status": "ok", "n_ref": 121, "fs": 500.0}
+{"file": "s04_ep01.edf", "bytes": 3132656, "tainted_bytes": 288, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s04_ep02.edf", "bytes": 3161458, "tainted_bytes": 76, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s04_ep03.edf", "status": "error error: Error -3 while decompressing data: invalid literal/length/distance code", "bytes": 0}
+{"file": "s04_ep04.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s04_ep05.edf", "bytes": 3083721, "tainted_bytes": 144, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s04_ep06.edf", "bytes": 3120572, "tainted_bytes": 110, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s04_ep07.edf", "bytes": 3048786, "tainted_bytes": 116, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s04_ep08.edf", "bytes": 3058053, "tainted_bytes": 262, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s05_ep01.edf", "bytes": 3155990, "tainted_bytes": 50, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s05_ep02.edf", "bytes": 3197817, "tainted_bytes": 70, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s05_ep03.edf", "bytes": 3214602, "tainted_bytes": 93, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s05_ep04.edf", "bytes": 3221761, "tainted_bytes": 53, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s05_ep05.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s05_ep06.edf", "bytes": 3214493, "tainted_bytes": 87, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s06_ep01.edf", "bytes": 3194785, "tainted_bytes": 93, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s06_ep02.edf", "bytes": 3146788, "tainted_bytes": 101, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s06_ep03.edf", "bytes": 3128209, "tainted_bytes": 174, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s06_ep04.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s06_ep05.edf", "bytes": 3169627, "tainted_bytes": 51, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s07_ep01.edf", "bytes": 3205226, "tainted_bytes": 58, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s07_ep02.edf", "bytes": 3227768, "tainted_bytes": 85, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s07_ep03.edf", "bytes": 3205000, "tainted_bytes": 104, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s07_ep04.edf", "bytes": 3230330, "tainted_bytes": 73, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s07_ep05.edf", "bytes": 3212305, "tainted_bytes": 83, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s07_ep06.edf", "bytes": 8014557, "tainted_bytes": 59, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s08_ep01.edf", "bytes": 3167899, "tainted_bytes": 100, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s08_ep02.edf", "bytes": 3122430, "tainted_bytes": 87, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s08_ep03.edf", "bytes": 3174744, "tainted_bytes": 141, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s08_ep04.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s08_ep05.edf", "bytes": 3180955, "tainted_bytes": 62, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s08_ep06.edf", "bytes": 3158973, "tainted_bytes": 107, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s08_ep07.edf", "bytes": 7878120, "tainted_bytes": 61, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s09_ep01.edf", "bytes": 3028014, "tainted_bytes": 145, "status": "ok", "n_ref": 147, "fs": 500.0}
+{"file": "s09_ep02.edf", "bytes": 3088642, "tainted_bytes": 62, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s09_ep03.edf", "bytes": 2959102, "tainted_bytes": 202, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s09_ep04.edf", "bytes": 3046621, "tainted_bytes": 210, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s09_ep05.edf", "bytes": 3054195, "tainted_bytes": 137, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s09_ep06.edf", "bytes": 3173402, "tainted_bytes": 87, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s09_ep07.edf", "status": "error error: Error -3 while decompressing data: invalid block type", "bytes": 0}
+{"file": "s09_ep08.edf", "bytes": 3043732, "tainted_bytes": 4089, "status": "ok", "n_ref": 146, "fs": 500.0}
+{"file": "s10_ep01.edf", "bytes": 3160219, "tainted_bytes": 125, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s10_ep02.edf", "bytes": 3138323, "tainted_bytes": 126, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s10_ep03.edf", "bytes": 3159333, "tainted_bytes": 139, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s10_ep04.edf", "bytes": 3129817, "tainted_bytes": 49, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s10_ep05.edf", "bytes": 3107956, "tainted_bytes": 168, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s11_ep01.edf", "bytes": 7857732, "tainted_bytes": 41, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s11_ep02.edf", "bytes": 3170515, "tainted_bytes": 24, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s11_ep03.edf", "bytes": 3195899, "tainted_bytes": 1067, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s11_ep04.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s11_ep05.edf", "bytes": 7836757, "tainted_bytes": 53, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s11_ep06.edf", "bytes": 3218940, "tainted_bytes": 1096, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s12_ep01.edf", "bytes": 3204536, "tainted_bytes": 42, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s12_ep02.edf", "bytes": 3170759, "tainted_bytes": 133, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s12_ep03.edf", "bytes": 3224234, "tainted_bytes": 55, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s12_ep04.edf", "bytes": 3134976, "tainted_bytes": 216, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s12_ep05.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s12_ep06.edf", "bytes": 3253804, "tainted_bytes": 105, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s13_ep01.edf", "bytes": 3191498, "tainted_bytes": 91, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s13_ep02.edf", "bytes": 3190430, "tainted_bytes": 63, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s13_ep03.edf", "bytes": 3175444, "tainted_bytes": 16, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s13_ep04.edf", "bytes": 3159347, "tainted_bytes": 129, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s13_ep05.edf", "bytes": 3173528, "tainted_bytes": 61, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s13_ep06.edf", "bytes": 3144510, "tainted_bytes": 39, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s14_ep01.edf", "bytes": 3168077, "tainted_bytes": 39, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s14_ep02.edf", "bytes": 3168432, "tainted_bytes": 52, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s14_ep03.edf", "bytes": 3149016, "tainted_bytes": 82, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s14_ep04.edf", "bytes": 3175137, "tainted_bytes": 51, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s14_ep05.edf", "bytes": 3114129, "tainted_bytes": 55, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s14_ep06.edf", "bytes": 3170910, "tainted_bytes": 44, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s15_ep01.edf", "status": "error error: Error -3 while decompressing data: invalid literal/length/distance code", "bytes": 0}
+{"file": "s15_ep02.edf", "bytes": 3180755, "tainted_bytes": 76, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s15_ep03.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s15_ep04.edf", "bytes": 3178467, "tainted_bytes": 151, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s15_ep05.edf", "bytes": 3206433, "tainted_bytes": 30, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s15_ep06.edf", "bytes": 3213402, "tainted_bytes": 49, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s16_ep01.edf", "bytes": 3175008, "tainted_bytes": 89, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s16_ep02.edf", "bytes": 3183474, "tainted_bytes": 415, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s16_ep03.edf", "bytes": 3203522, "tainted_bytes": 47, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s16_ep04.edf", "bytes": 3192025, "tainted_bytes": 78, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s16_ep05.edf", "bytes": 3196841, "tainted_bytes": 105, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s16_ep06.edf", "bytes": 3209739, "tainted_bytes": 16, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s16_ep07.edf", "bytes": 3203165, "tainted_bytes": 104, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s16_ep08.edf", "bytes": 3231844, "tainted_bytes": 93, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s17_ep01.edf", "bytes": 3185854, "tainted_bytes": 176, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s17_ep02.edf", "bytes": 3183357, "tainted_bytes": 68, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s17_ep03.edf", "bytes": 3190734, "tainted_bytes": 48, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s17_ep04.edf", "bytes": 3162656, "tainted_bytes": 92, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s17_ep05.edf", "bytes": 3161177, "tainted_bytes": 52, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s17_ep06.edf", "bytes": 3184656, "tainted_bytes": 44, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s17_ep07.edf", "bytes": 3194596, "tainted_bytes": 36, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s18_ep01.edf", "bytes": 3238138, "tainted_bytes": 42, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s18_ep02.edf", "bytes": 3204783, "tainted_bytes": 98, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s18_ep03.edf", "bytes": 3129777, "tainted_bytes": 293, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s18_ep04.edf", "bytes": 3168472, "tainted_bytes": 56, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s18_ep05.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s18_ep06.edf", "bytes": 3225443, "tainted_bytes": 76, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s19_ep01.edf", "bytes": 3229274, "tainted_bytes": 64, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s19_ep02.edf", "bytes": 3234274, "tainted_bytes": 37, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s19_ep03.edf", "bytes": 3211269, "tainted_bytes": 59, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s19_ep04.edf", "bytes": 3169494, "tainted_bytes": 163, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s19_ep05.edf", "bytes": 3147544, "tainted_bytes": 246, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s19_ep06.edf", "bytes": 3200914, "tainted_bytes": 110, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s19_ep07.edf", "bytes": 3085305, "tainted_bytes": 283, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s19_ep08.edf", "bytes": 3256617, "tainted_bytes": 52, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s20_ep01.edf", "bytes": 3180855, "tainted_bytes": 105, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s20_ep02.edf", "bytes": 3179610, "tainted_bytes": 119, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s20_ep03.edf", "bytes": 3193492, "tainted_bytes": 105, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s20_ep04.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s20_ep05.edf", "bytes": 3190300, "tainted_bytes": 64, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s20_ep06.edf", "bytes": 3247501, "tainted_bytes": 38, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s21_ep01.edf", "bytes": 3092646, "tainted_bytes": 65, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s21_ep02.edf", "bytes": 3151272, "tainted_bytes": 97, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s21_ep03.edf", "bytes": 7767497, "tainted_bytes": 105, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s21_ep04.edf", "bytes": 3170412, "tainted_bytes": 64, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s21_ep05.edf", "bytes": 3133366, "tainted_bytes": 107, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s21_ep06.edf", "bytes": 3131692, "tainted_bytes": 143, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s21_ep07.edf", "bytes": 3147976, "tainted_bytes": 263, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s22_ep01.edf", "bytes": 3186176, "tainted_bytes": 34, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s22_ep02.edf", "bytes": 3143532, "tainted_bytes": 38, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s22_ep03.edf", "bytes": 3108707, "tainted_bytes": 96, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s22_ep04.edf", "bytes": 3095497, "tainted_bytes": 1071, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s22_ep05.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s23_ep01.edf", "bytes": 2952057, "tainted_bytes": 794, "status": "error IndexError: index 256 is out of bounds for axis 0 with size 256"}
+{"file": "s23_ep02.edf", "bytes": 3173159, "tainted_bytes": 89, "status": "error IndexError: index 256 is out of bounds for axis 0 with size 256"}
+{"file": "s23_ep03.edf", "bytes": 3219335, "tainted_bytes": 27, "status": "error IndexError: index 256 is out of bounds for axis 0 with size 256"}
+{"file": "s23_ep04.edf", "bytes": 3165982, "tainted_bytes": 25, "status": "error IndexError: index 256 is out of bounds for axis 0 with size 256"}
+{"file": "s23_ep05.edf", "bytes": 3258522, "tainted_bytes": 61, "status": "error IndexError: index 256 is out of bounds for axis 0 with size 256"}
+{"file": "s24_ep01.edf", "bytes": 3148103, "tainted_bytes": 66, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s24_ep02.edf", "bytes": 3144448, "tainted_bytes": 197, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s24_ep03.edf", "bytes": 3149868, "tainted_bytes": 58, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s24_ep04.edf", "bytes": 3103755, "tainted_bytes": 16, "status": "ok", "n_ref": 147, "fs": 500.0}
+{"file": "s24_ep05.edf", "bytes": 3082809, "tainted_bytes": 53, "status": "ok", "n_ref": 143, "fs": 500.0}
+{"file": "s24_ep06.edf", "bytes": 3115453, "tainted_bytes": 239, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s25_ep01.edf", "bytes": 3175786, "tainted_bytes": 81, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s25_ep02.edf", "bytes": 3174659, "tainted_bytes": 85, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s25_ep03.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s25_ep04.edf", "bytes": 3143692, "tainted_bytes": 121, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s25_ep05.edf", "bytes": 3186803, "tainted_bytes": 125, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s25_ep06.edf", "bytes": 3169086, "tainted_bytes": 73, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s25_ep07.edf", "bytes": 3175965, "tainted_bytes": 213, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s25_ep08.edf", "bytes": 3190692, "tainted_bytes": 27, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s26_ep01.edf", "bytes": 3066932, "tainted_bytes": 113, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s26_ep02.edf", "bytes": 3032943, "tainted_bytes": 2530, "status": "ok", "n_ref": 147, "fs": 500.0}
+{"file": "s26_ep03.edf", "bytes": 2959345, "tainted_bytes": 96, "status": "ok", "n_ref": 144, "fs": 500.0}
+{"file": "s26_ep04.edf", "bytes": 2996528, "tainted_bytes": 129, "status": "ok", "n_ref": 140, "fs": 500.0}
+{"file": "s26_ep05.edf", "bytes": 2817715, "tainted_bytes": 9079, "status": "ok", "n_ref": 130, "fs": 500.0}
+{"file": "s26_ep06.edf", "bytes": 2838216, "tainted_bytes": 10160, "status": "ok", "n_ref": 130, "fs": 500.0}
+{"file": "s27_ep01.edf", "bytes": 3232269, "tainted_bytes": 82, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s27_ep02.edf", "bytes": 3228128, "tainted_bytes": 74, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s27_ep03.edf", "bytes": 3158476, "tainted_bytes": 169, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s27_ep04.edf", "bytes": 3228295, "tainted_bytes": 26, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s27_ep05.edf", "bytes": 7905335, "tainted_bytes": 92, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s27_ep06.edf", "bytes": 3119094, "tainted_bytes": 146, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s27_ep07.edf", "bytes": 3209116, "tainted_bytes": 51, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s27_ep08.edf", "bytes": 3170570, "tainted_bytes": 33, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s27_ep09.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s27_ep10.edf", "bytes": 3181627, "tainted_bytes": 60, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s27_ep11.edf", "bytes": 3188151, "tainted_bytes": 85, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s28_ep01.edf", "bytes": 7627900, "tainted_bytes": 180, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s28_ep02.edf", "bytes": 3043058, "tainted_bytes": 56, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s28_ep03.edf", "bytes": 3077431, "tainted_bytes": 4035, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s28_ep04.edf", "bytes": 3000948, "tainted_bytes": 10135, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s28_ep05.edf", "bytes": 3100059, "tainted_bytes": 6016, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s28_ep06.edf", "bytes": 3086780, "tainted_bytes": 2067, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s28_ep07.edf", "bytes": 3031870, "tainted_bytes": 9045, "status": "ok", "n_ref": 146, "fs": 500.0}
+{"file": "s28_ep08.edf", "bytes": 3025007, "tainted_bytes": 9025, "status": "ok", "n_ref": 145, "fs": 500.0}
+{"file": "s29_ep01.edf", "bytes": 3211102, "tainted_bytes": 68, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s29_ep02.edf", "bytes": 3176232, "tainted_bytes": 44, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s29_ep03.edf", "bytes": 3193252, "tainted_bytes": 69, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s29_ep04.edf", "bytes": 3184243, "tainted_bytes": 57, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s29_ep05.edf", "bytes": 3180062, "tainted_bytes": 88, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s29_ep06.edf", "bytes": 3207580, "tainted_bytes": 25, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s29_ep07.edf", "bytes": 3192082, "tainted_bytes": 65, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s29_ep08.edf", "bytes": 3171672, "tainted_bytes": 41, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s29_ep09.edf", "bytes": 3186592, "tainted_bytes": 26, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s29_ep10.edf", "bytes": 3215843, "tainted_bytes": 40, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s29_ep11.edf", "status": "error error: Error -3 while decompressing data: invalid code lengths set", "bytes": 0}
+{"file": "s29_ep12.edf", "bytes": 3231318, "tainted_bytes": 17, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s30_ep01.edf", "bytes": 3197246, "tainted_bytes": 154, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s30_ep02.edf", "bytes": 3230587, "tainted_bytes": 77, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s30_ep03.edf", "bytes": 3221721, "tainted_bytes": 55, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s30_ep04.edf", "bytes": 3235159, "tainted_bytes": 73, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s30_ep05.edf", "bytes": 3233096, "tainted_bytes": 39, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s30_ep06.edf", "bytes": 3217606, "tainted_bytes": 43, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s30_ep07.edf", "bytes": 3236162, "tainted_bytes": 54, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s30_ep08.edf", "bytes": 3228611, "tainted_bytes": 69, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s30_ep09.edf", "bytes": 8111245, "tainted_bytes": 40, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s31_ep01.edf", "bytes": 3238065, "tainted_bytes": 71, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s31_ep02.edf", "bytes": 3187683, "tainted_bytes": 146, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s31_ep03.edf", "bytes": 3145334, "tainted_bytes": 118, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s31_ep04.edf", "bytes": 3133228, "tainted_bytes": 99, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s31_ep05.edf", "bytes": 3192458, "tainted_bytes": 36, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s31_ep06.edf", "bytes": 3174156, "tainted_bytes": 54, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s31_ep07.edf", "status": "error error: Error -3 while decompressing data: invalid code lengths set", "bytes": 0}
+{"file": "s31_ep08.edf", "status": "error error: Error -3 while decompressing data: invalid stored block lengths", "bytes": 0}
+{"file": "s31_ep09.edf", "bytes": 3187844, "tainted_bytes": 73, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s31_ep10.edf", "bytes": 3169546, "tainted_bytes": 34, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s31_ep11.edf", "bytes": 3157717, "tainted_bytes": 3052, "status": "ok", "n_ref": 143, "fs": 500.0}
+{"file": "s32_ep01.edf", "bytes": 3193269, "tainted_bytes": 50, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s32_ep02.edf", "bytes": 3151445, "tainted_bytes": 107, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s32_ep03.edf", "bytes": 3127472, "tainted_bytes": 236, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s32_ep04.edf", "bytes": 3169402, "tainted_bytes": 51, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s32_ep05.edf", "bytes": 3159084, "tainted_bytes": 73, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s32_ep06.edf", "bytes": 3126809, "tainted_bytes": 48, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s33_ep01.edf", "bytes": 3195626, "tainted_bytes": 1135, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s33_ep02.edf", "bytes": 7904607, "tainted_bytes": 42, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s33_ep03.edf", "bytes": 3181665, "tainted_bytes": 1053, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s33_ep04.edf", "bytes": 3176128, "tainted_bytes": 188, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s33_ep05.edf", "bytes": 7813607, "tainted_bytes": 339, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s33_ep06.edf", "bytes": 3159262, "tainted_bytes": 146, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s33_ep07.edf", "bytes": 3200145, "tainted_bytes": 109, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s33_ep08.edf", "bytes": 3148440, "tainted_bytes": 460, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s33_ep09.edf", "bytes": 3183868, "tainted_bytes": 1054, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s34_ep01.edf", "bytes": 3177593, "tainted_bytes": 104, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s34_ep02.edf", "bytes": 3125010, "tainted_bytes": 59, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s34_ep03.edf", "bytes": 3160813, "tainted_bytes": 101, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s34_ep04.edf", "bytes": 3197578, "tainted_bytes": 46, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s34_ep05.edf", "bytes": 3183425, "tainted_bytes": 52, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s34_ep06.edf", "bytes": 7886312, "tainted_bytes": 58, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s35_ep01.edf", "bytes": 3200212, "tainted_bytes": 224, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s35_ep02.edf", "bytes": 3202380, "tainted_bytes": 76, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s35_ep03.edf", "bytes": 3201271, "tainted_bytes": 86, "status": "ok", "n_ref": 152, "fs": 500.0}
+{"file": "s35_ep04.edf", "bytes": 3210907, "tainted_bytes": 23, "status": "ok", "n_ref": 151, "fs": 500.0}
+{"file": "s35_ep05.edf", "bytes": 3175815, "tainted_bytes": 76, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s35_ep06.edf", "bytes": 3152597, "tainted_bytes": 78, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s35_ep07.edf", "bytes": 3177507, "tainted_bytes": 46, "status": "ok", "n_ref": 149, "fs": 500.0}
+{"file": "s35_ep08.edf", "bytes": 3139440, "tainted_bytes": 63, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s35_ep09.edf", "bytes": 3178754, "tainted_bytes": 1043, "status": "ok", "n_ref": 150, "fs": 500.0}
+{"file": "s35_ep10.edf", "bytes": 3196975, "tainted_bytes": 37, "status": "ok", "n_ref": 148, "fs": 500.0}
+{"file": "s36_ep01.edf", "bytes": 3221322, "tainted_bytes": 73, "status": "ok", "n_ref": 154, "fs": 500.0}
+{"file": "s36_ep02.edf", "bytes": 3213382, "tainted_bytes": 69, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s36_ep03.edf", "bytes": 3217439, "tainted_bytes": 84, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s36_ep04.edf", "bytes": 3230913, "tainted_bytes": 71, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s36_ep05.edf", "bytes": 3202792, "tainted_bytes": 94, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s36_ep06.edf", "bytes": 3213012, "tainted_bytes": 40, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s36_ep07.edf", "bytes": 3241290, "tainted_bytes": 53, "status": "ok", "n_ref": 153, "fs": 500.0}
+{"file": "s37_ep01.edf", "bytes": 2675149, "tainted_bytes": 110, "status": "unequal sampling"}
+{"file": "s37_ep02.edf", "bytes": 6430575, "tainted_bytes": 121, "status": "unequal sampling"}

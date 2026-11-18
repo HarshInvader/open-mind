@@ -1,0 +1,2 @@
+id,claim,area,file,statistic,p_value,p_source,ci,n,distinct_subjects,split,mode,family,family_size,replicated_independently,readme_claim,ground_truth,q_global,q_area,q_hier,q_all,note
+rules_dry1,leakage checker flags a deliberately leaked epoch-level split,rules,experiments/rules/RESULTS.md,5/5 folds flagged; leaked AUC 0.92 vs subject-split 0.63,,,,20 synthetic subjects,20,synthetic,method_check,,,,,synthetic,,,,,"also catches renamed duplicate, same-lab transfer, edited prereg"

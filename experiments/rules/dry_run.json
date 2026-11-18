@@ -1,0 +1,19 @@
+{
+ "epoch_split": {
+  "auc": 0.9208696538623784,
+  "folds_flagged": 5,
+  "folds": 5
+ },
+ "subject_split": {
+  "auc": 0.6303888888888889,
+  "folds_flagged": 0,
+  "folds": 5
+ },
+ "renamed_duplicate": "caught: 1 identical signal(s) under different ids, e.g. [('s00_e29', 's99_e0')]",
+ "renamed_duplicate_kept_together_by_folds": true,
+ "transfer_same_lab": "caught: lab(s) on both sides of a transfer split (near-copy): ['labB']",
+ "transfer_lab_folds_clean": true,
+ "edited_prereg": "caught: experiments/rules/tmpvk3wzglx/prereg.md: edited after sealing (sha256 07c1890d1358...)",
+ "sealed_prereg_ok": true,
+ "PASS": true
+}

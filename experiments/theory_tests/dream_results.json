@@ -1,0 +1,96 @@
+{
+ "n": 132,
+ "n_exp": 82,
+ "n_noexp": 50,
+ "n_subjects": 54,
+ "per_dataset": {
+  "youngadults": {
+   "sum": 16,
+   "count": 30
+  },
+  "zhang": {
+   "sum": 66,
+   "count": 102
+  }
+ },
+ "posterior": {
+  "auc": 0.5370731707317074,
+  "p_one_sided": 0.23895220955808838,
+  "ci95": [
+   0.3969397869957571,
+   0.6665128505382615
+  ],
+  "per_dataset": {
+   "youngadults": 0.48660714285714285,
+   "zhang": 0.5509259259259259
+  }
+ },
+ "frontal": {
+  "auc": 0.5773170731707317,
+  "p_one_sided": 0.0661867626474705,
+  "ci95": [
+   0.45826181855230574,
+   0.6800248868778279
+  ],
+  "per_dataset": {
+   "youngadults": 0.5803571428571429,
+   "zhang": 0.5753367003367004
+  }
+ },
+ "exponent_steeper_is_noexp": {
+  "auc": 0.5748780487804878,
+  "p_one_sided": 0.07198560287942411,
+  "ci95": [
+   0.447560311552247,
+   0.6785635128113532
+  ],
+  "per_dataset": {
+   "youngadults": 0.4732142857142857,
+   "zhang": 0.6005892255892256
+  }
+ },
+ "dAUC_post_minus_front": {
+  "value": -0.040243902439024315,
+  "ci95": [
+   -0.11352093962585035,
+   0.021647374364765697
+  ]
+ },
+ "H3_posterior": {
+  "auc_exponent": 0.504390243902439,
+  "auc_plus": 0.40414634146341466,
+  "dAUC": -0.10024390243902437,
+  "ci95": [
+   -0.19515252069472802,
+   -0.007998275326244015
+  ],
+  "transfer_plus": {
+   "train_zhang": 0.4375,
+   "train_youngadults": 0.3968855218855219
+  },
+  "transfer_exponent": {
+   "train_zhang": 0.4732142857142857,
+   "train_youngadults": 0.39941077441077444
+  }
+ },
+ "H3_frontal": {
+  "auc_exponent": 0.504390243902439,
+  "auc_plus": 0.5292682926829269,
+  "dAUC": 0.024878048780487827,
+  "ci95": [
+   -0.11541115583668773,
+   0.16594915674603156
+  ],
+  "transfer_plus": {
+   "train_zhang": 0.4955357142857143,
+   "train_youngadults": 0.45286195286195285
+  },
+  "transfer_exponent": {
+   "train_zhang": 0.4732142857142857,
+   "train_youngadults": 0.39941077441077444
+  }
+ },
+ "verdict_IIT": "failed this test",
+ "verdict_GNWT": "failed this test",
+ "surrogate_note": "delta power is spectrum-determined; phase-randomised surrogates return identical values by construction"
+}

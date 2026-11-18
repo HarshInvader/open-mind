@@ -1,0 +1,2 @@
+id,claim,area,file,statistic,p_value,p_source,ci,n,distinct_subjects,split,mode,family,family_size,replicated_independently,readme_claim,ground_truth,q_global,q_area,q_hier,q_all,note
+chennu_t21,Chennu zip streamable by HTTP range within budget,chennu_access,experiments/chennu_access/RESULTS.md,60 s of 1 recording read in 5.3 s; 80x60 s ~0.45 GB,,,,1,,none,method_check,,,,,none,,,,,"access check, not a test"

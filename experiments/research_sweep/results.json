@@ -1,0 +1,30 @@
+{
+ "tasks": [
+  12,
+  13
+ ],
+ "plan_citations": {
+  "rows": 31,
+  "confirmed": 24,
+  "corrected": 3,
+  "unverified": 3,
+  "not_checked": 1
+ },
+ "news": {
+  "total": 20,
+  "latest": 11,
+  "landmark": 9,
+  "existing_fixed": 5,
+  "removed": 0,
+  "added": 15,
+  "all_verified": true
+ },
+ "new_tasks": [
+  19,
+  20,
+  21,
+  22,
+  23
+ ],
+ "tests_run": 0
+}

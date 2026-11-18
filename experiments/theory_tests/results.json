@@ -1,0 +1,350 @@
+{
+ "task": 16,
+ "agent": "mind-3",
+ "dream": {
+  "n": 132,
+  "n_exp": 82,
+  "n_noexp": 50,
+  "n_subjects": 54,
+  "per_dataset": {
+   "youngadults": {
+    "sum": 16,
+    "count": 30
+   },
+   "zhang": {
+    "sum": 66,
+    "count": 102
+   }
+  },
+  "posterior": {
+   "auc": 0.5370731707317074,
+   "p_one_sided": 0.23895220955808838,
+   "ci95": [
+    0.3969397869957571,
+    0.6665128505382615
+   ],
+   "per_dataset": {
+    "youngadults": 0.48660714285714285,
+    "zhang": 0.5509259259259259
+   }
+  },
+  "frontal": {
+   "auc": 0.5773170731707317,
+   "p_one_sided": 0.0661867626474705,
+   "ci95": [
+    0.45826181855230574,
+    0.6800248868778279
+   ],
+   "per_dataset": {
+    "youngadults": 0.5803571428571429,
+    "zhang": 0.5753367003367004
+   }
+  },
+  "exponent_steeper_is_noexp": {
+   "auc": 0.5748780487804878,
+   "p_one_sided": 0.07198560287942411,
+   "ci95": [
+    0.447560311552247,
+    0.6785635128113532
+   ],
+   "per_dataset": {
+    "youngadults": 0.4732142857142857,
+    "zhang": 0.6005892255892256
+   }
+  },
+  "dAUC_post_minus_front": {
+   "value": -0.040243902439024315,
+   "ci95": [
+    -0.11352093962585035,
+    0.021647374364765697
+   ]
+  },
+  "H3_posterior": {
+   "auc_exponent": 0.504390243902439,
+   "auc_plus": 0.40414634146341466,
+   "dAUC": -0.10024390243902437,
+   "ci95": [
+    -0.19515252069472802,
+    -0.007998275326244015
+   ],
+   "transfer_plus": {
+    "train_zhang": 0.4375,
+    "train_youngadults": 0.3968855218855219
+   },
+   "transfer_exponent": {
+    "train_zhang": 0.4732142857142857,
+    "train_youngadults": 0.39941077441077444
+   }
+  },
+  "H3_frontal": {
+   "auc_exponent": 0.504390243902439,
+   "auc_plus": 0.5292682926829269,
+   "dAUC": 0.024878048780487827,
+   "ci95": [
+    -0.11541115583668773,
+    0.16594915674603156
+   ],
+   "transfer_plus": {
+    "train_zhang": 0.4955357142857143,
+    "train_youngadults": 0.45286195286195285
+   },
+   "transfer_exponent": {
+    "train_zhang": 0.4732142857142857,
+    "train_youngadults": 0.39941077441077444
+   }
+  },
+  "verdict_IIT": "failed this test",
+  "verdict_GNWT": "failed this test",
+  "surrogate_note": "delta power is spectrum-determined; phase-randomised surrogates return identical values by construction"
+ },
+ "chennu": {
+  "subjects": 20,
+  "planted": {
+   "P1_pnlz_real_minus_surr_median": -0.0007303792362606809,
+   "P1_p": 0.4304332733154297,
+   "P1_n": 20,
+   "P2": {
+    "n": 20,
+    "median_diff": -0.001537339294784501,
+    "ci95": [
+     -0.006207772279359924,
+     0.004526541140033591
+    ],
+    "wilcoxon_p_less": 0.3780832290649414,
+    "signflip_p_less": 0.48785121487851213,
+    "rank_biserial": -0.08571428571428572,
+    "d_z": -0.006998250806223083,
+    "wilcoxon_p_greater": 0.635746955871582
+   },
+   "P1_pass": false,
+   "P2_pass": true
+  },
+  "lz": {
+   "n": 20,
+   "median_diff": 0.055660547941532856,
+   "ci95": [
+    0.024887082183400744,
+    0.08974681561846798
+   ],
+   "wilcoxon_p_less": 0.9998388290405273,
+   "signflip_p_less": 0.9998000199980002,
+   "rank_biserial": 0.8380952380952381,
+   "d_z": 0.9242019778919587,
+   "wilcoxon_p_greater": 0.00019741058349609375
+  },
+  "pnlz": {
+   "n": 20,
+   "median_diff": -0.0021453232485837415,
+   "ci95": [
+    -0.0040170102045072875,
+    0.006387992421272304
+   ],
+   "wilcoxon_p_less": 0.635746955871582,
+   "signflip_p_less": 0.7812218778122187,
+   "rank_biserial": 0.08571428571428572,
+   "d_z": 0.17926363371114185,
+   "wilcoxon_p_greater": 0.3780832290649414
+  },
+  "slope": {
+   "n": 20,
+   "median_diff": 0.07820773420458615,
+   "ci95": [
+    -0.06720184357661552,
+    0.2959006651610301
+   ],
+   "wilcoxon_p_less": 0.9175214767456055,
+   "signflip_p_less": 0.8955104489551045,
+   "rank_biserial": 0.3523809523809524,
+   "d_z": 0.28993410350983206,
+   "wilcoxon_p_greater": 0.08842658996582031
+  },
+  "perm_entropy": {
+   "n": 20,
+   "median_diff": 0.011311207733147755,
+   "ci95": [
+    -0.014743582808281586,
+    0.030038180441155304
+   ],
+   "wilcoxon_p_less": 0.9053258895874023,
+   "signflip_p_less": 0.9046095390460954,
+   "rank_biserial": 0.3333333333333333,
+   "d_z": 0.2999945693911377,
+   "wilcoxon_p_greater": 0.10122489929199219
+  },
+  "lz_surr": {
+   "n": 20,
+   "median_diff": 0.05149901164683901,
+   "ci95": [
+    0.014127320579356117,
+    0.08369616087420889
+   ],
+   "wilcoxon_p_less": 0.9996461868286133,
+   "signflip_p_less": 0.9997000299970003,
+   "rank_biserial": 0.8,
+   "d_z": 0.8723560051092879,
+   "wilcoxon_p_greater": 0.0004253387451171875
+  },
+  "pnlz_surr": {
+   "n": 20,
+   "median_diff": -0.0010757369494107105,
+   "ci95": [
+    -0.0019676177166473323,
+    0.00014743682876527942
+   ],
+   "wilcoxon_p_less": 0.08842658996582031,
+   "signflip_p_less": 0.11448855114488551,
+   "rank_biserial": -0.3523809523809524,
+   "d_z": -0.2802284391030314,
+   "wilcoxon_p_greater": 0.9175214767456055
+  },
+  "surrogate_gate": {
+   "lz_real_drop": 0.055660547941532856,
+   "lz_surrogate_drop": 0.05149901164683901
+  },
+  "H3_lz": {
+   "auc_exponent": 0.575,
+   "auc_plus": 0.77
+  },
+  "H3_pnlz": {
+   "auc_exponent": 0.575,
+   "auc_plus": 0.6175
+  },
+  "single_auc": {
+   "lz": 0.76,
+   "pnlz": 0.5125,
+   "slope": 0.6,
+   "perm_entropy": 0.5700000000000001,
+   "lz_surr": 0.7575000000000001,
+   "pnlz_surr": 0.5775
+  },
+  "H4_lz_change_vs_hits_change": {
+   "rho": 0.5503223076294662,
+   "p_one_sided": 0.005964811746708379
+  },
+  "H4_pnlz_change_vs_hits_change": {
+   "rho": 0.1628350937643352,
+   "p_one_sided": 0.24637826020548576
+  },
+  "verdict_ENT": "uninformative (planted check P1 failed)"
+ },
+ "planted_dream": {
+  "posterior_a1.0": {
+   "power_at_0.025": 0.025,
+   "mean_auc": 0.4991951219512195
+  },
+  "posterior_a0.85": {
+   "power_at_0.025": 0.645,
+   "mean_auc": 0.6143146341463415
+  },
+  "posterior_a0.75": {
+   "power_at_0.025": 0.98,
+   "mean_auc": 0.695532926829268
+  },
+  "frontal_a1.0": {
+   "power_at_0.025": 0.025,
+   "mean_auc": 0.5035134146341465
+  },
+  "frontal_a0.85": {
+   "power_at_0.025": 0.455,
+   "mean_auc": 0.5976878048780487
+  },
+  "frontal_a0.75": {
+   "power_at_0.025": 0.87,
+   "mean_auc": 0.6603085365853658
+  },
+  "pass": true
+ },
+ "exploratory_dream_split": {
+  "later_N2": {
+   "n_exp": 37,
+   "n_noexp": 36,
+   "auc_low_D_post": 0.574,
+   "auc_low_D_front": 0.622,
+   "auc_flatter_exponent": 0.615
+  },
+  "sleep_onset_N2": {
+   "n_exp": 45,
+   "n_noexp": 14,
+   "auc_low_D_post": 0.446,
+   "auc_low_D_front": 0.476,
+   "auc_flatter_exponent": 0.411
+  }
+ },
+ "prereg_sha256": {
+  "iit_posterior_dream": "2ea17ddbd65f870c579d2f62ed628d9e6f298df9f6764db2a86e128b649240dd",
+  "gnwt_frontal_dream": "d31a688ef9d8b0e113fc60a5719b3c48724d4ae23b867de41596d4ba402735fd",
+  "entropic_propofol": "6b468c1cdea943f302123811e3995d2dd66a1df5d076eb4fb4184c14015ef592"
+ },
+ "scoreboard": [
+  {
+   "theory": "IIT 4.0",
+   "prediction": "Lower posterior (P3 Pz P4 O1 O2) 1-4 Hz power before experience vs no experience in N2; larger than frontal; adds over 1-30 Hz exponent",
+   "dataset": "DREAM Zhang&Wamsley2019 + DeGennaro_YoungAdults, N2 awakenings",
+   "n": "132 awakenings (82 exp / 50 no-exp), 54 subjects, 2 labs",
+   "statistic": "AUC 0.537 (perm p 0.239); post-front dAUC -0.040; held-out dAUC over exponent -0.100",
+   "CI": "AUC [0.397, 0.667]; post-front [-0.114, 0.022]; held-out dAUC [-0.195, -0.008]",
+   "verdict": "failed this test (detectable AUC about 0.66-0.70 at 80% power; planted a=0.75 gave power 0.98 at mean AUC 0.70)",
+   "prereg_hash": "2ea17ddbd65f870c579d2f62ed628d9e6f298df9f6764db2a86e128b649240dd"
+  },
+  {
+   "theory": "GNWT",
+   "prediction": "Lower frontal (F3 Fz F4) 1-4 Hz power before experience vs no experience in N2; adds over 1-30 Hz exponent",
+   "dataset": "DREAM Zhang&Wamsley2019 + DeGennaro_YoungAdults, N2 awakenings",
+   "n": "132 awakenings (82 exp / 50 no-exp), 54 subjects, 2 labs",
+   "statistic": "AUC 0.577 (perm p 0.066, alpha 0.025); held-out dAUC over exponent 0.025",
+   "CI": "AUC [0.458, 0.680]; held-out dAUC [-0.115, 0.166]",
+   "verdict": "failed this test (detectable AUC about 0.66 at 87% power; planted frontal a=0.75 mean AUC 0.66)",
+   "prereg_hash": "d31a688ef9d8b0e113fc60a5719b3c48724d4ae23b867de41596d4ba402735fd"
+  },
+  {
+   "theory": "Entropic brain",
+   "prediction": "Phase-normalised LZ (spectrum-matched) lower at moderate propofol than baseline, within subject",
+   "dataset": "Chennu 2016 propofol (Cambridge), first 120 s of baseline and moderate",
+   "n": "20 subjects",
+   "statistic": "median paired pnLZ diff -0.0021 (Wilcoxon p 0.636, d_z 0.18); raw LZ diff 0.0557 (p 1.000)",
+   "CI": "pnLZ diff [-0.0040, 0.0064]; LZ diff [0.0249, 0.0897]",
+   "verdict": "no verdict on the primary (pnLZ) test: uninformative, because pnLZ could not tell real baseline EEG from its own spectrum-matched surrogate (planted check P1, p 0.43). Secondary H1, raw LZ lower under propofol: FAILED this test in the opposite direction, LZ rose 0.056 (d_z 0.92, p 0.0002 two-sided-direction), and surrogate LZ rose as much (0.051), so the change is spectral. Detectable paired d_z about 0.58 at 80% power.",
+   "prereg_hash": "6b468c1cdea943f302123811e3995d2dd66a1df5d076eb4fb4184c14015ef592"
+  },
+  {
+   "theory": "Higher-order theories",
+   "prediction": "PFC activity tracks awareness/confidence when task performance is matched (Lau & Passingham-type relative blindsight)",
+   "dataset": "none reachable",
+   "n": "",
+   "statistic": "",
+   "CI": "",
+   "verdict": "not testable on reachable data: no open sleep/sedation set has confidence or awareness ratings with matched performance. Needs: open EEG/MEG with trial-wise awareness + confidence at matched d' (or COGITATE with an account). The frontal dream test above is shared context only.",
+   "prereg_hash": ""
+  },
+  {
+   "theory": "Recurrent processing (RPT)",
+   "prediction": "Phenomenal experience with local recurrent (feedback) activity in sensory cortex without report; loss of recurrence (not feedforward) removes experience",
+   "dataset": "none reachable",
+   "n": "",
+   "statistic": "",
+   "CI": "",
+   "verdict": "not testable on reachable data: needs stimulus-evoked EEG/iEEG (masking or figure-ground, with a no-report condition) across states. Resting EEG cannot isolate stimulus-locked recurrence. Needs COGITATE iEEG (account) or an open visual masking/figure-ground set under sedation.",
+   "prereg_hash": ""
+  },
+  {
+   "theory": "Predictive processing",
+   "prediction": "Mismatch/prediction-error responses (MMN, local-global) change with conscious state in a specified direction; top-down predictions lost first",
+   "dataset": "none reachable",
+   "n": "",
+   "statistic": "",
+   "CI": "",
+   "verdict": "not testable on reachable data: no open auditory oddball or local-global EEG across sleep or sedation found (OpenNeuro ds005429 local-global is awake only). Needs an open local-global or roving-MMN set under propofol or sleep with delayed report.",
+   "prereg_hash": ""
+  },
+  {
+   "theory": "Attention schema",
+   "prediction": "Awareness tracks the brain's model of its own attention; awareness and attention control dissociate when the schema is disrupted",
+   "dataset": "none reachable",
+   "n": "",
+   "statistic": "",
+   "CI": "",
+   "verdict": "not testable on reachable data: needs an attention-cueing paradigm with trial-wise awareness reports (e.g. Webb/Graziano designs) with EEG; none in docs/DATASETS.md. Resting or sleep data have no attention manipulation.",
+   "prereg_hash": ""
+  }
+ ]
+}

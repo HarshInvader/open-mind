@@ -1,0 +1,1 @@
+{"task": 1, "verdict": "tool", "dry_run_pass": true, "dry_run": "experiments/rules/dry_run.json", "epoch_split_auc": 0.921, "epoch_split_folds_flagged": "5/5", "subject_split_auc": 0.630, "renamed_duplicate": "caught", "transfer_same_lab": "caught", "edited_prereg": "caught"}

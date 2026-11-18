@@ -1,0 +1,11 @@
+constraint_id,grade,explains,strained_or_contradicts,split_strength,constraint
+C31,B,IIT RPT,GNWT HOT,4,"In binocular rivalry, frontal fMRI activity relates to reporting switches, not to the switches themselves."
+C05,A,IIT,PP ORCH,3,"The cerebellum holds most of the brain's neurons, yet losing it impairs movement and not, as far as anyone reports, consciousness."
+C21,A,GNWT IIT,BSA,3,Wakefulness and awareness dissociate: patients in the vegetative / unresponsive wakefulness state open their eyes and have sleep-wake cycles without behavioural signs of awareness.
+C08,B,IIT RPT BSA,HOT,2,Large prefrontal lesions do not abolish consciousness.
+C11,B,IIT,GNWT HOT,2,Stimulating lateral prefrontal cortex seldom changes experience; orbitofrontal and anterior cingulate stimulation often does.
+C14,B,IIT,GNWT,2,"Anaesthetic-dose ketamine makes people unresponsive, yet they report long vivid dreams afterwards, and their TMS-EEG complexity stays wake-like; propofol and xenon give low complexity and no reports."
+C17,B,IIT,HOT,2,"Within both NREM and REM, dream reports follow a local drop in low-frequency EEG power over posterior cortex; high-frequency activity there tracks specific contents."
+C28,B,IIT RPT,GNWT,2,"The P3b disappears when people see a stimulus but do not have to report it; it tracks report and task relevance, not awareness."
+C32,B,GNWT,IIT RPT,2,"Prefrontal neurons in macaques track the content of rivalry switches with no report, enough to decode contents single-trial."
+C55,C,BSA,GNWT IIT RPT HOT DIT,1,Children born without most of the cerebral cortex (hydranencephaly) show emotional and orienting responses that some clinicians read as conscious.

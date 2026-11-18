@@ -1,0 +1,2 @@
+id,claim,area,file,statistic,p_value,p_source,ci,n,distinct_subjects,split,mode,family,family_size,replicated_independently,readme_claim,ground_truth,q_global,q_area,q_hier,q_all,note
+gt_t3,count of open delayed-report (L2) cases,ground_truth,experiments/ground_truth/RESULTS.md,"2417 L2 cases (1601 exp / 816 no-exp), 446 subjects, 0 from anaesthesia",,,,3679,446,none,exploratory,,,,,delayed_report,,,,,"descriptive count, not a test"

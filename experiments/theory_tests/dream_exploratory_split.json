@@ -1,0 +1,16 @@
+{
+ "later_N2": {
+  "n_exp": 37,
+  "n_noexp": 36,
+  "auc_low_D_post": 0.574,
+  "auc_low_D_front": 0.622,
+  "auc_flatter_exponent": 0.615
+ },
+ "sleep_onset_N2": {
+  "n_exp": 45,
+  "n_noexp": 14,
+  "auc_low_D_post": 0.446,
+  "auc_low_D_front": 0.476,
+  "auc_flatter_exponent": 0.411
+ }
+}

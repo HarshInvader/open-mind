@@ -1,0 +1,27 @@
+{
+ "posterior_a1.0": {
+  "power_at_0.025": 0.025,
+  "mean_auc": 0.4991951219512195
+ },
+ "posterior_a0.85": {
+  "power_at_0.025": 0.645,
+  "mean_auc": 0.6143146341463415
+ },
+ "posterior_a0.75": {
+  "power_at_0.025": 0.98,
+  "mean_auc": 0.695532926829268
+ },
+ "frontal_a1.0": {
+  "power_at_0.025": 0.025,
+  "mean_auc": 0.5035134146341465
+ },
+ "frontal_a0.85": {
+  "power_at_0.025": 0.455,
+  "mean_auc": 0.5976878048780487
+ },
+ "frontal_a0.75": {
+  "power_at_0.025": 0.87,
+  "mean_auc": 0.6603085365853658
+ },
+ "pass": true
+}

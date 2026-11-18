@@ -1,0 +1,38 @@
+{
+ "GNWT": {
+  "n": 58,
+  "agree": 46,
+  "kappa": 0.673,
+  "kappa_linear_weighted": 0.716,
+  "their_total": 115,
+  "my_total": 110
+ },
+ "IIT": {
+  "n": 58,
+  "agree": 37,
+  "kappa": 0.468,
+  "kappa_linear_weighted": 0.534,
+  "their_total": 119,
+  "my_total": 98
+ },
+ "T1": {
+  "n": 58,
+  "agree": 31,
+  "kappa": 0.216,
+  "kappa_linear_weighted": 0.339,
+  "their_total": 156,
+  "my_total": 97,
+  "kappa_after_capping_their_explains": 0.63,
+  "their_total_capped": 108
+ },
+ "T2": {
+  "n": 58,
+  "agree": 31,
+  "kappa": 0.213,
+  "kappa_linear_weighted": 0.308,
+  "their_total": 141,
+  "my_total": 97,
+  "kappa_after_capping_their_explains": 0.558,
+  "their_total_capped": 100
+ }
+}

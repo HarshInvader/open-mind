@@ -1,0 +1,243 @@
+{
+ "name": "Open Mind",
+ "favicon": "%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%2716%27%20r%3D%2712%27%20fill%3D%27none%27%20stroke%3D%27%236A3FA0%27%20stroke-width%3D%273%27/%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%2716%27%20r%3D%274%27%20fill%3D%27%236A3FA0%27/%3E%3C/svg%3E",
+ "tokens": ":root { --paper: #F3F4F6; --surface: #FBFBFC; --ink: #16181D; --muted: #525866; --line: #DEE1E6; --line-strong: #B9BEC8; --accent: #6A3FA0; --ok: #1D6A44; --ok-soft: #DCEFE4; --warn: #7A5200; --warn-soft: #F3E6C8; --bad: #9B2C2C; --bad-soft: #F6DEDC; color-scheme: light; }\n@media (prefers-color-scheme: dark) { :root:not([data-theme=\"light\"]) { --paper: #0F1115; --surface: #171A20; --ink: #E7E9EE; --muted: #9AA1AE; --line: #272B33; --line-strong: #3A404B; --accent: #C5A8EE; --ok: #7FD1A5; --ok-soft: #15281F; --warn: #E3B862; --warn-soft: #2E2512; --bad: #EE9A94; --bad-soft: #341A19; color-scheme: dark; } }\n:root[data-theme=\"dark\"] { --paper: #0F1115; --surface: #171A20; --ink: #E7E9EE; --muted: #9AA1AE; --line: #272B33; --line-strong: #3A404B; --accent: #C5A8EE; --ok: #7FD1A5; --ok-soft: #15281F; --warn: #E3B862; --warn-soft: #2E2512; --bad: #EE9A94; --bad-soft: #341A19; color-scheme: dark; }",
+ "kicker": "Open Mind · open research, started November 2026",
+ "goal": "Find the most accurate theory of human consciousness, by 2027",
+ "lede": "Today's theories may all be wrong. We test each one's riskiest predictions on open brain recordings, list every hard fact a true theory must explain, and build our own theory where the existing ones fail. Every result is published, failures included.",
+ "odds": [
+  [
+   "A public list of the facts any theory must explain, with every theory scored against it",
+   "70-80%"
+  ],
+  [
+   "A theory of our own, written down with sealed predictions, that explains more of that list than any rival",
+   "25-35%"
+  ],
+  [
+   "A theory, ours or anyone's, that beats its rivals on data it never saw",
+   "under 5%"
+  ],
+  [
+   "Explaining why experience exists at all (the hard problem)",
+   "not attempted"
+  ]
+ ],
+ "raise_odds": [
+  "An open TMS-EEG dataset covering sleep, anaesthesia and patients, so the perturbational complexity index can be tested directly.",
+  "Open, pooled dream reports from serial-awakening studies.",
+  "COGITATE experiment 2 or INTREPID data released after we seal our predictions, which would give a clean prospective test."
+ ],
+ "criteria_intro": "\"Most accurate\" has to be checkable. A theory, ours or anyone's, wins only if it explains the established facts best and predicts new data better than its rivals. All of these must hold:",
+ "criteria": [
+  "**Written down and frozen.** The theory states what brain activity comes with experience, and why. Its measure and decision rule are hashed before any held-out data is opened.",
+  "**Explains the known facts.** It accounts for more of our public list of established findings than any rival does (blindsight, split brains, the cerebellum, anaesthesia, dreaming, covert awareness and more), scored by people who did not write it.",
+  "**Works zero-shot.** It tells conscious from unconscious on at least 4 held-out datasets from 3 families (sleep, anaesthesia, disorders of consciousness), with AUC at least 0.90 pooled and 0.80 in each.",
+  "**Right when behaviour misleads.** Ketamine (unresponsive, but people report experiences afterwards), REM dreaming, and dream vs no-dream awakenings within one sleep stage. The truth is the later report.",
+  "**Beats simple baselines.** It outperforms the EEG spectral slope, band power and an arousal classifier. Otherwise it is a sleepiness detector.",
+  "**Beats rival theories.** At least two rival measures, frozen the same way, score worse.",
+  "**Prospective.** It passes on a dataset published after the hash date.",
+  "**Survives a red team** that did not build it."
+ ],
+ "ladder_intro": "Five levels of claim, so that partial progress has a precise meaning.",
+ "ladder": [
+  [
+   "L0",
+   "Signal",
+   "The measure is reproducible and differs between states beyond chance.",
+   "Done"
+  ],
+  [
+   "L1",
+   "State",
+   "It separates clearly conscious from clearly unconscious states when behaviour agrees.",
+   "Solid"
+  ],
+  [
+   "L2",
+   "Dissociation",
+   "It tracks experience when behaviour disagrees, after controlling for the EEG spectrum.",
+   "Partial"
+  ],
+  [
+   "L3",
+   "Content",
+   "It predicts what is experienced, with report and task confounds controlled.",
+   "Contested"
+  ],
+  [
+   "L4",
+   "Theory",
+   "One theory's sealed predictions beat its rivals across L1-L3.",
+   "Empty"
+  ]
+ ],
+ "not_claimed": [
+  "**The hard problem.** A theory that predicts exactly which brain activity comes with experience would still not say why there is experience at all. We say so on every page.",
+  "**AI sentience.** We use AI systems only to stress-test theories, and never treat a model's self-report as evidence.",
+  "**Clinical use.** A measure that does well here is not a diagnostic for patients."
+ ],
+ "theories_nav": "Theories",
+ "theories_title": "Theory scoreboard",
+ "theories_lede": "Each theory, the prediction it can least afford to get wrong, and what the evidence so far says. Our own theory joins this table once it is written down and sealed.",
+ "theory_cols": [
+  "Riskiest prediction",
+  "Evidence so far",
+  "Status"
+ ],
+ "as_of": "November 2026",
+ "theories": [
+  {
+   "name": "Integrated information (IIT 4.0)",
+   "who": "Tononi, Albantakis",
+   "prediction": "Content lives in a posterior 'hot zone' with synchrony sustained as long as the percept lasts; feedforward systems have no experience whatever they do.",
+   "evidence": "COGITATE (Nature 2025): orientation was decodable from posterior cortex, but sustained posterior synchronisation was not found. Φ cannot be computed for a brain, so only proxies are testable.",
+   "status": "Strained"
+  },
+  {
+   "name": "Global neuronal workspace",
+   "who": "Dehaene, Changeux",
+   "prediction": "Late, all-or-none 'ignition' with prefrontal broadcast at the onset and offset of a percept.",
+   "evidence": "COGITATE challenged the all-or-none threshold and found no sharp offset response. A 2026 reanalysis claims offset ignition with directed connectivity (authors not yet verified).",
+   "status": "Strained"
+  },
+  {
+   "name": "Recurrent processing",
+   "who": "Lamme",
+   "prediction": "Local recurrence in sensory cortex is enough for experience, without report or frontal access.",
+   "evidence": "No completed adversarial test found. Hard to refute because it posits experience without access.",
+   "status": "Untested"
+  },
+  {
+   "name": "Higher-order theories",
+   "who": "Lau, Rosenthal, Brown",
+   "prediction": "Prefrontal meta-representation is necessary: disrupting it changes experience itself, not only report.",
+   "evidence": "Adversarial collaborations reported to be running; no published results found.",
+   "status": "Untested"
+  },
+  {
+   "name": "Predictive processing / active inference",
+   "who": "Seth, Friston, Pennartz",
+   "prediction": "Few sharp predictions at the framework level; INTREPID tests two versions against IIT.",
+   "evidence": "The INTREPID consortium paper (2026) sets out the tests; no results yet.",
+   "status": "Untested"
+  },
+  {
+   "name": "Attention schema",
+   "who": "Graziano",
+   "prediction": "Awareness is a model of attention, so attention without awareness should be worse controlled.",
+   "evidence": "Few neural commitments; mainly useful as an AI test case.",
+   "status": "Untested"
+  },
+  {
+   "name": "Complexity and criticality measures",
+   "who": "Massimini, Carhart-Harris and others",
+   "prediction": "Signal complexity (PCI, Lempel-Ziv) tracks the level of consciousness.",
+   "evidence": "PCI is the strongest candidate. Spontaneous-EEG LZ correlated 0.86 with the spectral exponent in one patient study and lost its value once phase-normalised.",
+   "status": "Contested"
+  }
+ ],
+ "bench": [
+  [
+   "Lempel-Ziv complexity",
+   "does it add anything over the 1-40 Hz spectral slope once phase-normalised?"
+  ],
+  [
+   "Spectral slope",
+   "the baseline to beat; does it get ketamine and REM right?"
+  ],
+  [
+   "PCI from resting EEG",
+   "can spontaneous EEG predict the TMS-based index out of sample, as Maschke et al. 2024 claim?"
+  ],
+  [
+   "Φ proxies",
+   "do they rank toy networks of known Φ correctly before being run on brains? A 2024 rat study found them running opposite to PCI under anaesthesia."
+  ],
+  [
+   "Dream-report prediction",
+   "does posterior low-frequency power predict dreaming within a sleep stage on held-out awakenings?"
+  ],
+  [
+   "COGITATE claims",
+   "how many reasonable analysis variants support each theory, under one sealed multiverse?"
+  ]
+ ],
+ "approach_lede": "The same rules as our Indus script project: a good-looking result must not be able to come from trying until something works.",
+ "rules": [
+  [
+   "Seal it before you look.",
+   "Each measure, its preprocessing, its threshold and its pass mark are written down and SHA-256 hashed before we see any outcome."
+  ],
+  [
+   "Test on people it never saw.",
+   "Data is split by subject, and data from the same lab counts as a near-copy when we test transfer."
+  ],
+  [
+   "Plant an answer first.",
+   "A pipeline must recover an injected effect of known size, and must not call spectrum-matched noise 'conscious', before its output on real data counts."
+  ],
+  [
+   "Let someone else try to break it.",
+   "Every positive result goes to a red team that did not produce it."
+  ],
+  [
+   "Publish it either way.",
+   "Failed routes are written up with the size of effect the test could have caught."
+  ]
+ ],
+ "traps": [
+  [
+   "Report is the only ground truth.",
+   "Every label is inferred from someone's report or behaviour, so we grade each label by what it rests on."
+  ],
+  [
+   "Unresponsive is not unconscious.",
+   "Ketamine and dreaming show the gap, which is why they are our hardest tests."
+  ],
+  [
+   "The spectrum hides everything.",
+   "Many complexity measures move with slow-wave power; we compare every measure against it."
+  ],
+  [
+   "Analytic flexibility.",
+   "The same COGITATE data has already been read both ways on offset ignition."
+  ],
+  [
+   "Small samples.",
+   "Most open datasets have 10-30 people; every negative states what it could have detected."
+  ]
+ ],
+ "milestones": [
+  [
+   "M1",
+   "Foundations"
+  ],
+  [
+   "M2",
+   "Bench published measures"
+  ],
+  [
+   "M3",
+   "Theory tests on COGITATE"
+  ],
+  [
+   "M4",
+   "Planted controls"
+  ],
+  [
+   "M5",
+   "Latest research sweep"
+  ],
+  [
+   "M6",
+   "Red team"
+  ]
+ ],
+ "contribute": [
+  "**Rerun a test.** Every result has code and a sealed pre-registration in the repository.",
+  "**Attack a result.** Red-team tasks are open on the tracker; say what you will try before you try it.",
+  "**Point us to data.** Above all: open TMS-EEG across states, serial-awakening dream reports, and open ketamine EEG.",
+  "**Tell us we encoded your theory wrong.** If you work on one of these theories, we want to know where our version of its prediction is unfair."
+ ]
+}

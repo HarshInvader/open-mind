@@ -1,0 +1,12 @@
+{
+ "task": 24,
+ "n_constraints": 59,
+ "grades": {
+  "A": 19,
+  "B": 30,
+  "C": 10
+ },
+ "dois_corrected": 11,
+ "dois_dropped": 0,
+ "rows_xref_only": 13
+}

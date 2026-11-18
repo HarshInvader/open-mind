@@ -1,0 +1,38 @@
+{
+ "gauss_mi_ar1": {
+  "pass": true,
+  "detail": "est 0.3384 vs analytic 0.3367"
+ },
+ "causal_density_planted": {
+  "pass": true,
+  "detail": "coupled 0.0596, independent 0.00004"
+ },
+ "phi_wms_planted": {
+  "pass": true,
+  "detail": "independent 0.0000, coupled 0.2692"
+ },
+ "integration_planted": {
+  "pass": true,
+  "detail": "indep 0.0000, corr 0.5906"
+ },
+ "tse_planted": {
+  "pass": true,
+  "detail": "indep 0.0000, corr 0.3996"
+ },
+ "lzc_planted": {
+  "pass": true,
+  "detail": "iid 1.001, periodic 0.0071"
+ },
+ "pyphi_structural_zero": {
+  "pass": true,
+  "detail": "max phi_s: FF 0.0, DISC 0.0, DENSE 0.4700"
+ },
+ "phi_plugin_converges": {
+  "pass": true,
+  "detail": "plug-in 0.0007 vs true 0.0006"
+ },
+ "stationary_matches_sim": {
+  "pass": true,
+  "detail": "total variation 0.0037"
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "slope": {
+  "rates": {
+   "surr_W": 1.0,
+   "real_W": 1.0,
+   "real_N3": 0.0,
+   "surr_N3": 0.0
+  },
+  "ci": {
+   "surr_W": [
+    1.0,
+    1.0
+   ],
+   "real_W": [
+    1.0,
+    1.0
+   ],
+   "auc_real": [
+    1.0,
+    1.0
+   ],
+   "auc_surr": [
+    1.0,
+    1.0
+   ]
+  },
+  "auc_real": 1.0,
+  "auc_surr": 1.0,
+  "spectral_share": 1.0,
+  "verdict": "FAIL",
+  "note": "",
+  "higher_is_conscious": true
+ },
+ "asym": {
+  "rates": {
+   "surr_W": 0.00125,
+   "real_W": 0.99125,
+   "real_N3": 0.01,
+   "surr_N3": 0.0
+  },
+  "ci": {
+   "surr_W": [
+    0.0,
+    0.00375
+   ],
+   "real_W": [
+    0.9775,
+    1.0
+   ],
+   "auc_real": [
+    0.9939462890625,
+    0.999396796875
+   ],
+   "auc_surr": [
+    0.5277708593749999,
+    0.598091328125
+   ]
+  },
+  "auc_real": 0.996746875,
+  "auc_surr": 0.5629078125,
+  "spectral_share": 0.1266395737265584,
+  "verdict": "PASS",
+  "note": "passes, surrogate-sensitive (surrogates pushed past N3)",
+  "higher_is_conscious": true
+ },
+ "psd_err_median": 0.02883590533352437,
+ "PLANTED_CHECK_PASS": true
+}

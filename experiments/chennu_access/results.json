@@ -1,0 +1,11 @@
+{
+ "members_fdt": 80,
+ "members_set": 80,
+ "compressed_GB_eeg": 3.694,
+ "demo_member": "Sedation-RestingState/02-2010-anest 20100210 135.003.fdt",
+ "bytes_read_decompressed": 5460000,
+ "samples": 15000,
+ "channel_sd_median_uV": 7.216597080230713,
+ "finite": true,
+ "sec": 5.3
+}

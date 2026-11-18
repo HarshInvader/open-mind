@@ -1,0 +1,22 @@
+{
+  "task": 2,
+  "agent": "mind-1",
+  "date": "2026-11-18",
+  "verdict": "Root data criterion fails as written: open data covers 2 families (sleep, anaesthesia), not 3. DoC and ketamine have no open data.",
+  "qualifying_datasets": {
+    "anaesthesia": ["ds005620", "chennu2016_cam", "ds004541"],
+    "sleep": ["sleep-edfx", "dream_tononi_serial", "dream_lode", "dream_degennaro_youngadults"]
+  },
+  "n_qualifying": 7,
+  "n_families": 2,
+  "families_required": 3,
+  "dream_records": {"rows": 3191, "experience": 1953, "no_experience": 860, "without_recall": 316},
+  "ds005620_reports_group_level": {"attempted": 52, "experience": 24, "no_experience": 5, "no_info": 23, "per_run_labels_released": false},
+  "blocked": {
+    "cogitate_ieeg": "account required",
+    "zenodo_806176_ketamine": "restricted",
+    "doc_patients": "no fully open set found"
+  },
+  "not_eeg": ["ds003171 (fMRI propofol)", "ds003059 (fMRI LSD)"],
+  "chennu_zip_range_requests": true
+}

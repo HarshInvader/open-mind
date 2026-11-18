@@ -1,0 +1,107 @@
+{
+ "max": 250,
+ "n_constraints": 58,
+ "bootstrap_reps": 10000,
+ "totals": {
+  "GNWT": {
+   "score": 110,
+   "ci95": [
+    86,
+    134
+   ],
+   "counts": {
+    "compatible": 37,
+    "explains": 7,
+    "strained": 4,
+    "silent": 10
+   }
+  },
+  "IIT": {
+   "score": 98,
+   "ci95": [
+    74,
+    121
+   ],
+   "counts": {
+    "compatible": 38,
+    "explains": 4,
+    "silent": 12,
+    "strained": 4
+   }
+  },
+  "T1": {
+   "score": 97,
+   "ci95": [
+    75,
+    117
+   ],
+   "counts": {
+    "compatible": 45,
+    "silent": 9,
+    "strained": 4
+   }
+  },
+  "T2": {
+   "score": 97,
+   "ci95": [
+    75,
+    117
+   ],
+   "counts": {
+    "compatible": 45,
+    "silent": 9,
+    "strained": 4
+   }
+  }
+ },
+ "differences": {
+  "T1-IIT": {
+   "diff": -1,
+   "ci95": [
+    -18,
+    17
+   ],
+   "share_boot_gt0": 0.4297
+  },
+  "T1-GNWT": {
+   "diff": -13,
+   "ci95": [
+    -42,
+    13
+   ],
+   "share_boot_gt0": 0.1608
+  },
+  "T2-IIT": {
+   "diff": -1,
+   "ci95": [
+    -21,
+    20
+   ],
+   "share_boot_gt0": 0.444
+  },
+  "T2-GNWT": {
+   "diff": -13,
+   "ci95": [
+    -42,
+    13
+   ],
+   "share_boot_gt0": 0.1587
+  },
+  "T1-T2": {
+   "diff": 0,
+   "ci95": [
+    -12,
+    12
+   ],
+   "share_boot_gt0": 0.3479
+  },
+  "IIT-GNWT": {
+   "diff": -12,
+   "ci95": [
+    -39,
+    14
+   ],
+   "share_boot_gt0": 0.1729
+  }
+ }
+}

@@ -1,0 +1,148 @@
+{
+ "delta": 0.6931471805599453,
+ "detector": {
+  "recall": 0.9818840579710145,
+  "precision": 0.9854545454545455,
+  "decoys_over_threshold": 91,
+  "decoy_rejection": 0.9560439560439561,
+  "median_end_error_s": 0.07596532804795042,
+  "corr_logL_true_vs_detected": 0.9108317479247315,
+  "pass": true
+ },
+ "scenarios": {
+  "T1_OR1.50": {
+   "reps": 100,
+   "verdicts": {
+    "STRONG PASS": 0.34,
+    "REFUTED (no recency effect of the stated size)": 0.29,
+    "INCONCLUSIVE": 0.21,
+    "PASS": 0.08,
+    "REFUTED (recency tracks recall, not experience)": 0.08
+   },
+   "mean_TA": 0.484,
+   "mean_TD": 0.429,
+   "reject_rates": {
+    "TA_recency": 0.72,
+    "TB_timing": 0.56,
+    "TC_post_minus_front": 0.43,
+    "TD_without_recall": 0.59
+   }
+  },
+  "T1_OR2.00": {
+   "reps": 100,
+   "verdicts": {
+    "STRONG PASS": 0.87,
+    "INCONCLUSIVE": 0.06,
+    "PASS": 0.03,
+    "REFUTED (recency tracks recall, not experience)": 0.03,
+    "REFUTED (no recency effect of the stated size)": 0.01
+   },
+   "mean_TA": 0.773,
+   "mean_TD": 0.651,
+   "reject_rates": {
+    "TA_recency": 0.99,
+    "TB_timing": 0.97,
+    "TC_post_minus_front": 0.91,
+    "TD_without_recall": 0.91
+   }
+  },
+  "T1_OR2.00_shuffled": {
+   "reps": 50,
+   "verdicts": {
+    "REFUTED (no recency effect of the stated size)": 0.94,
+    "INCONCLUSIVE": 0.04,
+    "STRONG PASS": 0.02
+   },
+   "mean_TA": -0.01,
+   "mean_TD": 0.061,
+   "reject_rates": {
+    "TA_recency": 0.02,
+    "TB_timing": 0.02,
+    "TC_post_minus_front": 0.04,
+    "TD_without_recall": 0.06
+   }
+  },
+  "T1_OR2.50": {
+   "reps": 100,
+   "verdicts": {
+    "STRONG PASS": 0.96,
+    "PASS": 0.02,
+    "REFUTED (recency tracks recall, not experience)": 0.01,
+    "INCONCLUSIVE": 0.01
+   },
+   "mean_TA": 0.928,
+   "mean_TD": 0.751,
+   "reject_rates": {
+    "TA_recency": 1.0,
+    "TB_timing": 0.99,
+    "TC_post_minus_front": 0.97,
+    "TD_without_recall": 0.99
+   }
+  },
+  "null_OR1.00": {
+   "reps": 100,
+   "verdicts": {
+    "REFUTED (no recency effect of the stated size)": 0.92,
+    "INCONCLUSIVE": 0.05,
+    "REFUTED (recency tracks recall, not experience)": 0.02,
+    "STRONG PASS": 0.01
+   },
+   "mean_TA": 0.085,
+   "mean_TD": 0.069,
+   "reject_rates": {
+    "TA_recency": 0.06,
+    "TB_timing": 0.03,
+    "TC_post_minus_front": 0.01,
+    "TD_without_recall": 0.03
+   }
+  },
+  "recall_OR1.50": {
+   "reps": 100,
+   "verdicts": {
+    "REFUTED (no recency effect of the stated size)": 0.89,
+    "REFUTED (recency tracks recall, not experience)": 0.07,
+    "INCONCLUSIVE": 0.04
+   },
+   "mean_TA": 0.16,
+   "mean_TD": -0.131,
+   "reject_rates": {
+    "TA_recency": 0.08,
+    "TB_timing": 0.04,
+    "TC_post_minus_front": 0.0,
+    "TD_without_recall": 0.0
+   }
+  },
+  "recall_OR2.00": {
+   "reps": 100,
+   "verdicts": {
+    "REFUTED (no recency effect of the stated size)": 0.78,
+    "REFUTED (recency tracks recall, not experience)": 0.17,
+    "INCONCLUSIVE": 0.05
+   },
+   "mean_TA": 0.247,
+   "mean_TD": -0.239,
+   "reject_rates": {
+    "TA_recency": 0.19,
+    "TB_timing": 0.11,
+    "TC_post_minus_front": 0.1,
+    "TD_without_recall": 0.0
+   }
+  },
+  "recall_OR2.50": {
+   "reps": 100,
+   "verdicts": {
+    "REFUTED (no recency effect of the stated size)": 0.68,
+    "REFUTED (recency tracks recall, not experience)": 0.22,
+    "INCONCLUSIVE": 0.1
+   },
+   "mean_TA": 0.268,
+   "mean_TD": -0.231,
+   "reject_rates": {
+    "TA_recency": 0.25,
+    "TB_timing": 0.12,
+    "TC_post_minus_front": 0.13,
+    "TD_without_recall": 0.0
+   }
+  }
+ }
+}
