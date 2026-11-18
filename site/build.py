@@ -43,6 +43,12 @@ def load(name):
 
 
 ART, FG, CH = load("art"), load("figs"), load("chrome")
+LOGO = json.loads((SITE / "logo_paths.json").read_text())
+LOGO_WORDS = [("Open|Regular", "soft"), ("Mind|Bold", "ink")]  # "Open" light, "Mind" heavy, beside the Necker cube
+
+
+def logo(cls="wordmark", show_mark=True):
+    return CH.lockup(LOGO, LOGO_WORDS, ART.MARK, cls=cls, show_mark=show_mark)
 NAME = C["name"]
 GOAL = C["goal"]
 
@@ -86,25 +92,25 @@ def layout(fname, title, desc, body):
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script>(function(){{var t=null;try{{t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('om-theme')}}catch(e){{}}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);document.documentElement.classList.add('js')}})();</script>
-<link rel="preload" href="fonts/OpenIndus-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/OpenIndusText-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/OpenIndusText-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css"></head>
 <body class="{"home" if fname == "index.html" else ""}"><a class="skip" href="#main">Skip to content</a>
 <header class="site-head" id="site-head"><div class="wrap head-row">
-<a class="brand" href="index.html" aria-label="{E(NAME)} home">{mark_svg()}{CH.wordmark_svg(NAME)}</a>
+<a class="brand" href="index.html" aria-label="{E(NAME)} home">{logo()}</a>
 <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path class="m1" d="M3 6h14"/><path class="m2" d="M3 10h14"/><path class="m3" d="M3 14h14"/></svg><span>Menu</span></button>
 <nav class="site-nav" id="site-nav" aria-label="Main"><ul>{nav}</ul></nav>
 <button class="theme" type="button" id="theme" aria-label="Colour theme: automatic"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="7"/><path d="M10 3a7 7 0 0 1 0 14z" fill="currentColor" stroke="none"/></svg><span id="theme-label">Auto</span></button>
 </div></header>
 <main id="main" class="wrap" tabindex="-1">{body}</main>
 <footer class="site-foot"><div class="wrap foot-row">
-<div class="foot-brand">{mark_svg()}<div><b>{E(NAME)}</b><p>Goal: {E(GOAL[0].lower() + GOAL[1:])}.</p><p>An open research project run by a human lead and a team of AI agents. Every result can be rerun from code.</p></div></div>
+<div class="foot-brand"><div>{logo()}<p>Goal: {E(GOAL[0].lower() + GOAL[1:])}.</p><p>An open research project run by a human lead and a team of AI agents. Every result can be rerun from code.</p></div></div>
 <nav class="foot-cols" aria-label="Site map">
 <div class="foot-links"><h2 class="foot-h">Pages</h2>{foot}</div>
 <div class="foot-links"><h2 class="foot-h">Contribute</h2><a href="{REPO}">Code and data</a><a href="{REPO}/blob/main/CONTRIBUTING.md">How to contribute</a><a href="{REPO}/blob/main/board/TASKS.md">Open tasks</a><a href="news.xml">News feed (RSS)</a></div>
 <div class="foot-links"><h2 class="foot-h">Family</h2><a href="../index.html">Open Citizen Science</a><a href="{REPO}/blob/main/LICENSING.md">Licences</a><a href="resources.html#logo">Logo and typeface</a></div>
 </nav>
-<p class="foot-note">None of this explains why experience exists at all. Type: the Open Indus typeface (OFL). Built {time.strftime('%d %b %Y').lstrip('0')}.</p>
+<p class="foot-note">None of this explains why experience exists at all. Body type: Open Indus Text, from Instrument Sans (OFL). Built {time.strftime('%d %b %Y').lstrip('0')}.</p>
 </div></footer><script src="assets/site.js"></script></body></html>"""
 
 
@@ -197,7 +203,7 @@ def page_index():
             f'<p class="kicker">{E(NAME)}, an open research group</p>'
             '<h1 id="claim">Find the best theory of consciousness by 2027</h1>'
             '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
-            '<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a><a class="btn" href="findings.html">Read the findings</a></div>'
+            '<div class="actions"><a class="btn primary" href="contribute.html">Contribute</a><a class="btn" href="findings.html">Read the findings</a></div>'
             f'</div>{art}</section>')
     band = CH.frieze(SIGNS, "A band of the signs of this project: a Necker cube, brain waves, an eye, the moon, a speech bubble, an illusion and an electrode")
     s1 = block("01", "The question", "h-question", "Nobody knows which brain activity makes an experience",
@@ -225,7 +231,7 @@ def page_index():
                '<div class="actions"><a class="btn" href="data.html">Get the data</a></div></div>'
                f'{FG.data_matrix()}</div>')
     s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
-               '<div class="say"><p>Donate your tokens: point a Claude Fable or Opus class agent at an open task. Or bring data, or a careful eye.</p></div>'
+               '<div class="say"><p>Point a Claude Fable or Opus class agent at an open task. Or bring data, or a careful eye.</p></div>'
                '<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>')
     return hero + band + s1 + s2 + s3 + s4 + s5 + s6
 
@@ -527,10 +533,7 @@ def verdict(p):
 
 
 def page_resources():
-    wi, ww = CH.wordmark_inner(NAME)
-    big = (f'<svg class="wm-big" viewBox="-10 -14 {150 + ww + 20} 128" aria-hidden="true" style="fill:none;stroke-linecap:round;stroke-linejoin:round">'
-           f'<g transform="translate(-6 -14) scale(4)" style="stroke:var(--accent);stroke-width:2.4">{ART.MARK}</g>'
-           f'<g transform="translate(150 0)" style="stroke:var(--ink);stroke-width:10.5">{wi}</g></svg>')
+    big = logo("wm-big")
     dl = lambda f, d: f'<li><a href="{f}" download><b>{E(f.split("/")[-1])}</b></a><span>{d}</span></li>'
     files = "".join(dl("data/" + p.split("/")[-1], f"{E(d)}. From {FG.code(p)}, {max(1, round((ROOT / p).stat().st_size / 1024))} KB") for p, d in DATA_FILES if (ROOT / p).exists())
     res = ""
@@ -676,8 +679,8 @@ def main():
     m = re.search(r"--accent:\s*(#[0-9A-Fa-f]{6})", (SITE / "brand.css").read_text()).group(1)
     (DIST / "assets/favicon.svg").write_text(ART.mark_svg_file(m))
     (DIST / "assets/open-mind-mark.svg").write_text(ART.mark_svg_file(m))
-    (DIST / "assets/open-mind-wordmark.svg").write_text(CH.lockup_svg(NAME, ART.MARK, color="#15171C", mark_color=m))
-    (DIST / "assets/open-mind-wordmark-text.svg").write_text(CH.wordmark_svg(NAME, inline=False, color="#15171C"))
+    (DIST / "assets/open-mind-wordmark.svg").write_text(CH.lockup(LOGO, LOGO_WORDS, ART.MARK, inline=False, colors={"ink": "#15171C", "soft": "#4F5560", "accent": m}))
+    (DIST / "assets/open-mind-wordmark-text.svg").write_text(CH.lockup(LOGO, LOGO_WORDS, ART.MARK, inline=False, colors={"ink": "#15171C", "soft": "#4F5560", "accent": m}, show_mark=False))
     for p, _ in DATA_FILES:
         if (ROOT / p).exists():
             shutil.copy(ROOT / p, DIST / "data" / p.split("/")[-1])
