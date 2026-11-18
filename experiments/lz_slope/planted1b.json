@@ -1,0 +1,15 @@
+{
+ "n_epochs": 1800,
+ "n_subjects": 45,
+ "slope_auc_beta0": 0.5,
+ "slope_auc_beta0.25": 0.6587222222222222,
+ "slope_auc_beta0.5": 0.7920589506172839,
+ "slope_auc_beta1.0": 0.9483225308641975,
+ "slope_mean_shift_beta1": -1.0262784154489333,
+ "lz_auc_beta0": 0.5,
+ "lz_auc_beta0.25": 0.7148944444444445,
+ "lz_auc_beta0.5": 0.8768643518518519,
+ "lz_auc_beta1.0": 0.9916401234567901,
+ "lz_mean_shift_beta1": -0.3794195721144235,
+ "PASS": true
+}

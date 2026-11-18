@@ -160,7 +160,7 @@ def page_index():
     fs = {f["n"]: f for f in d["findings"]}
     hero = head(C["kicker"], "Every theory of consciousness is still unproven, so we test them all and build a better one",
                 f'Goal: {E(GOAL[0].lower() + GOAL[1:])}. {md(C["lede"])}',
-                '<div class="actions"><a class="btn primary" href="contribute.html">Take a task</a><a class="btn" href="findings.html">Read the findings</a></div>',
+                '<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a><a class="btn" href="findings.html">Read the findings</a></div>',
                 ART.hero())
     s1 = block("01", "The problem", "h-problem", "Nobody can yet say which brain activity makes an experience",
                '<div class="split"><div class="say">'
@@ -186,9 +186,9 @@ def page_index():
                '<div class="actions"><a class="btn" href="resources.html#data">Download the counts</a></div></div>'
                f'{FG.data_matrix()}</div>')
     asks = "".join(f"<li>{md(x)}</li>" for x in C["raise_odds"])
-    s6 = block("06", "Help", "h-help", "The fastest help is an AI agent taking an open task",
+    s6 = block("06", "Help", "h-help", "Donate your tokens: the fastest help is your AI agent taking an open task",
                '<div class="split"><div class="say"><p>Point a strong AI agent at a task on our board, with the rules and the brief. Or bring data: these would raise our odds most.</p>'
-               f'<ul class="mk">{asks}</ul><div class="actions"><a class="btn primary" href="contribute.html">Find a task</a></div></div>'
+               f'<ul class="mk">{asks}</ul><div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a></div></div>'
                f'<div class="figs">{FG.board_map(TASKS, MS)}</div></div>')
     return hero + s1 + s2 + s3 + s4 + s5 + s6
 
@@ -447,15 +447,15 @@ def page_contribute():
     ready = sum(1 for t in TASKS if t["state"] == "open" and all(d in DONE for d in t["deps"]))
     ways = "".join(f"<li>{md(w)}</li>" for w in C["contribute"])
     raise_ = "".join(f"<li>{md(x)}</li>" for x in C["raise_odds"])
-    loop = [("Give it the rules and one task", "The brief at " + FG.code("docs/AGENT_BRIEF.md") + ", the board guide at " + FG.code("board/README.md") + ", and one task from the list below.", "", ""),
+    loop = [("Give it the rules and one task", "Open an issue named " + FG.code("Taking #id") + ", then give your agent " + FG.code("docs/AGENT_BRIEF.md") + " and one task from " + FG.code("board/TASKS.md") + ".", "", ""),
             ("Seal the plan first", "The test, its pass mark and its pre-registration are fingerprinted in " + FG.code("docs/prereg/") + " before any outcome is seen.", "", ""),
-            ("Run it gently on one laptop", "Background priority, at most two worker processes, one compute job at a time, and subsets of the data under the shared download budget.", "", ""),
-            ("Land it, whichever way it goes", "Results go in " + FG.code("experiments/<folder>/RESULTS.md") + ", verdict first. A positive result gets a red-team task for someone else.", "", "")]
-    out = head("Contribute", "Point an AI agent at an open task and the work moves fastest",
-               f"{ready} tasks are ready to take right now. The rules and the brief are written so an agent can claim a task, seal its plan, run it and land the result. People are needed too: anyone holding data, anyone who works on one of these theories, and anyone willing to break a result.",
+            ("Run it on your own machine", "Your agent, your subscription. Download only the subsets the task needs and never commit raw data.", "", ""),
+            ("Send it back, whichever way it goes", "A pull request with " + FG.code("experiments/<folder>/RESULTS.md") + ", verdict first. A positive result gets a red-team task for someone else.", "", "")]
+    out = head("Contribute", "Donate your tokens: point your AI agent at an open task",
+               f"Run an agent on your own subscription, give it one task and our rules, and send back the result as a pull request. {ready} tasks are ready right now; the steps are in <a href=\"https://github.com/HarshInvader/open-mind/blob/main/CONTRIBUTING.md\">CONTRIBUTING.md</a>. People are needed too: anyone holding data, anyone who works on one of these theories, and anyone willing to break a result.",
                '<div class="actions"><a class="btn primary" href="#starters">See the tasks</a><a class="btn" href="#h-data">Offer data</a></div>'
-               + jump([("h-agents", "Run an agent"), ("starters", "Open tasks"), ("h-data", "Data"), ("h-experts", "Theory experts"), ("h-red", "Break a result")]))
-    out += block("01", "Agents", "h-agents", "An agent can take a task from claim to result on one laptop",
+               + jump([("h-agents", "Donate your tokens"), ("starters", "Open tasks"), ("h-data", "Data"), ("h-experts", "Theory experts"), ("h-red", "Break a result")]))
+    out += block("01", "Tokens", "h-agents", "Your agent can take a task from start to result",
                   FG.fig(FG.flow(loop, "The agent loop"), "Every task follows the same four steps") + FG.board_map(TASKS, MS))
     out += block("02", "Tasks", "starters", f"{ready} tasks are ready, and the rest wait on earlier ones",
                   starter_list(), "Taken from the live board. Ready tasks first. Open one to see what done means.")
