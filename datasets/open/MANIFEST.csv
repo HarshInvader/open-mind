@@ -1,0 +1,17 @@
+file,rows,columns,description,made_by
+ground_truth_labels.csv,3679,12,"One row per open recording or awakening: dataset, lab, subject, stage, behaviour, report and kind of ground truth",experiments/ground_truth/labels.csv
+ground_truth_counts.json,,13,"Counts behind the data figures: recordings by dataset and label kind, report-labelled awakenings by stage and lab",experiments/ground_truth/counts.json
+dream_access.csv,20,13,"Each DREAM package: live access check, licence, size and experience / no-experience counts by stage",experiments/data_access/dream_access.csv
+dream_sets.csv,20,14,"Per DREAM set: awakenings, subjects, report counts, sample rate, channels, size and licence",experiments/dataset_audit/dream_sets.csv
+bench_ledger.csv,29,23,"One row per test from every experiment, with an `experiment` column",experiments/*/ledger_rows.csv
+lz_slope_results.json,,11,"LZ complexity vs aperiodic slope across Sleep-EDF, ds005620 and Chennu: AUCs and CIs",experiments/lz_slope/results.json
+t1_dream_features.csv,237,14,"Tononi serial awakenings: per-awakening delta, sigma, beta power and exponent before waking, with report label",experiments/t1_dream/features.csv
+t1_dream_subject_counts.csv,35,4,"Tononi set: experience / no experience / without recall per subject, as analysed",experiments/t1_dream/subject_counts_realised.csv
+theory_tests_scoreboard.csv,7,8,"Pre-registered theory predictions on DREAM and Chennu data: statistic, CI, verdict, prereg hash",experiments/theory_tests/scoreboard.csv
+theory_tests_results.json,,8,Full results of the theory tests,experiments/theory_tests/results.json
+theory_scorecard.csv,708,8,"Each theory x constraint: mark, points and reason",experiments/theory_scorecard/scorecard.csv
+theory_scorecard_totals.csv,12,11,"Totals per theory: explains, compatible, silent, strained, contradicts",experiments/theory_scorecard/totals.csv
+theory_scorecard_gaps.csv,16,6,Constraints no theory explains,experiments/theory_scorecard/gaps.csv
+constraint_ledger.csv,59,7,"The constraints any theory must meet, with evidence grade and sources",experiments/constraint_ledger/ledger.csv
+our_theory_coverage.csv,58,9,"Our candidate theory against each constraint, two drafts",experiments/our_theory/coverage.csv
+blind_scoring_marks.csv,236,8,Blind re-marks of theory x constraint cells,experiments/blind_scoring/marks.csv

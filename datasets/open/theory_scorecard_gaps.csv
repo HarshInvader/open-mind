@@ -1,0 +1,17 @@
+constraint_id,grade,kind,compatible,strained,constraint
+C20,A,none explains,GNWT IIT RPT HOT PP AST DIT EB TTC BSA,,A quarter of behaviourally unresponsive brain-injured patients follow commands in fMRI or EEG imagery tasks (covert awareness / cognitive-motor dissociation).
+C36,A,none explains,GNWT PP,,"What we experience at a moment can be changed by stimuli arriving up to hundreds of ms later (postdiction: flash-lag, cutaneous rabbit, long-lasting feature fusion)."
+C06,B,none explains,GNWT IIT RPT HOT AST DIT BSA,,Adults who had one cerebral hemisphere surgically removed are conscious and hold normal within-hemisphere networks.
+C15,B,none explains,GNWT IIT RPT HOT,,"Under intended general anaesthesia some patients follow commands with an isolated forearm, yet recall nothing afterwards."
+C18,B,none explains,GNWT IIT RPT HOT PP DIT,,The visual content of sleep-onset imagery can be decoded from fMRI patterns in visual cortex.
+C19,B,all silent/strained,,,"Lucid dreamers in verified REM sleep can perceive questions, compute answers and reply with eye signals."
+C39,B,all silent/strained,,GNWT IIT,"COGITATE (n = 256): content was found in visual, ventrotemporal and inferior frontal cortex; there was no sustained posterior synchronisation and no general ignition at stimulus offset; prefrontal cortex held limited content."
+C42,B,none explains,IIT,EB,"High-amplitude delta waves usually come with loss of consciousness, but people with Angelman syndrome, some seizures, and some drug states are conscious with prominent delta."
+C44,B,none explains,IIT,,Parts of an awake brain can go briefly 'offline' with local slow waves while the animal is awake and behaving.
+C51,B,none explains,GNWT HOT DIT,IIT,"Cholinergic stimulation of rat prefrontal cortex, but not of two parietal sites, reversed sevoflurane anaesthesia while the drug continued."
+C04,C,none explains,RPT,IIT,Whether a split brain holds one or two subjects is unresolved: two patients detected and localised stimuli across the whole field with either hand or speech.
+C30,C,none explains,GNWT IIT RPT HOT,,"In a no-report masking design, frontal univariate responses vanish but whether a stimulus was seen can still be decoded from frontal and posterior patterns."
+C50,C,all silent/strained,,,"Claustrum: stimulation near the left claustrum stopped behaviour and responsiveness in one patient; claustrum lesions in 171 veterans related to how long, not how often, consciousness was lost."
+C54,C,all silent/strained,,,"A minority of patients in a vegetative or minimally conscious state transiently improve on zolpidem, a sedative."
+C56,C,all silent/strained,,,"In dying rats, a short surge of coherent gamma activity occurs within 30 s of cardiac arrest."
+C57,C,all silent/strained,,,"A readiness potential precedes the reported time of deciding to move, but it may reflect accumulating noise rather than a decision."

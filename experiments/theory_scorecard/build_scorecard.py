@@ -22,6 +22,7 @@ THEORIES = {
     "EB": "Entropic brain / complexity",
     "TTC": "Temporo-spatial theory",
     "BSA": "Brainstem affect theory (Solms; Merker)",
+    "SL": "Strange loop (Hofstadter)",
 }
 
 # Proponent sources (all DOIs resolved on Crossref; quotes copied from abstracts or open full text read in this task).
@@ -79,6 +80,11 @@ SRC = {
     "nz22": ("10.1016/j.bbr.2022.113788", "Northoff & Zilio 2022 (abstract)"),
     "solms19": ("10.3389/fpsyg.2018.02714", "Solms 2019 (full text)"),
     "merker07": ("10.1017/S0140525X07000891", "Merker 2007 (abstract)"),
+    # Task #36 (theory2). Hofstadter's books have no DOI; the first field is an ISBN or URL.
+    # The archive.org copies are lending-restricted (search-inside 403) and Google Books returned a captcha,
+    # so book quotes and pages are taken from reader transcriptions and were NOT checked against the printed page.
+    "ias07": ("isbn:9780465030781", "Hofstadter, I Am a Strange Loop (Basic Books 2007); quote and page via https://intertwingled.org/i-am-not-a-strange-loop/, not checked against the book"),
+    "geb79": ("url:https://www.mccurdyc.dev/books/2024-godel-escher-bach/", "Hofstadter, Godel, Escher, Bach (1979); quote and page from a reader's notes (edition not stated), not checked against the book"),
 }
 
 NP = None  # no published position found in the sources read
@@ -256,6 +262,20 @@ CELLS = {
          **{t: ("C", NP, "Classical theory; needs no quantum coherence.") for t in ["GNWT", "IIT", "RPT", "HOT", "PP", "AST", "DIT", "EB", "TTC", "BSA"]}},
 }
 
+# Task #36 (theory2): Strange loop (Hofstadter). Non-silent cells quote his own words; every other row is silent
+# because no statement by him on the finding was found. Strains that fall outside the ledger rows are in RESULTS.md.
+SL_SILENT_NOTE = "Silent: no Hofstadter statement on this finding found in the sources read; not extrapolated."
+SL_CELLS = {
+ "C07": ("C", "ias07", "Closest statement, not about lesions: 'Those little sensual experiences (e.g., seeing purple, tasting chocolate) are to the grand pattern of your mental life as the letters in a novel are to the novel's plot and characters' (p. 287). Losing a content leaves the self-pattern intact."),
+ "C16": ("S", NP, SL_SILENT_NOTE + " Strain outside the ledger: he equates consciousness with the self ('self, soul, I, a light on inside, and consciousness ... names for the same phenomenon', p. 275), yet dreams often have weak self-reflection."),
+ "C45": ("S", NP, SL_SILENT_NOTE + " Strain outside the ledger: psychedelic ego dissolution with intensified experience conflicts with consciousness = 'I' (p. 275)."),
+ "C20": ("S", NP, SL_SILENT_NOTE),
+ "C21": ("S", NP, SL_SILENT_NOTE),
+ "C59": ("C", "ias07", "'The cells inside a brain are not the bearers of its consciousness; the bearers of consciousness are patterns. The pattern of organization is what matters, not the substance' (p. 257). Classical; needs no quantum coherence."),
+}
+for _cid, _cell in SL_CELLS.items():
+    CELLS.setdefault(_cid, {})["SL"] = _cell
+
 MARKS = {"E": "explains", "C": "compatible", "S": "silent", "T": "strained", "X": "contradicts"}
 PTS = {"E": 2, "C": 1, "S": 0, "T": -1, "X": -2}
 W = {"A": 3, "B": 2, "C": 1}
@@ -269,7 +289,8 @@ def main():
     for r in led:
         for t in THEORIES:
             m, s, note = CELLS.get(r["id"], {}).get(t, ("S", NP, ""))
-            pos = f"{SRC[s][1]}, doi:{SRC[s][0]}" if s else "no published position"
+            ref = SRC[s][0] if s and SRC[s][0].startswith(("isbn:", "url:")) else f"doi:{SRC[s][0]}" if s else ""
+            pos = f"{SRC[s][1]}, {ref}" if s else "no published position"
             rows.append(dict(constraint_id=r["id"], grade=r["evidence_grade"], theory=t, mark=MARKS[m],
                              proponent_position=pos, basis="proponent" if s else "our reading",
                              note=note, constraint=r["constraint"]))

@@ -1,6 +1,6 @@
 # Open Mind: open tasks
 
-Exported from the team board on 18 Nov 2026. 14 ready, 6 waiting on earlier tasks, 3 in progress, 16 done.
+Exported from the team board on 18 Nov 2026. 13 ready, 6 waiting on earlier tasks, 1 in progress, 19 done.
 
 To take one, read [CONTRIBUTING.md](../CONTRIBUTING.md) first: open an issue named `Taking #<id>` so nobody duplicates it.
 
@@ -35,12 +35,6 @@ Propose up to 3 new hypotheses about what distinguishes conscious from unconscio
 Milestone M2, priority 3.
 
 DREAM paper reports AUC 0.586 (NREM, PSD) and 0.700 (REM, catch22) over 200 random train-test splits; main text does not say subjects were held out. Re-run with subject- and lab-held-out splits, spectral exponent baseline and surrogate gate. Pre-register first.
-
-### #36 Score Strange Loop (Hofstadter) on the ledger
-
-Milestone M3, priority 3.
-
-Add a 12th theory to the scorecard: Hofstadter's strange-loop view (Godel, Escher, Bach 1979; I Am a Strange Loop 2007), which says the self and consciousness arise from a self-referential symbol system modelling itself, and come in degrees. Mark explains/compatible/silent/strained/contradicts on all 59 ledger rows, quoting Hofstadter's own words (book page or published interview) for every non-silent cell; where he is silent, say silent, do not extrapolate. Note its relatives already scored (AST, HOT) and the key strains: psychedelic ego dissolution, dreaming with weak self-reflection, minimal-phenomenal-experience reports, infants/animals. Update scorecard.csv and totals.csv via build_scorecard.py.
 
 ### #39 Red-team: LZ adds 0.061 AUC over the exponent for REM vs N3 (Sleep-EDF)
 
@@ -130,17 +124,15 @@ Draft a candidate where a basic layer (e.g. sustained posterior activity gated b
 
 ## In progress (do not duplicate)
 
-- #38 Dataset catalogue for consciousness research (Indus-style datasets/)
-
 - #9 Phi-proxy recovery on known-Phi networks
-
-- #32 B4b Theory from the shared gaps
 
 ## Done
 
 - #1 Port rules of evidence and dataset leakage check: **tool**, `experiments/rules/RESULTS.md`
 
 - #2 Dataset audit: **data**, `experiments/dataset_audit/RESULTS.md`
+
+- #38 Dataset catalogue for consciousness research (Indus-style datasets/): **tool**, `datasets/README.md`
 
 - #3 Ground-truth schema: **data**, `experiments/ground_truth/RESULTS.md`
 
@@ -167,5 +159,9 @@ Draft a candidate where a basic layer (e.g. sustained posterior activity gated b
 - #30 Blind ledger scoring of our candidate theories by an agent who did not write them: **negative**, `experiments/blind_scoring/RESULTS.md`
 
 - #31 Seal and run the open-data prediction of the best candidate: **negative**, `experiments/t1_dream/RESULTS.md`
+
+- #32 B4b Theory from the shared gaps: **tool**, `experiments/our_theory/T3.md`
+
+- #36 Score Strange Loop (Hofstadter) on the ledger: **tool**, `experiments/theory_scorecard/RESULTS.md`
 
 - #13 Standing research sweep: **data**, `experiments/research_sweep/RESULTS.md`

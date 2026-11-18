@@ -1,0 +1,13 @@
+theory,name,explains,compatible,silent,strained,contradicts,weighted_score,max_possible,weighted_explains,cells_with_proponent_source
+IIT,Integrated information theory 4.0,16,21,16,5,0,119,250,40,21
+GNWT,Global neuronal workspace,13,27,12,6,0,115,250,30,28
+RPT,Recurrent processing theory,8,28,20,2,0,101,250,20,12
+HOT,Higher-order theories (HOROR / PRM / higher-order state space),5,22,26,5,0,69,250,12,8
+DIT,"Dendritic integration theory (thalamocortical, L5 pyramidal)",4,19,34,1,0,69,250,10,12
+PP,Predictive processing / active inference / beast machine,3,21,33,1,0,63,250,7,5
+AST,Attention schema theory,4,8,46,0,0,40,250,10,6
+BSA,Brainstem affect theory (Solms; Merker),3,10,44,1,0,35,250,6,6
+EB,Entropic brain / complexity,2,8,47,1,0,27,250,4,5
+TTC,Temporo-spatial theory,1,4,53,0,0,16,250,2,3
+ORCH,Orch-OR,2,0,55,1,0,5,250,4,2
+SL,Strange loop (Hofstadter),0,1,57,0,0,3,250,0,1

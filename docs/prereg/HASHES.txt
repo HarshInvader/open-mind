@@ -42,3 +42,4 @@ c41d903520b23e1d61a112f7fcd248e16b5e07bbbb42b07aaac46738a3db188f  docs/prereg/ph
 4a8a801d5376c0aeb5a6063e97947fdde90ff20f44325188941ee834c2e39d2b  experiments/phi_proxy/analyze.py  2026-11-18T14:16:20Z  amendment 1
 0d39369180b12321ae9833f98dcfa20ad8a9ab2e49d57e31379b9f49cfefb34c  docs/prereg/2026-11-18_lz_vs_slope_sleepedf.md  2026-11-18T14:17:28Z
 37c2cbcd1b6d92f1eba88855da471daf725b7bb07e964485a89709f8496d923d  experiments/lz_slope/finish.py  2026-11-18T14:17:28Z
+483e3254f42b2afabffb21e6984f5a813630445dfcd1f25e23835cbb420ae2a9  experiments/our_theory/T3.md  2026-11-18T14:38:58Z

@@ -139,3 +139,42 @@ How to read this:
 ## Files and cleanup
 
 The full-text excerpts used for quotes are kept as `experiments/constraint_ledger/ft_*.log`. The full texts themselves (`raw_ft/`, under 1 MB, plain text) were deleted after use. No PDFs were downloaded.
+
+## Addendum (task #36, theory2, 2026-11-18): 12th theory, Hofstadter's strange loop
+
+**Verdict.** Strange loop scores 3 of 250, last of 12, below Orch-OR (5).
+- Of 58 in-scope rows, 57 are silent, 1 is compatible (C07), 0 are strained and 0 contradict. C59 is also compatible but out of scope.
+- The low score does not mean the theory has been refuted. Hofstadter's books and interviews say almost nothing about the ledger's findings: lesions, anaesthesia, sleep, masking, covert awareness. Following the task's rule, I did not extrapolate from his views to those findings.
+- Adding it changes none of the other theories' cells, and no gap or split.
+
+**Sources and their limits.**
+- *I Am a Strange Loop* (Basic Books 2007, ISBN 9780465030781) and *Gödel, Escher, Bach* are lending-restricted on archive.org: the search-inside request returned 403. Google Books returned a captcha. I did not work around either.
+- Quotes and page numbers come from reader transcriptions:
+  - intertwingled.org, "I Am (Not) A Strange Loop", for the 2007 book;
+  - mccurdyc.dev notes, for GEB (edition not stated).
+- These were not checked against the printed page. Anyone with the book should check pp. 257, 275 and 287.
+- Interview opened: Tal Cohen & Yarden Nir-Buchbinder, September 2007 (http://tal.forum2.org/hofstadter_interview). It contains nothing on any ledger row.
+
+**The two non-silent cells.**
+- **C07: compatible.** Content-specific lesions leave the self intact. The closest statement, which is not about lesions: sensory experiences are "irrelevant, arbitrary tokens" relative to "the grand pattern of your mental life" (p. 287).
+- **C59: compatible.** "The pattern of organization is what matters, not the substance" (p. 257). Classical, so no quantum coherence is needed. Out of scope for the totals.
+
+**Main strains.** None of these has a ledger row, so none is scored. They should become ledger rows if the lead wants this theory tested.
+- **Consciousness is equated with the self.** He writes "self, soul, I, a light on inside, and consciousness ... names for the same phenomenon" (p. 275), and in GEB "a certain kind of self-awareness seems to be at the crux of consciousness" (p. 406). That identity is the theory's main risk.
+- **Psychedelic ego dissolution.** People report intense experience with a weakened or absent "I". This touches C45, but the ledger row records only intensified experience, not ego loss.
+- **Dreaming.** Vivid experience is reported with weak self-reflection (touches C16).
+- **Minimal phenomenal experience.** Meditators report pure awareness without self-content. There is no ledger row.
+- **Infants and animals.**
+  - Infants: he says outright that "A human neonate ... simply has no 'I'" (p. 209). The book's thesis is limited to "a non-embryonic, non-infantile human brain" (p. 95).
+  - Animals: "A dog's soul is considerably 'smaller' than a human one" (p. 83). Mosquitoes have "no strange loop" (p. 209).
+
+  So his view denies or grades down experience in neonates and in animals, which many researchers credit with experience. That is a stated, testable commitment, but the ledger has no infant or animal row.
+
+**Relatives already scored.**
+- **AST** (self-model of attention).
+- **HOT** (higher-order representation). Like strange loop, both make a self-referential representation the core.
+- **PP, beast machine:** self-modelling.
+
+Strange loop is more radical than these on one point: it identifies consciousness with the self-pattern, not with first-order experience plus a self-model. Of these relatives, it is closest to HOT.
+
+Files: `build_scorecard.py` (new theory `SL`, sources `ias07`, `geb79`, `SL_CELLS`), plus regenerated `scorecard.csv` (708 cells), `totals.csv`, `gaps.csv` and `splits.csv`.

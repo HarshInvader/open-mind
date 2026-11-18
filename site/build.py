@@ -7,7 +7,7 @@ figures cite (see site/figs.py). Brand: site/art.py and site/brand.css. News pic
 (run it with .venv/bin/python when news.json gains an item; the build falls back to no picture if one is missing).
 Writes site/dist/: static pages that work from file:// and on Cloudflare Pages. Fails if any internal link breaks.
 """
-import html, html.parser, importlib.util, json, re, shutil, sqlite3, time
+import csv, html, html.parser, importlib.util, json, re, shutil, sqlite3, time
 from pathlib import Path
 
 
@@ -47,7 +47,7 @@ NAME = C["name"]
 GOAL = C["goal"]
 
 PAGES = [("index.html", "Home"), ("findings.html", "Findings"), ("theories.html", "Theories"), ("approach.html", "Approach"),
-         ("tracker.html", "Tracker"), ("news.html", "News"), ("contribute.html", "Contribute"), ("resources.html", "Resources")]
+         ("tracker.html", "Tracker"), ("news.html", "News"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources")]
 
 
 def md(s):
@@ -68,7 +68,7 @@ NAV_GROUPS = (
                   ("approach.html", "Approach", "How every idea gets tested", "approach"),
                   ("news.html", "News", "New papers, summarised", "news"),
                   ("tracker.html", "Tracker", "Progress and the live task board", "tracker"))),
-    ("Resources", (("resources.html#data", "Open data", "Every dataset with reports of experience", "data"),
+    ("Resources", (("data.html", "Open data", "Every consciousness dataset, used or not", "data"),
                    ("resources.html#logo", "Logo", "Free to download", "logo"),
                    ("resources.html#files", "Research files", "Notes, plans and results", "files"),
                    (REPO, "Code on GitHub", "Everything we run, in the open", "code"),
@@ -218,11 +218,11 @@ def page_index():
     s4 = block("04", "How we work", "h-how", "How we test a theory",
                '<div class="say"><p>We write each test down and fingerprint it before we open the data. A result counts only if it holds on people the method never saw, and survives someone trying to break it.</p></div>'
                + FG.pipeline() + more("approach.html#rules", "Our approach and what counts as done"))
-    s5 = block("05", "Open data", "h-data", "Every open recording where people said what they experienced",
+    s5 = block("05", "Open data", "h-data", "Every consciousness dataset, free in one place",
                '<div class="split data-split"><div class="say">'
                "<p>We checked every open dataset for one thing: do we know whether the person was experiencing anything?</p>"
-               "<p>Today the answer is yes only for sleep, where people are woken and asked. Our counts are free to download.</p>"
-               '<div class="actions"><a class="btn" href="resources.html#data">Get the data</a></div></div>'
+               "<p>We list 134 datasets, where each lives and under which terms. Today, reports of experience are open only for sleep.</p>"
+               '<div class="actions"><a class="btn" href="data.html">Get the data</a></div></div>'
                f'{FG.data_matrix()}</div>')
     s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
                '<div class="say"><p>Donate your tokens: point a Claude Fable or Opus class agent at an open task. Or bring data, or a careful eye.</p></div>'
@@ -547,9 +547,71 @@ def page_resources():
                  + dl("assets/open-mind-wordmark-text.svg", "The lettering alone, SVG") + "</ul>"
                  '<p class="note">All three are single-colour line drawings; change the stroke colour to suit your background. Please do not use them in a way that suggests you speak for the project.</p>')
     out += block("02", "Data", "data", "The counts behind every figure on this site", f'<ul class="dl">{files}</ul>'
-                 '<p class="note">These are our own tables, built from public metadata. The recordings themselves belong to their authors; the dataset audit says where each one lives and under which licence.</p>')
+                 '<p class="note">These are our own tables, built from public metadata. The recordings themselves belong to their authors; the <a href="data.html">Data</a> page lists every dataset, where it lives and under which terms.</p>')
     out += block("03", "Files", "files", "Every result has its own folder with code and a written verdict", f'<ul class="dl res">{res}</ul>'
                  '<p class="note">The code is public on <a href="https://github.com/HarshInvader/open-mind">GitHub</a>; paths are relative to its root. Sealed pre-registrations are in <code>docs/prereg/</code>, with their fingerprints in <code>docs/prereg/HASHES.txt</code>.</p>')
+    return out
+
+
+# ---------------------------------------------------------------- data catalogue
+CATALOG = ROOT / "datasets" / "catalog.csv"
+TIER_TEXT = {
+    "included": ("Ours", "Tables this project made, in datasets/open/ and free to reuse under CC BY 4.0"),
+    "fetch": ("Public", "Open with no account. datasets/fetch.py fetches a subset of the ones we use"),
+    "request": ("On request", "An account, a signed agreement or an application is needed. We keep metadata only; agents never apply"),
+    "reference-only": ("Cited only", "Named in our audit, but no data record could be opened"),
+}
+WANTED = [
+    "**Raw EEG from disorders-of-consciousness patients**, with a CRS-R diagnosis. Bath and Della Bella 2025 hold it on request, with proof of ethics approval. Without it, the third family of states stays empty.",
+    "**EEG with reports after unresponsive ketamine anaesthesia.** The one known set (Milan, Zenodo 806176) is restricted, and its cohort is already in several papers.",
+    "**Per-awakening report labels for ds005620** (propofol). The paper has them; the release does not.",
+    "**The original PCI benchmark**: TMS-EEG across wake, sleep, anaesthesia and patients. We found no data record.",
+    "**COGITATE experiment 2.** Still \"coming soon\"; experiment 1 needs an account the owner must create.",
+    "**More REM and N3 awakenings with no experience.** Every open set has few: 29 REM in one DeGennaro zip, 87 N3 in DATA1.",
+]
+
+
+def page_data():
+    rows = list(csv.DictReader(open(CATALOG, newline="", encoding="utf-8")))
+    by = {t: [r for r in rows if r["tier"] == t] for t in TIER_TEXT}
+    ver = sum(r["verified"] == "yes" for r in rows)
+    used = sum(r["used_by_us"] == "yes" and r["tier"] != "included" for r in rows)
+    out = head("Data", "Sleep and anaesthesia data are open; patient data are not",
+               f"We list {len(rows) - len(by['included'])} outside datasets on the science of consciousness, used by us or not, and the {len(by['included'])} tables we made. "
+               f"{len(by['fetch'])} are public, {len(by['request'])} need an account or an application and {len(by['reference-only'])} have no data record. "
+               f"We opened {ver} of {len(rows)} rows at their DOI, API or landing page on 18 Nov 2026. {used} outside sets feed our results today.",
+               jump([("h-" + t, TIER_TEXT[t][0]) for t in TIER_TEXT] + [("h-wanted", "Missing"), ("h-get", "Get it")]))
+    n = 0
+    for t, (label, intro) in TIER_TEXT.items():
+        trs = []
+        for r in sorted(by[t], key=lambda r: (r["used_by_us"] != "yes", r["kind"], r["title"].lower())):
+            o = r["origin"]
+            name = f'<a href="{E(o)}">{E(r["title"])}</a>' if o.startswith("http") else E(r["title"])
+            marks = (chip("used by us") if r["used_by_us"] == "yes" and t != "included" else "") + \
+                    ("" if r["verified"] == "yes" else '<span class="chip chip-warn">not verified</span>')
+            trs.append(f'<tr><th scope="row">{name}<span class="sub">{E(r["id"])} · {E(r["kind"])}</span></th>'
+                       f'<td>{E(r["labels"]) or "–"}</td><td>{E(r["terms"])}</td><td>{E(r["size"]) or "–"}</td><td>{marks or "–"}</td></tr>')
+        table = ('<div class="tablewrap"><table class="score"><thead><tr><th scope="col">Dataset</th><th scope="col">Ground truth</th>'
+                 '<th scope="col">Terms</th><th scope="col">Size</th><th scope="col">Status</th></tr></thead>'
+                 f'<tbody>{"".join(trs)}</tbody></table></div>')
+        n += 1
+        title = {"included": "tables we made", "fetch": "public datasets", "request": "need an account or an application",
+                 "reference-only": "cited, with no data record we could open"}[t]
+        out += block(f"{n:02d}", label, f"h-{t}", f"{len(by[t])} {title}", table, intro + ".")
+    unver = ", ".join(r["id"] for r in rows if r["verified"] != "yes")
+    wanted = "".join(f"<li>{md(w)}</li>" for w in WANTED)
+    n += 1
+    out += block(f"{n:02d}", "Missing", "h-wanted", "Missing, and wanted",
+                 f'<ul class="mk">{wanted}</ul><p class="note">Not verified: {E(unver)}. Each catalogue row says why.</p>',
+                 "The data that would most raise the odds of our goals is not open anywhere. If you hold any of it, the Contribute page says how to share it.")
+    n += 1
+    kb = max(1, round(CATALOG.stat().st_size / 1024))
+    out += block(f"{n:02d}", "Get it", "h-get", "One file lists them all; one script fetches what we use",
+                 f'<ul class="dl"><li><a href="data/catalog.csv" download><b>catalog.csv</b></a><span>Every row, with its terms, ground truth and how it was checked, {kb} KB</span></li></ul>'
+                 f'<p class="note">In the <a href="{REPO}/tree/main/datasets">repository</a>, <code>python3 -I datasets/fetch.py list</code> prints the catalogue '
+                 'and <code>fetch &lt;id&gt;</code> downloads a subset into <code>datasets/local/</code>, reading single files out of remote zips. '
+                 'Downloads stay under 1.5 GB in total. Nothing third-party is republished here. Which dataset can test what is in '
+                 f'<a href="{REPO}/blob/main/docs/DATASETS.md">the dataset audit</a>.</p>')
     return out
 
 
@@ -619,8 +681,9 @@ def main():
     for p, _ in DATA_FILES:
         if (ROOT / p).exists():
             shutil.copy(ROOT / p, DIST / "data" / p.split("/")[-1])
+    shutil.copy(CATALOG, DIST / "data" / "catalog.csv")
     fns = {"index.html": page_index, "findings.html": page_findings, "theories.html": page_theories, "approach.html": page_approach,
-           "tracker.html": page_tracker, "news.html": page_news, "contribute.html": page_contribute, "resources.html": page_resources}
+           "tracker.html": page_tracker, "news.html": page_news, "contribute.html": page_contribute, "data.html": page_data, "resources.html": page_resources}
     for f, name in PAGES:
         title = f"{NAME}: {GOAL}" if f == "index.html" else f"{name} · {NAME}"
         (DIST / f).write_text(layout(f, title, GOAL, fns[f]()))
