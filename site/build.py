@@ -509,7 +509,7 @@ def page_resources():
     out += block("02", "Data", "data", "The counts behind every figure on this site", f'<ul class="dl">{files}</ul>'
                  '<p class="note">These are our own tables, built from public metadata. The recordings themselves belong to their authors; the dataset audit says where each one lives and under which licence.</p>')
     out += block("03", "Files", "files", "Every result has its own folder with code and a written verdict", f'<ul class="dl res">{res}</ul>'
-                 '<p class="note">The code repository is not public yet. Paths are given relative to its root and will become links when it opens. Sealed pre-registrations are in <code>docs/prereg/</code>, with their fingerprints in <code>docs/prereg/HASHES.txt</code>.</p>')
+                 '<p class="note">The code is public on <a href="https://github.com/HarshInvader/open-mind">GitHub</a>; paths are relative to its root. Sealed pre-registrations are in <code>docs/prereg/</code>, with their fingerprints in <code>docs/prereg/HASHES.txt</code>.</p>')
     return out
 
 
