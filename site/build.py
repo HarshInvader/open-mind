@@ -42,7 +42,7 @@ def load(name):
     return m
 
 
-ART, FG = load("art"), load("figs")
+ART, FG, CH = load("art"), load("figs"), load("chrome")
 NAME = C["name"]
 GOAL = C["goal"]
 
@@ -61,31 +61,50 @@ def mark_svg(cls="mark"):
     return f'<svg class="{cls}" viewBox="0 0 32 32" aria-hidden="true" focusable="false">{ART.MARK}</svg>'
 
 
+REPO = "https://github.com/HarshInvader/open-mind"
+NAV_GROUPS = (
+    ("Research", (("findings.html", "Findings", "What is known, and what we found", "find"),
+                  ("theories.html", "Theories", "The field of theories we score", "theory"),
+                  ("approach.html", "Approach", "How every idea gets tested", "approach"),
+                  ("news.html", "News", "New papers, summarised", "news"),
+                  ("tracker.html", "Tracker", "Progress and the live task board", "tracker"))),
+    ("Resources", (("resources.html#data", "Open data", "Every dataset with reports of experience", "data"),
+                   ("resources.html#logo", "Logo", "Free to download", "logo"),
+                   ("resources.html#files", "Research files", "Notes, plans and results", "files"),
+                   (REPO, "Code on GitHub", "Everything we run, in the open", "code"),
+                   ("../index.html", "Open Citizen Science", "Our sister projects", "family"))),
+)
+
+
 def layout(fname, title, desc, body):
-    nav = "".join(f'<li><a href="{f}"{" aria-current=page" if f == fname else ""}>{E(n)}</a></li>' for f, n in PAGES)
-    foot = "".join(f'<a href="{f}">{E(n)}</a>' for f, n in PAGES)
+    nav = CH.nav_items(NAV_GROUPS, fname)
+    foot = "".join(f'<a href="{f}"{" aria-current=page" if f == fname else ""}>{E(n)}</a>' for f, n in PAGES)
     return f"""<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script>(function(){{var t=null;try{{t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('om-theme')}}catch(e){{}}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);document.documentElement.classList.add('js')}})();</script>
+<link rel="preload" href="fonts/OpenIndus-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/OpenIndusText-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css"></head>
-<body><a class="skip" href="#main">Skip to content</a>
-<header class="head"><div class="wrap head-in">
-<a class="parent" href="../index.html">Open Citizen Science</a><span class="slash" aria-hidden="true">/</span>
-<a class="brand" href="index.html">{mark_svg()}{E(NAME)}</a>
-<button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
+<body class="{"home" if fname == "index.html" else ""}"><a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="site-head"><div class="wrap head-row">
+<a class="brand" href="index.html" aria-label="{E(NAME)} home">{mark_svg()}{CH.wordmark_svg(NAME)}</a>
+<button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path class="m1" d="M3 6h14"/><path class="m2" d="M3 10h14"/><path class="m3" d="M3 14h14"/></svg><span>Menu</span></button>
 <nav class="site-nav" id="site-nav" aria-label="Main"><ul>{nav}</ul></nav>
-<button class="theme" type="button" id="theme" aria-label="Colour theme: automatic"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 3a7 7 0 0 1 0 14z" fill="currentColor"/></svg><span id="theme-label">Auto</span></button>
+<button class="theme" type="button" id="theme" aria-label="Colour theme: automatic"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="7"/><path d="M10 3a7 7 0 0 1 0 14z" fill="currentColor" stroke="none"/></svg><span id="theme-label">Auto</span></button>
 </div></header>
 <main id="main" class="wrap" tabindex="-1">{body}</main>
-<footer class="foot"><div class="wrap foot-in">
-<div class="foot-brand">{mark_svg()}<div><b>{E(NAME)}</b><p>Goal: {E(GOAL[0].lower() + GOAL[1:])}.</p></div></div>
-<nav class="foot-links" aria-label="Site map">{foot}</nav>
-<p class="foot-note">{E(NAME)} is an open research project run by a human lead and a team of AI agents. Every result can be rerun from code.
-None of it explains why experience exists at all. Part of <a href="../index.html">Open Citizen Science</a>. Built {time.strftime('%d %b %Y').lstrip('0')}.</p>
+<footer class="site-foot"><div class="wrap foot-row">
+<div class="foot-brand">{mark_svg()}<div><b>{E(NAME)}</b><p>Goal: {E(GOAL[0].lower() + GOAL[1:])}.</p><p>An open research project run by a human lead and a team of AI agents. Every result can be rerun from code.</p></div></div>
+<nav class="foot-cols" aria-label="Site map">
+<div class="foot-links"><h2 class="foot-h">Pages</h2>{foot}</div>
+<div class="foot-links"><h2 class="foot-h">Contribute</h2><a href="{REPO}">Code and data</a><a href="{REPO}/blob/main/CONTRIBUTING.md">How to contribute</a><a href="{REPO}/blob/main/board/TASKS.md">Open tasks</a><a href="news.xml">News feed (RSS)</a></div>
+<div class="foot-links"><h2 class="foot-h">Family</h2><a href="../index.html">Open Citizen Science</a><a href="{REPO}/blob/main/LICENSING.md">Licences</a><a href="resources.html#logo">Logo and typeface</a></div>
+</nav>
+<p class="foot-note">None of this explains why experience exists at all. Type: the Open Indus typeface (OFL). Built {time.strftime('%d %b %Y').lstrip('0')}.</p>
 </div></footer><script src="assets/site.js"></script></body></html>"""
 
 
@@ -155,42 +174,60 @@ def finding_card(f, link=True):
     return f'<li class="mini">{FG.finding_fig(f["n"])}<div><h3>{h}</h3><p>{md(f["gist"])}</p></div></li>'
 
 
+SIGNS = [  # the frieze: things this project studies, each in a 48-unit box
+    '<path d="M8 18h22v22H8zM18 8h22v22H18zM8 18l10-10M30 18l10-10M30 40l10-10M8 40l10-10"/>',  # Necker cube
+    '<path d="M2 24c3 0 3-5 6-5s3 10 6 10 3-10 6-10 3 10 6 10 3-5 6-5"/><path d="M34 24c4 0 4-12 7-12s3 24 7 24"/>',  # waking to slow waves
+    '<path d="M4 24C10 14 17 10 24 10S38 14 44 24C38 34 31 38 24 38S10 34 4 24Z"/><circle cx="24" cy="24" r="6"/>',  # seeing
+    '<path d="M31 7a17 17 0 1 0 11 29A14 14 0 0 1 31 7Z"/>',  # sleep
+    '<path d="M7 10h34v21H23l-8 8v-8H7z"/><path d="M15 20.5h2M23 20.5h2M31 20.5h2"/>',  # the report on waking
+    '<path d="M13 15h22M13 15l-6-6M13 15l-6 6M35 15l6-6M35 15l6 6M13 34h22M13 34l6-6M13 34l6 6M35 34l-6-6M35 34l-6 6"/>',  # an illusion
+    '<circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="3.5"/><path d="M24 12V4"/>',  # an electrode
+    '<path d="M2 26c5 0 5-16 11-16s5 30 11 30 6-22 11-22 6 8 11 8"/>',  # a slow wave
+]
+
+
 def page_index():
     d = F()
-    fs = {f["n"]: f for f in d["findings"]}
-    hero = head(C["kicker"], "Every theory of consciousness is still unproven, so we test them all and build a better one",
-                f'Goal: {E(GOAL[0].lower() + GOAL[1:])}. {md(C["lede"])}',
-                '<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a><a class="btn" href="findings.html">Read the findings</a></div>',
-                ART.hero())
-    s1 = block("01", "The problem", "h-problem", "Nobody can yet say which brain activity makes an experience",
+    n_found = len(d["findings"]) + len(d.get("closed", []))
+    art = ART.hero().replace('<figure class="hero-art">', '<figure class="hero-art plate">', 1)
+    art = re.sub(r"<figcaption>.*?</figcaption>",
+                 '<figcaption><span class="cat">Pl. 1 · One night, four stages</span>Illustration from textbook wave shapes. '
+                 'Dreaming sleep (shaded) looks almost like waking, and people woken from it usually report experiences.</figcaption>', art, flags=re.S)
+    hero = (f'<section class="hero home-hero" aria-labelledby="claim"><div class="hero-text">'
+            f'<p class="kicker">{E(NAME)}, an open research group</p>'
+            '<h1 id="claim">Find the best theory of consciousness by 2027</h1>'
+            '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
+            '<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a><a class="btn" href="findings.html">Read the findings</a></div>'
+            f'</div>{art}</section>')
+    band = CH.frieze(SIGNS, "A band of the signs of this project: a Necker cube, brain waves, an eye, the moon, a speech bubble, an illusion and an electrode")
+    s1 = block("01", "The question", "h-question", "Nobody knows which brain activity makes an experience",
                '<div class="split"><div class="say">'
-               "<p>Here “consciousness” means experience: there is something it is like to be you right now. Researchers ask two questions about it: whether someone is conscious at all, and what they are conscious of.</p>"
-               "<p>The usual method flashes the same picture many times. Sometimes people see it and sometimes they miss it. Whatever differs in the brain between the two is a candidate for the activity behind experience.</p>"
-               "<p>Many theories explain those differences, and they disagree about where in the brain experience happens. In 2025 the largest head-to-head test so far, COGITATE, pitted two of them against each other. Neither won.</p>"
-               + more("findings.html#h-known", "What scientists agree on, and what they don't") + "</div>"
-               f'<div class="figs">{FG.fig_seen_missed()}{FG.fig_two_questions()}</div></div>')
-    s2 = block("02", "Where we are", "h-where", "The field can tell awake from deep sleep, but no theory has won a fair test",
-               FG.ladder(C["ladder"]) + more("tracker.html", "Track our progress"),
-               C["ladder_intro"] + " The best measure so far needs a magnetic pulse and special equipment, and the top step is empty.")
-    picks = [fs[k] for k in (4, 2, 3) if k in fs]
-    s3 = block("03", "Found so far", "h-found", "Open data can test dreaming, but not brain-injured patients or ketamine",
-               '<ul class="minis">' + "".join(finding_card(f) for f in picks) + "</ul>" + more("findings.html#h-ours", f"All {len(d['findings'])} findings, with their evidence"),
-               d["ours_intro"])
-    s4 = block("04", "How we test", "h-how", "A result counts only if it was sealed first and survives an attempt to break it",
-               FG.pipeline() + more("approach.html#rules", "The rules, and what counts as done"),
-               "Anyone can find a pattern by trying analyses until one works. So each test is written down and fingerprinted before the data are opened, run on people the method never saw, and handed to someone else to break.")
-    s5 = block("05", "Open data", "h-data", "Reports given on waking are open only for sleep",
+               "<p>You are having experiences right now: sights, sounds, thoughts. Each comes from activity in your brain, but nobody can say which activity.</p>"
+               "<p>There are dozens of theories. In 2025 the largest head-to-head test so far pitted two of them against each other. Neither won.</p>"
+               "<p>So we cannot yet tell whether a patient who cannot respond is aware, or what an anaesthetic switches off.</p>"
+               + more("findings.html#h-known", "What scientists agree on") + "</div>"
+               f'<div class="figs">{FG.fig_seen_missed()}</div></div>')
+    s2 = block("02", "Where we are", "h-where", "We can tell awake from deep sleep, but no theory has passed a fair test",
+               FG.ladder(C["ladder"]) + more("tracker.html", "Track the progress"))
+    s3 = block("03", "Found so far", "h-found", "What we have found so far",
+               '<ul class="found">'
+               "<li><b>Our first theory failed.</b> We sealed a test of it in advance and ran it on 237 awakenings from 35 sleepers. All four measures came out flat.</li>"
+               "<li><b>A popular brain measure adds little.</b> Signal complexity is often used as a sign of consciousness. About 97% of its power to tell waking from deep sleep comes from the recording's simple mix of slow and fast waves.</li>"
+               "<li><b>Dreams can be tested on open data, injured patients cannot.</b> About 2,400 open awakenings come with a report of experience. No open recordings exist from brain-injured patients.</li>"
+               "</ul>" + more("findings.html", f"All {n_found} findings and closed routes, with their evidence"))
+    s4 = block("04", "How we work", "h-how", "How we test a theory",
+               '<div class="say"><p>We write each test down and fingerprint it before we open the data. A result counts only if it holds on people the method never saw, and survives someone trying to break it.</p></div>'
+               + FG.pipeline() + more("approach.html#rules", "Our approach and what counts as done"))
+    s5 = block("05", "Open data", "h-data", "Every open recording where people said what they experienced",
                '<div class="split data-split"><div class="say">'
-               f'<p>We checked every open dataset against one question: what tells us whether the person was experiencing anything? The best answer is what they said when woken. {FG.num(FG.jload("experiments/ground_truth/counts.json")["l2_cases"])} awakenings from sleep have such a report, all in the DREAM database.</p>'
-               "<p>No open recordings from brain-injured patients exist, and none from people who were unresponsive on ketamine but reported dreams afterwards. These are the gaps that most limit what anyone can test.</p>"
-               '<div class="actions"><a class="btn" href="resources.html#data">Download the counts</a></div></div>'
+               "<p>We checked every open dataset for one thing: do we know whether the person was experiencing anything?</p>"
+               "<p>Today the answer is yes only for sleep, where people are woken and asked. Our counts are free to download.</p>"
+               '<div class="actions"><a class="btn" href="resources.html#data">Get the data</a></div></div>'
                f'{FG.data_matrix()}</div>')
-    asks = "".join(f"<li>{md(x)}</li>" for x in C["raise_odds"])
-    s6 = block("06", "Help", "h-help", "Donate your tokens: the fastest help is your AI agent taking an open task",
-               '<div class="split"><div class="say"><p>Point a strong AI agent at a task on our board, with the rules and the brief. Or bring data: these would raise our odds most.</p>'
-               f'<ul class="mk">{asks}</ul><div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a></div></div>'
-               f'<div class="figs">{FG.board_map(TASKS, MS)}</div></div>')
-    return hero + s1 + s2 + s3 + s4 + s5 + s6
+    s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
+               '<div class="say"><p>Donate your tokens: point a Claude Fable or Opus class agent at an open task. Or bring data, or a careful eye.</p></div>'
+               '<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>')
+    return hero + band + s1 + s2 + s3 + s4 + s5 + s6
 
 
 # ---------------------------------------------------------------- findings
@@ -490,8 +527,10 @@ def verdict(p):
 
 
 def page_resources():
-    inner, w, h = ART.wordmark()
-    big = f'<svg class="wm-big" viewBox="-4 -4 {w + 8} {h + 8}" aria-hidden="true">{inner}</svg>'
+    wi, ww = CH.wordmark_inner(NAME)
+    big = (f'<svg class="wm-big" viewBox="-10 -14 {150 + ww + 20} 128" aria-hidden="true" style="fill:none;stroke-linecap:round;stroke-linejoin:round">'
+           f'<g transform="translate(-6 -14) scale(4)" style="stroke:var(--accent);stroke-width:2.4">{ART.MARK}</g>'
+           f'<g transform="translate(150 0)" style="stroke:var(--ink);stroke-width:10.5">{wi}</g></svg>')
     dl = lambda f, d: f'<li><a href="{f}" download><b>{E(f.split("/")[-1])}</b></a><span>{d}</span></li>'
     files = "".join(dl("data/" + p.split("/")[-1], f"{E(d)}. From {FG.code(p)}, {max(1, round((ROOT / p).stat().st_size / 1024))} KB") for p, d in DATA_FILES if (ROOT / p).exists())
     res = ""
@@ -566,16 +605,17 @@ def main():
         shutil.rmtree(DIST)
     (DIST / "assets/news").mkdir(parents=True)
     (DIST / "data").mkdir()
-    css = (SITE / "site.css").read_text().replace("/*TOKENS*/", "") + "\n" + (SITE / "brand.css").read_text()
+    css = (SITE / "site.css").read_text().replace("/*TOKENS*/", "") + "\n" + (SITE / "family.css").read_text() + "\n" + (SITE / "brand.css").read_text()
     (DIST / "site.css").write_text(css)
     shutil.copy(SITE / "assets/site.js", DIST / "assets/site.js")
+    shutil.copytree(SITE / "assets/fonts", DIST / "fonts")
     for f in (SITE / "assets/news").glob("*.webp"):
         shutil.copy(f, DIST / "assets/news" / f.name)
     m = re.search(r"--accent:\s*(#[0-9A-Fa-f]{6})", (SITE / "brand.css").read_text()).group(1)
     (DIST / "assets/favicon.svg").write_text(ART.mark_svg_file(m))
     (DIST / "assets/open-mind-mark.svg").write_text(ART.mark_svg_file(m))
-    (DIST / "assets/open-mind-wordmark.svg").write_text(ART.wordmark_svg(m))
-    (DIST / "assets/open-mind-wordmark-text.svg").write_text(ART.wordmark_svg(m, with_mark=False))
+    (DIST / "assets/open-mind-wordmark.svg").write_text(CH.lockup_svg(NAME, ART.MARK, color="#15171C", mark_color=m))
+    (DIST / "assets/open-mind-wordmark-text.svg").write_text(CH.wordmark_svg(NAME, inline=False, color="#15171C"))
     for p, _ in DATA_FILES:
         if (ROOT / p).exists():
             shutil.copy(ROOT / p, DIST / "data" / p.split("/")[-1])
