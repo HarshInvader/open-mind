@@ -34,3 +34,6 @@ fc820c98b8e66e4cbe46024069760810b342a89ab001e05dfe3d73769f653407  experiments/su
 d33392fa458d3324535f79ec861c34dc2ddc8579c66428aa97cf86271f7b83aa  docs/prereg/2026-11-18_lz_vs_slope_sleepedf.md  2026-11-18T13:05:48Z
 1459e4eeaa9a6ee07f724192bec7c8d2ac4d9ec91030b9c5a1d44ff9cb5a7c3a  experiments/lz_slope/planted1b.py  2026-11-18T13:05:48Z
 67521ed9ed977cba014ff122424b838f9cd21ab2673a5b44e0ee5edbf5c7e201  experiments/lz_slope/analyse.py  2026-11-18T13:05:48Z
+ef6cb094fc40eb84775cdd39b9f41fb55622563a62deffc26f5c0b55c3198b17  experiments/t1_dream/analysis.py  2026-11-18T13:49:59Z
+05489cc398959e6f000666ebba62cf9f70fa98adc7d6f6c4cecc9f828632fb9c  experiments/t1_dream/run_analysis.sh  2026-11-18T13:49:59Z
+652882424f2dfcdadbd312b7b526ab908436a72d2839fe0a9a71a9645297e40c  experiments/t1_dream/analysis.py  2026-11-18T13:50:06Z

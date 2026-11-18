@@ -10,6 +10,24 @@ Writes site/dist/: static pages that work from file:// and on Cloudflare Pages. 
 import html, html.parser, importlib.util, json, re, shutil, sqlite3, time
 from pathlib import Path
 
+
+MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+def news_date(s):
+    """2026-05-28 -> 28 May 2026; 2026-06 -> Jun 2026; anything else (2001-2020) as given."""
+    p = s.split("-")
+    if len(p) == 3 and all(x.isdigit() for x in p):
+        return f"{int(p[2])}\u00a0{MONTHS[int(p[1]) - 1]} {p[0]}"
+    if len(p) == 2 and len(p[1]) == 2 and p[1].isdigit():
+        return f"{MONTHS[int(p[1]) - 1]} {p[0]}"
+    return s
+
+
+def news_head(s):
+    """Drop a trailing author list in brackets: the card already shows the authors."""
+    return re.sub(r"\s*\((?=[^()]*(,|et al))[^()]*\)\s*$", "", s)
+
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 DIST = SITE / "dist"
@@ -353,8 +371,8 @@ def news_card(n):
     t = thumb(n)
     vis = f'<a class="nvisual" href="{href}" tabindex="-1" aria-hidden="true">{t}</a>' if t else ""
     chk = "" if n.get("verified") else ' <span class="chip chip-open">source not yet checked</span>'
-    return (f'<article class="ncard">{vis}<div class="nbody"><p class="meta">{E(n["date"])} · {E(n.get("kind", "Paper"))} · {E(n["venue"])}{chk}</p>'
-            f'<h3><a href="{href}">{E(n["head"])}</a></h3><p>{md(n["gist"])}</p>'
+    return (f'<article class="ncard">{vis}<div class="nbody"><p class="meta"><time datetime="{E(n["date"])}">{news_date(n["date"])}</time> · {E(n.get("kind", "Paper"))} · {E(n["venue"])}{chk}</p>'
+            f'<h3><a href="{href}">{E(news_head(n["head"]))}</a></h3><p>{md(n["gist"])}</p>'
             f'<p class="why"><strong>What we do with it:</strong> {md(n["borrow"])} {chip(STATUS_WORD.get(n.get("status"), n.get("status", "")))}</p></div></article>')
 
 
@@ -390,8 +408,8 @@ def news_article(n, prev, nxt):
         nb += f'<a rel="prev" href="news-{E(prev["id"])}.html"><small>Previous item</small>{E(prev["head"])}</a>'
     if nxt:
         nb += f'<a rel="next" href="news-{E(nxt["id"])}.html"><small>Next item</small>{E(nxt["head"])}</a>'
-    return (f'<article class="news-article"><a class="nback" href="news.html">← All news</a><p class="kicker">{E(n["date"])} · {E(n.get("kind", "Paper"))} · {E(n["venue"])}</p>'
-            f'<h1 class="h-article">{E(n["head"])}</h1>{who}{vis}'
+    return (f'<article class="news-article"><a class="nback" href="news.html">← All news</a><p class="kicker">{news_date(n["date"])} · {E(n.get("kind", "Paper"))} · {E(n["venue"])}</p>'
+            f'<h1 class="h-article">{E(news_head(n["head"]))}</h1>{who}{vis}'
             f'<div class="levels-tabs" role="group" aria-label="Detail level">{radios}{panes}</div>'
             f'<h2>What we do with it</h2><p>{md(n["borrow"])} {chip(STATUS_WORD.get(n.get("status"), n.get("status", "")))}</p>'
             f'<p class="note"><a href="{E(n["url"])}">Read the original</a>. {chk}</p>'

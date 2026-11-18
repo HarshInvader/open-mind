@@ -72,7 +72,8 @@ def main():
     ye = (en.label == "E").to_numpy()
     out["auc_E_vs_NE_within_subject_centred"] = {c: round(float(roc_auc_score(ye, Z[:, i])), 3)
                                                 for i, c in enumerate(T.MODEL_A + ["logL_post", "logL_front"])}
-    df.drop(columns=["xp", "xf", "surr_logL_post"]).to_csv(os.path.join(HERE, "features.csv"), index=False)
+    # deviation: output-only fix (errors="ignore") after a crash here, before any result was printed
+    df.drop(columns=["xp", "xf", "surr_logL_post"], errors="ignore").to_csv(os.path.join(HERE, "features.csv"), index=False)
     json.dump(out, open(os.path.join(HERE, "results.json"), "w"), indent=1, default=float)
     print(json.dumps({k: out[k] for k in ["primary", "excluded"]}, indent=1, default=float))
 

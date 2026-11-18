@@ -1,0 +1,23 @@
+{
+ "n": {
+  "E": 97,
+  "NE": 93,
+  "WR": 47,
+  "subjects": 35
+ },
+ "T1_OR2.0": {
+  "reps": 60,
+  "pass_rate": 0.7,
+  "refuted_rate": 0.06666666666666667
+ },
+ "null_OR1.0": {
+  "reps": 60,
+  "pass_rate": 0.0,
+  "refuted_rate": 0.8833333333333333
+ },
+ "recall_OR2.0": {
+  "reps": 60,
+  "pass_rate": 0.0,
+  "refuted_rate": 0.7833333333333333
+ }
+}
