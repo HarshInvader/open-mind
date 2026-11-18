@@ -1,0 +1,156 @@
+{
+ "recordings_total": 3679,
+ "by_dataset_truth": {
+  "DREAM:Aamodt_evening_sleep|delayed_report": 158,
+  "DREAM:Aamodt_morning_sleep|delayed_report": 97,
+  "DREAM:Brain Institute - Federal University of Rio Grande do Norte|delayed_report": 41,
+  "DREAM:ChildrenDreaming|delayed_report": 30,
+  "DREAM:DATA1|delayed_report": 324,
+  "DREAM:Dream Database from Donders|delayed_report": 7,
+  "DREAM:Dream_YoungAdults|delayed_report": 65,
+  "DREAM:Kumral et al., 2023|delayed_report": 66,
+  "DREAM:LODE|delayed_report": 190,
+  "DREAM:MEG Kyushu|delayed_report": 31,
+  "DREAM:Multiple awakenings|delayed_report": 456,
+  "DREAM:Noreika_Motor_tDCS|delayed_report": 49,
+  "DREAM:Older adults|delayed_report": 40,
+  "DREAM:Oudiette_N1Data|delayed_report": 246,
+  "DREAM:REM_Turku|delayed_report": 134,
+  "DREAM:SCANDataset|delayed_report": 85,
+  "DREAM:Sleep Talking|delayed_report": 22,
+  "DREAM:TWC_USA|delayed_report": 33,
+  "DREAM:Tononi Serial Awakenings|delayed_report": 809,
+  "DREAM:Zhang & Wamsley 2019|delayed_report": 308,
+  "chennu2016|behaviour": 80,
+  "ds004541|behaviour": 9,
+  "ds005620|behaviour": 202,
+  "sleep-edfx|behaviour": 197
+ },
+ "delayed_report_rows": 3191,
+ "l2_cases": 2417,
+ "l2_by_report": {
+  "experience": 1601,
+  "no_experience": 816
+ },
+ "l2_by_stage_report": {
+  "N1|experience": 132,
+  "N1|no_experience": 18,
+  "N2|experience": 894,
+  "N2|no_experience": 595,
+  "N3|experience": 103,
+  "N3|no_experience": 109,
+  "REM|experience": 472,
+  "REM|no_experience": 94
+ },
+ "l2_subjects": 446,
+ "l2_labs": [
+  "Brain Institute - Federal University of Rio Grande do Norte",
+  "DATA1",
+  "Dream Database from Donders",
+  "Kumral et al., 2023",
+  "LODE",
+  "MEG Kyushu",
+  "Noreika_Motor_tDCS",
+  "Oslo",
+  "Oudiette_N1Data",
+  "REM_Turku",
+  "Rome (DeGennaro)",
+  "TWC_USA",
+  "Tononi Serial Awakenings",
+  "Zhang & Wamsley 2019"
+ ],
+ "l2_by_lab": {
+  "Brain Institute - Federal University of Rio Grande do Norte": {
+   "n": 41,
+   "exp": 25,
+   "noexp": 16,
+   "subjects": 41
+  },
+  "DATA1": {
+   "n": 223,
+   "exp": 107,
+   "noexp": 116,
+   "subjects": 10
+  },
+  "Dream Database from Donders": {
+   "n": 6,
+   "exp": 6,
+   "noexp": 0,
+   "subjects": 5
+  },
+  "Kumral et al., 2023": {
+   "n": 66,
+   "exp": 42,
+   "noexp": 24,
+   "subjects": 19
+  },
+  "LODE": {
+   "n": 176,
+   "exp": 118,
+   "noexp": 58,
+   "subjects": 28
+  },
+  "MEG Kyushu": {
+   "n": 22,
+   "exp": 22,
+   "noexp": 0,
+   "subjects": 1
+  },
+  "Noreika_Motor_tDCS": {
+   "n": 49,
+   "exp": 49,
+   "noexp": 0,
+   "subjects": 10
+  },
+  "Oslo": {
+   "n": 193,
+   "exp": 165,
+   "noexp": 28,
+   "subjects": 41
+  },
+  "Oudiette_N1Data": {
+   "n": 29,
+   "exp": 23,
+   "noexp": 6,
+   "subjects": 21
+  },
+  "REM_Turku": {
+   "n": 126,
+   "exp": 123,
+   "noexp": 3,
+   "subjects": 18
+  },
+  "Rome (DeGennaro)": {
+   "n": 590,
+   "exp": 395,
+   "noexp": 195,
+   "subjects": 166
+  },
+  "TWC_USA": {
+   "n": 31,
+   "exp": 26,
+   "noexp": 5,
+   "subjects": 19
+  },
+  "Tononi Serial Awakenings": {
+   "n": 653,
+   "exp": 344,
+   "noexp": 309,
+   "subjects": 39
+  },
+  "Zhang & Wamsley 2019": {
+   "n": 212,
+   "exp": 156,
+   "noexp": 56,
+   "subjects": 28
+  }
+ },
+ "subject_stage_pairs_with_both_reports": 160,
+ "subjects_with_both_in_some_stage": 131,
+ "anaesthesia_behaviour_dissociation_rows_with_report": 0,
+ "chennu_moderate_by_behaviour": {
+  "responsive": 13,
+  "impaired": 6,
+  "unresponsive": 1
+ }
+}

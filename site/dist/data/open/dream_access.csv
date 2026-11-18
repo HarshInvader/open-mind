@@ -1,0 +1,21 @@
+set,name,access_live,license,GB,nfiles,N2_exp,N2_noexp,N3_exp,N3_noexp,REM_exp,REM_noexp,url
+1,Zhang & Wamsley 2019,open,CC BY 4.0,1.049,1,68,37,1,4,17,9,https://doi.org/10.6084/m9.figshare.22226692
+2,Oudiette_N1Data,open,CC BY 4.0,0.043,1,12,4,0,0,0,0,https://doi.org/10.6084/m9.figshare.22210684
+3,LODE,open,CC BY 4.0,0.134,4,66,41,0,2,46,14,https://doi.org/10.6084/m9.figshare.22147085.v1
+4,TWC_USA,open,CC BY 4.0,1.565,1,4,2,0,0,18,1,https://doi.org/10.6084/m9.figshare.22106123
+5,Dream Database from Donders,open,CC BY 4.0,2.174,1,3,0,1,0,1,0,https://doi.org/10.6084/m9.figshare.21388722
+6,REM_Turku,open,CC BY 4.0,0.363,1,0,0,0,0,123,3,https://doi.org/10.6084/m9.figshare.23274596.v2
+7,ChildrenDreaming,open,CC BY 4.0,6.344,1,11,13,0,1,2,3,https://doi.org/10.6084/m9.figshare.22220701
+8,SCANDataset,by request (email to contributors; registry says anyone who applies is granted access),,,,0,0,19,13,44,2,#N/A
+9,Multiple awakenings,open,CC BY 4.0,6.396,1,177,85,9,6,125,29,https://doi.org/10.6084/m9.figshare.22086266
+10,Sleep Talking,open,CC BY 4.0,4.06,1,8,8,0,0,2,2,https://doi.org/10.6084/m9.figshare.16950856
+11,Dream_YoungAdults,open,CC BY 4.0,0.037,1,20,15,0,0,20,10,https://doi.org/10.6084/m9.figshare.14899506
+12,Older adults,open,CC BY 4.0,4.781,1,9,11,0,0,9,11,https://doi.org/10.6084/m9.figshare.14500563
+13,Tononi Serial Awakenings,open,CC BY 4.0,8.409,38,344,309,0,0,0,0,https://doi.org/10.26180/23306054.v3
+14,Brain Institute - Federal University of Rio Grande do Norte,open,CC BY 4.0,58.798,1,9,7,0,0,13,7,https://doi.org/10.26180/23904699.v1
+15,Noreika_Motor_tDCS,open,CC BY 4.0,0.053,1,0,0,0,0,49,0,https://doi.org/10.6084/m9.figshare.24058848.v1
+16,DATA1,open,CC BY 4.0,1.615,1,24,25,46,87,37,4,https://doi.org/10.6084/m9.figshare.24058740.v1
+17,Aamodt_evening_sleep,open,CC BY 4.0,4.876,1,70,10,31,4,1,0,https://doi.org/10.6084/m9.figshare.22085597.v1
+18,Aamodt_morning_sleep,open,CC BY 4.0,3.02,1,43,10,8,0,1,0,https://doi.org/10.6084/m9.figshare.22085627.v1
+19,"Kumral et al., 2023","open (FreiData, not Figshare)",CC BY 4.0,46.588,1,24,18,4,5,8,1,https://doi.org/10.60493/31mg4-mfq53
+20,MEG Kyushu,open,CC BY 4.0,1.061,1,2,0,3,0,0,0,https://doi.org/10.6084/m9.figshare.27116590.v1

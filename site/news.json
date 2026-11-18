@@ -1,5 +1,5 @@
 {
- "_about": "News page. Add new items at the top of items. verified=true only after someone opened the DOI/URL and checked who, venue, date and every number in gist/plain/tech. Fields: gist (one line), plain (a short story for anyone), tech (for specialists), borrow (what this project takes from it or tests), status (planned, running, done).",
+ "_about": "News page. Add new items at the top of items. verified=true only after someone opened the DOI/URL and checked who, venue, date and every number in gist/plain/tech. Fields: gist (one line), plain (a short story for anyone), tech (for specialists), borrow (what this project takes from it or tests), status (planned, running, done). topic: one of the names in topics (add a new topic only when five or more items need it).",
  "items": [
   {
    "id": "adversarial-testing-of-global-neuronal-workspace",
@@ -15,7 +15,8 @@
    "plain": "Two rival theories agreed in advance what results would count against them. Then 256 people looked at pictures while their brains were scanned in three different ways. Neither theory won. One theory said the back of the brain should stay in sync for as long as a picture is seen; it did not. The other said the front of the brain should flare up when a picture disappears; mostly it did not.",
    "tech": "n = 256 (fMRI 120, MEG 102, iEEG 34), suprathreshold faces, objects, letters and false fonts shown for 0.5, 1.0 or 1.5 s, task-relevant and task-irrelevant. Content information found in visual, ventrotemporal and inferior frontal cortex; sustained responses in occipital and lateral temporal cortex tracked duration; content-specific synchronisation between frontal and early visual areas. IIT challenged by no sustained posterior synchronisation; GNWT challenged by general lack of offset ignition and limited prefrontal representation of some conscious dimensions. Preregistration: osf.io/92tbg. Data CC BY 4.0, account needed for download.",
    "borrow": "The data is public (Experiment 1: MEG, fMRI, iEEG), so it is the first place we test whether the published conclusions survive other reasonable analyses. Note the paper's iEEG n is 34; the plan said 38.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Theories tested"
   },
   {
    "id": "intrepid-an-adversarial-collaboration-of-iit-neu",
@@ -31,7 +32,8 @@
    "plain": "Three teams with rival theories wrote down, together, which experiments would tell their ideas apart and what each result would mean. The experiments run across several labs. This paper is the agreed plan and a comparison of the theories, not the results.",
    "tech": "Compares IIT, neurorepresentationalism (Pennartz) and active inference (Friston): target phenomena, explanatory styles, methods. Lists key hypotheses for multi-site experiments and what would support or challenge each theory, and proposes formally combining results across experiments and replications into a quantitative measure of evidential support per theory. Preprint arXiv:2509.00555 (v1 Aug 2025, v3 May 2026). Online 14 May 2026, issue Aug 2026.",
    "borrow": "If its data appears after we seal our predictions, it is a clean prospective test. Its evidence-pooling idea is a model for our own log-score comparison of theories.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Theories tested"
   },
   {
    "id": "bandara-dcm-reanalysis-cogitate-meg",
@@ -47,7 +49,8 @@
    "plain": "The same public data, analysed with a different method that asks which brain area drives which, gives a different answer from the original paper on one key point. This is a warning: with this much freedom in how to analyse the data, the conclusion can depend on the method.",
    "tech": "Dynamic causal modelling on the COGITATE MEG data (N = 100), task-irrelevant faces, split discovery-validation, expanding time windows. Support for GNWT's prefrontal ignition at both onset and offset (offset not seen in the original analyses). For IIT, fusiform-V1 feedback was not sustained, but intrinsic fusiform connectivity was broadly consistent with sustained processing; a post-hoc face-vs-object validation gave no strong evidence of face selectivity (pp < 0.95), so the IIT findings are read conservatively. Not peer reviewed.",
    "borrow": "This is the 'July 2026 reanalysis' the plan could not name. It goes into our multiverse on COGITATE (task #11) as one of the analysis paths, and shows why we hash the analysis set first.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Theories tested"
   },
   {
    "id": "bryant-whyte-connectivity-ncc-cogitate",
@@ -63,7 +66,8 @@
    "plain": "Rather than pick one connectivity measure, the authors tried 246 of them on the same public recordings, found the family that best tells pictures apart, and then built small brain models of each theory to see which reproduced it. Both models fit; the authors lean slightly towards the workspace theory.",
    "tech": "COGITATE MEG, 94 of 100 downloaded participants with anatomy for source localisation. 246 functional connectivity measures between IIT- and GNWT-predicted regions; barycenter-based measures decoded stimuli best and generalised across regions. Neural mass models: GNWT with delayed ignition, IIT with synchronous sensory dynamics; both captured the observed patterns. Conclusion: tentative support for GNWT, because ignition appeared regardless of task demands. A correction was issued (niag071).",
    "borrow": "A second independent reanalysis of the same data, from a different angle. Its 246-measure sweep is a template for our pre-registered multiverse; we would hash the measure list first.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Theories tested"
   },
   {
    "id": "dream-eeg-mentation-database",
@@ -79,7 +83,8 @@
    "plain": "When you wake someone in the night and ask what was going through their mind, sometimes they report a dream and sometimes nothing. Single labs could only collect a few hundred of these. This database pools them, so we can ask, with far more data, whether brain signals before waking predict a dream report.",
    "tech": "Initial release: 20 datasets, 505 participants, 2,643 awakenings; each has sleep M/EEG (>= 20 s, >= 100 Hz, >= 2 electrodes) up to waking plus a standardised report class. Experience vs no experience decoded from EEG over 200 random train-test splits against a label-shuffled null: NREM best with spectral power features (mean AUC 0.586, 5th-95th percentile 0.505-0.608); REM best with catch22 features (mean AUC 0.700, 0.663-0.731). Six datasets used for these analyses. Registry open (doi:10.26180/22133105); dataset packages either open access or by request from the contributor. Main text does not say whether splits held out whole subjects.",
    "borrow": "The key resource for our dream vs no-dream test (task #6). Their AUCs are the bar to beat, but we split by subject and lab, so our numbers may come out lower.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Sleep and dreams"
   },
   {
    "id": "repeated-awakening-propofol-dreaming-ds005620",
@@ -95,7 +100,8 @@
    "plain": "Twenty volunteers were sedated and woken several times to ask whether they had experienced anything. Complexity measures fell with sedation as expected. But they did not tell 'I was dreaming' from 'nothing' within sedation. Only 5 wakings gave a clear 'nothing', so the test could only have caught a large difference.",
    "tech": "20 healthy participants, propofol, resting EEG and TMS-EEG (PCIst) plus single-channel LZc. 52 attempted awakenings: 24 experience, 5 no experience, 23 unarousable or uninformative. Both measures fell from wake to sedation; no evidence of a difference between experience and no-experience awakenings within sedation (linear mixed models). Data: OpenNeuro ds005620 v1.0.0, CC0, 21 subjects, 83.0 GB in full (OpenNeuro metadata).",
    "borrow": "One of our L2 datasets. The full set is far over our 1.5 GB budget; we fetch only the pre-awakening sedation files per subject. The 5 no-experience awakenings make it weak alone for dream vs no-dream; pool with DREAM.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Sleep and dreams"
   },
   {
    "id": "maschke-etiology-alpha-complexity-exponent",
@@ -111,7 +117,8 @@
    "plain": "A brain 'complexity' score is often used as a sign of consciousness. Here it moved almost in lockstep with a much simpler property of the signal, how fast power falls off with frequency. When the authors compared each recording with scrambled copies that keep that property, the complexity score stopped telling patients apart. Which marker worked also depended on the cause of brain injury.",
    "tech": "303 unresponsive patients. Shuffle-normalised LZC correlated with the 1-40 Hz spectral exponent at r(197) = 0.86; phase-normalising (surrogates with matched spectrum) reduced this to r(197) = 0.24, and all LZC diagnostic effects vanished; partialling out the exponent did the same. Alpha power had more diagnostic value in anoxic patients; spectral slope only in non-anoxic patients. Code: github.com/BIAPT/Markers.",
    "borrow": "The direct source for our surrogate gate (task #8) and the LZ vs slope test (task #4). It is the PMC12448740 paper the plan cites. We also stratify by aetiology wherever patient data allow.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Measuring consciousness"
   },
   {
    "id": "newman-criticality-pci-doc",
@@ -127,7 +134,8 @@
    "plain": "The best-tested consciousness index needs a magnetic pulse to the head. This team asked whether ordinary resting EEG can predict it in 26 brain-injured patients. It could not across the whole group, only in patients whose injury was not from lack of oxygen and in those with a measurable response.",
    "tech": "26 patients (vascular, traumatic, anoxic). Multivariate criticality features did not generalise PCImax prediction across the full cohort; they did when restricted to non-anoxic patients and to patients with non-zero PCImax. Extends Maschke et al. 2024 (anaesthesia) to brain injury. Not peer reviewed.",
    "borrow": "Tempers the 2024 claim that resting EEG can replace PCI. Our out-of-sample test of that claim should report results by aetiology.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Measuring consciousness"
   },
   {
    "id": "luppi-integration-anaesthesia-mammals",
@@ -143,7 +151,8 @@
    "plain": "Brain scans under anaesthesia in four species show the same thing: information stops being combined across the brain. In monkeys, stimulating the thalamus reawakened them and restored it. This points the opposite way from a 2024 rat EEG study where an integration estimate went up under anaesthesia.",
    "tech": "fMRI with anaesthesia in humans, macaques, marmosets and mice. Breakdown of integrated information is a convergent effect of diverse anaesthetics; dynamics become harder to control; both reversed by thalamic DBS-induced awakening in macaque. Regional breakdown follows PVALB expression topography; species-specific computational models.",
    "borrow": "Shows that whether a Phi-like proxy rises or falls under anaesthesia depends on the modality and the estimator. Our known-Phi network test (task #9) must check each proxy before we trust its direction.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Drugs and anaesthesia"
   },
   {
    "id": "butlin-indicators-consciousness-ai",
@@ -159,7 +168,8 @@
    "plain": "Instead of asking a chatbot whether it feels anything, the authors take the core requirements of several brain theories and check whether an AI system's internal machinery meets them. This builds on their 2023 report, which concluded that no current AI system was a strong candidate.",
    "tech": "Four guidelines for deriving indicators, e.g. indicators should target the central explanatory posits of a theory; illustrated with the indicator list from the 2023 report (arXiv:2308.08708, 19 authors, which drew on recurrent processing, global workspace, higher-order, predictive processing and attention schema theories and concluded no current AI systems are conscious but saw no obvious technical barriers to meeting the indicators). Issue June 2026 (vol 30, issue 6).",
    "borrow": "The rubric for our AI stress tests: we use it to find where theories disagree or give absurd answers, never as a verdict on AI and never scoring an AI's self-report.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "AI"
   },
   {
    "id": "psilocybin-midazolam-eeg-complexity",
@@ -175,7 +185,8 @@
    "plain": "Psilocybin was given together with a sedative that blunts memory. Early on, when mainly the sedative was acting, the EEG looked sedated. As the psychedelic took hold over six hours, complexity rose and power fell, and these changes tracked people's ratings of altered experience better than ratings of sedation.",
    "tech": "Oral psilocybin 25 mg plus IV midazolam, high-density EEG. At 15-30 min (midazolam at target, psilocybin likely not): higher beta power, lower spectral exponent. Over the next six hours: higher normalised LZC and spectral exponent, lower broadband power. OAA/S sedation scores improved model fits for alpha power; ASC items improved fits for LZCn and spectral exponent. Small open-label pilot. Preprint bioRxiv 10.1101/2025.07.25.666887.",
    "borrow": "A case where complexity and the spectral exponent move together under a drug that changes experience. Our test asks whether complexity adds anything once the exponent is known.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Drugs and anaesthesia"
   },
   {
    "id": "resting-eeg-dynamics-predict-the-perturbational",
@@ -191,7 +202,8 @@
    "plain": "Volunteers were put under with propofol, xenon or ketamine; all stopped responding, but only the ketamine group reported vivid dreams afterwards. Measures of how close the resting brain sits to a 'critical' tipping point separated the dreaming group from the others, and predicted each person's score on the magnetic-pulse test.",
    "tech": "15 healthy adults (propofol 5, xenon 5, ketamine 5), data from earlier studies. Avalanche criticality, chaoticity and related metrics; unconsciousness moved away from criticality and the edge of chaos. Ridge regression on 16 features predicted PCImax; leave-one-subject-out (15 folds) mean absolute error 0.065 (+/- 0.042); a 0.35 threshold separated conscious and unconscious states for true and predicted PCImax.",
    "borrow": "If true, the best-validated measure could be tested on many more open datasets. Caution: 15 subjects, 5 per drug, and the same cohort as Colombo 2019 and Sarasso 2015, so these are not independent replications. We test it out of sample.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Measuring consciousness"
   },
   {
    "id": "integrated-information-estimates-rise-under-prop",
@@ -207,7 +219,8 @@
    "plain": "The researchers compared a stimulation-based complexity score with several scores computed from ordinary EEG in rats under three anaesthetics. Some scores worked well. But the estimates of 'integrated information', the quantity at the heart of one major theory, generally rose under propofol and sevoflurane, the reverse of what that theory expects.",
    "tech": "Rats under propofol, sevoflurane and ketamine. PCI (electrical stimulation), LZ and geometric integrated information (PhiG) best separated wake from propofol and sevoflurane. PCI was anti-correlated with spontaneous integrated-information measures, which generally increased under propofol and sevoflurane. Authors suggest perturbation-based and spontaneous measures may be complementary.",
    "borrow": "A warning that Phi proxies may not track what IIT says Phi tracks. Our known-Phi network test checks this before any proxy touches brain data.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Measuring consciousness"
   },
   {
    "id": "the-integrated-information-theory-of-consciousne",
@@ -223,7 +236,8 @@
    "plain": "After press coverage called IIT a leading, tested theory, researchers wrote an open letter objecting. In 2025 a follow-up in Nature Neuroscience argued the theory's core claims cannot be tested even in principle. The row is about what a fair test of a theory of consciousness looks like.",
    "tech": "Letter posted 16 Sep 2023 on PsyArXiv. Follow-up: IIT-Concerned et al., 'What makes a theory of consciousness unscientific?', Nature Neuroscience 28, 689-693, doi:10.1038/s41593-025-01881-x (104 author entries in Crossref, including the collective name). We did not verify the number of signatories on the 2023 letter.",
    "borrow": "It is why we judge every theory only by predictions sealed in advance.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Theories tested"
   },
   {
    "id": "iit-4-0",
@@ -239,7 +253,8 @@
    "plain": "IIT starts from what experience is like and works out what a physical system must be like to have it, then puts that in mathematics. In principle the maths says whether any system is conscious and how. In practice it cannot be computed for a brain, so only rough stand-ins can be tested.",
    "tech": "Axioms to postulates to mathematical expressions; a unique measure of intrinsic information consistent with the postulates; explicit treatment of causal relations; a system's unfolded cause-effect structure accounts for the quality of experience.",
    "borrow": "The reference for the IIT row on our scoreboard and for which toy networks have exactly computable Phi in our planted-answer tests.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Theories tested"
   },
   {
    "id": "siclari-neural-correlates-of-dreaming",
@@ -255,7 +270,8 @@
    "plain": "People were woken many times a night and asked if they had been dreaming. In both dreaming-heavy and dreaming-light stages of sleep, a dream report followed a drop in slow brain waves over a 'hot zone' at the back of the head. Watching that zone live predicted whether the sleeper would report a dream.",
    "tech": "High-density EEG, serial awakenings. Dream reports in NREM and REM associated with local decreases in low-frequency activity in posterior cortex; high-frequency activity there correlated with specific dream contents; real-time monitoring predicted dream vs no-dream reports in NREM.",
    "borrow": "The sharpest within-stage test of a measure against report. The DREAM database (2025) lets us test whether it replicates across labs.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Sleep and dreams"
   },
   {
    "id": "casarotto-pci-stratification",
@@ -271,7 +287,8 @@
    "plain": "The team first set a threshold using 150 people whose state was known from their own reports. That threshold then caught almost all minimally conscious patients, and showed 9 of 43 patients judged vegetative with scores like conscious people.",
    "tech": "Benchmark population 150 (healthy and communicative brain-injured; wake, disconnected consciousness, unconsciousness). Optimal cutoff gave 100% sensitivity and specificity in the benchmark; applied to 38 MCS and 43 VS patients: 94.7% sensitivity for MCS; 9 of 43 VS patients above the cutoff.",
    "borrow": "The strongest published L2 result. No open TMS-EEG set of this kind exists, which is the biggest data gap in our plan.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Measuring consciousness"
   },
   {
    "id": "casali-pci-2013",
@@ -287,7 +304,8 @@
    "plain": "If a brain is both well connected and varied, a magnetic pulse should set off a rich, hard-to-compress pattern of activity. The score built on that idea separated wake from deep sleep and anaesthesia in single people, and tracked recovery in patients emerging from coma.",
    "tech": "TMS-evoked EEG responses compressed (Lempel-Ziv) after source modelling and binarisation. Tested in wake, dreaming, NREM sleep, midazolam, xenon and propofol sedation, and in vegetative, minimally conscious and locked-in patients; discriminated level of consciousness in single individuals.",
    "borrow": "The measure every spontaneous-EEG candidate is judged against.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Measuring consciousness"
   },
   {
    "id": "sarasso-ketamine-pci",
@@ -303,7 +321,8 @@
    "plain": "Three anaesthetics all made volunteers unresponsive. After propofol and xenon they remembered nothing. After ketamine they described long, vivid dreams, and during it the brain's response to stimulation stayed complex like in waking. This is the classic case where behaviour and experience come apart.",
    "tech": "18 healthy volunteers. Frontal and parietal TMS: propofol gave a local low-complexity slow wave, xenon a global stereotyped low-complexity slow wave, ketamine a wake-like complex pattern. Reports on emergence: none after propofol and xenon; long vivid dreams after ketamine.",
    "borrow": "Defines our ketamine dissociation case. The same group's data underlies Colombo 2019 and Maschke 2024, so we need an independent ketamine dataset.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Drugs and anaesthesia"
   },
   {
    "id": "schartner-psychedelic-signal-diversity",
@@ -319,7 +338,15 @@
    "plain": "Complexity scores are usually highest in normal waking. Under psilocybin, ketamine and LSD they went higher still, and some of the rise tracked how intense people said the experience was.",
    "tech": "Spontaneous MEG; LZ and entropy measures higher for all three drugs, even when controlling for spectral changes; strongest for single-channel LZ (temporal diversity). Selective correlations with phenomenological intensity ratings.",
    "borrow": "Tests whether a measure rises when contents intensify but level does not obviously change. We re-check the spectral control with phase-randomised surrogates.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Drugs and anaesthesia"
   }
+ ],
+ "topics": [
+  "Theories tested",
+  "Measuring consciousness",
+  "Sleep and dreams",
+  "Drugs and anaesthesia",
+  "AI"
  ]
 }

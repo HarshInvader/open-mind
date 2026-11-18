@@ -1,0 +1,237 @@
+constraint_id,grade,weight,in_totals,theory,mark,points,reason
+C01,A,3,1,GNWT,compatible,1,Blindsight predates GNWT; unconscious processing without broadcast fits but was not derived.
+C01,A,3,1,IIT,compatible,1,Predates IIT; the residual LGN-extrastriate route lying outside the main complex fits after the fact.
+C01,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Processing without a held state is allowed; why extrastriate cannot hold without V1 is not stated."
+C01,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C02,B,2,1,GNWT,compatible,1,GNWT 2006 separates attention from access; cueing without seeing was known before that statement.
+C02,B,2,1,IIT,compatible,1,Proponents separate attention from consciousness; not derived from Phi.
+C02,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Attention is not part of the condition, so cueing without a hold fits."
+C02,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Salience loop is not attention to location; fits."
+C03,A,3,1,GNWT,compatible,1,Callosotomy splits the workspace; classic finding predates the theory.
+C03,A,3,1,IIT,compatible,1,Two complexes after callosotomy; finding predates IIT.
+C03,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Comparison and report are downstream readers of separate held states."
+C03,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C04,C,1,1,GNWT,compatible,1,Unresolved constraint; one or two workspaces both arguable.
+C04,C,1,1,IIT,compatible,1,IIT predicts two complexes; unresolved evidence neither confirms nor breaks it.
+C04,C,1,1,T1,silent,0,T1 says nothing about how many subjects a split brain holds.
+C04,C,1,1,T2,silent,0,T2 says nothing about subject number.
+C05,A,3,1,GNWT,compatible,1,Cerebellum lacks workspace neurons; known long before GNWT.
+C05,A,3,1,IIT,compatible,1,"Tononi 2004 used the cerebellum as a motivating case, so the fit is post hoc."
+C05,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Cerebellum is excluded by definition of sensory-format cortex, a stipulation."
+C05,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same stipulation as T1."
+C06,B,2,1,GNWT,compatible,1,One hemisphere can host a workspace; not predicted.
+C06,B,2,1,IIT,compatible,1,One hemisphere can hold a complex; not predicted.
+C06,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. One hemisphere's sensory cortex can still hold states."
+C06,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. One hemisphere keeps both loop ends."
+C07,A,3,1,GNWT,compatible,1,Content lives in posterior processors that feed the workspace; classic lesion data predate GNWT.
+C07,A,3,1,IIT,compatible,1,Posterior hot zone was drawn partly from such lesions; post hoc.
+C07,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Content is the held pattern of a patch; losing the patch loses the content."
+C07,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Posterior content as in T1."
+C08,B,2,1,GNWT,compatible,1,"1998 workspace is distributed (frontal, parietal, cingulate); Mashour 2020 says focal lesions should not abolish it."
+C08,B,2,1,IIT,compatible,1,"Posterior hot zone; proponents argued this from these lesion data, post hoc."
+C08,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Frontal cortex is stated as not required."
+C08,B,2,1,T2,strained,-1,"N1 needs OFC/ACC/IFG re-entry; large prefrontal lesions (including leucotomy and cingulotomy) leave people conscious, so T2 needs redundancy or residual-site assumptions."
+C09,B,2,1,GNWT,explains,2,Del Cul 2009 tested GNWT's prediction that prefrontal workspace damage raises the access threshold.
+C09,B,2,1,IIT,compatible,1,"Read as a change in report/metacognition, which IIT keeps outside experience; one unreplicated study."
+C09,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Report is a downstream reader, so a reader-stage change fits."
+C09,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Anterior lesion could weaken re-entry or report; fits."
+C10,A,3,1,GNWT,compatible,1,Stimulating a processor can feed the workspace; long clinical record predates GNWT.
+C10,A,3,1,IIT,compatible,1,Posterior hot zone; post hoc.
+C10,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Stimulation imposes a held pattern in tuned cortex."
+C10,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Posterior pattern plus intact loop."
+C11,B,2,1,GNWT,compatible,1,"Workspace PFC carries no specific content, so stimulating it need not create one; not predicted."
+C11,B,2,1,IIT,compatible,1,Fits posterior hot zone; OFC/ACC effects need emotional-content routes; post hoc.
+C11,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. OFC/ACC effects could reach interoceptive/bodily cortex; lateral PFC is not sensory-format."
+C11,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. T2 was built on this row (it cites C11)."
+C12,A,3,1,GNWT,compatible,1,Known before GNWT; common workspace disruption fits.
+C12,A,3,1,IIT,compatible,1,Known before IIT; loss of integration fits.
+C12,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Anaesthetics induce bistability that cuts holds."
+C12,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1, at both loop ends."
+C13,B,2,1,GNWT,explains,2,GNWT's long-range fronto-parietal loop predicted that diverse anaesthetics would cut it; Lee 2013 came later.
+C13,B,2,1,IIT,compatible,1,Loss of integration fits; IIT did not single out frontal-to-parietal feedback.
+C13,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Frontal-parietal feedback is not in T1's condition; L5 decoupling could stop posterior holds."
+C13,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Fronto-posterior re-entry is T2's loop; post hoc."
+C14,B,2,1,GNWT,compatible,1,Dreams under ketamine fit a workspace active while disconnected; PCI is not a GNWT measure.
+C14,B,2,1,IIT,explains,2,"IIT-derived PCI predicted complexity tracks experience, not responsiveness; Sarasso 2015 tested it."
+C14,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. T1 cites C14 directly."
+C14,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C15,B,2,1,GNWT,compatible,1,Access without memory consolidation fits; not predicted.
+C15,B,2,1,IIT,compatible,1,Experience without memory fits; not predicted.
+C15,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Memory is a downstream reader."
+C15,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C16,A,3,1,GNWT,compatible,1,NREM dreams known before GNWT; fits.
+C16,A,3,1,IIT,compatible,1,NREM dreams known before IIT; fits.
+C16,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Holds can occur in NREM between OFF-periods."
+C16,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C17,B,2,1,GNWT,compatible,1,Posterior-only signal is not GNWT's frontal ignition; parietal workspace lets it fit.
+C17,B,2,1,IIT,explains,2,IIT's 2016 posterior hot zone and bistability account predicted a local posterior slow-wave drop before Siclari 2017.
+C17,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. T1 cites C17."
+C17,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Posterior finding; anterior requirement not tested by it."
+C18,B,2,1,GNWT,compatible,1,Content in visual processors; fits.
+C18,B,2,1,IIT,compatible,1,Fits posterior complex.
+C18,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Held visual pattern."
+C18,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C19,B,2,1,GNWT,compatible,1,Workspace active in REM can compute and signal; not predicted.
+C19,B,2,1,IIT,compatible,1,Fits; not predicted.
+C19,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. T1 cites C19."
+C19,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C20,A,3,1,GNWT,compatible,1,Covert fronto-parietal task activation fits; prevalence not predicted.
+C20,A,3,1,IIT,compatible,1,Fits; prevalence not predicted.
+C20,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Behaviour is not part of the condition."
+C20,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C21,A,3,1,GNWT,compatible,1,Arousal vs access split predates GNWT.
+C21,A,3,1,IIT,compatible,1,Main dissociation predates IIT; Rosanova part fits the bistability line.
+C21,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. T1 fitted H to Rosanova 2018, so at most compatible."
+C21,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same H as T1."
+C22,A,3,1,GNWT,compatible,1,Masking motivated GNWT; sharp threshold fits ignition but was known first.
+C22,A,3,1,IIT,compatible,1,Mask interrupting integration fits; not derived.
+C22,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. A mask rewrites the state before the hold completes."
+C22,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C23,C,1,1,GNWT,compatible,1,GNWT allows deep unconscious processing.
+C23,C,1,1,IIT,compatible,1,Unconscious processing outside the complex fits.
+C23,C,1,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Unheld processing allowed."
+C23,C,1,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C24,A,3,1,GNWT,explains,2,"Dehaene, Sergent & Changeux 2003 simulated the blink; Sergent 2005 confirmed late collapse after."
+C24,A,3,1,IIT,silent,0,IIT 4.0 says nothing about the attentional blink.
+C24,A,3,1,T1,strained,-1,"Attention is not in the condition; T1 needs an assumption that a busy system blocks posterior holds, or that T2 is held then forgotten."
+C24,A,3,1,T2,strained,-1,Needs the added assumption that the salience loop is occupied by T1.
+C25,A,3,1,GNWT,compatible,1,GNWT 2006 preconscious category; findings predate it.
+C25,A,3,1,IIT,compatible,1,Unsettled whether items were experienced; fits.
+C25,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Items may be held and not reported; fits since unsettled."
+C25,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C26,A,3,1,GNWT,compatible,1,Preconscious buffer fits; known before.
+C26,A,3,1,IIT,compatible,1,Rich posterior content fits; known before.
+C26,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Held contents exceed report."
+C26,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C27,B,2,1,GNWT,compatible,1,Access and performance can split; not derived.
+C27,B,2,1,IIT,compatible,1,Fits if performance is driven outside the complex; not derived.
+C27,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Performance can come from unheld processing."
+C27,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C28,B,2,1,GNWT,strained,-1,GNWT used the P3b as its ignition marker; fitting needs the assumption that ignition occurs without a P3b.
+C28,B,2,1,IIT,compatible,1,"Proponents had argued P3b is post-perceptual, but this is an interpretation, not a Phi derivation."
+C28,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Report is downstream."
+C28,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Anterior loop is not a report signal."
+C29,C,1,1,GNWT,explains,2,GNWT predicts task-independent late all-or-none ignition; Sergent 2021 (GNWT group) tested it.
+C29,C,1,1,IIT,compatible,1,Fits; IIT made no timing prediction.
+C29,C,1,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Late sustained activity matches a completed hold."
+C29,C,1,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Absent executive frontal components are not the OFC/ACC/IFG loop."
+C30,C,1,1,GNWT,compatible,1,Frontal decodability fits; one study.
+C30,C,1,1,IIT,compatible,1,Frontal patterns can be downstream; fits.
+C30,C,1,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Downstream frontal readers."
+C30,C,1,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Frontal involvement fits."
+C31,B,2,1,GNWT,strained,-1,Needs the assumption that ignition is invisible to fMRI or that the frontal signal was report-only.
+C31,B,2,1,IIT,compatible,1,Fits posterior view; not derived.
+C31,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Frontal not required."
+C31,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Reduced frontal BOLD need not mean absent OFC/ACC/IFG re-entry."
+C32,B,2,1,GNWT,explains,2,GNWT predicted prefrontal neurons carry conscious content; Panagiotaropoulos 2012 found it without report.
+C32,B,2,1,IIT,compatible,1,Content coding outside the complex is allowed.
+C32,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Frontal content as a downstream reader."
+C32,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Frontal content fits."
+C33,A,3,1,GNWT,compatible,1,Rivalry hierarchy data (Logothetis 1996) predate GNWT.
+C33,A,3,1,IIT,compatible,1,Fits; not derived.
+C33,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Held patterns in visual hierarchy."
+C33,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C34,B,2,1,GNWT,explains,2,Ignition predicts all-or-none higher-area responses and step-wise loss; van Vugt 2018 tested it.
+C34,B,2,1,IIT,silent,0,IIT says nothing about all-or-none single-neuron responses.
+C34,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. A hold completes or not; post hoc."
+C34,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C35,A,3,1,GNWT,compatible,1,GNWT predicted ~300 ms ignition; earlier 150-200 ms divergence and the expectation shift were not predicted.
+C35,A,3,1,IIT,silent,0,IIT gives no latency.
+C35,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. T1 sets H from C35."
+C35,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same H as T1."
+C36,A,3,1,GNWT,compatible,1,Late ignition allows later input to shape access; post hoc.
+C36,A,3,1,IIT,silent,0,IIT 4.0 makes no postdiction claim.
+C36,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Dating back is written in to fit postdiction."
+C36,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C37,B,2,1,GNWT,compatible,1,Sergent & Dehaene 2004 tie spontaneous workspace state to seeing; alpha specifics not predicted.
+C37,B,2,1,IIT,silent,0,IIT says nothing about prestimulus alpha.
+C37,B,2,1,T1,silent,0,T1 does not address prestimulus excitability.
+C37,B,2,1,T2,silent,0,T2 does not address it.
+C38,B,2,1,GNWT,explains,2,Bekinschtein 2009 derived the global effect from GNWT and found it needs awareness.
+C38,B,2,1,IIT,silent,0,IIT says nothing about rule-level responses.
+C38,B,2,1,T1,silent,0,T1 says nothing about rule awareness.
+C38,B,2,1,T2,silent,0,T2 says nothing about it.
+C39,B,2,1,GNWT,strained,-1,Preregistered offset ignition and rich PFC content were not found; fitting needs added assumptions (reanalyses dispute).
+C39,B,2,1,IIT,strained,-1,Preregistered sustained posterior synchronisation was not found; fitting needs added assumptions.
+C39,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Hold is not synchrony; content found in sensory cortex."
+C39,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Inferior frontal content fits the loop; post hoc."
+C40,A,3,1,GNWT,compatible,1,Bistability known from Steriade; workspace loss fits.
+C40,A,3,1,IIT,explains,2,IIT 2004 predicted lost integration/differentiation in NREM; Massimini 2005 onward found local or stereotyped TMS responses.
+C40,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. OFF-periods are T1's core ingredient, taken from this row."
+C40,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C41,B,2,1,GNWT,compatible,1,Workspace loss lowers complexity; not a GNWT measure.
+C41,B,2,1,IIT,explains,2,PCI was derived from IIT and then validated.
+C41,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Fits via OFF-periods."
+C41,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C42,B,2,1,GNWT,silent,0,GNWT says nothing about delta.
+C42,B,2,1,IIT,strained,-1,Bistability-integration line links slow waves to low complexity; needs the assumption that this delta lacks OFF-periods.
+C42,B,2,1,T1,strained,-1,Needs the untested assumption (P4) that conscious delta lacks OFF-periods.
+C42,B,2,1,T2,strained,-1,Same assumption as T1.
+C43,B,2,1,GNWT,compatible,1,Fronto-parietal network changes fit; not predicted.
+C43,B,2,1,IIT,compatible,1,Fits.
+C43,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Spike-wave bistability cuts holds."
+C43,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C44,B,2,1,GNWT,silent,0,GNWT says nothing about local sleep.
+C44,B,2,1,IIT,compatible,1,Local OFF-periods fit; not predicted.
+C44,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. T1 cites C44."
+C44,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C45,B,2,1,GNWT,silent,0,GNWT says nothing about richness or hub decreases.
+C45,B,2,1,IIT,compatible,1,Power is not Phi; fits.
+C45,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Power and hub activity are not in the condition."
+C45,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C46,B,2,1,GNWT,silent,0,No claim about signal diversity.
+C46,B,2,1,IIT,compatible,1,Complexity rising with richer experience fits; LZc is not Phi.
+C46,B,2,1,T1,silent,0,T1 says nothing about signal diversity.
+C46,B,2,1,T2,silent,0,T2 says nothing about it.
+C47,A,3,1,GNWT,compatible,1,Brainstem as enabling arousal; fits.
+C47,A,3,1,IIT,compatible,1,Background condition; fits.
+C47,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Arousal keeps cortex out of bistability."
+C47,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C48,A,3,1,GNWT,compatible,1,Thalamic enabling; fits.
+C48,A,3,1,IIT,compatible,1,Fits.
+C48,A,3,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Arousal role."
+C48,A,3,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C49,B,2,1,GNWT,compatible,1,Restoring cortical activity fits; not predicted.
+C49,B,2,1,IIT,compatible,1,Fits.
+C49,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Arousal role."
+C49,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C50,C,1,1,GNWT,silent,0,No claustrum claim.
+C50,C,1,1,IIT,silent,0,IIT 4.0 makes no claustrum claim.
+C50,C,1,1,T1,silent,0,No claim.
+C50,C,1,1,T2,silent,0,No claim.
+C51,B,2,1,GNWT,compatible,1,Prefrontal role in emergence fits a frontal workspace; parietal null not predicted.
+C51,B,2,1,IIT,strained,-1,Prefrontal but not parietal reversal needs an assumption that PFC acts through arousal.
+C51,B,2,1,T1,strained,-1,"Same assumption as IIT: PFC must act by arousal, since T1 needs only posterior holds."
+C51,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Prefrontal loop site fits."
+C52,B,2,1,GNWT,compatible,1,Early sensory activity without workspace access fits; not uniquely predicted.
+C52,B,2,1,IIT,compatible,1,Fits.
+C52,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Early activation is not a completed hold."
+C52,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C53,B,2,1,GNWT,silent,0,No claim about body ownership.
+C53,B,2,1,IIT,silent,0,No claim about body ownership.
+C53,B,2,1,T1,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Bodily cortex is sensory-format; a held multisensory body state fits."
+C53,B,2,1,T2,compatible,1,"Post hoc: T1/T2 were written after reading the whole ledger, so the cap is compatible. Same as T1."
+C54,C,1,1,GNWT,silent,0,No claim.
+C54,C,1,1,IIT,silent,0,No claim.
+C54,C,1,1,T1,silent,0,No claim.
+C54,C,1,1,T2,silent,0,No claim.
+C55,C,1,1,GNWT,strained,-1,GNWT needs cortex; contested reports of consciousness would strain it.
+C55,C,1,1,IIT,strained,-1,Cortical complex needed; same strain.
+C55,C,1,1,T1,strained,-1,S2 says nothing outside cortex produces experience; same strain.
+C55,C,1,1,T2,strained,-1,Same as T1.
+C56,C,1,1,GNWT,silent,0,Experience unknown.
+C56,C,1,1,IIT,silent,0,Experience unknown.
+C56,C,1,1,T1,silent,0,Experience unknown.
+C56,C,1,1,T2,silent,0,Experience unknown.
+C57,C,1,1,GNWT,silent,0,No claim about volition timing.
+C57,C,1,1,IIT,silent,0,No claim.
+C57,C,1,1,T1,silent,0,No claim.
+C57,C,1,1,T2,silent,0,No claim.
+C58,C,1,1,GNWT,silent,0,No microtubule claim.
+C58,C,1,1,IIT,silent,0,No microtubule claim.
+C58,C,1,1,T1,silent,0,No claim.
+C58,C,1,1,T2,silent,0,No claim.
+C59,B,2,0,GNWT,silent,0,Physics; out of scope.
+C59,B,2,0,IIT,silent,0,Physics; out of scope.
+C59,B,2,0,T1,silent,0,Physics; out of scope.
+C59,B,2,0,T2,silent,0,Physics; out of scope.

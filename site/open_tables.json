@@ -1,0 +1,179 @@
+{
+ "_about": "Plain descriptions of the tables in datasets/open/, for the Data page and one page per table. group orders them. cols explains the columns a reader would not guess.",
+ "groups": [
+  "Scoring the theories",
+  "Tests we ran",
+  "The data we can use"
+ ],
+ "tables": {
+  "theory_scorecard_totals.csv": {
+   "group": "Scoring the theories",
+   "title": "How each theory scores",
+   "about": "One row per theory of consciousness: how many of the hard facts it explains, fits, says nothing about, strains against or contradicts, and a weighted score. Start here.",
+   "cols": {
+    "explains": "Facts the theory predicted or derives",
+    "compatible": "Facts it fits, but did not predict",
+    "silent": "Facts it says nothing about",
+    "strained": "Facts it can only fit with extra assumptions",
+    "contradicts": "Facts it gets wrong",
+    "weighted_score": "Points, with better-established facts weighted more",
+    "cells_with_proponent_source": "Marks backed by something the theory's own authors wrote",
+    "theory": "Short name of the theory",
+    "name": "Full name",
+    "max_possible": "Highest weighted score possible",
+    "weighted_explains": "Weighted points from facts it explains"
+   }
+  },
+  "constraint_ledger.csv": {
+   "group": "Scoring the theories",
+   "title": "The facts any theory must explain",
+   "about": "59 findings about consciousness (blindsight, dreaming, anaesthesia and more), each with an evidence grade and its sources. Every theory is marked against this list.",
+   "cols": {
+    "id": "Fact number, C01 onwards",
+    "evidence_grade": "A = replicated and robust, B = good but limited, C = suggestive",
+    "key_sources": "DOIs of the main papers",
+    "checked": "Whether we opened the sources"
+   }
+  },
+  "theory_scorecard.csv": {
+   "group": "Scoring the theories",
+   "title": "Every theory against every fact",
+   "about": "The full grid behind the scores: each theory against each fact, with its mark, where the mark comes from and why.",
+   "cols": {
+    "mark": "explains, compatible, silent, strained or contradicts",
+    "proponent_position": "What the theory's own authors have said, with the source",
+    "basis": "proponent (their words) or our reading",
+    "constraint": "The fact, in full"
+   }
+  },
+  "theory_scorecard_gaps.csv": {
+   "group": "Scoring the theories",
+   "title": "Facts no theory explains",
+   "about": "The 16 facts that no current theory predicts. Any new theory, ours included, should be judged first on these.",
+   "cols": {
+    "kind": "none explains, or every theory strains",
+    "compatible": "Theories that at least fit it",
+    "strained": "Theories that strain against it"
+   }
+  },
+  "blind_scoring_marks.csv": {
+   "group": "Scoring the theories",
+   "title": "A second, blind round of marks",
+   "about": "The theory-against-fact marks done again by a marker who could not see the first round, to check how much the scores depend on who marks them.",
+   "cols": {
+    "weight": "Points for the fact's evidence grade (A = 3, B = 2, C = 1)",
+    "in_totals": "1 if the fact counts in the totals",
+    "points": "Points this mark earns"
+   }
+  },
+  "our_theory_coverage.csv": {
+   "group": "Scoring the theories",
+   "title": "Our own theory, marked the same way",
+   "about": "Two drafts of our candidate theory (T1 and T2) marked against every fact, with a flag wherever the fit was worked out after seeing the fact.",
+   "cols": {
+    "T1_mark": "Mark for draft 1",
+    "T1_post_hoc": "1 if the fit was found after the fact rather than predicted",
+    "T2_mark": "Mark for draft 2"
+   }
+  },
+  "theory_tests_scoreboard.csv": {
+   "group": "Tests we ran",
+   "title": "Theory predictions we tested on brain data",
+   "about": "Predictions from the theories, written down and sealed before we looked, then tested on open sleep and anaesthesia recordings. Each row says whether the prediction passed.",
+   "cols": {
+    "statistic": "The measured result (AUC: 0.5 is chance, 1 is perfect)",
+    "CI": "95% confidence interval",
+    "verdict": "Passed or failed, with the size of effect the test could have caught",
+    "prereg_hash": "Fingerprint of the sealed plan, published before the result"
+   }
+  },
+  "theory_tests_results.json": {
+   "group": "Tests we ran",
+   "title": "Full numbers for those tests",
+   "about": "Everything behind the theory-test scoreboard: per-dataset results, confidence intervals, permutation tests and the planted-answer checks.",
+   "cols": {}
+  },
+  "bench_ledger.csv": {
+   "group": "Tests we ran",
+   "title": "Every test we have run",
+   "about": "One row per test from every experiment, passes and failures alike, with its statistic, sample size and how it was corrected for running many tests.",
+   "cols": {
+    "experiment": "Which experiment folder it came from",
+    "claim": "What the test checks",
+    "n": "Sample size",
+    "split": "Which part of the data it used (held-out or not)",
+    "family_size": "How many tests share its correction",
+    "q_global": "p-value corrected across all tests",
+    "replicated_independently": "Whether a second dataset or lab agreed"
+   }
+  },
+  "lz_slope_results.json": {
+   "group": "Tests we ran",
+   "title": "Does brain-signal complexity add anything?",
+   "about": "A popular complexity measure (LZ) tested against the simpler slope of the brain-signal spectrum across three datasets: how well each tells waking from deep sleep, and whether complexity adds anything once the slope is known.",
+   "cols": {}
+  },
+  "t1_dream_features.csv": {
+   "group": "Tests we ran",
+   "title": "Brain signals just before each dream report",
+   "about": "For each awakening in the Tononi serial-awakening study: brain-signal power in several bands just before waking, and whether the person then reported a dream.",
+   "cols": {
+    "label": "E = experience reported, NE = no experience, WR = experience without recall",
+    "clock_h": "Time of night, hours",
+    "delta5": "Slow-wave (1-4 Hz) power in the last 5 s",
+    "sigma": "Spindle-band power",
+    "exp10": "Slope of the spectrum over the last 10 s"
+   }
+  },
+  "t1_dream_subject_counts.csv": {
+   "group": "Tests we ran",
+   "title": "Dream reports per person",
+   "about": "How many awakenings per person ended in a dream report, no experience, or experience without recall, in the data as analysed.",
+   "cols": {
+    "E": "Experience reported",
+    "NE": "No experience",
+    "WR": "Experience without recall"
+   }
+  },
+  "ground_truth_labels.csv": {
+   "group": "The data we can use",
+   "title": "Every open recording, and what we know about the person's state",
+   "about": "3,679 recordings or awakenings from open datasets, each labelled with how we know whether the person was conscious: they responded, they reported a dream, or only the drug dose is known.",
+   "cols": {
+    "family": "sleep, anaesthesia or disorders of consciousness",
+    "behaviour": "What the person did (for example a sedation score)",
+    "report": "What they said on waking, if asked",
+    "truth": "Kind of evidence: report, behaviour, or none"
+   }
+  },
+  "ground_truth_counts.json": {
+   "group": "The data we can use",
+   "title": "Counts behind the data figures",
+   "about": "The totals behind the charts on the Data and Findings pages: recordings by dataset and kind of evidence, and dream reports by sleep stage and lab.",
+   "cols": {}
+  },
+  "dream_sets.csv": {
+   "group": "The data we can use",
+   "title": "The 20 dream studies in the DREAM database",
+   "about": "Each study pooled in DREAM: how many awakenings and people, how many dream reports, recording quality, size and licence.",
+   "cols": {
+    "n": "Awakenings",
+    "subj": "People",
+    "exp": "Awakenings with a dream report",
+    "noexp": "With no experience",
+    "norec": "Experience without recall",
+    "fs": "Sample rate, Hz",
+    "ch": "EEG channels"
+   }
+  },
+  "dream_access.csv": {
+   "group": "The data we can use",
+   "title": "Which dream studies we could actually download",
+   "about": "For each DREAM study: whether the download worked when we checked, its licence and size, and the dream / no-dream counts by sleep stage.",
+   "cols": {
+    "access_live": "Whether the download worked when we checked",
+    "N2_exp": "Dream reports from stage N2 sleep (N3 = deep sleep, REM = rapid eye movement)"
+   }
+  }
+ }
+}

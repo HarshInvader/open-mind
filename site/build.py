@@ -397,12 +397,49 @@ def thumb(n, eager=False):
             f'loading="{"eager" if eager else "lazy"}" decoding="async">')
 
 
+# ---- news: topic filter and newsletter signup (same block in Open Mind and Open Origins) ----
+SIGNUP_URL = "https://opencitizenscience.pages.dev/api/subscribe"
+
+
+def news_tools(items, topics, slug, project):
+    import html as _h
+    q = _h.escape
+    count = {t: sum(1 for n in items if n.get("topic") == t) for t in topics}
+    btns = f'<button type="button" data-t="" aria-pressed="true">All <span>{len(items)}</span></button>' + "".join(
+        f'<button type="button" data-t="{q(t)}" aria-pressed="false">{q(t)} <span>{count[t]}</span></button>' for t in topics if count[t])
+    filt = f'<div class="nfilter" role="group" aria-label="Show papers about">{btns}</div>'
+    form = (f'<form class="nsignup" action="{SIGNUP_URL}" method="post" data-slug="{q(slug)}">'
+            f'<div class="nsu-text"><p class="nsu-h">Get the important new papers by email</p>'
+            f'<p class="nsu-p">Every couple of weeks: only the papers that matter for {q(project)}, in plain words, and what we did with them. No spam; unsubscribe in one click.</p></div>'
+            f'<div class="nsu-row"><label class="vh" for="nsu-email">Email address</label>'
+            f'<input id="nsu-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">'
+            f'<input type="hidden" name="projects" value="{q(slug)}"><input type="hidden" name="source" value="{q(slug)}/news">'
+            f'<input class="nsu-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">'
+            f'<button type="submit">Subscribe</button></div><p class="nsu-msg" role="status" aria-live="polite"></p></form>')
+    return filt, form
+
+
+NEWS_TOOLS_JS = r"""<script>(function(){
+var f=document.querySelector('.nfilter');
+if(f){f.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;var t=b.getAttribute('data-t');
+f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+document.querySelectorAll('.ncard').forEach(function(c){c.hidden=!!t&&c.getAttribute('data-topic')!==t});
+document.querySelectorAll('[data-newsblock]').forEach(function(s){s.hidden=!s.querySelector('.ncard:not([hidden])')});});}
+var s=document.querySelector('.nsignup');
+if(s){s.addEventListener('submit',function(ev){ev.preventDefault();var m=s.querySelector('.nsu-msg'),b=s.querySelector('button');b.disabled=true;m.textContent='Saving…';
+var d={};new FormData(s).forEach(function(v,k){d[k]=v});
+fetch(s.action,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){return r.json()}).then(function(r){
+if(r.ok){m.textContent='Thanks. You’re on the list.';s.classList.add('done');}else{m.textContent=r.error||'Something went wrong. Please try again.';b.disabled=false;}
+}).catch(function(){m.textContent='Could not reach the server. Please try again.';b.disabled=false;});});}
+})();</script>"""
+
+
 def news_card(n):
     href = f'news-{E(n["id"])}.html'
     t = thumb(n)
     vis = f'<a class="nvisual" href="{href}" tabindex="-1" aria-hidden="true">{t}</a>' if t else ""
     chk = "" if n.get("verified") else ' <span class="chip chip-open">source not yet checked</span>'
-    return (f'<article class="ncard">{vis}<div class="nbody"><p class="meta"><time datetime="{E(n["date"])}">{news_date(n["date"])}</time> · {E(n.get("kind", "Paper"))} · {E(n["venue"])}{chk}</p>'
+    return (f'<article class="ncard" data-topic="{E(n.get("topic", ""))}">{vis}<div class="nbody"><p class="meta"><time datetime="{E(n["date"])}">{news_date(n["date"])}</time> · {E(n.get("kind", "Paper"))} · {E(n["venue"])}{chk}</p>'
             f'<h3><a href="{href}">{E(news_head(n["head"]))}</a></h3><p>{md(n["gist"])}</p>'
             f'<p class="why"><strong>What we do with it:</strong> {md(n["borrow"])} {chip(STATUS_WORD.get(n.get("status"), n.get("status", "")))}</p></div></article>')
 
@@ -419,11 +456,15 @@ def page_news():
     out = head("News", "New research on consciousness, summarised, with what we take from each",
                'New papers and data, newest first. Every item opens at three levels of detail. <a href="news.xml">Follow the feed (RSS)</a>.',
                '<p class="note">Pictures are editorial illustrations drawn for this site, not data or brain images.</p>' + jump([("latest", "Latest"), ("landmarks", "Landmarks")]))
-    out += block("01", "Latest", "latest", "Two 2026 re-analyses of COGITATE lean back towards the workspace theory", "".join(news_card(n) for n in latest))
+    _all = latest + land
+    _filt, _form = news_tools(_all, json.loads((SITE / "news.json").read_text()).get("topics", []), "mind", "Open Mind")
+    out += f'<div class="news-tools">{_form}{_filt}</div>'
+    out += block("01", "Latest", "latest", "Two 2026 re-analyses of COGITATE lean back towards the workspace theory", '<div class="ngrid">' + "".join(news_card(n) for n in latest) + '</div>')
     if land:
         out += block("02", "Landmarks", "landmarks", "The landmark papers made a magnetic pulse the best-validated test so far",
-                     "".join(news_card(n) for n in land), "Older papers that set the terms of the question.")
-    return out
+                     '<div class="ngrid">' + "".join(news_card(n) for n in land) + '</div>', "Older papers that set the terms of the question.")
+    out = out.replace('<section class="block"', '<section class="block newsblock" data-newsblock', 2)
+    return out + NEWS_TOOLS_JS
 
 
 def news_article(n, prev, nxt):
@@ -561,6 +602,79 @@ WANTED = [
 ]
 
 
+# ---- the tables we made: a row each on the Data page, and a page each with columns and a preview ----
+OPEN = ROOT / "datasets" / "open"
+OPEN_INFO = json.loads((SITE / "open_tables.json").read_text())
+
+
+def open_tables():
+    man = {r["file"]: r for r in csv.DictReader(open(OPEN / "MANIFEST.csv", newline="", encoding="utf-8"))}
+    out = []
+    for f, info in OPEN_INFO["tables"].items():
+        m = man.get(f, {})
+        path = OPEN / f
+        out.append(dict(file=f, stem=path.stem, page=f"data-{path.stem.replace('_', '-')}.html", kb=max(1, round(path.stat().st_size / 1024)),
+                        rows=m.get("rows", ""), ncols=m.get("columns", ""), made_by=m.get("made_by", ""), **info))
+    order = OPEN_INFO["groups"]
+    return sorted(out, key=lambda t: order.index(t["group"]))
+
+
+def open_size(t):
+    if t["file"].endswith(".json"):
+        return f'JSON, {t["kb"]} KB'
+    return f'{int(t["rows"]):,} rows × {t["ncols"]} columns' if t["rows"] else f'{t["kb"]} KB'
+
+
+def open_tables_block():
+    trs = []
+    for t in open_tables():
+        trs.append(f'<tr><th scope="row"><a href="{t["page"]}">{E(t["title"])}</a><span class="sub">{E(t["group"])}</span></th>'
+                   f'<td>{E(t["about"])}</td><td class="nowrap">{E(open_size(t))}</td>'
+                   f'<td class="nowrap"><a href="{t["page"]}">View</a> · <a href="data/open/{E(t["file"])}" download>{E(t["file"].rsplit(".", 1)[1].upper())}</a></td></tr>')
+    return ('<div class="tablewrap"><table class="score opentables"><thead><tr><th scope="col">Table</th><th scope="col">What is in it</th>'
+            f'<th scope="col">Size</th><th scope="col">Open</th></tr></thead><tbody>{"".join(trs)}</tbody></table></div>')
+
+
+def open_table_page(t):
+    path = OPEN / t["file"]
+    facts = (f'<ul class="tfacts"><li><b>Size</b>{E(open_size(t))}</li><li><b>Licence</b>CC BY 4.0: reuse it, with credit</li>'
+             f'<li><b>Made by</b><a href="{REPO}/tree/main/{E(t["made_by"].split("*")[0].rsplit("/", 1)[0])}">{E(t["made_by"])}</a></li></ul>')
+    actions = (f'<div class="actions"><a class="btn" href="data/open/{E(t["file"])}" download>Download {E(t["file"])}</a>'
+               f'<a class="btn ghost" href="{REPO}/blob/main/datasets/open/{E(t["file"])}">See it on GitHub</a></div>')
+    body = head("Data", t["title"], E(t["about"]), facts + actions)
+    if t["file"].endswith(".csv"):
+        rows = list(csv.reader(open(path, newline="", encoding="utf-8")))
+        cols, data = rows[0], rows[1:]
+        meaning = t.get("cols", {})
+        def ex(i):
+            for r in data:
+                if i < len(r) and r[i].strip():
+                    v = r[i].strip()
+                    return v if len(v) <= 70 else v[:68] + "…"
+            return ""
+        crow = "".join(f'<tr><th scope="row"><code>{E(c)}</code></th><td>{E(meaning.get(c, ""))}</td><td class="ex">{E(ex(i))}</td></tr>' for i, c in enumerate(cols))
+        ctab = ('<div class="tablewrap"><table class="score coltab"><thead><tr><th scope="col">Column</th><th scope="col">Meaning</th>'
+                f'<th scope="col">Example</th></tr></thead><tbody>{crow}</tbody></table></div>')
+        body += block("01", "Columns", "cols", f"{len(cols)} columns", ctab)
+        show = data[:50]
+        def cell(v):
+            v = v.strip()
+            return f'<td title="{E(v)}">{E(v[:120] + "…")}</td>' if len(v) > 120 else f"<td>{E(v)}</td>"
+        prow = "".join("<tr>" + "".join(cell(v) for v in r) + "</tr>" for r in show)
+        ptab = (f'<div class="tablewrap preview"><table class="ptab"><thead><tr>{"".join(f"<th scope=col>{E(c)}</th>" for c in cols)}</tr></thead>'
+                f'<tbody>{prow}</tbody></table></div>')
+        note = f"All {len(data):,} rows." if len(show) == len(data) else f"The first {len(show)} of {len(data):,} rows. Download the file for the rest."
+        body += block("02", "Data", "data", "The data", ptab, note)
+    else:
+        txt = path.read_text()
+        lines = txt.splitlines()
+        cut = "\n".join(lines[:160]) + ("\n…" if len(lines) > 160 else "")
+        note = "The whole file." if len(lines) <= 160 else f"The first 160 of {len(lines):,} lines. Download the file for the rest."
+        body += block("01", "Data", "data", "The data", f'<pre class="jsonview"><code>{E(cut)}</code></pre>', note)
+    body += '<p class="wrap tback"><a href="data.html#h-included">← All the tables we made</a></p>'
+    return body
+
+
 def page_data():
     rows = list(csv.DictReader(open(CATALOG, newline="", encoding="utf-8")))
     by = {t: [r for r in rows if r["tier"] == t] for t in TIER_TEXT}
@@ -587,6 +701,9 @@ def page_data():
         n += 1
         title = {"included": "tables we made", "fetch": "public datasets", "request": "need an account or an application",
                  "reference-only": "cited, with no data record we could open"}[t]
+        if t == "included":
+            table = open_tables_block()
+            intro = "Tables this project made, free to reuse under CC BY 4.0 with credit. Open one to see what each column means and the data itself"
         out += block(f"{n:02d}", label, f"h-{t}", f"{len(by[t])} {title}", table, intro + ".")
     unver = ", ".join(r["id"] for r in rows if r["verified"] != "yes")
     wanted = "".join(f"<li>{md(w)}</li>" for w in WANTED)
@@ -672,6 +789,10 @@ def main():
         if (ROOT / p).exists():
             shutil.copy(ROOT / p, DIST / "data" / p.split("/")[-1])
     shutil.copy(CATALOG, DIST / "data" / "catalog.csv")
+    (DIST / "data" / "open").mkdir(parents=True, exist_ok=True)
+    for t in open_tables():
+        shutil.copy(OPEN / t["file"], DIST / "data" / "open" / t["file"])
+        (DIST / t["page"]).write_text(layout("data.html", f'{t["title"]} · {NAME}', t["about"], open_table_page(t)))
     fns = {"index.html": page_index, "findings.html": page_findings, "theories.html": page_theories, "approach.html": page_approach,
            "tracker.html": page_tracker, "news.html": page_news, "contribute.html": page_contribute, "data.html": page_data, "resources.html": page_resources}
     for f, name in PAGES:

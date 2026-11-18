@@ -1,0 +1,21 @@
+set,name,n,subj,exp,noexp,norec,fs,ch,access,GB,lic,nfiles,url
+1,Zhang & Wamsley 2019,308,28,238,70,0,400.0,58.0,Open,1.049159479,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.22226692
+2,Oudiette_N1Data,246,63,214,18,14,256.0,3.0,Open,0.043261557,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.22210684
+3,LODE,190,28,118,58,14,250.0,7.0,Open,0.133619324,CC BY 4.0,4.0,https://doi.org/10.6084/m9.figshare.22147085.v1
+4,TWC_USA,33,19,27,5,1,1000.0,21.0,Open,1.565011841,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.22106123
+5,Dream Database from Donders,7,5,7,0,0,500.0,59.0,Open,2.173512831,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.21388722
+6,REM_Turku,134,18,123,3,8,500.0,24.0,Open,0.363436164,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.23274596.v2
+7,ChildrenDreaming,30,30,13,17,0,250.0,32.0,Open,6.343855665,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.22220701
+8,SCANDataset,85,18,63,15,7,200.0,4.0,Private,,,,nan
+9,Multiple awakenings,456,19,314,121,0,250.0,32.0,Open,6.395662397,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.22086266
+10,Sleep Talking,22,12,11,10,1,250.0,32.0,Open,4.05987428,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.16950856
+11,Dream_YoungAdults,65,65,40,25,0,128.0,21.0,Open,0.036782182,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.14899506
+12,Older adults,40,40,18,22,0,256.0,19.0,Open,4.780623837,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.14500563
+14,Brain Institute - Federal University of Rio Grande do Norte,41,41,25,16,0,1000.0,32.0,Open,58.797515592,CC BY 4.0,1.0,https://doi.org/10.26180/23904699.v1
+15,Noreika_Motor_tDCS,49,10,49,0,0,500.0,16.0,Open,0.053040922,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.24058848.v1
+16,DATA1,324,10,107,118,63,2000.0,25.0,Open,1.614575476,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.24058740.v1
+17,Aamodt_evening_sleep,158,27,116,15,27,1000.0,62.0,Open,4.87624522,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.22085597.v1
+18,Aamodt_morning_sleep,97,16,60,14,21,1000.0,62.0,Open,3.020049403,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.22085627.v1
+19,"Kumral et al., 2023",66,19,42,24,0,1000.0,128.0,Open,,,,https://doi.org/10.60493/31mg4-mfq53
+20,MEG Kyushu,31,1,24,0,4,1000.0,3.0,Open,1.061492527,CC BY 4.0,1.0,https://doi.org/10.6084/m9.figshare.27116590.v1
+13,Tononi Serial Awakenings,809,39,344,309,156,500.0,257.0,Open,8.409097333,CC BY 4.0,38.0,https://doi.org/10.26180/23306054.v3
