@@ -72,3 +72,10 @@ With n = 75 networks, a one-sided permutation test at α = 0.05/6 (Holm worst ca
 ## What this cannot show
 
 Passing ranks toy 5-unit binary networks; it does not show a proxy tracks φ in brains with about 10^10 units. Failing is the informative direction: a proxy that cannot rank 5-unit networks has no claim to measure φ.
+
+## Amendment 1 (2026-11-18, lead), sealed before any recurrent network was scored
+The run stopped at network 14 (the first outside the feedforward family): `phi_wms` crashed because every bipartition gave NaN (a unit that never changes state makes the Gaussian mutual information undefined). At that point only feedforward networks (true Φ = 0 by construction) had been scored, and no proxy-versus-truth number had been computed.
+- `phi_wms` now returns NaN when undefined instead of crashing. No defined value changes.
+- In `analyze.py`, an undefined value of any measure is scored as the median of that measure's defined values (neutral: it neither helps nor hurts rank agreement much).
+- A proxy undefined on more than 10% of networks fails its pass mark regardless of its other numbers, since it could not be trusted on brain data. Each proxy's count of undefined networks is reported.
+- Pass marks, grid, seeds and everything else are unchanged.

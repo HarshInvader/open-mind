@@ -42,7 +42,13 @@ out = {"n_networks": n, "n_structural_zero": int(szero.sum()), "n_recurrent_top_
        "conditions": {}}
 ledger = []
 for cond in ("C1", "C0"):
-    vals = {p: np.array([r[cond][p] for r in recs]) for p in PROXIES + BASELINES}
+    vals = {p: np.array([r[cond][p] for r in recs], dtype=float) for p in PROXIES + BASELINES}
+    # Amendment 1: an undefined value (NaN) is scored as the median of that measure's defined values,
+    # and a proxy undefined on more than 10% of networks fails regardless of its other numbers.
+    undef = {p: int(np.isnan(v).sum()) for p, v in vals.items()}
+    for p, v in vals.items():
+        if undef[p]:
+            v[np.isnan(v)] = np.nanmedian(v) if undef[p] < len(v) else 0.0
     base_rho = {b: rho(vals[b], truth) for b in BASELINES}
     best_base = max(BASELINES, key=lambda b: base_rho[b])
     res = {}
@@ -63,10 +69,11 @@ for cond in ("C1", "C0"):
                  "ci": [float(np.percentile(diffs, 2.5)), float(np.percentile(diffs, 97.5))]}
         passed = None
         if p in PROXIES:
-            passed = bool(r0 >= 0.6 and np.percentile(bs, 2.5) > 0.3 and a >= 0.8 and d["ci"][0] > 0)
+            passed = bool(r0 >= 0.6 and np.percentile(bs, 2.5) > 0.3 and a >= 0.8 and d["ci"][0] > 0
+                          and undef[p] <= 0.10 * n)
         res[p] = {"rho": float(r0), "rho_ci": [float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5))],
                   "p_perm": float(pval), "auc_zero_vs_pos": float(a), "rho_recurrent_only": float(rr),
-                  "vs_best_baseline": d, "pass": passed}
+                  "vs_best_baseline": d, "n_undefined": undef[p], "pass": passed}
     # Holm over the 6 proxies (primary condition only is the confirmatory family)
     ps = sorted((res[p]["p_perm"], p) for p in PROXIES)
     for k, (pv, p) in enumerate(ps):

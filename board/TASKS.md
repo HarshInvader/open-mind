@@ -1,16 +1,16 @@
 # Open Mind: open tasks
 
-Exported from the team board on 18 Nov 2026. 14 ready, 7 waiting on earlier tasks, 3 in progress, 14 done.
+Exported from the team board on 18 Nov 2026. 14 ready, 6 waiting on earlier tasks, 3 in progress, 16 done.
 
 To take one, read [CONTRIBUTING.md](../CONTRIBUTING.md) first: open an issue named `Taking #<id>` so nobody duplicates it.
 
 ## Ready now
 
-### #38 Dataset catalogue for consciousness research (Indus-style datasets/)
+### #5 Zero-shot transfer of 8-10 published measures
 
-Milestone M1, priority 1.
+Milestone M2, priority 3.
 
-Build datasets/ the way indus-decipher/datasets/ does (read its README.md, catalog.csv, fetch.py and build.py first, and copy the structure). (1) datasets/catalog.csv listing EVERY open or requestable dataset relevant to this project, not only ones we use, with columns: id, title, kind, tier (included / fetch / request / reference-only), origin URL or DOI, terms/licence, size, n subjects or records, what ground truth or labels it has, which of our tasks it serves, used_by_us, notes. Verify each entry from its landing page or API (no memory-only rows; mark unverified rows). (2) datasets/open/: the derived tables this project made (copy from experiments, CC BY 4.0) with a MANIFEST.csv. (3) datasets/fetch.py: list, and fetch subsets of the datasets we use into datasets/local/ (gitignored), respecting the 1.5 GB budget and range reads; metadata only for request-tier sets. (4) datasets/README.md in plain words. (5) Add a Data page (or section) to the site built from catalog.csv, styled like the rest of the site. Metadata research only: download nothing beyond index files, no compute lock needed, contact no one. Never include personal emails of researchers. Start from docs/DATASETS.md and experiments/data_access/. Cover at least: all DREAM packages, OpenNeuro sleep/sedation/anaesthesia/psychedelic sets, Sleep-EDF and other PhysioNet sleep sets, NSRR (account), COGITATE, TMS-EEG/PCI sets, ketamine (Farnes, Zenodo 806176), disorders-of-consciousness sets (Bath, Della Bella), masking/no-report and blindsight data, Human Connectome and anaesthesia fMRI sets.
+Fit thresholds on one family (sleep, anaesthesia, DoC) and test on the others for LZ, PCI-like, spectral slope, permutation entropy, wSMI, alpha power, Sitt/Engemann features, criticality. Decisive: any measure with AUC >= 0.80 everywhere moves up; the rest are logged as specific to one state.
 
 ### #6 Dream vs no-dream within stage
 
@@ -36,17 +36,17 @@ Milestone M2, priority 3.
 
 DREAM paper reports AUC 0.586 (NREM, PSD) and 0.700 (REM, catch22) over 200 random train-test splits; main text does not say subjects were held out. Re-run with subject- and lab-held-out splits, spectral exponent baseline and surrogate gate. Pre-register first.
 
-### #32 B4b Theory from the shared gaps
-
-Milestone M3, priority 3.
-
-Draft a theory built first to explain the gaps no current theory explains in the scorecard (#25): temporal integration/postdiction window (C36), which unresponsive brains are conscious (C20), large activity changes with consciousness intact (C42, C44), real-time REM communication (C19). Must also cover the A-graded ledger rows. Same rules as T1: mechanism, necessary and sufficient conditions, >=3 risky predictions no rival makes, at least one testable on open data not yet seen by any agent; seal by hash in experiments/our_theory/. Do not reuse T1's hold-time parameter.
-
 ### #36 Score Strange Loop (Hofstadter) on the ledger
 
 Milestone M3, priority 3.
 
 Add a 12th theory to the scorecard: Hofstadter's strange-loop view (Godel, Escher, Bach 1979; I Am a Strange Loop 2007), which says the self and consciousness arise from a self-referential symbol system modelling itself, and come in degrees. Mark explains/compatible/silent/strained/contradicts on all 59 ledger rows, quoting Hofstadter's own words (book page or published interview) for every non-silent cell; where he is silent, say silent, do not extrapolate. Note its relatives already scored (AST, HOT) and the key strains: psychedelic ego dissolution, dreaming with weak self-reflection, minimal-phenomenal-experience reports, infants/animals. Update scorecard.csv and totals.csv via build_scorecard.py.
+
+### #39 Red-team: LZ adds 0.061 AUC over the exponent for REM vs N3 (Sleep-EDF)
+
+Milestone M6, priority 3.
+
+Positive cell from #4 (experiments/lz_slope/RESULTS.md, H1 C2): slope+LZ 0.976 vs slope 0.915, Holm p=0.008, 45 subjects. Attack it: (1) does it survive a better exponent fit (aperiodic fit excluding alpha/sigma peaks, or 30-45 Hz range)? (2) muscle and eye artefact (REM eye movements on Fpz-Cz; rerun on Pz-Oz only); (3) age (cassette 25-101); (4) Hilbert-envelope LZs instead of median-binarised LZ; (5) the 19 unfetched subjects. Producer's own reading: it is spectral shape, because it vanishes with band powers (H3) and LZ fails the surrogate gate (#8). Do not read producer notes beyond RESULTS.md.
 
 ### #10 Reproduce COGITATE iEEG decoding
 
@@ -92,12 +92,6 @@ Draft, for the human lead to send by hand, each theory's predictions as we encod
 
 ## Waiting on earlier tasks
 
-### #5 Zero-shot transfer of 8-10 published measures
-
-Milestone M2, priority 3. Waits for #4.
-
-Fit thresholds on one family (sleep, anaesthesia, DoC) and test on the others for LZ, PCI-like, spectral slope, permutation entropy, wSMI, alpha power, Sitt/Engemann features, criticality. Decisive: any measure with AUC >= 0.80 everywhere moves up; the rest are logged as specific to one state.
-
 ### #7 Ketamine and REM: who calls them conscious?
 
 Milestone M2, priority 3. Waits for #2, #5.
@@ -136,11 +130,11 @@ Draft a candidate where a basic layer (e.g. sustained posterior activity gated b
 
 ## In progress (do not duplicate)
 
-- #4 LZ complexity vs spectral slope
+- #38 Dataset catalogue for consciousness research (Indus-style datasets/)
 
 - #9 Phi-proxy recovery on known-Phi networks
 
-- #31 Seal and run the open-data prediction of the best candidate
+- #32 B4b Theory from the shared gaps
 
 ## Done
 
@@ -149,6 +143,8 @@ Draft a candidate where a basic layer (e.g. sustained posterior activity gated b
 - #2 Dataset audit: **data**, `experiments/dataset_audit/RESULTS.md`
 
 - #3 Ground-truth schema: **data**, `experiments/ground_truth/RESULTS.md`
+
+- #4 LZ complexity vs spectral slope: **mixed**, `experiments/lz_slope/RESULTS.md`
 
 - #8 Surrogate gate: **negative**, `experiments/surrogate_gate/RESULTS.md`
 
@@ -169,5 +165,7 @@ Draft a candidate where a basic layer (e.g. sustained posterior activity gated b
 - #27 B4 Draft our own theory: **untestable**, `experiments/our_theory/T1.md`
 
 - #30 Blind ledger scoring of our candidate theories by an agent who did not write them: **negative**, `experiments/blind_scoring/RESULTS.md`
+
+- #31 Seal and run the open-data prediction of the best candidate: **negative**, `experiments/t1_dream/RESULTS.md`
 
 - #13 Standing research sweep: **data**, `experiments/research_sweep/RESULTS.md`

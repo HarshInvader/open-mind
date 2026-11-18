@@ -1,0 +1,346 @@
+{
+ "prereg": "experiments/t1_dream/PREREG.md",
+ "delta": 0.6931471805599453,
+ "primary": {
+  "TA_recency": {
+   "est": 0.08091493071954335,
+   "p": 0.31634182908545727,
+   "ci90": [
+    -0.177416615727921,
+    0.3486122702375114
+   ],
+   "ci95": [
+    -0.22709634061345166,
+    0.40740316791780806
+   ]
+  },
+  "TC_post_minus_front": {
+   "est": -0.13418800192838015,
+   "p": 0.6851574212893553,
+   "ci90": [
+    -0.49848704226929014,
+    0.28241208425811876
+   ],
+   "ci95": [
+    -0.6012167697896157,
+    0.3540198454057081
+   ]
+  },
+  "TB_timing": {
+   "est": 0.014803604751081681,
+   "beta_real": 0.08091493071954335,
+   "beta_surr_median": 0.06611132596846167,
+   "p": 0.45054945054945056
+  },
+  "TD_without_recall": {
+   "est": 0.03702505630926115,
+   "p": 0.4027986006996502,
+   "ci90": [
+    -0.3912051984475585,
+    0.343012769310964
+   ],
+   "ci95": [
+    -0.4709571103174684,
+    0.42095337347019124
+   ]
+  },
+  "holm": {
+   "TA_recency": {
+    "p": 0.31634182908545727,
+    "threshold": 0.0125,
+    "reject": false
+   },
+   "TD_without_recall": {
+    "p": 0.4027986006996502,
+    "threshold": 0.016666666666666666,
+    "reject": false
+   },
+   "TB_timing": {
+    "p": 0.45054945054945056,
+    "threshold": 0.025,
+    "reject": false
+   },
+   "TC_post_minus_front": {
+    "p": 0.6851574212893553,
+    "threshold": 0.05,
+    "reject": false
+   }
+  },
+  "verdict": "REFUTED (no recency effect of the stated size)",
+  "n": {
+   "E": 97,
+   "NE": 93,
+   "WR": 47,
+   "subjects": 35
+  }
+ },
+ "excluded": [
+  [
+   "E",
+   "error IndexError: index 256 is out of bounds for axis 0 with size 256",
+   3
+  ],
+  [
+   "E",
+   "error error: Error -3 while decompressing data: invalid block type",
+   1
+  ],
+  [
+   "E",
+   "error error: Error -3 while decompressing data: invalid code lengths set",
+   1
+  ],
+  [
+   "E",
+   "error error: Error -3 while decompressing data: invalid literal/length/distance code",
+   1
+  ],
+  [
+   "E",
+   "error error: Error -3 while decompressing data: invalid stored block lengths",
+   7
+  ],
+  [
+   "E",
+   "not fetched",
+   13
+  ],
+  [
+   "E",
+   "unequal sampling",
+   1
+  ],
+  [
+   "NE",
+   "error IndexError: index 256 is out of bounds for axis 0 with size 256",
+   2
+  ],
+  [
+   "NE",
+   "error error: Error -3 while decompressing data: invalid code lengths set",
+   1
+  ],
+  [
+   "NE",
+   "error error: Error -3 while decompressing data: invalid literal/length/distance code",
+   1
+  ],
+  [
+   "NE",
+   "error error: Error -3 while decompressing data: invalid stored block lengths",
+   4
+  ],
+  [
+   "NE",
+   "not fetched",
+   5
+  ],
+  [
+   "NE",
+   "unequal sampling",
+   1
+  ],
+  [
+   "WR",
+   "error error: Error -3 while decompressing data: invalid stored block lengths",
+   3
+  ],
+  [
+   "WR",
+   "not fetched",
+   6
+  ]
+ ],
+ "secondary_excluding_first_awakening": {
+  "TA_recency": {
+   "est": 0.03777720078459916,
+   "p": 0.44555444555444557,
+   "ci90": [
+    -0.24096738727565073,
+    0.37707429102668555
+   ],
+   "ci95": [
+    -0.3010055907148736,
+    0.45615437161498135
+   ]
+  },
+  "TC_post_minus_front": {
+   "est": -0.17890232820505675,
+   "p": 0.7222777222777222,
+   "ci90": [
+    -0.6269106033125097,
+    0.22710458054704932
+   ],
+   "ci95": [
+    -0.7162696003515666,
+    0.3238950144772386
+   ]
+  },
+  "TB_timing": {
+   "est": -0.005124737052495866,
+   "beta_real": 0.03777720078459916,
+   "beta_surr_median": 0.042901937837095026,
+   "p": 0.5189620758483033
+  },
+  "TD_without_recall": {
+   "est": -0.15489067789669264,
+   "p": 0.7962037962037962,
+   "ci90": [
+    -0.671220660574141,
+    0.19182603650797517
+   ],
+   "ci95": [
+    -0.7754815755675831,
+    0.268601566889474
+   ]
+  },
+  "holm": {
+   "TA_recency": {
+    "p": 0.44555444555444557,
+    "threshold": 0.0125,
+    "reject": false
+   },
+   "TB_timing": {
+    "p": 0.5189620758483033,
+    "threshold": 0.016666666666666666,
+    "reject": false
+   },
+   "TC_post_minus_front": {
+    "p": 0.7222777222777222,
+    "threshold": 0.025,
+    "reject": false
+   },
+   "TD_without_recall": {
+    "p": 0.7962037962037962,
+    "threshold": 0.05,
+    "reject": false
+   }
+  },
+  "verdict": "REFUTED (no recency effect of the stated size)",
+  "n": {
+   "E": 88,
+   "NE": 76,
+   "WR": 39,
+   "subjects": 35
+  }
+ },
+ "descriptive_mean_sd": {
+  "E": {
+   "logL_post": [
+    1.534,
+    1.158
+   ],
+   "logL_front": [
+    1.727,
+    0.798
+   ],
+   "n_off_post": [
+    0.856,
+    1.0
+   ],
+   "count10": [
+    2.175,
+    2.041
+   ],
+   "delta5": [
+    0.703,
+    0.406
+   ],
+   "delta10": [
+    0.771,
+    0.399
+   ],
+   "sigma": [
+    -0.387,
+    0.346
+   ],
+   "beta5": [
+    -1.25,
+    0.342
+   ],
+   "frac_no_off_post": 0.474
+  },
+  "NE": {
+   "logL_post": [
+    1.448,
+    1.184
+   ],
+   "logL_front": [
+    1.485,
+    0.956
+   ],
+   "n_off_post": [
+    0.849,
+    0.846
+   ],
+   "count10": [
+    2.323,
+    1.676
+   ],
+   "delta5": [
+    0.735,
+    0.412
+   ],
+   "delta10": [
+    0.795,
+    0.361
+   ],
+   "sigma": [
+    -0.397,
+    0.347
+   ],
+   "beta5": [
+    -1.253,
+    0.388
+   ],
+   "frac_no_off_post": 0.387
+  },
+  "WR": {
+   "logL_post": [
+    1.39,
+    1.286
+   ],
+   "logL_front": [
+    1.391,
+    0.936
+   ],
+   "n_off_post": [
+    0.915,
+    0.952
+   ],
+   "count10": [
+    2.085,
+    1.457
+   ],
+   "delta5": [
+    0.724,
+    0.342
+   ],
+   "delta10": [
+    0.784,
+    0.34
+   ],
+   "sigma": [
+    -0.387,
+    0.381
+   ],
+   "beta5": [
+    -1.324,
+    0.277
+   ],
+   "frac_no_off_post": 0.383
+  }
+ },
+ "auc_E_vs_NE_within_subject_centred": {
+  "delta5": 0.468,
+  "delta10": 0.46,
+  "count10": 0.447,
+  "sigma": 0.475,
+  "beta5": 0.501,
+  "exp10": 0.546,
+  "clock_h": 0.582,
+  "awak_idx": 0.583,
+  "logL_post": 0.526,
+  "logL_front": 0.553
+ }
+}

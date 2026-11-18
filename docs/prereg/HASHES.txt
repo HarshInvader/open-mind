@@ -37,3 +37,8 @@ d33392fa458d3324535f79ec861c34dc2ddc8579c66428aa97cf86271f7b83aa  docs/prereg/20
 ef6cb094fc40eb84775cdd39b9f41fb55622563a62deffc26f5c0b55c3198b17  experiments/t1_dream/analysis.py  2026-11-18T13:49:59Z
 05489cc398959e6f000666ebba62cf9f70fa98adc7d6f6c4cecc9f828632fb9c  experiments/t1_dream/run_analysis.sh  2026-11-18T13:49:59Z
 652882424f2dfcdadbd312b7b526ab908436a72d2839fe0a9a71a9645297e40c  experiments/t1_dream/analysis.py  2026-11-18T13:50:06Z
+c41d903520b23e1d61a112f7fcd248e16b5e07bbbb42b07aaac46738a3db188f  docs/prereg/phi_proxy_recovery.md  2026-11-18T14:16:20Z
+73d924553fb274c22e6137927dc04d7dc602e6aa3a94b27b5124d2452b16a3f7  experiments/phi_proxy/phi_lib.py  2026-11-18T14:16:20Z  amendment 1
+4a8a801d5376c0aeb5a6063e97947fdde90ff20f44325188941ee834c2e39d2b  experiments/phi_proxy/analyze.py  2026-11-18T14:16:20Z  amendment 1
+0d39369180b12321ae9833f98dcfa20ad8a9ab2e49d57e31379b9f49cfefb34c  docs/prereg/2026-11-18_lz_vs_slope_sleepedf.md  2026-11-18T14:17:28Z
+37c2cbcd1b6d92f1eba88855da471daf725b7bb07e964485a89709f8496d923d  experiments/lz_slope/finish.py  2026-11-18T14:17:28Z

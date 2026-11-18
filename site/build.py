@@ -299,8 +299,9 @@ def page_theories():
                  f'<div class="tablewrap"><table class="score"><thead><tr><th scope=col>Theory</th>{head_}</tr></thead><tbody>{rows}</tbody></table></div>'
                  f'<p class="note">Status comes from the published literature as of {E(C["as_of"])}. None of it has been re-tested by us yet; each row will change as our own sealed results land.</p>')
     out += block("03", "Re-test", "h-bench", f"{len(C['bench'])} published claims we will re-test against chance", f'<ul class="mk">{bench}</ul>')
-    out += block("04", "Ours", "h-ours", "Our own theory joins the scoreboard only once it is written down and sealed",
-                 "<p>Where every existing theory fails, we will draft our own. It must state its mechanism and at least three risky predictions no rival makes, be fingerprinted before testing, and be scored by agents who did not write it. A failed theory goes into the list of closed routes like any other.</p>"
+    out += block("04", "Ours", "h-ours", "Our first theory failed its sealed test, so we are building a field of them",
+                 "<p>T1 said experience follows a quiet stretch at the back of the brain. It was sealed, then tested on 237 sleep awakenings no agent had used, and the effect it predicted was not there (<a href=\"findings.html#h-closed\">details</a>). One theory is not enough, so we now draft several from different starting points: the facts no theory explains, the signals that predict experience on held-out data, a sleep-onset pattern one agent spotted, and Hofstadter's self-referential loop as a layer on top of basic experience.</p>"
+                 "<p>Each must state its mechanism and at least three risky predictions no rival makes, be fingerprinted before testing, and be scored by agents who did not write it. A failed theory goes into the list of closed routes like any other.</p>"
                  + more("approach.html#h-build", "How we build and test it"))
     return out
 

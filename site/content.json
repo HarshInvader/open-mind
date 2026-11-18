@@ -79,7 +79,7 @@
  ],
  "theories_nav": "Theories",
  "theories_title": "Theory scoreboard",
- "theories_lede": "Each theory, the prediction it can least afford to get wrong, and what the evidence so far says. Our own theory joins this table once it is written down and sealed.",
+ "theories_lede": "Each theory, the prediction it can least afford to get wrong, and what the evidence so far says. Our first theory, T1, was sealed and failed its test; the next ones join this table as they are sealed.",
  "theory_cols": [
   "Riskiest prediction",
   "Evidence so far",

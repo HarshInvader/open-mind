@@ -172,7 +172,9 @@ def phi_wms(X, tau=1):
             norm = ph / min(len(A), len(B))
             if norm < best_norm:
                 best_norm, best = norm, ph
-    return float(best)
+    # Amendment 1 (2026-11-18): every partition undefined (e.g. a unit that never changes state
+    # makes the Gaussian MI -inf - -inf = NaN), so the proxy is undefined here.
+    return float("nan") if best is None else float(best)
 
 
 def _var_resid_var(Y, Xlag):
