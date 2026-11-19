@@ -53,3 +53,4 @@ fc89d60b7d8ee2e0dfe2f4229410bbfe36a32a9e783c5d9740f51051becafcf9  experiments/no
 9c707badd93e75b8db82c876b784967d4f86b7c9909cb34443e7cbf85078180e  experiments/nonequilibrium/extract.py  2026-11-18T23:29:05Z
 3b1d723d7225b096aa0255d66f44e8a8d093f874d75691f30d19af39b8261c47  docs/prereg/2026-11-18_nonequilibrium_vs_spectrum.md  2026-11-19T01:05:26Z
 7659381d6a80ebf78c56a9fbf420750c57f21c9b76073a883532cc2b5e9b2f3d  experiments/nonequilibrium/ne_analyse.py  2026-11-19T01:05:26Z
+de1f44ce72f145a4f96562ca6aa53f732aa6d346ce03d2adf0f214cfb1c6049b  docs/prereg/2026-11-19_experience_benchmark.md  2026-11-19T14:31:26Z
