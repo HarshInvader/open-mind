@@ -401,3 +401,26 @@ table.ptab { border-collapse: collapse; font-size: 13.5px; font-variant-numeric:
 .ngrid .nbody p { font-size: 15px; }
 .ngrid .nbody .meta { font-size: 13px; }
 .ngrid .why { font-size: 14px !important; color: var(--muted); }
+
+/* ---------- field now (news) and library */
+main > section.fieldnow { margin: 8px 0 36px; padding: 22px 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.fieldnow h2 { margin: 0 0 4px; font-size: 22px; }
+.fronts { margin: 16px 0 0; padding-left: 22px; display: grid; gap: 16px; }
+.fronts h3 { margin: 0 0 4px; font-size: 17px; }
+.fronts p { margin: 4px 0; font-size: 15.5px; }
+.fn-refs { color: var(--muted); font-size: 14px !important; }
+.lfilter { align-items: center; margin-bottom: 18px; }
+.lcore { font-size: 14px; display: inline-flex; gap: 6px; align-items: center; margin-left: 4px; }
+.lfilter #lcount { flex-basis: 100%; margin: 4px 0 0; }
+.lgrid { display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .lgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.lcard { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 14px; align-items: start; scroll-margin-top: 90px; }
+.lthumb { width: 96px; height: auto; aspect-ratio: 3 / 2; border-radius: 8px; border: 1px solid var(--line); background: var(--chart); }
+.lbody h3 { margin: 2px 0 6px; font-size: 16.5px; line-height: 1.3; } .lbody h3 a { color: var(--ink); text-decoration: none; } .lbody h3 a:hover { color: var(--accent); }
+.lbody p { margin: 4px 0; font-size: 15px; } .lbody .meta { font-size: 13px; }
+.lmore summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--accent); margin-top: 6px; }
+.lmore dl { margin: 8px 0 0; font-size: 14.5px; } .lmore dt { font-weight: 600; margin-top: 8px; } .lmore dd { margin: 2px 0 0; }
+.lcard:target .lbody h3 a { color: var(--accent); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .lthumb { filter: brightness(0.86); } }
+:root[data-theme="dark"] .lthumb { filter: brightness(0.86); }
+main > section.fieldnow::before { display: none; }

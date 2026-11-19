@@ -12,7 +12,7 @@ Two dissociation cases in criterion R3 have no open data:
 
 **Recommended rescope** (for the lead): count "≥4 held-out datasets from ≥2 families (sleep, anaesthesia)" as the reachable state criterion, keep DoC and ketamine as named gaps, and add a lead-only task to request the restricted sets (listed under "Blocked" below). Agents must not contact authors.
 
-Laptop budget: 1.5 GB of downloads for the whole project. Every dataset below is far larger, so each test must use a subset. Suggested subsets are given per dataset.
+Laptop budget: 1.5 GB of downloads for the whole project (raised by the owner on 2026-11-19 to about 25 GB streamed, nothing kept, for task #42; DOSE-I data-use terms accepted by the owner the same day). Every dataset below is far larger, so each test must use a subset. Suggested subsets are given per dataset.
 
 ## Qualifying datasets (open, no login, laptop-feasible as a subset)
 
@@ -92,3 +92,26 @@ Added by mind-access (tasks #19, #20). The text above is unchanged. Details: `ex
 - **No independent EEG set with reports after unresponsive ketamine anaesthesia was found.** Michigan (Li & Mashour 2019, 15 subjects) did not describe post-anaesthesia reports and has no data statement; email queued. Liège ketamine-with-dreams data are fMRI, on request.
 - **COGITATE:** the terms are standard (summary in docs/ACCOUNTS.md). The account needs the owner to type a password (docs/HUMAN_LEADS.md). Experiment 2 (v2.0) is still "coming soon"; an email asking the date is queued.
 - **DoC:** Bath BATH-01632 requires proof of ethics approval, so we did not apply. The Paris/Shanghai/Toulouse DoC EEG (237 patients, Della Bella 2025) is on request; email queued.
+
+## Intracranial (iEEG/sEEG) with trial-level conscious-perception reports (survey 2026-11-19)
+
+The question was which human intracranial datasets with seen/unseen reports are openly downloadable. Checked: OpenNeuro (all 74 iEEG sets), DANDI, OSF, Zenodo, NITRC and COGITATE. Usable today:
+
+| Dataset | Access (checked) | Paradigm | Patients | Notes |
+|---|---|---|---|---|
+| MetaMosquito, OpenNeuro ds008959 v1.0.1 (Porte ... Faivre) | Public, CC0 (GraphQL checked by mind-ne) | Near-threshold audio/visual/AV detection: present/absent + confidence, catch trials; preregistered osf.io/cfdvq | 8 sEEG, 151-232 contacts each, about 1,700 trials | Only high-gamma epochs (.fif) are shared, no broadband. Large files gave S3 AccessDenied to the survey agent; retry. |
+| Stockart et al. 2025, Nat Commun doi:10.1038/s41467-025-63255-y, OSF 8QE3A | OSF node public (checked); no licence name shown, copyright CNRS 2024. Raw data on request | Face at detection threshold, with report, delayed-report and **no-report** conditions + confidence | 29-30 sEEG, 3,301 sites | High-gamma per condition (.mat, about 131 MB per patient). Check single-trial structure first. Reuse terms need a look. |
+| Kronemer et al. 2022, Nat Commun doi:10.1038/s41467-022-35117-4, NITRC group 1550 | Open, CC BY 4.0 (per survey agent) | Identical faces at 50% threshold, seen vs not seen | 7, mostly thalamic (RNS) | Subcortical only; 6 small patients total about 3 GB. |
+
+Not usable for seen vs unseen: COGITATE iEEG (suprathreshold stimuli only; free account), Zhang lab 2024 (on request), UNIMI Dataverse (embargoed), DANDI human sets (memory or movies). No open iEEG set with sleep-awakening reports was found.
+
+**Stockart OSF 8QE3A, structure checked 2026-11-19 (mind-ne).** One patient file read for structure only (G8, `derivatives/analysis/G8/data_by_condition_resampled.mat`, 187 MB, MATLAB v5, FieldTrip-style). No seen-vs-unseen comparison was computed.
+- **Single trials are present**: `trial` is channels × trials × time. High-gamma at 64 Hz, -0.25 to 1.5 s around the stimulus (`*_RT` conditions are response-locked). Bipolar contacts (152 in G8).
+- Conditions per patient:
+  - `Sta*`: staircase.
+  - `Psy*`: threshold detection with report. H = hit, M = miss; LC/HC = low/high confidence; `_A`/`_H` are a split still to be identified from the paper. Includes FA and CR.
+  - `Str`, `StrL`, `StrH`: a no-report stream at low and high intensity. **There are no seen/unseen labels in no-report**, so "seen" there must be inferred, for example from intensity or from a classifier trained on report trials.
+- G8 counts: PsyH 75, PsyM 41, PsyCR 21, PsyFA 6, Str 128 (64 L / 64 H).
+- Electrode coordinates are in `data/<pt>/ses-1/ieeg/*_electrodes.tsv`; behaviour CSVs are in `beh/`; per-trial events are in `derivatives/ieegproc/<pt>/ses-1/beh/<pt>_events.tsv`.
+- The team's own preregistration is at the OSF root: `Prereg perithr_ieeg_03082022.pdf`.
+- **Exposure note:** before any T4 prediction is sealed, the sealer must state that only this structure check was done.

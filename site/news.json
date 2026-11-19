@@ -1,6 +1,262 @@
 {
- "_about": "News page. Add new items at the top of items. verified=true only after someone opened the DOI/URL and checked who, venue, date and every number in gist/plain/tech. Fields: gist (one line), plain (a short story for anyone), tech (for specialists), borrow (what this project takes from it or tests), status (planned, running, done). topic: one of the names in topics (add a new topic only when five or more items need it).",
+ "_about": "News page. Add new items at the top of items. verified=true only after someone opened the DOI/URL and checked who, venue, date and every number in gist/plain/tech. Fields: gist (one line), plain (a short story for anyone), tech (for specialists), borrow (what this project takes from it or tests), status (planned, running, done). topic: one of the names in topics (add a new topic only when five or more items need it). field_now: a short summary of where the field is, with library ids (docs/library/library.json).",
+ "field_now": {
+  "updated": "2026-11-19",
+  "fronts": [
+   {
+    "title": "Can EEG tell a dream from no dream?",
+    "what": "Single-lab sleep studies now report that EEG before waking predicts a dream report well (ROC-AUC 0.80 with N2 and N3 pooled). Tests that hold the stage fixed and predict in labs never used for training remain weak (0.59 in NREM in the DREAM database), and some near-perfect results came from splitting one person's awakenings across training and test. Open N2 data with 1,024 awakenings and per-channel power is now on Zenodo.",
+    "library_ids": [
+     "selte-2026-nrem-experience-hdeeg",
+     "rochas-2026-n2-dreaming-hdeeg",
+     "michalak-2026-immersive-n2-dreaming",
+     "moctezuma-2025-hd-to-ld-dream-classification",
+     "moctezuma-2025-dreams-dreamless-channels",
+     "bertoni-2026-pps-index-sleep-doc",
+     "dream-eeg-mentation-database"
+    ]
+   },
+   {
+    "title": "Is complexity more than the power spectrum?",
+    "what": "A brain model fitted only to EEG spectra reproduces the complexity scores that separate patients, and the leading review of the entropic brain says fast activity carries much of the effect. Within-person drug studies still link complexity to how intense an experience is. The open question is what complexity adds once the spectrum is accounted for.",
+    "library_ids": [
+     "congyu-2026-neural-field-doc",
+     "carhart-harris-2026-entropic-brain-today",
+     "nikolic-2026-psilocybin-eeg-timecourse",
+     "maschke-etiology-alpha-complexity-exponent",
+     "gaglioti-2026-structural-complexity"
+    ]
+   },
+   {
+    "title": "Time-irreversibility as a marker of consciousness",
+    "what": "Model-based measures of how far the brain is from equilibrium track anaesthesia depth about as well as the stimulation-based index. Intracranial work suggests the simpler scalp versions are driven by the shape of waves, which follows synaptic kinetics and arousal. Our own scalp tests found arousal, not experience.",
+    "library_ids": [
+     "berjaga-buisan-2026-fdt-nonequilibrium",
+     "nunez-2026-waveform-morphology",
+     "milinkovic-2026-dynamical-independence-anaesthesia"
+    ]
+   },
+   {
+    "title": "New open data that separate experience from arousal",
+    "what": "Psilocybin EEG with rest and naturalistic tasks (OpenNeuro ds006110) gives a state where experience expands without arousal falling. Mouse anaesthesia recordings and fMRI sets from psychedelic, sleep and propofol studies are also open. No new open raw EEG from patients with disorders of consciousness appeared this period.",
+    "library_ids": [
+     "stoliker-2026-psilocybin-context",
+     "dai-2026-integration-segregation-mirror",
+     "berjaga-buisan-2026-fdt-nonequilibrium",
+     "michalak-2026-immersive-n2-dreaming"
+    ]
+   },
+   {
+    "title": "How theories are tested",
+    "what": "A database of 518 experiments shows that the method a study uses predicts which theory it supports. A meta-analysis finds the P3b is not needed for awareness and the early visual awareness negativity is not enough on its own. Others argue that big theories have driven less progress than careful experiments, and that a preregistered pass should count only as far as a failure would have.",
+    "library_ids": [
+     "overgaard-2026-theory-method-dependencies",
+     "hutchinson-2026-van-p3b-meta",
+     "owen-goodale-2026-grand-theories",
+     "chis-ciure-2026-measure-centrality-index",
+     "bandara-dcm-reanalysis-cogitate-meg"
+    ]
+   },
+   {
+    "title": "Workspace signatures in AI",
+    "what": "Interpretability work finds a part of language models' activity that behaves like a global workspace: what it holds can be reported, held and broadcast. This is a functional parallel. Frameworks for judging AI consciousness give answers that depend mostly on the priors they start from.",
+    "library_ids": [
+     "gurnee-2026-jacobian-lens-workspace",
+     "wang-reid-2026-looped-workspace",
+     "chandaria-2026-ai-consciousness-hierarchy",
+     "butlin-indicators-consciousness-ai"
+    ]
+   }
+  ]
+ },
  "items": [
+  {
+   "id": "nunez-waveform-morphology",
+   "section": "latest",
+   "date": "2026-11-16",
+   "kind": "Preprint",
+   "head": "Waveform morphology links local circuit kinetics to cortical interactions",
+   "who": "Núñez P, Kumar G, Gotti C, Wang P, Martineau L, Bonaventure PL, Hoyer R, Mišić B, Albouy P, Laureys S, Tewarie PKB",
+   "venue": "bioRxiv",
+   "url": "https://doi.org/10.64898/2026.11.13.766469",
+   "verified": true,
+   "gist": "The shape of a brain wave, not only its size, can make it look 'irreversible' in time.",
+   "plain": "Brain waves are not perfect sine waves; their rise and fall can differ. This team showed in a model, in recordings from inside the brains of 23 patients and in monkeys, that this lopsidedness comes from how fast local synapses switch on and off. That lopsidedness was what most strongly drove a common measure of time-irreversibility.",
+   "tech": "Modified Wilson-Cowan model; sEEG in 23 patients; macaque ECoG. Waveform asymmetry was most strongly associated with local irreversibility; alpha frequency related more to inter-regional measures. Phase-locked perturbations changed imaginary coherency and irreversibility with coupling fixed. Macaque ECoG reproduced the frequency links but not the waveform link. Not peer reviewed. (abstract only)",
+   "borrow": "A likely reason for our own result: our waveform-asymmetry marker separated wake from deep sleep but not dreaming from deep sleep. If asymmetry reflects synaptic kinetics, it should follow arousal, which is what we saw.",
+   "status": "done",
+   "topic": "Measuring consciousness"
+  },
+  {
+   "id": "rochas-n2-dreaming-hdeeg",
+   "section": "latest",
+   "date": "2026-11-02",
+   "kind": "Preprint",
+   "head": "Neural correlates of dreaming during N2 sleep: spatial and phenomenological characteristics",
+   "who": "Rochas V, Mammeri K, Bayer L, Tononi G, Perogamvros L",
+   "venue": "PsyArXiv (v4)",
+   "url": "https://doi.org/10.31234/osf.io/qbwnf_v4",
+   "verified": true,
+   "gist": "In light sleep, faster brain activity at the back of the head came before awakenings with a dream.",
+   "plain": "Thirty-nine people slept with 256 electrodes on their heads and were woken many times from light (N2) sleep. When they said they had been dreaming, the seconds before waking showed more fast activity, strongest at the back of the brain. How much the dream felt like thinking mattered more than how much it felt like seeing.",
+   "tech": "39 participants, 256-channel EEG with source localisation, serial awakenings in N2. Experience with recall vs no experience: higher beta/gamma, widely distributed; peak in posterior occipito-temporal cortex for the 30 s window and parietal cortex for the 20 s window. Thought-related, not perceptual, ratings were associated with EEG activity. One lab, no held-out test; title and framing changed across preprint versions. Not peer reviewed. (abstract only)",
+   "borrow": "Our experience benchmark uses the same stage (N2) and the last 20 s. A high-frequency effect like this one is what our frozen spectral baseline should already capture, so the question we ask is whether any other marker adds to it in labs it has never seen.",
+   "status": "planned",
+   "topic": "Sleep and dreams"
+  },
+  {
+   "id": "congyu-neural-field-doc",
+   "section": "latest",
+   "date": "2026-10-28",
+   "kind": "Paper",
+   "head": "Individualised electrophysiological neural field models for the assessment of thalamocortical function in disorders of consciousness",
+   "who": "Cóngyǔ L, Tewarie PKB, Alnagger NLN, Mindlin I, Van der Lande GJM, Belloli L, Laureys S, Naccache L, Rohaut B, Thibaut A, Annen J, Gosseries O, Núñez P, Sitt JD",
+   "venue": "PLoS Computational Biology",
+   "url": "https://doi.org/10.1371/journal.pcbi.1014905",
+   "verified": true,
+   "gist": "A brain model fitted only to EEG power reproduced the complexity scores that separate patients.",
+   "plain": "Researchers fitted a model of the loop between the thalamus and the cortex to the EEG of more than 500 people with severe brain injury or none. The fitted loops were weaker in patients, weakest in the least responsive. The model was fitted only to how much power the EEG had at each frequency, yet the signals it produced had the same complexity scores as the real ones.",
+   "tech": "Two independent high-density EEG datasets: 203 UWS, 270 MCS, 74 controls. Robinson corticothalamic neural field model fitted per person to spectra. Reduced corticothalamic integrity, UWS < MCS. Simulated EEG reproduced empirical complexity; permutation entropy separated MCS from UWS in real and simulated data. Code and replication data on GitHub.",
+   "borrow": "Support for our main caution: if a model fitted to the spectrum reproduces a complexity score, that score adds little beyond the spectrum. We will check whether the shared replication data include per-patient spectra.",
+   "status": "planned",
+   "topic": "Measuring consciousness"
+  },
+  {
+   "id": "gaglioti-structural-complexity",
+   "section": "latest",
+   "date": "2026-10-22",
+   "kind": "Preprint",
+   "head": "Inferring brain structural complexity from dynamical measures",
+   "who": "Gaglioti G, Cattani A, Nieus T, Momi D, Comolatti R, Dalla Porta L, Sarasso S, Massimini M",
+   "venue": "bioRxiv",
+   "url": "https://doi.org/10.64898/2026.10.21.760743",
+   "verified": true,
+   "gist": "In simulated brains, pulse-based complexity tracked the wiring; measures of resting activity did not agree with each other.",
+   "plain": "The team built simulated brains whose wiring they could change step by step, from orderly to random. Measures based on giving the network a kick peaked when wiring was in between, as theory expects. Measures taken from resting activity went different ways: some followed one property of the wiring, some another, some hardly moved.",
+   "tech": "Wilson-Cowan mean-field networks with systematic rewiring. Observational metrics were heterogeneous (integration-tracking, differentiation-tracking, or insensitive). Perturbational metrics peaked at intermediate rewiring, scaled with small-worldness, resisted common-driver confounds and were highest near a wake-like regime. Simulation only; not peer reviewed. (abstract only)",
+   "borrow": "A model-based reason the resting-EEG markers in our benchmark may fail. It also suggests a positive control we could add later: plant known wiring in a simulation and check each marker can see it.",
+   "status": "planned",
+   "topic": "Measuring consciousness"
+  },
+  {
+   "id": "hesse-tsao-rapid-alternation",
+   "section": "latest",
+   "date": "2026-10-16",
+   "kind": "Preprint",
+   "head": "Rapid alternation of conscious and suppressed stimulus representations in the primate brain",
+   "who": "Hesse JK, Lanfranchi FF, McGrory C, Shi Y, Engel TA, Tsao DY",
+   "venue": "bioRxiv",
+   "url": "https://doi.org/10.64898/2026.10.15.759299",
+   "verified": true,
+   "gist": "Even while a monkey saw one steady image, face-selective neurons switched about 15 times a second between the seen image and the hidden one.",
+   "plain": "Two images went to the two eyes, but only one was seen. Recording many neurons at once, the team found that the brain did not settle on the seen image. It flipped about 15 times a second between brief moments that carried the seen image and moments that carried the hidden one. In the 'seen' moments, neurons were more sharply tuned.",
+   "tech": "Macaque Neuropixels recordings across IT face patches and prefrontal cortex during binocular flash suppression. Alternation at about 15 Hz between conscious and suppressed micro-epochs, each allowing image reconstruction; tuning amplified in conscious epochs; PFC qualitatively similar. Not peer reviewed. (abstract only)",
+   "borrow": "A strong content result for our constraint ledger and theory scorecard. Not testable on the open human data we use.",
+   "status": "planned",
+   "topic": "Theories tested"
+  },
+  {
+   "id": "owen-goodale-grand-theories",
+   "section": "latest",
+   "date": "2026-10-06",
+   "kind": "Paper",
+   "head": "Have grand theories of consciousness earned their keep?",
+   "who": "Owen AM, Goodale MA",
+   "venue": "Neuron",
+   "url": "https://doi.org/10.1016/j.neuron.2026.08.020",
+   "verified": true,
+   "gist": "Two senior researchers argue that careful experiments, not big theories, produced the field's real advances.",
+   "plain": "This short opinion piece looks back at what moved consciousness science forward, such as finding hidden awareness in unresponsive patients. The authors argue those advances came from careful experiments rather than from the large theories that now get most attention.",
+   "tech": "Perspective. Argues that future progress may depend on a return to the empirical tradition rather than adjudicating between overarching theories. (abstract only)",
+   "borrow": "Matches how we work: a measure has to earn its place on held-out data before any theory is credited. Our main study is a benchmark, not a theory test, for this reason.",
+   "status": "planned",
+   "topic": "Theories tested"
+  },
+  {
+   "id": "selte-nrem-experience-hdeeg",
+   "section": "latest",
+   "date": "2026-08-20",
+   "kind": "Preprint",
+   "head": "Neural signatures of conscious experience during sleep: a serial awakening study using high-density EEG",
+   "who": "Selte A, Haworth SE, Vanasse TJ, Alauddin T, Gjini K, Philibert-Rosas S, Brace C, Sevak B, Riedner B, Kalkach-Aparicio M, Tononi G, Boly M, Struck AF",
+   "venue": "bioRxiv",
+   "url": "https://doi.org/10.64898/2026.08.16.745040",
+   "verified": true,
+   "gist": "A large sleep study reports that one minute of EEG can tell a dream from no dream about 80% of the time.",
+   "plain": "A team woke 140 people about 700 times from non-REM sleep and asked whether anything had been going through their minds. Half the time the answer was yes. A computer, trained on the minute of brain signals before each awakening, picked the yes answers well above chance. Dreaming went with less slow activity and more fast activity at the back of the head. The study mixed light and deep sleep, and deep sleep is where 'nothing' answers are most common, so part of the signal may be sleep depth.",
+   "tech": "140 participants, 256-channel EEG, 699 N2 and N3 awakenings (351 experience, 348 no experience). Features from the 60 s before awakening: regional spectral power, lagged coherence, graph metrics, gamma/alpha ratios. Participant-level cross-validation. Best ensemble ROC-AUC 0.80, average precision 0.80. Dreaming: lower posterior alpha and delta, higher gamma-related measures. N2 and N3 pooled; one lab; no spectral-baseline nesting or surrogate control. Not peer reviewed. (abstract only; the full text was behind a bot block, which we did not get around)",
+   "borrow": "This is the strongest claim yet that our main study could come out the other way. Our benchmark holds stage fixed, tests in labs never used for training, and asks what each marker adds over the spectrum. We will report the spectral baseline's own score as a headline number, so a strong spectral result is visible, not hidden.",
+   "status": "planned",
+   "topic": "Sleep and dreams"
+  },
+  {
+   "id": "stoliker-psilocybin-context-ds006110",
+   "section": "latest",
+   "date": "2026-08-19",
+   "kind": "Paper",
+   "head": "Psychedelics align brain activity with context",
+   "who": "Stoliker D, Novelli L, Khajehnejad M, Biabani M, Greaves MD, et al., Carhart-Harris RL, Seth AK, Sundram S, Egan GF, Razi A",
+   "venue": "Nature",
+   "url": "https://doi.org/10.1038/s41586-026-10910-z",
+   "verified": true,
+   "gist": "Psilocybin made brain activity follow what people were doing more closely, and the data are open.",
+   "plain": "Sixty-two adults had brain scans and EEG while resting, meditating, listening to music and watching a film, once before and once on psilocybin. On the drug, brain activity moved along more structured paths that changed with the task. People who felt most 'embedded' in the world showed networks joining up that usually keep inner and outer processing apart.",
+   "tech": "62 adults; fMRI about 80 min and 64-channel EEG about 150 min after dose; rest, meditation, music and movie; low-dimensional trajectory analysis. Context-sensitive, structured trajectories co-varied with experience. Open data on OpenNeuro ds006110 (v1.2.0). Single site; EEG recorded later than fMRI.",
+   "borrow": "Open EEG from a state where experience grows while arousal does not fall. That is the contrast our state benchmark lacks: a marker that rises here and falls under propofol is tracking more than wakefulness.",
+   "status": "planned",
+   "topic": "Drugs and anaesthesia"
+  },
+  {
+   "id": "overgaard-theory-method-dependencies",
+   "section": "latest",
+   "date": "2026-08-16",
+   "kind": "Preprint",
+   "head": "Systematic theory-method dependencies in consciousness research",
+   "who": "Overgaard M, Dietz M, Waade PT",
+   "venue": "PsyArXiv",
+   "url": "https://doi.org/10.31234/osf.io/3rqbk_v2",
+   "verified": true,
+   "gist": "Across 518 experiments, the method a study used predicted which theory it ended up supporting.",
+   "plain": "If theories competed on the same ground, the kind of experiment run should not predict which theory wins. This team coded 518 experiments and found that it does: each theory lives in its own corner of methods, and is mostly tested there.",
+   "tech": "Updated ConTraSt database, 518 experiments; Bayesian regression of support, challenge or no mention on methodological features. Decisive evidence for theory-method dependencies; partly separate methodological niches. Not peer reviewed. (abstract only)",
+   "borrow": "Our theory scorecard will note which method each piece of evidence came from, so a theory is not credited just because its supporters favour one kind of experiment.",
+   "status": "planned",
+   "topic": "Theories tested"
+  },
+  {
+   "id": "berjaga-buisan-fdt-nonequilibrium",
+   "section": "latest",
+   "date": "2026-07-31",
+   "kind": "Paper",
+   "head": "Thermodynamics of consciousness: non-equilibrium brain dynamics track conscious states",
+   "who": "Berjaga-Buisan T, Monti JM, Cortada M, Colombo MA, Geli SM, Gaglioti G, Sarasso S, Kringelbach ML, Corbetta M, Sanchez-Vives MV, Massimini M, Perl YS, Deco G",
+   "venue": "Cell Reports",
+   "url": "https://doi.org/10.1016/j.celrep.2026.117782",
+   "verified": true,
+   "gist": "How far the brain sits from equilibrium tracked anaesthesia depth as well as the best-tested consciousness index.",
+   "plain": "A brain at rest is never in balance: activity has a direction in time. This team fitted computer models to recordings from people and mice and measured how far each brain was from balance. The distance shrank under anaesthesia and in unresponsive patients. In mice it followed anaesthesia depth slightly more closely than the stimulation-based index does.",
+   "tech": "Whole-brain generative models; fluctuation-dissipation theorem (FDT) violations from spontaneous activity. Mice under graded anaesthesia (LFP): PCI vs depth Spearman 0.71; FDT violations vs depth 0.885; FDT vs PCI 0.68. Lower FDT violations in unresponsive DoC and anaesthesia. Mouse data open on EBRAINS (10.25493/WKA8-Q4T). No spectral baseline.",
+   "borrow": "We tested the scalp version of this idea (second-order irreversibility) on open sleep EEG and it did not replicate; our own time-asymmetry marker tracked arousal, not experience. The model-based estimator in this paper is still untested by us.",
+   "status": "done",
+   "topic": "Measuring consciousness"
+  },
+  {
+   "id": "gurnee-jacobian-lens-workspace",
+   "section": "latest",
+   "date": "2026-07-16",
+   "kind": "Preprint",
+   "head": "Verbalizable representations form a global workspace in language models",
+   "who": "Gurnee W, Sofroniew N, Pearce A, Piotrowski M, Kauvar I, Chen R, Soligo A, Bogdan P, et al.",
+   "venue": "arXiv",
+   "url": "https://doi.org/10.48550/arXiv.2607.15495",
+   "verified": true,
+   "gist": "Inside language models, the content a model can put into words behaves like a 'global workspace'.",
+   "plain": "One leading theory says we are conscious of what is broadcast across the brain so many systems can use it. This study found a part of a language model's inner activity that holds what the model is about to say. That content can be reported, held, used for silent reasoning and shared widely, much as the theory describes for brains. This shows a working parallel, not that the model feels anything.",
+   "tech": "A 'Jacobian lens' identifies a J-space of verbalisable representations. Its contents can be reported, summoned, held, used for silent reasoning and passed to downstream computation; coherent only in a middle band of layers; holds tens of concepts; more widely broadcast than other representations. Not peer reviewed. (abstract only)",
+   "borrow": "A concrete, checkable workspace signature in AI. It fits the access side of the workspace theory and says nothing about experience; we would list it as an indicator, not evidence of consciousness.",
+   "status": "planned",
+   "topic": "AI"
+  },
   {
    "id": "adversarial-testing-of-global-neuronal-workspace",
    "section": "latest",

@@ -53,7 +53,7 @@ NAME = C["name"]
 GOAL = C["goal"]
 
 PAGES = [("index.html", "Home"), ("findings.html", "Findings"), ("theories.html", "Theories"), ("approach.html", "Approach"),
-         ("tracker.html", "Tracker"), ("news.html", "News"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources")]
+         ("tracker.html", "Tracker"), ("news.html", "News"), ("library.html", "Library"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources")]
 
 
 def md(s):
@@ -74,6 +74,7 @@ NAV_GROUPS = (
                   ("theories.html", "Theories", "The field of theories we score", "theory"),
                   ("approach.html", "Approach", "How every idea gets tested", "approach"),
                   ("news.html", "News", "New papers, summarised", "news"),
+                  ("library.html", "Library", "Every paper we read, analysed", "files"),
                   ("tracker.html", "Tracker", "Progress and the live task board", "tracker"))),
     ("Resources", (("data.html", "Open data", "Every consciousness dataset, used or not", "data"),
                    ("resources.html#logo", "Logo", "Free to download", "logo"),
@@ -458,17 +459,108 @@ def ordered_news():
 def page_news():
     latest, land = ordered_news()
     out = head("News", "New research on consciousness, summarised, with what we take from each",
-               'New papers and data, newest first. Every item opens at three levels of detail. <a href="news.xml">Follow the feed (RSS)</a>.',
+               'New papers and data, newest first. Every item opens at three levels of detail. <a href="news.xml">Follow the feed (RSS)</a>. Every paper we have read is in the <a href="library.html">library</a>.',
                '<p class="note">Pictures are editorial illustrations drawn for this site, not data or brain images.</p>' + jump([("latest", "Latest"), ("landmarks", "Landmarks")]))
     _all = latest + land
     _filt, _form = news_tools(_all, json.loads((SITE / "news.json").read_text()).get("topics", []), "mind", "Open Mind")
     out += f'<div class="news-tools">{_form}{_filt}</div>'
-    out += block("01", "Latest", "latest", "Two 2026 re-analyses of COGITATE lean back towards the workspace theory", '<div class="ngrid">' + "".join(news_card(n) for n in latest) + '</div>')
+    out += block("01", "Latest", "latest", "New sleep studies say EEG can tell a dream from no dream; we test whether that holds in new labs", '<div class="ngrid">' + "".join(news_card(n) for n in latest) + '</div>')
     if land:
         out += block("02", "Landmarks", "landmarks", "The landmark papers made a magnetic pulse the best-validated test so far",
                      '<div class="ngrid">' + "".join(news_card(n) for n in land) + '</div>', "Older papers that set the terms of the question.")
     out = out.replace('<section class="block"', '<section class="block newsblock" data-newsblock', 2)
-    return out + NEWS_TOOLS_JS
+    fn = field_now_block()
+    i = out.index('<div class="news-tools">')
+    return out[:i] + fn + out[i:] + NEWS_TOOLS_JS
+
+
+def field_now_block():
+    """The field_now summary from news.json: a few fronts, each linked to library entries."""
+    fnow = json.loads((SITE / "news.json").read_text()).get("field_now")
+    if not fnow:
+        return ""
+    lib = {p["id"]: p for p in library()["papers"]}
+    fronts = ""
+    for f in fnow["fronts"]:
+        refs = ", ".join(f'<a href="library.html#{E(i)}">{E(lib_short(lib[i]))}</a>' for i in f["library_ids"] if i in lib)
+        fronts += f'<li><h3>{E(f["title"])}</h3><p>{md(f["what"])}</p><p class="fn-refs">Read: {refs}</p></li>'
+    return (f'<section class="fieldnow" aria-labelledby="fieldnow"><h2 id="fieldnow">Where the field is now</h2>'
+            f'<p class="meta">Updated {news_date(fnow["updated"])}. A short summary of the main questions, with the papers behind each.</p>'
+            f'<ol class="fronts">{fronts}</ol></section>')
+
+
+# ---- library: every paper we read, with the analysis (docs/library/library.json)
+def library():
+    return json.loads((ROOT / "docs/library/library.json").read_text())
+
+
+def lib_short(p):
+    """'Selte A, Haworth SE, ...' -> 'Selte et al. 2026'; group names are kept whole."""
+    a = re.sub(r" and others.*$", ", et al.", p["authors"])
+    if "(" in a:
+        return f'{a.split("(")[0].strip()} {p["year"]}'
+    first = a.split(",")[0].strip().removesuffix(" et al.")
+    first = first.rsplit(" ", 1)[0] if " " in first and len(first.rsplit(" ", 1)[1]) <= 3 else first
+    more = " et al." if ("," in a or a.endswith("et al.")) else ""
+    return f'{first}{more} {p["year"]}'
+
+
+def topic_slug(t):
+    return "".join(ch if ch.isalnum() else "-" for ch in t.lower()).strip("-").replace("--", "-")
+
+
+LIB_ALT = json.loads((SITE / "assets/library/alt.json").read_text()) if (SITE / "assets/library/alt.json").exists() else {}
+LIB_FIELDS = [("Question", "question"), ("Idea tested", "tried"), ("Data and method", "method_data"), ("Results", "key_results"),
+              ("Limits", "limits"), ("What it means for us", "ideas_for_us")]
+REL_WORD = {"core": "Bears on a current study", "useful": "Useful", "context": "Background"}
+
+
+def lib_card(p):
+    slug = topic_slug(p["topic"])
+    img = (f'<img class="lthumb" src="assets/library/{slug}.webp" width="600" height="400" loading="lazy" decoding="async" '
+           f'alt="{E(LIB_ALT.get(slug, "Illustration"))}">')
+    depth = "Full text read" if p["read_depth"] == "full" else "Abstract only"
+    rel = {"core": "ok", "useful": "warn"}.get(p["relevance"], "open")
+    chk = "" if p.get("verified") else ' <span class="chip chip-open">source not yet checked</span>'
+    rows = "".join(f'<dt>{E(lbl)}</dt><dd>{md(p[k])}</dd>' for lbl, k in LIB_FIELDS if p.get(k))
+    touches = f'<dt>Touches</dt><dd>{E(", ".join(p["touches"]))}</dd>' if p.get("touches") else ""
+    return (f'<article class="lcard" id="{E(p["id"])}" data-topic="{E(p["topic"])}" data-rel="{E(p["relevance"])}">{img}<div class="lbody">'
+            f'<p class="meta">{E(lib_short(p))} · {E(p["kind"])} · {E(p["venue"])}{chk}</p>'
+            f'<h3><a href="{E(p["url"])}">{E(p["title"])}</a></h3>'
+            f'<p>{md(p["question"])}</p>'
+            f'<p class="lchips"><span class="chip chip-{rel}">{E(REL_WORD[p["relevance"]])}</span> <span class="chip chip-open">{depth}</span></p>'
+            f'<details class="lmore"><summary>Our analysis</summary><dl>{rows}{touches}</dl>'
+            f'<p class="meta">{E(p["authors"])}. doi:{E(p["doi"])}</p></details></div></article>')
+
+
+LIB_JS = r"""<script>(function(){
+var f=document.querySelector('.lfilter');if(!f)return;
+function apply(){var t=f.querySelector('[data-t][aria-pressed="true"]').getAttribute('data-t'),c=f.querySelector('#lcore').checked,n=0;
+document.querySelectorAll('.lcard').forEach(function(x){var h=(!!t&&x.getAttribute('data-topic')!==t)||(c&&x.getAttribute('data-rel')!=='core');x.hidden=h;if(!h)n++});
+document.getElementById('lcount').textContent=n+(n===1?' paper':' papers');}
+f.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;
+f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});apply();});
+f.querySelector('#lcore').addEventListener('change',apply);
+if(location.hash){var el=document.getElementById(location.hash.slice(1));if(el&&el.classList.contains('lcard')){var d=el.querySelector('details');if(d)d.open=true;}}
+})();</script>"""
+
+
+def page_library():
+    L = library()
+    papers = sorted(L["papers"], key=lambda p: ({"core": 0, "useful": 1, "context": 2}[p["relevance"]], -(p["year"] or 0), p["title"]))
+    n_full = sum(p["read_depth"] == "full" for p in papers)
+    out = head("Library", "Every paper we read, and what we take from it",
+               f'{len(papers)} papers and datasets, each with our own analysis: the question, the data, the result, the limits and what it means for our studies. '
+               f'{n_full} were read in full; the rest from the abstract, and each card says which. New ones also appear in the <a href="news.html">news</a>.',
+               '<p class="note">Pictures are topic illustrations drawn for this site, not figures from the papers.</p>')
+    count = {t: sum(1 for p in papers if p["topic"] == t) for t in L["topics"]}
+    btns = f'<button type="button" data-t="" aria-pressed="true">All <span>{len(papers)}</span></button>' + "".join(
+        f'<button type="button" data-t="{E(t)}" aria-pressed="false">{E(t)} <span>{count[t]}</span></button>' for t in L["topics"] if count[t])
+    tools = (f'<div class="lfilter nfilter" role="group" aria-label="Show papers about">{btns}'
+             f'<label class="lcore"><input type="checkbox" id="lcore"> Only papers that bear on a current study</label>'
+             f'<p class="meta" id="lcount" aria-live="polite">{len(papers)} papers</p></div>')
+    out += f'<section class="libsec" aria-label="Papers">{tools}<div class="lgrid">' + "".join(lib_card(p) for p in papers) + '</div></section>'
+    return out + LIB_JS
 
 
 def news_article(n, prev, nxt):
@@ -784,6 +876,9 @@ def main():
     shutil.copytree(SITE / "assets/fonts", DIST / "fonts")
     for f in (SITE / "assets/news").glob("*.webp"):
         shutil.copy(f, DIST / "assets/news" / f.name)
+    (DIST / "assets/library").mkdir(parents=True)
+    for f in (SITE / "assets/library").glob("*.webp"):
+        shutil.copy(f, DIST / "assets/library" / f.name)
     m = re.search(r"--accent:\s*(#[0-9A-Fa-f]{6})", (SITE / "brand.css").read_text()).group(1)
     (DIST / "assets/favicon.svg").write_text(ART.mark_svg_file(m))
     (DIST / "assets/open-mind-mark.svg").write_text(ART.mark_svg_file(m))
@@ -798,7 +893,7 @@ def main():
         shutil.copy(OPEN / t["file"], DIST / "data" / "open" / t["file"])
         (DIST / t["page"]).write_text(layout("data.html", f'{t["title"]} · {NAME}', t["about"], open_table_page(t)))
     fns = {"index.html": page_index, "findings.html": page_findings, "theories.html": page_theories, "approach.html": page_approach,
-           "tracker.html": page_tracker, "news.html": page_news, "contribute.html": page_contribute, "data.html": page_data, "resources.html": page_resources}
+           "tracker.html": page_tracker, "news.html": page_news, "library.html": page_library, "contribute.html": page_contribute, "data.html": page_data, "resources.html": page_resources}
     for f, name in PAGES:
         title = f"{NAME}: {GOAL}" if f == "index.html" else f"{name} · {NAME}"
         (DIST / f).write_text(layout(f, title, GOAL, fns[f]()))
