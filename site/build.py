@@ -469,24 +469,16 @@ def page_news():
         out += block("02", "Landmarks", "landmarks", "The landmark papers made a magnetic pulse the best-validated test so far",
                      '<div class="ngrid">' + "".join(news_card(n) for n in land) + '</div>', "Older papers that set the terms of the question.")
     out = out.replace('<section class="block"', '<section class="block newsblock" data-newsblock', 2)
-    fn = field_now_block()
+    fn = landscape_block()
     i = out.index('<div class="news-tools">')
     return out[:i] + fn + out[i:] + NEWS_TOOLS_JS
 
 
-def field_now_block():
-    """The field_now summary from news.json: a few fronts, each linked to library entries."""
-    fnow = json.loads((SITE / "news.json").read_text()).get("field_now")
-    if not fnow:
-        return ""
-    lib = {p["id"]: p for p in library()["papers"]}
-    fronts = ""
-    for f in fnow["fronts"]:
-        refs = ", ".join(f'<a href="library.html#{E(i)}">{E(lib_short(lib[i]))}</a>' for i in f["library_ids"] if i in lib)
-        fronts += f'<li><h3>{E(f["title"])}</h3><p>{md(f["what"])}</p><p class="fn-refs">Read: {refs}</p></li>'
-    return (f'<section class="fieldnow" aria-labelledby="fieldnow"><h2 id="fieldnow">Where the field is now</h2>'
-            f'<p class="meta">Updated {news_date(fnow["updated"])}. A short summary of the main questions, with the papers behind each.</p>'
-            f'<ol class="fronts">{fronts}</ol></section>')
+def landscape_block():
+    """The landscape snapshot from news.json (written by open-citizen-science/tools/paperwatch/landscape.py)."""
+    L = json.loads((SITE / "news.json").read_text()).get("landscape")
+    lib = {p["id"]: lib_short(p) for p in library()["papers"]}
+    return load("landscape_view").render(L, lib)
 
 
 # ---- library: every paper we read, with the analysis (docs/library/library.json)
