@@ -1,0 +1,53 @@
+{
+ "confirm4 (sealed)": {
+  "n_subj": 47,
+  "n_exp": 252,
+  "n_no": 151,
+  "auc0.5": {
+   "P_bounded": 0.5133333333333333,
+   "mean_halfwidth": 0.07
+  },
+  "auc0.53": {
+   "P_bounded": 0.43333333333333335,
+   "mean_halfwidth": 0.068
+  },
+  "auc0.56": {
+   "P_bounded": 0.20666666666666667,
+   "mean_halfwidth": 0.069
+  }
+ },
+ "confirm5 (+set19)": {
+  "n_subj": 53,
+  "n_exp": 261,
+  "n_no": 158,
+  "auc0.5": {
+   "P_bounded": 0.5733333333333334,
+   "mean_halfwidth": 0.068
+  },
+  "auc0.53": {
+   "P_bounded": 0.48,
+   "mean_halfwidth": 0.066
+  },
+  "auc0.56": {
+   "P_bounded": 0.16666666666666666,
+   "mean_halfwidth": 0.068
+  }
+ },
+ "all7 (+Tononi,Zhang)": {
+  "n_subj": 108,
+  "n_exp": 435,
+  "n_no": 296,
+  "auc0.5": {
+   "P_bounded": 0.8666666666666667,
+   "mean_halfwidth": 0.053
+  },
+  "auc0.53": {
+   "P_bounded": 0.76,
+   "mean_halfwidth": 0.053
+  },
+  "auc0.56": {
+   "P_bounded": 0.37333333333333335,
+   "mean_halfwidth": 0.052
+  }
+ }
+}

@@ -54,3 +54,7 @@ fc89d60b7d8ee2e0dfe2f4229410bbfe36a32a9e783c5d9740f51051becafcf9  experiments/no
 3b1d723d7225b096aa0255d66f44e8a8d093f874d75691f30d19af39b8261c47  docs/prereg/2026-11-18_nonequilibrium_vs_spectrum.md  2026-11-19T01:05:26Z
 7659381d6a80ebf78c56a9fbf420750c57f21c9b76073a883532cc2b5e9b2f3d  experiments/nonequilibrium/ne_analyse.py  2026-11-19T01:05:26Z
 de1f44ce72f145a4f96562ca6aa53f732aa6d346ce03d2adf0f214cfb1c6049b  docs/prereg/2026-11-19_experience_benchmark.md  2026-11-19T14:31:26Z
+bc1db71e4c56ac2bebc972c66555237738e3db8c4b37dddd5b4c270705ace156  docs/prereg/2026-11-19_experience_benchmark_amendment1.md  2026-11-19T14:48:21Z
+51f891b0354f5810da523718cb1d102f0674d2700ea3639ccaae09c87aa40cab  experiments/experience_benchmark/extract.py  2026-11-19T14:48:21Z
+f8e2ea31a4e58f6a53f5d20c2082b4fb498adac67ead22bccaf922d6019ade0a  experiments/experience_benchmark/measures.py  2026-11-19T14:48:21Z
+79163a21c3b3d8bd459d2ef93236fc9124a89182078639998c6ce28a36ca9043  experiments/experience_benchmark/bounds_sim.py  2026-11-19T14:48:21Z
