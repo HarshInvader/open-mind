@@ -58,3 +58,7 @@ bc1db71e4c56ac2bebc972c66555237738e3db8c4b37dddd5b4c270705ace156  docs/prereg/20
 51f891b0354f5810da523718cb1d102f0674d2700ea3639ccaae09c87aa40cab  experiments/experience_benchmark/extract.py  2026-11-19T14:48:21Z
 f8e2ea31a4e58f6a53f5d20c2082b4fb498adac67ead22bccaf922d6019ade0a  experiments/experience_benchmark/measures.py  2026-11-19T14:48:21Z
 79163a21c3b3d8bd459d2ef93236fc9124a89182078639998c6ce28a36ca9043  experiments/experience_benchmark/bounds_sim.py  2026-11-19T14:48:21Z
+0feef78708d951158ede0b34e6571adc7a38a953fc8a4f0aa414e6c6dee49204  experiments/experience_benchmark/fetch_boas.py  2026-11-19T14:57:58Z
+910ad8a1a0f97e408b0ba7b902ba432794152859107685e734c365503c343b9b  experiments/experience_benchmark/positive_control.py  2026-11-19T14:57:58Z
+b390f5c16e3270d83987be4db7ff099ae0eb8c129c762398ad819f75a9999d31  experiments/experience_benchmark/stats.py  2026-11-19T14:57:58Z
+65e8f9a02110d8478a4b3e46b499a934193bcd6416449d605a0140207f3026bf  experiments/experience_benchmark/planted.py  2026-11-19T14:57:58Z
