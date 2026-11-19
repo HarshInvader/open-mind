@@ -104,3 +104,14 @@ The question was which human intracranial datasets with seen/unseen reports are 
 | Kronemer et al. 2022, Nat Commun doi:10.1038/s41467-022-35117-4, NITRC group 1550 | Open, CC BY 4.0 (per survey agent) | Identical faces at 50% threshold, seen vs not seen | 7, mostly thalamic (RNS) | Subcortical only; 6 small patients total about 3 GB. |
 
 Not usable for seen vs unseen: COGITATE iEEG (suprathreshold stimuli only; free account), Zhang lab 2024 (on request), UNIMI Dataverse (embargoed), DANDI human sets (memory or movies). No open iEEG set with sleep-awakening reports was found.
+
+**Stockart OSF 8QE3A, structure checked 2026-11-19 (mind-ne).** One patient file read for structure only (G8, `derivatives/analysis/G8/data_by_condition_resampled.mat`, 187 MB, MATLAB v5, FieldTrip-style). No seen-vs-unseen comparison was computed.
+- **Single trials are present**: `trial` is channels × trials × time. High-gamma at 64 Hz, -0.25 to 1.5 s around the stimulus (`*_RT` conditions are response-locked). Bipolar contacts (152 in G8).
+- Conditions per patient:
+  - `Sta*`: staircase.
+  - `Psy*`: threshold detection with report. H = hit, M = miss; LC/HC = low/high confidence; `_A`/`_H` are a split still to be identified from the paper. Includes FA and CR.
+  - `Str`, `StrL`, `StrH`: a no-report stream at low and high intensity. **There are no seen/unseen labels in no-report**, so "seen" there must be inferred, for example from intensity or from a classifier trained on report trials.
+- G8 counts: PsyH 75, PsyM 41, PsyCR 21, PsyFA 6, Str 128 (64 L / 64 H).
+- Electrode coordinates are in `data/<pt>/ses-1/ieeg/*_electrodes.tsv`; behaviour CSVs are in `beh/`; per-trial events are in `derivatives/ieegproc/<pt>/ses-1/beh/<pt>_events.tsv`.
+- The team's own preregistration is at the OSF root: `Prereg perithr_ieeg_03082022.pdf`.
+- **Exposure note:** before any T4 prediction is sealed, the sealer must state that only this structure check was done.
