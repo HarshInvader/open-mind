@@ -51,7 +51,8 @@ FAM_B = ["lz", "pe", "hfd", "wsmi"]
 NONSPEC = ["lz", "pe", "hfd", "wsmi", "tc"]
 SEC = M.SECONDARY
 N_PERM, N_BOOT, N_BOOT_B = 5000, 5000, 2000
-PREREG = ["docs/prereg/2026-11-19_experience_benchmark.md", "docs/prereg/2026-11-19_experience_benchmark_amendment1.md"]
+PREREG = ["docs/prereg/2026-11-19_experience_benchmark.md"] + [
+    f"docs/prereg/2026-11-19_experience_benchmark_amendment{k}.md" for k in (1, 2, 3)]
 
 
 # ------------------------------------------------------------------ guards
@@ -210,12 +211,71 @@ def study3(df1, dfd, base, model, rng):
     g = {}
     for kind in ("ft", "iaaft"):
         ss = study3_surr_score(df1, model, kind)
-        g["auc_" + kind] = P.auc(ss[kb]); g["share_" + kind] = (g["auc_" + kind] - 0.5) / (a - 0.5)
+        g["auc_" + kind] = P.auc(ss[kb])
+        g["share_" + kind] = (g["auc_" + kind] - 0.5) / (a - 0.5) if a != 0.5 else float("inf")   # AUC 0.5: gate fails
     g["pass"] = bool(g["share_ft"] <= 0.5 and g["share_iaaft"] <= 0.5)
     out["gate"] = g
     rr = residualise(df1.assign(s3=sc), ["s3"])
     out["auc_arousal_adjusted"] = S.PairAUC(y[kb], s[kb]).auc(rr["s3"].values[kb])
     return out
+
+
+# ------------------------------------------------------------------ amendment 3: spectral headline
+def spectral_headline(dB, cols, test_labs, rng, n_perm=N_PERM, n_boot=N_BOOT_B):
+    """Held-out experience AUC of a logistic model on `cols` only (leave one test lab out; all other rows,
+    including any training-only labs, in training). One-sided within-subject label permutation p (refit),
+    95% CI from the within-lab subject bootstrap (refit)."""
+    y, s, lab = arrays(dB)
+    X = S.centre_z(dB[cols].astype(float).values, s)
+    te = np.isin(lab, list(test_labs))
+    P = S.PairAUC(y[te], s[te], lab[te])
+    a = P.auc(S.lolo_pred(X, y, lab, test_labs)[te])
+    grp = [np.flatnonzero(s == sb) for sb in np.unique(s)]
+    null = np.empty(n_perm)
+    for p in range(n_perm):
+        yp = y.copy()
+        for g in grp:
+            yp[g] = y[g][rng.permutation(len(g))]
+        null[p] = S.PairAUC(yp[te], s[te]).auc(S.lolo_pred(X, yp, lab, test_labs)[te])
+    sub_ids = np.unique(s); sub_lab = np.array([lab[s == sb][0] for sb in sub_ids])
+    rows_of = {sb: np.flatnonzero(s == sb) for sb in sub_ids}
+    bs = []
+    for _ in range(n_boot):
+        pick, ns = [], []
+        for l in np.unique(sub_lab):
+            for k, sb in enumerate(rng.choice(sub_ids[sub_lab == l], (sub_lab == l).sum(), replace=True)):
+                pick.append(rows_of[sb]); ns.append(np.full(len(rows_of[sb]), f"{sb}#{k}", object))
+        pk = np.concatenate(pick); nsb = np.concatenate(ns); tb = te[pk]
+        q = S.lolo_pred(X[pk], y[pk], lab[pk], test_labs)[tb]
+        bs.append(S.PairAUC(y[pk][tb], nsb[tb]).auc(q))
+    return {"auc": a, "p_one_sided": float((1 + np.sum(null >= a - 1e-12)) / (1 + n_perm)),
+            "ci95": (float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5))), "columns": cols,
+            "test_labs": sorted(test_labs), "n_test": int(te.sum())}
+
+
+def reading(R):
+    """Amendment 3 §2: how each outcome is read, fixed before unblinding."""
+    sp = R["spectral_headline_tier1"]
+    SP = sp["ci95"][0] > 0.50 and sp["p_one_sided"] < 0.05
+    s3 = R["study3"]
+    adds = [m for m in FAM_B if R["B_tier1"][m]["holm_sig"] and R["B_tier1"][m]["delta"] >= 0.03
+            and R["B_tier1"][m]["ci95"][0] > 0]
+    if (not s3["killed_in_fit"]) and s3["p_one_sided"] < 0.05 and s3["delta"] >= 0.03 and s3["delta_ci95"][0] > 0:
+        adds.append("study3")
+    none_adds = all(R["B_tier1"][m]["ci95"][1] < 0.03 for m in FAM_B) and s3["delta_ci95"][1] < 0.03
+    a2 = [k for k, v in R["A2_correlate"].items() if v["achieved"]]
+    if a2:
+        r = "R2/R4: arousal-free, spectrum-free correlate (A2): " + ", ".join(a2)
+    elif SP and none_adds and R["K1_pass"]:
+        r = ("R1 + A1: the named markers are bounded (A1) yet the full frozen spectrum predicts report; " if
+             R["A1_double_dissociation"]["achieved"] else "") + "R1: spectrum-sufficient. The frozen spectrum predicts report at fixed stage in held-out labs, and no marker adds to it (all increments bounded below 0.03). Publishable."
+    elif (not SP) and R["A1_double_dissociation"]["achieved"]:
+        r = "R3: clean double dissociation (A1). Publishable."
+    elif SP and adds:
+        r = "R5a: spectrum predicts and some marker adds, but short of the A2 marks: atlas, no paper."
+    else:
+        r = "R5: messy middle: atlas and ledger, no paper."
+    return {"spectrum_predicts": bool(SP), "markers_adding": adds, "no_marker_adds_bounded": bool(none_adds), "reading": r}
 
 
 # ------------------------------------------------------------------ main
@@ -260,6 +320,11 @@ def main():
     Mb = np.column_stack([S.centre_z(dB[m].astype(float).values, s)[:, 0] if np.isfinite(dB[m].astype(float)).all()
                           else _cz_nan(dB[m].astype(float).values, s) for m in FAM_B])
     R["B_tier1"] = S.family_b(X0, Mb, FAM_B, y, s, lab, set(TIER1), n_perm=N_PERM, n_boot=N_BOOT_B, seed=9)
+
+    # amendment 3: the frozen spectrum's own experience AUC (headline), and with covariates (model 0)
+    R["spectral_headline_tier1"] = spectral_headline(dB, base, set(TIER1), np.random.default_rng(31))
+    R["model0_tier1"] = spectral_headline(dB, base + ["clock", "aw_idx"], set(TIER1), np.random.default_rng(32), n_perm=0)
+    R["spectral_headline_tier2_lolo7"] = spectral_headline(d2, base, set(TIER2), np.random.default_rng(33), n_perm=0)
 
     # gate for anything significant in A or B (Tier 1)
     y1, s1, _ = arrays(d1)
@@ -335,9 +400,14 @@ def main():
     R["outcome"] = ("A1 clean double dissociation" if A1["achieved"] else
                     "A2 arousal-free, spectrum-free correlate: " + ", ".join(k for k, v in A2.items() if v["achieved"])
                     if any(v["achieved"] for v in A2.values()) else "messy middle (atlas and ledger, no paper)")
+    R["reading_amendment3"] = reading(R)
     out = os.path.join(HERE, "results.json")
     json.dump(R, open(out, "w"), indent=1, default=lambda o: o.item() if hasattr(o, "item") else str(o))
     print("OUTCOME:", R["outcome"])
+    sp = R["spectral_headline_tier1"]
+    print(f"HEADLINE spectrum-only AUC (Tier 1, held-out labs): {sp['auc']:.3f} [{sp['ci95'][0]:.3f},{sp['ci95'][1]:.3f}] "
+          f"p {sp['p_one_sided']:.4f}")
+    print("READING:", R["reading_amendment3"]["reading"])
     print("counts", R["counts"]["tier1"], R["counts"]["tier2"]["n"])
     for m in M.PRIMARY:
         a1, a2 = R["A_tier1"][m], R["A_tier2"][m]
