@@ -1,0 +1,106 @@
+{
+ "MIX d=1.0 npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0075,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.557,
+  "beta_150_mean": 0.811,
+  "n_rep": 30
+ },
+ "MIX d=1.5 npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0055,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.55,
+  "beta_150_mean": 0.844,
+  "n_rep": 30
+ },
+ "MIX d=2.0 npat=16": {
+  "pass_rate": 0.1,
+  "ll_effect_mean": 0.0032,
+  "ci_lo_gt0_rate": 0.1,
+  "beta_thr_mean": 0.52,
+  "beta_150_mean": 0.865,
+  "n_rep": 30
+ },
+ "MIX d=3.0 npat=16": {
+  "pass_rate": 1.0,
+  "ll_effect_mean": 0.0417,
+  "ci_lo_gt0_rate": 1.0,
+  "beta_thr_mean": 0.508,
+  "beta_150_mean": 0.855,
+  "n_rep": 30
+ },
+ "MIX d=2.0 t5-noise npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0081,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.547,
+  "beta_150_mean": 0.864,
+  "n_rep": 30
+ },
+ "MIX d=3.0 npat=10": {
+  "pass_rate": 0.9666666666666667,
+  "ll_effect_mean": 0.0409,
+  "ci_lo_gt0_rate": 0.9666666666666667,
+  "beta_thr_mean": 0.516,
+  "beta_150_mean": 0.86,
+  "n_rep": 30
+ },
+ "NULL graded-normal d=1.0 npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0086,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.575,
+  "beta_150_mean": 0.839,
+  "n_rep": 30
+ },
+ "NULL graded-normal d=2.0 npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0083,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.71,
+  "beta_150_mean": 0.948,
+  "n_rep": 30
+ },
+ "NULL graded-skew d=2.0 npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0427,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.563,
+  "beta_150_mean": 0.998,
+  "n_rep": 30
+ },
+ "NULL graded-t5 d=2.0 npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0175,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.816,
+  "beta_150_mean": 0.968,
+  "n_rep": 30
+ },
+ "NULL graded+drift d=1.0 npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0092,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.571,
+  "beta_150_mean": 0.826,
+  "n_rep": 30
+ },
+ "NULL leaky-accumulator d=1.5 npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0094,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.719,
+  "beta_150_mean": 0.774,
+  "n_rep": 30
+ },
+ "AMBIG accumulator-to-bound d=1.5 npat=16": {
+  "pass_rate": 0.0,
+  "ll_effect_mean": -0.0072,
+  "ci_lo_gt0_rate": 0.0,
+  "beta_thr_mean": 0.653,
+  "beta_150_mean": 0.82,
+  "n_rep": 30
+ }
+}
