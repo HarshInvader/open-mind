@@ -1,0 +1,50 @@
+{
+ "T4 hiconf-misses d=1.0 lapse=0.03 npat=16": {
+  "mark1_pass_rate": 0.9233333333333333,
+  "T4_fail_rate": 0.0,
+  "miss_minus_CR_sd": 0.037,
+  "ci90_width": 0.214,
+  "hit_vs_miss_auroc": 0.744,
+  "n_rep": 300
+ },
+ "T4 hiconf-misses d=1.0 lapse=0.05 npat=16": {
+  "mark1_pass_rate": 0.8433333333333334,
+  "T4_fail_rate": 0.0,
+  "miss_minus_CR_sd": 0.068,
+  "ci90_width": 0.217,
+  "hit_vs_miss_auroc": 0.732,
+  "n_rep": 300
+ },
+ "T4 hiconf-misses d=1.5 lapse=0.03 npat=16": {
+  "mark1_pass_rate": 0.86,
+  "T4_fail_rate": 0.0,
+  "miss_minus_CR_sd": 0.062,
+  "ci90_width": 0.221,
+  "hit_vs_miss_auroc": 0.833,
+  "n_rep": 300
+ },
+ "T4 hiconf-misses d=1.5 lapse=0.05 npat=16": {
+  "mark1_pass_rate": 0.6766666666666666,
+  "T4_fail_rate": 0.0,
+  "miss_minus_CR_sd": 0.104,
+  "ci90_width": 0.222,
+  "hit_vs_miss_auroc": 0.819,
+  "n_rep": 300
+ },
+ "GRADED hiconf-misses a=0.5 sensory_share=1.0 npat=16": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 0.9733333333333334,
+  "miss_minus_CR_sd": 0.468,
+  "ci90_width": 0.211,
+  "hit_vs_miss_auroc": 0.709,
+  "n_rep": 300
+ },
+ "GRADED hiconf-misses a=1.0 sensory_share=1.0 npat=16": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 0.769,
+  "ci90_width": 0.214,
+  "hit_vs_miss_auroc": 0.839,
+  "n_rep": 300
+ }
+}

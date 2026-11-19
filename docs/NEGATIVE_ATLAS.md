@@ -29,3 +29,11 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
   - Source-level, high-density or OU-model estimators of second-order irreversibility.
   - Irreversibility in intracranial data.
 - **Details:** `experiments/nonequilibrium/RESULTS.md`.
+
+## T4 (GNWT extension, posterior bifurcation): headline prediction undecidable on Stockart; theory parked (mind-ne, 2026-11-19)
+
+- **Route closed (for this dataset):** testing "late VVC high-gamma is a two-state mixture at fixed intensity without report" (T4 P1) on Stockart et al. 2025 (OSF 8QE3A) by distribution shape.
+- **Why:** planted check with real no-report trial counts (72/48 per level, 16 patients). With fair graded rivals (normal and bounded skew-normal) the pipeline passes 0% of planted two-state data at d′ 1.0-1.5, 10% at d′ 2, 100% at d′ 3. The paper's hit-vs-miss AUROC (about 0.8, best patients) implies d′ ≈ 1.2. No null passed (graded normal, skewed, heavy-tailed, drift, leaky accumulator, accumulator-to-bound).
+- **Method warning:** the draft pipeline, with a free skew-normal as the only rival, "found" two states in graded data with none. Unbounded skew-normal fits on about 60 trials predict held-out data badly; any mixture-vs-unimodal likelihood test needs a stable rival.
+- **Not closed:** T4 itself; P2 (misses vs correct rejections, delayed report), which was not run on real data; intracranial bimodality with more trials per level.
+- **Details:** `experiments/our_theory/t4_planted/RESULTS.md`.

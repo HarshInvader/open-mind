@@ -166,6 +166,8 @@ Draft a candidate where a basic layer (e.g. sustained posterior activity gated b
 
 - #41 Non-equilibrium (irreversibility) vs spectrum: published second-order form and our higher-order variant: **negative**, `experiments/nonequilibrium/RESULTS.md`
 
+- #43 T4 (GNWT extension) on Stockart iEEG: **untestable** (P1 undecidable at realistic separation; parked 2026-11-19, P2 not run), `experiments/our_theory/t4_planted/RESULTS.md`
+
 - #21 Chennu propofol set exceeds download budget: **tool**, `experiments/chennu_access/RESULTS.md`
 
 - #27 B4 Draft our own theory: **untestable**, `experiments/our_theory/T1.md`

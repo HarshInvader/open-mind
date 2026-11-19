@@ -4,7 +4,7 @@
 
 Written 2026-11-19 by the theory builder. No signal data were opened. Theory: `T4.md`. Primary data: Stockart et al. 2025 (OSF 8QE3A). Replication: MetaMosquito (OpenNeuro ds008959).
 
-**Planted check 2026-11-19 (`t4_planted/RESULTS.md`): P1 as written cannot decide on this dataset (0% power at d′ ≤ 1.5; needs d′ ≈ 3). P1 is dropped as headline; P2 is next in line for its planted check.**
+**PARKED 2026-11-19 (coordinator). See `t4_planted/RESULTS.md`.** **Planted check 2026-11-19 (`t4_planted/RESULTS.md`): P1 as written cannot decide on this dataset (0% power at d′ ≤ 1.5; needs d′ ≈ 3). P1 is dropped as headline; P2 is next in line for its planted check.**
 
 **Headline (P1, superseded).** In the no-report experiment, at one fixed stimulus intensity, single-trial late high-gamma in ventral visual cortex is a mixture of two states and not one graded distribution, while dorsolateral prefrontal and superior parietal cortex show no such mixture. Odds of a pass: about 20%.
 

@@ -29,5 +29,17 @@ The draft rule calls P1 testable only if it passes ≥ 80% of planted mixtures a
 
 The accumulator-to-bound case also failed to pass, so with this pipeline a bound in the authors' model would not fake a two-state result. That is reassuring but moot.
 
-## Next
-P2 (misses vs correct rejections, and label-free state assignment predicting report, on delayed-report trials) uses the no-stimulus trials as an anchor rather than distribution shape, and should have more power. It gets the same planted check before anything is sealed.
+## Status: T4 PARKED (2026-11-19, research coordinator's decision)
+
+- **P1: undecidable** at realistic separation on Stockart (above). Not run on real data.
+- **P2: not run on real data.** Its planted check is **not finished** and **not part of any decision**. A first synthetic pass ran before the park order arrived; it is recorded below as exploratory only.
+- **Why parked:** T4 is this project's own theory, its headline was undecidable, and P2 would be a second try on the same small iEEG set (Fable: under 3% odds of a major result). The process risk is real: P1's draft pipeline "passed" on data with no states in it, and a thread that wants its theory to work will tend to find a P2 pipeline that passes.
+- **No Stockart signal has been analysed.** Only the structure of one file (G8) was opened.
+
+### P2 exploratory synthetic pass (not a planted check of record)
+
+`p2_decidability.py` (`p2_decidability.json`, `p2_lapse_followup_b0.2.json`, `p2_lapse_followup_b0.25.json`). Mark 1: 90% patient-bootstrap CI of (miss − correct rejection)/sd inside ±bound.
+- Graded / accumulation worlds, calibrated to hit-vs-miss AUROC 0.55-0.84: misses exceed correct rejections by 0.47-1.57 SD; mark 1 never passes; "T4 fails" in 95-100% of runs.
+- T4 worlds, no report lapses, 16 patients: pass 85-88% (8 patients: 49-53%).
+- T4 worlds with 10% lapses: pass 6-27%. High-confidence misses only (3-5% lapses): pass 42-76% at bound 0.2.
+- **Disclosure:** after seeing those numbers I re-ran with a looser bound (0.25), giving 68-92%. That is the tuning-toward-pass risk the coordinator flagged. If T4 is ever revived, the bound must be fixed from a stated argument and re-checked by someone outside this thread before sealing; 0.25 is not a pre-committed value.

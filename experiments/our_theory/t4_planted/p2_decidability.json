@@ -1,0 +1,162 @@
+{
+ "T4 d=1.0 lapse=0.0 npat=16": {
+  "mark1_pass_rate": 0.85,
+  "T4_fail_rate": 0.0,
+  "miss_minus_CR_sd": -0.004,
+  "ci90_width": 0.202,
+  "hit_vs_miss_auroc": 0.76,
+  "n_rep": 300
+ },
+ "T4 d=1.0 lapse=0.1 npat=16": {
+  "mark1_pass_rate": 0.26666666666666666,
+  "T4_fail_rate": 0.0,
+  "miss_minus_CR_sd": 0.138,
+  "ci90_width": 0.202,
+  "hit_vs_miss_auroc": 0.706,
+  "n_rep": 300
+ },
+ "T4 d=1.5 lapse=0.0 npat=16": {
+  "mark1_pass_rate": 0.8766666666666667,
+  "T4_fail_rate": 0.0,
+  "miss_minus_CR_sd": -0.005,
+  "ci90_width": 0.197,
+  "hit_vs_miss_auroc": 0.855,
+  "n_rep": 300
+ },
+ "T4 d=1.5 lapse=0.1 npat=16": {
+  "mark1_pass_rate": 0.06333333333333334,
+  "T4_fail_rate": 0.06333333333333334,
+  "miss_minus_CR_sd": 0.201,
+  "ci90_width": 0.203,
+  "hit_vs_miss_auroc": 0.782,
+  "n_rep": 300
+ },
+ "GRADED a=0.5 sensory_share=1.0 npat=16": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 0.99,
+  "miss_minus_CR_sd": 0.473,
+  "ci90_width": 0.202,
+  "hit_vs_miss_auroc": 0.71,
+  "n_rep": 300
+ },
+ "GRADED a=0.5 sensory_share=0.5 npat=16": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 0.694,
+  "ci90_width": 0.214,
+  "hit_vs_miss_auroc": 0.614,
+  "n_rep": 300
+ },
+ "GRADED a=0.5 sensory_share=0.2 npat=16": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 0.834,
+  "ci90_width": 0.219,
+  "hit_vs_miss_auroc": 0.551,
+  "n_rep": 300
+ },
+ "GRADED a=1.0 sensory_share=1.0 npat=16": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 0.773,
+  "ci90_width": 0.212,
+  "hit_vs_miss_auroc": 0.838,
+  "n_rep": 300
+ },
+ "GRADED a=1.0 sensory_share=0.5 npat=16": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 1.209,
+  "ci90_width": 0.246,
+  "hit_vs_miss_auroc": 0.696,
+  "n_rep": 300
+ },
+ "GRADED a=1.0 sensory_share=0.2 npat=16": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 1.569,
+  "ci90_width": 0.274,
+  "hit_vs_miss_auroc": 0.596,
+  "n_rep": 300
+ },
+ "T4 d=1.0 lapse=0.0 npat=8": {
+  "mark1_pass_rate": 0.5266666666666666,
+  "T4_fail_rate": 0.0,
+  "miss_minus_CR_sd": -0.005,
+  "ci90_width": 0.267,
+  "hit_vs_miss_auroc": 0.76,
+  "n_rep": 300
+ },
+ "T4 d=1.0 lapse=0.1 npat=8": {
+  "mark1_pass_rate": 0.24666666666666667,
+  "T4_fail_rate": 0.02,
+  "miss_minus_CR_sd": 0.139,
+  "ci90_width": 0.269,
+  "hit_vs_miss_auroc": 0.705,
+  "n_rep": 300
+ },
+ "T4 d=1.5 lapse=0.0 npat=8": {
+  "mark1_pass_rate": 0.49333333333333335,
+  "T4_fail_rate": 0.0,
+  "miss_minus_CR_sd": -0.003,
+  "ci90_width": 0.274,
+  "hit_vs_miss_auroc": 0.856,
+  "n_rep": 300
+ },
+ "T4 d=1.5 lapse=0.1 npat=8": {
+  "mark1_pass_rate": 0.08,
+  "T4_fail_rate": 0.08333333333333333,
+  "miss_minus_CR_sd": 0.214,
+  "ci90_width": 0.283,
+  "hit_vs_miss_auroc": 0.783,
+  "n_rep": 300
+ },
+ "GRADED a=0.5 sensory_share=1.0 npat=8": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 0.95,
+  "miss_minus_CR_sd": 0.472,
+  "ci90_width": 0.27,
+  "hit_vs_miss_auroc": 0.71,
+  "n_rep": 300
+ },
+ "GRADED a=0.5 sensory_share=0.5 npat=8": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 0.701,
+  "ci90_width": 0.302,
+  "hit_vs_miss_auroc": 0.612,
+  "n_rep": 300
+ },
+ "GRADED a=0.5 sensory_share=0.2 npat=8": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 0.833,
+  "ci90_width": 0.303,
+  "hit_vs_miss_auroc": 0.552,
+  "n_rep": 300
+ },
+ "GRADED a=1.0 sensory_share=1.0 npat=8": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 0.772,
+  "ci90_width": 0.276,
+  "hit_vs_miss_auroc": 0.838,
+  "n_rep": 300
+ },
+ "GRADED a=1.0 sensory_share=0.5 npat=8": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 1.203,
+  "ci90_width": 0.33,
+  "hit_vs_miss_auroc": 0.697,
+  "n_rep": 300
+ },
+ "GRADED a=1.0 sensory_share=0.2 npat=8": {
+  "mark1_pass_rate": 0.0,
+  "T4_fail_rate": 1.0,
+  "miss_minus_CR_sd": 1.567,
+  "ci90_width": 0.372,
+  "hit_vs_miss_auroc": 0.596,
+  "n_rep": 300
+ }
+}
