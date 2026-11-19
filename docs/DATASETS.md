@@ -12,7 +12,7 @@ Two dissociation cases in criterion R3 have no open data:
 
 **Recommended rescope** (for the lead): count "≥4 held-out datasets from ≥2 families (sleep, anaesthesia)" as the reachable state criterion, keep DoC and ketamine as named gaps, and add a lead-only task to request the restricted sets (listed under "Blocked" below). Agents must not contact authors.
 
-Laptop budget: 1.5 GB of downloads for the whole project. Every dataset below is far larger, so each test must use a subset. Suggested subsets are given per dataset.
+Laptop budget: 1.5 GB of downloads for the whole project (raised by the owner on 2026-11-19 to about 25 GB streamed, nothing kept, for task #42; DOSE-I data-use terms accepted by the owner the same day). Every dataset below is far larger, so each test must use a subset. Suggested subsets are given per dataset.
 
 ## Qualifying datasets (open, no login, laptop-feasible as a subset)
 

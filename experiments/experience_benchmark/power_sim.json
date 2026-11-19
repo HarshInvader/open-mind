@@ -1,0 +1,64 @@
+{
+ "N2": {
+  "n_subjects": 47,
+  "n_exp": 252,
+  "n_noexp": 151,
+  "labs": {
+   "LODE": 15,
+   "Rome": 18,
+   "DATA1": 5,
+   "Aamodt": 9
+  },
+  "d=0.0": {
+   "mean_auc": 0.502,
+   "power_0.05": 0.065,
+   "power_holm28": 0.005
+  },
+  "d=0.2": {
+   "mean_auc": 0.55,
+   "power_0.05": 0.515,
+   "power_holm28": 0.11
+  },
+  "d=0.36": {
+   "mean_auc": 0.592,
+   "power_0.05": 0.94,
+   "power_holm28": 0.59
+  },
+  "d=0.5": {
+   "mean_auc": 0.625,
+   "power_0.05": 1.0,
+   "power_holm28": 0.935
+  }
+ },
+ "REM": {
+  "n_subjects": 22,
+  "n_exp": 117,
+  "n_noexp": 44,
+  "labs": {
+   "LODE": 7,
+   "Rome": 12,
+   "DATA1": 3
+  },
+  "d=0.0": {
+   "mean_auc": 0.496,
+   "power_0.05": 0.045,
+   "power_holm28": 0.005
+  },
+  "d=0.2": {
+   "mean_auc": 0.549,
+   "power_0.05": 0.255,
+   "power_holm28": 0.04
+  },
+  "d=0.36": {
+   "mean_auc": 0.59,
+   "power_0.05": 0.58,
+   "power_holm28": 0.09
+  },
+  "d=0.5": {
+   "mean_auc": 0.631,
+   "power_0.05": 0.82,
+   "power_holm28": 0.355
+  }
+ },
+ "note": "p from a normal fit to 300 within-subject permutations; the sealed analysis should use >= 5000 permutations."
+}
