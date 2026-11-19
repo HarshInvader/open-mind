@@ -63,3 +63,5 @@ f8e2ea31a4e58f6a53f5d20c2082b4fb498adac67ead22bccaf922d6019ade0a  experiments/ex
 b390f5c16e3270d83987be4db7ff099ae0eb8c129c762398ad819f75a9999d31  experiments/experience_benchmark/stats.py  2026-11-19T14:57:58Z
 65e8f9a02110d8478a4b3e46b499a934193bcd6416449d605a0140207f3026bf  experiments/experience_benchmark/planted.py  2026-11-19T14:57:58Z
 d677f0eaab5a6c88ff89b7173008a90886662d27904a287e5ea68b8acae5003c  experiments/experience_benchmark/study3_fit.py  2026-11-19T14:59:41Z
+0497e83dcc5bdfc93e88571e0aeab12c9479a5d0189856878b15923699b00936  experiments/experience_benchmark/p2.py  2026-11-19T15:06:02Z
+8a7db791821d859c73382a5bb698299beb60a98c7a0d6436a3852e0d6b131095  experiments/experience_benchmark/analysis.py  2026-11-19T15:06:02Z
