@@ -43,3 +43,13 @@ c41d903520b23e1d61a112f7fcd248e16b5e07bbbb42b07aaac46738a3db188f  docs/prereg/ph
 0d39369180b12321ae9833f98dcfa20ad8a9ab2e49d57e31379b9f49cfefb34c  docs/prereg/2026-11-18_lz_vs_slope_sleepedf.md  2026-11-18T14:17:28Z
 37c2cbcd1b6d92f1eba88855da471daf725b7bb07e964485a89709f8496d923d  experiments/lz_slope/finish.py  2026-11-18T14:17:28Z
 483e3254f42b2afabffb21e6984f5a813630445dfcd1f25e23835cbb420ae2a9  experiments/our_theory/T3.md  2026-11-18T14:38:58Z
+21a617fcc4f1f4ac4176606f20670802543864b6049dd7f1340da42d59d83e8d  docs/prereg/2026-11-18_nonequilibrium_vs_spectrum.md  2026-11-18T21:51:44Z
+c8dcfff983def0f48bf8916d179134730db82d9f0f35b001279f35b7dce37528  experiments/nonequilibrium/ne_measures.py  2026-11-18T21:51:44Z
+fc89d60b7d8ee2e0dfe2f4229410bbfe36a32a9e783c5d9740f51051becafcf9  experiments/nonequilibrium/planted.py  2026-11-18T21:51:44Z
+82f6b9f79a65e43bf9b92c1c3c36f000bb67233a86c3d08d2313e4abeb9eef88  experiments/nonequilibrium/extract.py  2026-11-18T21:51:44Z
+3e64c48bf69b5f96463eefd00d92dc9454a978e31487897eb91aa72020c53a42  experiments/nonequilibrium/ne_analyse.py  2026-11-18T21:51:44Z
+487be4a7eec7e82b3bed8b47489d2cac7cc0a118094a651cdce8273722ed52b0  experiments/nonequilibrium/fetch_sleepedf.py  2026-11-18T21:51:44Z
+7bfdf056b941f988557e17e05ff3d24c04416341d50d19a9af8b72c8ea113192  docs/prereg/2026-11-18_nonequilibrium_vs_spectrum.md  2026-11-18T23:29:05Z
+9c707badd93e75b8db82c876b784967d4f86b7c9909cb34443e7cbf85078180e  experiments/nonequilibrium/extract.py  2026-11-18T23:29:05Z
+3b1d723d7225b096aa0255d66f44e8a8d093f874d75691f30d19af39b8261c47  docs/prereg/2026-11-18_nonequilibrium_vs_spectrum.md  2026-11-19T01:05:26Z
+7659381d6a80ebf78c56a9fbf420750c57f21c9b76073a883532cc2b5e9b2f3d  experiments/nonequilibrium/ne_analyse.py  2026-11-19T01:05:26Z

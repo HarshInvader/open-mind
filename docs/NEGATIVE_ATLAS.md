@@ -13,3 +13,19 @@ Closed routes, each with the effect size the test could have caught. Empty until
 
 ## LZ complexity adds nothing over the spectrum in sleep (mind-2, 2026-11-18)
 Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 6 band powers. Wake vs N3: +0.0004 [-0.0003, 0.0012], p = 0.19. REM vs N3: -0.0002, p = 0.16. Over the exponent alone, wake vs N3: +0.007, below the 0.01 mark. LZ fails the surrogate gate: 86% of phase-randomised wake surrogates are called awake, and 97% of its separation is spectral. Phase-normalised LZ carries no stage information (AUC 0.47-0.48). Detectable effect: P2 had 85% power at delta AUC 0.0005 (W vs N3). Caveat: the W vs N3 baseline is at ceiling (0.988-0.996). Propofol sets (ds005620, Chennu) are not yet run. Details: `experiments/lz_slope/RESULTS.md`, `experiments/surrogate_gate/RESULTS.md`.
+
+## Time-irreversibility ("arrow of time") EEG measures add nothing over the spectrum (mind-ne, task #41, 2026-11-19)
+
+- **Route closed (sleep):** scalp-EEG time-reversal asymmetry as a consciousness marker beyond the spectrum. Two forms were tested:
+  - higher-order waveform asymmetry, our variant (`tra_x`, excess over phase surrogates);
+  - the published second-order lagged-correlation form (`ne2`; after Camassa 2024 doi:10.1038/s41598-024-74649-1, Berjaga-Buisan 2026 doi:10.1016/j.celrep.2026.117782).
+- **Data:** Sleep-EDF, 60 subjects; Chennu propofol, 20; ds005620 propofol, 15. All subject-held-out, under the sealed prereg `docs/prereg/2026-11-18_nonequilibrium_vs_spectrum.md`.
+- **Result:**
+  - `tra_x` is spectrum-free (it passes the gate) and separates wake from N3 (AUC 0.70). It does not separate REM from N3 (AUC 0.50), and it adds at most +0.002 AUC over the exponent plus band powers anywhere (Holm p ≥ 0.55). So it is an arousal or waveform marker, not a consciousness marker.
+  - `ne2` alone gives AUC 0.43 to 0.56 and does not replicate on scalp EEG.
+- **What it could catch:** P2 found 80% power at d = 0.2 (ΔAUC about 0.0002) in Sleep-EDF wake vs N3, and 100% at d = 0.4 in both sleep contrasts.
+- **Not closed:**
+  - Propofol: power was 10% (Chennu) and 0% (ds005620) at d = 0.4.
+  - Source-level, high-density or OU-model estimators of second-order irreversibility.
+  - Irreversibility in intracranial data.
+- **Details:** `experiments/nonequilibrium/RESULTS.md`.

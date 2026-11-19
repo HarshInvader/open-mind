@@ -1,6 +1,6 @@
 # Open Mind: open tasks
 
-Exported from the team board on 18 Nov 2026. 13 ready, 6 waiting on earlier tasks, 1 in progress, 19 done.
+Exported from the team board on 18 Nov 2026. 13 ready, 7 waiting on earlier tasks, 1 in progress, 20 done.
 
 To take one, read [CONTRIBUTING.md](../CONTRIBUTING.md) first: open an issue named `Taking #<id>` so nobody duplicates it.
 
@@ -110,6 +110,12 @@ Milestone M3, priority 3. Waits for #18.
 
 mind-3 saw (exploratory, Zhang&Wamsley only) that low delta goes with NO experience at sleep onset but WITH experience in later N2. Draft a theory that predicts this flip from a mechanism, or state why it is an artefact. Seal before any confirmatory test; confirm only on data not yet seen (LODE, DeGennaro multiple-awakenings, Tononi held-out), excluding Zhang and YoungAdults.
 
+### #40 B3b Which level carries the state: a grain sweep
+
+Milestone M3, priority 3. Waits for #22.
+
+Question: at which spatial and temporal grain does EEG best predict reported experience? On the report-labelled awakenings (held out by person and lab), decode experience vs no experience from single channels, channel groups (regions) and the whole head, with windows of 1, 5, 10 and 30 s. Seal the plan in docs/prereg/ first. Planted check first: synthetic EEG where only one grain carries the label; the method must name that grain. Second check: Rosas, Mediano et al. 2020 causal-emergence measure (doi:10.1371/journal.pcbi.1008289) on the same data. Report the grain curve with CIs and the smallest difference between grains the test could detect. Background: Hoel, Albantakis, Tononi 2013 (doi:10.1073/pnas.1314922110); Hoel et al. 2016 (doi:10.1093/nc/niw012). Every claim in RESULTS.md names its grain.
+
 ### #11 Pre-registered multiverse on COGITATE
 
 Milestone M3, priority 4. Waits for #10.
@@ -151,6 +157,8 @@ Draft a candidate where a basic layer (e.g. sustained posterior activity gated b
 - #24 B1 Constraint ledger: **data**, `experiments/constraint_ledger/RESULTS.md`
 
 - #25 B2 Theory x constraint scorecard: **data**, `experiments/theory_scorecard/RESULTS.md`
+
+- #41 Non-equilibrium (irreversibility) vs spectrum: published second-order form and our higher-order variant: **negative**, `experiments/nonequilibrium/RESULTS.md`
 
 - #21 Chennu propofol set exceeds download budget: **tool**, `experiments/chennu_access/RESULTS.md`
 
