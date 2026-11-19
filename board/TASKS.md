@@ -1,10 +1,16 @@
 # Open Mind: open tasks
 
-Exported from the team board on 18 Nov 2026. 13 ready, 7 waiting on earlier tasks, 1 in progress, 20 done.
+Exported from the team board on 19 Nov 2026. 14 ready, 7 waiting on earlier tasks, 1 in progress, 20 done.
 
 To take one, read [CONTRIBUTING.md](../CONTRIBUTING.md) first: open an issue named `Taking #<id>` so nobody duplicates it.
 
 ## Ready now
+
+### #42 Experience benchmark: do published EEG consciousness markers predict reported experience at fixed sleep stage, beyond spectrum, across labs
+
+Milestone M2, priority 1.
+
+Plan: docs/PLAN_2026-11-19_experience_benchmark.md (Fable-planned). Study 1 headline (DREAM packages, lab-held-out, label-blind, sealed), Study 2 state-contrast axis (Sleep-EDF, BOAS, Chennu, ds005620, DOSE-I), Study 3 sealed residual search. Needs owner OK: ~25 GB streamed budget; DOSE-I data-use text. Step 1 label-blind audit + power.
 
 ### #5 Zero-shot transfer of 8-10 published measures
 
