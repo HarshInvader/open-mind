@@ -68,3 +68,5 @@ d677f0eaab5a6c88ff89b7173008a90886662d27904a287e5ea68b8acae5003c  experiments/ex
 c70139f997c1743aa0c8e8f785e717a2dc493207b7a9b01c84d884530af651c9  docs/prereg/2026-11-19_experience_benchmark_amendment2.md  2026-11-19T15:07:38Z
 69c940f0bf722f787cba3305e2601d6d936c424f920bc2c84c70089a547c80eb  experiments/experience_benchmark/analysis.py  2026-11-19T15:55:01Z
 6fb640560bbb588c7c9ac3db7f2bd87c799ab218cfde47ec18319edc619ff617  docs/prereg/2026-11-19_experience_benchmark_amendment3.md  2026-11-19T15:55:37Z
+f79b10f59972795fa3923a2a1b79d0e1103d57018e6f840912681d55619e2008  experiments/experience_benchmark/extract.py  2026-11-19T16:58:59Z
+6845ce733bc59ccb9e21b7e4b7919f30a43cb3cb944e8d35bb95cd769c2818c9  docs/prereg/2026-11-19_experience_benchmark_amendment4.md  2026-11-19T16:58:59Z

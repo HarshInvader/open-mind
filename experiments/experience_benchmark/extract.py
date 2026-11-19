@@ -16,8 +16,10 @@ Rules fixed here, before any confirmation-lab sample is read (prereg §3 and ame
   logged (label-blind) so the end-of-record rule can be checked before unblinding. Any change to the
   rule after that check is made by a sealed amendment.
 - Units: physical dimension from the header (uV, mV, V, nV) converted to uV.
-- Bad channel (main window, native rate, after unit conversion, before re-referencing):
-  SD < 0.5 uV or SD > 200 uV or max |x| > 1000 uV. Record dropped if < 60% of EEG channels are good.
+- Bad channel (main window, native rate, after unit conversion, before re-referencing), judged on a copy of
+  the tail high-passed at 0.5 Hz (Butterworth order 2, zero-phase; amendment 4, because DC-coupled drift
+  tripped the limits): SD < 0.5 uV or SD > 200 uV or max |x| > 1000 uV. Record dropped if < 60% of EEG
+  channels are good. Only the good/bad decision uses the high-passed copy; features use the signal as before.
 - Re-reference: average of good EEG channels (LODE: bipolar derivations kept as recorded).
 - Native branch: notch at the lab's mains frequency (Q 30), Welch 4 s Hann 50%: posterior delta, posterior HF.
 - 100 Hz branch: resample_poly to 100 Hz, then lz_slope.features.preprocess; all other measures.
@@ -39,7 +41,7 @@ from fractions import Fraction
 
 import numpy as np
 import pandas as pd
-from scipy.signal import resample_poly, welch
+from scipy.signal import butter, resample_poly, sosfiltfilt, welch
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -179,7 +181,7 @@ def _process(job):
         X = X[:, :X.shape[1] - k * blk]
     if X.shape[1] < 32 * fs:
         out["status"] = "dropped: < 32 s after trimming silence"; return out
-    w = win(X, fs, -22, -2)
+    w = win(sosfiltfilt(butter(2, 0.5, "highpass", fs=fs, output="sos"), X, axis=1), fs, -22, -2)   # amendment 4
     sd = w.std(1); good = (sd >= 0.5) & (sd <= 200) & (np.abs(w).max(1) <= 1000)
     out["n_good"] = int(good.sum())
     if good.mean() < 0.6:
