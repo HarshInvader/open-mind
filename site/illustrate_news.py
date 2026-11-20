@@ -365,6 +365,21 @@ def draw(key, a):
         a.trace(360, 160, 180, lambda i: noisy(18, 7)(i) * 0.92 + 2, AMB, 1.6)
         a.trace(360, 260, 180, noisy(14, 8), INK, 2.4)
         a.trace(360, 260, 180, lambda i: noisy(14, 8)(i) * 0.9 - 2, AMB, 1.6)
+    elif key == "zhou-alpha-coherence-doc-recovery":   # loose, out-of-step nodes at the back, then a linked network
+        f = a.brain(50, 120, 1.8, dashed=True)
+        pts = [(84, 26), (100, 36), (94, 52), (76, 44)]
+        for p in pts:
+            a.circle(*f(*p), 6, CARD, MUTE, 2)
+        a.dashed([f(*pts[0]), f(*pts[2])], MUTE, 1.6)
+        a.arrow(272, 190, 318, 190, INK, 2.2)
+        g = a.brain(340, 120, 1.8)
+        for i, p in enumerate(pts):
+            for q in pts[i + 1:]:
+                a.line([g(*p), g(*q)], IND, 2.2)
+        for p in pts:
+            a.circle(*g(*p), 7, IND, None)
+        a.trace(400, 80, 150, wave(9, 25), IND, 2.2)
+        a.circle(*g(100, 36), 4, AMB, None)
     elif key == "nunez-waveform-morphology":   # the same rhythm, symmetric and lopsided
         a.trace(70, 140, 460, wave(40, 115), INK, 2.6)
         def saw(i):
@@ -424,6 +439,7 @@ def draw(key, a):
 
 
 ALT = {
+    "zhou-alpha-coherence-doc-recovery": "Two schematic brains: on the left, four pale dots at the back barely linked; on the right, the same four dots filled and all joined, under a small even wave.",
     "rochas-n2-dreaming-hdeeg": "A schematic brain with small fast waves at the back and a slow wave at the front, beside a thought bubble holding lines of text-like strokes.",
     "selte-nrem-experience-hdeeg": "Rows of dots, about half filled in, beside a curve that rises well above a dashed diagonal.",
     "stoliker-psilocybin-context-ds006110": "Four panels showing rest, meditation, music and a film, with one looping path running through them.",

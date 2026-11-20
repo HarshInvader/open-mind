@@ -763,6 +763,23 @@
   },
   "items": [
     {
+      "id": "zhou-alpha-coherence-doc-recovery",
+      "section": "latest",
+      "date": "2026-11-13",
+      "kind": "Paper",
+      "head": "Alpha rhythm that stays in step across the back of the brain tracks cognitive recovery after severe brain injury (Zhou, Edlow et al.)",
+      "who": "Zhou DW, Conte MM, Curley WH, Spencer-Salmon CA, Chatelle C, Rosenthal ES, Bodien YG, Victor JD, Schiff ND, Brown EN, Edlow BL",
+      "venue": "Cortex",
+      "url": "https://doi.org/10.1016/j.cortex.2026.11.009",
+      "verified": true,
+      "gist": "A network measure of alpha coherence picked out patients who regained higher cognition better than a standard connectivity measure.",
+      "plain": "After a severe brain injury, some patients cannot show that they are aware. Doctors often read the alpha rhythm in a scalp EEG to judge how much of the brain is working. This team asked not only how strong alpha is, but how well different areas keep in step. In 95 clinical recordings from two hospitals, alpha that stayed in step across the back of the brain went with recovery of higher thinking. Their network measure picked out recovered patients better than a common connectivity measure did.",
+      "tech": "95 clinical EEG recordings from two centres: 28 healthy controls and 33 patients with acute or chronic disorders of consciousness, 25 of whom returned for follow-up. Global coherence analysis; network organisation from the principal eigenvector of the alpha-band (8-12 Hz) cross-spectral matrix. Recovery defined as a CRS-R total score of 22 or above. Classifying recovery: AUC .78 for the network measure against .45-.53 for weighted phase lag index connectivity. Small sample pooled from two studies; the outcome is a behavioural score threshold. Published text is closed, so numbers come from the published abstract (abstract only); an earlier open medRxiv version reports slightly different comparison AUCs.",
+      "borrow": "Coherence is built from the cross-spectrum, and our multichannel phase-randomised surrogates keep the cross-spectrum. So in the surrogate gate (task #8) this measure counts as spectral by design. The open question for us is whether alpha network shape adds anything over alpha power; we will test that on the Chennu propofol EEG (task #21) under a sealed prereg.",
+      "status": "planned",
+      "topic": "Measuring consciousness"
+    },
+    {
       "id": "nunez-waveform-morphology",
       "section": "latest",
       "date": "2026-11-16",
