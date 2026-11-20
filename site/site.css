@@ -459,3 +459,6 @@ main > section.landscape::before { display: none; }
 .lcard:target .lbody h3 a { color: var(--accent); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .lthumb { filter: brightness(0.86); } }
 :root[data-theme="dark"] .lthumb { filter: brightness(0.86); }
+.lsearch { flex-basis: 100%; margin: 4px 0 2px; } .lsearch input { font: inherit; font-size: 15px; width: 100%; max-width: 420px; padding: 8px 12px; border: 1px solid var(--line-strong); border-radius: 999px; background: transparent; color: var(--ink); }
+.lsearch input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pane h3 { font-size: 16px; margin: 18px 0 4px; } .pane h3:first-child { margin-top: 0; } .pane p { margin: 0 0 10px; }

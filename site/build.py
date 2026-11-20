@@ -516,9 +516,12 @@ def lib_card(p):
     chk = "" if p.get("verified") else ' <span class="chip chip-open">source not yet checked</span>'
     rows = "".join(f'<dt>{E(lbl)}</dt><dd>{md(p[k])}</dd>' for lbl, k in LIB_FIELDS if p.get(k))
     touches = f'<dt>Touches</dt><dd>{E(", ".join(p["touches"]))}</dd>' if p.get("touches") else ""
-    return (f'<article class="lcard" id="{E(p["id"])}" data-topic="{E(p["topic"])}" data-rel="{E(p["relevance"])}">{img}<div class="lbody">'
-            f'<p class="meta">{E(lib_short(p))} · {E(p["kind"])} · {E(p["venue"])}{chk}</p>'
-            f'<h3><a href="{E(p["url"])}">{E(p["title"])}</a></h3>'
+    nw = lib_news(p)
+    innews = f' · <a href="news-{E(nw["id"])}.html">In the news</a>' if nw else ""
+    search = " ".join(str(p.get(k) or "") for k in ("title", "authors", "venue", "year", "question", "key_results", "ideas_for_us", "topic")).lower()
+    return (f'<article class="lcard" id="{E(p["id"])}" data-topic="{E(p["topic"])}" data-rel="{E(p["relevance"])}" data-search="{E(search)}">{img}<div class="lbody">'
+            f'<p class="meta">{E(lib_short(p))} · {E(p["kind"])} · <a href="{E(p["url"])}">{E(p["venue"])}</a>{innews}{chk}</p>'
+            f'<h3><a href="paper-{E(p["id"])}.html">{E(p["title"])}</a></h3>'
             f'<p>{md(p["question"])}</p>'
             f'<p class="lchips"><span class="chip chip-{rel}">{E(REL_WORD[p["relevance"]])}</span> <span class="chip chip-open">{depth}</span></p>'
             f'<details class="lmore"><summary>Our analysis</summary><dl>{rows}{touches}</dl>'
@@ -527,12 +530,12 @@ def lib_card(p):
 
 LIB_JS = r"""<script>(function(){
 var f=document.querySelector('.lfilter');if(!f)return;
-function apply(){var t=f.querySelector('[data-t][aria-pressed="true"]').getAttribute('data-t'),c=f.querySelector('#lcore').checked,n=0;
-document.querySelectorAll('.lcard').forEach(function(x){var h=(!!t&&x.getAttribute('data-topic')!==t)||(c&&x.getAttribute('data-rel')!=='core');x.hidden=h;if(!h)n++});
+function apply(){var t=f.querySelector('[data-t][aria-pressed="true"]').getAttribute('data-t'),c=f.querySelector('#lcore').checked,n=0,q=(f.querySelector('#lq').value||'').toLowerCase().trim().split(/\s+/).filter(Boolean);
+document.querySelectorAll('.lcard').forEach(function(x){var d=x.getAttribute('data-search')||'';var h=(!!t&&x.getAttribute('data-topic')!==t)||(c&&x.getAttribute('data-rel')!=='core')||q.some(function(w){return d.indexOf(w)<0});x.hidden=h;if(!h)n++});
 document.getElementById('lcount').textContent=n+(n===1?' paper':' papers');}
 f.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;
 f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});apply();});
-f.querySelector('#lcore').addEventListener('change',apply);
+f.querySelector('#lcore').addEventListener('change',apply);f.querySelector('#lq').addEventListener('input',apply);
 if(location.hash){var el=document.getElementById(location.hash.slice(1));if(el&&el.classList.contains('lcard')){var d=el.querySelector('details');if(d)d.open=true;}}
 })();</script>"""
 
@@ -542,17 +545,68 @@ def page_library():
     papers = sorted(L["papers"], key=lambda p: ({"core": 0, "useful": 1, "context": 2}[p["relevance"]], -(p["year"] or 0), p["title"]))
     n_full = sum(p["read_depth"] == "full" for p in papers)
     out = head("Library", "Every paper we read, and what we take from it",
-               f'{len(papers)} papers and datasets, each with our own analysis: the question, the data, the result, the limits and what it means for our studies. '
+               f'{len(papers)} papers and datasets, each with its own page and our analysis: the question, the data, the result, the limits and what it means for our studies. '
                f'{n_full} were read in full; the rest from the abstract, and each card says which. New ones also appear in the <a href="news.html">news</a>.',
                '<p class="note">Pictures are topic illustrations drawn for this site, not figures from the papers.</p>')
     count = {t: sum(1 for p in papers if p["topic"] == t) for t in L["topics"]}
     btns = f'<button type="button" data-t="" aria-pressed="true">All <span>{len(papers)}</span></button>' + "".join(
         f'<button type="button" data-t="{E(t)}" aria-pressed="false">{E(t)} <span>{count[t]}</span></button>' for t in L["topics"] if count[t])
     tools = (f'<div class="lfilter nfilter" role="group" aria-label="Show papers about">{btns}'
+             f'<label class="lsearch"><span class="vh">Search the library</span><input type="search" id="lq" placeholder="Search titles, authors, results" autocomplete="off"></label>'
              f'<label class="lcore"><input type="checkbox" id="lcore"> Only papers that bear on a current study</label>'
              f'<p class="meta" id="lcount" aria-live="polite">{len(papers)} papers</p></div>')
     out += f'<section class="libsec" aria-label="Papers">{tools}<div class="lgrid">' + "".join(lib_card(p) for p in papers) + '</div></section>'
     return out + LIB_JS
+
+
+def lib_order():
+    return sorted(library()["papers"], key=lambda p: ({"core": 0, "useful": 1, "context": 2}[p["relevance"]], -(p["year"] or 0), p["title"]))
+
+
+_NEWS_BY_DOI = None
+def lib_news(p):
+    """The news item about this paper, matched by DOI in the news URL (or None)."""
+    global _NEWS_BY_DOI
+    if _NEWS_BY_DOI is None:
+        _NEWS_BY_DOI = [(n["url"].lower(), n) for n in json.loads((SITE / "news.json").read_text())["items"]]
+    d = (p.get("doi") or "").lower()
+    return next((n for u, n in _NEWS_BY_DOI if d and d in u), None)
+
+
+def first_sentence(x):
+    m = re.match(r"(.+?[.!?])(\s|$)", x or "")
+    return m.group(1) if m else (x or "")
+
+
+def paper_article(p, prev, nxt):
+    slug = topic_slug(p["topic"])
+    depth = "Full text read" if p["read_depth"] == "full" else "Abstract only"
+    rel = {"core": "ok", "useful": "warn"}.get(p["relevance"], "open")
+    chk = "Source checked against the original." if p.get("verified") else "Source not yet checked against the original; treat details with care."
+    story = " ".join(x for x in (p.get("question"), p.get("tried"), p.get("key_results")) if x)
+    tech = "".join(f'<h3>{E(lbl)}</h3><p>{md(p[k])}</p>' for lbl, k in (("Data and method", "method_data"), ("Results", "key_results"), ("Limits", "limits")) if p.get(k))
+    levels = [("gist", "In one line", f'<p>{md(first_sentence(p.get("key_results") or p.get("question")))}</p>'),
+              ("plain", "The story", f'<p>{md(story)}</p>'), ("tech", "Technical", tech)]
+    radios = "".join(f'<input type="radio" name="lvl" id="lvl-{k}" class="vh"{" checked" if k == "plain" else ""}><label for="lvl-{k}">{E(t)}</label>' for k, t, _ in levels)
+    panes = "".join(f'<div class="pane pane-{k}">{x}</div>' for k, _, x in levels)
+    vis = (f'<figure class="article-visual"><img src="assets/library/{slug}.webp" width="600" height="400" alt="{E(LIB_ALT.get(slug, "Illustration"))}" decoding="async">'
+           f'<figcaption>Topic illustration drawn for this site, not a figure from the paper.</figcaption></figure>')
+    nw = lib_news(p)
+    news = f' Also covered in the <a href="news-{E(nw["id"])}.html">news</a>.' if nw else ""
+    touches = f'<p class="meta">Touches our work: {E(", ".join(p["touches"]))}</p>' if p.get("touches") else ""
+    nb = ""
+    if prev:
+        nb += f'<a rel="prev" href="paper-{E(prev["id"])}.html"><small>Previous paper</small>{E(prev["title"])}</a>'
+    if nxt:
+        nb += f'<a rel="next" href="paper-{E(nxt["id"])}.html"><small>Next paper</small>{E(nxt["title"])}</a>'
+    return (f'<article class="news-article"><a class="nback" href="library.html#{E(p["id"])}">← Library</a>'
+            f'<p class="kicker">{E(str(p["year"]))} · {E(p["kind"])} · {E(p["venue"])} · {E(p["topic"])}</p>'
+            f'<h1 class="h-article">{E(p["title"])}</h1><p class="meta">{E(p["authors"])}</p>'
+            f'<p class="lchips"><span class="chip chip-{rel}">{E(REL_WORD[p["relevance"]])}</span> <span class="chip chip-open">{depth}</span></p>{vis}'
+            f'<div class="levels-tabs" role="group" aria-label="Detail level">{radios}{panes}</div>'
+            f'<h2>What we do with it</h2><p>{md(p.get("ideas_for_us") or "Not yet assessed.")}</p>{touches}'
+            f'<p class="note"><a href="{E(p["url"])}">Read the original</a> (doi:{E(p["doi"])}). {chk}{news}</p>'
+            f'<nav class="article-neighbors" aria-label="Other papers">{nb}</nav></article>')
 
 
 def news_article(n, prev, nxt):
@@ -893,6 +947,11 @@ def main():
     seq = latest + land
     for i, n in enumerate(seq):
         (DIST / f"news-{n['id']}.html").write_text(layout("news.html", f"{n['head']} · {NAME}", n["gist"], news_article(n, seq[i - 1] if i else None, seq[i + 1] if i + 1 < len(seq) else None)))
+    lib = lib_order()
+    for i, pp in enumerate(lib):
+        (DIST / f"paper-{pp['id']}.html").write_text(layout("library.html", f"{pp['title']} · {NAME}", first_sentence(pp.get("question") or pp["title"]),
+                                                           paper_article(pp, lib[i - 1] if i else None, lib[i + 1] if i + 1 < len(lib) else None)))
+    print("wrote", len(lib), "paper pages")
     (DIST / "news.xml").write_text(news_rss())
     print("wrote", len(PAGES), "pages and", len(seq), "news articles to", DIST)
     imgs = sum(p.stat().st_size for p in DIST.rglob("*") if p.suffix in (".webp", ".png", ".jpg", ".svg"))
