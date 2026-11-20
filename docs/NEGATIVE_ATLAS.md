@@ -37,3 +37,21 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
 - **Method warning:** the draft pipeline, with a free skew-normal as the only rival, "found" two states in graded data with none. Unbounded skew-normal fits on about 60 trials predict held-out data badly; any mixture-vs-unimodal likelihood test needs a stable rival.
 - **Not closed:** T4 itself; P2 (misses vs correct rejections, delayed report), which was not run on real data; intracranial bimodality with more trials per level.
 - **Details:** `experiments/our_theory/t4_planted/RESULTS.md`.
+
+## EEG spectrum does not predict dream report within a person at N2, outside DREAM (task #42, Michalak check, 2026-11-20)
+
+- **Route closed (partly):** posterior spectral balance (gamma/delta ratio, gamma, delta) as a within-person predictor of contentful experience vs no experience at N2. An AUC of 0.60 or more is excluded for all three scores.
+- **Data:** Michalak et al. 2026, PLoS Biol (doi:10.1371/journal.pbio.3003683); open features on Zenodo (doi:10.5281/zenodo.15372992, CC BY 4.0). 660 N2 awakenings (432 experience, 228 none) from 48 people; 41 people with both classes. 256-channel EEG, log power over 90-120 s before the alarm, 13 posterior electrodes. Sealed amendment 5 and `michalak_check.py` (sha256 a6f1f137…, 2026-11-20T01:03:27Z) before any label was read.
+- **Result (within-person pair AUC, 95% CI):**
+  - ratio 0.512 [0.449, 0.580], one-sided p 0.35;
+  - gamma 0.481 [0.414, 0.559];
+  - delta 0.507 [0.445, 0.562].
+
+  The sealed reading is OTHER, not "null settled": two bounds fall just outside the pre-set [0.43, 0.57] band. Pooled between-person AUCs are higher for delta (0.576 [0.517, 0.628]) and the ratio (0.562), consistent with pooled figures carrying between-person differences.
+- **What it could catch:** within-person AUC above about 0.58 (ratio) or 0.56 (gamma, delta) would have shown in the CI. Smaller effects are not excluded.
+- **Prior art that agrees:**
+  - Bazán Sánchez 2026 (doi:10.13140/RG.2.2.14388.00642): the DREAM Figure 5 workflow gives within-lab AUROC 0.498 and lab-held-out 0.493 (NREM spectral), and lab identity is decodable at 0.81-0.95.
+  - Wong et al. 2020, Dream Catcher (doi:10.1093/nc/niaa006): a blinded within-person NREM spectral null.
+  - Our Tononi N2 posterior delta: AUC 0.46-0.47.
+- **Not closed:** within-person effects below about 0.56-0.58; other windows (our 20 s pre-waking window); non-spectral and integration markers. Those are the only part of #42 still open, and DREAM labels remain sealed.
+- **Details:** `experiments/experience_benchmark/michalak.json`, `experiments/experience_benchmark/NOVELTY.md`.

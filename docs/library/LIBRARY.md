@@ -1,8 +1,8 @@
 # Open Mind library
 
-Generated from `library.json` on 2026-11-19. Do not edit by hand.
+Generated from `library.json` on 2026-11-20. Do not edit by hand.
 
-137 entries: 17 read in full, 120 from the abstract only. Every DOI was opened and its title and authors checked.
+139 entries: 17 read in full, 122 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -1037,7 +1037,19 @@ Vyazovskiy et al. (2011). *Nature 472:443-447*. [doi:10.1038/nature10009](https:
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C44
 
-## Sleep and dreams (20)
+## Sleep and dreams (22)
+
+### Cross-Laboratory Validation of EEG Classification of Reported Dream Experience
+
+Bazán Sánchez JE (2026). *ResearchGate preprint (2 Aug 2026), UNAM*. [doi:10.13140/RG.2.2.14388.00642](https://doi.org/10.13140/RG.2.2.14388.00642). Preprint, abstract only, **core**.
+
+- **Question:** Does the DREAM paper's EEG classifier of reported experience (Figure 5) transfer between laboratories?
+- **Idea tested:** Re-run the DREAM Figure 5 workflow (spectral power and catch22 features) and split its accuracy into record-wise, participant-held-out, within-lab and lab-held-out parts, with a lab-prevalence-only baseline and a lab-identity decoder.
+- **Data and method:** 1,065 reports from the five DREAM collections enumerated by DREAM's released experienceclassification code; NREM spectral power and REM catch22 classifiers.
+- **Results:** Record-wise AUROC 0.569 (NREM spectral) and 0.636 (REM catch22). Participant-held-out pooled 0.534 and 0.629. Within the same lab (site-conditioned) 0.498 and 0.498. Lab-held-out macro AUROC 0.493 and 0.470. A baseline that knows only each lab's report prevalence reaches 0.564 and 0.687 pooled. Lab identity is decoded from the same EEG features at macro AUROC 0.808-0.953. Conclusion: pooled discriminability is real but no common EEG marker transports between labs.
+- **Limits:** Numbers from the abstract as read in the full text by the coordinator in a browser; our automated fetch was blocked by ResearchGate (403) and not worked around. Generic features (spectra, catch22), NREM pooled across stages as in DREAM Figure 5; no hypothesis-driven consciousness markers, no within-person N2-only analysis reported in the abstract. Single author, not peer reviewed.
+- **For us:** Pre-empts #42's cross-lab spectral test and its planned headline contrast (pooled AUC driven by lab and between-person differences). Together with the Michalak within-person null (amendment 5) and our Tononi delta result, the spectral arm of #42 is no longer new. Anything left is within-person, N2-only, cross-lab tests of hypothesis-driven markers, with bounds: atlas material.
+- **Touches:** #42
 
 ### Immersive NREM2 dreaming preserves subjective sleep depth against declining sleep pressure
 
@@ -1106,6 +1118,18 @@ Moctezuma LA, Molinas M, Abe T (2025). *Sleep Advances 6:zpaf066*. [doi:10.1093/
 - **Limits:** Splits are over awakenings, not subjects, so a person's EEG signature can sit in both train and test. The near-perfect AUC is very likely inflated by subject leakage; compare Wong 2025 (AUC 0.59 in NREM, held out) and the authors' own leave-one-subject-out failure in Moctezuma 2025 (BMRI).
 - **For us:** A ready red-team example for #42: rerun this pipeline subject-held-out on the Tononi set (exposed tier) to show how much of 0.97 is leakage. It also supports our rule that no awakening-level split is ever reported.
 - **Touches:** #42, #22, #14
+
+### The Dream Catcher experiment: blinded analyses failed to detect markers of dreaming consciousness in EEG spectral power
+
+Wong W, Noreika V, Móró L, Revonsuo A, Windt J, Valli K, Tsuchiya N (2020). *Neuroscience of Consciousness*. [doi:10.1093/nc/niaa006](https://doi.org/10.1093/nc/niaa006). Article, abstract only, **core**.
+
+- **Question:** Can a blinded team tell dreamful from dreamless NREM sleep from EEG alone?
+- **Idea tested:** A Data Team collected serial-awakening polysomnograms and reports; a blinded Analysis Team classified each 1-min recording from hypothesis-driven EEG spectral-power and electrode-location features with an unsupervised classifier, over five rounds of gradually removed blindness.
+- **Data and method:** 54 one-minute NREM polysomnograms from 9 participants: 27 dreamful, 27 dreamless, three of each per participant (a balanced, within-person design).
+- **Results:** At no level of blindness did the Analysis Team classify better than chance.
+- **Limits:** Very small (9 participants, 54 recordings), so only large effects are excluded; NREM stage not fixed to N2 in the abstract; unsupervised classifier. Licence CC BY 4.0.
+- **For us:** Earliest blinded, within-person spectral null for dream experience in NREM. Prior art for the within-person spectral question #42 and the Michalak check (amendment 5) address; cite it alongside Bazán Sánchez 2026 and Aamodt 2023.
+- **Touches:** #42
 
 ### Sleep-EDF Database Expanded (v1.0.0)
 
