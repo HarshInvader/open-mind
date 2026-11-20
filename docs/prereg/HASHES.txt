@@ -72,3 +72,7 @@ f79b10f59972795fa3923a2a1b79d0e1103d57018e6f840912681d55619e2008  experiments/ex
 6845ce733bc59ccb9e21b7e4b7919f30a43cb3cb944e8d35bb95cd769c2818c9  docs/prereg/2026-11-19_experience_benchmark_amendment4.md  2026-11-19T16:58:59Z
 a6f1f137e2868fc7d0491f1b7aa34210477d9f5e404ee041ebfe2bf9652a139c  experiments/experience_benchmark/michalak_check.py  2026-11-20T01:03:27Z
 54567bed36cf8e1e8839cf5ab7dad86adb8fca0931cb66f9f3fabfcf8556b3f4  docs/prereg/2026-11-19_experience_benchmark_amendment5.md  2026-11-20T01:03:27Z
+cb6b44e3e852217a0ddc1cbf4b2b3a5bb2899dba1168327c4cd084bc74537631  docs/prereg/2026-11-20_self_model_kill_reversal.md  2026-11-20T16:31:50Z
+924aa0c9b5b63e36023796c505ea3836d3ce5e68d4ece67a667aafbd46c6989a  experiments/self_model_agents/kill_reversal.py  2026-11-20T16:31:50Z
+25f157bacd09aee02e598bb010772c04b7a8222884cbf231ce3097313eeaf7ed  docs/prereg/2026-11-20_self_model_kill_reversal_amendment1.md  2026-11-20T16:32:33Z
+a25bebb3daa84b9bf639c45d9d2d97822d2d1639a91c13026fcf8b1aeff6f6f7  experiments/self_model_agents/kill_reversal_a1.py  2026-11-20T16:32:33Z
