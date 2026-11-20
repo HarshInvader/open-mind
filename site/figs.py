@@ -96,7 +96,7 @@ def fig_seen_missed():
             + T(275, 126, "a candidate", "t-s", "middle") + T(275, 139, "correlate", "t-s", "middle"))
     return fig(svg("0 0 320 150", body, "Illustration: the same briefly flashed picture is sometimes seen and sometimes missed. "
                    "Whatever differs in the brain between the two cases is a candidate correlate of experience."),
-               "Same input, different experience: the difference is the clue", "Illustration. The contrast behind most of the field since Crick and Koch, 1990.")
+               "Same input, different experience: the difference is the clue", "Illustration. The contrast behind most of the field since Crick and Koch, 1990. A difference is a clue, not an explanation: seen and missed trials can also differ in how strong the signal was.")
 
 
 def fig_two_questions():
@@ -182,7 +182,7 @@ ICONS = {
 }
 STEPS = (("seal", "Seal it", "Measure, threshold and pass mark hashed before any outcome is seen"),
          ("hold", "Hold people out", "Split by person; the same lab counts as a near-copy"),
-         ("plant", "Plant an answer", "Recover an injected effect; call spectrum-matched noise unconscious"),
+         ("plant", "Plant an answer", "Recover an answer we put in on purpose, and reject fake signals"),
          ("red", "Red team", "Someone who did not build it tries to break it"),
          ("pub", "Publish either way", "Failures go out with the effect the test could have caught"))
 

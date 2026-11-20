@@ -191,7 +191,7 @@ def page_index():
                  'Dreaming sleep (shaded) looks almost like waking, and people woken from it usually report experiences.</figcaption>', art, flags=re.S)
     hero = (f'<section class="hero home-hero" aria-labelledby="claim"><div class="hero-text">'
             f'<p class="kicker">{E(NAME)}, an open research group</p>'
-            '<h1 id="claim">Find the best theory of consciousness by 2027</h1>'
+            '<h1 id="claim">Find the most accurate theory of consciousness we can, by 2027</h1>'
             '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
             '<div class="actions"><a class="btn primary" href="contribute.html">Contribute</a><a class="btn" href="findings.html">Read the findings</a></div>'
             f'</div>{art}</section>')
