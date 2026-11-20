@@ -60,3 +60,11 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
   - other windows, such as the 20 s before waking.
 - **Why #42 stopped:** after this prior art, the only open part (hypothesis-driven markers, within person, N2, across labs) was judged too thin for its cost. The label-blind DREAM extraction was stopped at 170 of 452 Rome records. **DREAM labels were never opened**, so the sealed #42 plan (prereg and amendments 1-5) remains unspent and could still be run blind later.
 - **Details:** `experiments/experience_benchmark/michalak.json`, `experiments/experience_benchmark/NOVELTY.md`.
+
+## No-report single-trial bifurcation is undetectable at realistic separation on Cohen and Sergent counts (killed 2026-11-20)
+
+- **Idea:** an outside, sealed test of single-trial bimodality at fixed stimulus strength on two public no-report EEG datasets (Cohen 2024, doi:10.1093/cercor/bhae415; Sergent 2021, doi:10.1038/s41467-021-21393-z).
+- **Kill test:** the T4 planted two-state pipeline at each dataset's real counts, planted mixture at d' 1.0-1.5 (expected d' about 0.95 from Sergent's report AUC > 0.75). Rule: power below 80% kills.
+- **Result:** 0 of 50 simulated studies passed (each cell 0/10; one-sided 95% upper bound 0.26). Passes at d' 3. More trials (Cohen) did not help.
+- **Lesson:** the bottleneck is state overlap, not sample size. Do not attempt single-trial bimodality on scalp EEG at near-threshold separation with this pipeline. The originating lab's mixture results (Sergent 2021; Boyer 2026, doi:10.64898/2026.06.17.732590) have no published planted check either.
+- No real data was opened. Details: `experiments/bifurcation/RESULTS.md`.
