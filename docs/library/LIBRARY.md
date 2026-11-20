@@ -2,11 +2,11 @@
 
 Generated from `library.json` on 2026-11-20. Do not edit by hand.
 
-139 entries: 17 read in full, 122 from the abstract only. Every DOI was opened and its title and authors checked.
+144 entries: 18 read in full, 126 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (52)
+## Theories tested (53)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -143,6 +143,18 @@ Leung A, Kawashima Y, Tsuchiya N (2026). *PsyArXiv (9 Sep 2026)*. [doi:10.31234/
 - **Limits:** Registered report; final results pending.
 - **For us:** Massive feature extraction is our Study 3 route. Their toolbox is the parent of catch22, which is in #42's measure list; worth reading their feature-family handling and multiple-comparison control before sealing Study 3 variants.
 - **Touches:** #42, Study 3
+
+### A dynamic bifurcation mechanism explains cortex-wide neural correlates of conscious access
+
+Klatzmann U, Froudist-Walsh S, Bliss DP, Theodoni P, Mejías JF, Niu M, Rapan L, Palomero-Gallagher N, Sergent C, Dehaene S, Wang XJ (2025). *Cell Reports*. [doi:10.1016/j.celrep.2025.115372](https://doi.org/10.1016/j.celrep.2025.115372). Article, abstract only, **useful**.
+
+- **Question:** What network mechanism produces all-or-none ignition across cortex?
+- **Idea tested:** Simulation of a detection task in a connectome-based model of macaque cortex.
+- **Data and method:** Computational model; receptor predictions checked against in vitro autoradiography.
+- **Results:** A dynamic bifurcation in associative regions produces ignition; an NMDA/AMPA gradient shapes it, with higher NMDA:AMPA ratios predicted in sensory than association areas.
+- **Limits:** Model only, no human EEG test of single-trial bimodality.
+- **For us:** The 'cortex-wide bifurcation' paper the coordinator asked about (not by Garnier-Allain). Gives the theory behind the bifurcation kill test; does not pre-empt it.
+- **Touches:** bifurcation
 
 ### Integrated information theory (IIT) 4.0: formulating the properties of phenomenal existence in physical terms
 
@@ -575,7 +587,19 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (41)
+## Measuring consciousness (45)
+
+### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
+
+Boyer J, Beraud N, Béranger B, Hardy T, Türker B, Gouyette H, Lopez-Persem A, Sergent C (2026). *bioRxiv*. [doi:10.64898/2026.06.17.732590](https://doi.org/10.64898/2026.06.17.732590). Preprint, abstract only, **core**.
+
+- **Question:** Which brain networks produce all-or-none bifurcation dynamics in conscious perception, with and without a task?
+- **Idea tested:** fMRI with near-threshold sounds in task and no-task contexts; single-trial modelling of bifurcation.
+- **Data and method:** fMRI; sample size not in the abstract.
+- **Results:** Intensity modulated broad networks including PFC in both contexts; single-trial models found bifurcation beyond primary sensory cortex and predicted perception trial by trial in both contexts.
+- **Limits:** Originating lab (Sergent); abstract only; no planted or recovery check stated. Licence CC BY-NC-ND.
+- **For us:** Narrows the novelty of the bifurcation kill test: the originating lab has now shown no-task bifurcation in EEG (2021) and fMRI. What stays open is an outside, sealed, planted-bounded test across Cohen and Sergent EEG.
+- **Touches:** bifurcation
 
 ### Critical dynamics in spontaneous EEG predict perturbational complexity in disorders of consciousness with measurable evoked responses
 
@@ -633,6 +657,18 @@ Maschke C, Belloli L, Manasova D, Sitt JD, Blain-Moraes S (2025). *Cerebral Cort
 - **For us:** The direct source for our surrogate gate (task #8) and the LZ vs slope test (task #4). It is the PMC12448740 paper the plan cites. We also stratify by aetiology wherever patient data allow.
 - **Touches:** news
 
+### Neural signatures of visual awareness independent of postperceptual processing
+
+Cohen MA, Dembski C, Ortego K, Steinhibler C, Pitts MA (2024). *Cerebral Cortex*. [doi:10.1093/cercor/bhae415](https://doi.org/10.1093/cercor/bhae415). Article, full text, **core**.
+
+- **Question:** Which EEG signals track visual awareness when report is removed?
+- **Idea tested:** Visual masking with 5 linear SOAs (17-83 ms), separate report and no-report conditions, ERP analysis.
+- **Data and method:** EEG, 40 participants; seen rates about 58% at 50 ms and 89% at 67 ms in the report condition. Data on OSF 6d5av (no licence stated).
+- **Results:** Only a fronto-central N2 (about 250-300 ms) follows awareness nonlinearly in both conditions; the VAN does not survive removal of report; earlier ERPs follow the linear SOA manipulation.
+- **Limits:** Condition-averaged ERPs: no single-trial bimodality test at fixed strength. OSF data has no licence stated, so reuse is blocked until clarified.
+- **For us:** Primary dataset for the no-report bifurcation kill test (experiments/bifurcation). Its trial counts set the planted-power design.
+- **Touches:** bifurcation
+
 ### Large scale screening of neural signatures of consciousness in patients in a vegetative or minimally conscious state
 
 Sitt JD, King JR, El Karoui I, Rohaut B, Faugeras F, Gramfort A, Cohen L, Sigman M, Dehaene S, Naccache L (2014). *Brain 137:2258-2270*. [doi:10.1093/brain/awu141](https://doi.org/10.1093/brain/awu141). Paper, abstract only, **core**.
@@ -644,6 +680,29 @@ Sitt JD, King JR, El Karoui I, Rohaut B, Faugeras F, Gramfort A, Cohen L, Sigman
 - **Limits:** Single centre at the time; spectral and complexity features were not nested.
 - **For us:** The source of wSMI and the 'many markers' design that #42 inherits; our nesting rule asks what each adds beyond spectrum.
 - **Touches:** #42, Study 2
+
+### "The self" as shifting coalitions of brain systems in a continuous configuration space
+
+Skipper JI, Blackburne G, Cooper G, Jaglinska M, Jedlovszky K, Kuc J, McAlpine R, Timmermann C (2026). *bioRxiv*. [doi:10.64898/2026.11.12.766263](https://doi.org/10.64898/2026.11.12.766263). Preprint, abstract only, **useful**.
+
+- **Question:** Is there a core brain region or network for the self?
+- **Idea tested:** Meta-analysis of 912 neuroimaging papers; titles and abstracts clustered into ten forms of self; brain maps per form; held-out prediction of reported regions.
+- **Data and method:** 912 publications, ten self-related maps (e.g. autobiographical memory, body ownership, interoception).
+- **Results:** No location significant in all ten maps; maps related selectively to aspects of consciousness; graded mixtures of maps predicted held-out papers' regions better than single maps or on/off combinations.
+- **Limits:** Abstract only. 'No core' rests partly on a failed conjunction across ten maps, an absence-of-evidence inference whose sensitivity is not stated in the abstract. Licence CC BY-NC-ND (no figure reuse).
+- **For us:** Self and ego are related to consciousness, not the same. Relevant to ego dissolution (psychedelics; Timmermann is an author) and to any self-consciousness study. A planted check of the conjunction null (could a real shared core have been detected?) would fit our null-audit style.
+
+### Identifying neural correlates of auditory perceptual awareness and deviance using a no-report inattentional deafness paradigm
+
+Ellinghorst A, Dellert T, Zhu Y, Straube T, Dykstra AR, Schloßmacher I (2026). *bioRxiv*. [doi:10.64898/2026.10.05.755932](https://doi.org/10.64898/2026.10.05.755932). Preprint, abstract only, **useful**.
+
+- **Question:** Can awareness, deviance and task relevance be separated in auditory ERPs?
+- **Idea tested:** Multitone masking; three phases with identical tone pairs: naive (unaware), informed (aware), task-relevant.
+- **Data and method:** EEG ERPs; sample size not in the abstract.
+- **Results:** Aware tones gave an auditory awareness negativity and a larger P3-window positivity, both larger when task-relevant; MMN in all phases; deviant P3 only when task-relevant.
+- **Limits:** Abstract only; condition-averaged ERPs; awareness manipulated between phases (order confound possible).
+- **For us:** Not a single-trial bifurcation test, so no threat to that study's novelty. Shows AAN and P3 can be dissociated from report in audition.
+- **Touches:** bifurcation
 
 ### Inferring brain structural complexity from dynamical measures
 
