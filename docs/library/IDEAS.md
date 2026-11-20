@@ -62,3 +62,23 @@ Ranked ideas that came out of the 2026-11-19 library sweep. They are ideas only.
 - **Serial dependence of reports across a night** (zheng-melloni-2026-long-timescale-awareness). Does the previous awakening's report predict the next one beyond the existing #42 covariates? Exploratory only.
 - **Hutchinson VAN/P3b effect sizes as priors for any Stockart reanalysis** (hutchinson-2026-van-p3b-meta).
 - **Simulated positive controls for spontaneous-EEG markers** (gaglioti-2026-structural-complexity). Plant known wiring in a model and check that each #42 marker can see it.
+
+## Ideas from Thorat and Chopra (2026), added 2026-11-20
+
+Source: arXiv:2609.33366 (doi:10.48550/arXiv.2609.33366, full text read). Their programme builds a "functional profile" of what awareness changes, using only contrasts where the information available about the content is matched. Their sweep code is public: https://github.com/Lossfunk/consciousness-sweep (opened). Ideas only; none is a study yet. Each needs the prior-art step before any compute.
+
+### A. Sensitivity audit of the functional profile's nulls
+
+- **What is untested:** their one "preserved without awareness" entry (Keizer et al. 2015, doi:10.3758/s13423-014-0706-2, not yet opened) rests on a non-significant masking-by-binding interaction (8.6 ms vs 5.8 ms binding cost; their summary). Nobody has said what effect that design could have detected, or whether the data support equivalence.
+- **Method:** the same as the COGITATE null audit: smallest detectable effect and equivalence bounds from reported statistics, then from raw data if open.
+- **Why it matters:** negative constraints are the hardest part of their profile to defend, and they say so themselves.
+
+### B. A spectral-matching gate for neural evidence
+
+- **What is untested:** whether the aware-vs-unaware neural differences their architectures must respect survive the neural version of their own matching rule (spectrum and signal strength matched). Our LZ result says at least one level marker does not.
+- **Method:** extend the surrogate gate and spectral baseline from state contrasts to trial-level aware-vs-unaware contrasts on open no-report or masking EEG.
+
+### C. Sealed, prospective AST predictions for COGITATE experiment 2
+
+- **What is untested:** they ask for prospective predictions that separate candidate architectures. COGITATE experiment 2 manipulates attention, and results are not out. Attention Schema Theory, their worked example, should predict when an unattended stimulus is still reported as experienced.
+- **Method:** write AST's predictions next to IIT's and GNWT's in the forecast registry and hash them before release. Ideally with the authors, so the predictions are ones AST's proponents accept.

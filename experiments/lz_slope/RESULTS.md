@@ -55,3 +55,12 @@ Sleep-EDF Expanded, sleep-cassette (PhysioNet, DOI 10.13026/C2X676, ODC-BY). 45 
 | H2 pnLZ adds over exponent | no |
 | H3 LZ adds over full spectral baseline | no (both contrasts) |
 | H4 pnLZ adds over full spectral baseline | no (delta at most 0.002) |
+
+## Related framing: Thorat and Chopra (2026)
+
+Thorat and Chopra, "Towards full-stack functionalist theories of consciousness: Identifying the functional profile" (arXiv:2609.33366, v3, 10 Nov 2026, doi:10.48550/arXiv.2609.33366; full text read 2026-11-20), set a rule for behavioural evidence that this result applies to neural evidence.
+
+- **Their rule:** an awareness-linked difference in how a content is used counts only if it cannot be reduced to a difference in the information available about that content. They enforce this with matched first-order performance or diagnostic designs.
+- **Our analogue:** a state-linked difference in a complexity measure counts only if it cannot be reduced to a difference in the power spectrum. We enforce this with a full spectral baseline and phase-randomised surrogates. On Sleep-EDF, LZ fails that test (H3: +0.0004 and -0.0002 AUC; 97% of its separation kept on surrogates).
+- **Where the two meet:** they already decline to treat awareness-linked neural signatures as functional associations unless the computation behind them is characterised. This result gives one concrete reason: a widely used marker is, in this data, a spectral summary.
+- **Their caution about nulls applies here too:** they note that the absence of a detectable difference does not establish equivalence (citing Meyen et al. 2021, unverified here). That is why the planted power check (P2: power 0.85 at a mean delta of 0.0005 AUC) is reported next to every null above.
