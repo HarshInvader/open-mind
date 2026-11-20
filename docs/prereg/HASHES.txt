@@ -70,3 +70,5 @@ c70139f997c1743aa0c8e8f785e717a2dc493207b7a9b01c84d884530af651c9  docs/prereg/20
 6fb640560bbb588c7c9ac3db7f2bd87c799ab218cfde47ec18319edc619ff617  docs/prereg/2026-11-19_experience_benchmark_amendment3.md  2026-11-19T15:55:37Z
 f79b10f59972795fa3923a2a1b79d0e1103d57018e6f840912681d55619e2008  experiments/experience_benchmark/extract.py  2026-11-19T16:58:59Z
 6845ce733bc59ccb9e21b7e4b7919f30a43cb3cb944e8d35bb95cd769c2818c9  docs/prereg/2026-11-19_experience_benchmark_amendment4.md  2026-11-19T16:58:59Z
+a6f1f137e2868fc7d0491f1b7aa34210477d9f5e404ee041ebfe2bf9652a139c  experiments/experience_benchmark/michalak_check.py  2026-11-20T01:03:27Z
+54567bed36cf8e1e8839cf5ab7dad86adb8fca0931cb66f9f3fabfcf8556b3f4  docs/prereg/2026-11-19_experience_benchmark_amendment5.md  2026-11-20T01:03:27Z
