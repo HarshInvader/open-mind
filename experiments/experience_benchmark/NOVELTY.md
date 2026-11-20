@@ -1,6 +1,6 @@
 # #42 experience benchmark: what is new after the prior art (2026-11-20)
 
-Status: **paused before unblinding.** DREAM labels stay sealed. The running label-blind extraction may finish, but nothing new is started on DREAM until the coordinator gives a direction.
+Status: **stopped 2026-11-20 (coordinator, after an independent Fable read).** DREAM labels were never opened; extraction stopped at 170 of 452 Rome records. See the NEGATIVE_ATLAS entry "Within-person N2 markers do not separate experience from no experience".
 
 ## Closest work (opened)
 
