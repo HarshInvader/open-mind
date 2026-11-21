@@ -16,3 +16,14 @@ No agent study has checked an ablated, learned (not hard-wired, not correctness-
 ## Kill test before any agent is trained
 
 Is the Tsushima reversal even diagnostic of a self-model? If any detection-gated controller produces it, reproducing it in an agent shows nothing about attention schemas. Sealed in `docs/prereg/2026-11-20_self_model_kill_reversal.md`.
+
+## Independent novelty read (2026-11-21)
+Fable was out of usage credits, so a fresh Opus agent with no repo access did the read instead. Verdict: **partly novel, close to novel.** It added two papers it opened: Farrell, Ziman and Graziano (arXiv:2411.00983; an attention schema helps agents coordinate with others' attention; no distractors or confidence) and Saxena et al. (arXiv:2509.16058, ASAC; a schema module in vision transformers; not RL). It found no computational model of the Tsushima reversal, and no agent where the observability of its own attention is manipulated.
+
+Its design criticisms, adopted:
+1. Three arms, not two: learned schema; stimulus-only control; direct access to the attention state with no learned model.
+2. Capture must include a random part the stimulus cannot predict, or a stimulus-only agent can infer its own attention state and the observability manipulation separates nothing.
+3. Rewarding the wager is indirect correctness supervision; say so and compare with Phua's supervised version.
+4. Decoding is not use: clamp or swap the module's state between trials to show it is causal.
+
+One disagreement, which becomes the first kill test: the reviewer expects a stimulus-only agent with a suppress cost to show the reversal; step 0 predicts it will not if training gets close to optimal.

@@ -53,7 +53,7 @@ NAME = C["name"]
 GOAL = C["goal"]
 
 PAGES = [("index.html", "Home"), ("findings.html", "Findings"), ("theories.html", "Theories"), ("approach.html", "Approach"),
-         ("tracker.html", "Tracker"), ("news.html", "News"), ("library.html", "Library"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources")]
+         ("tracker.html", "Tracker"), ("news.html", "News"), ("library.html", "Library"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources"), ("ai.html", "AI")]
 
 
 def md(s):
@@ -73,6 +73,7 @@ NAV_GROUPS = (
     ("Research", (("findings.html", "Findings", "What is known, and what we found", "find"),
                   ("theories.html", "Theories", "The field of theories we score", "theory"),
                   ("approach.html", "Approach", "How every idea gets tested", "approach"),
+                  ("ai.html", "Can AI be conscious?", "Testing the tests before using them on AI", "theory"),
                   ("news.html", "News", "New papers, summarised", "news"),
                   ("library.html", "Library", "Every paper we read, analysed", "files"),
                   ("tracker.html", "Tracker", "Progress and the live task board", "tracker"))),
@@ -368,6 +369,38 @@ def page_approach():
                         "Status from the live task board, " + FG.code("board/board.db") + ". Plan: " + FG.code("docs/PLAN.md") + ", track B."),
                  "Any theory, ours included, is scored by agents who did not write it, may not be revised after its predictions are opened without a new hash and a new test, and goes into the list of closed routes if it fails.")
     out += block("06", "Not claimed", "h-not", "Even a winning theory would not explain why experience exists", f'<ul class="mk">{nots}</ul>')
+    return out
+
+
+# ---------------------------------------------------------------- AI sub-project
+def page_ai():
+    st = {t["id"]: t["state"] for t in TASKS}
+    lab = {"done": ("Done", "ok"), "run": ("In progress", "warn"), "open": ("Open", "open")}
+    tracks = [
+        (44, "Check the borrowed markers", "Many proposed signs of AI consciousness borrow a human brain marker. We trace each one to the human evidence behind it, and to whether that marker survived our own tests in people."),
+        (43, "Agents with a model of their own attention", "Small agents that may learn a model of where their attention is. We remove it and check whether they lose what people lose without awareness: control over distractions and a sense of their own accuracy, while simple feature binding survives."),
+        (45, "Introspection, or just noticing a disturbance?", "Language models can sometimes report a thought planted in their activations. We test whether that report tracks the planted content, or only that something was disturbed, using the same kind of control that showed brain complexity mostly tracks the EEG spectrum."),
+        (46, "Workspace and ignition in language models", "Recent papers find workspace-like and ignition-like patterns in language models. We re-run them with stricter controls."),
+    ]
+    steps = [(t, d, *lab[st.get(i, "open")]) for i, t, d in tracks]
+    out = head("Can AI be conscious?", "Before asking whether an AI is conscious, check the test works in people",
+               "No test for consciousness has been validated, in people or machines. So this part of Open Mind tests the tests: it carries a marker over to AI only after it has held up in humans, and it builds small systems where the right answer is known.",
+               jump([("h-ai-why", "Why"), ("h-ai-tracks", "What we are doing"), ("h-ai-field", "The field"), ("h-ai-not", "Not claimed")]))
+    out += block("01", "Why", "h-ai-why", "Many AI consciousness claims borrow brain markers that have not passed fair tests",
+                 "<p>Signs proposed for AI, such as complexity, ignition or a global workspace, mostly come from human brain research. Our own human results show some of these markers reduce to simple signal properties. A marker that fails in people says nothing about machines.</p>"
+                 "<p>We follow the human-first principle argued by Paras Chopra (2026) and by Thorat and Chopra (2026): validate a model of consciousness in humans, then carry over only what there is reason to think carries over.</p>")
+    out += block("02", "Tracks", "h-ai-tracks", "Four tracks, each with a test that could stop it early",
+                 FG.fig(FG.flow(steps, "Four tracks of the AI sub-project"), "Four tracks, cheapest first",
+                        "Status from the live task board, " + FG.code("board/board.db") + ". Plan: " + FG.code("docs/ai/PLAN.md") + "."))
+    out += block("03", "Field", "h-ai-field", "What the field has shown so far",
+                 '<ul class="mk">'
+                 '<li><strong>Introspection.</strong> Anthropic researchers planted concepts into a model\'s activations; the best models noticed and named them about 20% of the time, with no false alarms on 100 controls (<a href="https://arxiv.org/abs/2601.01828">Lindsey 2026</a>). A smaller open model sensed how strong the planted signal was far better than what it was (<a href="https://arxiv.org/abs/2512.12411">Hahami and others 2025</a>).</li>'
+                 '<li><strong>A workspace.</strong> A "Jacobian lens" finds a band of middle layers holding tens of reportable concepts that the rest of the model reads (<a href="https://arxiv.org/abs/2607.15495">Gurnee and others 2026</a>).</li>'
+                 '<li><strong>Self-models in agents.</strong> Agents that learn where their attention is control it better (<a href="https://arxiv.org/abs/2402.01056">Piefke and others 2024</a>). Removing a self-model can remove an agent\'s sense of its own accuracy while leaving accuracy intact (<a href="https://arxiv.org/abs/2512.19155">Phua 2025</a>).</li>'
+                 '<li><strong>Frameworks.</strong> One framework puts current language models anywhere from below 1% to about 80%, depending on which theory you trust (<a href="https://arxiv.org/abs/2609.35618">Chandaria and others 2026</a>). Its authors say this is not an empirical estimate.</li>'
+                 '</ul>')
+    out += block("04", "Not claimed", "h-ai-not", "We will not say whether any AI is conscious",
+                 "<p>These tests can show that a marker works or fails, or that a system has a particular organisation. None of them can show that a system has experiences.</p>")
     return out
 
 
@@ -939,7 +972,7 @@ def main():
         shutil.copy(OPEN / t["file"], DIST / "data" / "open" / t["file"])
         (DIST / t["page"]).write_text(layout("data.html", f'{t["title"]} · {NAME}', t["about"], open_table_page(t)))
     fns = {"index.html": page_index, "findings.html": page_findings, "theories.html": page_theories, "approach.html": page_approach,
-           "tracker.html": page_tracker, "news.html": page_news, "library.html": page_library, "contribute.html": page_contribute, "data.html": page_data, "resources.html": page_resources}
+           "tracker.html": page_tracker, "news.html": page_news, "library.html": page_library, "contribute.html": page_contribute, "data.html": page_data, "resources.html": page_resources, "ai.html": page_ai}
     for f, name in PAGES:
         title = f"{NAME}: {GOAL}" if f == "index.html" else f"{name} · {NAME}"
         (DIST / f).write_text(layout(f, title, GOAL, fns[f]()))
