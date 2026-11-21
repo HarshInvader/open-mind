@@ -1,0 +1,28 @@
+{
+ "about": "Machine-readable forecasts for COGITATE experiment 2; see 2026-11-21_cogitate_exp2_forecasts.md. ours = our probability the outcome is reported as found. gnw / iit = each theory coded as a forecaster from the Melloni et al. 2023 protocol text (1 predicts found, 0 predicts not found, 0.5 silent).",
+ "items": {
+  "F1":  {"ours": 0.90, "gnw": 0.5, "iit": 1},
+  "F2":  {"ours": 0.65, "gnw": 1,   "iit": 0.5},
+  "F3":  {"ours": 0.95, "gnw": 1,   "iit": 1},
+  "F4":  {"ours": 0.55, "gnw": 0.5, "iit": 0.5},
+  "F5":  {"ours": 0.55, "gnw": 1,   "iit": 0.5},
+  "F6":  {"ours": 0.75, "gnw": 1,   "iit": 0.5},
+  "F7":  {"ours": 0.35, "gnw": 1,   "iit": 0.5},
+  "F8":  {"ours": 0.70, "gnw": 0.5, "iit": 1},
+  "F9":  {"ours": 0.40, "gnw": 1,   "iit": 0.5},
+  "F10": {"ours": 0.30, "gnw": 1,   "iit": 0},
+  "F11": {"ours": 0.35, "gnw": 0.5, "iit": 1},
+  "F12": {"ours": 0.30, "gnw": 1,   "iit": 0.5},
+  "F13": {"ours": 0.75, "gnw": 1,   "iit": 0.5},
+  "F14": {"ours": 0.20, "gnw": 1,   "iit": 0},
+  "F15": {"ours": 0.40, "gnw": 0.5, "iit": 1},
+  "F16": {"ours": 0.75, "gnw": 0,   "iit": 0},
+  "F17": {"ours": 0.50, "gnw": 0.5, "iit": 0.5}
+ },
+ "notes": {
+  "F1": "GNW expects posterior differences too, as part of the network, but its stated opposition is about PFC; coded silent.",
+  "F10": "IIT says PFC is not necessary but does not deny PFC synchrony outright; coded 0 because the protocol frames IIT's topology as posterior only. Sensitivity: rescore with 0.5.",
+  "F14": "IIT predicts the posterior effect (F15), not the opposite PFC effect; coded 0 as in the protocol's contrast. Sensitivity: rescore with 0.5.",
+  "F16": "Each theory, as forecaster, predicts its own predictions hold, so 0 for both."
+ }
+}
