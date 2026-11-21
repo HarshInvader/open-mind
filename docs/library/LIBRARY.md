@@ -1,12 +1,12 @@
 # Open Mind library
 
-Generated from `library.json` on 2026-11-20. Do not edit by hand.
+Generated from `library.json` on 2026-11-21. Do not edit by hand.
 
-144 entries: 18 read in full, 126 from the abstract only. Every DOI was opened and its title and authors checked.
+149 entries: 20 read in full, 129 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (53)
+## Theories tested (55)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -59,6 +59,30 @@ Cogitate Consortium (Ferrante, Gorska-Klimowska, Henin, Hirschhorn, Khalaf, Lepa
 - **Results:** Two rival theories agreed in advance what results would count against them. Then 256 people looked at pictures while their brains were scanned in three different ways. Neither theory won. One theory said the back of the brain should stay in sync for as long as a picture is seen; it did not. The other said the front of the brain should flare up when a picture disappears; mostly it did not.
 - **For us:** The data is public (Experiment 1: MEG, fMRI, iEEG), so it is the first place we test whether the published conclusions survive other reasonable analyses. Note the paper's iEEG n is 34; the plan said 38.
 - **Touches:** news
+
+### GNW theoretical framework and the "adversarial testing of global neuronal workspace and integrated information theories of consciousness"
+
+Naccache L, Sergent C, Dehaene S, Wang XJ, Farisco M, Changeux JP (2025). *Neuroscience of Consciousness*. [doi:10.1093/nc/niaf037](https://doi.org/10.1093/nc/niaf037). Article, full text, **core**.
+
+- **Question:** How do GNW's proponents read the COGITATE experiment 1 results?
+- **Idea tested:** A reply by GNW proponents to the COGITATE 2025 results.
+- **Data and method:** Commentary on published data; no new data.
+- **Results:** They say several core GNW predictions were confirmed (onset ignition, frontal content decoding, frontal-visual synchrony); offset ignition is not a core prediction; and COGITATE experiment 1 could not test GNW's central claim, conscious vs unconscious processing, because every stimulus was clearly visible.
+- **Limits:** Written by the theory's proponents. The offset-ignition prediction was signed off before the results.
+- **For us:** Shows why experiment 2 (seen vs unseen) is the test GNW proponents call decisive. Our forecasts take that test as the target.
+- **Touches:** COGITATE forecasts
+
+### An adversarial collaboration protocol for testing contrasting predictions of global neuronal workspace and integrated information theory
+
+Melloni L, Mudrik L, Pitts MA, Bendtz K, Ferrante O, Górska U, Hirschhorn R, Khalaf AF, and others (2023). *PLOS ONE*. [doi:10.1371/journal.pone.0268577](https://doi.org/10.1371/journal.pone.0268577). Article, full text, **core**.
+
+- **Question:** How can GNW and IIT be tested against each other with predictions both sides agree on in advance?
+- **Idea tested:** The COGITATE protocol: two experiments with predictions signed off by GNW and IIT proponents. Experiment 1 shows clearly visible stimuli with task relevance varied; experiment 2 hides faces and objects in the background of a demanding video game, so some are missed (inattentional blindness), then replays the same displays with a detection task.
+- **Data and method:** fMRI, M-EEG and iEEG at several sites. Experiment 2 contrasts seen vs unseen under distraction, and tests whether brain patterns generalise between distracted and attended viewing.
+- **Results:** Protocol only. In experiment 2, GNW predicts conscious content decodable from prefrontal cortex at 300-500 ms, prefrontal-to-category-area synchrony for seen stimuli, no seen/unseen difference before 250 ms, and higher prefrontal pre-stimulus activity before missed stimuli. IIT predicts posterior patterns that stay the same across tasks for seen stimuli and posterior (category area to V1/V2) synchrony.
+- **Limits:** Frequent awareness probes make the 'unattended' stimuli partly task-relevant, which blurs the inattention manipulation. Experiment 2 results were not public as of 2026-11-21.
+- **For us:** Basis for our sealed forecasts of experiment 2 (docs/prereg/2026-11-21_cogitate_exp2_forecasts.md, 17 items, scored against each theory as a forecaster).
+- **Touches:** COGITATE forecasts, COGITATE audit
 
 ### PyPhi: a toolbox for integrated information theory
 
@@ -587,7 +611,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (45)
+## Measuring consciousness (48)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -806,6 +830,30 @@ Casarotto S, Comanducci A, Rosanova M and others; senior author Massimini M (201
 - **For us:** The strongest published L2 result. No open TMS-EEG set of this kind exists, which is the biggest data gap in our plan.
 - **Touches:** news
 
+### Neural signatures of conscious face perception in an inattentional blindness paradigm
+
+Shafto JP, Pitts MA (2015). *Journal of Neuroscience*. [doi:10.1523/jneurosci.0145-15.2015](https://doi.org/10.1523/jneurosci.0145-15.2015). Article, abstract only, **useful**.
+
+- **Question:** Which EEG responses track awareness of faces when the faces are irrelevant to the task?
+- **Idea tested:** Three-phase inattentional blindness design: faces shown during a demanding task (some people miss them), then the same with awareness, then with the faces task-relevant.
+- **Data and method:** EEG ERPs; line-drawing faces and matched controls.
+- **Results:** The N170 and the visual awareness negativity (about 260-300 ms) were absent during inattentional blindness and present with awareness. The P3b appeared only when faces were task-relevant, not when they were seen but irrelevant.
+- **Limits:** Abstract only. Awareness varies between people and phases, not trial by trial.
+- **For us:** Prior for COGITATE experiment 2: expect posterior seen-vs-unseen differences before 300 ms, which counts against GNW's 'no difference before 250 ms'. Used in our sealed forecasts.
+- **Touches:** COGITATE forecasts
+
+### Gamma band activity and the P3 reflect post-perceptual processes, not visual awareness
+
+Pitts MA, Padwal J, Fennelly D, Martínez A, Hillyard SA (2014). *NeuroImage*. [doi:10.1016/j.neuroimage.2014.07.024](https://doi.org/10.1016/j.neuroimage.2014.07.024). Article, abstract only, **useful**.
+
+- **Question:** Are induced gamma and the P3 markers of awareness, or of what we do with a stimulus?
+- **Idea tested:** EEG experiments that vary awareness and task relevance separately.
+- **Data and method:** EEG; inattentional blindness paradigm.
+- **Results:** Induced gamma and the P3 were absent for task-irrelevant stimuli whether or not people were aware of them, and present for task-relevant ones.
+- **Limits:** Abstract only.
+- **For us:** Prior for COGITATE experiment 2: late and gamma-band differences may track the probe task, not awareness. Used in our sealed forecasts.
+- **Touches:** COGITATE forecasts
+
 ### A theoretically based index of consciousness independent of sensory processing and behavior (PCI)
 
 Casali AG, Gosseries O, Rosanova M, Boly M, Sarasso S and others; senior author Massimini M (2013). *Science Translational Medicine 5(198)*. [doi:10.1126/scitranslmed.3006294](https://doi.org/10.1126/scitranslmed.3006294). Paper, abstract only, **useful**.
@@ -815,6 +863,18 @@ Casali AG, Gosseries O, Rosanova M, Boly M, Sarasso S and others; senior author 
 - **Results:** If a brain is both well connected and varied, a magnetic pulse should set off a rich, hard-to-compress pattern of activity. The score built on that idea separated wake from deep sleep and anaesthesia in single people, and tracked recovery in patients emerging from coma.
 - **For us:** The measure every spontaneous-EEG candidate is judged against.
 - **Touches:** news
+
+### Visual processing of contour patterns under conditions of inattentional blindness
+
+Pitts MA, Martínez A, Hillyard SA (2012). *Journal of Cognitive Neuroscience*. [doi:10.1162/jocn_a_00111](https://doi.org/10.1162/jocn_a_00111). Article, abstract only, **useful**.
+
+- **Question:** Which ERPs differ for shapes people did or did not notice?
+- **Idea tested:** Inattentional blindness for square contour patterns formed by task-irrelevant line segments, across three phases.
+- **Data and method:** EEG ERPs; more than half the subjects missed the patterns in phase 1.
+- **Results:** Occipital ERPs at 220-260 ms differed for patterns vs random arrays whether or not people were aware; at 300-340 ms occipito-parietal differences appeared only with awareness.
+- **Limits:** Abstract only. Awareness assessed after blocks, not trial by trial.
+- **For us:** Some early processing proceeds without awareness, and awareness adds a slightly later posterior response. Prior for our COGITATE experiment 2 forecasts.
+- **Touches:** COGITATE forecasts
 
 ### Detecting Awareness in the Vegetative State
 

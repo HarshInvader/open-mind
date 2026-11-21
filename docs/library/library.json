@@ -1,6 +1,6 @@
 {
  "_about": "Open Mind paper library. One record per paper or dataset. read_depth says whether the full text or only the abstract was read. verified=true means the DOI was opened and its title and authors matched (Crossref or DataCite, 2026-11-19); numbers come from the text that was read. Generated LIBRARY.md and site/library.html read this file.",
- "updated": "2026-11-20",
+ "updated": "2026-11-21",
  "topics": [
   "Theories tested",
   "Measuring consciousness",
@@ -3664,6 +3664,132 @@
    "touches": [],
    "relevance": "useful",
    "url": "https://doi.org/10.64898/2026.11.12.766263"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-21",
+   "verified": true,
+   "kind": "Article",
+   "id": "melloni-2023-cogitate-protocol",
+   "title": "An adversarial collaboration protocol for testing contrasting predictions of global neuronal workspace and integrated information theory",
+   "authors": "Melloni L, Mudrik L, Pitts MA, Bendtz K, Ferrante O, Górska U, Hirschhorn R, Khalaf AF, and others",
+   "year": 2023,
+   "venue": "PLOS ONE",
+   "doi": "10.1371/journal.pone.0268577",
+   "topic": "Theories tested",
+   "read_depth": "full",
+   "question": "How can GNW and IIT be tested against each other with predictions both sides agree on in advance?",
+   "tried": "The COGITATE protocol: two experiments with predictions signed off by GNW and IIT proponents. Experiment 1 shows clearly visible stimuli with task relevance varied; experiment 2 hides faces and objects in the background of a demanding video game, so some are missed (inattentional blindness), then replays the same displays with a detection task.",
+   "method_data": "fMRI, M-EEG and iEEG at several sites. Experiment 2 contrasts seen vs unseen under distraction, and tests whether brain patterns generalise between distracted and attended viewing.",
+   "key_results": "Protocol only. In experiment 2, GNW predicts conscious content decodable from prefrontal cortex at 300-500 ms, prefrontal-to-category-area synchrony for seen stimuli, no seen/unseen difference before 250 ms, and higher prefrontal pre-stimulus activity before missed stimuli. IIT predicts posterior patterns that stay the same across tasks for seen stimuli and posterior (category area to V1/V2) synchrony.",
+   "limits": "Frequent awareness probes make the 'unattended' stimuli partly task-relevant, which blurs the inattention manipulation. Experiment 2 results were not public as of 2026-11-21.",
+   "ideas_for_us": "Basis for our sealed forecasts of experiment 2 (docs/prereg/2026-11-21_cogitate_exp2_forecasts.md, 17 items, scored against each theory as a forecaster).",
+   "touches": [
+    "COGITATE forecasts",
+    "COGITATE audit"
+   ],
+   "relevance": "core",
+   "url": "https://doi.org/10.1371/journal.pone.0268577"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-21",
+   "verified": true,
+   "kind": "Article",
+   "id": "naccache-2025-gnw-reply-cogitate",
+   "title": "GNW theoretical framework and the \"adversarial testing of global neuronal workspace and integrated information theories of consciousness\"",
+   "authors": "Naccache L, Sergent C, Dehaene S, Wang XJ, Farisco M, Changeux JP",
+   "year": 2025,
+   "venue": "Neuroscience of Consciousness",
+   "doi": "10.1093/nc/niaf037",
+   "topic": "Theories tested",
+   "read_depth": "full",
+   "question": "How do GNW's proponents read the COGITATE experiment 1 results?",
+   "tried": "A reply by GNW proponents to the COGITATE 2025 results.",
+   "method_data": "Commentary on published data; no new data.",
+   "key_results": "They say several core GNW predictions were confirmed (onset ignition, frontal content decoding, frontal-visual synchrony); offset ignition is not a core prediction; and COGITATE experiment 1 could not test GNW's central claim, conscious vs unconscious processing, because every stimulus was clearly visible.",
+   "limits": "Written by the theory's proponents. The offset-ignition prediction was signed off before the results.",
+   "ideas_for_us": "Shows why experiment 2 (seen vs unseen) is the test GNW proponents call decisive. Our forecasts take that test as the target.",
+   "touches": [
+    "COGITATE forecasts"
+   ],
+   "relevance": "core",
+   "url": "https://doi.org/10.1093/nc/niaf037"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-21",
+   "verified": true,
+   "kind": "Article",
+   "id": "shafto-pitts-2015-face-ib",
+   "title": "Neural signatures of conscious face perception in an inattentional blindness paradigm",
+   "authors": "Shafto JP, Pitts MA",
+   "year": 2015,
+   "venue": "Journal of Neuroscience",
+   "doi": "10.1523/jneurosci.0145-15.2015",
+   "topic": "Measuring consciousness",
+   "read_depth": "abstract",
+   "question": "Which EEG responses track awareness of faces when the faces are irrelevant to the task?",
+   "tried": "Three-phase inattentional blindness design: faces shown during a demanding task (some people miss them), then the same with awareness, then with the faces task-relevant.",
+   "method_data": "EEG ERPs; line-drawing faces and matched controls.",
+   "key_results": "The N170 and the visual awareness negativity (about 260-300 ms) were absent during inattentional blindness and present with awareness. The P3b appeared only when faces were task-relevant, not when they were seen but irrelevant.",
+   "limits": "Abstract only. Awareness varies between people and phases, not trial by trial.",
+   "ideas_for_us": "Prior for COGITATE experiment 2: expect posterior seen-vs-unseen differences before 300 ms, which counts against GNW's 'no difference before 250 ms'. Used in our sealed forecasts.",
+   "touches": [
+    "COGITATE forecasts"
+   ],
+   "relevance": "useful",
+   "url": "https://doi.org/10.1523/jneurosci.0145-15.2015"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-21",
+   "verified": true,
+   "kind": "Article",
+   "id": "pitts-2014-gamma-p3-postperceptual",
+   "title": "Gamma band activity and the P3 reflect post-perceptual processes, not visual awareness",
+   "authors": "Pitts MA, Padwal J, Fennelly D, Martínez A, Hillyard SA",
+   "year": 2014,
+   "venue": "NeuroImage",
+   "doi": "10.1016/j.neuroimage.2014.07.024",
+   "topic": "Measuring consciousness",
+   "read_depth": "abstract",
+   "question": "Are induced gamma and the P3 markers of awareness, or of what we do with a stimulus?",
+   "tried": "EEG experiments that vary awareness and task relevance separately.",
+   "method_data": "EEG; inattentional blindness paradigm.",
+   "key_results": "Induced gamma and the P3 were absent for task-irrelevant stimuli whether or not people were aware of them, and present for task-relevant ones.",
+   "limits": "Abstract only.",
+   "ideas_for_us": "Prior for COGITATE experiment 2: late and gamma-band differences may track the probe task, not awareness. Used in our sealed forecasts.",
+   "touches": [
+    "COGITATE forecasts"
+   ],
+   "relevance": "useful",
+   "url": "https://doi.org/10.1016/j.neuroimage.2014.07.024"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-21",
+   "verified": true,
+   "kind": "Article",
+   "id": "pitts-2012-contour-ib",
+   "title": "Visual processing of contour patterns under conditions of inattentional blindness",
+   "authors": "Pitts MA, Martínez A, Hillyard SA",
+   "year": 2012,
+   "venue": "Journal of Cognitive Neuroscience",
+   "doi": "10.1162/jocn_a_00111",
+   "topic": "Measuring consciousness",
+   "read_depth": "abstract",
+   "question": "Which ERPs differ for shapes people did or did not notice?",
+   "tried": "Inattentional blindness for square contour patterns formed by task-irrelevant line segments, across three phases.",
+   "method_data": "EEG ERPs; more than half the subjects missed the patterns in phase 1.",
+   "key_results": "Occipital ERPs at 220-260 ms differed for patterns vs random arrays whether or not people were aware; at 300-340 ms occipito-parietal differences appeared only with awareness.",
+   "limits": "Abstract only. Awareness assessed after blocks, not trial by trial.",
+   "ideas_for_us": "Some early processing proceeds without awareness, and awareness adds a slightly later posterior response. Prior for our COGITATE experiment 2 forecasts.",
+   "touches": [
+    "COGITATE forecasts"
+   ],
+   "relevance": "useful",
+   "url": "https://doi.org/10.1162/jocn_a_00111"
   }
  ]
 }
