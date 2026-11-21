@@ -2,11 +2,11 @@
 
 Generated from `library.json` on 2026-11-21. Do not edit by hand.
 
-150 entries: 20 read in full, 130 from the abstract only. Every DOI was opened and its title and authors checked.
+151 entries: 21 read in full, 130 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (55)
+## Theories tested (56)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -49,6 +49,18 @@ Hutchinson BT, Pustejovsky JE, Bandara K, McGovern H, Cox J, Voce A, Pitts M, Sl
 - **Limits:** Abstract only; moderator results not read.
 - **For us:** Settles two ledger rows: P3b as a report/task marker (C28 line) and VAN as not sufficient. Our GNWT extension (T4) and any Stockart reanalysis should use these effect sizes as priors.
 - **Touches:** constraint_ledger, theory_gnwt_frontal_dream, T4
+
+### Towards full-stack functionalist theories of consciousness: Identifying the functional profile
+
+Thorat S, Chopra P (2026). *arXiv (Lossfunk)*. [doi:10.48550/arXiv.2609.33366](https://arxiv.org/abs/2609.33366). Preprint, full text, **core**.
+
+- **Question:** If consciousness is something a system does, what does being aware of a thing change about how the system can use it?
+- **Idea tested:** They searched the literature for experiments that compare using the same information with and without awareness, and kept only those where the unaware version did not simply carry weaker information (for example, by matching how well people could discriminate the stimulus).
+- **Data and method:** Literature review with strict inclusion rules: awareness measured or validated, information strength matched or ruled out by design (a reversal), and an outcome that says how the information is used. Sweep code: github.com/Lossfunk/consciousness-sweep.
+- **Results:** Only a few studies pass. Awareness goes with control over attention (Tsushima 2006: faint, invisible motion distracted people more than stronger, visible motion, as if visible distractors can be suppressed) and with knowing when you're right (Persaud 2011: blindsight patient GY was equally accurate in both visual fields, but his bets tracked his accuracy far better in the seeing field, r = .52 vs .30). Simple binding of a feature to a location worked without awareness (Keizer 2015). They then argue a full theory must also explain what experience is like and why people find it mysterious, and use Attention Schema Theory as the worked example of going from one such finding to a buildable architecture.
+- **Limits:** The profile is thin: metacognition rests mainly on one patient, binding on one paradigm. The binding 'no difference' is a non-significant interaction (8.6 vs 5.8 ms), not shown equivalence, as the authors say. Neural signatures are excluded unless their computation is known.
+- **For us:** This is the basis of our 'Can AI be conscious?' sub-project: the self-model agents study tries their agenda item 4 (build agents that model their own attention, ablate the model, check the profile). Also: audit the power of the binding null (as in the COGITATE null audit), and seal AST predictions for COGITATE experiment 2.
+- **Touches:** Self-model agents, Can AI be conscious?, COGITATE forecasts
 
 ### Adversarial testing of global neuronal workspace and integrated information theories of consciousness
 

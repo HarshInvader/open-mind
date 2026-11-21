@@ -3816,6 +3816,33 @@
    ],
    "relevance": "useful",
    "url": "https://doi.org/10.1162/jocn_a_00111"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-21",
+   "verified": true,
+   "kind": "Preprint",
+   "id": "thorat-chopra-2026-full-stack-functionalist",
+   "title": "Towards full-stack functionalist theories of consciousness: Identifying the functional profile",
+   "authors": "Thorat S, Chopra P",
+   "year": 2026,
+   "venue": "arXiv (Lossfunk)",
+   "doi": "10.48550/arXiv.2609.33366",
+   "topic": "Theories tested",
+   "read_depth": "full",
+   "question": "If consciousness is something a system does, what does being aware of a thing change about how the system can use it?",
+   "tried": "They searched the literature for experiments that compare using the same information with and without awareness, and kept only those where the unaware version did not simply carry weaker information (for example, by matching how well people could discriminate the stimulus).",
+   "method_data": "Literature review with strict inclusion rules: awareness measured or validated, information strength matched or ruled out by design (a reversal), and an outcome that says how the information is used. Sweep code: github.com/Lossfunk/consciousness-sweep.",
+   "key_results": "Only a few studies pass. Awareness goes with control over attention (Tsushima 2006: faint, invisible motion distracted people more than stronger, visible motion, as if visible distractors can be suppressed) and with knowing when you're right (Persaud 2011: blindsight patient GY was equally accurate in both visual fields, but his bets tracked his accuracy far better in the seeing field, r = .52 vs .30). Simple binding of a feature to a location worked without awareness (Keizer 2015). They then argue a full theory must also explain what experience is like and why people find it mysterious, and use Attention Schema Theory as the worked example of going from one such finding to a buildable architecture.",
+   "limits": "The profile is thin: metacognition rests mainly on one patient, binding on one paradigm. The binding 'no difference' is a non-significant interaction (8.6 vs 5.8 ms), not shown equivalence, as the authors say. Neural signatures are excluded unless their computation is known.",
+   "ideas_for_us": "This is the basis of our 'Can AI be conscious?' sub-project: the self-model agents study tries their agenda item 4 (build agents that model their own attention, ablate the model, check the profile). Also: audit the power of the binding null (as in the COGITATE null audit), and seal AST predictions for COGITATE experiment 2.",
+   "touches": [
+    "Self-model agents",
+    "Can AI be conscious?",
+    "COGITATE forecasts"
+   ],
+   "relevance": "core",
+   "url": "https://arxiv.org/abs/2609.33366"
   }
  ]
 }
