@@ -10,6 +10,32 @@
  ],
  "papers": [
   {
+   "id": "zhou-2026-alpha-coherence-doc-recovery",
+   "title": "Alpha coherence is a network signature of cognitive recovery from disorders of consciousness",
+   "authors": "Zhou DW, Conte MM, Curley WH, Spencer-Salmon CA, Chatelle C, Rosenthal ES, Bodien YG, Victor JD, Schiff ND, Brown EN, Edlow BL",
+   "year": 2026,
+   "venue": "Cortex",
+   "doi": "10.1016/j.cortex.2026.11.009",
+   "url": "https://doi.org/10.1016/j.cortex.2026.11.009",
+   "kind": "Paper",
+   "topic": "Measuring consciousness",
+   "read_depth": "abstract",
+   "question": "Does the network organisation of posterior alpha coherence in clinical EEG track recovery of higher cognition after severe brain injury better than standard connectivity measures?",
+   "tried": "Alpha that stays in step across posterior cortex, summarised as a network, indexes the thalamocortical integrity needed for higher cognition.",
+   "method_data": "95 clinical EEG recordings from two centres: 28 healthy controls and 33 patients with acute or chronic disorders of consciousness, 25 with follow-up. Global coherence analysis; network organisation from the principal eigenvector of the 8-12 Hz cross-spectral matrix. Recovery = CRS-R total 22 or above.",
+   "key_results": "Classifying recovery: AUC .78 for the alpha network measure against .45-.53 for weighted phase lag index connectivity (abstract only).",
+   "limits": "Small sample pooled from two studies; behavioural threshold outcome; published text closed, abstract only; an earlier medRxiv version gives slightly different comparison AUCs.",
+   "ideas_for_us": "Coherence comes from the cross-spectrum, which our multichannel phase-randomised surrogates keep, so it counts as spectral in the surrogate gate (#8). Test whether alpha network shape adds anything over alpha power on the Chennu propofol EEG (#21) under a sealed prereg.",
+   "touches": [
+    "#8",
+    "#21"
+   ],
+   "relevance": "useful",
+   "in_news": true,
+   "added": "2026-11-21",
+   "verified": true
+  },
+  {
    "id": "selte-2026-nrem-experience-hdeeg",
    "title": "Neural signatures of conscious experience during sleep: a serial awakening study using high-density EEG",
    "authors": "Selte A, Haworth SE, Vanasse TJ, Alauddin T, Gjini K, Philibert-Rosas S, Brace C, Sevak B, Riedner B, Kalkach-Aparicio M, Tononi G, Boly M, Struck AF",

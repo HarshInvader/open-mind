@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-21. Do not edit by hand.
 
-149 entries: 20 read in full, 129 from the abstract only. Every DOI was opened and its title and authors checked.
+150 entries: 20 read in full, 130 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -611,7 +611,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (48)
+## Measuring consciousness (49)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -715,6 +715,18 @@ Skipper JI, Blackburne G, Cooper G, Jaglinska M, Jedlovszky K, Kuc J, McAlpine R
 - **Results:** No location significant in all ten maps; maps related selectively to aspects of consciousness; graded mixtures of maps predicted held-out papers' regions better than single maps or on/off combinations.
 - **Limits:** Abstract only. 'No core' rests partly on a failed conjunction across ten maps, an absence-of-evidence inference whose sensitivity is not stated in the abstract. Licence CC BY-NC-ND (no figure reuse).
 - **For us:** Self and ego are related to consciousness, not the same. Relevant to ego dissolution (psychedelics; Timmermann is an author) and to any self-consciousness study. A planted check of the conjunction null (could a real shared core have been detected?) would fit our null-audit style.
+
+### Alpha coherence is a network signature of cognitive recovery from disorders of consciousness
+
+Zhou DW, Conte MM, Curley WH, Spencer-Salmon CA, Chatelle C, Rosenthal ES, Bodien YG, Victor JD, Schiff ND, Brown EN, Edlow BL (2026). *Cortex*. [doi:10.1016/j.cortex.2026.11.009](https://doi.org/10.1016/j.cortex.2026.11.009). Paper, abstract only, **useful**.
+
+- **Question:** Does the network organisation of posterior alpha coherence in clinical EEG track recovery of higher cognition after severe brain injury better than standard connectivity measures?
+- **Idea tested:** Alpha that stays in step across posterior cortex, summarised as a network, indexes the thalamocortical integrity needed for higher cognition.
+- **Data and method:** 95 clinical EEG recordings from two centres: 28 healthy controls and 33 patients with acute or chronic disorders of consciousness, 25 with follow-up. Global coherence analysis; network organisation from the principal eigenvector of the 8-12 Hz cross-spectral matrix. Recovery = CRS-R total 22 or above.
+- **Results:** Classifying recovery: AUC .78 for the alpha network measure against .45-.53 for weighted phase lag index connectivity (abstract only).
+- **Limits:** Small sample pooled from two studies; behavioural threshold outcome; published text closed, abstract only; an earlier medRxiv version gives slightly different comparison AUCs.
+- **For us:** Coherence comes from the cross-spectrum, which our multichannel phase-randomised surrogates keep, so it counts as spectral in the surrogate gate (#8). Test whether alpha network shape adds anything over alpha power on the Chennu propofol EEG (#21) under a sealed prereg.
+- **Touches:** #8, #21
 
 ### Identifying neural correlates of auditory perceptual awareness and deviance using a no-report inattentional deafness paradigm
 

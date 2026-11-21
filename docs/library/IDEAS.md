@@ -82,3 +82,12 @@ Source: arXiv:2609.33366 (doi:10.48550/arXiv.2609.33366, full text read). Their 
 
 - **What is untested:** they ask for prospective predictions that separate candidate architectures. COGITATE experiment 2 manipulates attention, and results are not out. Attention Schema Theory, their worked example, should predict when an unattended stimulus is still reported as experienced.
 - **Method:** write AST's predictions next to IIT's and GNWT's in the forecast registry and hash them before release. Ideally with the authors, so the predictions are ones AST's proponents accept.
+
+## Added 2026-11-21 (paper watch)
+
+### Alpha network shape versus alpha power under propofol (bears on #8, #21)
+
+- **Source.** Zhou, Edlow et al. 2026, Cortex, doi:10.1016/j.cortex.2026.11.009 (abstract only). Alpha coherence network organisation classified DoC recovery at AUC .78 against .45-.53 for wPLI.
+- **What is untested.** Whether the network measure carries anything beyond alpha power. Coherence comes from the cross-spectrum, which our multichannel phase-randomised surrogates keep, so it should count as spectral in the surrogate gate.
+- **Open data.** Chennu propofol EEG (task #21).
+- **Bears on a current study.** Yes, #8 (surrogate gate) as a classification note; a test would need a sealed prereg.
