@@ -763,6 +763,23 @@
   },
   "items": [
     {
+      "id": "onoda-local-phi-nrem",
+      "section": "latest",
+      "date": "2026-11-20",
+      "kind": "Paper",
+      "head": "Integrated information in small groups of rodent neurons falls in deep sleep, but part of the fall tracks firing rate (Onoda)",
+      "who": "Onoda K",
+      "venue": "Neuroscience of Consciousness",
+      "url": "https://doi.org/10.1093/nc/niag077",
+      "verified": true,
+      "gist": "Phi from integrated information theory, computed on four-part systems built from rodent spikes, dropped in NREM sleep; in visual cortex the drop went away once firing rates were matched.",
+      "plain": "Integrated information theory says consciousness is a system's tightly joined cause and effect, and that this should collapse when consciousness fades. Measuring it in a real brain is usually out of reach, so this study took a small step: tiny four-part systems built from neurons recorded in sleeping and waking mice and rats. The measure fell in deep sleep, most of all in the brief moments when neurons go quiet. But neurons also fire less in deep sleep. When firing was evened out, the drop in mouse visual cortex disappeared, while the one in rat frontal cortex stayed.",
+      "tech": "Reanalysis of two public spike datasets: mouse V1 (19 mice, one 64-channel probe each, 77.7 +/- 21.6 units per session; Senzai et al. 2019) and rat frontal cortex (11 rats, 27 sessions, 41.5 +/- 24.0 units; Watson et al. 2016, CRCNS fcx-1). Units pooled into 4 elements (by cortical layer, or at random), binarised in windows tau, one transition matrix per state, IIT 4.0 Phi per system state. V1: Phi peaked near tau = 50 ms; maximum Phi lower in NREM than wake (post hoc P = .040); NREM OFF-periods (175 +/- 24 ms) far below ON-periods (Cohen's d = 1.21). After random spike downsampling to equal firing rates, V1 NREM no longer differed from wake and REM fell below wake (P = .006), the reverse of what a dreaming state should show. Frontal: below tau = 100 ms NREM Phi was higher than wake; averaged over tau = 240-280 ms (chosen at the REM peak) NREM was lower, and stayed lower after rate matching (vs wake uncorrected P = .049; vs REM P = .004). Four-element systems only, timescale picked from the data, single author. Read in full (open access, publisher version in PMC).",
+      "borrow": "Our Phi proxy test (task #9) already logs mean activity beside true Phi. This paper is the reason to report every proxy, and Phi itself, both raw and after firing-rate matching, and to flag any wake-sleep difference that rate matching removes. In the constraint ledger it counts as weak support for IIT's sleep prediction, with the rate and timescale caveats attached.",
+      "status": "planned",
+      "topic": "Theories tested"
+    },
+    {
       "id": "zhou-alpha-coherence-doc-recovery",
       "section": "latest",
       "date": "2026-11-13",

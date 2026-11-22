@@ -365,6 +365,27 @@ def draw(key, a):
         a.trace(360, 160, 180, lambda i: noisy(18, 7)(i) * 0.92 + 2, AMB, 1.6)
         a.trace(360, 260, 180, noisy(14, 8), INK, 2.4)
         a.trace(360, 260, 180, lambda i: noisy(14, 8)(i) * 0.9 - 2, AMB, 1.6)
+    elif key == "onoda-local-phi-nrem":   # a tightly joined four-part knot loosens in sleep; the spike rows thin out too
+        for cx, awake in ((170, True), (430, False)):
+            pts = [(cx - 52, 130), (cx + 52, 130), (cx + 52, 226), (cx - 52, 226)]
+            col = IND if awake else MUTE
+            for i, p in enumerate(pts):
+                for q in pts[i + 1:]:
+                    if awake:
+                        a.line([p, q], IND, 2.6)
+            if not awake:
+                a.dashed([pts[0], pts[1]], MUTE, 1.8)
+                a.line([pts[2], pts[3]], MUTE, 2)
+            for p in pts:
+                a.rect(p[0] - 15, p[1] - 15, 30, 30, IND if awake else CARD, 6, col, 2.2)
+            r = random.Random(11 if awake else 12)
+            for row in range(3):
+                y = 266 + row * 18
+                for _ in range(22 if awake else 8):
+                    x = cx - 90 + r.uniform(0, 180)
+                    a.line([(x, y - 6), (x, y + 6)], INK if awake else MUTE, 1.8)
+        a.arrow(272, 178, 328, 178, INK, 2.2)
+        a.circle(482, 226, 6, AMB, None)
     elif key == "zhou-alpha-coherence-doc-recovery":   # loose, out-of-step nodes at the back, then a linked network
         f = a.brain(50, 120, 1.8, dashed=True)
         pts = [(84, 26), (100, 36), (94, 52), (76, 44)]
@@ -439,6 +460,7 @@ def draw(key, a):
 
 
 ALT = {
+    "onoda-local-phi-nrem": "Four filled squares all joined by lines above dense rows of spike ticks, an arrow, then the same four squares pale and barely joined above sparse ticks.",
     "zhou-alpha-coherence-doc-recovery": "Two schematic brains: on the left, four pale dots at the back barely linked; on the right, the same four dots filled and all joined, under a small even wave.",
     "rochas-n2-dreaming-hdeeg": "A schematic brain with small fast waves at the back and a slow wave at the front, beside a thought bubble holding lines of text-like strokes.",
     "selte-nrem-experience-hdeeg": "Rows of dots, about half filled in, beside a curve that rises well above a dashed diagonal.",
