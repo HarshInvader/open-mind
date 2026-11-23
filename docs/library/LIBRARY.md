@@ -2,11 +2,11 @@
 
 Generated from `library.json` on 2026-11-23. Do not edit by hand.
 
-177 entries: 23 read in full, 154 from the abstract only. Every DOI was opened and its title and authors checked.
+178 entries: 23 read in full, 155 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (62)
+## Theories tested (63)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -155,6 +155,18 @@ Chis-Ciure R (2026). *arXiv 2611.06925*. [doi:10.48550/arXiv.2611.06925](https:/
 - **Limits:** Conceptual.
 - **For us:** Add a 'reach' line to our prereg template: for each outcome, what it counts against and what we agree to change. Cheap and it hardens every sealed test.
 - **Touches:** docs/prereg/TEMPLATE.md, #11, #28
+
+### QNodes: A Scalable Algorithm for Efficient Minimum Information Partitioning in Integrated Information Theory
+
+Guerrero Mendieta L, Bustamante-Mora A, Arango-López J, Díaz-Arancibia J, Ossa L (2026). *Applied Sciences 16(22):11532*. [doi:10.3390/app162211532](https://doi.org/10.3390/app162211532). Paper, abstract only, **useful**.
+
+- **Question:** Can the minimum information partition, the costly core step in computing IIT's phi, be found fast and exactly for larger systems?
+- **Idea tested:** A Queyranne-style pendant-pair search over partitions with the Earth Mover's Distance loss, plus an N-cube representation of conditional distributions, for the effect-side MIP of a mechanism-purview pair.
+- **Data and method:** Proofs (the loss is symmetric, has a closed form on node-factorizable repertoires, is not submodular in general; exactness holds under a node-by-node checkable condition). Benchmark on 470 subsystems of synthetic and real networks against PyPhi.
+- **Results:** Matched PyPhi's minimum loss in all 317 cases PyPhi completed; 153 times faster at 10 elements; completed every subsystem up to 22 elements. Outside the sufficient condition it is a heuristic, and the paper reports its failure rate and loss gaps against exhaustive search. (abstract only)
+- **Limits:** Abstract only: the MDPI page and PDF returned HTTP 403. Covers only the effect-side MIP of one mechanism-purview pair, not full system Phi (cause side, purview search, system partition). Exactness is guaranteed only when the condition holds. Modest venue; not yet used by IIT groups.
+- **For us:** For #9 (phi_proxy): our known-Phi networks are capped by PyPhi's cost. If the code is open, QNodes could extend the ground truth to larger networks for the effect-side quantity only, and its exactness check tells us which networks are safe. Check whether that partial quantity is close enough to system Phi before using it.
+- **Touches:** #9, phi_proxy
 
 ### Rapid alternation of conscious and suppressed stimulus representations in the primate brain
 

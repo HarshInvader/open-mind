@@ -4498,6 +4498,33 @@
    "in_news": false,
    "added": "2026-11-23",
    "verified": true
+  },
+  {
+   "id": "guerrero-2026-qnodes-mip",
+   "kind": "Paper",
+   "title": "QNodes: A Scalable Algorithm for Efficient Minimum Information Partitioning in Integrated Information Theory",
+   "authors": "Guerrero Mendieta L, Bustamante-Mora A, Arango-López J, Díaz-Arancibia J, Ossa L",
+   "year": 2026,
+   "venue": "Applied Sciences 16(22):11532",
+   "doi": "10.3390/app162211532",
+   "url": "https://doi.org/10.3390/app162211532",
+   "topic": "Theories tested",
+   "read_depth": "abstract",
+   "question": "Can the minimum information partition, the costly core step in computing IIT's phi, be found fast and exactly for larger systems?",
+   "tried": "A Queyranne-style pendant-pair search over partitions with the Earth Mover's Distance loss, plus an N-cube representation of conditional distributions, for the effect-side MIP of a mechanism-purview pair.",
+   "method_data": "Proofs (the loss is symmetric, has a closed form on node-factorizable repertoires, is not submodular in general; exactness holds under a node-by-node checkable condition). Benchmark on 470 subsystems of synthetic and real networks against PyPhi.",
+   "key_results": "Matched PyPhi's minimum loss in all 317 cases PyPhi completed; 153 times faster at 10 elements; completed every subsystem up to 22 elements. Outside the sufficient condition it is a heuristic, and the paper reports its failure rate and loss gaps against exhaustive search. (abstract only)",
+   "limits": "Abstract only: the MDPI page and PDF returned HTTP 403. Covers only the effect-side MIP of one mechanism-purview pair, not full system Phi (cause side, purview search, system partition). Exactness is guaranteed only when the condition holds. Modest venue; not yet used by IIT groups.",
+   "ideas_for_us": "For #9 (phi_proxy): our known-Phi networks are capped by PyPhi's cost. If the code is open, QNodes could extend the ground truth to larger networks for the effect-side quantity only, and its exactness check tells us which networks are safe. Check whether that partial quantity is close enough to system Phi before using it.",
+   "touches": [
+    "#9",
+    "phi_proxy"
+   ],
+   "relevance": "useful",
+   "in_news": false,
+   "added": "2026-11-23",
+   "verified": true,
+   "source_opened": "Crossref metadata and deposited abstract (CC BY 4.0); publisher page and PDF returned 403"
   }
  ]
 }
