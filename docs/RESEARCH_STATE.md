@@ -187,3 +187,23 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   1. Ask the ds005620 authors for the 52-row (subject, run, report class) table. A calibration test on the 24 experience awakenings needs no download. Kill test: fewer than 16 of them map to clean runs.
   2. Request the Wisconsin serial-awakening data (per-report labels with pre-awakening EEG, or just the exponents).
   3. Finish the Zenodo 806176 email verification.
+
+### Task #5b: sealed before asking, then two data requests sent (Fable round 12)
+- **Coordinator approval:** both emails were approved under the owner's email rule, because a study is blocked on outside data.
+- **Sealed before any email:** `docs/prereg/2026-11-23_transfer5b_ds005620_report_calibration.md` (commit f718942, hash in HASHES.txt).
+  - **Question:** do report-confirmed experience awakenings fall on the N3 side of the frozen exponent cutoff?
+  - **Stop:** fewer than 16 experience awakenings on clean runs.
+  - **Call:** a 95% Clopper-Pearson interval against 0.5.
+- **Planted gate:** passed. Power is low at the expected rate (31% at n = 24), so the likely outcome is "inconclusive". This is disclosed.
+- **Fable round 12 pre-seal review:** five must-fix items, all fixed:
+  - exposure counts (51 available runs, 44 clean);
+  - a duplicate-row stop;
+  - a mechanical "not mappable" stop;
+  - blind class mapping;
+  - subject-string parsing.
+  Run non-independence is disclosed.
+- **Emails sent (AgentMail, 2026-11-23):**
+  - (1) the ds005620 corresponding author (Oslo), asking for the 52-row subject / sed2 run / report class table;
+  - (2) the first corresponding author of Casey et al. 2024 (Wisconsin), asking for per-awakening report class, condition and subject, plus either the 20-s pre-report EEG or their exponent, or what an IRB request would need.
+  Addresses came from official institution pages. Drafts and the send log are in `.local/outreach_mind_5b/`. No follow-up before 2026-12-03.
+- **Owner only:** the Zenodo 806176 verification and the COGITATE account.
