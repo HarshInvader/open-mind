@@ -80,3 +80,8 @@ a25bebb3daa84b9bf639c45d9d2d97822d2d1639a91c13026fcf8b1aeff6f6f7  experiments/se
 69a22e754090b24047deea608739760500009a624e7e569bad76ac2a6b114814  experiments/self_model_agents/kill_trained.py  2026-11-21T07:44:08Z
 972bd3858594d0b7765eedcacfc153fef1867a117238da599b0152ad06c8077a  docs/prereg/2026-11-21_cogitate_exp2_forecasts.md  2026-11-21T07:58:15Z
 7aa6adf33844b6ac674efb038408b19dfbf0180a46fca1b81f387fcdbed5bb03  docs/prereg/cogitate_exp2_forecasts.json  2026-11-21T07:58:15Z
+1b22652686e51ed877d90bf3131d74a1c86ddc60103930a743a28ac7b20dd990  docs/prereg/2026-11-23_metacog_awareness_rausch2016.md  2026-11-23T07:18:07Z
+4e3fbbd2343d9f6481cae5ecf9348454f81779b193fc4fe868757f45f98082d5  experiments/metacog_awareness/run_rausch.py  2026-11-23T07:18:07Z
+b69754dc823ec8959d0b14f043b5e1f43a639fe6ebac2feb04dfec241bb55200  experiments/metacog_awareness/power_gate.py  2026-11-23T07:18:07Z
+9debd52e18ff2fa9beddf5f38cc1053fd80cf079386828e9a4e951f0539037bb  experiments/metacog_awareness/gate2.py  2026-11-23T07:18:07Z
+dbe6a4ff9451c3c503de1d57ddd9511900c0e32f1ef1b3ea45fab5e178be779b  experiments/metacog_awareness/gate2.json  2026-11-23T07:18:07Z
