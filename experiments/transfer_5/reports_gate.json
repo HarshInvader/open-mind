@@ -1,0 +1,82 @@
+{
+ "binomial": {
+  "n16_p0.3": {
+   "N3-like despite report": 0.0,
+   "inconclusive": 0.754,
+   "wake-like with report": 0.246
+  },
+  "n16_p0.5": {
+   "N3-like despite report": 0.011,
+   "inconclusive": 0.979,
+   "wake-like with report": 0.011
+  },
+  "n16_p0.68": {
+   "N3-like despite report": 0.195,
+   "inconclusive": 0.805,
+   "wake-like with report": 0.0
+  },
+  "n16_p0.8": {
+   "N3-like despite report": 0.598,
+   "inconclusive": 0.402,
+   "wake-like with report": 0.0
+  },
+  "n20_p0.3": {
+   "N3-like despite report": 0.0,
+   "inconclusive": 0.584,
+   "wake-like with report": 0.416
+  },
+  "n20_p0.5": {
+   "N3-like despite report": 0.021,
+   "inconclusive": 0.959,
+   "wake-like with report": 0.021
+  },
+  "n20_p0.68": {
+   "N3-like despite report": 0.343,
+   "inconclusive": 0.657,
+   "wake-like with report": 0.0
+  },
+  "n20_p0.8": {
+   "N3-like despite report": 0.804,
+   "inconclusive": 0.196,
+   "wake-like with report": 0.0
+  },
+  "n24_p0.3": {
+   "N3-like despite report": 0.0,
+   "inconclusive": 0.611,
+   "wake-like with report": 0.389
+  },
+  "n24_p0.5": {
+   "N3-like despite report": 0.011,
+   "inconclusive": 0.977,
+   "wake-like with report": 0.011
+  },
+  "n24_p0.68": {
+   "N3-like despite report": 0.31,
+   "inconclusive": 0.69,
+   "wake-like with report": 0.0
+  },
+  "n24_p0.8": {
+   "N3-like despite report": 0.811,
+   "inconclusive": 0.189,
+   "wake-like with report": 0.0
+  }
+ },
+ "resampled_real_runs": {
+  "n16": {
+   "N3-like despite report": 0.1426,
+   "inconclusive": 0.8574,
+   "wake-like with report": 0.0
+  },
+  "n20": {
+   "N3-like despite report": 0.2934,
+   "inconclusive": 0.7066,
+   "wake-like with report": 0.0
+  },
+  "n24": {
+   "N3-like despite report": 0.2318,
+   "inconclusive": 0.7682,
+   "wake-like with report": 0.0
+  }
+ },
+ "gate_pass": true
+}
