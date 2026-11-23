@@ -86,3 +86,17 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
 - **Not closed:** whether an excess survives a WEV-type null. That needs a several-times-larger dataset with both ratings on every trial.
 - **Details:** `experiments/metacog_awareness/RESULTS.md`.
 
+
+## Frozen sleep cutoffs place REM with wake, and nothing beyond the spectrum (task #5, 2026-11-23)
+- **Route tested:** do consciousness measures (exponent, LZ, PE, band powers, spectral entropy, DFA, wSMI) agree on where REM sits, if their wake-vs-N3 cutoffs are frozen on one lab (Sleep-EDF) and applied to another (HMC, 143 subjects)? The spectral baseline and phase surrogates are the competitors. Sealed prereg `docs/prereg/2026-11-23_transfer5_rem_placement.md` (8b08564; amendment 1 in 89e5172).
+- **Result:**
+  - **Transfer:** 5 of 9 measures transfer (HMC BA 0.81-0.95). Spectral entropy, DFA and alpha are hardware-bound. wSMI (2 channels) fails even within Sleep-EDF.
+  - **Placement:** all 5 put REM on the wake side, at positions 0.83-1.04 (baseline 0.875).
+  - **Surrogates:** every surrogate call is "same", so no measure carries REM information beyond the power spectrum.
+  - **Sealed verdict:** "measures disagree", but only relative delta differs from the baseline, by degree and not by side.
+  - **Prediction:** REM in between or on the N3 side. It failed.
+- **Lesson:** at a wake-vs-N3 cutoff, REM simply reads as "no slow waves". This tells you nothing about experience. Frozen cutoffs for spectral entropy, DFA and alpha do not survive a hardware change.
+- **Not closed:**
+  - REM vs wake at its own cutoff;
+  - the unsealed hint that the exponent calls propofol sed2 N3-like while calling REM awake (ds005620, n = 20, group-level reports only). Testing it needs DOSE-I (Data Use Agreement) or another powered propofol set with per-awakening reports.
+- **Details:** `experiments/transfer_5/RESULTS.md`.

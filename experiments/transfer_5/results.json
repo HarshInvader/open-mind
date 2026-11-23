@@ -1,0 +1,949 @@
+{
+ "primary": {
+  "cutoffs": {
+   "exponent": {
+    "sign": 1,
+    "thr": -2.1636710117971867,
+    "train_ba": 0.959913261997406,
+    "prior_sign": 1
+   },
+   "lz": {
+    "sign": 1,
+    "thr": 0.4196771332022578,
+    "train_ba": 0.9316546229386696,
+    "prior_sign": 1
+   },
+   "perm_entropy": {
+    "sign": 1,
+    "thr": 0.891673600968806,
+    "train_ba": 0.9271394987956272,
+    "prior_sign": 1
+   },
+   "spectral_entropy": {
+    "sign": 1,
+    "thr": 0.5554738556083119,
+    "train_ba": 0.9214439735037984,
+    "prior_sign": 1
+   },
+   "rel_delta": {
+    "sign": -1,
+    "thr": 0.1255027002615532,
+    "train_ba": 0.9243615666110803,
+    "prior_sign": -1
+   },
+   "rel_alpha": {
+    "sign": 1,
+    "thr": -1.4431417035676566,
+    "train_ba": 0.8016829951825089,
+    "prior_sign": 1
+   },
+   "rel_beta": {
+    "sign": 1,
+    "thr": -1.663267984568415,
+    "train_ba": 0.9641555493792848,
+    "prior_sign": 1
+   },
+   "dfa": {
+    "sign": -1,
+    "thr": -1.2514316962594583,
+    "train_ba": 0.8542822401334074,
+    "prior_sign": -1
+   },
+   "wsmi": {
+    "sign": 1,
+    "thr": -0.014780769697784042,
+    "train_ba": 0.6646090420604039,
+    "prior_sign": 1
+   },
+   "baseline": {
+    "mu": [
+     -1.9003507692381663,
+     -0.2213606733092547,
+     -1.026443775033224,
+     -1.3720092181906631,
+     -1.8052585505579892,
+     -1.5685257859440838,
+     -2.0985645117514835
+    ],
+    "sd": [
+     0.8306197385444029,
+     0.19683121209837265,
+     0.17451269847153858,
+     0.4185309892678173,
+     0.3434410860869724,
+     0.6399075401255655,
+     0.7991510625789509
+    ],
+    "w": [
+     12.512010992283633,
+     0.34048478609639105,
+     0.32257537732395536,
+     1.8429197908436354,
+     -2.2967660532652827,
+     5.411326074265922,
+     -7.114334456915365
+    ],
+    "b": 1.3313230873629027,
+    "train_ba": 0.9697786964980545
+   }
+  },
+  "n_subjects": 143,
+  "measures": {
+   "exponent": {
+    "train_ba": 0.959913261997406,
+    "test_ba": 0.9525635100147269,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.9771795586103215,
+    "wake_frac_N3": 0.06323957326576998,
+    "wake_frac_REM": 0.8206337925973555,
+    "rem_position": 0.8287132978934618,
+    "rem_position_ci": [
+     0.7789111877506517,
+     0.8721331336627117
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 0.8341667495805534,
+    "surr_diff": -0.005453451687091548,
+    "surr_diff_ci": [
+     -0.009500279072136108,
+     -0.0017292649038963854
+    ],
+    "surrogate": "same",
+    "spectral": true,
+    "vs_comparator_diff": -0.04612311356206533,
+    "vs_comparator_ci": [
+     -0.06873889866097,
+     -0.022769008482968416
+    ],
+    "vs_comparator": "same"
+   },
+   "lz": {
+    "train_ba": 0.9316546229386696,
+    "test_ba": 0.8406321833479365,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.86087610899951,
+    "wake_frac_N3": 0.18368908147777946,
+    "wake_frac_REM": 0.7632283914672578,
+    "rem_position": 0.8558039159586254,
+    "rem_position_ci": [
+     0.8037492892114864,
+     0.9052368148171824
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 0.826559211728389,
+    "surr_diff": 0.029244704230236396,
+    "surr_diff_ci": [
+     0.007810537410388433,
+     0.04981155218017699
+    ],
+    "surrogate": "same",
+    "spectral": true,
+    "vs_comparator_diff": -0.01903249549690178,
+    "vs_comparator_ci": [
+     -0.07762146831003174,
+     0.04009059345995272
+    ],
+    "vs_comparator": "same"
+   },
+   "perm_entropy": {
+    "train_ba": 0.9271394987956272,
+    "test_ba": 0.8531275065621751,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.8062222197108296,
+    "wake_frac_N3": 0.08507479197524447,
+    "wake_frac_REM": 0.781347509282732,
+    "rem_position": 0.9655067612094177,
+    "rem_position_ci": [
+     0.8959660940042689,
+     1.0320876033122153
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 0.931047276474757,
+    "surr_diff": 0.03445948473466065,
+    "surr_diff_ci": [
+     0.014522430051324453,
+     0.05198818922807909
+    ],
+    "surrogate": "same",
+    "spectral": true,
+    "vs_comparator_diff": 0.09067034975389054,
+    "vs_comparator_ci": [
+     0.039305993884533735,
+     0.1466958561187148
+    ],
+    "vs_comparator": "inconclusive"
+   },
+   "spectral_entropy": {
+    "train_ba": 0.9214439735037984,
+    "test_ba": 0.7857186102197633,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": true,
+    "eligible": false,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.9073131669132072,
+    "wake_frac_N3": 0.3393914275535065,
+    "wake_frac_REM": 0.9434999946133543,
+    "rem_position": 1.0637179829406531,
+    "rem_position_ci": [
+     1.0260303267075412,
+     1.1017680654786526
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 1.0633529808605546,
+    "surr_diff": 0.00036500208009848656,
+    "surr_diff_ci": [
+     -0.004219903067829123,
+     0.00495955007185414
+    ],
+    "surrogate": "same",
+    "spectral": true,
+    "vs_comparator_diff": 0.18888157148512597,
+    "vs_comparator_ci": [
+     0.13985308257131224,
+     0.24143888165333413
+    ],
+    "vs_comparator": "different"
+   },
+   "rel_delta": {
+    "train_ba": 0.9243615666110803,
+    "test_ba": 0.8103190832586297,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": -1,
+    "prior_sign": -1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.9278525061022189,
+    "wake_frac_N3": 0.31109064659376856,
+    "wake_frac_REM": 0.9506766427819054,
+    "rem_position": 1.0370064009760216,
+    "rem_position_ci": [
+     1.0064031831516382,
+     1.068865142223136
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 1.0385020407271044,
+    "surr_diff": -0.0014956397510828001,
+    "surr_diff_ci": [
+     -0.005639384519529306,
+     0.002685303833725929
+    ],
+    "surrogate": "same",
+    "spectral": true,
+    "vs_comparator_diff": 0.16216998952049444,
+    "vs_comparator_ci": [
+     0.12163293735955993,
+     0.2070138083519121
+    ],
+    "vs_comparator": "different"
+   },
+   "rel_alpha": {
+    "train_ba": 0.8016829951825089,
+    "test_ba": 0.6472523266442486,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": true,
+    "eligible": false,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.906332139329583,
+    "wake_frac_N3": 0.6162749734076803,
+    "wake_frac_REM": 0.9682209970671507,
+    "rem_position": 1.2133677943824042,
+    "rem_position_ci": [
+     1.1160160261504142,
+     1.3397702311078952
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 1.2189184103682664,
+    "surr_diff": -0.005550615985862262,
+    "surr_diff_ci": [
+     -0.01212769941953989,
+     0.0006129378165431834
+    ],
+    "surrogate": "same",
+    "spectral": true,
+    "vs_comparator_diff": 0.338531382926877,
+    "vs_comparator_ci": [
+     0.24555295506223143,
+     0.4622014403147803
+    ],
+    "vs_comparator": "different"
+   },
+   "rel_beta": {
+    "train_ba": 0.9641555493792848,
+    "test_ba": 0.8986316667791691,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.9879992475919565,
+    "wake_frac_N3": 0.18797698629154347,
+    "wake_frac_REM": 0.9708423526237289,
+    "rem_position": 0.9785544780462244,
+    "rem_position_ci": [
+     0.9535386065814482,
+     0.9976527165625327
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 0.9790404354043789,
+    "surr_diff": -0.0004859573581544874,
+    "surr_diff_ci": [
+     -0.0026259022022375096,
+     0.001563917743459503
+    ],
+    "surrogate": "same",
+    "spectral": true,
+    "vs_comparator_diff": 0.10371806659069727,
+    "vs_comparator_ci": [
+     0.07603350041340758,
+     0.13571915702384665
+    ],
+    "vs_comparator": "inconclusive"
+   },
+   "dfa": {
+    "train_ba": 0.8542822401334074,
+    "test_ba": 0.7347295530659067,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": true,
+    "eligible": false,
+    "fitted_sign": -1,
+    "prior_sign": -1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.7928968080342897,
+    "wake_frac_N3": 0.3297472002124388,
+    "wake_frac_REM": 0.819554511457345,
+    "rem_position": 1.0575574349472605,
+    "rem_position_ci": [
+     0.9876117670724746,
+     1.1364785732687555
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 1.0618142124824732,
+    "surr_diff": -0.004256777535212697,
+    "surr_diff_ci": [
+     -0.012412999656904861,
+     0.003349989813185882
+    ],
+    "surrogate": "same",
+    "spectral": true,
+    "vs_comparator_diff": 0.18272102349173336,
+    "vs_comparator_ci": [
+     0.10331414368467594,
+     0.26994800105829225
+    ],
+    "vs_comparator": "different"
+   },
+   "wsmi": {
+    "train_ba": 0.6646090420604039,
+    "test_ba": 0.5490975244526758,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": false,
+    "eligible": false,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.6532623929882042,
+    "wake_frac_N3": 0.5564500542174553,
+    "wake_frac_REM": 0.640215991683603,
+    "rem_position": 0.8652403043841851,
+    "rem_position_ci": [
+     0.5740308413502355,
+     1.3358510755141462
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 2.597893719349374,
+    "surr_diff": -1.7326534149651889,
+    "surr_diff_ci": [
+     -2.798763039627436,
+     -1.234841425927779
+    ],
+    "surrogate": "different",
+    "spectral": false,
+    "vs_comparator_diff": -0.009596107071342064,
+    "vs_comparator_ci": [
+     -0.2957176923901571,
+     0.44889407423334304
+    ],
+    "vs_comparator": "inconclusive"
+   },
+   "baseline": {
+    "train_ba": 0.9697786964980545,
+    "test_ba": 0.9778828101187115,
+    "n_subjects_ba": 145,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "wake_frac_W": 0.9887219871158015,
+    "wake_frac_N3": 0.028854749812120606,
+    "wake_frac_REM": 0.8685815591686037,
+    "rem_position": 0.8748364114555272,
+    "rem_position_ci": [
+     0.8358513324187123,
+     0.9076456854926801
+    ],
+    "placement": "wake side",
+    "surr_rem_position": 0.8798406295167887,
+    "surr_diff": -0.005004218061261501,
+    "surr_diff_ci": [
+     -0.008058880327552285,
+     -0.0020690406216398423
+    ],
+    "surrogate": "same",
+    "spectral": true
+   }
+  },
+  "comparator": "baseline",
+  "verdict": "measures disagree on REM (vs baseline): rel_delta (wake side, surrogate same)",
+  "n_epochs": {
+   "train": 4199,
+   "test": 16080,
+   "surr": 5729
+  }
+ },
+ "secondary_sleepedf_rem": {
+  "cutoffs": {
+   "exponent": {
+    "sign": 1,
+    "thr": -2.1636710117971867,
+    "train_ba": 0.959913261997406,
+    "prior_sign": 1
+   },
+   "lz": {
+    "sign": 1,
+    "thr": 0.4196771332022578,
+    "train_ba": 0.9316546229386696,
+    "prior_sign": 1
+   },
+   "perm_entropy": {
+    "sign": 1,
+    "thr": 0.891673600968806,
+    "train_ba": 0.9271394987956272,
+    "prior_sign": 1
+   },
+   "spectral_entropy": {
+    "sign": 1,
+    "thr": 0.5554738556083119,
+    "train_ba": 0.9214439735037984,
+    "prior_sign": 1
+   },
+   "rel_delta": {
+    "sign": -1,
+    "thr": 0.1255027002615532,
+    "train_ba": 0.9243615666110803,
+    "prior_sign": -1
+   },
+   "rel_alpha": {
+    "sign": 1,
+    "thr": -1.4431417035676566,
+    "train_ba": 0.8016829951825089,
+    "prior_sign": 1
+   },
+   "rel_beta": {
+    "sign": 1,
+    "thr": -1.663267984568415,
+    "train_ba": 0.9641555493792848,
+    "prior_sign": 1
+   },
+   "dfa": {
+    "sign": -1,
+    "thr": -1.2514316962594583,
+    "train_ba": 0.8542822401334074,
+    "prior_sign": -1
+   },
+   "wsmi": {
+    "sign": 1,
+    "thr": -0.014780769697784042,
+    "train_ba": 0.6646090420604039,
+    "prior_sign": 1
+   },
+   "baseline": {
+    "mu": [
+     -1.9003507692381663,
+     -0.2213606733092547,
+     -1.026443775033224,
+     -1.3720092181906631,
+     -1.8052585505579892,
+     -1.5685257859440838,
+     -2.0985645117514835
+    ],
+    "sd": [
+     0.8306197385444029,
+     0.19683121209837265,
+     0.17451269847153858,
+     0.4185309892678173,
+     0.3434410860869724,
+     0.6399075401255655,
+     0.7991510625789509
+    ],
+    "w": [
+     12.512010992283633,
+     0.34048478609639105,
+     0.32257537732395536,
+     1.8429197908436354,
+     -2.2967660532652827,
+     5.411326074265922,
+     -7.114334456915365
+    ],
+    "b": 1.3313230873629027,
+    "train_ba": 0.9697786964980545
+   }
+  },
+  "n_subjects": 52,
+  "measures": {
+   "exponent": {
+    "train_ba": 0.959913261997406,
+    "test_ba": 0.9608318764568763,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.9802884615384617,
+    "wake_frac_N3": 0.05862470862470862,
+    "wake_frac_REM": 0.7469551282051283,
+    "rem_position": 0.7468346426821364,
+    "rem_position_ci": [
+     0.6625680945553502,
+     0.82688409545096
+    ],
+    "placement": "wake side",
+    "vs_comparator_diff": 0.007576906227745206,
+    "vs_comparator_ci": [
+     -0.018053285511349156,
+     0.03436983685465286
+    ],
+    "vs_comparator": "same"
+   },
+   "lz": {
+    "train_ba": 0.9316546229386696,
+    "test_ba": 0.9317307692307691,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.9028846153846156,
+    "wake_frac_N3": 0.03942307692307692,
+    "wake_frac_REM": 0.846153846153846,
+    "rem_position": 0.9342984409799555,
+    "rem_position_ci": [
+     0.875770697384048,
+     0.9901466296212861
+    ],
+    "placement": "wake side",
+    "vs_comparator_diff": 0.19504070452556432,
+    "vs_comparator_ci": [
+     0.10042602936563684,
+     0.28232164437381374
+    ],
+    "vs_comparator": "different"
+   },
+   "perm_entropy": {
+    "train_ba": 0.9271394987956272,
+    "test_ba": 0.9303831585081584,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.9081730769230769,
+    "wake_frac_N3": 0.04740675990675991,
+    "wake_frac_REM": 0.7261217948717947,
+    "rem_position": 0.7885009224311562,
+    "rem_position_ci": [
+     0.708654150658816,
+     0.8651195741662456
+    ],
+    "placement": "wake side",
+    "vs_comparator_diff": 0.049243185976765025,
+    "vs_comparator_ci": [
+     0.00014957827140066053,
+     0.09965525200363687
+    ],
+    "vs_comparator": "same"
+   },
+   "spectral_entropy": {
+    "train_ba": 0.9214439735037984,
+    "test_ba": 0.9172619047619046,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.8860576923076925,
+    "wake_frac_N3": 0.05153388278388278,
+    "wake_frac_REM": 0.9375,
+    "rem_position": 1.0616427082190278,
+    "rem_position_ci": [
+     1.0226300140375677,
+     1.1037896640456224
+    ],
+    "placement": "wake side",
+    "vs_comparator_diff": 0.32238497176463665,
+    "vs_comparator_ci": [
+     0.23603538278248418,
+     0.4154199861768502
+    ],
+    "vs_comparator": "different"
+   },
+   "rel_delta": {
+    "train_ba": 0.9243615666110803,
+    "test_ba": 0.9221039377289377,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": -1,
+    "prior_sign": -1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.8899038461538464,
+    "wake_frac_N3": 0.04569597069597069,
+    "wake_frac_REM": 0.9205128205128206,
+    "rem_position": 1.0362576271186439,
+    "rem_position_ci": [
+     0.9911506126243971,
+     1.0799559428401762
+    ],
+    "placement": "wake side",
+    "vs_comparator_diff": 0.2969998906642527,
+    "vs_comparator_ci": [
+     0.21063132856592,
+     0.3883964274451608
+    ],
+    "vs_comparator": "different"
+   },
+   "rel_alpha": {
+    "train_ba": 0.8016829951825089,
+    "test_ba": 0.8002986596736597,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.7961538461538461,
+    "wake_frac_N3": 0.19555652680652674,
+    "wake_frac_REM": 0.9307692307692309,
+    "rem_position": 1.2241358399029716,
+    "rem_position_ci": [
+     1.134634509964566,
+     1.3355548432821298
+    ],
+    "placement": "wake side",
+    "vs_comparator_diff": 0.4848781034485804,
+    "vs_comparator_ci": [
+     0.3589771644756465,
+     0.6201060088118087
+    ],
+    "vs_comparator": "different"
+   },
+   "rel_beta": {
+    "train_ba": 0.9641555493792848,
+    "test_ba": 0.9620265151515149,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.9649038461538463,
+    "wake_frac_N3": 0.04085081585081585,
+    "wake_frac_REM": 0.8961538461538463,
+    "rem_position": 0.9255995080959213,
+    "rem_position_ci": [
+     0.8713089869261732,
+     0.9690981891242991
+    ],
+    "placement": "wake side",
+    "vs_comparator_diff": 0.1863417716415301,
+    "vs_comparator_ci": [
+     0.1277380386529649,
+     0.2468287657653026
+    ],
+    "vs_comparator": "different"
+   },
+   "dfa": {
+    "train_ba": 0.8542822401334074,
+    "test_ba": 0.8558873418248418,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "fitted_sign": -1,
+    "prior_sign": -1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.7918269230769233,
+    "wake_frac_N3": 0.08005223942723944,
+    "wake_frac_REM": 0.8456730769230769,
+    "rem_position": 1.0756505606100701,
+    "rem_position_ci": [
+     0.9967231492754778,
+     1.1592437722101292
+    ],
+    "placement": "wake side",
+    "vs_comparator_diff": 0.33639282415567895,
+    "vs_comparator_ci": [
+     0.22577281841995198,
+     0.45055803174755205
+    ],
+    "vs_comparator": "different"
+   },
+   "wsmi": {
+    "train_ba": 0.6646090420604039,
+    "test_ba": 0.6627542596292597,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": false,
+    "eligible": false,
+    "fitted_sign": 1,
+    "prior_sign": 1,
+    "sign_mismatch": false,
+    "wake_frac_W": 0.7355769230769231,
+    "wake_frac_N3": 0.41006840381840376,
+    "wake_frac_REM": 0.47548076923076926,
+    "rem_position": 0.20095438841775715,
+    "rem_position_ci": [
+     0.041146789038515416,
+     0.33728306159961036
+    ],
+    "placement": "N3 side",
+    "vs_comparator_diff": -0.538303348036634,
+    "vs_comparator_ci": [
+     -0.7079940473077033,
+     -0.3794272317908418
+    ],
+    "vs_comparator": "different"
+   },
+   "baseline": {
+    "train_ba": 0.9697786964980545,
+    "test_ba": 0.9677229020979019,
+    "n_subjects_ba": 52,
+    "viable_in_dataset": true,
+    "eligible": true,
+    "wake_frac_W": 0.9846153846153847,
+    "wake_frac_N3": 0.0491695804195804,
+    "wake_frac_REM": 0.7407051282051285,
+    "rem_position": 0.7392577364543912,
+    "rem_position_ci": [
+     0.6594004404158916,
+     0.8184757554750595
+    ],
+    "placement": "wake side"
+   }
+  },
+  "comparator": "baseline"
+ },
+ "secondary_ds005620": {
+  "exponent": {
+   "awake": [
+    0.95,
+    [
+     0.85,
+     1.0
+    ],
+    20
+   ],
+   "sed2": [
+    0.29166666666666663,
+    [
+     0.14166666666666666,
+     0.4666666666666666
+    ],
+    20
+   ]
+  },
+  "lz": {
+   "awake": [
+    0.425,
+    [
+     0.25,
+     0.6
+    ],
+    20
+   ],
+   "sed2": [
+    0.525,
+    [
+     0.35,
+     0.6918749999999988
+    ],
+    20
+   ]
+  },
+  "perm_entropy": {
+   "awake": [
+    0.675,
+    [
+     0.475,
+     0.85
+    ],
+    20
+   ],
+   "sed2": [
+    0.03333333333333333,
+    [
+     0.0,
+     0.08333333333333333
+    ],
+    20
+   ]
+  },
+  "spectral_entropy": {
+   "awake": [
+    0.95,
+    [
+     0.875,
+     1.0
+    ],
+    20
+   ],
+   "sed2": [
+    0.6083333333333333,
+    [
+     0.4333333333333333,
+     0.7666666666666667
+    ],
+    20
+   ]
+  },
+  "rel_delta": {
+   "awake": [
+    1.0,
+    [
+     1.0,
+     1.0
+    ],
+    20
+   ],
+   "sed2": [
+    0.7416666666666666,
+    [
+     0.575,
+     0.8916666666666666
+    ],
+    20
+   ]
+  },
+  "rel_alpha": {
+   "awake": [
+    1.0,
+    [
+     1.0,
+     1.0
+    ],
+    20
+   ],
+   "sed2": [
+    0.8666666666666666,
+    [
+     0.7166666666666666,
+     0.9833333333333332
+    ],
+    20
+   ]
+  },
+  "rel_beta": {
+   "awake": [
+    1.0,
+    [
+     1.0,
+     1.0
+    ],
+    20
+   ],
+   "sed2": [
+    0.7916666666666666,
+    [
+     0.6416666666666666,
+     0.925
+    ],
+    20
+   ]
+  },
+  "dfa": {
+   "awake": [
+    0.825,
+    [
+     0.675,
+     0.95
+    ],
+    20
+   ],
+   "sed2": [
+    0.525,
+    [
+     0.3414583333333333,
+     0.6916666666666667
+    ],
+    20
+   ]
+  },
+  "wsmi": {
+   "awake": [
+    0.375,
+    [
+     0.2,
+     0.55
+    ],
+    20
+   ],
+   "sed2": [
+    0.41666666666666663,
+    [
+     0.26666666666666666,
+     0.5833333333333333
+    ],
+    20
+   ]
+  },
+  "baseline": {
+   "awake": [
+    0.95,
+    [
+     0.85,
+     1.0
+    ],
+    20
+   ],
+   "sed2": [
+    0.3,
+    [
+     0.13333333333333333,
+     0.4666666666666666
+    ],
+    20
+   ]
+  },
+  "ranking_spearman": {
+   "rho": 0.6,
+   "p": 0.28475697986529386,
+   "measures": [
+    "exponent",
+    "lz",
+    "perm_entropy",
+    "rel_delta",
+    "rel_beta"
+   ]
+  }
+ }
+}

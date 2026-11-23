@@ -1,4 +1,7 @@
 [
+  {"date": "2026-11-23", "kind": "result", "title": "Sleep measures all call REM 'awake', for spectral reasons only",
+   "body": "We froze wake-vs-deep-sleep cutoffs on one sleep lab and tested them on 143 people from another. Five of nine measures carried over, and all five put REM with waking, not in between as we predicted. Nothing they saw in REM went beyond the power spectrum, so they read missing slow waves, not experience.",
+   "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/transfer_5/RESULTS.md"},
   {"date": "2026-11-23", "kind": "void", "title": "AI self-model test came out void",
    "body": "Our sealed check needed a planted agent to show the effect, and it didn't: both trained agents learned to suppress every distractor. So the run says nothing either way, and the next design has to block the action, not just the input.",
    "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/self_model_agents/RESULTS.md"},

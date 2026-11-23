@@ -146,3 +146,26 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - Ask the owner about DOSE-I.
 - **Our novelty note:** REM placement for some single measures is already reported (Lendner 2020: slope; Ugail & Howard 2026: LZc, slope and alpha place REM below N2 on Sleep-EDF). What is new is frozen cross-dataset cutoffs, the spectral competitor and the surrogate gate, so this is an atlas-grade result, not a discovery.
 - **Decision:** agreed. Planted gate running; then Fable pre-seal review, seal, HMC fetch and run.
+
+### Task #5: pre-seal review, seal, run and result (Fable rounds 9-10)
+- **Fable round 9 (pre-seal):**
+  - The verdict used raw fractions, so pure mixtures read as "disagree".
+  - It was rewritten to the normalised position (REM − N3)/(W − N3), with three-way calls against a ±0.10 band, a comparator fallback (baseline, else exponent) and a viability rule (train BA ≥ 0.80).
+  - The planted gate now tests verdict() itself and passed on attempt 3; attempts 1-2 are disclosed.
+  - Sealed in 8b08564.
+- **Amendment 1 (89e5172):** physionet.org returned 502 for the HMC record list, so the list now comes from the PhysioNet S3 mirror. This was resealed before any data was read.
+- **Run:**
+  - HMC 151/151 fetched; 143 subjects analysed.
+  - ds005620: 20 subjects, 0 skipped.
+  - Run under the Mind lock at nice 20.
+- **Result:** sealed verdict "measures disagree (vs baseline): rel_delta". All 5 eligible measures put REM on the wake side (0.83-1.04), and every surrogate call is "same". Our placement prediction failed. The ds005620 secondary is ρ = 0.6, p = 0.28 (not confirmed).
+- **Fable round 10 (interpretation):**
+  - The headline is a transfer table: REM sits with wake, and the information is all spectral. The disagreement verdict is correct by the rule but thin.
+  - The ds005620 exponent pattern (REM awake, sed2 N3-like at about 83% reports) is a hypothesis, not a claim.
+  - Close #5 and log it in the atlas; no paper.
+  - Next: ask for DOSE-I, but first confirm it has per-awakening reports.
+  - It did not rank #24.
+- **Decision:**
+  - #5 closed: RESULTS.md, atlas entry, a site "closed" entry and a Latest-updates item.
+  - Ask the owner about DOSE-I, conditional on per-awakening reports.
+  - #24 waits until we know whether its ketamine data have per-subject reports.

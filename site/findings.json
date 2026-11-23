@@ -396,6 +396,12 @@
    "why": "Of the open anaesthesia recordings (ds005620, Chennu 2016, ds004541), none carries a report for each recording; they rest on behaviour only. ds005620 gives only group counts: 24 of 29 informative awakenings under propofol reported experience, with 5 clear \"nothing\" reports. So a measure can be checked against that group rate, but not scored on single recordings.",
    "tag": "wait",
    "reopen": "Release of ds005620's per-awakening labels, or another sedation study with a report for each recording."
+  },
+  {
+   "route": "Using sleep-trained cutoffs to place REM between waking and deep sleep",
+   "why": "We froze wake-vs-deep-sleep cutoffs for 9 measures on one sleep lab and applied them to another (143 people). Five measures carried over. All five called REM 'awake' (83-104% of the way from deep sleep to wake), and none carried anything beyond the power spectrum. At this cutoff, REM just reads as 'no slow waves', so it can't tell experience from arousal. Spectral entropy, DFA and alpha didn't survive the change of hardware.",
+   "tag": "out",
+   "reopen": "A powered propofol dataset with a report for each awakening (DOSE-I needs a data-use agreement), to test the hint that the exponent calls propofol sedation 'deep sleep' even when people dream."
   }
  ],
  "reversed": [],
