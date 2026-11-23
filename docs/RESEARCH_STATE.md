@@ -169,3 +169,21 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - #5 closed: RESULTS.md, atlas entry, a site "closed" entry and a Latest-updates item.
   - Ask the owner about DOSE-I, conditional on per-awakening reports.
   - #24 waits until we know whether its ketamine data have per-subject reports.
+
+### Next study after #5 (Fable round 11): nothing unblocked clears the bar
+- **Correction:** DOSE-I is not owner-blocked. Zenodo 22145442 v2 is open-access with no login, and the owner accepted its data-use terms on 2026-11-19 (`experiments/experience_benchmark/AUDIT.md`). The #5 census was wrong on this. DOSE-I has MOAA/S and transition labels but no experience interviews (technical report, arXiv 2607.02570).
+- **Fable's search** (OpenNeuro GraphQL, Zenodo, Figshare, OSF, PhysioNet) found no open sedation EEG with per-awakening experience reports.
+  - ds005620: v1.0.0 only, no labels.
+  - DREAM: sleep only.
+  - Zenodo 15497531 (Iowa dexmedetomidine/propofol iEEG): no reports.
+  - Wisconsin serial awakenings: on IRB request.
+  - Turku: no public repository.
+- **Prior art against the #5 loose thread:** Casey et al. 2024 (doi:10.1016/j.bja.2023.09.031; the DOI was checked via Crossref). The exponent steepens from disconnected consciousness to unconsciousness on per-awakening reports, in all three conditions.
+- **Candidates rejected:**
+  - DOSE-I frozen cutoffs: montage Fp2-Fp1/Fz-F7 with unreported filters, a short artefact-prone awake baseline, and an already-known result.
+  - DREAM REM report vs no report: about 100 negatives across 7 labs; Bazán Sánchez 2026 gives REM AUROC 0.498.
+  - ds005620 bound from group counts: uninformative (2-24 of 24 experience awakenings could be N3-side).
+- **Decision:** no study started. Nothing sealed, no lock taken, no data downloaded. Owner actions, best first:
+  1. Ask the ds005620 authors for the 52-row (subject, run, report class) table. A calibration test on the 24 experience awakenings needs no download. Kill test: fewer than 16 of them map to clean runs.
+  2. Request the Wisconsin serial-awakening data (per-report labels with pre-awakening EEG, or just the exponents).
+  3. Finish the Zenodo 806176 email verification.

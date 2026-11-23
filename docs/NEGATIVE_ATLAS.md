@@ -98,5 +98,8 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
 - **Lesson:** at a wake-vs-N3 cutoff, REM simply reads as "no slow waves". This tells you nothing about experience. Frozen cutoffs for spectral entropy, DFA and alpha do not survive a hardware change.
 - **Not closed:**
   - REM vs wake at its own cutoff;
-  - the unsealed hint that the exponent calls propofol sed2 N3-like while calling REM awake (ds005620, n = 20, group-level reports only). Testing it needs DOSE-I (Data Use Agreement) or another powered propofol set with per-awakening reports.
+  - the unsealed hint that the exponent calls propofol sed2 N3-like while calling REM awake (ds005620, n = 20, group-level reports only).
+    - It is weakened by prior art: Casey et al. 2024 (Br J Anaesth, doi:10.1016/j.bja.2023.09.031) found the exponent steepens from disconnected consciousness to unconsciousness on per-awakening reports, under dexmedetomidine, propofol and sleep.
+    - DOSE-I cannot test it: it has responsiveness labels only and no interviews.
+    - Testing it needs ds005620's per-awakening labels (not released) or the Wisconsin data (on request).
 - **Details:** `experiments/transfer_5/RESULTS.md`.
