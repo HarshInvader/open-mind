@@ -228,3 +228,23 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - Blinded packets built.
   - Planted gate run: the clean version came out SCORABLE and the planted leak came out VOID.
   - Prereg `docs/prereg/2026-11-23_theory_likelihood_pilot.md`.
+
+### Theory-likelihood pilot result (2026-11-23)
+- **Verdict under the sealed rules: SCORABLE.**
+  - G1: toy recovery 27/27.
+  - G2: placebo bias 0.00 (every placebo rating was 0.5).
+  - G3: α = 0.762.
+- **Bits on 10 items, 95% CI:**
+  - IIT 4.58 [1.70, 7.33]
+  - RPT 3.11 [−0.15, 6.14]
+  - PP 1.66 [0.21, 3.35]
+  - AST 0.94 [−0.85, 2.84]
+  - HOT −0.80 [−4.56, 2.86]
+  - GNWT −1.09 [−5.59, 3.17]
+- **Separated pairs:** IIT ahead of every other theory; no other pair separates. The sealed prediction that IIT, GNWT and RPT would not separate failed.
+- **Not a verdict on theories yet.** Three reasons:
+  - LLM raters know the outcomes, so theory-specific leakage is unmeasured.
+  - The items were chosen as splitting items, and six of the ten are posterior-versus-prefrontal contrasts.
+  - Each theory rests on one reference.
+- **Write-up:** `experiments/theory_likelihood/RESULTS.md`.
+- **Decision:** next is the sealed amendment for the 59-item run. Before rating, it adds a retrodiction split and fictional-twin leak probes. Meanwhile, Fable list items 4 and 3 continue. Item 2 (Stockart) is demoted: the authors already decoded across conditions (PMC12475450), so little is novel.
