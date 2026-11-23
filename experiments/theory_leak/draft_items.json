@@ -1,0 +1,197 @@
+{
+ "drafted": "2026-11-23T20:40:16Z",
+ "items": [
+  {
+   "id": "P01",
+   "library_id": "hesse-tsao-2026-rapid-alternation",
+   "doi": "10.64898/2026.10.15.759299",
+   "first_posted": "2026-10-16",
+   "date_source": "bioRxiv API api.biorxiv.org/details/biorxiv/<DOI>, version 1 date",
+   "read_depth": "abstract only",
+   "actual": "During a constant binocular-suppression percept in monkeys, face-selective temporal neurons and prefrontal neurons switched about 15 times a second between brief epochs that carried the seen image and epochs that carried the suppressed image; tuning was stronger in the seen epochs.",
+   "mirror": "During a constant binocular-suppression percept in monkeys, face-selective temporal neurons and prefrontal neurons steadily carried only the seen image; the suppressed image could not be read out from their activity at any moment.",
+   "bears_on": "Whether conscious content is a sustained versus a rapidly sampled, time-sliced state, and whether prefrontal cortex tracks content like high-level sensory cortex (sustained-posterior and integration accounts vs access/ignition and sampling accounts).",
+   "key_results": "Recordings across several inferotemporal face patches and prefrontal cortex during binocular flash suppression. With stimulus and percept held constant, activity alternated about 15 times per second between conscious and suppressed micro-epochs, each allowing accurate reconstruction of the respective image. Single neurons responded selectively to the conscious stimulus in conscious epochs and to the suppressed stimulus in suppressed epochs; the two epoch types were distinguishable, with feature tuning amplified in conscious epochs. Prefrontal recordings were qualitatively similar. (abstract only)",
+   "limits": "Abstract only (bioRxiv full text blocked by rate limiting); number of animals, neurons and the report paradigm are not stated in the abstract. Epochs are inferred from neural data, so the conscious/suppressed labelling of micro-epochs is model-based, not reported.",
+   "pending": false
+  },
+  {
+   "id": "P02",
+   "library_id": "ellinghorst-2026-inattentional-deafness",
+   "doi": "10.64898/2026.10.05.755932",
+   "first_posted": "2026-10-12",
+   "date_source": "bioRxiv API api.biorxiv.org/details/biorxiv/<DOI>, version 1 date (v2 2026-10-14)",
+   "read_depth": "abstract only",
+   "actual": "In a no-report inattentional deafness design, tones that listeners were aware of but had no task on still evoked both an early auditory awareness negativity and a larger late positivity in the P3 window than when the same tones went unnoticed; both grew further when the tones became task-relevant.",
+   "mirror": "In a no-report inattentional deafness design, tones that listeners were aware of but had no task on evoked an early auditory awareness negativity but no late positivity in the P3 window; the late positivity appeared only when the tones became task-relevant.",
+   "bears_on": "Whether a late, widespread (ignition-like) response accompanies awareness without report or task, or only an early sensory-cortex negativity (late-access/ignition accounts vs early-sensory/recurrent accounts; report confound).",
+   "key_results": "Physically identical target-tone pairs in multitone masks across three phases differing only in instructions: naive (unaware), informed (aware, task-irrelevant), and task-relevant (gap judgement). Awareness gave an auditory awareness negativity and an increased positivity in the P3 window, both larger when task-relevant. Deviants gave a mismatch negativity in all phases (largest when task-relevant), while a significant deviant P3 appeared only in the task-relevant phase. (abstract only)",
+   "limits": "Abstract only; sample size and effect sizes not in the abstract. Awareness is manipulated between fixed-order phases, so time on task and expectation are confounded with awareness; condition-averaged ERPs.",
+   "pending": false
+  },
+  {
+   "id": "P03",
+   "library_id": "bandara-dcm-reanalysis-cogitate-meg",
+   "doi": "10.64898/2026.07.16.738188",
+   "first_posted": "2026-07-22",
+   "date_source": "bioRxiv API api.biorxiv.org/details/biorxiv/<DOI>, version 1 date",
+   "read_depth": "full",
+   "actual": "Re-analysing a large multi-lab MEG dataset of task-irrelevant faces with directed-connectivity models, prefrontal feedback to face-selective cortex was needed to explain responses both at stimulus onset and again at stimulus offset; feedback from fusiform to primary visual cortex was not sustained through the stimulus.",
+   "mirror": "Re-analysing a large multi-lab MEG dataset of task-irrelevant faces with directed-connectivity models, prefrontal feedback to face-selective cortex was needed only at stimulus onset, not at offset; feedback from fusiform to primary visual cortex was sustained through the stimulus.",
+   "bears_on": "Phasic prefrontal ignition at onset and offset versus sustained posterior feedback for the duration of the percept (ignition/workspace vs sustained posterior integration and recurrence accounts).",
+   "key_results": "Dynamic causal modelling of the MEG data (100 recruited, 98 analysed) split into a discovery batch (N = 48) and a validation batch (N = 52), with expanding time windows. Removing prefrontal-to-fusiform feedback was strongly penalised (posterior probability > 0.95) in the 300-500 ms window after onset and, at offset, from the 400 ms window, in both batches. Fusiform-to-V1 feedback was needed (pp > 0.95) in only 2 of 8 non-successive windows in discovery and was not sustained in validation; intrinsic fusiform gain was needed in every window in validation but dipped at 600 ms in discovery (ending at pp about 0.78). A face-versus-object network check did not reach strong evidence for face selectivity in any window.",
+   "limits": "One reanalysis with many modelling choices on data whose original analysis found no offset ignition; the failed content-specificity check means the network may not be face-specific, which weakens the posterior (sustained) tests most.",
+   "pending": false
+  },
+  {
+   "id": "P04",
+   "library_id": "zheng-melloni-2026-long-timescale-awareness",
+   "doi": "10.64898/2026.09.03.748970",
+   "first_posted": "2026-09-08",
+   "date_source": "bioRxiv API api.biorxiv.org/details/biorxiv/<DOI>, version 1 date",
+   "read_depth": "full",
+   "actual": "Across 20 visual awareness datasets, trial-by-trial visibility and confidence reports carried over in time with an exponential decay lasting more than 5 seconds, while accuracy showed only a slow linear decay; single-pulse TMS to dorsolateral prefrontal cortex reduced the carry-over in confidence but not in accuracy.",
+   "mirror": "Across 20 visual awareness datasets, trial-by-trial visibility and confidence reports carried over in time no more than accuracy did, fading within a trial or two; single-pulse TMS to dorsolateral prefrontal cortex left the carry-over in confidence unchanged.",
+   "bears_on": "Whether subjective awareness has its own slow dynamics read out by prefrontal cortex, separate from first-order performance (higher-order/metacognitive and prefrontal access accounts vs first-order sensory accounts).",
+   "key_results": "Reanalysis of 20 existing datasets (N = 335). Subjective measures fit an exponential decay; in the 14 datasets with known trial durations the characteristic timescales generally exceeded 5 s, with autocorrelation reaching asymptote over about 30-100 s; accuracy fit a slow linear decay. In a reanalysed TMS dataset (right DLPFC vs vertex, single pulses at 0-500 ms), DLPFC stimulation reduced the amplitude of confidence autocorrelation (beta = -0.129, SE = 0.050, P = 0.010) without changing its decay constant (P = 0.323), and had no detectable effect on objective performance (P = 0.735 intercept, P = 0.589 slope).",
+   "limits": "All data are reanalysed from earlier studies; the TMS evidence is one dataset with a between-subjects site factor. Long autocorrelation in reports may still partly reflect criterion drift, which the authors argue against but cannot rule out.",
+   "pending": false
+  },
+  {
+   "id": "P05",
+   "library_id": "boyer-2026-auditory-bifurcation-fmri",
+   "doi": "10.64898/2026.06.17.732590",
+   "first_posted": "2026-06-22",
+   "date_source": "bioRxiv API api.biorxiv.org/details/biorxiv/<DOI>, version 1 date; borderline: posted near the stated ~June 2026 training cutoff",
+   "read_depth": "abstract only",
+   "actual": "In fMRI with near-threshold sounds, sound intensity modulated broad networks including prefrontal cortex both with and without a task, and all-or-none single-trial dynamics beyond primary auditory cortex predicted perception in both contexts.",
+   "mirror": "In fMRI with near-threshold sounds, sound intensity modulated prefrontal cortex only when listeners had a task; without one, all-or-none single-trial dynamics were confined to auditory cortex.",
+   "bears_on": "Whether prefrontal involvement and all-or-none (bifurcation/ignition) dynamics survive the removal of the task (ignition/workspace vs posterior and report-confound accounts).",
+   "key_results": "fMRI with near-threshold auditory stimuli in task and task-free contexts. In both, intensity modulated activity in broad sensory and extra-sensory networks including PFC, with shared and distinct components. Single-trial modelling found bifurcation dynamics beyond primary sensory cortices and predicted conscious perception trial by trial in both contexts. (abstract only)",
+   "limits": "Abstract only; sample size, how perception was inferred in the no-task context and which regions bifurcate are not stated. Posted 2026-06-22, close to some models' cutoff, and it extends the same lab's earlier EEG result, so raters may anticipate it.",
+   "pending": false
+  },
+  {
+   "id": "P06",
+   "library_id": "hemmi-2026-meg-naps-registered-report",
+   "doi": "10.31234/osf.io/zgw6x_v1",
+   "first_posted": "2026-04-27",
+   "date_source": "OSF API api.osf.io/v2/preprints/zgw6x_v1 date_published",
+   "read_depth": "full",
+   "side1": "In a registered MEG study of evening naps, the 20 s before awakenings with a reported experience showed lower delta power and higher low-gamma power in posterior cortex than awakenings with no experience.",
+   "side2": "In a registered MEG study of evening naps, the 20 s before awakenings with a reported experience showed no difference from awakenings with no experience in posterior delta or low-gamma power (Bayes factors favouring no difference).",
+   "bears_on": "Replicability of a posterior 'hot zone' marker of experience in sleep (posterior-content accounts vs accounts that do not localise experience posteriorly).",
+   "key_results": "Stage 1 registered report: MEG with targeted serial awakenings during evening naps in 21 participants; 2 used for pilot, 10 meeting inclusion criteria go to confirmatory Stage 2 by an independent analysis team; one-tailed paired tests and JZS Bayes factors on source-level delta (1-4 Hz) and low-gamma (20-50 Hz) power in frontal and posterior ROIs. Pilot: one participant supported lower delta in both ROIs (posterior BF10 = 15.58, frontal BF10 = 9.21); low-gamma differences were inconclusive for both pilot participants (BF10 0.87-1.98).",
+   "limits": "Stage 2 confirmatory N = 10, no power analysis (MEG scanner decommissioned). Naps and hypnagogic experience, not full-night NREM/REM.",
+   "pending": true
+  },
+  {
+   "id": "P07",
+   "library_id": "hemmi-2026-meg-naps-registered-report",
+   "doi": "10.31234/osf.io/zgw6x_v1",
+   "first_posted": "2026-04-27",
+   "date_source": "OSF API api.osf.io/v2/preprints/zgw6x_v1 date_published",
+   "read_depth": "full",
+   "side1": "In a registered MEG study of evening naps, frontal cortex showed the same experience-related drop in delta and rise in low-gamma power before awakenings as posterior cortex.",
+   "side2": "In a registered MEG study of evening naps, experience-related power changes before awakenings appeared in posterior cortex but not in frontal cortex.",
+   "bears_on": "Front versus back: whether sleep experience markers extend to frontal cortex (prefrontal/workspace and higher-order accounts vs posterior-content accounts).",
+   "key_results": "Hypotheses 3-4 (secondary): frontal delta lower and frontal low-gamma higher with experience, tested alongside posterior Hypotheses 1-2 with Holm correction across ROIs. See P06 for design and pilot numbers.",
+   "limits": "Same as P06; frontal hypotheses are secondary and the small N may leave both ROIs inconclusive, in which case neither side resolves.",
+   "pending": true
+  },
+  {
+   "id": "P08",
+   "library_id": "intrepid-an-adversarial-collaboration-of-iit-neu",
+   "doi": "10.1016/j.neubiorev.2026.106742",
+   "first_posted": "2025-08-30",
+   "date_source": "arXiv API, 2509.00555 v1 published date (preprint of the journal paper)",
+   "read_depth": "full",
+   "side1": "In mice performing a left/right spatial location task, optogenetically silencing visual-cortex neurons that were already inactive biased choices toward the intact hemifield, as in hemineglect.",
+   "side2": "In mice performing a left/right spatial location task, optogenetically silencing visual-cortex neurons that were already inactive left choices unchanged compared with control trials.",
+   "bears_on": "Whether inactive neurons contribute to experience (a structure-not-activity claim of integration accounts vs activity-based and predictive accounts).",
+   "key_results": "Planned test (Hypothesis #1): rodents report whether a target falls in the left or right subjectively perceived hemifield while left visual cortex is optogenetically hyperpolarised. Prediction tables: one theory predicts a bias toward the intact hemifield for inactivation of already-inactive neurons; the two predictive theories predict no change, one of them predicting increased bias when normal background activity is suppressed.",
+   "limits": "Planned design only; the paper names the technical hurdles (classing neurons as inactive, task sensitivity, downstream side effects) that could make any result equivocal.",
+   "pending": true
+  },
+  {
+   "id": "P09",
+   "library_id": "intrepid-an-adversarial-collaboration-of-iit-neu",
+   "doi": "10.1016/j.neubiorev.2026.106742",
+   "first_posted": "2025-08-30",
+   "date_source": "arXiv API, 2509.00555 v1 published date (preprint of the journal paper)",
+   "read_depth": "full",
+   "side1": "Two dots that span the eye's natural blind spot were judged closer together than identically spaced dots elsewhere in the visual field, shifting the midpoint of the distance psychometric function.",
+   "side2": "Two dots that span the eye's natural blind spot were judged as far apart as identically spaced dots elsewhere; only precision fell, with no shift in the midpoint of the distance psychometric function.",
+   "bears_on": "Whether the felt extent of space follows cortical grid structure or is filled in by inference (structural integration accounts vs predictive accounts).",
+   "key_results": "Planned test (Hypothesis #2): psychometric judgements of distance for stimuli spanning the blind spot versus equivalent locations. All three theories predict reduced sensitivity near the blind spot; one predicts contraction (midpoint shift), one predicts no bias, one is compatible with either.",
+   "limits": "Planned design only; compensation from birth around the blind spot and uncertainty about the underlying cortical connectivity could blunt the test.",
+   "pending": true
+  },
+  {
+   "id": "P10",
+   "library_id": "intrepid-an-adversarial-collaboration-of-iit-neu",
+   "doi": "10.1016/j.neubiorev.2026.106742",
+   "first_posted": "2025-08-30",
+   "date_source": "arXiv API, 2509.00555 v1 published date (preprint of the journal paper)",
+   "read_depth": "full",
+   "side1": "Patients with visual field defects from cortical damage judged stimuli spanning or bordering their defect as closer together than age-matched controls judged the same stimuli.",
+   "side2": "Patients with visual field defects from cortical damage judged stimuli spanning or bordering their defect as far apart as age-matched controls did, with no systematic bias.",
+   "bears_on": "Whether losing cortex shrinks experienced space (structural integration accounts) or is filled in (predictive accounts).",
+   "key_results": "Planned test (Hypothesis #2, scotoma arm): spatial-extent psychometric functions in patients with cortical visual field defects versus age-matched controls. One theory predicts contraction, one predicts no bias, one allows either.",
+   "limits": "Planned design only; heterogeneous lesions and taxing psychophysics in older patients may dilute effects.",
+   "pending": true
+  },
+  {
+   "id": "P11",
+   "library_id": "intrepid-an-adversarial-collaboration-of-iit-neu",
+   "doi": "10.1016/j.neubiorev.2026.106742",
+   "first_posted": "2025-08-30",
+   "date_source": "arXiv API, 2509.00555 v1 published date (preprint of the journal paper)",
+   "read_depth": "full",
+   "side1": "After a peripheral target vanished in motion-induced blindness, it was reported to reappear faster when people made a saccade to it than in a matched passive replay with fixed gaze.",
+   "side2": "After a peripheral target vanished in motion-induced blindness, it was reported to reappear no faster when people made a saccade to it than in a matched passive replay with fixed gaze.",
+   "bears_on": "Whether active sampling (action) drives changes in conscious content (active-inference accounts vs integration and representational accounts).",
+   "key_results": "Planned test (Hypothesis #3): reappearance times after motion-induced blindness, active saccade condition versus passive replay that moves target and grid to the fovea under fixation. One theory predicts faster reappearance with active sampling at high confidence; the other two predict no difference or faster; slower reappearance would cost all three.",
+   "limits": "Planned design only; matching retinal input between active and replay conditions is hard and named as a possible auxiliary explanation for a null.",
+   "pending": true
+  }
+ ],
+ "skipped": [
+  {
+   "library_id": "bryant-whyte-connectivity-ncc-cogitate",
+   "why": "Not post-cutoff: bioRxiv preprint 10.1101/2025.04.06.646695 v1 posted 2025-04-07 (bioRxiv API); journal received 2025-04-07 per PMC13338905."
+  },
+  {
+   "library_id": "rochas-2026-n2-dreaming-hdeeg",
+   "why": "Not post-cutoff: PsyArXiv qbwnf v1 published 2025-10-31 (OSF API; v2 2025-10-31, v3 2026-05-08, v4 2026-11-02)."
+  },
+  {
+   "library_id": "hense-2026-ib-erp-levels",
+   "why": "Not post-cutoff: SSRN preprint 10.2139/ssrn.6642388 created 2026-04-27 (Crossref); also its early occipital negativity for awareness largely replicates the known VAN."
+  },
+  {
+   "library_id": "selte-2026-nrem-experience-hdeeg",
+   "why": "Post-cutoff (bioRxiv v1 2026-08-20) but the outcome (lower posterior delta/alpha, higher gamma before NREM dream reports) replicates the posterior hot-zone result known since 2017 and already in the pilot set (C17)."
+  },
+  {
+   "library_id": "mikulan-2026-n140-san-intracranial",
+   "why": "Post-cutoff (2026-10-11) but no theory-relevant contrast: it localises the scalp N140 to insulo-opercular cortex without manipulating awareness; no theory commits on that source."
+  },
+  {
+   "library_id": "hassan-2026-blind-occipital-tms",
+   "why": "Post-cutoff (2026-09-21) but about occipital dynamics after blindness, not about conscious versus unconscious processing."
+  },
+  {
+   "library_id": "huntley-2026-alzheimers-awareness",
+   "why": "Post-cutoff (medRxiv 2026-08-31) but reduced awareness markers with disease severity is predicted by every theory; the severe-AD null is attributed to task insensitivity."
+  },
+  {
+   "library_id": "jang-2026-lifu-thalamus-report",
+   "why": "Post-cutoff (2026-08-25) but only report latency changes, with no awareness measure; target-by-duty-cycle latency effects do not separate theories."
+  },
+  {
+   "library_id": "han-2026-intrathalamic-arousability",
+   "why": "Post-cutoff (2026-11-17) but concerns arousability in slow-wave sleep, not the presence or content of experience; no theory makes a contrasting commitment."
+  }
+ ]
+}

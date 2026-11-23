@@ -101,3 +101,12 @@ a8d5624641a6c2c5e3b77971c4f3086695b7a518c2e79036841a1c36ee59ef72  experiments/tr
 01aa8dedcc84996906a1968d0a5e0027782992dea42d48f21fdb081bc3ca777e  docs/prereg/2026-11-23_transfer5_rem_placement.md  2026-11-23T08:19:03Z
 7f84372b228fab683436e63d377572ad322bdf67aed9d1976f0ce77a4315e4e0  docs/prereg/2026-11-23_transfer5b_ds005620_report_calibration.md  2026-11-23T09:59:28Z
 fbfe44a8420d5391506edcbf8523ecc18144777bf485cb965dd4442da9e11294  docs/prereg/2026-11-23_theory_likelihood_pilot.md  2026-11-23T17:56:54Z
+400429eafb9edd25916cbed738d044579e3a1ea019dc346d3446299c2c661bac  docs/prereg/2026-11-24_theory_leak_probe.md  2026-11-23T20:57:01Z
+6c7f338bfaadff4124d24320c768143ab454a6a2facef87960aa0321f2e7f94b  experiments/theory_leak/items.json  2026-11-23T20:57:01Z
+04a6fd77593c6240845c20cc3b12f55512379200ffe8080a4fe361a012617cf1  experiments/theory_leak/draft_items.json  2026-11-23T20:57:01Z
+e7f70c3865aaaf3e51d2e7ec957f8e506b9f730e4dfe838b42d83d1974488c08  experiments/theory_leak/make_packets.py  2026-11-23T20:57:01Z
+be27ff84a21a81e0dd59090df2a9549b6966e81245aeb16851b83e1c2587d14e  experiments/theory_leak/score_leak.py  2026-11-23T20:57:01Z
+90b47c3bad4a561830b0ce23e2c947d5ec337bae9fd48f9fab82f4c5bed4f0ba  experiments/theory_leak/planted_all11.json  2026-11-23T20:57:01Z
+ef5fb542be35dd29b55d5375a2bf7e8e7bb9d130bc9e06fd8ca09dc8a01d8d44  experiments/theory_leak/packets/recog_fable.txt  2026-11-23T20:57:01Z
+020be4b947ba4f8dcb1bcfba4a380da77bc795bda6080541fc7a135ecc2ccc27  experiments/theory_leak/packets/recog_opus.txt  2026-11-23T20:57:01Z
+cc50eb6bc3e9d1667977e6a1c190b7cbba1ae1489aab5a7fa206aed32cf48e18  experiments/theory_leak/packets/recog_sonnet.txt  2026-11-23T20:57:01Z

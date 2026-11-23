@@ -1,0 +1,172 @@
+{
+ "note": "Leak-probe items. side_real = reported outcome (or side 1 for pending items, where no result exists yet); side_mirror = the opposite. Drafted from draft_items.json; texts unchanged. Edited after the pre-seal review (2026-11-24): P01 rate removed, P03 dataset cue and second clause removed, P07 made self-contained, P08 gloss removed. Items sharing a source share a 'cluster' (bootstrap unit).",
+ "items": [
+  {
+   "id": "P01",
+   "side_real": "During a constant binocular-suppression percept in monkeys, face-selective temporal neurons and prefrontal neurons switched many times a second between brief epochs that carried the seen image and epochs that carried the suppressed image; tuning was stronger in the seen epochs.",
+   "side_mirror": "During a constant binocular-suppression percept in monkeys, face-selective temporal neurons and prefrontal neurons steadily carried only the seen image; the suppressed image could not be read out from their activity at any moment.",
+   "pending": false,
+   "first_posted": "2026-10-16",
+   "doi": "10.64898/2026.10.15.759299",
+   "library_id": "hesse-tsao-2026-rapid-alternation",
+   "cluster": "hesse"
+  },
+  {
+   "id": "P02",
+   "side_real": "In a no-report inattentional deafness design, tones that listeners were aware of but had no task on still evoked both an early auditory awareness negativity and a larger late positivity in the P3 window than when the same tones went unnoticed; both grew further when the tones became task-relevant.",
+   "side_mirror": "In a no-report inattentional deafness design, tones that listeners were aware of but had no task on evoked an early auditory awareness negativity but no late positivity in the P3 window; the late positivity appeared only when the tones became task-relevant.",
+   "pending": false,
+   "first_posted": "2026-10-12",
+   "doi": "10.64898/2026.10.05.755932",
+   "library_id": "ellinghorst-2026-inattentional-deafness",
+   "cluster": "ellinghorst"
+  },
+  {
+   "id": "P03",
+   "side_real": "Re-analysing an existing MEG dataset in which people viewed task-irrelevant faces, directed-connectivity models needed prefrontal feedback to face-selective cortex to explain responses both at stimulus onset and again at stimulus offset.",
+   "side_mirror": "Re-analysing an existing MEG dataset in which people viewed task-irrelevant faces, directed-connectivity models needed prefrontal feedback to face-selective cortex only at stimulus onset, not at stimulus offset.",
+   "pending": false,
+   "first_posted": "2026-07-22",
+   "doi": "10.64898/2026.07.16.738188",
+   "library_id": "bandara-dcm-reanalysis-cogitate-meg",
+   "cluster": "bandara"
+  },
+  {
+   "id": "P04",
+   "side_real": "Across 20 visual awareness datasets, trial-by-trial visibility and confidence reports carried over in time with an exponential decay lasting more than 5 seconds, while accuracy showed only a slow linear decay; single-pulse TMS to dorsolateral prefrontal cortex reduced the carry-over in confidence but not in accuracy.",
+   "side_mirror": "Across 20 visual awareness datasets, trial-by-trial visibility and confidence reports carried over in time no more than accuracy did, fading within a trial or two; single-pulse TMS to dorsolateral prefrontal cortex left the carry-over in confidence unchanged.",
+   "pending": false,
+   "first_posted": "2026-09-08",
+   "doi": "10.64898/2026.09.03.748970",
+   "library_id": "zheng-melloni-2026-long-timescale-awareness",
+   "cluster": "zheng"
+  },
+  {
+   "id": "P05",
+   "side_real": "In fMRI with near-threshold sounds, sound intensity modulated broad networks including prefrontal cortex both with and without a task, and all-or-none single-trial dynamics beyond primary auditory cortex predicted perception in both contexts.",
+   "side_mirror": "In fMRI with near-threshold sounds, sound intensity modulated prefrontal cortex only when listeners had a task; without one, all-or-none single-trial dynamics were confined to auditory cortex.",
+   "pending": false,
+   "first_posted": "2026-06-22",
+   "doi": "10.64898/2026.06.17.732590",
+   "library_id": "boyer-2026-auditory-bifurcation-fmri",
+   "cluster": "boyer"
+  },
+  {
+   "id": "P06",
+   "side_real": "In a registered MEG study of evening naps, the 20 s before awakenings with a reported experience showed lower delta power and higher low-gamma power in posterior cortex than awakenings with no experience.",
+   "side_mirror": "In a registered MEG study of evening naps, the 20 s before awakenings with a reported experience showed no difference from awakenings with no experience in posterior delta or low-gamma power (Bayes factors favouring no difference).",
+   "pending": true,
+   "first_posted": "2026-04-27",
+   "doi": "10.31234/osf.io/zgw6x_v1",
+   "library_id": "hemmi-2026-meg-naps-registered-report",
+   "cluster": "hemmi"
+  },
+  {
+   "id": "P07",
+   "side_real": "In a registered MEG study of evening naps, frontal cortex showed lower delta and higher low-gamma power in the 20 s before awakenings with a reported experience than before awakenings without one.",
+   "side_mirror": "In a registered MEG study of evening naps, frontal cortex showed no difference in delta or low-gamma power between the 20 s before awakenings with and without a reported experience.",
+   "pending": true,
+   "first_posted": "2026-04-27",
+   "doi": "10.31234/osf.io/zgw6x_v1",
+   "library_id": "hemmi-2026-meg-naps-registered-report",
+   "cluster": "hemmi"
+  },
+  {
+   "id": "P08",
+   "side_real": "In mice performing a left/right spatial location task, optogenetically silencing visual-cortex neurons that were already inactive biased choices toward the intact hemifield.",
+   "side_mirror": "In mice performing a left/right spatial location task, optogenetically silencing visual-cortex neurons that were already inactive left choices unchanged compared with control trials.",
+   "pending": true,
+   "first_posted": "2025-08-30",
+   "doi": "10.1016/j.neubiorev.2026.106742",
+   "library_id": "intrepid-an-adversarial-collaboration-of-iit-neu",
+   "cluster": "intrepid"
+  },
+  {
+   "id": "P09",
+   "side_real": "Two dots that span the eye's natural blind spot were judged closer together than identically spaced dots elsewhere in the visual field, shifting the midpoint of the distance psychometric function.",
+   "side_mirror": "Two dots that span the eye's natural blind spot were judged as far apart as identically spaced dots elsewhere; only precision fell, with no shift in the midpoint of the distance psychometric function.",
+   "pending": true,
+   "first_posted": "2025-08-30",
+   "doi": "10.1016/j.neubiorev.2026.106742",
+   "library_id": "intrepid-an-adversarial-collaboration-of-iit-neu",
+   "cluster": "intrepid"
+  },
+  {
+   "id": "P10",
+   "side_real": "Patients with visual field defects from cortical damage judged stimuli spanning or bordering their defect as closer together than age-matched controls judged the same stimuli.",
+   "side_mirror": "Patients with visual field defects from cortical damage judged stimuli spanning or bordering their defect as far apart as age-matched controls did, with no systematic bias.",
+   "pending": true,
+   "first_posted": "2025-08-30",
+   "doi": "10.1016/j.neubiorev.2026.106742",
+   "library_id": "intrepid-an-adversarial-collaboration-of-iit-neu",
+   "cluster": "intrepid"
+  },
+  {
+   "id": "P11",
+   "side_real": "After a peripheral target vanished in motion-induced blindness, it was reported to reappear faster when people made a saccade to it than in a matched passive replay with fixed gaze.",
+   "side_mirror": "After a peripheral target vanished in motion-induced blindness, it was reported to reappear no faster when people made a saccade to it than in a matched passive replay with fixed gaze.",
+   "pending": true,
+   "first_posted": "2025-08-30",
+   "doi": "10.1016/j.neubiorev.2026.106742",
+   "library_id": "intrepid-an-adversarial-collaboration-of-iit-neu",
+   "cluster": "intrepid"
+  }
+ ],
+ "theories": [
+  {
+   "id": "IIT",
+   "name": "Integrated information theory (IIT 4.0)",
+   "ref": "Albantakis et al. 2023, PLoS Comput Biol, doi:10.1371/journal.pcbi.1011465"
+  },
+  {
+   "id": "GNWT",
+   "name": "Global neuronal workspace theory",
+   "ref": "Mashour, Roelfsema, Changeux & Dehaene 2020, Neuron, doi:10.1016/j.neuron.2020.01.026"
+  },
+  {
+   "id": "RPT",
+   "name": "Recurrent processing theory",
+   "ref": "Lamme 2006, Trends Cogn Sci, doi:10.1016/j.tics.2006.09.001"
+  },
+  {
+   "id": "HOT",
+   "name": "Higher-order theories (higher-order representation / perceptual reality monitoring family)",
+   "ref": "Brown, Lau & LeDoux 2019, Trends Cogn Sci, doi:10.1016/j.tics.2019.06.009"
+  },
+  {
+   "id": "PP",
+   "name": "Predictive processing as a theory for consciousness",
+   "ref": "Seth & Hohwy 2020, Cogn Neurosci, doi:10.1080/17588928.2020.1838467"
+  },
+  {
+   "id": "AST",
+   "name": "Attention schema theory",
+   "ref": "Graziano & Webb 2015, Front Psychol, doi:10.3389/fpsyg.2015.00500"
+  }
+ ],
+ "toy": {
+  "id": "TOY_Z",
+  "name": "Theory Z (a made-up control theory)",
+  "ref": "none; its full content is given here",
+  "text": "Theory Z makes exactly these claims and no others: (1) Conscious contents are held steadily, never switched back and forth many times a second, and suppressed images are never represented in high-level cortex. (2) Awareness of a sound always produces a large late positive brain wave, even with no task. (3) Prefrontal cortex sends feedback to sensory cortex only when a stimulus appears, never when it disappears. (4) Visibility and confidence reports carry over strongly from one trial to the next for many seconds, and prefrontal cortex produces this carry-over. (5) Prefrontal cortex is engaged by sounds only when the listener has a task. (6) Dream experience is marked by lower slow-wave power and higher fast activity over posterior cortex. (7) Frontal cortex plays no part in dream experience. (8) Neurons that are not firing contribute nothing to experience. Theory Z says nothing about the blind spot, damaged visual fields or eye movements."
+ },
+ "toy_key": {
+  "P01": "mirror",
+  "P02": "real",
+  "P03": "mirror",
+  "P04": "real",
+  "P05": "mirror",
+  "P06": "real",
+  "P07": "mirror",
+  "P08": "mirror",
+  "P09": "silent",
+  "P10": "silent",
+  "P11": "silent"
+ },
+ "placebo": {
+  "id": "PLACEBO_Q",
+  "name": "Theory Q (a made-up control theory)",
+  "ref": "none; its full content is given here",
+  "text": "Theory Q claims only that consciousness depends on the concentration of a particular molecule in the liver. It makes no claims about the brain, sleep, drugs, lesions, stimulation or behaviour."
+ }
+}

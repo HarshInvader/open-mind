@@ -248,3 +248,46 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - Each theory rests on one reference.
 - **Write-up:** `experiments/theory_likelihood/RESULTS.md`.
 - **Decision:** next is the sealed amendment for the 59-item run. Before rating, it adds a retrodiction split and fictional-twin leak probes. Meanwhile, Fable list items 4 and 3 continue. Item 2 (Stockart) is demoted: the authors already decoded across conditions (PMC12475450), so little is novel.
+
+### Fable item 4 (all-or-none vs graded visibility): prior art read, no-go (2026-11-23, evening)
+- **Context:** the Stockart frontal-transfer idea was already dropped (the authors decoded across conditions). Item 4 was next on the list.
+- **Prior art** (opened by a Fable agent; all eight added to the library):
+  - Sergent & Dehaene 2004: blink ratings look two-state, but under masking they shift gradually.
+  - Nieuwenhuis & de Kleijn 2011: the two-state pattern goes away with wagering.
+  - Asplund 2014: a mixture model suggests discrete perception.
+  - Cohen, Keefe & Brady 2023: one graded model beats the mixture models across tasks, including Asplund's data (27 of 28 people).
+  - Rausch, Hellmann & Zehetleitner 2021: graded models fit 5-SOA visibility ratings.
+  - Province & Rouder 2012: the conditional-independence statistic.
+  - Eiserbeck 2021: 4-point PAS in the blink.
+  - Windey 2013: level of processing.
+- **Novelty sentence:** at most, a per-subject conditional-independence test against an ordinal-probit null. That is a method increment, not a new question.
+- **Fable's planted check** (rough, one setting; script kept in /tmp only):
+  - With 3 strength levels the test recovers a planted mixture only 7-33% of the time.
+  - With 5 or more levels it recovers it 100% of the time.
+- **Why no-go:**
+  - The only open blink set with trial-wise ratings (Eiserbeck, OSF e85hn) has 2 lags and 4 categories, so the test has no power on it.
+  - The well-powered sets (Rausch_2016, 6 contrasts; Rausch 2021, 5 SOAs) vary masking strength, where GNWT already concedes graded visibility. So a graded result would split nothing.
+  - It adds nothing beyond the neural Sergent 2021 single-trial question.
+- **Decision:** item 4 closed, nothing sealed or downloaded. Next: the ledger amendment (item 1), with the theory-specific leak probe run first as its kill test. Item 3 (hypothesis generator) follows.
+
+### Ledger amendment, step 1: leak probe designed, reviewed and sealed (2026-11-24)
+- **Fable design:** B and E merged, with C as a separate gate.
+  - Attach a random, openly disowned "Reported outcome" cue to items the raters cannot know: post-cutoff results or pending outcomes.
+  - Measure how far each theory's rating follows the cue.
+  - Recognition gate: the 10 pilot items as a positive control; known test items are excluded.
+  - Rejected alternatives: fictional twins (they remove legitimate knowledge) and flat misinformation (it fails on famous items and is not honest).
+  - Fable's other threats, kept for the 59-item run: generic lean that the liver placebo misses (add a brain-relevant decoy), and the canonical reference not being what raters actually score (add quote-only commitment cards).
+  - Expectation: IIT over GNWT/HOT probably keeps its sign but shrinks; IIT over RPT probably does not survive.
+- **Items:** a drafting agent read the candidates and checked first-posting dates via the bioRxiv API.
+  - Usable: 4 results posted after 2026-07-01, 1 borderline (2026-06-22), and 6 pending outcomes (MEG naps registered report; an adversarial collaboration's planned experiments).
+  - Skipped: 9 (pre-cutoff, a replication, or no theory contrast).
+- **Pre-seal review** (a fresh Fable agent ran the scoring paths on fake data): 7 must-fix items, all applied.
+  - Excluded items and voided instances crashed the scorer.
+  - A mislabelled theory id silently gave INCONCLUSIVE.
+  - A contrarian rater scored BOUNDED, so BOUNDED is now two-sided and reactance gives INCONCLUSIVE.
+  - Bits depend on which side is labelled real, so a logit scale was added and both scales must agree.
+  - There was no manipulation check, so BOUNDED no longer licenses scaling on its own.
+  - There was no rule for cue-following by the controls, so a Q/Z control flag was added.
+  - Should-fix items applied: cluster bootstrap, P07 made self-contained, P03 and P08 cues removed, pending-item exclusion, reproducible seeds.
+- **Planted gate:** 0 false positives in every no-leak scenario. A 0.40-bit IIT leak is caught 100% of the time and a ceiling-masked one 99%. A true null reads INCONCLUSIVE 60% of the time.
+- **Sealed:** `docs/prereg/2026-11-24_theory_leak_probe.md`. Next: the recognition gate, then the rating packets.

@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-23. Do not edit by hand.
 
-178 entries: 23 read in full, 155 from the abstract only. Every DOI was opened and its title and authors checked.
+186 entries: 29 read in full, 157 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -707,7 +707,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (61)
+## Measuring consciousness (69)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -801,6 +801,18 @@ Höhn C, Hahn MA, Lendner JD, Hoedlmoser K (2024). *eNeuro*. [doi:10.1523/ENEURO
 - **For us:** Prior art for our LZ result. Our finding that LZ is mostly the spectrum in sleep confirms theirs; what we add is the sealed incremental-AUC test and the surrogate gate.
 - **Touches:** LZ vs spectrum
 
+### Perceptual Awareness Occurs Along a Graded Continuum: No Evidence of All-or-None Failures in Continuous Reproduction Tasks
+
+Cohen MA, Keefe JM, Brady TF (2023). *Psychological Science*. [doi:10.1177/09567976231186798](https://bradylab.ucsd.edu/pdfs/CohenKeefeBrady2023.pdf). Paper, full text, **core**.
+
+- **Question:** Do failures of awareness in blink, masking, Sperling and retro-cue tasks need an all-or-none 'guess' state?
+- **Idea tested:** Compared one continuous signal-detection model against mixture models across several awareness tasks, including Asplund's data.
+- **Data and method:** Model comparison (BIC) on continuous-report data from several paradigms.
+- **Results:** The single continuous model beat the mixture models across tasks. On Asplund's data it was preferred in 27 of 28 people.
+- **Limits:** Continuous colour report is not a visibility rating; the conclusion depends on the signal-detection model family.
+- **For us:** This closes most of the behavioural all-or-none question, so our item 4 would have added a method, not a new answer. We judged it a no-go.
+- **Touches:** Fable#13 item 4, all-or-none vs graded
+
 ### Neural complexity is a common denominator of human consciousness across diverse regimes of cortical dynamics
 
 Frohlich J, Chiang JN, Mediano PAM, Nespeca M, Saravanapandian V, et al. (2022). *Communications Biology*. [doi:10.1038/s42003-022-04331-7](https://doi.org/10.1038/s42003-022-04331-7). Article, abstract only, **core**.
@@ -848,6 +860,18 @@ Sitt JD, King JR, El Karoui I, Rohaut B, Faugeras F, Gramfort A, Cohen L, Sigman
 - **Limits:** Single centre at the time; spectral and complexity features were not nested.
 - **For us:** The source of wSMI and the 'many markers' design that #42 inherits; our nesting rule asks what each adds beyond spectrum.
 - **Touches:** #42, Study 2
+
+### Is Consciousness a Gradual Phenomenon? Evidence for an All-or-None Bifurcation During the Attentional Blink
+
+Sergent C, Dehaene S (2004). *Psychological Science 15(11)*. [doi:10.1111/j.0956-7976.2004.00748.x](https://www.unicog.org/publications/SergentDehaene_PsychScience04.pdf). Paper, full text, **core**.
+
+- **Question:** Is seeing a target during the attentional blink graded, or all or none?
+- **Idea tested:** People rated target visibility on a 21-point scale during the attentional blink, and in a masking task where the target's duration varied.
+- **Data and method:** Behaviour, about 10 people per experiment. Group rating histograms were fitted by regression as mixtures of the 'absent' and 'seen' histograms.
+- **Results:** In the blink, ratings looked like a mix of two states: unseen and fully seen, with few in between. When masking duration was varied the ratings were one bump that shifted gradually, and in Exp 3 the 'seen' peak itself moved with duration.
+- **Limits:** Small samples; tested on group histograms, which can hide individual patterns; a bounded rating scale can produce two peaks from a graded signal.
+- **For us:** The founding behavioural case for all-or-none access. It also shows graded visibility under masking, so a graded result on masking data would not count against the global workspace theory.
+- **Touches:** Fable#13 item 4, all-or-none vs graded
 
 ### "The self" as shifting coalitions of brain systems in a continuous configuration space
 
@@ -988,6 +1012,18 @@ Lee M, Sanz LRD, Barra A, Wolff A, Nieminen JO, Boly M, et al. (2022). *Nature C
 - **For us:** Closest existing cross-state 'one marker everywhere' attempt. Any tournament must beat or explain this, and must report sample sizes per state honestly.
 - **Touches:** Hypothesis tournament
 
+### Modelling visibility judgments using models of decision confidence
+
+Rausch M, Hellmann S, Zehetleitner M (2021). *Attention, Perception, & Psychophysics*. [doi:10.3758/s13414-021-02284-3](https://doi.org/10.3758/s13414-021-02284-3). Paper, abstract only, **useful**.
+
+- **Question:** Which models of decision confidence also describe visibility ratings?
+- **Idea tested:** Fitted several graded confidence models to continuous visibility ratings in masked orientation tasks with 5 masking intervals (SOAs).
+- **Data and method:** Behaviour; model comparison; data on OSF gfkta (no licence set).
+- **Results:** Graded models fit the visibility ratings; no discrete-state model was tested.
+- **Limits:** No all-or-none model in the comparison. Depth of reading not recorded by the planning agent, so treated as abstract.
+- **For us:** A 5-level masking dataset that could carry a conditional-independence test, but masking is where graded visibility is already conceded.
+- **Touches:** Fable#13 item 4, all-or-none vs graded
+
 ### The spectral exponent of the resting EEG indexes the presence of consciousness during unresponsiveness induced by propofol, xenon, and ketamine
 
 Colombo MA, Napolitani M, Boly M, Gosseries O, Casarotto S, Rosanova M, Brichant JF, Boveroux P, Rex S, Laureys S, Massimini M, Chieregato A, Sarasso S (2019). *NeuroImage 189:631-644*. [doi:10.1016/j.neuroimage.2019.01.024](https://doi.org/10.1016/j.neuroimage.2019.01.024). Paper, abstract only, **useful**.
@@ -1058,6 +1094,18 @@ Pitts MA, Padwal J, Fennelly D, Martínez A, Hillyard SA (2014). *NeuroImage*. [
 - **For us:** Prior for COGITATE experiment 2: late and gamma-band differences may track the probe task, not awareness. Used in our sealed forecasts.
 - **Touches:** COGITATE forecasts
 
+### The Attentional Blink Reveals the Probabilistic Nature of Discrete Conscious Perception
+
+Asplund CL, Fougnie D, Zughni S, Martin JW, Marois R (2014). *Psychological Science 25(3)*. [doi:10.1177/0956797613513810](https://pmc.ncbi.nlm.nih.gov/articles/PMC3954951/). Paper, full text, **useful**.
+
+- **Question:** During the blink, does lag change how precisely a target is seen, or only whether it is seen at all?
+- **Idea tested:** People reported the target's colour on a colour wheel; a mixture model split guesses from precise reports.
+- **Data and method:** Behaviour, 28 people; continuous-report mixture model.
+- **Results:** Lag changed the chance that the target was encoded, not the precision of what was encoded. The authors read this as discrete, all-or-none perception.
+- **Limits:** The mixture model assumes a guess state. Cohen, Keefe & Brady 2023 later fitted a single graded model that did better on these same data.
+- **For us:** The strongest continuous-report case for all-or-none; reanalysed against it by Cohen 2023.
+- **Touches:** Fable#13 item 4, all-or-none vs graded
+
 ### A theoretically based index of consciousness independent of sensory processing and behavior (PCI)
 
 Casali AG, Gosseries O, Rosanova M, Boly M, Sarasso S and others; senior author Massimini M (2013). *Science Translational Medicine 5(198)*. [doi:10.1126/scitranslmed.3006294](https://doi.org/10.1126/scitranslmed.3006294). Paper, abstract only, **useful**.
@@ -1067,6 +1115,18 @@ Casali AG, Gosseries O, Rosanova M, Boly M, Sarasso S and others; senior author 
 - **Results:** If a brain is both well connected and varied, a magnetic pulse should set off a rich, hard-to-compress pattern of activity. The score built on that idea separated wake from deep sleep and anaesthesia in single people, and tracked recovery in patients emerging from coma.
 - **For us:** The measure every spontaneous-EEG candidate is judged against.
 - **Touches:** news
+
+### Evidence for discrete-state processing in recognition memory
+
+Province JM, Rouder JN (2012). *PNAS 109(36)*. [doi:10.1073/pnas.1103880109](https://pmc.ncbi.nlm.nih.gov/articles/PMC3437893/). Paper, full text, **useful**.
+
+- **Question:** How can a discrete-state account be told apart from a graded one using rating data?
+- **Idea tested:** Proposed 'conditional independence': under a discrete-state model, the response distribution in each state keeps its shape across conditions and only the mixing weights change.
+- **Data and method:** Recognition-memory experiments with confidence ratings across conditions.
+- **Results:** Recognition memory showed the fixed-shape pattern a discrete-state model predicts.
+- **Limits:** Memory, not perception. The test needs at least 3 conditions and 3 rating categories to have any power.
+- **For us:** The right statistic for any all-or-none test on visibility ratings. Our planning agent's simulation suggests about 5 strength levels are needed.
+- **Touches:** Fable#13 item 4, all-or-none vs graded
 
 ### Visual processing of contour patterns under conditions of inattentional blindness
 
@@ -1079,6 +1139,18 @@ Pitts MA, Martínez A, Hillyard SA (2012). *Journal of Cognitive Neuroscience*. 
 - **Limits:** Abstract only. Awareness assessed after blocks, not trial by trial.
 - **For us:** Some early processing proceeds without awareness, and awareness adds a slightly later posterior response. Prior for our COGITATE experiment 2 forecasts.
 - **Touches:** COGITATE forecasts
+
+### Consciousness of targets during the attentional blink: a gradual or all-or-none dimension?
+
+Nieuwenhuis S, de Kleijn R (2011). *Attention, Perception, & Psychophysics 73*. [doi:10.3758/s13414-010-0026-1](https://doi.org/10.3758/s13414-010-0026-1). Paper, abstract only, **useful**.
+
+- **Question:** Does the all-or-none pattern in the attentional blink depend on how awareness is measured?
+- **Idea tested:** Repeated the blink visibility-rating test, then measured awareness with post-decision wagering and a harder task.
+- **Data and method:** Behaviour; visibility ratings, wagering.
+- **Results:** With visibility ratings the two-peak pattern came back. With wagering and a harder task it went away, and awareness looked graded.
+- **Limits:** The authors note that group histograms can blur individual patterns. Depth of reading not recorded by the planning agent, so treated as abstract.
+- **For us:** The all-or-none shape depends on the measure, which is part of why a behavioural ratings test cannot split theories.
+- **Touches:** Fable#13 item 4, all-or-none vs graded
 
 ### Detecting Awareness in the Vegetative State
 
@@ -1376,6 +1448,18 @@ Raccah et al. (2021). *The Journal of Neuroscience 41:2076-2087*. [doi:10.1523/J
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C11
 
+### Graded Visual Consciousness During the Attentional Blink
+
+Eiserbeck A, Enge A, Rabovsky M, Abdel Rahman R (2021). *bioRxiv*. [doi:10.1101/2021.01.15.426792](https://www.biorxiv.org/content/10.1101/2021.01.15.426792.full). Preprint, full text, **context**.
+
+- **Question:** Is awareness in the attentional blink graded when measured with the Perceptual Awareness Scale?
+- **Idea tested:** Attentional blink with a 4-point PAS rating on each trial.
+- **Data and method:** Behaviour and EEG, 32 people; data on OSF e85hn (CC BY 4.0).
+- **Results:** The authors describe awareness as graded; they ran no formal mixture test.
+- **Limits:** Only two lags plus target-absent, and 4 rating categories, so a conditional-independence test has very little power (7-33% in our planning agent's simulation).
+- **For us:** The only open blink set with trial-wise ratings found; too few strength levels for a decisive test.
+- **Touches:** Fable#13 item 4, all-or-none vs graded
+
 ### A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations
 
 Comolatti R, Pigorini A, Casarotto S, Fecchio M, Faria G, Sarasso S, Rosanova M, Gosseries O, Boly M, Bodart O, Ledoux D, Brichant JF, Nobili L, Laureys S, Tononi G, Massimini M, Casali AG (2019). *Brain Stimulation 12:1280-1289*. [doi:10.1016/j.brs.2019.05.013](https://doi.org/10.1016/j.brs.2019.05.013). Paper, abstract only, **context**.
@@ -1387,6 +1471,18 @@ Comolatti R, Pigorini A, Casarotto S, Fecchio M, Faria G, Sarasso S, Rosanova M,
 - **Limits:** Needs perturbation data.
 - **For us:** The PCI variant cited by Newman 2026 and Maschke 2024 in our news.
 - **Touches:** constraint_ledger
+
+### Subjective visibility depends on level of processing
+
+Windey B, Gevers W, Cleeremans A (2013). *Cognition 129(2)*. [doi:10.1016/j.cognition.2013.07.012](https://axc.ulb.be/uploads/2015/11/13-cognition.pdf). Paper, full text, **context**.
+
+- **Question:** Is visibility more all-or-none for high-level than low-level tasks?
+- **Idea tested:** The same masked stimuli at 8 durations, judged on either a number (high-level) or a colour (low-level) task, with visibility ratings.
+- **Data and method:** Behaviour, 20 people.
+- **Results:** The visibility curve was steeper for the number task than for the colour task: more step-like at the higher level.
+- **Limits:** A steeper curve is not proof of two states; no mixture test.
+- **For us:** The level-of-processing view predicts the answer depends on the task, which weakens all-or-none vs graded as a clean theory test.
+- **Touches:** Fable#13 item 4, all-or-none vs graded
 
 ### Surge of neurophysiological coherence and connectivity in the dying brain
 

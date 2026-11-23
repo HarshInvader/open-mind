@@ -1,0 +1,73 @@
+This is a memory check about published research. Do not use any tools, files or web searches.
+
+For each finding below you see two possible outcomes, A and B. Some findings come from published studies; others may
+not have a published result yet. For each, give p = your probability that outcome A (rather than B) is what was
+actually reported, and say whether you specifically recall the study ("recall": true or false). If you do not know,
+give 0.5 and recall false. Do not guess from what theories predict; answer only from memory of the actual study.
+
+Return ONLY a JSON array with keys "finding", "p", "recall". There are 21 findings; include every one.
+
+FINDINGS
+R01
+  A: The cerebellum holds most of the brain's neurons, yet losing it impairs movement and not, as far as anyone reports, consciousness.
+  B: Losing the cerebellum, which holds most of the brain's neurons, substantially impairs or abolishes consciousness, not only movement.
+R02
+  A: The P3b persists when people see a stimulus but do not have to report it; it tracks awareness, not report or task relevance.
+  B: The P3b disappears when people see a stimulus but do not have to report it; it tracks report and task relevance, not awareness.
+R03
+  A: Re-analysing an existing MEG dataset in which people viewed task-irrelevant faces, directed-connectivity models needed prefrontal feedback to face-selective cortex only at stimulus onset, not at stimulus offset.
+  B: Re-analysing an existing MEG dataset in which people viewed task-irrelevant faces, directed-connectivity models needed prefrontal feedback to face-selective cortex to explain responses both at stimulus onset and again at stimulus offset.
+R04
+  A: Within both NREM and REM, dream reports are not linked to any local change in posterior cortex; they follow a local drop in low-frequency power over frontal cortex instead.
+  B: Within both NREM and REM, dream reports follow a local drop in low-frequency EEG power over posterior cortex; high-frequency activity there tracks specific contents.
+R05
+  A: Large prefrontal lesions abolish consciousness.
+  B: Large prefrontal lesions do not abolish consciousness.
+R06
+  A: In fMRI with near-threshold sounds, sound intensity modulated prefrontal cortex only when listeners had a task; without one, all-or-none single-trial dynamics were confined to auditory cortex.
+  B: In fMRI with near-threshold sounds, sound intensity modulated broad networks including prefrontal cortex both with and without a task, and all-or-none single-trial dynamics beyond primary auditory cortex predicted perception in both contexts.
+R07
+  A: Stimulating lateral prefrontal cortex seldom changes experience; orbitofrontal and anterior cingulate stimulation often does.
+  B: Stimulating lateral prefrontal cortex often changes experience; orbitofrontal and anterior cingulate stimulation seldom does.
+R08
+  A: After a peripheral target vanished in motion-induced blindness, it was reported to reappear no faster when people made a saccade to it than in a matched passive replay with fixed gaze.
+  B: After a peripheral target vanished in motion-induced blindness, it was reported to reappear faster when people made a saccade to it than in a matched passive replay with fixed gaze.
+R09
+  A: Two dots that span the eye's natural blind spot were judged closer together than identically spaced dots elsewhere in the visual field, shifting the midpoint of the distance psychometric function.
+  B: Two dots that span the eye's natural blind spot were judged as far apart as identically spaced dots elsewhere; only precision fell, with no shift in the midpoint of the distance psychometric function.
+R10
+  A: In binocular rivalry, frontal fMRI activity relates to the perceptual switches themselves and persists when switches are not reported.
+  B: In binocular rivalry, frontal fMRI activity relates to reporting switches, not to the switches themselves.
+R11
+  A: Anaesthetic-dose ketamine makes people unresponsive, yet they report long vivid dreams afterwards, and their TMS-EEG complexity stays wake-like; propofol and xenon give low complexity and no reports.
+  B: Anaesthetic-dose ketamine makes people unresponsive, and like propofol and xenon it leaves no dream reports afterwards and gives low TMS-EEG complexity.
+R12
+  A: Prefrontal neurons in macaques track the content of rivalry switches with no report, enough to decode contents single-trial.
+  B: Prefrontal neurons in macaques do not track the content of rivalry switches when there is no report; contents cannot be decoded from them.
+R13
+  A: Across 20 visual awareness datasets, trial-by-trial visibility and confidence reports carried over in time no more than accuracy did, fading within a trial or two; single-pulse TMS to dorsolateral prefrontal cortex left the carry-over in confidence unchanged.
+  B: Across 20 visual awareness datasets, trial-by-trial visibility and confidence reports carried over in time with an exponential decay lasting more than 5 seconds, while accuracy showed only a slow linear decay; single-pulse TMS to dorsolateral prefrontal cortex reduced the carry-over in confidence but not in accuracy.
+R14
+  A: In a registered MEG study of evening naps, the 20 s before awakenings with a reported experience showed lower delta power and higher low-gamma power in posterior cortex than awakenings with no experience.
+  B: In a registered MEG study of evening naps, the 20 s before awakenings with a reported experience showed no difference from awakenings with no experience in posterior delta or low-gamma power (Bayes factors favouring no difference).
+R15
+  A: Patients with visual field defects from cortical damage judged stimuli spanning or bordering their defect as closer together than age-matched controls judged the same stimuli.
+  B: Patients with visual field defects from cortical damage judged stimuli spanning or bordering their defect as far apart as age-matched controls did, with no systematic bias.
+R16
+  A: In mice performing a left/right spatial location task, optogenetically silencing visual-cortex neurons that were already inactive left choices unchanged compared with control trials.
+  B: In mice performing a left/right spatial location task, optogenetically silencing visual-cortex neurons that were already inactive biased choices toward the intact hemifield.
+R17
+  A: Children born without most of the cerebral cortex (hydranencephaly) show no emotional or orienting responses.
+  B: Children born without most of the cerebral cortex (hydranencephaly) show emotional and orienting responses that some clinicians read as conscious.
+R18
+  A: Wakefulness and awareness dissociate: patients in the vegetative / unresponsive wakefulness state open their eyes and have sleep-wake cycles without behavioural signs of awareness.
+  B: Wakefulness and awareness do not dissociate: patients who open their eyes and have sleep-wake cycles always show behavioural signs of awareness.
+R19
+  A: In a no-report inattentional deafness design, tones that listeners were aware of but had no task on still evoked both an early auditory awareness negativity and a larger late positivity in the P3 window than when the same tones went unnoticed; both grew further when the tones became task-relevant.
+  B: In a no-report inattentional deafness design, tones that listeners were aware of but had no task on evoked an early auditory awareness negativity but no late positivity in the P3 window; the late positivity appeared only when the tones became task-relevant.
+R20
+  A: During a constant binocular-suppression percept in monkeys, face-selective temporal neurons and prefrontal neurons steadily carried only the seen image; the suppressed image could not be read out from their activity at any moment.
+  B: During a constant binocular-suppression percept in monkeys, face-selective temporal neurons and prefrontal neurons switched many times a second between brief epochs that carried the seen image and epochs that carried the suppressed image; tuning was stronger in the seen epochs.
+R21
+  A: In a registered MEG study of evening naps, frontal cortex showed no difference in delta or low-gamma power between the 20 s before awakenings with and without a reported experience.
+  B: In a registered MEG study of evening naps, frontal cortex showed lower delta and higher low-gamma power in the 20 s before awakenings with a reported experience than before awakenings without one.
