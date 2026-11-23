@@ -371,7 +371,13 @@
    "route": "Brain-signal complexity (LZ) as a sign of consciousness beyond the power spectrum",
    "why": "On Sleep-EDF (45 people), LZ complexity called 86% of scrambled copies of waking EEG 'awake' (real waking: 89%). The scrambled copies keep only the power spectrum, so about 97% of LZ's ability to separate waking from deep sleep comes from the spectrum. In a sealed head-to-head, LZ added +0.0004 AUC over the spectral slope plus band powers (p = 0.19), with 85% power to see a gain of 0.0005. The spectral slope, delta power and permutation entropy failed the same scrambling check. This confirms and quantifies earlier reports that LZ in sleep is driven by oscillations (González 2022; Höhn 2024, eNeuro). What is new here is the sealed incremental test and the surrogate gate.",
    "tag": "out",
-   "reopen": "Sedation data (ds005620, Chennu) not yet run, The red-team task #39 (dreaming vs deep sleep, where LZ beat the slope alone but not slope plus band powers) is answered by that same sealed test. Details: experiments/surrogate_gate and experiments/lz_slope."
+   "reopen": "Sedation data (ds005620, Chennu) not yet run. The red-team task #39 (dreaming vs deep sleep, where LZ beat the slope alone but not slope plus band powers) is answered by that same sealed test. Details: experiments/surrogate_gate and experiments/lz_slope."
+  },
+  {
+   "route": "\"Knowing when you are right\" as a sign of awareness, tested in healthy observers",
+   "why": "Thorat & Chopra (2026) list this marker of awareness: confidence that tracks accuracy, at matched performance. The evidence for it rests mainly on one blindsight patient. We tested it on 20 people from an open dataset (Rausch 2016, 6,300 trials), each of whom rated both confidence and visibility on every trial. The question was whether confidence tracks accuracy better on trials people saw more clearly than a simple observer, reading one sample of evidence, would predict. We sealed the test before downloading the data. The result is void: the simple observer could not reproduce how well confidence tracks accuracy in these people, even with its confidence made almost noiseless (z = 3.95 against a limit of 3). So it is the wrong yardstick, and the test says nothing either way about awareness. Models where confidence draws on more evidence than the decision already exist (for example Pleskac & Busemeyer 2010 and Rausch's WEV models; we have not opened these yet).",
+   "tag": "out",
+   "reopen": "A dataset several times larger with confidence and visibility on every trial, plus a test against a richer (WEV-type) null. Details: experiments/metacog_awareness/RESULTS.md."
   },
   {
    "route": "Testing measures on brain-injured patients with open EEG",
