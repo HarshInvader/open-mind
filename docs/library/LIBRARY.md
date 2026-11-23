@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-23. Do not edit by hand.
 
-176 entries: 23 read in full, 153 from the abstract only. Every DOI was opened and its title and authors checked.
+177 entries: 23 read in full, 154 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -1650,7 +1650,7 @@ Horikawa et al. (2013). *Science 340:639-642*. [doi:10.1126/science.1234330](htt
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C18
 
-## Drugs and anaesthesia (25)
+## Drugs and anaesthesia (26)
 
 ### Convergent transcriptomic and connectomic controllers of information integration and its anaesthetic breakdown across mammalian brains
 
@@ -1707,6 +1707,18 @@ Ramaswamy SM et al. (2024). *PLoS One*. [doi:10.1371/journal.pone.0304413](https
 - **Limits:** One multivariate model, one direction; no per-measure test, spectral baseline or surrogate.
 - **For us:** The prior to cite for #5: sleep-to-propofol transfer of a multivariate stager fails.
 - **Touches:** Task #5 transfer
+
+### Evaluation of putative signatures of consciousness using specific definitions of responsiveness, connectedness, and consciousness
+
+Casey CP, Tanabe S, Farahbakhsh ZZ, Parker M, Bo A, et al. (Sanders RD senior) (2024). *British Journal of Anaesthesia*. [doi:10.1016/j.bja.2023.09.031](https://doi.org/10.1016/j.bja.2023.09.031). Paper, abstract only, **core**.
+
+- **Question:** Do EEG markers that were built using 'unresponsive' as a stand-in for 'unconscious' actually track experience, or only contact with the outside world?
+- **Idea tested:** Ten published resting-state markers (complexity, connectivity, cross-frequency coupling, graph measures, spectrum) scored against serial-awakening reports, split into connected, disconnected-but-experiencing, and unconscious.
+- **Data and method:** UNCCIOUS study (NCT03284307): dexmedetomidine sedation, propofol sedation and natural sleep, with repeated awakenings and interviews.
+- **Results:** None of the markers tracked experience alone; each also tracked connectedness, and several tracked connectedness only. Front-to-back symbolic transfer entropy tracked connectedness in all three conditions. Going from disconnected experience to unconsciousness lowered permutation entropy and the spectral exponent (P<0.05 in all conditions). (abstract only)
+- **Limits:** Data on request (IRB discretion), not open; small propofol arm.
+- **For us:** The closest prior art to our whole benchmark, and it already uses per-awakening reports. It weakens our #5 loose thread (exponent follows slow waves, not experience): here the exponent does separate disconnected experience from unconsciousness. Requesting these data is the best route to a powered sedation-with-reports test.
+- **Touches:** #5, #42
 
 ### Dexmedetomidine produces more sleep-like brain activity compared with propofol in human participants
 

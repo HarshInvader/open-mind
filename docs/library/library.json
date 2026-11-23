@@ -4472,6 +4472,32 @@
    ],
    "relevance": "context",
    "url": "https://doi.org/10.1101/823963"
+  },
+  {
+   "id": "casey-2024-putative-signatures-consciousness",
+   "kind": "Paper",
+   "title": "Evaluation of putative signatures of consciousness using specific definitions of responsiveness, connectedness, and consciousness",
+   "authors": "Casey CP, Tanabe S, Farahbakhsh ZZ, Parker M, Bo A, et al. (Sanders RD senior)",
+   "year": 2024,
+   "venue": "British Journal of Anaesthesia",
+   "doi": "10.1016/j.bja.2023.09.031",
+   "url": "https://doi.org/10.1016/j.bja.2023.09.031",
+   "topic": "Drugs and anaesthesia",
+   "read_depth": "abstract",
+   "question": "Do EEG markers that were built using 'unresponsive' as a stand-in for 'unconscious' actually track experience, or only contact with the outside world?",
+   "tried": "Ten published resting-state markers (complexity, connectivity, cross-frequency coupling, graph measures, spectrum) scored against serial-awakening reports, split into connected, disconnected-but-experiencing, and unconscious.",
+   "method_data": "UNCCIOUS study (NCT03284307): dexmedetomidine sedation, propofol sedation and natural sleep, with repeated awakenings and interviews.",
+   "key_results": "None of the markers tracked experience alone; each also tracked connectedness, and several tracked connectedness only. Front-to-back symbolic transfer entropy tracked connectedness in all three conditions. Going from disconnected experience to unconsciousness lowered permutation entropy and the spectral exponent (P<0.05 in all conditions). (abstract only)",
+   "limits": "Data on request (IRB discretion), not open; small propofol arm.",
+   "ideas_for_us": "The closest prior art to our whole benchmark, and it already uses per-awakening reports. It weakens our #5 loose thread (exponent follows slow waves, not experience): here the exponent does separate disconnected experience from unconsciousness. Requesting these data is the best route to a powered sedation-with-reports test.",
+   "touches": [
+    "#5",
+    "#42"
+   ],
+   "relevance": "core",
+   "in_news": false,
+   "added": "2026-11-23",
+   "verified": true
   }
  ]
 }
