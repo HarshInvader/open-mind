@@ -74,4 +74,5 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
 - **Test:** does a trained stimulus-only controller show the Tsushima reversal, with a planted visibility-floor agent as the positive control? Sealed `docs/prereg/2026-11-21_self_model_kill_trained_control.md`.
 - **Result:** void. Both agents learned to suppress at every strength (reward-optimal in all four sealed cells), so neither could reverse (0 of 4 cells each).
 - **Lesson:** a planted floor must gate the action, not only the input, and cells must make blanket suppression costly. Do not reuse these four cells.
-- **Details:** `experiments/self_model_agents/RESULTS.md` (step 1).
+- **Closed (step 2, exact, no training):** the Bayes-optimal detect-then-suppress agent shows the reversal in 0 of 56 cells (largest 0.017). A blanket suppressor shows it in none. An action-gated floor set above the reward-optimal threshold shows it robustly. So the reversal flags a mis-set threshold (capacity limit, wrong costs or another objective, which this model cannot tell apart), not detection-gating as such. It is not a marker of awareness-gated control either. The trained-agent amendment was dropped: it would only test whether REINFORCE converges.
+- **Details:** `experiments/self_model_agents/RESULTS.md` (steps 1 and 2), `oracle_check.py`.

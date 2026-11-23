@@ -52,3 +52,45 @@ The planted agent failed for a design reason, not a code bug. TF's floor hides t
 - The sealed question (does a trained stimulus-only agent reverse?) stays open. The test as designed could not have shown a reversal in either agent.
 - Lesson for the agent study: a "visibility floor" must gate control, not just perception, or a cheap default action covers for it. Cells must also make suppression costly enough that blanket suppression is not optimal (k comparable to e * s^g at mid strengths).
 - Next step, not started: a sealed amendment with an action-gated planted agent and cells where blanket suppression loses. Because T's behaviour in these four cells is now known, any amendment must use new cells.
+
+---
+
+# Step 2: exact scripted-agent check, and AI2 closed (2026-11-23)
+
+**Verdict: AI2 is closed on an exact result. The reviewer's claim, that any agent which suppresses only after detecting a distractor will show the reversal, is false within this task family. The trained-agent amendment is dropped.**
+
+This was not sealed. It is an exact computation with no training, done as the design check Fable asked for before any amendment. Script: `oracle_check.py`; output: `oracle_check.json`.
+
+## What was computed
+- **The grid:** 56 cells, with e in {0.8, 0.95}, g in {0.5, 1}, sigma in {0.1, 0.3} and k in {0.02, 0.1, ..., 0.6}. The crossover s* = (k/e)^(1/g), where suppression starts to pay, spans 0 to 0.75.
+- **The quantity:** expected loss D(s) = s^g (1 - e P(s)) + k P(s), computed exactly, where P(s) is the agent's suppress probability at strength s.
+- **The metric:** the sealed reversal metric, max D(s) - D(1) > 0.05 with the peak at s < 0.9.
+
+## Result
+
+| Agent | Cells showing the reversal | Largest reversal |
+|---|---|---|
+| Bayes-optimal stimulus-only (suppress iff E[e s^g - k \| x] > 0) | 0 / 56 | 0.017 |
+| Blanket suppressor | 0 / 56 | 0 |
+| Bayes agent with an action-gated floor f (no suppression when x < f) | shows it when f is well above s* | up to 0.62 |
+
+- **Noise-free algebra:** suppressing exactly above s* gives a reversal of (1 - e)(s*^g - 1), which is always negative.
+- **When a floor shows it:** with no noise, a floor f shows the reversal when f^g > 1 - e + k + 0.05, roughly. Noise blurs this.
+
+## What this means
+- **A detection threshold alone does not produce the reversal.** The reward-optimal detect-then-suppress agent never shows it, so the reviewer's claim fails here.
+- **The reversal flags a threshold set above the reward-optimal one**, meaning the agent fails to act on distractors that are worth suppressing. Within this model, a capacity limit, mis-estimated costs and a different objective all look the same. So it is not specifically a "capacity floor".
+- **It is not a marker of awareness-gated control either.** A trivially planted floor produces it with no awareness at all. The reviewer's deeper point stands: on its own the reversal cannot separate awareness-gating from any mis-set threshold.
+- **Why the trained-agent amendment is dropped (Fable, 2026-11-23):**
+  - Its only remaining question is whether REINFORCE converges to the optimum.
+  - If it converges, the answer (no reversal) is already known exactly.
+  - If it does not, any reversal is an undertraining artefact.
+  - Neither outcome bears on consciousness.
+- **Relation to step 0:** this extends step 0's toy claim that an evidence-optimal controller cannot reverse. It now covers a full Bayes posterior with noise across 56 cells.
+
+## Caveats
+- **Scope:** one step, known costs, a uniform prior and Gaussian noise. There is no learning, no temporal dynamics and no separate task-relevant channel.
+- **"Above optimal" is relative to the modelled reward.** Under costs not modelled here (detection effort, metabolic cost, false alarms), a floor could itself be optimal.
+- **Tsushima:** this does not reproduce or refute Tsushima et al. 2006 (doi:10.1126/science.1133197). Their effect involves failing to engage control below threshold, and this model has no mechanism for that.
+- **Conventions:** the 0.05 cutoff and the peak-before-0.9 rule are conventions. The optimal agent's largest reversal is 0.017, not exactly 0.
+- **Awareness:** nothing here bears on awareness itself.
