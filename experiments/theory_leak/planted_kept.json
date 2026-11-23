@@ -1,0 +1,96 @@
+{
+ "items": [
+  "P02",
+  "P03",
+  "P04",
+  "P06",
+  "P07",
+  "P08",
+  "P09",
+  "P10",
+  "P11"
+ ],
+ "n_runs": 100,
+ "scenarios": {
+  "zero": {
+   "counts": {
+    "LEAK-DOMINATED": 0.0,
+    "LEAK-BOUNDED": 0.14,
+    "INCONCLUSIVE": 0.86
+   },
+   "mean_D_bits": 0.000541538869699051,
+   "mean_D_logit": 0.003285158967816027,
+   "control_flag_rate": 0.0
+  },
+  "iit_bits_0.25": {
+   "counts": {
+    "LEAK-DOMINATED": 0.41,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 0.59
+   },
+   "mean_D_bits": 0.24190964205835366,
+   "mean_D_logit": 0.6913422729055602,
+   "control_flag_rate": 0.01
+  },
+  "iit_bits_0.40": {
+   "counts": {
+    "LEAK-DOMINATED": 1.0,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 0.0
+   },
+   "mean_D_bits": 0.3759387649306867,
+   "mean_D_logit": 1.0207227628873843,
+   "control_flag_rate": 0.0
+  },
+  "uniform_bits_0.25": {
+   "counts": {
+    "LEAK-DOMINATED": 0.96,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 0.04
+   },
+   "mean_D_bits": -0.001448082565728591,
+   "mean_D_logit": 0.005559801217179816,
+   "control_flag_rate": 0.0
+  },
+  "iit_logit_0.75_ceiling": {
+   "counts": {
+    "LEAK-DOMINATED": 0.92,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 0.08
+   },
+   "mean_D_bits": 0.34218418664941164,
+   "mean_D_logit": 0.7537045652512322,
+   "control_flag_rate": 0.0
+  },
+  "zero_ceiling": {
+   "counts": {
+    "LEAK-DOMINATED": 0.0,
+    "LEAK-BOUNDED": 0.17,
+    "INCONCLUSIVE": 0.83
+   },
+   "mean_D_bits": -0.0024199300975175937,
+   "mean_D_logit": -0.006746904932313577,
+   "control_flag_rate": 0.0
+  },
+  "iit_contrarian_logit_-0.75": {
+   "counts": {
+    "LEAK-DOMINATED": 0.0,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 1.0
+   },
+   "mean_D_bits": -0.44182235753631316,
+   "mean_D_logit": -0.7432545087242839,
+   "control_flag_rate": 0.01
+  },
+  "placebo_follows_logit_0.6": {
+   "counts": {
+    "LEAK-DOMINATED": 0.0,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 1.0
+   },
+   "mean_D_bits": -0.0031254050942898064,
+   "mean_D_logit": -0.002831199557818404,
+   "control_flag_rate": 1.0
+  }
+ }
+}

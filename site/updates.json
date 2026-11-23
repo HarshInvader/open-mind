@@ -1,4 +1,7 @@
 [
+  {"date": "2026-11-23", "kind": "result", "title": "AI raters ignore a random 'reported outcome' label when scoring theories",
+   "body": "We showed AI raters findings that have no known result yet, each with a 'reported outcome' line we told them was random. Their ratings of what six consciousness theories predict did not move with that line, for any theory. But most ratings said the theory was silent, and a stronger test, where the raters believe the outcome, comes first. So we are not scaling the ledger to 59 findings yet.",
+   "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/theory_leak/RESULTS.md"},
   {"date": "2026-11-23", "kind": "result", "title": "Blind AI raters can score theories against real vs mirrored outcomes",
    "body": "Three AI raters, blind to which outcome was real, said how likely six theories made each of 10 key findings. Our checks passed: they recovered a made-up theory, gave a placebo theory 50/50 every time, and agreed with each other. IIT came out ahead, but these raters know the literature and the items lean posterior, so the 59-finding run comes next with leak checks.",
    "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/theory_likelihood/RESULTS.md"},

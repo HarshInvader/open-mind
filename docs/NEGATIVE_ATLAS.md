@@ -2,6 +2,18 @@
 
 Closed routes, each with the effect size the test could have caught. Empty until the first tests land.
 
+## AI theory raters do not follow a disowned outcome cue (theory leak probe, 2026-11-23)
+
+- **Route closed:** "LLM raters bend a theory's predicted outcome toward an outcome they are told was reported", for a cue they are told is random, on unknowable findings (post-cutoff results and pending outcomes).
+- **Data:** 9 items in 6 clusters; 3 models (Fable 5.2, Opus 5.5, Sonnet 5.5); 12 TAG and 6 NOTAG instances. Sealed prereg `docs/prereg/2026-11-24_theory_leak_probe.md`.
+- **Result:** LEAK-BOUNDED on both scales. Every per-theory leak is within ±0.02 bits, with 95% CIs inside ±0.07 bits/logit. IIT-versus-access D = +0.012 bits [−0.040, +0.063]. No control flag.
+- **What it could catch:** the planted gate on the kept items caught a 0.40-bit IIT-only leak 100% of the time, a 0.25-bit leak across all theories 96%, and a ceiling-masked 0.75-logit IIT leak 92%.
+- **Not closed:**
+  - leakage under a credited cue (there was no manipulation check);
+  - leakage from memory of famous outcomes, which is the pilot's risk;
+  - items where theories commit (63% of cells here were near-silent).
+- **Details:** `experiments/theory_leak/RESULTS.md`.
+
 ## T1 settling-window theory: posterior OFF-period recency does not predict N2 dream reports (task #31, 2026-11-18)
 
 - **Route closed:** "the time since the last posterior OFF-period before waking decides whether an N2 awakening yields experience", in its strong form (odds ratio of 2 or more per within-subject SD of log recency, beyond delta power, slow-wave count, sigma, beta, spectral exponent, clock time and awakening index).

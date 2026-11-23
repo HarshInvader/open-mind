@@ -291,3 +291,26 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - Should-fix items applied: cluster bootstrap, P07 made self-contained, P03 and P08 cues removed, pending-item exclusion, reproducible seeds.
 - **Planted gate:** 0 false positives in every no-leak scenario. A 0.40-bit IIT leak is caught 100% of the time and a ceiling-masked one 99%. A true null reads INCONCLUSIVE 60% of the time.
 - **Sealed:** `docs/prereg/2026-11-24_theory_leak_probe.md`. Next: the recognition gate, then the rating packets.
+
+### Leak probe result: LEAK-BOUNDED, scaling not licensed (Fable interpreting review)
+- **Run:**
+  - Recognition passed (28/30). P01 and P05 were excluded, leaving 9 items.
+  - All 18 rating instances completed. The first launch hit a gateway 503; the 15 missing instances were rerun in batches of 6, as first answers, not re-requests.
+- **Result:** LEAK-BOUNDED on both scales, with no control flag.
+  - Every L_t is within ±0.02 bits, and every CI is inside ±0.07 bits/logit.
+  - D = +0.012 bits [−0.040, +0.063].
+  - Z was recovered 36/36 times in NOTAG. Q was exactly 0.5 everywhere.
+  - Details: `experiments/theory_leak/RESULTS.md`.
+- **Fable's read:**
+  - **What it shows:** raters ignore a disowned cue. None of the 864 TAG rationales mentions it.
+  - **What it doesn't show:** without a manipulation check, it says nothing about raters' beliefs and nothing about the memory path behind the pilot's IIT lead.
+  - **Why the CIs are so narrow:** real instances vary far less than the planted 0.48-logit noise, and many cells sit at exactly 0.5.
+  - **Errors:** none found that would change the verdict. Fable recomputed the counterbalancing, Q, Z recovery, α and elastic fraction from the raw ratings.
+- **Scaling to 59 items: no.** α is 0.79 (passes ≥ 0.67), but the elastic fraction is 0.63 (fails < 0.5).
+- **Forecast bits (descriptive only, P02–P04):** GNWT +1.06, IIT −0.81. This is the reverse of the pilot, but it rests on 3 items.
+- **Decision:**
+  - The next ledger study is the **manipulation check**: the same packets, with the cue framed as believed ("assume this outcome was observed") and a per-item belief probe.
+  - **Kill:** any L ≥ 0.25 bits / 0.43 logit, or D ≥ 0.28 / 0.48, with CI > 0. That demotes the ledger.
+  - **Void:** belief does not follow the cue.
+  - **In parallel:** the hypothesis generator (ds006394 screen, ds001785 confirm).
+  - The 59-item amendment is parked.

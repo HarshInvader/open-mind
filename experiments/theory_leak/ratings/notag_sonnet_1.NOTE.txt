@@ -1,0 +1,1 @@
+Packet 17 (notag_sonnet_1) also returned its JSON array wrapped in a markdown code fence: a line ```json before the array and a line ``` after it. The array between the fences is saved unchanged as notag_sonnet_1.json. The instance was not re-requested, because the content was complete and well-formed.

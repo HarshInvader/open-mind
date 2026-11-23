@@ -1,0 +1,1 @@
+Packet 10 (tag_sonnet_2) returned its JSON array wrapped in a markdown code fence: a line ```json before the array and a line ``` after it. The array between the fences is saved unchanged as tag_sonnet_2.json; nothing else in the reply was altered. The instance was not re-requested, because the content was complete and well-formed.

@@ -1,0 +1,316 @@
+{
+ "verdict": "PASS",
+ "control_correct": 28,
+ "control_n": 30,
+ "excluded": [
+  "P01",
+  "P05"
+ ],
+ "kept": [
+  "P02",
+  "P03",
+  "P04",
+  "P06",
+  "P07",
+  "P08",
+  "P09",
+  "P10",
+  "P11"
+ ],
+ "per_item": {
+  "C05": {
+   "fable": {
+    "p_real": 0.97,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.95,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.9,
+    "recall": true
+   }
+  },
+  "C28": {
+   "fable": {
+    "p_real": 0.96,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.9,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.85,
+    "recall": true
+   }
+  },
+  "P03": {
+   "fable": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.5,
+    "recall": false
+   }
+  },
+  "C17": {
+   "fable": {
+    "p_real": 0.97,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.95,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.9,
+    "recall": true
+   }
+  },
+  "C08": {
+   "fable": {
+    "p_real": 0.97,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.9,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.85,
+    "recall": true
+   }
+  },
+  "P05": {
+   "fable": {
+    "p_real": 0.65,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.8,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.5,
+    "recall": false
+   }
+  },
+  "C11": {
+   "fable": {
+    "p_real": 0.95,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.1,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.7,
+    "recall": false
+   }
+  },
+  "P11": {
+   "fable": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.5,
+    "recall": false
+   }
+  },
+  "P09": {
+   "fable": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.55,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.6,
+    "recall": false
+   }
+  },
+  "C31": {
+   "fable": {
+    "p_real": 0.92,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.85,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.4,
+    "recall": false
+   }
+  },
+  "C14": {
+   "fable": {
+    "p_real": 0.97,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.95,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.85,
+    "recall": true
+   }
+  },
+  "C32": {
+   "fable": {
+    "p_real": 0.93,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.9,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.7,
+    "recall": false
+   }
+  },
+  "P04": {
+   "fable": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.6,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.6,
+    "recall": false
+   }
+  },
+  "P06": {
+   "fable": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.3,
+    "recall": false
+   }
+  },
+  "P10": {
+   "fable": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.55,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.7,
+    "recall": false
+   }
+  },
+  "P08": {
+   "fable": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.55,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.5,
+    "recall": false
+   }
+  },
+  "C55": {
+   "fable": {
+    "p_real": 0.97,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.95,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.9,
+    "recall": true
+   }
+  },
+  "C21": {
+   "fable": {
+    "p_real": 0.98,
+    "recall": true
+   },
+   "opus": {
+    "p_real": 0.97,
+    "recall": true
+   },
+   "sonnet": {
+    "p_real": 0.95,
+    "recall": true
+   }
+  },
+  "P02": {
+   "fable": {
+    "p_real": 0.4,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.45,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.35,
+    "recall": false
+   }
+  },
+  "P01": {
+   "fable": {
+    "p_real": 0.88,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.8,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.7,
+    "recall": false
+   }
+  },
+  "P07": {
+   "fable": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "opus": {
+    "p_real": 0.5,
+    "recall": false
+   },
+   "sonnet": {
+    "p_real": 0.3,
+    "recall": false
+   }
+  }
+ }
+}
