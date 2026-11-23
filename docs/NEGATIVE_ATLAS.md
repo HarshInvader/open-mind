@@ -76,3 +76,13 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
 - **Lesson:** a planted floor must gate the action, not only the input, and cells must make blanket suppression costly. Do not reuse these four cells.
 - **Closed (step 2, exact, no training):** the Bayes-optimal detect-then-suppress agent shows the reversal in 0 of 56 cells (largest 0.017). A blanket suppressor shows it in none. An action-gated floor set above the reward-optimal threshold shows it robustly. So the reversal flags a mis-set threshold (capacity limit, wrong costs or another objective, which this model cannot tell apart), not detection-gating as such. It is not a marker of awareness-gated control either. The trained-agent amendment was dropped: it would only test whether REINFORCE converges.
 - **Details:** `experiments/self_model_agents/RESULTS.md` (steps 1 and 2), `oracle_check.py`.
+
+## Awareness-linked metacognition vs a single-evidence observer: void, null misfit (Rausch 2016, 2026-11-23)
+- **Route tested:** at fixed contrast, does confidence track accuracy better on high-visibility trials than a single-evidence SDT observer predicts? This is the "knowing when you are right" marker in Thorat & Chopra 2026.
+- **Data:** Rausch & Zehetleitner 2016 (Confidence Database), 20 subjects, 6,300 trials. Sealed prereg `docs/prereg/2026-11-23_metacog_awareness_rausch2016.md` (commit e5df6c2).
+- **Result: void (terminal).** The fitted null misfits the confidence-accuracy correlation (z = 3.95; moment z [3.95, 2.36, 0.39, -2.61]), even with confidence noise at its floor (sc = 0.068). Not interpreted: p = 0.89, AUROC2 gap excess 0.037 [-0.044, 0.142].
+- **What it could catch:** gate 2 gave 98% "supports" at a 0.05 excess and 42% at 0.03; the null false-positive rate was 1.7%.
+- **Lesson:** a single-sample SDT null is inadequate for confidence in this paradigm. Check a null against the known confidence-model literature (2DSD, WEV) before sealing.
+- **Not closed:** whether an excess survives a WEV-type null. That needs a several-times-larger dataset with both ratings on every trial.
+- **Details:** `experiments/metacog_awareness/RESULTS.md`.
+

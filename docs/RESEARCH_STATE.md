@@ -93,7 +93,7 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
 - **Our check on the narrower option.** It fails its own gate on published counts. Bajwa et al. 2025 (PMC12460656) report 52 awakenings in 20 participants: 24 with experience, 5 with no experience, and 23 unarousable or incoherent. The labels are also unreleased. Even if the authors sent the labels, 5 negatives cannot support a split, so no email was sent: a reply would not unblock a viable study.
 - **Decision:** the tournament is not opened. Ranking: (1) the Rausch metacognition test, if the power gate passes; (2) #5 rescoped to sleep plus propofol (census, then pilot); (3) a parked seen/unseen content screen.
 
-### Rausch metacognition test: pre-seal gate 2 (in progress)
+### Rausch metacognition test: gates, seal and result
 - **Fable's pre-seal review** (round 6) said not to seal yet. Its edits:
   - tie-averaged AUROC;
   - rank-map the null onto each subject's observed ratings (floors, ties);
@@ -106,4 +106,18 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - 2 of 12 nulls were void, and the confidence-accuracy moment z was biased upward;
   - the fitted sc sat at 1.000, its start value. scipy's Nelder-Mead uses a 0.00025 step for a zero start coordinate, so on the step-shaped loss from rank-mapped ratings it never moved.
   - **Fix:** an explicit initial simplex with 0.3 steps. The probe now gives sc 0.60-0.79 (true 0.8) and moment z near 0.
-  - Gate 2 is being rerun from scratch. Nothing in the data or decision rule changed; no real data has been seen.
+  - Gate 2 was rerun from scratch and passed: null supports 0.017 (all three nulls), void 0; planted 0.98.
+- **Fable round 6b (pre-seal):**
+  - Fable said to add the gate-2 table and the disclosure to the prereg, and to add a NaN/Accuracy guard to `load()`;
+  - it also said to state that inconclusive is likely and that void is terminal.
+  - **Decision:** all done, then sealed (commit e5df6c2) and only then the data downloaded.
+- **Sealed run: VOID.**
+  - Confidence-accuracy moment z = 3.95 (> 3), with sc at its floor (0.068). The single-sample null cannot reach the observed confidence-accuracy correlation (0.341 vs 0.283).
+  - Primary p = 0.89 and excess 0.037 [-0.044, 0.142] are not interpreted.
+- **Fable round 7 (interpretation):**
+  - Only conf-accuracy crosses 3 SD.
+  - Several mechanisms fit: post-decisional evidence, d′ drift, lapses, non-Gaussian evidence.
+  - The void says nothing either way about awareness.
+  - Don't quote the without-lowest-contrast CI.
+  - Stop and log: multi-sample confidence is established (2DSD; Rausch WEV, both unverified), and this dataset lacks the precision for the one open question.
+- **Decision:** agreed. Written up in `experiments/metacog_awareness/RESULTS.md` and the atlas. Next: #5 rescoped to sleep plus propofol (census, then pilot).
