@@ -68,3 +68,10 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
 - **Result:** 0 of 50 simulated studies passed (each cell 0/10; one-sided 95% upper bound 0.26). Passes at d' 3. More trials (Cohen) did not help.
 - **Lesson:** the bottleneck is state overlap, not sample size. Do not attempt single-trial bimodality on scalp EEG at near-threshold separation with this pipeline. The originating lab's mixture results (Sergent 2021; Boyer 2026, doi:10.64898/2026.06.17.732590) have no published planted check either.
 - No real data was opened. Details: `experiments/bifurcation/RESULTS.md`.
+
+## Self-model AI2 kill test: void, planted check failed (2026-11-23)
+
+- **Test:** does a trained stimulus-only controller show the Tsushima reversal, with a planted visibility-floor agent as the positive control? Sealed `docs/prereg/2026-11-21_self_model_kill_trained_control.md`.
+- **Result:** void. Both agents learned to suppress at every strength (reward-optimal in all four sealed cells), so neither could reverse (0 of 4 cells each).
+- **Lesson:** a planted floor must gate the action, not only the input, and cells must make blanket suppression costly. Do not reuse these four cells.
+- **Details:** `experiments/self_model_agents/RESULTS.md` (step 1).
