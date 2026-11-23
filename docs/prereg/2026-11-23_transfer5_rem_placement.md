@@ -127,3 +127,7 @@ The gate uses Sleep-EDF W and N3 only, with subjects split in half. Cutoffs are 
 - this prereg;
 - `experiments/transfer_5/` files `analyse.py`, `measures.py`, `fetch_hmc.py`, `extract_ds.py`, `planted.py`, `planted.json`, `feats_sedf_wn.jsonl` and `CENSUS.md`;
 - the imported helpers `experiments/lz_slope/features.py`, `experiments/nonequilibrium/extract.py` and `experiments/lz_slope/fetch.py` (the last defines the Sleep-EDF epochs).
+
+## Amendment 1 (2026-11-23, before any HMC signal was fetched)
+`fetch_hmc.py` read the HMC record list from physionet.org, which returned HTTP 502 (and later a redirect). The record list is now read from PhysioNet's open S3 mirror (`physionet-open.s3.amazonaws.com/hmc-sleep-staging/1.1/RECORDS`, 151 recordings), which the script already used for every data file. Nothing else changed. No HMC signal had been downloaded: the failed run stopped at the record list.
+

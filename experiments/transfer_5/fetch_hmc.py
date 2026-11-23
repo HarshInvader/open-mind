@@ -74,7 +74,7 @@ def header(b):
 
 def main(max_subjects=None):
     recs = sorted(set(re.findall(r"SN\d{3}", urllib.request.urlopen(urllib.request.Request(
-        "https://physionet.org/files/hmc-sleep-staging/1.1/RECORDS", headers=UA), timeout=60).read().decode())))
+        f"https://{HOST}/hmc-sleep-staging/1.1/RECORDS", headers=UA), timeout=60).read().decode())))  # amendment 1
     if max_subjects:
         recs = recs[:int(max_subjects)]
     log = []
