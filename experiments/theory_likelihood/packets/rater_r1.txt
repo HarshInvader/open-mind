@@ -1,0 +1,58 @@
+You are rating how strongly scientific theories of consciousness predict experimental outcomes.
+
+Rules:
+- Do not use any tools, files or web searches. Answer from your own knowledge of each theory.
+- For each theory and each finding you see two possible outcomes, A and B. Exactly one of them describes what was
+  observed in the real world, but you are not told which, and it does not matter: rate what the THEORY implies.
+- Give p = the probability that outcome A rather than B would be observed IF the theory (as stated in the canonical
+  reference given, by its proponents' core commitments) were true. Use 0.01-0.99.
+- p near 0.5 means the theory does not discriminate between A and B (it is silent, or it fits both equally well).
+- Do not reward a theory for having been adjusted after the fact to fit one outcome unless that adjustment is part of
+  the canonical reference. For the two made-up theories (Z and Q), use only the text given.
+- Be calibrated: reserve values below 0.1 or above 0.9 for cases where the theory's core commitments clearly entail
+  one outcome.
+
+Return ONLY a JSON array, one object per (theory, finding) pair, with keys "theory", "finding", "p", "why"
+("why" at most 15 words). There are 80 pairs; include every one.
+
+THEORIES
+- AST: Attention schema theory. Canonical reference: Graziano & Webb 2015, Front Psychol, doi:10.3389/fpsyg.2015.00500.
+- GNWT: Global neuronal workspace theory. Canonical reference: Mashour, Roelfsema, Changeux & Dehaene 2020, Neuron, doi:10.1016/j.neuron.2020.01.026.
+- IIT: Integrated information theory (IIT 4.0). Canonical reference: Albantakis et al. 2023, PLoS Comput Biol, doi:10.1371/journal.pcbi.1011465.
+- PP: Predictive processing as a theory for consciousness. Canonical reference: Seth & Hohwy 2020, Cogn Neurosci, doi:10.1080/17588928.2020.1838467.
+- PLACEBO_Q: Theory Q (a made-up control theory). Canonical reference: none; its full content is given here. Theory Q claims only that consciousness depends on the concentration of a particular molecule in the liver. It makes no claims about the brain, sleep, drugs, lesions, stimulation or behaviour.
+- HOT: Higher-order theories (higher-order representation / perceptual reality monitoring family). Canonical reference: Brown, Lau & LeDoux 2019, Trends Cogn Sci, doi:10.1016/j.tics.2019.06.009.
+- TOY_Z: Theory Z (a made-up control theory). Canonical reference: none; its full content is given here. Theory Z makes exactly these claims and no others: (1) The cerebellum plays no part in consciousness. (2) Consciousness requires an intact prefrontal cortex; large prefrontal lesions abolish it. (3) Lateral prefrontal cortex generates conscious contents, so stimulating it alters experience; orbitofrontal and cingulate cortex play no role in experience. (4) Every anaesthetic, including ketamine, abolishes experience (no dreams) and lowers brain complexity. (5) Dreams are generated in posterior cortex, which becomes locally activated, with less slow-wave activity, when we dream. (6) Being awake is sufficient for being conscious. (7) The P3b wave is the signature of conscious experience, whether or not anything is reported. (8) Frontal activity tracks experience itself, not report. (9) Prefrontal neurons carry the current contents of experience. Theory Z says nothing about subcortical structures or brain development.
+- RPT: Recurrent processing theory. Canonical reference: Lamme 2006, Trends Cogn Sci, doi:10.1016/j.tics.2006.09.001.
+
+FINDINGS (use the finding id in your answer)
+F01
+  A: Wakefulness and awareness do not dissociate: patients who open their eyes and have sleep-wake cycles always show behavioural signs of awareness.
+  B: Wakefulness and awareness dissociate: patients in the vegetative / unresponsive wakefulness state open their eyes and have sleep-wake cycles without behavioural signs of awareness.
+F02
+  A: Stimulating lateral prefrontal cortex seldom changes experience; orbitofrontal and anterior cingulate stimulation often does.
+  B: Stimulating lateral prefrontal cortex often changes experience; orbitofrontal and anterior cingulate stimulation seldom does.
+F03
+  A: Anaesthetic-dose ketamine makes people unresponsive, yet they report long vivid dreams afterwards, and their TMS-EEG complexity stays wake-like; propofol and xenon give low complexity and no reports.
+  B: Anaesthetic-dose ketamine makes people unresponsive, and like propofol and xenon it leaves no dream reports afterwards and gives low TMS-EEG complexity.
+F04
+  A: In binocular rivalry, frontal fMRI activity relates to the perceptual switches themselves and persists when switches are not reported.
+  B: In binocular rivalry, frontal fMRI activity relates to reporting switches, not to the switches themselves.
+F05
+  A: The cerebellum holds most of the brain's neurons, yet losing it impairs movement and not, as far as anyone reports, consciousness.
+  B: Losing the cerebellum, which holds most of the brain's neurons, substantially impairs or abolishes consciousness, not only movement.
+F06
+  A: Children born without most of the cerebral cortex (hydranencephaly) show no emotional or orienting responses.
+  B: Children born without most of the cerebral cortex (hydranencephaly) show emotional and orienting responses that some clinicians read as conscious.
+F07
+  A: Large prefrontal lesions abolish consciousness.
+  B: Large prefrontal lesions do not abolish consciousness.
+F08
+  A: Within both NREM and REM, dream reports follow a local drop in low-frequency EEG power over posterior cortex; high-frequency activity there tracks specific contents.
+  B: Within both NREM and REM, dream reports are not linked to any local change in posterior cortex; they follow a local drop in low-frequency power over frontal cortex instead.
+F09
+  A: The P3b persists when people see a stimulus but do not have to report it; it tracks awareness, not report or task relevance.
+  B: The P3b disappears when people see a stimulus but do not have to report it; it tracks report and task relevance, not awareness.
+F10
+  A: Prefrontal neurons in macaques track the content of rivalry switches with no report, enough to decode contents single-trial.
+  B: Prefrontal neurons in macaques do not track the content of rivalry switches when there is no report; contents cannot be decoded from them.

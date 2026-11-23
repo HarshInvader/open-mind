@@ -207,3 +207,24 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - (2) the first corresponding author of Casey et al. 2024 (Wisconsin), asking for per-awakening report class, condition and subject, plus either the 20-s pre-report EEG or their exponent, or what an IRB request would need.
   Addresses came from official institution pages. Drafts and the send log are in `.local/outreach_mind_5b/`. No follow-up before 2026-12-03.
 - **Owner only:** the Zenodo 806176 verification and the COGITATE account.
+
+## 2026-11-23 (day): new main line from the owner; Fable round 13 ranking
+- **Owner direction:**
+  - Never sit idle. Data requests are side bets and stay open, including #5b and COGITATE.
+  - Marker-vs-spectrum benchmarking has run its course.
+  - The main line is now: (a) a constraint ledger scored under sealed rules; (b) tests of theory predictions, not markers; (c) the owner's hypothesis generator (screen fast, confirm on held-out data).
+- **Fable round 13: ranked unblocked studies** (all checked open with no login unless marked):
+  1. **A sealed, blind, likelihood-scored theory ledger** (track a, no data). It scores P(real outcome | theory) against mirrored outcomes, so elastic theories earn 0 bits. Pilot: 6 theories × 10 split constraints × 3 raters, with toy-theory recovery and placebo-leak gates and α ≥ 0.67. About 3 hours.
+  2. **Front vs back without report, Stockart sEEG** (OSF 8QE3A, 29 patients). Does a hit-vs-miss decoder trained on report trials transfer to the no-report stream in frontal contacts, or only in ventral visual ones? Kill test: power from planting 50% of the frontal effect; stop if fewer than 8 patients have frontal contacts. About 1 day.
+  3. **A theory-signed hypothesis generator** (track c). Screen on ds006394 (surprise-induced misses), confirm on ds001785 (tactile hit/miss), with known ERPs as positive controls. About 2 days.
+  4. **All-or-none vs graded awareness in visibility ratings** (Confidence Database, Rausch 2014/2016 and the PAS sets). This is GNWT's ignition prediction moved to behaviour. Half a day.
+  5. **Confidence-model family as the null.** 6 Confidence Database sets have both ratings (Jachs 2015, Mei 2019, Rausch 2016; about 44k trials), but five of them come from one lab. The ceiling is low.
+  6. **Supramodal detection in MetaMosquito sEEG.** Low novelty: the authors pre-registered the same question.
+  - **Blocked:** COGITATE experiment 2 (account), #5b (replies), ketamine and DoC. DREAM #42 is unblocked but not recommended (marker vs spectrum).
+- **Decision:** start item 1 now. Items 2, then 4, then 3 follow in that order. Item 4 moves above 3 because it takes half a day and the data is in hand.
+- **Item 1, first steps:**
+  - Mirrors written for C05, C08, C11, C14, C17, C21, C28, C31, C32 and C55.
+  - Canonical references checked on Crossref.
+  - Blinded packets built.
+  - Planted gate run: the clean version came out SCORABLE and the planted leak came out VOID.
+  - Prereg `docs/prereg/2026-11-23_theory_likelihood_pilot.md`.

@@ -1,0 +1,42 @@
+{
+ "F01": {
+  "item": "C14",
+  "real_is_a": false
+ },
+ "F02": {
+  "item": "C32",
+  "real_is_a": false
+ },
+ "F03": {
+  "item": "C05",
+  "real_is_a": true
+ },
+ "F04": {
+  "item": "C31",
+  "real_is_a": true
+ },
+ "F05": {
+  "item": "C21",
+  "real_is_a": true
+ },
+ "F06": {
+  "item": "C55",
+  "real_is_a": true
+ },
+ "F07": {
+  "item": "C11",
+  "real_is_a": false
+ },
+ "F08": {
+  "item": "C17",
+  "real_is_a": false
+ },
+ "F09": {
+  "item": "C08",
+  "real_is_a": true
+ },
+ "F10": {
+  "item": "C28",
+  "real_is_a": false
+ }
+}

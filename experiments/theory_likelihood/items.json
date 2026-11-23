@@ -1,0 +1,130 @@
+{
+ "items": [
+  {
+   "id": "C05",
+   "grade": "A",
+   "actual": "The cerebellum holds most of the brain's neurons, yet losing it impairs movement and not, as far as anyone reports, consciousness.",
+   "mirror": "Losing the cerebellum, which holds most of the brain's neurons, substantially impairs or abolishes consciousness, not only movement.",
+   "sources": "doi:10.1002/cne.21974; doi:10.1098/rstb.2014.0167; doi:10.1093/brain/awu239"
+  },
+  {
+   "id": "C08",
+   "grade": "B",
+   "actual": "Large prefrontal lesions do not abolish consciousness.",
+   "mirror": "Large prefrontal lesions abolish consciousness.",
+   "sources": "doi:10.1523/JNEUROSCI.3218-16.2017; doi:10.1523/JNEUROSCI.3217-16.2017; doi:10.1016/j.neuron.2020.01.026"
+  },
+  {
+   "id": "C11",
+   "grade": "B",
+   "actual": "Stimulating lateral prefrontal cortex seldom changes experience; orbitofrontal and anterior cingulate stimulation often does.",
+   "mirror": "Stimulating lateral prefrontal cortex often changes experience; orbitofrontal and anterior cingulate stimulation seldom does.",
+   "sources": "doi:10.1523/JNEUROSCI.1141-20.2020"
+  },
+  {
+   "id": "C14",
+   "grade": "B",
+   "actual": "Anaesthetic-dose ketamine makes people unresponsive, yet they report long vivid dreams afterwards, and their TMS-EEG complexity stays wake-like; propofol and xenon give low complexity and no reports.",
+   "mirror": "Anaesthetic-dose ketamine makes people unresponsive, and like propofol and xenon it leaves no dream reports afterwards and gives low TMS-EEG complexity.",
+   "sources": "doi:10.1016/j.cub.2015.10.014"
+  },
+  {
+   "id": "C17",
+   "grade": "B",
+   "actual": "Within both NREM and REM, dream reports follow a local drop in low-frequency EEG power over posterior cortex; high-frequency activity there tracks specific contents.",
+   "mirror": "Within both NREM and REM, dream reports are not linked to any local change in posterior cortex; they follow a local drop in low-frequency power over frontal cortex instead.",
+   "sources": "doi:10.1038/nn.4545; doi:10.1038/s41467-025-61945-1"
+  },
+  {
+   "id": "C21",
+   "grade": "A",
+   "actual": "Wakefulness and awareness dissociate: patients in the vegetative / unresponsive wakefulness state open their eyes and have sleep-wake cycles without behavioural signs of awareness.",
+   "mirror": "Wakefulness and awareness do not dissociate: patients who open their eyes and have sleep-wake cycles always show behavioural signs of awareness.",
+   "sources": "doi:10.1016/j.tics.2005.10.010; doi:10.1038/s41467-018-06871-1"
+  },
+  {
+   "id": "C28",
+   "grade": "B",
+   "actual": "The P3b disappears when people see a stimulus but do not have to report it; it tracks report and task relevance, not awareness.",
+   "mirror": "The P3b persists when people see a stimulus but do not have to report it; it tracks awareness, not report or task relevance.",
+   "sources": "doi:10.3389/fpsyg.2014.01078; doi:10.1523/JNEUROSCI.0120-20.2020; doi:10.1016/j.tics.2015.10.002"
+  },
+  {
+   "id": "C31",
+   "grade": "B",
+   "actual": "In binocular rivalry, frontal fMRI activity relates to reporting switches, not to the switches themselves.",
+   "mirror": "In binocular rivalry, frontal fMRI activity relates to the perceptual switches themselves and persists when switches are not reported.",
+   "sources": "doi:10.1523/JNEUROSCI.4403-13.2014"
+  },
+  {
+   "id": "C32",
+   "grade": "B",
+   "actual": "Prefrontal neurons in macaques track the content of rivalry switches with no report, enough to decode contents single-trial.",
+   "mirror": "Prefrontal neurons in macaques do not track the content of rivalry switches when there is no report; contents cannot be decoded from them.",
+   "sources": "doi:10.1016/j.neuron.2012.04.013; doi:10.1038/s41467-022-28897-2"
+  },
+  {
+   "id": "C55",
+   "grade": "C",
+   "actual": "Children born without most of the cerebral cortex (hydranencephaly) show emotional and orienting responses that some clinicians read as conscious.",
+   "mirror": "Children born without most of the cerebral cortex (hydranencephaly) show no emotional or orienting responses.",
+   "sources": "doi:10.1017/S0140525X07000891; doi:10.3389/fpsyg.2018.02714"
+  }
+ ],
+ "theories": [
+  {
+   "id": "IIT",
+   "name": "Integrated information theory (IIT 4.0)",
+   "ref": "Albantakis et al. 2023, PLoS Comput Biol, doi:10.1371/journal.pcbi.1011465"
+  },
+  {
+   "id": "GNWT",
+   "name": "Global neuronal workspace theory",
+   "ref": "Mashour, Roelfsema, Changeux & Dehaene 2020, Neuron, doi:10.1016/j.neuron.2020.01.026"
+  },
+  {
+   "id": "RPT",
+   "name": "Recurrent processing theory",
+   "ref": "Lamme 2006, Trends Cogn Sci, doi:10.1016/j.tics.2006.09.001"
+  },
+  {
+   "id": "HOT",
+   "name": "Higher-order theories (higher-order representation / perceptual reality monitoring family)",
+   "ref": "Brown, Lau & LeDoux 2019, Trends Cogn Sci, doi:10.1016/j.tics.2019.06.009"
+  },
+  {
+   "id": "PP",
+   "name": "Predictive processing as a theory for consciousness",
+   "ref": "Seth & Hohwy 2020, Cogn Neurosci, doi:10.1080/17588928.2020.1838467"
+  },
+  {
+   "id": "AST",
+   "name": "Attention schema theory",
+   "ref": "Graziano & Webb 2015, Front Psychol, doi:10.3389/fpsyg.2015.00500"
+  }
+ ],
+ "toy": {
+  "id": "TOY_Z",
+  "name": "Theory Z (a made-up control theory)",
+  "ref": "none; its full content is given here",
+  "text": "Theory Z makes exactly these claims and no others: (1) The cerebellum plays no part in consciousness. (2) Consciousness requires an intact prefrontal cortex; large prefrontal lesions abolish it. (3) Lateral prefrontal cortex generates conscious contents, so stimulating it alters experience; orbitofrontal and cingulate cortex play no role in experience. (4) Every anaesthetic, including ketamine, abolishes experience (no dreams) and lowers brain complexity. (5) Dreams are generated in posterior cortex, which becomes locally activated, with less slow-wave activity, when we dream. (6) Being awake is sufficient for being conscious. (7) The P3b wave is the signature of conscious experience, whether or not anything is reported. (8) Frontal activity tracks experience itself, not report. (9) Prefrontal neurons carry the current contents of experience. Theory Z says nothing about subcortical structures or brain development."
+ },
+ "toy_key": {
+  "C05": "actual",
+  "C08": "mirror",
+  "C11": "mirror",
+  "C14": "mirror",
+  "C17": "actual",
+  "C21": "mirror",
+  "C28": "mirror",
+  "C31": "mirror",
+  "C32": "actual",
+  "C55": "silent"
+ },
+ "placebo": {
+  "id": "PLACEBO_Q",
+  "name": "Theory Q (a made-up control theory)",
+  "ref": "none; its full content is given here",
+  "text": "Theory Q claims only that consciousness depends on the concentration of a particular molecule in the liver. It makes no claims about the brain, sleep, drugs, lesions, stimulation or behaviour."
+ }
+}
