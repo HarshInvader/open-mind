@@ -1,0 +1,1 @@
+mind self_model kill_trained 2026-11-21T07:44:08Z

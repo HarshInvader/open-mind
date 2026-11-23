@@ -76,5 +76,7 @@ cb6b44e3e852217a0ddc1cbf4b2b3a5bb2899dba1168327c4cd084bc74537631  docs/prereg/20
 924aa0c9b5b63e36023796c505ea3836d3ce5e68d4ece67a667aafbd46c6989a  experiments/self_model_agents/kill_reversal.py  2026-11-20T16:31:50Z
 25f157bacd09aee02e598bb010772c04b7a8222884cbf231ce3097313eeaf7ed  docs/prereg/2026-11-20_self_model_kill_reversal_amendment1.md  2026-11-20T16:32:33Z
 a25bebb3daa84b9bf639c45d9d2d97822d2d1639a91c13026fcf8b1aeff6f6f7  experiments/self_model_agents/kill_reversal_a1.py  2026-11-20T16:32:33Z
+96a0b2f5e2dee2a71f5c3a147786f7cabde4ec3c803adf7d5317b95cacc68d49  docs/prereg/2026-11-21_self_model_kill_trained_control.md  2026-11-21T07:44:08Z
+69a22e754090b24047deea608739760500009a624e7e569bad76ac2a6b114814  experiments/self_model_agents/kill_trained.py  2026-11-21T07:44:08Z
 972bd3858594d0b7765eedcacfc153fef1867a117238da599b0152ad06c8077a  docs/prereg/2026-11-21_cogitate_exp2_forecasts.md  2026-11-21T07:58:15Z
 7aa6adf33844b6ac674efb038408b19dfbf0180a46fca1b81f387fcdbed5bb03  docs/prereg/cogitate_exp2_forecasts.json  2026-11-21T07:58:15Z
