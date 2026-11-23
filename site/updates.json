@@ -1,4 +1,7 @@
 [
+  {"date": "2026-11-23", "kind": "result", "title": "Blind AI raters can score theories against real vs mirrored outcomes",
+   "body": "Three AI raters, blind to which outcome was real, said how likely six theories made each of 10 key findings. Our checks passed: they recovered a made-up theory, gave a placebo theory 50/50 every time, and agreed with each other. IIT came out ahead, but these raters know the literature and the items lean posterior, so the 59-finding run comes next with leak checks.",
+   "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/theory_likelihood/RESULTS.md"},
   {"date": "2026-11-23", "kind": "result", "title": "Sleep measures all call REM 'awake', for spectral reasons only",
    "body": "We froze wake-vs-deep-sleep cutoffs on one sleep lab and tested them on 143 people from another. Five of nine measures carried over, and all five put REM with waking, not in between as we predicted. Nothing they saw in REM went beyond the power spectrum, so they read missing slow waves, not experience.",
    "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/transfer_5/RESULTS.md"},
