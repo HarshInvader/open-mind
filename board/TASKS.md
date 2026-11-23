@@ -42,12 +42,6 @@ Milestone M2, priority 3.
 
 DREAM paper reports AUC 0.586 (NREM, PSD) and 0.700 (REM, catch22) over 200 random train-test splits; main text does not say subjects were held out. Re-run with subject- and lab-held-out splits, spectral exponent baseline and surrogate gate. Pre-register first.
 
-### #39 Red-team: LZ adds 0.061 AUC over the exponent for REM vs N3 (Sleep-EDF)
-
-Milestone M6, priority 3.
-
-Positive cell from #4 (experiments/lz_slope/RESULTS.md, H1 C2): slope+LZ 0.976 vs slope 0.915, Holm p=0.008, 45 subjects. Attack it: (1) does it survive a better exponent fit (aperiodic fit excluding alpha/sigma peaks, or 30-45 Hz range)? (2) muscle and eye artefact (REM eye movements on Fpz-Cz; rerun on Pz-Oz only); (3) age (cassette 25-101); (4) Hilbert-envelope LZs instead of median-binarised LZ; (5) the 19 unfetched subjects. Producer's own reading: it is spectral shape, because it vanishes with band powers (H3) and LZ fails the surrogate gate (#8). Do not read producer notes beyond RESULTS.md.
-
 ### #10 Reproduce COGITATE iEEG decoding
 
 Milestone M3, priority 4.
@@ -139,6 +133,8 @@ Draft a candidate where a basic layer (e.g. sustained posterior activity gated b
 - #9 Phi-proxy recovery on known-Phi networks
 
 ## Done
+
+- #39 Red-team of LZ over the exponent (REM vs N3): **answered, nothing new to run** (2026-11-23). The sealed H3 (LZ adds -0.0002 AUC over exponent plus band powers) and the surrogate gate (#8) already show the gain is spectral shape. Fable advice and decision: `docs/RESEARCH_STATE.md`.
 
 - #1 Port rules of evidence and dataset leakage check: **tool**, `experiments/rules/RESULTS.md`
 

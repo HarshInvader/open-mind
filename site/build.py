@@ -241,7 +241,7 @@ def page_index():
     s3 = block("04", "Found so far", "h-found", "What we have found so far",
                '<ul class="found">'
                "<li><b>Our first theory failed.</b> We sealed a test of it in advance and ran it on 237 awakenings from 35 sleepers. All four measures came out flat.</li>"
-               "<li><b>A popular brain measure adds little.</b> Signal complexity is often used as a sign of consciousness. About 97% of its power to tell waking from deep sleep comes from the recording's simple mix of slow and fast waves.</li>"
+               "<li><b>A popular brain measure adds little.</b> Signal complexity is often used as a sign of consciousness. About 97% of its power to tell waking from deep sleep comes from the recording's simple mix of slow and fast waves. Earlier studies pointed the same way (González 2022; Höhn 2024); we measured it with a sealed test.</li>"
                "<li><b>Dreams can be tested on open data, injured patients cannot.</b> About 2,400 open awakenings come with a report of experience. No open recordings exist from brain-injured patients.</li>"
                "</ul>" + more("findings.html", f"All {n_found} findings and closed routes, with their evidence"))
     s4 = block("05", "How we work", "h-how", "How we test a theory",

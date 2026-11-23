@@ -64,3 +64,17 @@ Thorat and Chopra, "Towards full-stack functionalist theories of consciousness: 
 - **Our analogue:** a state-linked difference in a complexity measure counts only if it cannot be reduced to a difference in the power spectrum. We enforce this with a full spectral baseline and phase-randomised surrogates. On Sleep-EDF, LZ fails that test (H3: +0.0004 and -0.0002 AUC; 97% of its separation kept on surrogates).
 - **Where the two meet:** they already decline to treat awareness-linked neural signatures as functional associations unless the computation behind them is characterised. This result gives one concrete reason: a widely used marker is, in this data, a spectral summary.
 - **Their caution about nulls applies here too:** they note that the absence of a detectable difference does not establish equivalence (citing Meyen et al. 2021, unverified here). That is why the planted power check (P2: power 0.85 at a mean delta of 0.0005 AUC) is reported next to every null above.
+
+## Prior art and novelty (added 2026-11-23)
+**The direction of this result is not new.**
+- González et al. 2022 (Neuroscience, doi:10.1016/j.neuroscience.2022.04.025; abstract read) showed in rats that low-frequency oscillations (delta, theta, sigma) drive EEG complexity changes across sleep and wake.
+- Höhn et al. 2024 (eNeuro, doi:10.1523/ENEURO.0259-23.2024; full text read) report in humans that "Lempel–Ziv complexity is still strongly influenced by oscillatory activity". They also found the spectral slope "yields more information" than LZ.
+
+**What this study adds.** It confirms and quantifies their finding; it does not discover it.
+- A sealed, subject-held-out test of incremental validity: LZ adds +0.0004 / -0.0002 AUC over the exponent plus band powers.
+- A phase-randomised surrogate gate: 97% of LZ's wake-vs-N3 separation survives when only the spectrum is kept.
+- Phase-normalised LZ carries no stage information.
+
+Neither paper ran an incremental-AUC test against a full spectral baseline or a phase-surrogate test.
+
+**Counter-evidence to keep in view.** Frohlich et al. 2022 (Commun Biol, doi:10.1038/s42003-022-04331-7; abstract read) studied children with Angelman syndrome and Dup15q syndrome. In those conditions, oscillations dissociate from conscious state. They found that entropy-based classifiers of conscious state were not upper-bounded by spectral features and outperformed them. So "complexity collapses to the spectrum" is a result for typical sleep EEG in Sleep-EDF. It is not a general law.

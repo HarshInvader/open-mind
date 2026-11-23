@@ -39,3 +39,17 @@ Mean values (real / surrogate): LZ is W 0.600 / 0.589 and N3 0.313 / 0.307. pnLZ
 | LZ fails the gate | fail | fail (surrogates 0.86 vs real 0.89) |
 | pnLZ | none | passes, but carries no W/N3 information |
 | Permutation entropy | none | fail |
+
+## Prior art and novelty (added 2026-11-23)
+**The direction of this result is not new.**
+- González et al. 2022 (Neuroscience, doi:10.1016/j.neuroscience.2022.04.025; abstract read) showed in rats that low-frequency oscillations (delta, theta, sigma) drive EEG complexity changes across sleep and wake.
+- Höhn et al. 2024 (eNeuro, doi:10.1523/ENEURO.0259-23.2024; full text read) report in humans that "Lempel–Ziv complexity is still strongly influenced by oscillatory activity". They also found the spectral slope "yields more information" than LZ.
+
+**What this study adds.** It confirms and quantifies their finding; it does not discover it.
+- A sealed, subject-held-out test of incremental validity: LZ adds +0.0004 / -0.0002 AUC over the exponent plus band powers.
+- A phase-randomised surrogate gate: 97% of LZ's wake-vs-N3 separation survives when only the spectrum is kept.
+- Phase-normalised LZ carries no stage information.
+
+Neither paper ran an incremental-AUC test against a full spectral baseline or a phase-surrogate test.
+
+**Counter-evidence to keep in view.** Frohlich et al. 2022 (Commun Biol, doi:10.1038/s42003-022-04331-7; abstract read) studied children with Angelman syndrome and Dup15q syndrome. In those conditions, oscillations dissociate from conscious state. They found that entropy-based classifiers of conscious state were not upper-bounded by spectral features and outperformed them. So "complexity collapses to the spectrum" is a result for typical sleep EEG in Sleep-EDF. It is not a general law.

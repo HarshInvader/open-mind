@@ -43,3 +43,67 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - Drop the trained-agent amendment: it would only test whether REINFORCE converges.
   - Carry the scope, assumed-reward, Tsushima and metric caveats.
 - **Decision:** agreed. AI2 is closed and written up in `experiments/self_model_agents/RESULTS.md` step 2 and the atlas.
+
+### Owner idea: a "hypothesis tournament" of consciousness markers (Fable round 4)
+- **Prior art opened** (abstracts):
+  - Engemann 2018 (Brain, 10.1093/brain/awy251): about 30 EEG markers cross-site, DoC only, AUC ~0.77.
+  - Ma 2024 (HBM, 10.1002/hbm.26586): 380 metrics in 296 DoC patients; relative alpha and delta power were most dependable.
+  - Castro, Luppi et al. 2024 (Commun Biol, 10.1038/s42003-024-06858-3): fMRI signatures that generalise across anaesthesia and slow-wave sleep.
+  - Luppi et al. 2025 (bioRxiv, 10.1101/2025.03.22.644729): more than 6,000 hctsa features under anaesthesia across species.
+  - Berjaga-Buisan 2026 (Cell Rep, 10.1016/j.celrep.2026.117782).
+  - Sitt 2014: not opened (unverified).
+- **Fable verdict:**
+  - The many-marker screens and cross-state generalisation have been done.
+  - The only gap is a sealed, subject-held-out, multiplicity-counted screen where each marker must beat a full-spectrum baseline plus phase surrogates across state families. That is our board #5 with our spectral rule, not a new programme.
+  - Seen vs unseen should be dropped from it: content markers on trials and state markers at rest are different quantities.
+  - Feasible today: sleep (Sleep-EDF; other PhysioNet sets unverified) and propofol (Chennu, ds005620).
+  - Infeasible today: ketamine (no open EEG known), DoC (request-only) and matched seen/unseen (per-subject streaming might work; unverified).
+  - With only 2 state families, a "survives in ≥3 contrasts" rule cannot be met.
+  - Power: Holm over 40 markers needs incremental d_z ≈ 0.9-1.05 at n = 15-20, while our measured incremental effects over the spectrum are about 0.
+- **Fable's kill test:**
+  - (1) Census: kill unless at least 3 state contrasts each have at least 2 open datasets with n ≥ 20 and a checked licence.
+  - (2) Pilot #5's 8-10 published measures on the datasets we hold. Proceed only if a marker gains ΔAUC ≥ 0.05 over spectrum plus surrogates, with CI above 0, in ≥2 datasets.
+  - (3) Otherwise publish as the #5 result and stop.
+- **Our note:** two of those measures (LZ; time-irreversibility) have already failed the pilot criterion on Sleep-EDF and both propofol sets.
+- **Decision:** not opened as a new study. It is folded into #5 as "census, then pilot", ranked second behind the Rausch metacognition test. The census is cheap metadata work and can run next session.
+
+### Tournament: coordinator's prior art, census and final verdict (Fable round 5)
+- **Opened** (abstracts unless noted; all added to the library):
+  - Aru 2012, Tsuchiya 2015, Duman 2022, arXiv 2510.08736;
+  - Lee 2022 (Nat Commun), Casey 2022 (BJA), Frohlich 2022 (Commun Biol), Ugail & Howard 2026, Yaron 2022 ConTraSt;
+  - Höhn 2024 (eNeuro, full text) and González 2022.
+- **LZ claim downgraded.** Höhn 2024 and González 2022 already report that LZ in sleep is driven by oscillations. Our sleep result is now labelled "confirms and quantifies", in its RESULTS files, the atlas and the site text. What is new is the sealed incremental-AUC test and the phase-surrogate gate. Frohlich 2022 (entropy beats spectral features where oscillations and state dissociate) is recorded as counter-evidence, so the result is limited to typical sleep EEG.
+- **Census** (`datasets/catalog.csv`, open human EEG, n ≥ 20):
+
+  | Contrast | Open datasets |
+  |---|---|
+  | Sleep | many |
+  | Propofol | 2 (ds005620, Chennu); DOSE-I is borderline |
+  | Ketamine anaesthesia | 0 (subanaesthetic sets only) |
+  | DoC, UWS vs MCS raw EEG | 0 open (I-CARE is post-arrest coma; Bath and Paris are on request) |
+  | Trial-level seen/unseen | 4 (ds006394, ds001810, ds005273, ds001785) |
+
+  Fable's rule (at least 3 state contrasts with at least 2 datasets each) fails.
+- **Fable verdict:**
+  - The gap is real on paper but not actionable: the conjunction is unclaimed mainly because the data are not open.
+  - The tournament as specified is killed by data availability.
+  - Fold the state part into #5 as sleep plus propofol.
+  - Seen/unseen is a separate content screen and should be parked.
+  - Narrower option: a Casey-style split of disconnected vs unconscious within ds005620, gated on at least 15 subjects having both report classes.
+- **Our check on the narrower option.** It fails its own gate on published counts. Bajwa et al. 2025 (PMC12460656) report 52 awakenings in 20 participants: 24 with experience, 5 with no experience, and 23 unarousable or incoherent. The labels are also unreleased. Even if the authors sent the labels, 5 negatives cannot support a split, so no email was sent: a reply would not unblock a viable study.
+- **Decision:** the tournament is not opened. Ranking: (1) the Rausch metacognition test, if the power gate passes; (2) #5 rescoped to sleep plus propofol (census, then pilot); (3) a parked seen/unseen content screen.
+
+### Rausch metacognition test: pre-seal gate 2 (in progress)
+- **Fable's pre-seal review** (round 6) said not to seal yet. Its edits:
+  - tie-averaged AUROC;
+  - rank-map the null onto each subject's observed ratings (floors, ties);
+  - skip degenerate cells;
+  - neutral verdict labels;
+  - drop-count and ScaleOrder checks;
+  - a no-lowest-contrast secondary.
+  It asked for gate 2: the exact analysis code run on floored, tied synthetic data. **Decision:** all applied.
+- **Bug found by gate 2 (first attempt, stopped after 12 datasets):**
+  - 2 of 12 nulls were void, and the confidence-accuracy moment z was biased upward;
+  - the fitted sc sat at 1.000, its start value. scipy's Nelder-Mead uses a 0.00025 step for a zero start coordinate, so on the step-shaped loss from rank-mapped ratings it never moved.
+  - **Fix:** an explicit initial simplex with 0.3 steps. The probe now gives sc 0.60-0.79 (true 0.8) and moment z near 0.
+  - Gate 2 is being rerun from scratch. Nothing in the data or decision rule changed; no real data has been seen.

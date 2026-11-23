@@ -1,12 +1,12 @@
 # Open Mind library
 
-Generated from `library.json` on 2026-11-21. Do not edit by hand.
+Generated from `library.json` on 2026-11-23. Do not edit by hand.
 
-151 entries: 21 read in full, 130 from the abstract only. Every DOI was opened and its title and authors checked.
+167 entries: 23 read in full, 144 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (56)
+## Theories tested (62)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -107,6 +107,18 @@ Mayner WGP, Marshall W, Albantakis L, Findlay G, Marchman R, Tononi G (2018). *P
 - **Limits:** Exact only for tiny networks.
 - **For us:** The ground truth in our phi_proxy recovery test.
 - **Touches:** phi_proxy
+
+### On the independence of visual awareness and metacognition: a signal detection theoretic analysis
+
+Jachs B, Blanco MJ, Grantham-Hill S, Soto D (2015). *J Exp Psychol Hum Percept Perform*. [doi:10.1037/xhp0000026](https://doi.org/10.1037/xhp0000026). Article, abstract only, **core**.
+
+- **Question:** Does knowing whether you are right (metacognition) depend on being aware of the stimulus?
+- **Idea tested:** People judged the tilt of a masked, near-threshold grating, then reported awareness and confidence on every trial.
+- **Data and method:** Three experiments; type-1 (perceptual) and type-2 (metacognitive) sensitivity by awareness level. Data are in the Confidence Database.
+- **Results:** Awareness strongly raised perceptual sensitivity but changed metacognitive sensitivity much less.
+- **Limits:** Small samples; binary awareness; no stimulus manipulation; abstract only read here (paywalled).
+- **For us:** The single-study version of our planned metacognition test, so its data cannot be reused as new evidence. Our test needs a simulated signal-detection null because rating-defined 'unseen' trials are biased.
+- **Touches:** Metacognition and awareness, Can AI be conscious?
 
 ### Have grand theories of consciousness earned their keep?
 
@@ -212,6 +224,18 @@ IIT-Concerned, Fleming SM, Frith CD and others (2023). *PsyArXiv (open letter); 
 - **For us:** It is why we judge every theory only by predictions sealed in advance.
 - **Touches:** news
 
+### The ConTraSt database for analysing and comparing empirical studies of consciousness theories
+
+Yaron I, Melloni L, Pitts M, Mudrik L (2022). *Nature Human Behaviour*. [doi:10.1038/s41562-021-01284-5](https://doi.org/10.1038/s41562-021-01284-5). Article, abstract only, **useful**.
+
+- **Question:** Does the evidence for each consciousness theory depend on how studies were designed?
+- **Idea tested:** They coded 412 experiments interpreted in light of four leading theories.
+- **Data and method:** Database and meta-research analysis.
+- **Results:** Which theory a study supports can be predicted from its method choices alone, and most studies interpret findings after the fact rather than testing predictions set in advance.
+- **Limits:** Abstract only read here.
+- **For us:** The core argument for sealing definitions and scoring rules before data, as any tournament must.
+- **Touches:** Hypothesis tournament, COGITATE forecasts
+
 ### Neural correlates of consciousness: progress and problems
 
 Koch C, Massimini M, Boly M, Tononi G (2016). *Nature Reviews Neuroscience 17:307-321*. [doi:10.1038/nrn.2016.22](https://doi.org/10.1038/nrn.2016.22). Review, abstract only, **useful**.
@@ -223,6 +247,18 @@ Koch C, Massimini M, Boly M, Tononi G (2016). *Nature Reviews Neuroscience 17:30
 - **Limits:** Review; the hot-zone claim is contested by GNWT proponents.
 - **For us:** The posterior hot-zone prediction behind Siclari 2017 and the spatial priors in #42.
 - **Touches:** #42, theory_scorecard
+
+### Distilling the neural correlates of consciousness
+
+Aru J, Bachmann T, Singer W, Melloni L (2012). *Neurosci Biobehav Rev*. [doi:10.1016/j.neubiorev.2011.12.003](https://doi.org/10.1016/j.neubiorev.2011.12.003). Article, abstract only, **useful**.
+
+- **Question:** Does comparing 'seen' with 'unseen' isolate the brain activity of experience itself?
+- **Idea tested:** A conceptual analysis of the contrastive method.
+- **Data and method:** Review.
+- **Results:** The seen-minus-unseen contrast mixes the NCC proper with its prerequisites (what must happen first) and its consequences (what follows, like report).
+- **Limits:** Conceptual; abstract only read here.
+- **For us:** Any marker tournament must say whether a marker is a prerequisite, the NCC or a consequence; state markers (sleep, anaesthesia) mostly index prerequisites.
+- **Touches:** Hypothesis tournament
 
 ### Equal numbers of neuronal and nonneuronal cells make the human brain an isometrically scaled‐up primate brain
 
@@ -417,6 +453,18 @@ Zheng Z, Rodrigues JPP, Kob L, Matić K (2026). *PsyArXiv (7 Oct 2026)*. [doi:10
 - **For us:** Context for our theory track; the same logic as our spectral-baseline nesting: a correlate must fail when experience is absent.
 - **Touches:** #17, #35
 
+### Neural correlates of perceptual consciousness from within: a narrative review of human intracranial research
+
+(see arXiv) (2025). *arXiv*. [doi:10.48550/arXiv.2510.08736](https://arxiv.org/abs/2510.08736). Preprint, abstract only, **context**.
+
+- **Question:** What can intracranial recordings tell us about the NCC that scalp methods cannot?
+- **Idea tested:** A narrative review of single-neuron and population recordings in humans.
+- **Data and method:** Review.
+- **Results:** Intracranial data can help separate proper NCCs from other processes, but the problem is not solved; they lay out limits and future paradigms.
+- **Limits:** Abstract only read here; authors not recorded.
+- **For us:** Background on the prerequisite/NCC/consequence problem; relevant once COGITATE iEEG access arrives.
+- **Touches:** Hypothesis tournament, COGITATE forecasts
+
 ### What makes a theory of consciousness unscientific?
 
 IIT-Concerned et al. (2025). *Nature Neuroscience 28:689-693*. [doi:10.1038/s41593-025-01881-x](https://doi.org/10.1038/s41593-025-01881-x). Paper, abstract only, **context**.
@@ -438,6 +486,18 @@ Hatamimajoumerd et al. (2022). *Current Biology 32:4139-4149.e4*. [doi:10.1016/j
 - **Limits:** Hatamimajoumerd 2022, one fMRI study.
 - **For us:** Evidence grade C in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C30
+
+### The No-Report Paradigm: A Revolution in Consciousness Research?
+
+Duman I, Ehmann IS, Gonsalves AR, Gültekin Z, et al. (2022). *Frontiers in Human Neuroscience*. [doi:10.3389/fnhum.2022.861517](https://doi.org/10.3389/fnhum.2022.861517). Article, abstract only, **context**.
+
+- **Question:** Do no-report paradigms actually deliver report-free NCCs?
+- **Idea tested:** They examined published comparisons of report and no-report conditions.
+- **Data and method:** Critical review.
+- **Results:** Every example they examined allows alternative readings or has method problems; removing the report does not stop people reflecting on what they saw.
+- **Limits:** Abstract only read here.
+- **For us:** Caution for any 'controls for report' claim in our studies.
+- **Touches:** Hypothesis tournament
 
 ### Theories of consciousness
 
@@ -510,6 +570,18 @@ Pinto et al. (2017). *Brain:aww358*. [doi:10.1093/brain/aww358](https://doi.org/
 - **Limits:** Pinto 2017 (n = 2, confidence ratings) argue for undivided consciousness with split perception; this conflicts with the classic two-agent reading. Small n; contested.
 - **For us:** Evidence grade C in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C04
+
+### No-Report Paradigms: Extracting the True Neural Correlates of Consciousness
+
+Tsuchiya N, Wilke M, Frässle S, Lamme VAF (2015). *Trends in Cognitive Sciences*. [doi:10.1016/j.tics.2015.10.002](https://doi.org/10.1016/j.tics.2015.10.002). Article, abstract only, **context**.
+
+- **Question:** Does asking people to report what they saw contaminate the search for the brain basis of experience?
+- **Idea tested:** A review of report-based and no-report designs.
+- **Data and method:** Review.
+- **Results:** Report requirements have biased NCC research; no-report paradigms try to remove that bias, with their own trade-offs.
+- **Limits:** Abstract only read here.
+- **For us:** Background for our closed no-report bifurcation test and for the report confound in any tournament.
+- **Touches:** Hypothesis tournament
 
 ### Binocular Rivalry: Frontal Activity Relates to Introspection and Action But Not to Perception
 
@@ -623,7 +695,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (49)
+## Measuring consciousness (57)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -704,6 +776,42 @@ Cohen MA, Dembski C, Ortego K, Steinhibler C, Pitts MA (2024). *Cerebral Cortex*
 - **Limits:** Condition-averaged ERPs: no single-trial bimodality test at fixed strength. OSF data has no licence stated, so reuse is blocked until clarified.
 - **For us:** Primary dataset for the no-report bifurcation kill test (experiments/bifurcation). Its trial counts set the planted-power design.
 - **Touches:** bifurcation
+
+### Spectral Slope and Lempel-Ziv Complexity as Robust Markers of Brain States during Sleep and Wakefulness
+
+Höhn C, Hahn MA, Lendner JD, Hoedlmoser K (2024). *eNeuro*. [doi:10.1523/ENEURO.0259-23.2024](https://doi.org/10.1523/ENEURO.0259-23.2024). Article, full text, **core**.
+
+- **Question:** How do the EEG spectral slope and Lempel-Ziv complexity behave across sleep stages and waking tasks, and does the frequency range matter?
+- **Idea tested:** They recorded 28 young men over two weeks (three nights and days each) and computed slope and LZ in a broad (1-45 Hz) and a narrow (30-45 Hz) range.
+- **Data and method:** Within-subject EEG across wake tasks (rest, attention, memory) and sleep stages; FOOOF and robust fits for the slope; LZ after Comsa 2019.
+- **Results:** From wake to N3 the broadband slope steepened and LZ fell. REM was best told apart by the narrowband slope. They write that LZ 'is still strongly influenced by oscillatory activity', and conclude the slope carries more information than LZ.
+- **Limits:** No test of whether LZ adds anything over a full spectral baseline, and no phase-randomised surrogates. Only men aged 18-25.
+- **For us:** Prior art for our LZ result. Our finding that LZ is mostly the spectrum in sleep confirms theirs; what we add is the sealed incremental-AUC test and the surrogate gate.
+- **Touches:** LZ vs spectrum
+
+### Neural complexity is a common denominator of human consciousness across diverse regimes of cortical dynamics
+
+Frohlich J, Chiang JN, Mediano PAM, Nespeca M, Saravanapandian V, et al. (2022). *Communications Biology*. [doi:10.1038/s42003-022-04331-7](https://doi.org/10.1038/s42003-022-04331-7). Article, abstract only, **core**.
+
+- **Question:** When brain rhythms and conscious state come apart, which EEG markers still track consciousness?
+- **Idea tested:** They used two rare genetic conditions as a testbed: children with Angelman syndrome look sleep-like while awake, and children with Dup15q look wake-like in NREM sleep.
+- **Data and method:** Regularised logistic classifiers trained on wake vs NREM in Angelman children, using entropy (complexity) or spectral features, then tested on typical children and on Dup15q.
+- **Results:** Entropy-based markers were not capped by spectral ones and beat them.
+- **Limits:** Children with rare syndromes; abstract only read here.
+- **For us:** The strongest counter-evidence to our 'complexity is just the spectrum' result. Our result holds for typical sleep EEG; a dissociation testbed like theirs is the right confound control for any marker tournament.
+- **Touches:** LZ vs spectrum, Hypothesis tournament
+
+### Visibility Is Not Equivalent to Confidence in a Low Contrast Orientation Discrimination Task
+
+Rausch M, Zehetleitner M (2016). *Frontiers in Psychology*. [doi:10.3389/fpsyg.2016.00591](https://doi.org/10.3389/fpsyg.2016.00591). Article, full text, **core**.
+
+- **Question:** Are 'how clearly did you see it' and 'how sure are you' the same report?
+- **Idea tested:** Twenty people judged grating orientation at six contrasts and gave both visibility and confidence on continuous scales every trial, in counterbalanced order.
+- **Data and method:** meta-d_a for each scale by contrast, metacognitive bias, conditional report rates at a 25% cut, Bayesian mixed models. Data are in the Confidence Database (Rausch_2016).
+- **Results:** Confidence tracked accuracy better than visibility (meta-d_a 1.2 vs 0.5). People were often confident without seeing, but hardly ever saw without being confident.
+- **Limits:** One lab, n=20. It compares the two scales; it does not test whether confidence works better on high-visibility trials.
+- **For us:** The only open dataset that can test the Persaud-style claim in healthy people with continuous scales. Our power gate decides whether n=20 is enough.
+- **Touches:** Metacognition and awareness
 
 ### Large scale screening of neural signatures of consciousness in patients in a vegetative or minimally conscious state
 
@@ -807,6 +915,42 @@ Nilsen AS, Arena A, Storm JF (2024). *Neuroscience of Consciousness 2024(1), nia
 - **Results:** The researchers compared a stimulation-based complexity score with several scores computed from ordinary EEG in rats under three anaesthetics. Some scores worked well. But the estimates of 'integrated information', the quantity at the heart of one major theory, generally rose under propofol and sevoflurane, the reverse of what that theory expects.
 - **For us:** A warning that Phi proxies may not track what IIT says Phi tracks. Our known-Phi network test checks this before any proxy touches brain data.
 - **Touches:** news
+
+### How well do neural signatures of resting-state EEG detect consciousness? A large-scale clinical study
+
+Ma X, Qi Y, Xu C, et al. (2024). *Human Brain Mapping*. [doi:10.1002/hbm.26586](https://doi.org/10.1002/hbm.26586). Article, abstract only, **useful**.
+
+- **Question:** Which of the many proposed EEG signatures of consciousness actually work in a large patient sample?
+- **Idea tested:** They computed 380 resting-EEG metrics in 296 people (99 UWS, 129 MCS, 36 emerged from MCS, 32 healthy) and evaluated each with bootstrap resampling.
+- **Data and method:** Spectral, nonlinear, connectivity and graph measures; bootstrap evaluation.
+- **Results:** Relative alpha and delta power were the most dependable markers of consciousness.
+- **Limits:** One clinical cohort; DoC only; abstract only read here.
+- **For us:** A many-marker screen already exists for DoC, and simple spectral power won. Supports our habit of requiring every marker to beat the spectrum.
+- **Touches:** Hypothesis tournament
+
+### Low frequency oscillations drive EEG's complexity changes during wakefulness and sleep
+
+González J, Mateos D, Cavelli M, Mondino A, Pascovich C, Torterolo P, Rubido N (2022). *Neuroscience*. [doi:10.1016/j.neuroscience.2022.04.025](https://doi.org/10.1016/j.neuroscience.2022.04.025). Article, abstract only, **useful**.
+
+- **Question:** Why does EEG complexity drop in slow-wave sleep: is it the oscillations?
+- **Idea tested:** They tested how the frequency content of brain signals in freely moving rats shapes complexity estimates across sleep and wake.
+- **Data and method:** Rat recordings at micro, meso and macro scales across the sleep-wake cycle.
+- **Results:** The low-frequency spectrum (delta, theta, sigma) drives the complexity changes between sleep and wake.
+- **Limits:** Rats; abstract only read here.
+- **For us:** Earliest prior art we found for 'complexity in sleep is spectral'. Cite it beside Höhn 2024 whenever we state our LZ result.
+- **Touches:** LZ vs spectrum
+
+### Quantifying arousal and awareness in altered states of consciousness using interpretable deep learning
+
+Lee M, Sanz LRD, Barra A, Wolff A, Nieminen JO, Boly M, et al. (2022). *Nature Communications*. [doi:10.1038/s41467-022-28451-0](https://doi.org/10.1038/s41467-022-28451-0). Article, abstract only, **useful**.
+
+- **Question:** Can one EEG index separate arousal (being awake) from awareness (having experience)?
+- **Idea tested:** They trained an explainable deep network on EEG responses to TMS across sleep, anaesthesia and brain injury, and also tested resting EEG.
+- **Data and method:** TMS-EEG in sleep (n=6), general anaesthesia (n=16) and severe brain injury (n=34); resting EEG under anaesthesia (n=15) and brain injury (n=34).
+- **Results:** The index tracked both components across physiological, drug and injury states; ketamine anaesthesia and REM sleep came out as low arousal with high awareness.
+- **Limits:** Small groups per state; abstract only read here.
+- **For us:** Closest existing cross-state 'one marker everywhere' attempt. Any tournament must beat or explain this, and must report sample sizes per state honestly.
+- **Touches:** Hypothesis tournament
 
 ### The spectral exponent of the resting EEG indexes the presence of consciousness during unresponsiveness induced by propofol, xenon, and ketamine
 
@@ -942,6 +1086,18 @@ Huntley J, Barnett B, Bor D, Mancuso M, Mediano PAM, Naci L, Fleming S, et al. (
 - **Results:** VAN and late positivity and frontoparietal activation were reduced in mild-moderate AD; limited evidence in severe AD. (abstract only)
 - **Limits:** Task insensitivity in severe AD.
 - **For us:** Context.
+
+### A three-component dynamical index of consciousness-related neural organisation
+
+Ugail H, Howard N (2026). *Biological Cybernetics*. [doi:10.1007/s00422-026-01049-1](https://doi.org/10.1007/s00422-026-01049-1). Article, abstract only, **context**.
+
+- **Question:** Can combining several EEG properties into one index track consciousness better than any single feature?
+- **Idea tested:** They combined scale-free timing, cross-frequency organisation and metastable synchrony into one index, tested on simulated states and real EEG.
+- **Data and method:** Generative model of nine EEG-like states plus empirical data (Sleep-EDF, per the coordinator's note).
+- **Results:** They report the composite index separates states better than single features.
+- **Limits:** Abstract only read here; the empirical test is limited.
+- **For us:** One of the composite-index claims a tournament would have to include and test against the spectrum.
+- **Touches:** Hypothesis tournament
 
 ### A whole-brain dynamical framework linking resting-state activity to TMS-evoked responses
 
@@ -1127,6 +1283,18 @@ Yu M, Xiao X, Ding J, Zhao M, Cruz S, Hu N, Zhang M, Laureys S, Di H, Chen Y (20
 - **Limits:** Small; task-based.
 - **For us:** Context.
 - **Touches:** Study 2
+
+### Dynamical structure-function correlations provide robust and generalizable signatures of consciousness in humans
+
+Castro P, Luppi A, Tagliazucchi E, Perl YS, et al. (2024). *Communications Biology*. [doi:10.1038/s42003-024-06858-3](https://doi.org/10.1038/s42003-024-06858-3). Article, abstract only, **context**.
+
+- **Question:** Do whole-brain fMRI dynamics give a signature of unconsciousness that holds across anaesthesia and deep sleep?
+- **Idea tested:** They clustered transient functional-connectivity states in resting fMRI across anaesthesia and slow-wave sleep.
+- **Data and method:** Resting fMRI; dynamic FC clustering; entropy of state transitions.
+- **Results:** Unconsciousness is dominated by one recurrent pattern tied to structural connectivity, with fewer transitions; rich dynamics (entropy) go with consciousness.
+- **Limits:** fMRI, not EEG; abstract only read here.
+- **For us:** Cross-state generalisation has been done in fMRI. Our open EEG data cannot copy this, but it sets the bar for 'generalises across states'.
+- **Touches:** Hypothesis tournament
 
 ### Consciousness among delta waves: a paradox?
 
@@ -1434,7 +1602,7 @@ Horikawa et al. (2013). *Science 340:639-642*. [doi:10.1126/science.1234330](htt
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C18
 
-## Drugs and anaesthesia (18)
+## Drugs and anaesthesia (20)
 
 ### Convergent transcriptomic and connectomic controllers of information integration and its anaesthetic breakdown across mammalian brains
 
@@ -1528,6 +1696,18 @@ Nikolič M, Froese T, Mediano PAM, Koudelka V, Horáček J, Tylš F, Páleníče
 - **For us:** A within-subject case where a complexity measure tracks experience intensity while arousal stays wake-like. If the data were open it would be a #42-style test; ask whether gamma diversity survives band-power nesting.
 - **Touches:** Study 2, lz_slope
 
+### Distinct EEG signatures differentiate unconsciousness and disconnection during anaesthesia and sleep
+
+Casey CP, Tanabe S, Farahbakhsh Z, et al. (2022). *British Journal of Anaesthesia*. [doi:10.1016/j.bja.2022.01.010](https://doi.org/10.1016/j.bja.2022.01.010). Article, abstract only, **useful**.
+
+- **Question:** Can EEG tell 'experiencing but cut off from the world' (disconnected) apart from 'no experience at all' (unconscious)?
+- **Idea tested:** Volunteers were sedated with dexmedetomidine or propofol, or slept, under high-density EEG, and were woken repeatedly to ask whether they had experienced anything in the previous 20 s.
+- **Data and method:** Serial awakenings; derivation on dexmedetomidine, validation on sleep and propofol; source-localised SVM classifiers.
+- **Results:** Occipital delta power barely separated the two states (AUC 0.61 for dexmedetomidine, 0.51 for sleep/propofol). Source-localised signatures did well within dexmedetomidine and generalised partly (disconnection AUC 0.74, unconsciousness 0.62).
+- **Limits:** Small samples; generalisation AUCs are modest.
+- **For us:** A model for splitting state contrasts by report. ds005620 (propofol with repeated awakenings) could support the same disconnected-vs-unconscious split.
+- **Touches:** Hypothesis tournament
+
 ### Increased spontaneous MEG signal diversity for psychoactive doses of ketamine, LSD and psilocybin
 
 Schartner MM, Carhart-Harris RL, Barrett AB, Seth AK, Muthukumaraswamy SD (2017). *Scientific Reports 7, 46421*. [doi:10.1038/srep46421](https://doi.org/10.1038/srep46421). Paper, abstract only, **useful**.
@@ -1605,6 +1785,18 @@ Li D, Hudetz AG (2026). *bioRxiv (17 Aug 2026)*. [doi:10.64898/2026.08.11.744271
 - **Results:** Delta-band waves became more frequent and stereotyped (more planar, fewer source/sink) at 4-6%; theta and gamma wave rates were largely unchanged; a paradoxical awake-like state in deep anaesthesia partly shifted towards wake patterns. (abstract only)
 - **Limits:** Rats; abstract only.
 - **For us:** Context.
+
+### Comprehensive profiling of anaesthetised brain dynamics across phylogeny
+
+Luppi AI, Uhrig L, Tasserie J, Shafiei G, et al. (2025). *bioRxiv*. [doi:10.1101/2025.03.22.644729](https://doi.org/10.1101/2025.03.22.644729). Preprint, abstract only, **context**.
+
+- **Question:** Is there a shared dynamical signature of anaesthesia across species?
+- **Idea tested:** They extracted over 6,000 time-series features from recordings in wake and anaesthesia in humans, macaques, marmosets, mice, zebrafish and worms.
+- **Data and method:** Massive feature extraction (hctsa-style) on multi-scale data; deep-brain stimulation in macaques; biophysical modelling.
+- **Results:** Anaesthesia shows a conserved profile: shorter intrinsic timescales and weaker synchrony between regions. Thalamic stimulation reversed it in macaques.
+- **Limits:** Preprint; abstract only read here.
+- **For us:** A huge feature screen for anaesthesia already exists. A tournament adds value only through sealing, held-out data and beating the spectrum.
+- **Touches:** Hypothesis tournament
 
 ### Thalamic contributions to predictive coding and disconnected consciousness in human volunteers
 
