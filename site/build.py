@@ -53,7 +53,7 @@ NAME = C["name"]
 GOAL = C["goal"]
 
 PAGES = [("index.html", "Home"), ("findings.html", "Findings"), ("theories.html", "Theories"), ("approach.html", "Approach"),
-         ("tracker.html", "Tracker"), ("news.html", "News"), ("library.html", "Library"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources"), ("ai.html", "AI")]
+         ("tracker.html", "Tracker"), ("news.html", "News"), ("library.html", "Library"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources"), ("ai.html", "AI"), ("updates.html", "Updates")]
 
 
 def md(s):
@@ -76,7 +76,8 @@ NAV_GROUPS = (
                   ("ai.html", "Can AI be conscious?", "Testing the tests before using them on AI", "theory"),
                   ("news.html", "News", "New papers, summarised", "news"),
                   ("library.html", "Library", "Every paper we read, analysed", "files"),
-                  ("tracker.html", "Tracker", "Progress and the live task board", "tracker"))),
+                  ("tracker.html", "Tracker", "Progress and the live task board", "tracker"),
+                  ("updates.html", "Latest updates", "What we did, and what came out", "news"))),
     ("Resources", (("data.html", "Open data", "Every consciousness dataset, used or not", "data"),
                    ("resources.html#logo", "Logo", "Free to download", "logo"),
                    ("resources.html#files", "Research files", "Notes, plans and results", "files"),
@@ -183,6 +184,37 @@ def finding_card(f, link=True):
     return f'<li class="mini">{FG.finding_fig(f["n"])}<div><h3>{h}</h3><p>{md(f["gist"])}</p></div></li>'
 
 
+# ---------------------------------------------------------------- updates
+UPD_KIND = {"result": ("Result", "ok"), "killed": ("Stopped", "bad"), "void": ("Void", "warn"), "blocked": ("Blocked", "warn"),
+            "correction": ("Correction", "warn"), "sealed": ("Sealed", "open"), "started": ("Started", "open")}
+
+
+def updates():
+    f = SITE / "updates.json"
+    return json.loads(f.read_text()) if f.exists() else []
+
+
+def upd_list(items):
+    out = []
+    for u in items:
+        lab, k = UPD_KIND.get(u["kind"], (u["kind"].title(), "open"))
+        y, m, d = u["date"].split("-")
+        day = f'{int(d)} {"Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()[int(m) - 1]}'
+        title = E(u["title"])
+        if u.get("link"):
+            title = f'<a href="{E(u["link"])}">{title}</a>'
+        out.append(f'<li class="upd upd-{k}"><p class="upd-meta"><time datetime="{E(u["date"])}">{day}</time>'
+                   f'<span class="chip chip-{k}">{lab}</span></p><h3>{title}</h3><p class="upd-body">{md(u["body"])}</p></li>')
+    return '<ol class="upds">' + "".join(out) + "</ol>"
+
+
+def page_updates():
+    items = updates()
+    return (head("Latest updates", "What we did this week, and what came out",
+                 "Every result, stopped study and sealed plan, newest first. Failures stay on the list.")
+            + '<section class="updpage">' + upd_list(items) + "</section>")
+
+
 def page_index():
     d = F()
     n_found = len(d["findings"]) + len(d.get("closed", []))
@@ -196,34 +228,35 @@ def page_index():
             '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
             '<div class="actions"><a class="btn primary" href="contribute.html">Contribute</a><a class="btn" href="findings.html">Read the findings</a></div>'
             f'</div>{art}</section>')
-    s1 = block("01", "The question", "h-question", "Nobody knows which brain activity makes an experience",
+    s0 = block("01", "Latest", "h-latest", "Latest updates", upd_list(updates()[:3]) + more("updates.html", "All updates"))
+    s1 = block("02", "The question", "h-question", "Nobody knows which brain activity makes an experience",
                '<div class="split"><div class="say">'
                "<p>You are having experiences right now: sights, sounds, thoughts. Each comes from activity in your brain, but nobody can say which activity.</p>"
                "<p>There are dozens of theories. In 2025 the largest head-to-head test so far pitted two of them against each other. Neither won.</p>"
                "<p>So we cannot yet tell whether a patient who cannot respond is aware, or what an anaesthetic switches off.</p>"
                + more("findings.html#h-known", "What scientists agree on") + "</div>"
                f'<div class="figs">{FG.fig_seen_missed()}</div></div>')
-    s2 = block("02", "Where we are", "h-where", "We can tell awake from deep sleep, but no theory has passed a fair test",
+    s2 = block("03", "Where we are", "h-where", "We can tell awake from deep sleep, but no theory has passed a fair test",
                FG.ladder(C["ladder"]) + more("tracker.html", "Track the progress"))
-    s3 = block("03", "Found so far", "h-found", "What we have found so far",
+    s3 = block("04", "Found so far", "h-found", "What we have found so far",
                '<ul class="found">'
                "<li><b>Our first theory failed.</b> We sealed a test of it in advance and ran it on 237 awakenings from 35 sleepers. All four measures came out flat.</li>"
                "<li><b>A popular brain measure adds little.</b> Signal complexity is often used as a sign of consciousness. About 97% of its power to tell waking from deep sleep comes from the recording's simple mix of slow and fast waves.</li>"
                "<li><b>Dreams can be tested on open data, injured patients cannot.</b> About 2,400 open awakenings come with a report of experience. No open recordings exist from brain-injured patients.</li>"
                "</ul>" + more("findings.html", f"All {n_found} findings and closed routes, with their evidence"))
-    s4 = block("04", "How we work", "h-how", "How we test a theory",
+    s4 = block("05", "How we work", "h-how", "How we test a theory",
                '<div class="say"><p>We write each test down and fingerprint it before we open the data. A result counts only if it holds on people the method never saw, and survives someone trying to break it.</p></div>'
                + FG.pipeline() + more("approach.html#rules", "Our approach and what counts as done"))
-    s5 = block("05", "Open data", "h-data", "Every consciousness dataset, free in one place",
+    s5 = block("06", "Open data", "h-data", "Every consciousness dataset, free in one place",
                '<div class="split data-split"><div class="say">'
                "<p>We checked every open dataset for one thing: do we know whether the person was experiencing anything?</p>"
                "<p>We list 134 datasets, where each lives and under which terms. Today, reports of experience are open only for sleep.</p>"
                '<div class="actions"><a class="btn" href="data.html">Get the data</a></div></div>'
                f'{FG.data_matrix()}</div>')
-    s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
+    s6 = block("07", "Help", "h-help", "The fastest help is an AI agent working an open task",
                '<div class="say"><p>Point a Claude Fable or Opus class agent at an open task. Or bring data, or a careful eye.</p></div>'
                '<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>')
-    return hero + s1 + s2 + s3 + s4 + s5 + s6
+    return hero + s0 + s1 + s2 + s3 + s4 + s5 + s6
 
 
 # ---------------------------------------------------------------- findings
@@ -972,7 +1005,7 @@ def main():
         shutil.copy(OPEN / t["file"], DIST / "data" / "open" / t["file"])
         (DIST / t["page"]).write_text(layout("data.html", f'{t["title"]} · {NAME}', t["about"], open_table_page(t)))
     fns = {"index.html": page_index, "findings.html": page_findings, "theories.html": page_theories, "approach.html": page_approach,
-           "tracker.html": page_tracker, "news.html": page_news, "library.html": page_library, "contribute.html": page_contribute, "data.html": page_data, "resources.html": page_resources, "ai.html": page_ai}
+           "tracker.html": page_tracker, "news.html": page_news, "library.html": page_library, "contribute.html": page_contribute, "data.html": page_data, "resources.html": page_resources, "ai.html": page_ai, "updates.html": page_updates}
     for f, name in PAGES:
         title = f"{NAME}: {GOAL}" if f == "index.html" else f"{name} · {NAME}"
         (DIST / f).write_text(layout(f, title, GOAL, fns[f]()))
