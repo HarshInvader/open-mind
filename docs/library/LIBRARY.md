@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-23. Do not edit by hand.
 
-167 entries: 23 read in full, 144 from the abstract only. Every DOI was opened and its title and authors checked.
+176 entries: 23 read in full, 153 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -695,7 +695,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (57)
+## Measuring consciousness (61)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -801,6 +801,18 @@ Frohlich J, Chiang JN, Mediano PAM, Nespeca M, Saravanapandian V, et al. (2022).
 - **For us:** The strongest counter-evidence to our 'complexity is just the spectrum' result. Our result holds for typical sleep EEG; a dissociation testbed like theirs is the right confound control for any marker tournament.
 - **Touches:** LZ vs spectrum, Hypothesis tournament
 
+### An electrophysiological marker of arousal level in humans
+
+Lendner JD et al. (2020). *eLife*. [doi:10.7554/eLife.55092](https://doi.org/10.7554/eLife.55092). Journal article, abstract only, **core**.
+
+- **Question:** Is the aperiodic slope a marker of arousal across sleep and anaesthesia?
+- **Idea tested:** Spectral slope in scalp and intracranial data across wake, NREM, REM and propofol.
+- **Data and method:** Spectral slope in scalp and intracranial data across wake, NREM, REM and propofol.
+- **Results:** Per-contrast LDA: wake vs propofol 76.6%, wake vs REM 76.3%, wake vs N3 73.1%.
+- **Limits:** Separate classifier per contrast; no shared threshold or transfer.
+- **For us:** Our REM-placement test uses frozen cutoffs, which Lendner did not.
+- **Touches:** Task #5 transfer
+
 ### Visibility Is Not Equivalent to Confidence in a Low Contrast Orientation Discrimination Task
 
 Rausch M, Zehetleitner M (2016). *Frontiers in Psychology*. [doi:10.3389/fpsyg.2016.00591](https://doi.org/10.3389/fpsyg.2016.00591). Article, full text, **core**.
@@ -847,6 +859,18 @@ Zhou DW, Conte MM, Curley WH, Spencer-Salmon CA, Chatelle C, Rosenthal ES, Bodie
 - **Limits:** Small sample pooled from two studies; behavioural threshold outcome; published text closed, abstract only; an earlier medRxiv version gives slightly different comparison AUCs.
 - **For us:** Coherence comes from the cross-spectrum, which our multichannel phase-randomised surrogates keep, so it counts as spectral in the surrogate gate (#8). Test whether alpha network shape adds anything over alpha power on the Chennu propofol EEG (#21) under a sealed prereg.
 - **Touches:** #8, #21
+
+### Atlas of intracranial EEG complexity across cortical regions and global states of consciousness
+
+Jeantin L et al. (2026). *PNAS Nexus*. [doi:10.1093/pnasnexus/pgag048](https://doi.org/10.1093/pnasnexus/pgag048). Journal article, abstract only, **useful**.
+
+- **Question:** How does iEEG complexity vary across regions and states?
+- **Idea tested:** Kolmogorov complexity, permutation and spectral entropy in 106 iEEG participants; propofol in 5.
+- **Data and method:** Kolmogorov complexity, permutation and spectral entropy in 106 iEEG participants; propofol in 5.
+- **Results:** Random forest on sleep stages micro-AUC 0.90; complexity lowest under propofol (descriptive).
+- **Limits:** Propofol n=5, not classified.
+- **For us:** Complexity measures in sleep and propofol, intracranial only.
+- **Touches:** Task #5 transfer
 
 ### Identifying neural correlates of auditory perceptual awareness and deviance using a no-report inattentional deafness paradigm
 
@@ -1284,6 +1308,18 @@ Yu M, Xiao X, Ding J, Zhao M, Cruz S, Hu N, Zhang M, Laureys S, Di H, Chen Y (20
 - **For us:** Context.
 - **Touches:** Study 2
 
+### Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms
+
+Breyton M et al. (2025). *eLife*. [doi:10.7554/eLife.98920](https://doi.org/10.7554/eLife.98920). Journal article, abstract only, **context**.
+
+- **Question:** Can model-based fluidity track consciousness without TMS?
+- **Idea tested:** Whole-brain modelling with fluidity metrics, 15 anaesthesia subjects.
+- **Data and method:** Whole-brain modelling with fluidity metrics, 15 anaesthesia subjects.
+- **Results:** Fluidity tracks propofol, xenon and ketamine and agrees with PCI.
+- **Limits:** No sleep.
+- **For us:** Context for spontaneous-activity complexity measures.
+- **Touches:** Task #5 transfer
+
 ### Dynamical structure-function correlations provide robust and generalizable signatures of consciousness in humans
 
 Castro P, Luppi A, Tagliazucchi E, Perl YS, et al. (2024). *Communications Biology*. [doi:10.1038/s42003-024-06858-3](https://doi.org/10.1038/s42003-024-06858-3). Article, abstract only, **context**.
@@ -1295,6 +1331,18 @@ Castro P, Luppi A, Tagliazucchi E, Perl YS, et al. (2024). *Communications Biolo
 - **Limits:** fMRI, not EEG; abstract only read here.
 - **For us:** Cross-state generalisation has been done in fMRI. Our open EEG data cannot copy this, but it sets the bar for 'generalises across states'.
 - **Touches:** Hypothesis tournament
+
+### The temporal asymmetry of cortical dynamics as a signature of brain states
+
+Camassa A et al. (2024). *Sci Rep*. [doi:10.1038/s41598-024-74649-1](https://doi.org/10.1038/s41598-024-74649-1). Journal article, abstract only, **context**.
+
+- **Question:** Does irreversibility index brain state?
+- **Idea tested:** Rat field potentials across anaesthesia depth and sleep.
+- **Data and method:** Rat field potentials across anaesthesia depth and sleep.
+- **Results:** Irreversibility lowest in deep anaesthesia and slow-wave sleep.
+- **Limits:** Rat only; abstract read.
+- **For us:** Source of the ne2 form we tested on human scalp EEG (atlas).
+- **Touches:** Task #5 transfer
 
 ### Consciousness among delta waves: a paradox?
 
@@ -1602,7 +1650,7 @@ Horikawa et al. (2013). *Science 340:639-642*. [doi:10.1126/science.1234330](htt
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C18
 
-## Drugs and anaesthesia (20)
+## Drugs and anaesthesia (25)
 
 ### Convergent transcriptomic and connectomic controllers of information integration and its anaesthetic breakdown across mammalian brains
 
@@ -1647,6 +1695,30 @@ Carhart-Harris RL (2026). *Brain*. [doi:10.1093/brain/awag206](https://doi.org/1
 - **Limits:** A proponent's review. It does not test entropy against a spectral baseline, although it concedes high-frequency power carries much of the effect; the discriminative-validity claim rests mainly on psychedelic fMRI contrasts.
 - **For us:** Our results speak to this directly: LZ adds nothing over the spectrum in sleep and fails the surrogate gate. #42 tests the 'not arousal' claim at fixed sleep stage. A sealed prediction from this review (entropy higher before experience awakenings, beyond spectrum) belongs in #42's measure list, which already includes LZ and entropy measures.
 - **Touches:** #42, lz_slope, surrogate_gate, theory_entropic_propofol
+
+### Do all sedatives promote biological sleep EEG patterns? A machine learning framework
+
+Ramaswamy SM et al. (2024). *PLoS One*. [doi:10.1371/journal.pone.0304413](https://doi.org/10.1371/journal.pone.0304413). Journal article, abstract only, **core**.
+
+- **Question:** Does a classifier trained on sleep EEG stage sedated EEG?
+- **Idea tested:** A 44-feature sleep stager trained on the MGH sleep set (N=994) applied to propofol (36), sevoflurane (36) and dexmedetomidine (30).
+- **Data and method:** A 44-feature sleep stager trained on the MGH sleep set (N=994) applied to propofol (36), sevoflurane (36) and dexmedetomidine (30).
+- **Results:** Sleep-trained stager on propofol and sevoflurane: AUC 0.55-0.58; dexmedetomidine 0.80.
+- **Limits:** One multivariate model, one direction; no per-measure test, spectral baseline or surrogate.
+- **For us:** The prior to cite for #5: sleep-to-propofol transfer of a multivariate stager fails.
+- **Touches:** Task #5 transfer
+
+### Dexmedetomidine produces more sleep-like brain activity compared with propofol in human participants
+
+Krause BM et al. (2026). *Br J Anaesth*. [doi:10.1016/j.bja.2025.09.050](https://doi.org/10.1016/j.bja.2025.09.050). Journal article, abstract only, **useful**.
+
+- **Question:** Is sedative unresponsiveness sleep-like?
+- **Idea tested:** Intracranial EEG in 34 patients under dexmedetomidine and propofol compared with sleep.
+- **Data and method:** Intracranial EEG in 34 patients under dexmedetomidine and propofol compared with sleep.
+- **Results:** Dexmedetomidine resembles N2; propofol changes delta less and network entropy more than sleep.
+- **Limits:** Patients; intracranial.
+- **For us:** Explains why sleep-to-propofol transfer can fail.
+- **Touches:** Task #5 transfer
 
 ### Dreaming during anaesthesia: a scoping review
 
@@ -1695,6 +1767,18 @@ Nikolič M, Froese T, Mediano PAM, Koudelka V, Horáček J, Tylš F, Páleníče
 - **Limits:** Small; diversity not tested against a spectral baseline.
 - **For us:** A within-subject case where a complexity measure tracks experience intensity while arousal stays wake-like. If the data were open it would be a #42-style test; ask whether gamma diversity survives band-power nesting.
 - **Touches:** Study 2, lz_slope
+
+### Spectral mapping reveals a resemblance of the anesthetic brain state to both sleep and coma
+
+Helfrich JD et al. (2026). *PNAS*. [doi:10.1073/pnas.2514098123](https://doi.org/10.1073/pnas.2514098123). Journal article, abstract only, **useful**.
+
+- **Question:** Which natural state does propofol EEG resemble?
+- **Idea tested:** Whole-head spectral maps of propofol (35) correlated with wake, SWS, REM and coma.
+- **Data and method:** Whole-head spectral maps of propofol (35) correlated with wake, SWS, REM and coma.
+- **Results:** Propofol resembles coma most; its reduced aperiodic activity partly overlaps REM.
+- **Limits:** Similarity analysis; no classifier transfer.
+- **For us:** Background: propofol is not simply sleep-like.
+- **Touches:** Task #5 transfer
 
 ### Distinct EEG signatures differentiate unconsciousness and disconnection during anaesthesia and sleep
 
@@ -1809,6 +1893,30 @@ Wehrman JJ, Casey C, Redinbaugh MJ, Muller E, Munn B, et al. (2025). *British Jo
 - **Limits:** Evoked paradigm; small n; data availability not stated in the abstract.
 - **For us:** Shows serial awakenings can confirm 'disconnected but experiencing' under sedation; a model for a future sedation arm of the experience benchmark.
 - **Touches:** #42
+
+### Measuring the dynamic balance of integration and segregation underlying consciousness, anesthesia, and sleep in humans
+
+Jang H et al. (2024). *Nat Commun*. [doi:10.1038/s41467-024-53299-x](https://doi.org/10.1038/s41467-024-53299-x). Journal article, abstract only, **context**.
+
+- **Question:** Does an fMRI integration-segregation measure index consciousness across states?
+- **Idea tested:** Random forest on propofol fMRI datasets; parallel sleep analysis (n=28).
+- **Data and method:** Random forest on propofol fMRI datasets; parallel sleep analysis (n=28).
+- **Results:** Propofol AUC 0.984, validated across propofol datasets.
+- **Limits:** Sleep run in parallel, not as transfer.
+- **For us:** fMRI analogue of cross-state generalisation.
+- **Touches:** Task #5 transfer
+
+### Cortical functional connectivity indexes arousal state during sleep and anesthesia
+
+Banks MI et al. (2019). *bioRxiv*. [doi:10.1101/823963](https://doi.org/10.1101/823963). Preprint, abstract only, **context**.
+
+- **Question:** Do sleep and propofol change connectivity alike?
+- **Idea tested:** Intracranial EEG, n=5.
+- **Data and method:** Intracranial EEG, n=5.
+- **Results:** Connectivity shifts in N2/N3 and propofol unresponsiveness are strikingly similar.
+- **Limits:** n=5, descriptive; abstract read.
+- **For us:** Background for cross-state transfer.
+- **Touches:** Task #5 transfer
 
 ### Incidence of Connected Consciousness after Tracheal Intubation
 

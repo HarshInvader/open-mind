@@ -121,3 +121,28 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - Don't quote the without-lowest-contrast CI.
   - Stop and log: multi-sample confidence is established (2DSD; Rausch WEV, both unverified), and this dataset lacks the precision for the one open question.
 - **Decision:** agreed. Written up in `experiments/metacog_awareness/RESULTS.md` and the atlas. Next: #5 rescoped to sleep plus propofol (census, then pilot).
+
+### Task #5: census, prior art, and the redesign (Fable round 8)
+- **Census** (`experiments/transfer_5/CENSUS.md`):
+  - Sleep qualifies (Sleep-EDF; HMC 151 nights, CC BY 4.0).
+  - Propofol fails on open-now data:
+    - ds005620 sed2 is unresponsive but mostly conscious (24/29 reports);
+    - Chennu's moderate sedation is mostly responsive;
+    - increment power is 0-10%.
+  - DOSE-I (171 propofol recordings, dense MOAA/S labels, CC BY 4.0) is the only powered propofol set. It carries a Data Use Agreement, so it was not downloaded: it needs owner sign-off.
+- **Prior art** (18 opened, 9 new to the library):
+  - Ramaswamy 2024 (sleep-trained stager on propofol, AUC 0.55-0.58) is the closest.
+  - Lendner 2020 fits slope per contrast, with no shared threshold.
+  - Casarotto 2016 uses a pooled PCI cutoff.
+  - No one has run per-measure, frozen-cutoff, two-direction transfer with a spectral competitor and a surrogate gate.
+- **Fable verdict:**
+  - #5 as written is killed: "AUC >= 0.80 everywhere" ignores the threshold; frozen cutoffs across hardware are confounded; the propofol labels are responsiveness.
+  - Redesign (b'): fit wake-vs-N3 cutoffs per measure on Sleep-EDF, then ask where each places HMC REM (wake side = follows disconnected experience; N3 side = follows arousal). It has three gates:
+    - eligibility (HMC W-vs-N3 balanced accuracy >= 0.80);
+    - planted 83/17 mixes;
+    - phase-surrogate flag.
+  - ds005620 sed2 is a descriptive replication.
+  - Kill if fewer than 3 measures are eligible. If all match the spectral baseline: "one axis, spectral".
+  - Ask the owner about DOSE-I.
+- **Our novelty note:** REM placement for some single measures is already reported (Lendner 2020: slope; Ugail & Howard 2026: LZc, slope and alpha place REM below N2 on Sleep-EDF). What is new is frozen cross-dataset cutoffs, the spectral competitor and the surrogate gate, so this is an atlas-grade result, not a discovery.
+- **Decision:** agreed. Planted gate running; then Fable pre-seal review, seal, HMC fetch and run.

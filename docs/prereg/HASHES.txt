@@ -85,3 +85,15 @@ a25bebb3daa84b9bf639c45d9d2d97822d2d1639a91c13026fcf8b1aeff6f6f7  experiments/se
 b69754dc823ec8959d0b14f043b5e1f43a639fe6ebac2feb04dfec241bb55200  experiments/metacog_awareness/power_gate.py  2026-11-23T07:18:07Z
 9debd52e18ff2fa9beddf5f38cc1053fd80cf079386828e9a4e951f0539037bb  experiments/metacog_awareness/gate2.py  2026-11-23T07:18:07Z
 dbe6a4ff9451c3c503de1d57ddd9511900c0e32f1ef1b3ea45fab5e178be779b  experiments/metacog_awareness/gate2.json  2026-11-23T07:18:07Z
+adca3ffe0e20dc9e2af565727e4fe6e01afe95b7df7e263d3b3f97a047f89463  docs/prereg/2026-11-23_transfer5_rem_placement.md  2026-11-23T08:18:00Z
+8cccb3fd44d6007fc2499ca7e00a9dd529dc81f48f14299fc130e1cd50d95374  experiments/transfer_5/analyse.py  2026-11-23T08:18:00Z
+4a54eb7b32d987838b60607ae779f347732de6781494d25c995a523dfb6437d7  experiments/transfer_5/measures.py  2026-11-23T08:18:00Z
+a115a42dbbf884c1f5bdf41b8d81f2fa5049b1a2f71268d9ff0b337e006ba796  experiments/transfer_5/fetch_hmc.py  2026-11-23T08:18:01Z
+28bc9244ddf4a98b475869f8d896166dbd45b671daf1b02ef9d4bbe2279a4c0f  experiments/transfer_5/extract_ds.py  2026-11-23T08:18:01Z
+ea07d67a718f7918f4f5a73da84fa52f6c5a6751ecfdd74f53699fa4b5de38d5  experiments/transfer_5/planted.py  2026-11-23T08:18:01Z
+01c901bdc0229b9edabeaa6056ecf8240a569972bc90de89380173f060d98619  experiments/transfer_5/planted.json  2026-11-23T08:18:01Z
+dccd113e40bf8c3e83d9384f570b4288ed4c34a0ae1316bb6e2ba13094b997c4  experiments/transfer_5/feats_sedf_wn.jsonl  2026-11-23T08:18:01Z
+73579af767338cc4604dc87fad8d3b399943d4a706429e0b606950abc18929ba  experiments/transfer_5/CENSUS.md  2026-11-23T08:18:01Z
+8c3ed838d254b7bd867000ddb01b7cb98dc7b3f3afc0b6a580ea493e0acd20a3  experiments/lz_slope/features.py  2026-11-23T08:18:01Z
+9c707badd93e75b8db82c876b784967d4f86b7c9909cb34443e7cbf85078180e  experiments/nonequilibrium/extract.py  2026-11-23T08:18:01Z
+154812c6991bf8741922c96755639e3096acb1c43c0b73238020a68ffb9e81bb  experiments/lz_slope/fetch.py  2026-11-23T08:18:01Z

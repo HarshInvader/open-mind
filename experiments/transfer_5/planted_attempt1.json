@@ -1,0 +1,205 @@
+{
+ "half_A": [
+  "SC4001",
+  "SC4021",
+  "SC4051",
+  "SC4071",
+  "SC4091",
+  "SC4101",
+  "SC4111",
+  "SC4121",
+  "SC4151",
+  "SC4161",
+  "SC4171",
+  "SC4181",
+  "SC4201",
+  "SC4231",
+  "SC4241",
+  "SC4251",
+  "SC4271",
+  "SC4331",
+  "SC4381",
+  "SC4401",
+  "SC4421",
+  "SC4461",
+  "SC4471",
+  "SC4481",
+  "SC4501",
+  "SC4541",
+  "SC4561",
+  "SC4571",
+  "SC4581",
+  "SC4591"
+ ],
+ "mixes": {
+  "0.83": {
+   "eligible": [
+    "exponent",
+    "lz",
+    "perm_entropy",
+    "spectral_entropy",
+    "rel_delta",
+    "rel_beta",
+    "dfa",
+    "baseline"
+   ],
+   "checks": {
+    "exponent": {
+     "placement": "wake side",
+     "frac": 0.857,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "lz": {
+     "placement": "wake side",
+     "frac": 0.787,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "perm_entropy": {
+     "placement": "wake side",
+     "frac": 0.854,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "spectral_entropy": {
+     "placement": "wake side",
+     "frac": 0.768,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "rel_delta": {
+     "placement": "wake side",
+     "frac": 0.777,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "rel_beta": {
+     "placement": "wake side",
+     "frac": 0.841,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "dfa": {
+     "placement": "wake side",
+     "frac": 0.673,
+     "ok_place": true,
+     "ok_frac": false,
+     "spectral": true
+    },
+    "baseline": {
+     "placement": "wake side",
+     "frac": 0.85,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    }
+   },
+   "spectral_flags_ok": true,
+   "pass_": false,
+   "test_ba": {
+    "exponent": 0.953,
+    "lz": 0.93,
+    "perm_entropy": 0.89,
+    "spectral_entropy": 0.915,
+    "rel_delta": 0.926,
+    "rel_alpha": 0.769,
+    "rel_beta": 0.963,
+    "dfa": 0.849,
+    "wsmi": 0.639,
+    "baseline": 0.96
+   }
+  },
+  "0.17": {
+   "eligible": [
+    "exponent",
+    "lz",
+    "perm_entropy",
+    "spectral_entropy",
+    "rel_delta",
+    "rel_beta",
+    "dfa",
+    "baseline"
+   ],
+   "checks": {
+    "exponent": {
+     "placement": "N3 side",
+     "frac": 0.225,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "lz": {
+     "placement": "N3 side",
+     "frac": 0.183,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "perm_entropy": {
+     "placement": "N3 side",
+     "frac": 0.323,
+     "ok_place": true,
+     "ok_frac": false,
+     "spectral": true
+    },
+    "spectral_entropy": {
+     "placement": "N3 side",
+     "frac": 0.206,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "rel_delta": {
+     "placement": "N3 side",
+     "frac": 0.185,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "rel_beta": {
+     "placement": "N3 side",
+     "frac": 0.2,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "dfa": {
+     "placement": "N3 side",
+     "frac": 0.208,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    },
+    "baseline": {
+     "placement": "N3 side",
+     "frac": 0.206,
+     "ok_place": true,
+     "ok_frac": true,
+     "spectral": true
+    }
+   },
+   "spectral_flags_ok": true,
+   "pass_": false,
+   "test_ba": {
+    "exponent": 0.953,
+    "lz": 0.93,
+    "perm_entropy": 0.89,
+    "spectral_entropy": 0.915,
+    "rel_delta": 0.926,
+    "rel_alpha": 0.769,
+    "rel_beta": 0.963,
+    "dfa": 0.849,
+    "wsmi": 0.639,
+    "baseline": 0.96
+   }
+  }
+ },
+ "gate_pass": false
+}
