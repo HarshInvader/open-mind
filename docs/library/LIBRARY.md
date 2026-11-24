@@ -2,11 +2,11 @@
 
 Generated from `library.json` on 2026-11-24. Do not edit by hand.
 
-193 entries: 32 read in full, 161 from the abstract only. Every DOI was opened and its title and authors checked.
+200 entries: 33 read in full, 167 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (66)
+## Theories tested (68)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -249,6 +249,18 @@ IIT-Concerned, Fleming SM, Frith CD and others (2023). *PsyArXiv (open letter); 
 - **Results:** After press coverage called IIT a leading, tested theory, researchers wrote an open letter objecting. In 2025 a follow-up in Nature Neuroscience argued the theory's core claims cannot be tested even in principle. The row is about what a fair test of a theory of consciousness looks like.
 - **For us:** It is why we judge every theory only by predictions sealed in advance.
 - **Touches:** news
+
+### Neural correlates of consciousness in an attentional blink paradigm with uncertain target relevance
+
+Dellert T, Krebs S, Bruchmann M, Schindler S, Peters A, Straube T (2022). *NeuroImage*. [doi:10.1016/j.neuroimage.2022.119679](https://doi.org/10.1016/j.neuroimage.2022.119679). Paper, abstract only, **useful**.
+
+- **Question:** Which attentional-blink ERPs track awareness when T2 is not task-relevant?
+- **Idea tested:** Make T2 relevance uncertain to separate awareness from task demands.
+- **Data and method:** EEG, attentional blink with uncertain target relevance.
+- **Results:** The awareness negativity survived when T2 was task-irrelevant; the P3b did not (via our prior-art read).
+- **Limits:** Abstract or secondary summary only.
+- **For us:** In ds001810 T2 is always task-relevant, so a P3b effect there cannot separate awareness from report.
+- **Touches:** hypothesis-generator
 
 ### The ConTraSt database for analysing and comparing empirical studies of consciousness theories
 
@@ -571,6 +583,18 @@ Sergent et al. (2021). *Nature Communications 12:1149*. [doi:10.1038/s41467-021-
 - **For us:** Evidence grade C in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C29
 
+### Electrophysiological chronometry of graded consciousness during the attentional blink
+
+Eiserbeck A, Enge A, Rabovsky M, Abdel Rahman R (2021). *Cerebral Cortex*. [doi:10.1093/cercor/bhab289](https://doi.org/10.1093/cercor/bhab289). Paper, abstract only, **context**.
+
+- **Question:** Is awareness in the attentional blink all-or-none or graded in the ERPs?
+- **Idea tested:** Relate graded visibility to the N170, the visual awareness negativity and the P3b.
+- **Data and method:** EEG, attentional blink with graded visibility.
+- **Results:** The N170, VAN and P3b all scaled with graded visibility (via our prior-art read).
+- **Limits:** Abstract or secondary summary only.
+- **For us:** Counter-evidence to all-or-none ignition; a binary T2 identification label cannot test grading.
+- **Touches:** hypothesis-generator
+
 ### Thalamus Modulates Consciousness via Layer-Specific Control of Cortex
 
 Redinbaugh et al. (2020). *Neuron 106:66-75.e12*. [doi:10.1016/j.neuron.2020.01.005](https://doi.org/10.1016/j.neuron.2020.01.005). Paper, abstract only, **context**.
@@ -745,7 +769,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (73)
+## Measuring consciousness (78)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -850,6 +874,18 @@ Cohen MA, Keefe JM, Brady TF (2023). *Psychological Science*. [doi:10.1177/09567
 - **Limits:** Continuous colour report is not a visibility rating; the conclusion depends on the signal-detection model family.
 - **For us:** This closes most of the behavioural all-or-none question, so our item 4 would have added a method, not a new answer. We judged it a no-go.
 - **Touches:** Fable#13 item 4, all-or-none vs graded
+
+### Effects of tDCS on the attentional blink revisited: a statistical evaluation of a replication attempt
+
+Reteig LC, Newman LA, Ridderinkhof KR, Slagter HA (2022). *PLOS ONE*. [doi:10.1371/journal.pone.0262718](https://doi.org/10.1371/journal.pone.0262718). Paper, full text, **core**.
+
+- **Question:** Does tDCS over left DLPFC change the attentional blink, as an earlier study suggested?
+- **Idea tested:** Replicate the earlier tDCS effect with anodal and cathodal sessions and EEG recorded throughout.
+- **Data and method:** N = 40, two visits (anodal, cathodal), pre/during/post blocks; letter RSVP with T1 red and T2 green at lag 3 or 8; Biosemi 64-channel EEG. Data: OpenNeuro ds001810.
+- **Results:** No tDCS effect on the blink. The authors did not analyse the EEG 'given the absence of a behavioral effect'. Lags 3 and 8 were chosen to give about equal numbers of seen and missed T2 for EEG.
+- **Limits:** Behavioural paper only; the EEG is unpublished.
+- **For us:** Our discovery set for the hypothesis generator: the pre-tDCS blocks give about 45 T2-correct and 55 T2-incorrect lag-3 trials per block, and the T2-correct vs incorrect EEG contrast has never been published on this dataset. Outcome is T2 identification, not seen vs unseen.
+- **Touches:** hypothesis-generator
 
 ### Neural complexity is a common denominator of human consciousness across diverse regimes of cortical dynamics
 
@@ -1018,6 +1054,18 @@ Mazzonetto I, Celli M, Pini L, et al. (2026). *bioRxiv (24 Aug 2026)*. [doi:10.6
 - **For us:** The aperiodic exponent steepens with disconnection in conscious people, one more reason the exponent is a confound to control, not a consciousness marker. Ledger: large activity changes with consciousness intact (C42-type).
 - **Touches:** constraint_ledger, lz_slope
 
+### Perceptual and attentional impairments of conscious access involve distinct neural mechanisms despite equal task performance
+
+Noorman S, Stein T, Fahrenfort JJ, van Gaal S (2025). *eLife*. [doi:10.7554/eLife.97900](https://doi.org/10.7554/eLife.97900). Paper, abstract only, **useful**.
+
+- **Question:** Do masking and the attentional blink block conscious access in the same way?
+- **Idea tested:** Equate performance and compare neural signatures.
+- **Data and method:** EEG, masking vs attentional blink at matched performance.
+- **Results:** The two impair access by distinct neural mechanisms despite equal task performance (title and our prior-art read).
+- **Limits:** Abstract only.
+- **For us:** A caution for transfer: an attentional-blink signature need not carry to near-threshold tactile detection.
+- **Touches:** hypothesis-generator
+
 ### Critical dynamics in spontaneous EEG predict anesthetic-induced loss of consciousness and perturbational complexity
 
 Maschke C, O'Byrne J, Colombo MA, Boly M, Gosseries O, Laureys S, Rosanova M, Jerbi K, Blain-Moraes S (2024). *Communications Biology 7, 946*. [doi:10.1038/s42003-024-06613-8](https://doi.org/10.1038/s42003-024-06613-8). Paper, abstract only, **useful**.
@@ -1085,6 +1133,18 @@ Rausch M, Hellmann S, Zehetleitner M (2021). *Attention, Perception, & Psychophy
 - **Limits:** No all-or-none model in the comparison. Depth of reading not recorded by the planning agent, so treated as abstract.
 - **For us:** A 5-level masking dataset that could carry a conditional-independence test, but masking is where graded visibility is already conceded.
 - **Touches:** Fable#13 item 4, all-or-none vs graded
+
+### Representational dynamics preceding conscious access
+
+Alilović J, van Moorselaar D, Graetz M, van Gaal S, Slagter HA (2021). *NeuroImage*. [doi:10.1016/j.neuroimage.2021.117789](https://doi.org/10.1016/j.neuroimage.2021.117789). Paper, abstract only, **useful**.
+
+- **Question:** What in the EEG predicts whether T2 is seen in the attentional blink, and how early?
+- **Idea tested:** Multivariate decoding of seen vs unseen T2 and of T1 identity.
+- **Data and method:** EEG, Biosemi 64 channels, N = 32, attentional blink (same lab as ds001810).
+- **Results:** The T2 P3 is larger for seen T2 while the T1 P3 does not differ; seen vs unseen decodes for more than 900 ms after T2 and above chance before T1; T1 identity decodes more strongly on T2-seen trials (via our prior-art read).
+- **Limits:** Abstract and secondary summary only.
+- **For us:** The closest design to our ds001810 screen; its effects are our within-dataset positive controls, not findings.
+- **Touches:** hypothesis-generator
 
 ### The spectral exponent of the resting EEG indexes the presence of consciousness during unresponsiveness induced by propofol, xenon, and ketamine
 
@@ -1589,6 +1649,30 @@ Vyazovskiy et al. (2011). *Nature 472:443-447*. [doi:10.1038/nature10009](https:
 - **Limits:** Vyazovskiy 2011 in rats (performance dropped). Human evidence is one intracranial case of confusional arousal (Terzaghi 2009).
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C44
+
+### Temporal dynamics of access to consciousness in the attentional blink
+
+Kranczioch C, Debener S, Maye A, Engel AK (2007). *NeuroImage*. [doi:10.1016/j.neuroimage.2007.05.044](https://doi.org/10.1016/j.neuroimage.2007.05.044). Paper, abstract only, **context**.
+
+- **Question:** Which oscillatory dynamics go with detected vs missed T2?
+- **Idea tested:** Time-frequency EEG analysis of the attentional blink.
+- **Data and method:** EEG time-frequency, attentional blink.
+- **Results:** Detected T2 goes with more fronto-parietal beta and less alpha synchrony, and lower pre-T1 alpha (via secondary citations).
+- **Limits:** The sign of prestimulus alpha is contested (Petro and Keil 2015; MacLean and Arnell 2011), and the RSVP rate is in the alpha band.
+- **For us:** Prestimulus alpha should be left unsigned in a ds001810 screen.
+- **Touches:** hypothesis-generator
+
+### Electrophysiological evidence for a postperceptual locus of suppression during the attentional blink
+
+Vogel EK, Luck SJ, Shapiro KL (1998). *Journal of Experimental Psychology: Human Perception and Performance*. [doi:10.1037/0096-1523.24.6.1656](https://doi.org/10.1037/0096-1523.24.6.1656). Paper, abstract only, **context**.
+
+- **Question:** Where in processing does the attentional blink act?
+- **Idea tested:** Compare ERP components across lags.
+- **Data and method:** ERPs across lags in the attentional blink.
+- **Results:** P1, N1 and N400 survive the blink while the P3 is suppressed (from memory, via our prior-art read).
+- **Limits:** Compares lags, not seen vs missed.
+- **For us:** Background for which ERPs should not differ in a T2 identification contrast.
+- **Touches:** hypothesis-generator
 
 ## Sleep and dreams (22)
 

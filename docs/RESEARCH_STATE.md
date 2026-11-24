@@ -386,6 +386,39 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
 - **Verdict: DiD underpowered with current items.** With 0 informative items (2 at most if the dating were generous, from one source cluster), there is no item-level variance to bootstrap. A 0.25-bit leak cannot be detected at any reasonable power.
 - **Decision: parked.** It reopens only if we build at least about 10 new items from findings first published between Feb 2025 and the newer models' cutoffs, in several independent clusters, and the recognition gate splits the models on them.
 
+### Hypothesis generator, step 1: Reteig prior art, Option A fetch, kill-test prereg drafted (2026-11-24)
+- **Prior art (Fable research agent; 7 new library entries tagged hypothesis-generator; Sergent 2005 was already in):**
+  - **Reteig 2022 (PLOS ONE)** is the only paper on ds001810. It is behaviour-only, and the EEG was never analysed "given the absence of a behavioral effect". The T2-correct vs incorrect EEG contrast on this dataset is unpublished.
+  - **Expected within-dataset effects, used as controls, not findings:**
+    - T2 P3b larger for correct, from Sergent 2005, Vogel 1998 and Alilović 2021 (same lab and rig);
+    - N2/VAN from about 200–300 ms;
+    - no P1/N1 difference;
+    - decoding that is sustained and above chance even before T1 (Alilović 2021).
+  - **Caveats:**
+    - Prestimulus alpha is contested in sign (Kranczioch 2007 vs others), and the 10.9 Hz RSVP sits in the alpha band, so it is left out.
+    - The T1 response overlaps the T2 epoch, because T1 comes 275 ms before T2.
+    - Left-frontal slots are blocked by the tDCS electrode in many pre blocks (marked `bad` in `_channels.tsv`).
+    - Noorman 2025 shows that masking and the blink impair access by different mechanisms, so transfer to touch is a real risk, not a formality.
+  - **Novelty:** the visual (blink) to tactile EEG transfer is unclaimed.
+- **Option A fetch:**
+  - `fetch_ab_epochs.py` range-reads T2-locked epochs (−0.2 to 0.8 s) for lag-3, T1-correct trials from the 84 pre blocks of 45 subjects: 8,391 trials, projected 1.254 GB, inside the 1.5 GB budget.
+  - It uses one HTTP Range request per trial at 1 request/s, so it takes about 2.3 h. It resumes per block.
+  - The exact GB read will be logged here when done.
+- **Kill-test prereg drafted, not sealed:** `docs/prereg/2026-11-24_ab_t2_identification_killtest.md`, with script `experiments/hypothesis_generator/ab_killtest.py`.
+  - **Outcome:** "T2 identification" throughout. No awareness claim is made unless ds001785 confirms.
+  - **Candidates:** 9, signed by theory:
+    - P3b (GNWT, control);
+    - N2/VAN (RPT/IIT, control);
+    - P1 and N1 (null controls);
+    - frontal late positivity (GNWT);
+    - GFP (GNWT);
+    - late posterior (HOT/report);
+    - pre-T2 (unsigned);
+    - a cross-subject decoder.
+  - **Design:** screen on a seeded half of the subjects, then test the survivors once on the held-out half, using a within-subject label-shuffled null and Holm correction.
+  - **Gates:** P3b must survive or the run is INVALID. PASS needs a non-control survivor. FAIL skips ds001785.
+  - **Before sealing:** shuffled-label false-positive calibration and a planted-answer check, then a fresh Fable pre-seal review.
+
 ### Site deploy deferred (2026-11-24)
 
 The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:
