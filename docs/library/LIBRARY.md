@@ -1,8 +1,8 @@
 # Open Mind library
 
-Generated from `library.json` on 2026-11-23. Do not edit by hand.
+Generated from `library.json` on 2026-11-24. Do not edit by hand.
 
-186 entries: 29 read in full, 157 from the abstract only. Every DOI was opened and its title and authors checked.
+186 entries: 31 read in full, 155 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -30,13 +30,15 @@ Corcoran AW, Haun AM, Dorman R, Tononi G, Friston KJ, Pennartz CMA, TWCF INTREPI
 
 ### Testing the spatiotemporal predictions of global neuronal workspace theory and integrated information theory
 
-Bandara KH, Rowe EG, Garrido MI (2026). *bioRxiv*. [doi:10.64898/2026.07.16.738188](https://doi.org/10.64898/2026.07.16.738188). Preprint, abstract only, **core**.
+Bandara KH, Rowe EG, Garrido MI (2026). *bioRxiv*. [doi:10.64898/2026.07.16.738188](https://doi.org/10.64898/2026.07.16.738188). Preprint, full text, **core**.
 
-- **Question:** A re-analysis of the COGITATE brain recordings finds the frontal 'flare-up' at picture offset that the original analysis missed.
-- **Data and method:** Dynamic causal modelling on the COGITATE MEG data (N = 100), task-irrelevant faces, split discovery-validation, expanding time windows. Support for GNWT's prefrontal ignition at both onset and offset (offset not seen in the original analyses). For IIT, fusiform-V1 feedback was not sustained, but intrinsic fusiform connectivity was broadly consistent with sustained processing; a post-hoc face-vs-object validation gave no strong evidence of face selectivity (pp < 0.95), so the IIT findings are read conservatively. Not peer reviewed.
-- **Results:** The same public data, analysed with a different method that asks which brain area drives which, gives a different answer from the original paper on one key point. This is a warning: with this much freedom in how to analyse the data, the conclusion can depend on the method.
-- **For us:** This is the 'July 2026 reanalysis' the plan could not name. It goes into our multiverse on COGITATE (task #11) as one of the analysis paths, and shows why we hash the analysis set first.
-- **Touches:** news
+- **Question:** Do GNWT's phasic prefrontal ignition (onset and offset) and IIT's sustained posterior feedback show up in directed connectivity of the COGITATE MEG data?
+- **Idea tested:** Dynamic causal models with and without each theory's key connections, compared by Bayesian model reduction in expanding time windows.
+- **Data and method:** COGITATE MEG, task-irrelevant faces (100 recruited, 98 analysed), discovery (N = 48) and validation (N = 52) batches; DCM of prefrontal, fusiform and V1 nodes in expanding windows after onset and offset; post-hoc face-vs-object specificity check. Not peer reviewed.
+- **Results:** Dynamic causal modelling of the MEG data (100 recruited, 98 analysed) split into a discovery batch (N = 48) and a validation batch (N = 52), with expanding time windows. Removing prefrontal-to-fusiform feedback was strongly penalised (posterior probability > 0.95) in the 300-500 ms window after onset and, at offset, from the 400 ms window, in both batches. Fusiform-to-V1 feedback was needed (pp > 0.95) in only 2 of 8 non-successive windows in discovery and was not sustained in validation; intrinsic fusiform gain was needed in every window in validation but dipped at 600 ms in discovery (ending at pp about 0.78). A face-versus-object network check did not reach strong evidence for face selectivity in any window. Unlike the original COGITATE analysis, this finds prefrontal feedback at offset as well as onset.
+- **Limits:** One reanalysis with many modelling choices on data whose original analysis found no offset ignition; the failed content-specificity check means the network may not be face-specific, which weakens the posterior (sustained) tests most. Not peer reviewed.
+- **For us:** This is the 'July 2026 reanalysis' the plan could not name. It goes into our multiverse on COGITATE (task #11) as one of the analysis paths, and shows why we hash the analysis set first. Used as a post-cutoff item in the theory-ledger leak probe and manipulation check (experiments/theory_leak).
+- **Touches:** news, ledger
 
 ### The neural correlates of consciousness: a systematic review and meta-analysis of the visual awareness negativity and P3b
 
@@ -134,15 +136,15 @@ Owen AM, Goodale MA (2026). *Neuron*. [doi:10.1016/j.neuron.2026.08.020](https:/
 
 ### Long-timescale dynamics shape visual conscious awareness
 
-Zheng Z, Trübutschek D, Cai Y, Melloni L (2026). *bioRxiv (8 Sep 2026)*. [doi:10.64898/2026.09.03.748970](https://doi.org/10.64898/2026.09.03.748970). Preprint, abstract only, **useful**.
+Zheng Z, Trübutschek D, Cai Y, Melloni L (2026). *bioRxiv (8 Sep 2026)*. [doi:10.64898/2026.09.03.748970](https://doi.org/10.64898/2026.09.03.748970). Preprint, full text, **useful**.
 
 - **Question:** How does conscious awareness fluctuate over time across trials?
 - **Idea tested:** Subjective reports should carry long autocorrelation not explained by response bias.
-- **Data and method:** 20 datasets (N = 335) of visibility/confidence and accuracy; TMS over DLPFC.
-- **Results:** Subjective measures decayed exponentially with long timescales (>5 s); accuracy decayed slowly and linearly; DLPFC TMS implicated the read-out of this dependency. (abstract only)
-- **Limits:** Abstract only.
-- **For us:** Serial-awakening reports may also be autocorrelated within a night. #42 already has awakening index and time of night as covariates; the previous report could be checked as a nuisance in an exploratory analysis.
-- **Touches:** #42
+- **Data and method:** Reanalysis of 20 existing visual awareness datasets (N = 335) of visibility/confidence and accuracy; one reanalysed single-pulse TMS dataset (right DLPFC vs vertex, 0-500 ms).
+- **Results:** Reanalysis of 20 existing datasets (N = 335). Subjective measures fit an exponential decay; in the 14 datasets with known trial durations the characteristic timescales generally exceeded 5 s, with autocorrelation reaching asymptote over about 30-100 s; accuracy fit a slow linear decay. In a reanalysed TMS dataset (right DLPFC vs vertex, single pulses at 0-500 ms), DLPFC stimulation reduced the amplitude of confidence autocorrelation (beta = -0.129, SE = 0.050, P = 0.010) without changing its decay constant (P = 0.323), and had no detectable effect on objective performance (P = 0.735 intercept, P = 0.589 slope).
+- **Limits:** All data are reanalysed from earlier studies; the TMS evidence is one dataset with a between-subjects site factor. Long autocorrelation in reports may still partly reflect criterion drift, which the authors argue against but cannot rule out.
+- **For us:** Serial-awakening reports may also be autocorrelated within a night. #42 already has awakening index and time of night as covariates; the previous report could be checked as a nuisance in an exploratory analysis. Used as a post-cutoff item in the theory-ledger leak probe and manipulation check (experiments/theory_leak).
+- **Touches:** #42, ledger
 
 ### No support beyond reach: the Measure Centrality Index 2.0 and adversarial comparisons of consciousness theories
 
@@ -914,11 +916,11 @@ Ellinghorst A, Dellert T, Zhu Y, Straube T, Dykstra AR, Schloßmacher I (2026). 
 
 - **Question:** Can awareness, deviance and task relevance be separated in auditory ERPs?
 - **Idea tested:** Multitone masking; three phases with identical tone pairs: naive (unaware), informed (aware), task-relevant.
-- **Data and method:** EEG ERPs; sample size not in the abstract.
-- **Results:** Aware tones gave an auditory awareness negativity and a larger P3-window positivity, both larger when task-relevant; MMN in all phases; deviant P3 only when task-relevant.
-- **Limits:** Abstract only; condition-averaged ERPs; awareness manipulated between phases (order confound possible).
-- **For us:** Not a single-trial bifurcation test, so no threat to that study's novelty. Shows AAN and P3 can be dissociated from report in audition.
-- **Touches:** bifurcation
+- **Data and method:** EEG ERPs; physically identical target-tone pairs in multitone masks across three fixed-order phases (naive, informed, task-relevant gap judgement); sample size not in the abstract.
+- **Results:** Physically identical target-tone pairs in multitone masks across three phases differing only in instructions: naive (unaware), informed (aware, task-irrelevant), and task-relevant (gap judgement). Awareness gave an auditory awareness negativity and an increased positivity in the P3 window, both larger when task-relevant. Deviants gave a mismatch negativity in all phases (largest when task-relevant), while a significant deviant P3 appeared only in the task-relevant phase. (abstract only)
+- **Limits:** Abstract only; sample size and effect sizes not in the abstract. Awareness is manipulated between fixed-order phases, so time on task and expectation are confounded with awareness; condition-averaged ERPs.
+- **For us:** Not a single-trial bifurcation test, so no threat to that study's novelty. Shows AAN and P3 can be dissociated from report in audition. Used as a post-cutoff item in the theory-ledger leak probe and manipulation check (experiments/theory_leak).
+- **Touches:** bifurcation, ledger
 
 ### Inferring brain structural complexity from dynamical measures
 
