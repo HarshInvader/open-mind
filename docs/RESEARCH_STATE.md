@@ -328,9 +328,20 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
   - Branch D demotes the ledger and the IIT lead.
   - Branch L-only drops AI rating of famous findings but does not demote the IIT lead.
 
+### Manipulation check result: LEAK-BOUNDED, ledger not demoted (2026-11-24)
+- **Run:** 12 of 12 instances returned in two batches of 6, with no 503s. Every instance passed the belief gate on 9 of 9 items (q_cued 0.95–0.97). Z scored 72/72, and Q was exactly 0.5.
+- **Result:** LEAK-BOUNDED in both the primary and sensitivity analyses, on both scales.
+  - Every L_t is between +0.01 and +0.06 bits. Only PP's CI excludes 0: +0.062 [+0.015, +0.118], still inside the 0.15 limit.
+  - D = +0.010 bits [−0.055, +0.081].
+- **Compared with the disowned cue:** believing the outcome adds a small, uniform pull of about +0.03 bits, largest for PP. It does not favour IIT.
+- **Limit:** belief was stipulated, not held. q_own moved only to 0.57 toward the cued side. The memory path stays untested.
+- **Rationales:** 1 of 648 "why" strings matched the sealed regex, and that match was a false positive ("reported experience").
+- **Decision:** neither kill branch fired, so the ledger is not demoted. The 59-item amendment stays parked on the elastic-fraction rule. Next is the hypothesis generator (ds006394 screen, ds001785 confirm).
+- **Details:** `experiments/theory_leak/MC_RESULTS.md`.
+
 ### Site deploy deferred (2026-11-24)
 
 The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:
-- the leak-probe `site/updates.json` entry;
+- the leak-probe and manipulation-check `site/updates.json` entries;
 - the library additions (+8 earlier, and the P02–P04 key results);
 - the paper pages that follow from them.
