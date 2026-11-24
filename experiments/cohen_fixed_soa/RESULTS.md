@@ -40,6 +40,15 @@ The same masked face was shown at SOA 50 ms and only the report differed. On tho
   - It survives controls for face identity and for motor responses.
   - This replicates Navajas et al. 2013 (larger N170 for seen faces at fixed noise) under backward masking, on independent data.
   - It is earlier than the roughly 270 ms divergence of Del Cul et al. 2007 and the "no divergence before about 270 ms" view (ledger C35).
+- **Against Cohen et al.'s VAN conclusion (stated exactly).**
+  - **What they tested:** only the shape of the SOA curve, using condition averages over 5 SOAs (25 subjects).
+  - **What they found:** the N170/VAN followed "a pattern of amplitude increase that was neither linear nor bifurcated" in both conditions.
+    - Report condition: it rose from 17 to 33 ms (behaviour barely changes there), was flat from 50 to 67 ms (behaviour goes from 51.9% to 86.8% seen), and dipped at 83 ms.
+    - No-report condition: it grew up to SOA 50 and then plateaued.
+    - They conclude it "may not be a candidate signature of perceptual awareness, though more research is called for".
+  - **What they did not test:** seen vs unseen at a fixed SOA, or anything at the single-trial level.
+  - **Our result** is a different test. Within SOA 50, the same window separates seen from unseen in 22 of 24 held-out subjects. A VAN whose average does not follow the sigmoid across SOAs can still track trial-to-trial seeing at a fixed stimulus. So their conclusion does not hold at the trial level in the report condition.
+  - **What we do not claim:** that the VAN tracks awareness without report. They found it present in no-report too, but never tested it against awareness there. That is study 4, which is waiting on data.
 - **The N2 window.** The authors' N2 window does not carry a seen/unseen difference in report trials: the CI excludes a predicted effect of 1 µV or more.
   - **This is not news.** The authors already report that the N2 did not appear in the report condition, and blame P3b overlap. Removing the electrodes shared with the P3b changes nothing (+0.25 µV).
   - It says nothing against their no-report claim. Every trial here has a report.
