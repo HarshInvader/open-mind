@@ -131,3 +131,17 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
   3. **Alignment.** The planted check validates only the steps after preprocessing, not the alignment of range-read epochs to the T2 event code. Add a label-free alignment check before sealing, such as evoked T1/T2 latencies against the stream onset.
 - **Not closed:** whether this dataset carries the standard T2 P3b effect under a pre-T1 baseline. Testing that would be a new study, and is deliberately not pursued after a sealed failure.
 - **Details:** `experiments/hypothesis_generator/ab_out/result.json`, `docs/RESEARCH_STATE.md` (Hypothesis generator, steps 1–3).
+
+## Authors' N2 window at a fixed stimulus: KILLED in report trials (Cohen 2024 data, 2026-11-24)
+- **Route tested:** does Cohen et al. 2024's fronto-central N2 (250–290 ms, electrodes 1–11 and 17–19), which they read as a report-free awareness marker, separate seen from unseen when the stimulus is held fixed? Masked faces at SOA 50 ms, report block.
+- **Data:** OSF 6d5av, range-read face-locked epochs (5,079 trials, 223,983,900 bytes). 24 held-out subjects, excluding the authors' 15 window-defining pilots. Sealed prereg `docs/prereg/2026-11-24_cohen_fixed_soa_killtest.md` (2026-11-24T18:18:22Z, commit 9bf289c), after two Fable pre-seal reviews.
+- **Result: KILLED** (calibrated: KILLED fired in 3% of runs with a planted 1 µV effect).
+  - The N2 was +0.15 µV seen − unseen [−0.94, +1.20], AUC 0.498, Holm p 0.67, with 10/24 subjects in the predicted direction. Without the P3b electrodes: +0.25 µV.
+  - In the same run, the P3b gate passed (+3.28 µV) and the VAN passed (−1.16 µV [−1.54, −0.80], 22/24). The P1 control flag fired (AUC 0.525, two-sided p 0.03).
+- **What it means and does not:**
+  - It replicates the authors' own report-condition finding: no N2 when the P3b overlaps.
+  - It does not test their no-report claim, which needs trial-level awareness without report.
+  - In the pilot set the N2 leaned the predicted way (−1.24 µV, INCONCLUSIVE).
+- **Lesson:** a fronto-central window that overlaps the P3b's onset cannot be tested for awareness in report trials, even with the shared electrodes removed. The VAN, which comes earlier and sits posterior, is the testable candidate.
+- **Not closed:** the N2 in no-report trials (no labels); the VAN's report-independence.
+- **Details:** `experiments/cohen_fixed_soa/RESULTS.md`, `out/result.json`.

@@ -521,6 +521,25 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
   - Label-free fix: a 30 Hz low-pass before rejection. Without it, HEOG noise rejected 41% of subject 1001's trials; with it, 6%.
   - Fable pre-seal review running.
 
+### Cohen 2024 fixed-SOA kill test: VAN PASS, N2 KILLED, P1 flag (2026-11-24)
+
+- **Sealed** 18:18:22Z (commit 9bf289c), after two Fable pre-seal reviews. Run once.
+- **Pre-seal steps:**
+  - The label-free alignment criterion was revised (the first mask overlaps the face N1). The coordinator approved and froze it; it passed on all 40 subjects.
+  - Calibration on 24 subjects: false PASS 0.03; KILLED fired in 3% of runs with a planted 1 µV N2 effect and 0% with one in the VAN.
+- **Confirmatory, 24 held-out subjects:**
+  - P3b gate +3.28 µV, AUC 0.606.
+  - **VAN PASS:** −1.16 µV [−1.54, −0.80], AUC 0.585, 22/24 subjects. It survives the identity strata and the late-answer subset.
+  - **N2 KILLED:** +0.15 µV [−0.94, +1.20].
+  - **P1 flag:** AUC 0.525, p 0.03.
+- **Pilot, 14 subjects:** VAN PASS (−2.04 µV); N2 INCONCLUSIVE (−1.24 µV).
+- **Meaning:**
+  - At a fixed stimulus, a posterior 140–200 ms negativity tracks seeing. This replicates Navajas 2013 under masking and comes earlier than the roughly 270 ms late-divergence view.
+  - The N2 null replicates the authors' report-condition finding.
+  - Nothing here is report-free.
+- **Write-up:** `experiments/cohen_fixed_soa/RESULTS.md`. The site write-up waits for Cohen's reply or 14 days (until 2026-12-08).
+- **Data read:** 223,983,900 bytes. Project total about 1.49 GB of the 1.5 GB budget, so the budget is spent: the next study needs data already on disk or a coordinator-approved exception.
+
 ### Site deploy deferred (2026-11-24)
 
 The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:

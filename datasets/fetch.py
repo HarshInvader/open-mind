@@ -25,6 +25,9 @@ BUDGET = 1.5e9
 #   On disk, compressed: 0.63 GB in datasets/local/ds001810_epochs/. Inside the 1.5 GB budget; no exception used.
 # - ds001785 (tactile): one-off exception approved by the coordinator only if the ds001810 kill test passes:
 #   range-read epochs only, disk peak < 1 GB, exact GB to be logged here and in docs/RESEARCH_STATE.md.
+# - Cohen 2024 (OSF 6d5av, 2026-11-24): experiments/cohen_fixed_soa/fetch_epochs.py range-read 5,079 face-locked
+#   epochs, exactly 223,983,900 bytes, plus 9,812,193 bytes of headers/markers. A partial subject lost in a restart
+#   was re-read (at most ~5.9 MB uncounted). Project total 1,488,284,157 bytes counted (at most ~1.494 GB).
 CHENNU_ZIP = "https://api.repository.cam.ac.uk/server/api/core/bitstreams/e94a6722-da5b-4e53-8673-5e8ec106e0f7/content"
 
 # id -> how to get the subset our results use.
