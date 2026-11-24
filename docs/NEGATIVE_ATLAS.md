@@ -2,16 +2,23 @@
 
 Closed routes, each with the effect size the test could have caught. Empty until the first tests land.
 
-## AI-rated theories mostly do not commit on post-cutoff findings (post-cutoff ledger, 2026-11-24)
+## AI-read theories rarely commit on recent findings (two stop outcomes; AI ledger line closed, 2026-11-24)
 
-- **Route closed (for now):** "test whether IIT's lead in the AI-rated theory ledger carries over to findings published after the raters' cutoff" with a pool of 15 recent findings. Too few split the theories.
-- **Data:** 15 kept post-cutoff findings (12 clusters) and 10 famous findings; 3 models × 2 runs; blind and informed arms. Sealed prereg `docs/prereg/2026-11-24_theory_postcutoff_ledger.md`.
-- **Result:** UNINFORMATIVE. 4/15 findings split the theories, in 3 clusters (bar: 8 and 6). 89% of post-cutoff cells sat in p 0.4–0.6. Gates passed. Hindsight BOUNDED, D_H −0.006 [−0.061, 0.049].
-- **Descriptive:** IIT lead +0.50 on famous items, −0.14 [−0.29, 0.02] on all post-cutoff items, in the same run.
-- **What it could catch:** planted lead 0.55 with no elastic items: SURVIVES 80%; null: false SURVIVES 1–6%. Planted IIT-only hindsight of 0.40 bits: caught 100%.
-- **Splitting-first follow-up (stop rule fired):** a blind selector, choosing from 45 new findings, found only 5 with any theory committing |p − 0.5| ≥ 0.25 (maximum 0.30). See `experiments/theory_splitfirst/RESULTS.md`.
-- **Not closed:** human raters; purpose-built adversarial studies.
-- **Details:** `experiments/theory_postcutoff/RESULTS.md`.
+- **Route closed:** testing out of sample, with AI raters on findings published after their cutoff, whether IIT's lead in the AI-rated theory ledger is real. On recent findings the theories almost never take sides, so there is nothing to score.
+- **Pool 1: sealed post-cutoff ledger.** Prereg `docs/prereg/2026-11-24_theory_postcutoff_ledger.md`. 15 kept findings; 3 models × 2 runs; blind and informed arms.
+  - UNINFORMATIVE: 4 of 15 split the theories, in 3 clusters (the bar was 8 items in 6 clusters).
+  - 89% of cells sat at p 0.4–0.6, against 42% on famous items. Gates passed.
+  - Descriptive: IIT lead +0.50 on famous items and −0.14 [−0.29, 0.02] on new ones, in the same run.
+  - Hindsight BOUNDED: D_H −0.006 [−0.061, 0.049].
+- **Pool 2: splitting-first pool.** Prereg `docs/prereg/2026-11-24_theory_splitfirst_pool_A.md`, rules frozen before any outcome lookup.
+  - 45 new findings were written as mirrored pairs; a blind selector rated them.
+  - Only 5 had any theory at |p − 0.5| ≥ 0.25 (the rule needed 12), and the maximum was 0.30. The stop rule fired.
+  - 12 of 45 reached 0.20: 27%, the same rate as pool 1.
+- **What it could catch:** pool 1's planted check: a lead of 0.55 with no elastic items gave SURVIVES 80%; null, false SURVIVES 1–6%; IIT-only hindsight of 0.40 bits was caught 100%.
+- **Not closed:**
+  - human expert raters;
+  - purpose-built adversarial studies, which are rare in a 5-month window.
+- **Details:** `experiments/theory_postcutoff/RESULTS.md`, `experiments/theory_splitfirst/RESULTS.md`.
 
 ## AI theory raters do not follow a disowned outcome cue (theory leak probe, 2026-11-23)
 

@@ -5345,6 +5345,31 @@
    ],
    "relevance": "useful",
    "url": "https://doi.org/10.1016/j.neubiorev.2026.106742"
+  },
+  {
+   "kind": "Paper",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-24",
+   "verified": true,
+   "id": "pereira-2021-evidence-accumulation-consciousness",
+   "title": "Evidence accumulation relates to perceptual consciousness and monitoring",
+   "authors": "Pereira M, Megevand P, Tan MX, et al., Faivre N",
+   "year": 2021,
+   "venue": "Nature Communications 12, 3261",
+   "doi": "10.1038/s41467-021-23540-y",
+   "topic": "Measuring consciousness",
+   "question": "Do perceptual consciousness and confidence involve evidence accumulation?",
+   "tried": "Single-neuron recording in posterior parietal cortex (one participant) and EEG in healthy volunteers during near-threshold vibrotactile detection with confidence ratings; accumulation-to-bound model.",
+   "method_data": "Intracranial microelectrode and EEG, own data.",
+   "key_results": "Detected stimuli evoked accumulation-like responses, irrespective of motor confounds or task demands; a model with detection = evidence reaching a bound and confidence = distance from the bound reproduced behaviour and neural data.",
+   "limits": "Tactile, near-threshold detection; one intracranial participant.",
+   "ideas_for_us": "Covers the seen-vs-unseen response-locked P3b/CPP question at a fixed stimulus, so our item 3 (P3b response-locking on Cohen data) was skipped as established.",
+   "touches": [
+    "cohen-fixed-soa"
+   ],
+   "relevance": "useful",
+   "url": "https://doi.org/10.1038/s41467-021-23540-y"
   }
  ]
 }

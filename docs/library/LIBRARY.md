@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-24. Do not edit by hand.
 
-210 entries: 34 read in full, 176 from the abstract only. Every DOI was opened and its title and authors checked.
+211 entries: 34 read in full, 177 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -781,7 +781,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (86)
+## Measuring consciousness (87)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -1145,6 +1145,18 @@ Lee M, Sanz LRD, Barra A, Wolff A, Nieminen JO, Boly M, et al. (2022). *Nature C
 - **Limits:** Small groups per state; abstract only read here.
 - **For us:** Closest existing cross-state 'one marker everywhere' attempt. Any tournament must beat or explain this, and must report sample sizes per state honestly.
 - **Touches:** Hypothesis tournament
+
+### Evidence accumulation relates to perceptual consciousness and monitoring
+
+Pereira M, Megevand P, Tan MX, et al., Faivre N (2021). *Nature Communications 12, 3261*. [doi:10.1038/s41467-021-23540-y](https://doi.org/10.1038/s41467-021-23540-y). Paper, abstract only, **useful**.
+
+- **Question:** Do perceptual consciousness and confidence involve evidence accumulation?
+- **Idea tested:** Single-neuron recording in posterior parietal cortex (one participant) and EEG in healthy volunteers during near-threshold vibrotactile detection with confidence ratings; accumulation-to-bound model.
+- **Data and method:** Intracranial microelectrode and EEG, own data.
+- **Results:** Detected stimuli evoked accumulation-like responses, irrespective of motor confounds or task demands; a model with detection = evidence reaching a bound and confidence = distance from the bound reproduced behaviour and neural data.
+- **Limits:** Tactile, near-threshold detection; one intracranial participant.
+- **For us:** Covers the seen-vs-unseen response-locked P3b/CPP question at a fixed stimulus, so our item 3 (P3b response-locking on Cohen data) was skipped as established.
+- **Touches:** cohen-fixed-soa
 
 ### Modelling visibility judgments using models of decision confidence
 
