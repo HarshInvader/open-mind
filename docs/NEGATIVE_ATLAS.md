@@ -115,3 +115,19 @@ Sleep-EDF, 45 subjects, subject-held-out. LZ adds no AUC over the exponent plus 
     - DOSE-I cannot test it: it has responsiveness labels only and no interviews.
     - Testing it needs ds005620's per-awakening labels (not released) or the Wisconsin data (on request).
 - **Details:** `experiments/transfer_5/RESULTS.md`.
+
+## Attentional-blink T2 identification screen: invalid, P3b gate failed on held-out (hypothesis generator, 2026-11-24)
+- **Route tested:** do theory-tagged EEG signatures beyond the known P3b and posterior N2 track lag-3 T2 identification (correct vs incorrect, given T1 correct) in held-out subjects? The targets were frontal late positivity, global field power and late posterior positivity. A pass would have licensed a transfer test into touch (ds001785, hit vs miss).
+- **Data:** OpenNeuro ds001810 pre-tDCS blocks, range-read T2-locked epochs (8,391 trials, 1.2545 GB). 42 eligible subjects, split 21 discovery and 21 held-out. Sealed prereg `docs/prereg/2026-11-24_ab_t2_identification_killtest.md` (2026-11-24T09:55:23Z, commit e391fe1), applying a Fable pre-seal review.
+- **Result: INVALID (terminal; the line is closed, and no redesign of this test will be run).**
+  - **Discovery:** no target survived (AUC 0.489–0.499). The P3b was 0.530.
+  - **Held-out:** the P3b gate failed, at AUC 0.491 [0.468, 0.512], p = 0.78. The posterior N2 was 0.495, and the P1/N1 were null.
+  - **Descriptive decoder:** 0.529 [0.507, 0.548], which cannot earn a pass.
+  - ds001785 was skipped.
+- **What it could catch:** on the real epochs with shuffled labels, false PASS occurred in 0 of 200 runs. A planted 1.5 µV P3b/N2 was recovered 50 of 50 times. A planted 1.0 µV frontal effect beyond the P3b passed 18 of 20 times.
+- **Lessons (untested explanations for the failed gate):**
+  1. **Measure basis.** The whole-epoch mean was chosen to avoid a baseline that holds the T1 response, since T1 comes 275 ms before T2. It subtracts a broad late P3b from itself, while T1-locked activity still overlaps the window. In a lag-3 blink design, fetch pre-T1 samples so a clean baseline is possible.
+  2. **Outcome label.** "T2 identification" mixes guesses into correct and seen-but-misnamed trials into incorrect, which may dilute the seen/unseen contrast far below published effects. Prefer datasets with a visibility or detection report.
+  3. **Alignment.** The planted check validates only the steps after preprocessing, not the alignment of range-read epochs to the T2 event code. Add a label-free alignment check before sealing, such as evoked T1/T2 latencies against the stream onset.
+- **Not closed:** whether this dataset carries the standard T2 P3b effect under a pre-T1 baseline. Testing that would be a new study, and is deliberately not pursued after a sealed failure.
+- **Details:** `experiments/hypothesis_generator/ab_out/result.json`, `docs/RESEARCH_STATE.md` (Hypothesis generator, steps 1–3).

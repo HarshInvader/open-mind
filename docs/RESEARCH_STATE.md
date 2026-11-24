@@ -464,7 +464,7 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
   3. An alignment fault in the range-read epochs. The planted check tests the pipeline after preprocessing, not the T2 event alignment.
   4. Untested: whether the effect is small in this dataset itself.
   - The decoder's weak held-out signal (0.53) suggests some outcome information is there, but not in the predicted P3b form.
-- **Decision for the coordinator:** close the generator line on this dataset pair, or write a new prereg with a pre-T1 baseline. The latter needs an extra fetch of about 0.38 GB, over budget, and an alignment check first. Recommendation: close it. The redesign spends the budget on a dataset whose outcome label is not awareness, and the transfer target (touch) was the only novel part.
+- **Coordinator decision (2026-11-24):** closed. No redesign of this test with new baselines or labels, since that would be fishing after a sealed failure. Recorded in `docs/NEGATIVE_ATLAS.md` with the three untested explanations as lessons. The Fable round 13 list is now spent (items 1 and 3 done, 2 demoted, 4 no-go, 5 and 6 low ceiling or novelty), so one Fable agent is asked for 5–10 new studies on open data. Concurrency cap: at most 3 subagents at once, because of the gateway rate limit.
 
 ### Site deploy deferred (2026-11-24)
 
