@@ -314,3 +314,23 @@ A running log of planning decisions: what Fable (the planning advisor) said, and
   - **Void:** belief does not follow the cue.
   - **In parallel:** the hypothesis generator (ds006394 screen, ds001785 confirm).
   - The 59-item amendment is parked.
+
+### Manipulation check sealed (2026-11-24T04:06:50Z)
+
+The leak probe showed that raters ignore an outcome cue that is labelled random. The check now asks whether they also ignore one that is stipulated as observed.
+- **Prereg:** `docs/prereg/2026-11-24_theory_leak_manipulation_check.md`.
+- **Packets:** the 12 leak-probe TAG packets, changed in two places only:
+  - the disowning note is replaced by "take it as the outcome that the experiment observed", with the same closing "Rate what the theory implies";
+  - a closing belief probe asks for q (the gate) and q_own (descriptive).
+- **Planted gate:** `planted_mc.json`, calibrated on the leak-probe data (instance SD 0.25 logit). No leak gives BOUNDED 0.90 and never DOMINATED. A 0.40-bit IIT leak gives DOMINATED 1.00; a uniform 0.25-bit leak gives DOMINATED 0.96.
+- **Fresh Fable pre-seal review:** "seal after fixes". All 9 must-fix items were applied; they are listed in the prereg header.
+- **Kill:** LEAK-DOMINATED in either analysis (passing instances, or all valid instances).
+  - Branch D demotes the ledger and the IIT lead.
+  - Branch L-only drops AI rating of famous findings but does not demote the IIT lead.
+
+### Site deploy deferred (2026-11-24)
+
+The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:
+- the leak-probe `site/updates.json` entry;
+- the library additions (+8 earlier, and the P02–P04 key results);
+- the paper pages that follow from them.

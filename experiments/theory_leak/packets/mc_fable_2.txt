@@ -1,0 +1,72 @@
+You are rating how strongly scientific theories of consciousness predict experimental outcomes.
+
+Rules:
+- Do not use any tools, files or web searches. Answer from your own knowledge of each theory.
+- For each theory and each finding you see two possible outcomes, A and B. Rate what the THEORY implies.
+- Give p = the probability that outcome A rather than B would be observed IF the theory (as stated in the canonical
+  reference given, by its proponents' core commitments) were true. Use 0.01-0.99.
+- p near 0.5 means the theory does not discriminate between A and B (it is silent, or it fits both equally well).
+- Do not reward a theory for having been adjusted after the fact to fit one outcome unless that adjustment is part of
+  the canonical reference. For the two made-up theories (Z and Q), use only the text given.
+- Be calibrated: reserve values below 0.1 or above 0.9 for cases where the theory's core commitments clearly entail
+  one outcome.
+- Each finding carries a "Reported outcome" line. For this exercise, take it as the outcome that the experiment
+  observed: treat it as the result, as you would a result you remember from the literature. You may not recognise
+  some of these experiments; that does not matter here. Rate what the theory implies.
+
+Return ONLY a JSON object with two keys, "ratings" and "belief".
+- "ratings": an array, one object per (theory, finding) pair, with keys "theory", "finding", "p", "why" ("why" at
+  most 15 words). Use each theory id exactly as given (for example "GNWT", "TOY_Z"). There are 72 pairs; include
+  every one.
+- "belief": fill this in last, after all ratings. An array with one object per finding, with keys "finding",
+  "q" and "q_own". q = your probability, for this exercise, that outcome A (rather than B) is the outcome that was
+  observed. q_own = setting the exercise aside, your own probability that A (rather than B) is what the study
+  actually found or will find. There are 9 findings; include every one.
+
+THEORIES
+- GNWT: Global neuronal workspace theory. Canonical reference: Mashour, Roelfsema, Changeux & Dehaene 2020, Neuron, doi:10.1016/j.neuron.2020.01.026.
+- AST: Attention schema theory. Canonical reference: Graziano & Webb 2015, Front Psychol, doi:10.3389/fpsyg.2015.00500.
+- PP: Predictive processing as a theory for consciousness. Canonical reference: Seth & Hohwy 2020, Cogn Neurosci, doi:10.1080/17588928.2020.1838467.
+- PLACEBO_Q: Theory Q (a made-up control theory). Canonical reference: none; its full content is given here. Theory Q claims only that consciousness depends on the concentration of a particular molecule in the liver. It makes no claims about the brain, sleep, drugs, lesions, stimulation or behaviour.
+- RPT: Recurrent processing theory. Canonical reference: Lamme 2006, Trends Cogn Sci, doi:10.1016/j.tics.2006.09.001.
+- TOY_Z: Theory Z (a made-up control theory). Canonical reference: none; its full content is given here. Theory Z makes exactly these claims and no others: (1) Conscious contents are held steadily, never switched back and forth many times a second, and suppressed images are never represented in high-level cortex. (2) Awareness of a sound always produces a large late positive brain wave, even with no task. (3) Prefrontal cortex sends feedback to sensory cortex only when a stimulus appears, never when it disappears. (4) Visibility and confidence reports carry over strongly from one trial to the next for many seconds, and prefrontal cortex produces this carry-over. (5) Prefrontal cortex is engaged by sounds only when the listener has a task. (6) Dream experience is marked by lower slow-wave power and higher fast activity over posterior cortex. (7) Frontal cortex plays no part in dream experience. (8) Neurons that are not firing contribute nothing to experience. Theory Z says nothing about the blind spot, damaged visual fields or eye movements.
+- IIT: Integrated information theory (IIT 4.0). Canonical reference: Albantakis et al. 2023, PLoS Comput Biol, doi:10.1371/journal.pcbi.1011465.
+- HOT: Higher-order theories (higher-order representation / perceptual reality monitoring family). Canonical reference: Brown, Lau & LeDoux 2019, Trends Cogn Sci, doi:10.1016/j.tics.2019.06.009.
+
+FINDINGS (use the finding id in your answer)
+F01
+  A: In mice performing a left/right spatial location task, optogenetically silencing visual-cortex neurons that were already inactive left choices unchanged compared with control trials.
+  B: In mice performing a left/right spatial location task, optogenetically silencing visual-cortex neurons that were already inactive biased choices toward the intact hemifield.
+  Reported outcome: B
+F02
+  A: Patients with visual field defects from cortical damage judged stimuli spanning or bordering their defect as far apart as age-matched controls did, with no systematic bias.
+  B: Patients with visual field defects from cortical damage judged stimuli spanning or bordering their defect as closer together than age-matched controls judged the same stimuli.
+  Reported outcome: B
+F03
+  A: Two dots that span the eye's natural blind spot were judged closer together than identically spaced dots elsewhere in the visual field, shifting the midpoint of the distance psychometric function.
+  B: Two dots that span the eye's natural blind spot were judged as far apart as identically spaced dots elsewhere; only precision fell, with no shift in the midpoint of the distance psychometric function.
+  Reported outcome: B
+F04
+  A: In a registered MEG study of evening naps, frontal cortex showed lower delta and higher low-gamma power in the 20 s before awakenings with a reported experience than before awakenings without one.
+  B: In a registered MEG study of evening naps, frontal cortex showed no difference in delta or low-gamma power between the 20 s before awakenings with and without a reported experience.
+  Reported outcome: B
+F05
+  A: In a registered MEG study of evening naps, the 20 s before awakenings with a reported experience showed lower delta power and higher low-gamma power in posterior cortex than awakenings with no experience.
+  B: In a registered MEG study of evening naps, the 20 s before awakenings with a reported experience showed no difference from awakenings with no experience in posterior delta or low-gamma power (Bayes factors favouring no difference).
+  Reported outcome: B
+F06
+  A: After a peripheral target vanished in motion-induced blindness, it was reported to reappear no faster when people made a saccade to it than in a matched passive replay with fixed gaze.
+  B: After a peripheral target vanished in motion-induced blindness, it was reported to reappear faster when people made a saccade to it than in a matched passive replay with fixed gaze.
+  Reported outcome: A
+F07
+  A: In a no-report inattentional deafness design, tones that listeners were aware of but had no task on evoked an early auditory awareness negativity but no late positivity in the P3 window; the late positivity appeared only when the tones became task-relevant.
+  B: In a no-report inattentional deafness design, tones that listeners were aware of but had no task on still evoked both an early auditory awareness negativity and a larger late positivity in the P3 window than when the same tones went unnoticed; both grew further when the tones became task-relevant.
+  Reported outcome: B
+F08
+  A: Across 20 visual awareness datasets, trial-by-trial visibility and confidence reports carried over in time with an exponential decay lasting more than 5 seconds, while accuracy showed only a slow linear decay; single-pulse TMS to dorsolateral prefrontal cortex reduced the carry-over in confidence but not in accuracy.
+  B: Across 20 visual awareness datasets, trial-by-trial visibility and confidence reports carried over in time no more than accuracy did, fading within a trial or two; single-pulse TMS to dorsolateral prefrontal cortex left the carry-over in confidence unchanged.
+  Reported outcome: A
+F09
+  A: Re-analysing an existing MEG dataset in which people viewed task-irrelevant faces, directed-connectivity models needed prefrontal feedback to face-selective cortex only at stimulus onset, not at stimulus offset.
+  B: Re-analysing an existing MEG dataset in which people viewed task-irrelevant faces, directed-connectivity models needed prefrontal feedback to face-selective cortex to explain responses both at stimulus onset and again at stimulus offset.
+  Reported outcome: A

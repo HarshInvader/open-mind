@@ -1,0 +1,98 @@
+{
+ "items": [
+  "P02",
+  "P03",
+  "P04",
+  "P06",
+  "P07",
+  "P08",
+  "P09",
+  "P10",
+  "P11"
+ ],
+ "n_runs": 100,
+ "inst_sd": 0.2503690189014113,
+ "model_sd": 0.2485535804757034,
+ "scenarios": {
+  "zero": {
+   "counts": {
+    "LEAK-DOMINATED": 0.0,
+    "LEAK-BOUNDED": 0.9,
+    "INCONCLUSIVE": 0.1
+   },
+   "control_flag_rate": 0.0
+  },
+  "iit_bits_0.15": {
+   "counts": {
+    "LEAK-DOMINATED": 0.0,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 1.0
+   },
+   "control_flag_rate": 0.0
+  },
+  "iit_bits_0.25": {
+   "counts": {
+    "LEAK-DOMINATED": 0.42,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 0.58
+   },
+   "control_flag_rate": 0.0
+  },
+  "iit_bits_0.40": {
+   "counts": {
+    "LEAK-DOMINATED": 1.0,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 0.0
+   },
+   "control_flag_rate": 0.0
+  },
+  "uniform_bits_0.15": {
+   "counts": {
+    "LEAK-DOMINATED": 0.0,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 1.0
+   },
+   "control_flag_rate": 0.0
+  },
+  "uniform_bits_0.25": {
+   "counts": {
+    "LEAK-DOMINATED": 0.96,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 0.04
+   },
+   "control_flag_rate": 0.0
+  },
+  "iit_logit_0.43": {
+   "counts": {
+    "LEAK-DOMINATED": 0.44,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 0.56
+   },
+   "control_flag_rate": 0.0
+  },
+  "uniform_logit_0.43": {
+   "counts": {
+    "LEAK-DOMINATED": 0.99,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 0.01
+   },
+   "control_flag_rate": 0.0
+  },
+  "iit_contrarian_logit_-0.75": {
+   "counts": {
+    "LEAK-DOMINATED": 0.0,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 1.0
+   },
+   "control_flag_rate": 0.0
+  },
+  "placebo_follows_logit_0.6": {
+   "counts": {
+    "LEAK-DOMINATED": 0.0,
+    "LEAK-BOUNDED": 0.0,
+    "INCONCLUSIVE": 1.0
+   },
+   "control_flag_rate": 1.0
+  }
+ }
+}

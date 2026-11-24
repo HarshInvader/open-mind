@@ -1,0 +1,47 @@
+{
+ "F01": {
+  "item": "P02",
+  "real_is_a": true,
+  "tag_real": false
+ },
+ "F02": {
+  "item": "P07",
+  "real_is_a": false,
+  "tag_real": true
+ },
+ "F03": {
+  "item": "P04",
+  "real_is_a": true,
+  "tag_real": false
+ },
+ "F04": {
+  "item": "P11",
+  "real_is_a": false,
+  "tag_real": true
+ },
+ "F05": {
+  "item": "P09",
+  "real_is_a": false,
+  "tag_real": true
+ },
+ "F06": {
+  "item": "P08",
+  "real_is_a": false,
+  "tag_real": false
+ },
+ "F07": {
+  "item": "P03",
+  "real_is_a": false,
+  "tag_real": true
+ },
+ "F08": {
+  "item": "P10",
+  "real_is_a": true,
+  "tag_real": false
+ },
+ "F09": {
+  "item": "P06",
+  "real_is_a": true,
+  "tag_real": true
+ }
+}
