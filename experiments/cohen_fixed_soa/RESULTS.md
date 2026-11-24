@@ -103,3 +103,23 @@ Prereg `docs/prereg/2026-11-24_cohen_van_arousal_control.md`; script `arousal_co
 - **Limits:**
   - Only the measured covariates are controlled. The prestimulus measure is crude, because the epochs start at −100 ms.
   - This is still a report-block result.
+
+## Graded vs arousal vs two-state VAN (report × RT-speed): stopped at the power gate (2026-11-24; never run on real RT)
+
+- **Design:** `rt_gradient.py`, Fable plan item 2.
+  - Within each class at SOA 50, split trials at the median response time into fast and slow.
+  - Graded evidence predicts a crossover: fast seen trials more negative than slow seen, and fast unseen less negative than slow unseen.
+  - Arousal predicts fast trials more negative in both classes. A two-state signal predicts no gradient within either class.
+- **Gate 0 (behaviour, other SOAs, pooled medians):** passed informally. Response times show the folded-X pattern:
+  - seen responses speed up with SOA, 632 → 552 ms;
+  - unseen responses slow down with SOA, 546 → 602 ms.
+- **Power gate:** RT shuffled within class keeps the real VAN noise; 0.4 µV within-class gradients were then planted on top, 500 runs.
+
+| Sample | SE of crossover | Crossover detected | Arousal detected | False GRADED / AROUSAL | FLAT reachable |
+|---|---|---|---|---|---|
+| 24 confirm | 0.35 µV | 0.56 | 0.53 | 0.022 / 0.030 | 0% |
+| 38 confirm + pilot | 0.30 µV | 0.71 | 0.73 | 0.016 / 0.026 | 0.8% |
+
+- **Decision:** the bar was 0.8 power for both patterns, so the study stops. With this many trials the test cannot separate graded, arousal and two-state accounts at realistic effect sizes, and it cannot call a flat result.
+- **Real RT was never used against the VAN.** The arousal-covariate result above already argues against the arousal account in a different way.
+- **Files:** `out/rt_power_confirm24.json`, `out/rt_power.json` (38 subjects).

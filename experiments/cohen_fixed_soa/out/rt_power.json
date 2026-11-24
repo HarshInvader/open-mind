@@ -1,0 +1,30 @@
+{
+ "subjects": 38,
+ "runs": 500,
+ "plant_uv": 0.4,
+ "bound": 0.5,
+ "rates": {
+  "null": {
+   "GRADED": 0.016,
+   "INCONCLUSIVE": 0.95,
+   "AROUSAL-LIKE": 0.026,
+   "FLAT": 0.008
+  },
+  "crossover": {
+   "GRADED": 0.714,
+   "AROUSAL-LIKE": 0.004,
+   "INCONCLUSIVE": 0.282
+  },
+  "arousal": {
+   "AROUSAL-LIKE": 0.73,
+   "INCONCLUSIVE": 0.258,
+   "GRADED": 0.012
+  }
+ },
+ "null_se_I": 0.30017402547285665,
+ "false_graded": 0.016,
+ "false_arousal": 0.026,
+ "power_crossover": 0.714,
+ "power_arousal": 0.73,
+ "PASS": false
+}
