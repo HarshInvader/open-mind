@@ -2,11 +2,11 @@
 
 Generated from `library.json` on 2026-11-24. Do not edit by hand.
 
-204 entries: 34 read in full, 170 from the abstract only. Every DOI was opened and its title and authors checked.
+210 entries: 34 read in full, 176 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (68)
+## Theories tested (69)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -145,6 +145,18 @@ Owen AM, Goodale MA (2026). *Neuron*. [doi:10.1016/j.neuron.2026.08.020](https:/
 - **Limits:** Opinion.
 - **For us:** Supports our results-first, theory-light ordering; useful framing for the #42 write-up if it is a benchmark rather than a theory test.
 - **Touches:** #42, #17
+
+### Integrated information and predictive processing theories of consciousness: An adversarial collaborative review
+
+Corcoran AW, Haun AM, Dorman R, Tononi G, Friston KJ, Pennartz CMA, INTREPID Consortium (2026). *Neuroscience and Biobehavioral Reviews 187, 106742*. [doi:10.1016/j.neubiorev.2026.106742](https://doi.org/10.1016/j.neubiorev.2026.106742). Paper, abstract only, **useful**.
+
+- **Question:** How do IIT, neurorepresentationalism and active inference differ, and what will INTREPID test?
+- **Idea tested:** Review comparing the three theories and setting out the hypotheses for the multi-site INTREPID experiments.
+- **Data and method:** Review, no new data.
+- **Results:** States the planned hypotheses and an evidence-integration scheme; no experimental results yet.
+- **Limits:** No results, so nothing yet to score forecasts against.
+- **For us:** Source of pending-outcome items for the ledger when INTREPID reports.
+- **Touches:** theory-ledger
 
 ### Long-timescale dynamics shape visual conscious awareness
 
@@ -769,7 +781,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (82)
+## Measuring consciousness (86)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -1158,6 +1170,18 @@ Alilović J, van Moorselaar D, Graetz M, van Gaal S, Slagter HA (2021). *NeuroIm
 - **For us:** The closest design to our ds001810 screen; its effects are our within-dataset positive controls, not findings.
 - **Touches:** hypothesis-generator
 
+### The EEG signature of sensory evidence accumulation during decision formation closely tracks subjective perceptual experience
+
+Tagliabue CF, Veniero D, Benwell CSY, Cecere R, Savazzi S, Thut G (2019). *Scientific Reports 9, 4949*. [doi:10.1038/s41598-019-41024-4](https://doi.org/10.1038/s41598-019-41024-4). Paper, abstract only, **useful**.
+
+- **Question:** Does the centro-parietal positivity track physical or subjective evidence?
+- **Idea tested:** Varied physical stimulus strength and collected ratings of experienced strength.
+- **Data and method:** EEG, own data.
+- **Results:** The link between physical strength and CPP amplitude is mediated by the subjective rating.
+- **Limits:** Stimulus strength varies; not a fixed-stimulus seen/unseen test.
+- **For us:** A P3b/CPP seen-unseen difference may be a decision signal; response-locking is the test.
+- **Touches:** cohen-fixed-soa
+
 ### The spectral exponent of the resting EEG indexes the presence of consciousness during unresponsiveness induced by propofol, xenon, and ketamine
 
 Colombo MA, Napolitani M, Boly M, Gosseries O, Casarotto S, Rosanova M, Brichant JF, Boveroux P, Rex S, Laureys S, Massimini M, Chieregato A, Sarasso S (2019). *NeuroImage 189:631-644*. [doi:10.1016/j.neuroimage.2019.01.024](https://doi.org/10.1016/j.neuroimage.2019.01.024). Paper, abstract only, **useful**.
@@ -1194,6 +1218,18 @@ Bayne T, Hohwy J, Owen AM (2016). *Trends in Cognitive Sciences 20:405-413*. [do
 - **For us:** Why our benchmark separates arousal from experience instead of one 'level' score.
 - **Touches:** #42, Study 2
 
+### Early Local Activity in Temporal Areas Reflects Graded Content of Visual Perception
+
+Tagliabue CF, Mazzi C, Bagattini C, Savazzi S (2016). *Frontiers in Psychology 7, 572*. [doi:10.3389/fpsyg.2016.00572](https://doi.org/10.3389/fpsyg.2016.00572). Paper, abstract only, **useful**.
+
+- **Question:** Is the VAN graded with rated clarity (PAS) or all-or-none?
+- **Idea tested:** ERPs to reduced-contrast stimuli rated on the four-point Perceptual Awareness Scale.
+- **Data and method:** EEG, own data.
+- **Results:** A VAN (left centro-parietal, 280-320 ms here) and a late positivity both grew gradually with PAS rating.
+- **Limits:** Contrast varies with rating, so stimulus and awareness are not fully separated; latency differs from the face VAN.
+- **For us:** Graded VAN with ratings is established; the unseen-side gradient at a fixed stimulus is not.
+- **Touches:** cohen-fixed-soa
+
 ### Stratification of unresponsive patients by an independently validated index of brain complexity
 
 Casarotto S, Comanducci A, Rosanova M and others; senior author Massimini M (2016). *Annals of Neurology 80, 718-729*. [doi:10.1002/ana.24779](https://doi.org/10.1002/ana.24779). Paper, abstract only, **useful**.
@@ -1215,6 +1251,18 @@ Shafto JP, Pitts MA (2015). *Journal of Neuroscience*. [doi:10.1523/jneurosci.01
 - **Limits:** Abstract only. Awareness varies between people and phases, not trial by trial.
 - **For us:** Prior for COGITATE experiment 2: expect posterior seen-vs-unseen differences before 300 ms, which counts against GNW's 'no difference before 250 ms'. Used in our sealed forecasts.
 - **Touches:** COGITATE forecasts
+
+### The classic P300 encodes a build-to-threshold decision variable
+
+Twomey DM, Murphy PR, Kelly SP, O'Connell RG (2015). *European Journal of Neuroscience 42, 1636-1643*. [doi:10.1111/ejn.12936](https://doi.org/10.1111/ejn.12936). Paper, abstract only, **useful**.
+
+- **Question:** Is the P300 a unitary event or an evidence-accumulation signal?
+- **Idea tested:** Response-locked and stimulus-locked P300 analyses for auditory and visual targets, with accumulation-to-bound model fits.
+- **Data and method:** EEG, own data.
+- **Results:** P300 reaches a fixed amplitude just before the response; its rate of rise scales with difficulty and explains RT variance.
+- **Limits:** Detection tasks, not awareness contrasts.
+- **For us:** Our P3b seen-unseen difference may be a decision signal; candidate response-locked test.
+- **Touches:** cohen-fixed-soa
 
 ### Gamma band activity and the P3 reflect post-perceptual processes, not visual awareness
 
@@ -1665,6 +1713,18 @@ Comolatti R, Pigorini A, Casarotto S, Fecchio M, Faria G, Sarasso S, Rosanova M,
 - **Limits:** Needs perturbation data.
 - **For us:** The PCI variant cited by Newman 2026 and Maschke 2024 in our news.
 - **Touches:** constraint_ledger
+
+### Assessing recognition memory using confidence ratings and response times
+
+Weidemann CT, Kahana MJ (2016). *Royal Society Open Science 3, 150670*. [doi:10.1098/rsos.150670](https://doi.org/10.1098/rsos.150670). Paper, abstract only, **context**.
+
+- **Question:** Can response times stand in for confidence ratings?
+- **Idea tested:** Compared RTs and confidence ratings as measures of recognition-memory decisions.
+- **Data and method:** Behaviour, own data.
+- **Results:** Much of the information in confidence ratings can be recovered from response times.
+- **Limits:** Recognition memory, not perception; RT is a noisy proxy at the single-trial level.
+- **For us:** Supports RT as a weak confidence proxy in the Cohen data, which recorded no confidence.
+- **Touches:** cohen-fixed-soa
 
 ### Subjective visibility depends on level of processing
 
@@ -2276,7 +2336,7 @@ Muthukumaraswamy et al. (2013). *The Journal of Neuroscience 33:15171-15183*. [d
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C45
 
-## AI (6)
+## AI (7)
 
 ### Identifying indicators of consciousness in AI systems
 
@@ -2287,6 +2347,18 @@ Butlin P, Long R, Bayne T, Bengio Y, Birch J, Chalmers D and others (20 authors)
 - **Results:** Instead of asking a chatbot whether it feels anything, the authors take the core requirements of several brain theories and check whether an AI system's internal machinery meets them. This builds on their 2023 report, which concluded that no current AI system was a strong candidate.
 - **For us:** The rubric for our AI stress tests: we use it to find where theories disagree or give absurd answers, never as a verdict on AI and never scoring an AI's self-report.
 - **Touches:** news
+
+### Large language models surpass human experts in predicting neuroscience results
+
+Luo X, Rechardt A, Sun G, et al. (2025). *Nature Human Behaviour 9, 305-315*. [doi:10.1038/s41562-024-02046-9](https://doi.org/10.1038/s41562-024-02046-9). Paper, abstract only, **core**.
+
+- **Question:** Can LLMs forecast neuroscience results better than experts?
+- **Idea tested:** BrainBench: pick the real abstract versus an altered one; compared LLMs, a tuned BrainGPT and human experts.
+- **Data and method:** Benchmark built from published abstracts.
+- **Results:** LLMs beat experts; confidence was calibrated; tuning on neuroscience text helped further.
+- **Limits:** Tests outcome prediction, not theory-conditional likelihoods; memorisation of published abstracts is a live issue.
+- **For us:** Prior art for our theory ledger: the real-vs-altered format is close to our real-vs-mirrored items, and their leak concerns are ours.
+- **Touches:** theory-ledger
 
 ### Same behavior, different mechanism: what finite experiments can certify about integrated information
 
