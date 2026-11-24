@@ -2,11 +2,11 @@
 
 Generated from `library.json` on 2026-11-24. Do not edit by hand.
 
-186 entries: 31 read in full, 155 from the abstract only. Every DOI was opened and its title and authors checked.
+193 entries: 32 read in full, 161 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (63)
+## Theories tested (66)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -97,6 +97,18 @@ Melloni L, Mudrik L, Pitts MA, Bendtz K, Ferrante O, Górska U, Hirschhorn R, Kh
 - **Limits:** Frequent awareness probes make the 'unattended' stimuli partly task-relevant, which blurs the inattention manipulation. Experiment 2 results were not public as of 2026-11-21.
 - **For us:** Basis for our sealed forecasts of experiment 2 (docs/prereg/2026-11-21_cogitate_exp2_forecasts.md, 17 items, scored against each theory as a forecaster).
 - **Touches:** COGITATE forecasts, COGITATE audit
+
+### Decoding across sensory modalities reveals common supramodal signatures of conscious perception
+
+Sanchez G, Hartmann T, Fuscà M, Demarchi G, Weisz N (2020). *PNAS*. [doi:10.1073/pnas.1912584117](https://doi.org/10.1073/pnas.1912584117). Paper, abstract only, **core**.
+
+- **Question:** Is there a signature of conscious detection that is shared by vision, hearing and touch?
+- **Idea tested:** Train a detected-vs-undetected decoder in one sense and test it in another.
+- **Data and method:** MEG, near-threshold visual, auditory and tactile stimuli in the same participants; two samples (n = 16 and 14).
+- **Results:** Detected vs undetected decoded across modalities, peaking around 400 ms after the stimulus, and this replicated in the second sample.
+- **Limits:** MEG, small samples; the shared signal is late and widespread, which a commentary reads as a content-free late modulation rather than a specific mechanism.
+- **For us:** The closest prior art to a cross-sense transfer screen. Late cross-modal transfer is established in MEG, so that alone would not be new; nobody has done it in open EEG into touch.
+- **Touches:** hypothesis-generator
 
 ### PyPhi: a toolbox for integrated information theory
 
@@ -249,6 +261,30 @@ Yaron I, Melloni L, Pitts M, Mudrik L (2022). *Nature Human Behaviour*. [doi:10.
 - **Limits:** Abstract only read here.
 - **For us:** The core argument for sealing definitions and scoring rules before data, as any tournament must.
 - **Touches:** Hypothesis tournament, COGITATE forecasts
+
+### Dissociating perceptual awareness and postperceptual processing: the P300 is not a reliable marker of somatosensory target detection
+
+Schröder P, Nierhaus T, Blankenburg F (2021). *Journal of Neuroscience*. [doi:10.1523/JNEUROSCI.2950-20.2021](https://doi.org/10.1523/JNEUROSCI.2950-20.2021). Paper, abstract only, **useful**.
+
+- **Question:** Does the P300 mark tactile awareness, or the report that follows it?
+- **Idea tested:** Decouple report from detection in the task.
+- **Data and method:** EEG, near-threshold somatosensory detection with two task versions that decouple report.
+- **Results:** The N140 tracked detection in both versions; the P300 difference vanished when report was decoupled.
+- **Limits:** Abstract only.
+- **For us:** Supports the early-negativity side in touch. A component screen on ds001785 should expect N140 to survive and the P3 to depend on report demands.
+- **Touches:** hypothesis-generator
+
+### Perceptual awareness negativity: a physiological correlate of sensory consciousness
+
+Dembski C, Koch C, Pitts M (2021). *Trends in Cognitive Sciences*. [doi:10.1016/j.tics.2021.05.009](https://doi.org/10.1016/j.tics.2021.05.009). Review, abstract only, **useful**.
+
+- **Question:** Is there one early ERP correlate of awareness across vision, hearing and touch?
+- **Idea tested:** Pool evidence on the visual, auditory and tactile awareness negativities.
+- **Data and method:** Review.
+- **Results:** Argues for a general 'perceptual awareness negativity' across senses and against the P3b as a correlate of awareness itself.
+- **Limits:** A review argument; it does not test whether the same pattern transfers across senses, and the negativities differ in topography by sense.
+- **For us:** The early-negativity prediction a theory-signed screen would test. Sensor-space transfer of the visual or auditory negativity into touch is expected to fail on anatomy alone.
+- **Touches:** hypothesis-generator
 
 ### Neural correlates of consciousness: progress and problems
 
@@ -709,7 +745,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (69)
+## Measuring consciousness (73)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -827,6 +863,18 @@ Frohlich J, Chiang JN, Mediano PAM, Nespeca M, Saravanapandian V, et al. (2022).
 - **For us:** The strongest counter-evidence to our 'complexity is just the spectrum' result. Our result holds for typical sleep EEG; a dissociation testbed like theirs is the right confound control for any marker tournament.
 - **Touches:** LZ vs spectrum, Hypothesis tournament
 
+### Evidence accumulation relates to perceptual consciousness and monitoring
+
+Pereira M, Megevand P, Tan MX, Chang W, Wang S, Rezai A, Seeck M, Corniola M, et al. (2021). *Nature Communications*. [doi:10.1038/s41467-021-23540-y](https://doi.org/10.1038/s41467-021-23540-y). Paper, full text, **core**.
+
+- **Question:** Does the neural evidence accumulation behind detecting a near-threshold touch also drive confidence and awareness?
+- **Idea tested:** Awareness and confidence both read out an accumulated evidence signal, not a separate all-or-none event.
+- **Data and method:** EEG, 62 channels at 1024 Hz, near-threshold vibrotactile detection with confidence, 500 trials per subject, 20% catch trials, staircase; also intracranial and single-neuron data. EEG data open as OpenNeuro ds001785 (18 subjects; about 140-215 hits and 184-259 misses each).
+- **Results:** A hit-vs-miss decoder defines an evidence-accumulation proxy that a leaky accumulator fits and that also tracks confidence. A per-electrode mixed model on the 0.5-1.5 s mean amplitude gives a detection x confidence interaction. Effects are late (>200 ms).
+- **Limits:** Named components (P50, N80, N140, P3), time-resolved mass-univariate maps and spectral contrasts are not in the main text.
+- **For us:** The strongest open trial-level seen/unseen EEG set we have. A preregistered, theory-tagged component screen on it is not in the paper.
+- **Touches:** hypothesis-generator
+
 ### An electrophysiological marker of arousal level in humans
 
 Lendner JD et al. (2020). *eLife*. [doi:10.7554/eLife.55092](https://doi.org/10.7554/eLife.55092). Journal article, abstract only, **core**.
@@ -909,6 +957,18 @@ Jeantin L et al. (2026). *PNAS Nexus*. [doi:10.1093/pnasnexus/pgag048](https://d
 - **Limits:** Propofol n=5, not classified.
 - **For us:** Complexity measures in sleep and propofol, intracranial only.
 - **Touches:** Task #5 transfer
+
+### Electrophysiological markers of surprise-induced failures of visual and auditory awareness
+
+Leong EL, Chua YD, Obana T, Asplund CL (2026). *Consciousness and Cognition 145:104118*. [doi:10.1016/j.concog.2026.104118](https://doi.org/10.1016/j.concog.2026.104118). Paper, abstract only, **useful**.
+
+- **Question:** Which EEG responses go with surprise-induced blindness and deafness, where a rare task-irrelevant surprise makes people miss a probe 300-400 ms later?
+- **Idea tested:** Surprise drives a novelty response that steals the resources needed to become aware of the probe.
+- **Data and method:** 33 adults, visual (SiB) and auditory (SiD) tasks in counterbalanced order; 16-channel OpenBCI EEG at 125 Hz, left-earlobe reference (stored values are microvolts/24). Data and code are open: OpenNeuro ds006394.
+- **Results:** A late parietal novelty positivity locked to the surprise shrank across trials along with the behavioural deficit; early and probe-evoked components differed by modality and did not habituate (abstract only). Their scripts contrast surprise vs standard and probe present vs absent; they do not contrast aware vs unaware probes.
+- **Limits:** Abstract only (paywalled). Low-density consumer EEG. Few unaware trials: our count from the behaviour files is a median of 3 surprise-induced misses per subject (visual) and 1 (auditory).
+- **For us:** We planned ds006394 as the discovery set for the hypothesis generator. Our trial counts killed that: too few unaware trials, and the misses are confounded with surprise and trial number (experiments/hypothesis_generator).
+- **Touches:** hypothesis-generator
 
 ### Identifying neural correlates of auditory perceptual awareness and deviance using a no-report inattentional deafness paradigm
 
@@ -1406,6 +1466,18 @@ Breyton M et al. (2025). *eLife*. [doi:10.7554/eLife.98920](https://doi.org/10.7
 - **For us:** Context for spontaneous-activity complexity measures.
 - **Touches:** Task #5 transfer
 
+### The P50 predicts conscious perception under tactile but not electrical somatosensory stimulation in human EEG
+
+Förster J, Vardiero G, Nierhaus T, Blankenburg F (2025). *bioRxiv*. [doi:10.1101/2025.02.28.640811](https://doi.org/10.1101/2025.02.28.640811). Preprint, abstract only, **context**.
+
+- **Question:** Which early somatosensory ERP components predict whether a near-threshold touch is consciously perceived?
+- **Idea tested:** Compare mechanical tactile with electrical stimulation.
+- **Data and method:** EEG, near-threshold somatosensory detection, tactile and electrical stimulation.
+- **Results:** Per the title, the P50 predicts conscious perception under tactile but not electrical stimulation; our prior-art read also reports N80, P100 and N140 effects and a persisting P300 difference (secondary summary, not checked against the text).
+- **Limits:** Preprint, not peer reviewed; we read only the title and a secondary summary.
+- **For us:** Early tactile components are candidate positive controls for a ds001785 screen.
+- **Touches:** hypothesis-generator
+
 ### Dynamical structure-function correlations provide robust and generalizable signatures of consciousness in humans
 
 Castro P, Luppi A, Tagliazucchi E, Perl YS, et al. (2024). *Communications Biology*. [doi:10.1038/s42003-024-06858-3](https://doi.org/10.1038/s42003-024-06858-3). Article, abstract only, **context**.
@@ -1461,6 +1533,18 @@ Eiserbeck A, Enge A, Rabovsky M, Abdel Rahman R (2021). *bioRxiv*. [doi:10.1101/
 - **Limits:** Only two lags plus target-absent, and 4 rating categories, so a conditional-independence test has very little power (7-33% in our planning agent's simulation).
 - **For us:** The only open blink set with trial-wise ratings found; too few strength levels for a decisive test.
 - **Touches:** Fable#13 item 4, all-or-none vs graded
+
+### ERP and MEG correlates of visual consciousness: the second decade
+
+Förster J, Koivisto M, Revonsuo A (2020). *Consciousness and Cognition*. [doi:10.1016/j.concog.2020.102917](https://doi.org/10.1016/j.concog.2020.102917). Review, abstract only, **context**.
+
+- **Question:** What has a decade of ERP and MEG work found about correlates of visual awareness?
+- **Idea tested:** Narrative review.
+- **Data and method:** Review.
+- **Results:** Favours the visual awareness negativity (VAN) over the late positivity as the correlate of visual awareness.
+- **Limits:** Narrative, not a meta-analysis; Hutchinson et al. 2026 is the quantitative follow-up.
+- **For us:** Background for which components count as established.
+- **Touches:** hypothesis-generator
 
 ### A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations
 

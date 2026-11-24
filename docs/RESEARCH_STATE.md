@@ -348,6 +348,32 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
   - **Next ledger test:** a knowledge-cutoff difference-in-differences (AI-only). Compare models that know an item with models that don't, on items published between their cutoffs, and subtract the same contrast on the 9 unknowable items.
 - **Details:** `experiments/theory_leak/MC_RESULTS.md`.
 
+### Hypothesis generator, step 0: prior art and data kill test. ds006394 killed as the discovery set (2026-11-24)
+- **Prior art:** read by a Fable research agent. 7 papers were added to the library: Leong 2026, Pereira 2021, Sanchez 2020, Schröder 2021, Förster 2025, Dembski 2021 and Förster 2020.
+  - **Established, do not redo:**
+    - VAN/AAN and N140 track awareness within each sense.
+    - The P3b is larger for seen stimuli but depends on report (Schröder 2021).
+    - Late cross-modal decoding of detected vs undetected stimuli exists in MEG (Sanchez 2020, replicated in a second sample).
+    - The surprise-induced blindness/deafness effect is explained by a novelty P3 (Leong 2026).
+  - **Open:**
+    - A preregistered, theory-tagged component screen on ds001785. Pereira 2021 reports a decoder and a 0.5–1.5 s mixed model, but no named components, time-resolved maps or spectral contrasts.
+    - EEG transfer from a visual set into touch. No EEG study found does this.
+- **Kill test (trial counts, from behaviour files only): FAILED.** Counts are in `experiments/hypothesis_generator/trial_counts.csv`.
+  - **Too few unaware trials:** surprise-induced misses have a median of 3 per subject (visual) and 1 (auditory); all misses, a median of 9 and 6.
+  - **Weak recording:** 16-channel OpenBCI at 125 Hz with an earlobe reference.
+  - **Confound:** misses are confounded with surprise and trial number.
+  - **So:** ds006394 cannot carry a many-candidate screen.
+- **Replacement checked: ds001810** (attentional blink; Biosemi, 64 channels, 512 Hz; about 40 subjects with both visits).
+  - **Clean blocks:** the two pre-tDCS blocks per subject are free of tDCS artefact.
+  - **Trial counts:** in 3 subjects sampled, one pre block had 23–59 lag-3 T2 errors and 32–95 correct, given T1 correct.
+  - **Caveat:** T2 is scored as correct or incorrect identification, not seen/unseen, so "miss" includes seen-but-misidentified trials.
+- **Proposed redesign (not sealed):**
+  - **Screen:** ds001810 pre blocks, lag-3 T2 correct vs incorrect given T1 correct.
+  - **Confirm:** ds001785 (tactile hit vs miss), with candidates signed by theory.
+  - **Positive controls:** known effects within each dataset.
+  - **Prior-art expectation:** early negativities will not transfer across senses (topography), while late effects may. A clean result would therefore mostly separate "late, content-free" from "early, sense-specific" signatures.
+  - **Next:** read Reteig et al. on ds001810 (what EEG they report), then the strongest kill test: does any screen survivor beat a label-shuffled null on held-out ds001810 subjects before touching ds001785?
+
 ### Site deploy deferred (2026-11-24)
 
 The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:
