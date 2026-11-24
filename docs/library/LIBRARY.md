@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-24. Do not edit by hand.
 
-200 entries: 33 read in full, 167 from the abstract only. Every DOI was opened and its title and authors checked.
+204 entries: 34 read in full, 170 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -769,7 +769,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (78)
+## Measuring consciousness (82)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -847,9 +847,9 @@ Cohen MA, Dembski C, Ortego K, Steinhibler C, Pitts MA (2024). *Cerebral Cortex*
 - **Idea tested:** Visual masking with 5 linear SOAs (17-83 ms), separate report and no-report conditions, ERP analysis.
 - **Data and method:** EEG, 40 participants; seen rates about 58% at 50 ms and 89% at 67 ms in the report condition. Data on OSF 6d5av (no licence stated).
 - **Results:** Only a fronto-central N2 (about 250-300 ms) follows awareness nonlinearly in both conditions; the VAN does not survive removal of report; earlier ERPs follow the linear SOA manipulation.
-- **Limits:** Condition-averaged ERPs: no single-trial bimodality test at fixed strength. OSF data has no licence stated, so reuse is blocked until clarified.
-- **For us:** Primary dataset for the no-report bifurcation kill test (experiments/bifurcation). Its trial counts set the planted-power design.
-- **Touches:** bifurcation
+- **Limits:** Condition-averaged ERPs: no single-trial or fixed-SOA seen vs unseen test. OSF data has no licence stated; analysed locally with derived statistics only (coordinator decision 2026-11-24), and the corresponding author was asked about reuse terms.
+- **For us:** Primary dataset for the fixed-SOA seen vs unseen kill test (experiments/cohen_fixed_soa) and the no-report bifurcation test (experiments/bifurcation).
+- **Touches:** bifurcation, cohen-fixed-soa
 
 ### Spectral Slope and Lempel-Ziv Complexity as Robust Markers of Brain States during Sleep and Wakefulness
 
@@ -1041,6 +1041,18 @@ Ruyant Belabbas A, Boullet A, Manasova D, Le Coz A, Valente M, Lejeune F, Sitt J
 - **Limits:** Abstract only; data availability unknown; no open DoC EEG.
 - **For us:** Slow-wave density and slope belong on our arousal axis. If the Paris DoC EEG ever opens, Study 2's DoC arm could test whether complexity markers add anything over slow-wave features.
 - **Touches:** Study 2, #5
+
+### Subjective Visibility Enhances Early Posterior Electroencephalography Decoding of Stimulus Location across Report and No-report Tasks
+
+Gnodde S, Aslanov V, Hogan A, Francken JC, Olcese U, Stein T (2026). *Journal of Cognitive Neuroscience*. [doi:10.1162/jocn.a.2691](https://doi.org/10.1162/jocn.a.2691). Article, abstract only, **useful**.
+
+- **Question:** Does subjective visibility change what EEG can decode about a stimulus, with and without report?
+- **Idea tested:** Near-threshold gratings; stimulus-location decoding in report and no-report tasks, split by visibility.
+- **Data and method:** EEG; gratings, not faces. Preprint: doi:10.64898/2026.04.20.719596 ('Posterior but not frontal neural signatures of subjective visibility in report-independent EEG decoding').
+- **Results:** Visibility enhances early posterior location decoding (about 130-170 ms) in both tasks; no frontal visibility effect.
+- **Limits:** Location decoding, not an awareness contrast at a fixed ERP window; different stimuli and data.
+- **For us:** Supports testing the posterior VAN window at fixed SOA in Cohen 2024; not a pre-emption of that test.
+- **Touches:** cohen-fixed-soa
 
 ### White-matter disconnection shapes distributed cortical spectral dynamics after stroke
 
@@ -1238,6 +1250,18 @@ Casali AG, Gosseries O, Rosanova M, Boly M, Sarasso S and others; senior author 
 - **For us:** The measure every spontaneous-EEG candidate is judged against.
 - **Touches:** news
 
+### Uncovering the Mechanisms of Conscious Face Perception: A Single-Trial Study of the N170 Responses
+
+Navajas J, Ahmadi M, Quian Quiroga R (2013). *Journal of Neuroscience*. [doi:10.1523/JNEUROSCI.1226-12.2013](https://doi.org/10.1523/JNEUROSCI.1226-12.2013). Article, abstract only, **useful**.
+
+- **Question:** Is the N170 larger on single trials when a face at fixed noise is consciously seen?
+- **Idea tested:** Faces in noise at a fixed level near threshold; single-trial N170 analysis by report.
+- **Data and method:** EEG, face detection with report.
+- **Results:** At fixed stimulus noise, seen (supraliminal) faces evoke a larger N170 than unseen ones on single trials.
+- **Limits:** Report task, so seen vs unseen also differ in report; a different paradigm (noise, not masking).
+- **For us:** A VAN/N170 seen > unseen effect at fixed SOA in Cohen 2024 would replicate this; it is the expected positive result, not a new one.
+- **Touches:** cohen-fixed-soa
+
 ### Evidence for discrete-state processing in recognition memory
 
 Province JM, Rouder JN (2012). *PNAS 109(36)*. [doi:10.1073/pnas.1103880109](https://pmc.ncbi.nlm.nih.gov/articles/PMC3437893/). Paper, full text, **useful**.
@@ -1273,6 +1297,18 @@ Nieuwenhuis S, de Kleijn R (2011). *Attention, Perception, & Psychophysics 73*. 
 - **Limits:** The authors note that group histograms can blur individual patterns. Depth of reading not recorded by the planning agent, so treated as abstract.
 - **For us:** The all-or-none shape depends on the measure, which is part of why a behavioural ratings test cannot split theories.
 - **Touches:** Fable#13 item 4, all-or-none vs graded
+
+### Brain Dynamics Underlying the Nonlinear Threshold for Access to Consciousness
+
+Del Cul A, Baillet S, Dehaene S (2007). *PLoS Biology*. [doi:10.1371/journal.pbio.0050260](https://doi.org/10.1371/journal.pbio.0050260). Article, abstract only, **useful**.
+
+- **Question:** Which ERP stages track the nonlinear visibility curve under masking?
+- **Idea tested:** Backward masking of digits across SOAs; ERPs with mask-only subtraction; visibility ratings.
+- **Data and method:** EEG; the source of the SOA-curve bifurcation method Cohen 2024 follows.
+- **Results:** Early ERPs grow linearly with SOA; a late divergence from about 270 ms follows the nonlinear visibility curve (P3-like, frontal-parietal).
+- **Limits:** Across-SOA curves mix stimulus strength with awareness, the same confound our fixed-SOA test addresses.
+- **For us:** Ledger C35 baseline. Our fixed-SOA contrast tests whether divergence at a fixed stimulus also starts this late.
+- **Touches:** cohen-fixed-soa
 
 ### Detecting Awareness in the Vegetative State
 
@@ -1513,6 +1549,18 @@ Yu M, Xiao X, Ding J, Zhao M, Cruz S, Hu N, Zhang M, Laureys S, Di H, Chen Y (20
 - **Limits:** Small; task-based.
 - **For us:** Context.
 - **Touches:** Study 2
+
+### Decoding EEG Bifurcation Dynamics Around Visual Detection Threshold in No-Report
+
+Nicolacoudis A (2025). *Reed College BA thesis (advisor M Pitts)*. [doi:](https://www.reed.edu/psychology/scalp/thesis/files/Nicolacoudis_Thesis_Final_2025.pdf). Thesis, full text, **context**.
+
+- **Question:** Do EEG decoding dynamics bifurcate around detection threshold without report?
+- **Idea tested:** New experiment from the same lab: gratings varying in contrast, no masks, report and no-report.
+- **Data and method:** EEG, new data (not the Cohen 2024 set).
+- **Results:** Argues that the across-SOA VAN analysis in Cohen 2024 was hindered by overlap with mask responses, which motivated a mask-free design.
+- **Limits:** Undergraduate thesis, not peer reviewed; different stimuli.
+- **For us:** Supports holding the stimulus fixed (one SOA) rather than comparing across SOAs; does not pre-empt our test.
+- **Touches:** cohen-fixed-soa
 
 ### Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms
 

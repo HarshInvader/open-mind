@@ -486,9 +486,44 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
   - the P3b seen > unseen positive control at SOA 50 on the 15 window-defining subjects, used as a spent pilot set;
   - stop if it fails.
 
+### Cohen 2024 fixed-SOA study: prior art done, prereg drafted, epochs fetching (2026-11-24)
+
+- **Prior art (read myself after the Fable agent died on a 503):**
+  - **Authors' OSF prereg:** windows fixed on 15 pilot subjects:
+    - P1: electrodes 41–45 and 53–57, 100–140 ms.
+    - P3b: electrodes 1, 4–6 and 13–15, 300–500 ms.
+    - N2: electrodes 1–11 and 17–19, 250–290 ms.
+    - The prereg analyses only SOA curves with mask-only subtraction; it has no fixed-SOA seen vs unseen contrast.
+  - **The paper:**
+    - linked-mastoid reference;
+    - the VAN (PO9/PO10, 140–200 ms) was added post hoc;
+    - the N2 did not bifurcate in the report condition, which the authors put down to P3b overlap.
+  - **Nicolacoudis 2025 (Reed thesis):** new grating data. Argues that mask overlap hindered the across-SOA VAN analysis.
+  - **Gnodde 2026 (JoCN) and its preprint:** posterior visibility decoding at 130–170 ms, nothing frontal; gratings.
+  - **Navajas 2013:** larger N170 for seen faces at fixed noise.
+  - **Del Cul 2007:** late divergence at about 270 ms.
+  - **Novelty:** none pre-empts a fixed-SOA test of the authors' N2 and VAN. All four were added to the library (204 entries).
+- **Pilot set (inferred):**
+  - IDs 1001–1022, 15 subjects, recorded 2021-04-20 to 2021-07-09.
+  - These are the only IDs ≤ 1022, and the gap in IDs before 1023 fits. The 16th recording, 2021-07-23, is also before the 2021-08-27 OSF node, so the inference rests on the ID numbers more than the dates.
+- **Channel map:**
+  - The .vhdr spherical coordinates give Ch58 = left mastoid (recording reference: right mastoid), Ch61 = VEOG, Ch62/Ch63 = left/right HEOG, Ch53/Ch57 = PO10/PO9.
+  - This matches the paper's Fp1 = Ch50 and the P3b electrode names.
+- **Marker check:** face to mask is 25 samples (50 ms) in 5,091 of 5,116 SOA-50 trials.
+- **Licence:**
+  - OSF 6d5av states none. The coordinator approved local analysis, with only derived statistics published under full citation.
+  - The corresponding author was emailed (AgentMail, 2026-11-24) about reuse terms and citation.
+  - The site write-up waits for his reply or 14 days.
+- **Fetch:** `fetch_epochs.py` range-reads −100 to +600 ms around face onset for the 5,079 SOA-50 report trials with an answer, about 224 MB. Project download total: 1.2545 + 0.0098 + 0.224 ≈ 1.49 GB, under 1.5 GB.
+- **Kill test:** prereg draft `docs/prereg/2026-11-24_cohen_fixed_soa_killtest.md`, script `cohen_killtest.py`.
+  - The verdict comes from the 25 confirmatory subjects. P3b is the gate, N2 and VAN are the targets (Holm), and P1 is a null control.
+  - Outcomes: PASS, KILLED (the CI excludes a predicted effect of 0.5 µV or more) or INCONCLUSIVE.
+  - Label-free fix: a 30 Hz low-pass before rejection. Without it, HEOG noise rejected 41% of subject 1001's trials; with it, 6%.
+  - Fable pre-seal review running.
+
 ### Site deploy deferred (2026-11-24)
 
 The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:
 - the leak-probe and manipulation-check `site/updates.json` entries;
-- the library additions (+8 earlier, and the P02–P04 key results);
+- the library additions (+8 earlier, the P02–P04 key results, and +4 for the Cohen fixed-SOA study);
 - the paper pages that follow from them.

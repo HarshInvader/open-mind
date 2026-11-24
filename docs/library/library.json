@@ -3587,10 +3587,11 @@
    "tried": "Visual masking with 5 linear SOAs (17-83 ms), separate report and no-report conditions, ERP analysis.",
    "method_data": "EEG, 40 participants; seen rates about 58% at 50 ms and 89% at 67 ms in the report condition. Data on OSF 6d5av (no licence stated).",
    "key_results": "Only a fronto-central N2 (about 250-300 ms) follows awareness nonlinearly in both conditions; the VAN does not survive removal of report; earlier ERPs follow the linear SOA manipulation.",
-   "limits": "Condition-averaged ERPs: no single-trial bimodality test at fixed strength. OSF data has no licence stated, so reuse is blocked until clarified.",
-   "ideas_for_us": "Primary dataset for the no-report bifurcation kill test (experiments/bifurcation). Its trial counts set the planted-power design.",
+   "limits": "Condition-averaged ERPs: no single-trial or fixed-SOA seen vs unseen test. OSF data has no licence stated; analysed locally with derived statistics only (coordinator decision 2026-11-24), and the corresponding author was asked about reuse terms.",
+   "ideas_for_us": "Primary dataset for the fixed-SOA seen vs unseen kill test (experiments/cohen_fixed_soa) and the no-report bifurcation test (experiments/bifurcation).",
    "touches": [
-    "bifurcation"
+    "bifurcation",
+    "cohen-fixed-soa"
    ],
    "relevance": "core",
    "url": "https://doi.org/10.1093/cercor/bhae415"
@@ -5094,6 +5095,106 @@
    "in_news": false,
    "added": "2026-11-24",
    "verified": true
+  },
+  {
+   "kind": "Article",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-24",
+   "verified": true,
+   "id": "gnodde-2026-visibility-posterior-decoding",
+   "title": "Subjective Visibility Enhances Early Posterior Electroencephalography Decoding of Stimulus Location across Report and No-report Tasks",
+   "authors": "Gnodde S, Aslanov V, Hogan A, Francken JC, Olcese U, Stein T",
+   "year": 2026,
+   "venue": "Journal of Cognitive Neuroscience",
+   "doi": "10.1162/jocn.a.2691",
+   "topic": "Measuring consciousness",
+   "question": "Does subjective visibility change what EEG can decode about a stimulus, with and without report?",
+   "tried": "Near-threshold gratings; stimulus-location decoding in report and no-report tasks, split by visibility.",
+   "method_data": "EEG; gratings, not faces. Preprint: doi:10.64898/2026.04.20.719596 ('Posterior but not frontal neural signatures of subjective visibility in report-independent EEG decoding').",
+   "key_results": "Visibility enhances early posterior location decoding (about 130-170 ms) in both tasks; no frontal visibility effect.",
+   "limits": "Location decoding, not an awareness contrast at a fixed ERP window; different stimuli and data.",
+   "ideas_for_us": "Supports testing the posterior VAN window at fixed SOA in Cohen 2024; not a pre-emption of that test.",
+   "touches": [
+    "cohen-fixed-soa"
+   ],
+   "relevance": "useful",
+   "url": "https://doi.org/10.1162/jocn.a.2691"
+  },
+  {
+   "kind": "Article",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-24",
+   "verified": true,
+   "id": "navajas-2013-n170-single-trial",
+   "title": "Uncovering the Mechanisms of Conscious Face Perception: A Single-Trial Study of the N170 Responses",
+   "authors": "Navajas J, Ahmadi M, Quian Quiroga R",
+   "year": 2013,
+   "venue": "Journal of Neuroscience",
+   "doi": "10.1523/JNEUROSCI.1226-12.2013",
+   "topic": "Measuring consciousness",
+   "question": "Is the N170 larger on single trials when a face at fixed noise is consciously seen?",
+   "tried": "Faces in noise at a fixed level near threshold; single-trial N170 analysis by report.",
+   "method_data": "EEG, face detection with report.",
+   "key_results": "At fixed stimulus noise, seen (supraliminal) faces evoke a larger N170 than unseen ones on single trials.",
+   "limits": "Report task, so seen vs unseen also differ in report; a different paradigm (noise, not masking).",
+   "ideas_for_us": "A VAN/N170 seen > unseen effect at fixed SOA in Cohen 2024 would replicate this; it is the expected positive result, not a new one.",
+   "touches": [
+    "cohen-fixed-soa"
+   ],
+   "relevance": "useful",
+   "url": "https://doi.org/10.1523/JNEUROSCI.1226-12.2013"
+  },
+  {
+   "kind": "Article",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-24",
+   "verified": true,
+   "id": "delcul-2007-nonlinear-threshold",
+   "title": "Brain Dynamics Underlying the Nonlinear Threshold for Access to Consciousness",
+   "authors": "Del Cul A, Baillet S, Dehaene S",
+   "year": 2007,
+   "venue": "PLoS Biology",
+   "doi": "10.1371/journal.pbio.0050260",
+   "topic": "Measuring consciousness",
+   "question": "Which ERP stages track the nonlinear visibility curve under masking?",
+   "tried": "Backward masking of digits across SOAs; ERPs with mask-only subtraction; visibility ratings.",
+   "method_data": "EEG; the source of the SOA-curve bifurcation method Cohen 2024 follows.",
+   "key_results": "Early ERPs grow linearly with SOA; a late divergence from about 270 ms follows the nonlinear visibility curve (P3-like, frontal-parietal).",
+   "limits": "Across-SOA curves mix stimulus strength with awareness, the same confound our fixed-SOA test addresses.",
+   "ideas_for_us": "Ledger C35 baseline. Our fixed-SOA contrast tests whether divergence at a fixed stimulus also starts this late.",
+   "touches": [
+    "cohen-fixed-soa"
+   ],
+   "relevance": "useful",
+   "url": "https://doi.org/10.1371/journal.pbio.0050260"
+  },
+  {
+   "kind": "Thesis",
+   "read_depth": "full",
+   "in_news": false,
+   "added": "2026-11-24",
+   "verified": true,
+   "id": "nicolacoudis-2025-reed-thesis-bifurcation",
+   "title": "Decoding EEG Bifurcation Dynamics Around Visual Detection Threshold in No-Report",
+   "authors": "Nicolacoudis A",
+   "year": 2025,
+   "venue": "Reed College BA thesis (advisor M Pitts)",
+   "doi": "",
+   "topic": "Measuring consciousness",
+   "question": "Do EEG decoding dynamics bifurcate around detection threshold without report?",
+   "tried": "New experiment from the same lab: gratings varying in contrast, no masks, report and no-report.",
+   "method_data": "EEG, new data (not the Cohen 2024 set).",
+   "key_results": "Argues that the across-SOA VAN analysis in Cohen 2024 was hindered by overlap with mask responses, which motivated a mask-free design.",
+   "limits": "Undergraduate thesis, not peer reviewed; different stimuli.",
+   "ideas_for_us": "Supports holding the stimulus fixed (one SOA) rather than comparing across SOAs; does not pre-empt our test.",
+   "touches": [
+    "cohen-fixed-soa"
+   ],
+   "relevance": "context",
+   "url": "https://www.reed.edu/psychology/scalp/thesis/files/Nicolacoudis_Thesis_Final_2025.pdf"
   }
  ]
 }
