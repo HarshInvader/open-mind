@@ -1,0 +1,27 @@
+{
+ "subjects": 24,
+ "runs": 300,
+ "plant_uv": 1.2,
+ "rates": {
+  "null": {
+   "INCONCLUSIVE": 0.9566666666666667,
+   "ROBUST": 0.01,
+   "REDUCED": 0.03333333333333333
+  },
+  "confound": {
+   "EXPLAINED": 0.7933333333333333,
+   "INCONCLUSIVE": 0.18333333333333332,
+   "REDUCED": 0.023333333333333334
+  },
+  "within": {
+   "ROBUST": 0.9633333333333334,
+   "REDUCED": 0.03666666666666667
+  }
+ },
+ "confound_mean_unadjusted_uv": -1.2021853170310308,
+ "false_robust_null": 0.043333333333333335,
+ "false_robust_confound": 0,
+ "explained_confound": 0.7933333333333333,
+ "power_within": 0.9633333333333334,
+ "PASS": true
+}

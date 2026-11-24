@@ -170,3 +170,7 @@ a37e39ed7b1f1c160a64316572af452de80d4bc9898c379cd0cebdd3371d2afd  experiments/th
 8341c7132dbf2eccd13715bceeed6a002fdbcbf4365aba18de03693f9f345e25  experiments/cohen_fixed_soa/out/arousal_calibration.json  2026-11-24T20:07:59Z
 cafd265adfc62e83ca69b7e27ecdfe4335b0395d78d8f3ab3d661eeedafd808e  experiments/cohen_fixed_soa/out/arousal_covars.npz  2026-11-24T20:07:59Z
 e0832e57e52ed8f9cf2ef37c249ecb4c68e825079b4888639ae1d0c5ff9e1c19  docs/prereg/2026-11-24_theory_splitfirst_pool_A.md  2026-11-24T20:20:24Z
+23e9ba71eb1b98aa62e6b3be9599f15d31571ec34bec3bf563c00f259aa747a0  docs/prereg/2026-11-24_cohen_van_identity_avgref.md  2026-11-24T21:41:49Z
+05a0c5868ac9c0cc31009ab08f7e534aa0f2d427383fb34913a3ea9c1d5ce541  experiments/cohen_fixed_soa/van_identity.py  2026-11-24T21:41:49Z
+737da493e84c981bcc8fe8276e9ee8cceeef9c0cea6d71bc2ff98fb9844de83e  experiments/cohen_fixed_soa/out/identity_calibration.json  2026-11-24T21:41:49Z
+2932043d272f72d1b209f7f19e65c962b3b7cae9c4c14023361faf7503dcf23e  experiments/cohen_fixed_soa/out/avgref.npz  2026-11-24T21:41:49Z
