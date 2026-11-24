@@ -333,10 +333,19 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
 - **Result:** LEAK-BOUNDED in both the primary and sensitivity analyses, on both scales.
   - Every L_t is between +0.01 and +0.06 bits. Only PP's CI excludes 0: +0.062 [+0.015, +0.118], still inside the 0.15 limit.
   - D = +0.010 bits [−0.055, +0.081].
-- **Compared with the disowned cue:** believing the outcome adds a small, uniform pull of about +0.03 bits, largest for PP. It does not favour IIT.
+- **Compared with the disowned cue:** stipulating the outcome adds a small, uniform pull of about +0.03 bits, largest for PP. It does not favour IIT.
 - **Limit:** belief was stipulated, not held. q_own moved only to 0.57 toward the cued side. The memory path stays untested.
 - **Rationales:** 1 of 648 "why" strings matched the sealed regex, and that match was a false positive ("reported experience").
 - **Decision:** neither kill branch fired, so the ledger is not demoted. The 59-item amendment stays parked on the elastic-fraction rule. Next is the hypothesis generator (ds006394 screen, ds001785 confirm).
+- **Fable interpreting review** (no computational error; the point estimates were recomputed from the raw files):
+  - **May claim:** a stipulated outcome moves every theory by less than 0.12 bits and IIT-vs-GNWT/HOT by less than 0.08 bits on these 9 items. A text-level outcome cue, disowned or stipulated, does not produce the IIT lead.
+  - **May not claim:**
+    - that raters hold steady under belief, because no q_own reached 0.9;
+    - that the leak stays small under real recall, because the exploratory pull rises with q_own;
+    - that the pilot's IIT lead is leak-free;
+    - that the bound generalises, because Fable carries most of the pull.
+  - **Wording:** MC_RESULTS was softened: "believed" became "stipulated", and "closes the gap" became "narrows".
+  - **Next ledger test:** a knowledge-cutoff difference-in-differences (AI-only). Compare models that know an item with models that don't, on items published between their cutoffs, and subtract the same contrast on the 9 unknowable items.
 - **Details:** `experiments/theory_leak/MC_RESULTS.md`.
 
 ### Site deploy deferred (2026-11-24)
