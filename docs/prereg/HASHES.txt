@@ -176,3 +176,5 @@ e0832e57e52ed8f9cf2ef37c249ecb4c68e825079b4888639ae1d0c5ff9e1c19  docs/prereg/20
 2932043d272f72d1b209f7f19e65c962b3b7cae9c4c14023361faf7503dcf23e  experiments/cohen_fixed_soa/out/avgref.npz  2026-11-24T21:41:49Z
 f7f592ae4eb875e99ba931897bd000abff133a717df3c8a33a9cab2a621fc53a  docs/prereg/2026-11-24_bifurcation_specificity_audit.md  2026-11-24T21:52:47Z
 e02601f8f2a5fb176150b021e7be509e661187622ac73dfba2a8c83c4d15737f  experiments/bifurcation_specificity/audit.py  2026-11-24T21:52:47Z
+a24699ec486a4bd7dade0d56c1d779c56440ec4a888fbb1dc0893f5ed80e64cb  docs/prereg/2026-11-25_bifurcation_extended_model_set.md  2026-11-24T23:26:07Z
+83006cb71803bdc2e1e81a74f45e8a3f77bbb925c194fe0bb2ab3fe9200531c4  experiments/bifurcation_specificity/extended.py  2026-11-24T23:26:07Z
