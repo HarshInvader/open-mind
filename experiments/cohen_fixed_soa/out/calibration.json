@@ -1,0 +1,21 @@
+{
+ "subjects": 24,
+ "shuffled_runs": 200,
+ "false_any_target_pass": 6,
+ "false_rate": 0.03,
+ "killed_rate_true_zero": {
+  "N2": 0.77,
+  "VAN": 0.98
+ },
+ "planted_bound_uv": 1.0,
+ "planted_runs": 200,
+ "planted_pass_rate": {
+  "N2": 0.705,
+  "VAN": 1.0
+ },
+ "planted_killed_rate": {
+  "N2": 0.03,
+  "VAN": 0.0
+ },
+ "perms_per_run": 2000
+}

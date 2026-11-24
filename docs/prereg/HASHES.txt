@@ -145,3 +145,9 @@ dbc0a130f555487e78b2a1e0132894d8190ffb6fe1edbf572e7e020811d125ce  experiments/hy
 e0e84a03197cb9207759e8f6b4f0268aafa499cf97bd1fa278797786083dc4a9  experiments/hypothesis_generator/ab_out/eligibility.csv  2026-11-24T09:55:23Z
 0698424c85ebfd804ab0496eb71246ee40047e9e41aa27fe0e0ac8c44d16c281  experiments/hypothesis_generator/ab_out/prep_hashes.json  2026-11-24T09:55:23Z
 0032a0487b6d1ad842bcbcb34a65ec9ac9463cd6233c47c29a9ca7d37d94555f  experiments/hypothesis_generator/ab_out/survivors.json  2026-11-24T09:55:55Z
+7cd7badf82e7d1fa21215b2e5506129c11975190088473ef98a1e3e330445549  docs/prereg/2026-11-24_cohen_fixed_soa_killtest.md  2026-11-24T18:18:22Z
+ff8a7993d78740c93b8034edc769645349ed0eef89d30a814a5808b7c0228a88  experiments/cohen_fixed_soa/cohen_killtest.py  2026-11-24T18:18:22Z
+917662fad1cf38e668e52ba277145679157584c054326ee1dd977608d8452c0e  experiments/cohen_fixed_soa/out/eligibility.csv  2026-11-24T18:18:22Z
+ab36c20594f6da4e7c9258194a669ab5f77d2af9a9946cac567cd839b6a5cc40  experiments/cohen_fixed_soa/out/prep_hashes.json  2026-11-24T18:18:22Z
+794e21e640a59fc3d74826ed95615037742b12a8158b86e7616dc5131b5352eb  experiments/cohen_fixed_soa/out/align.json  2026-11-24T18:18:22Z
+06dc45530a2e9ee494edfcbbd92d28b37f64943e2b71005fc0dc15b7996ca193  experiments/cohen_fixed_soa/out/calibration.json  2026-11-24T18:18:22Z

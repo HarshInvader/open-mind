@@ -1,6 +1,6 @@
 # Pre-registration: does the "report-free" N2 separate seen from unseen at a fixed stimulus? (Cohen et al. 2024, SOA 50 ms)
 
-Agent: Open Mind thread   Date: 2026-11-24   Status: DRAFT (not sealed; revised after the Fable pre-seal review)
+Agent: Open Mind thread   Date: 2026-11-24   Status: SEALED 2026-11-24 (after two Fable pre-seal reviews; hashes in docs/prereg/HASHES.txt)
 
 - **Script:** `experiments/cohen_fixed_soa/cohen_killtest.py`.
 - **Data:** Cohen, Dembski, Ortego, Steinhibler & Pitts 2024, Cereb Cortex, doi:10.1093/cercor/bhae415, OSF 6d5av.
@@ -144,6 +144,14 @@ Agent: Open Mind thread   Date: 2026-11-24   Status: DRAFT (not sealed; revised 
 - **Planted bound:** a −1.0 µV seen effect planted into N2 and VAN separately, 200 runs each.
   - The PASS rate (power) and the KILLED rate are reported.
   - If the KILLED rate under the planted bound is above 0.05, KILLED for that target is reported as "not calibrated" rather than as a kill. `run` applies this automatically.
+- **Calibration result (2026-11-24, before sealing, 24 confirmatory subjects):**
+  - false any-target PASS: 6 of 200 runs (0.03);
+  - KILLED under a true zero: N2 0.77, VAN 0.98;
+  - under the planted −1.0 µV bound: PASS N2 0.705, VAN 1.0; KILLED N2 0.03, VAN 0.0. Both targets are calibrated.
+- **Label-free gates before sealing:**
+  - alignment passed on all 40 subjects: onset 92 ms, peak 142 ms, 100–160 ms mean +4.2 µV, t = 11.5;
+  - median rejection 13.8% (maximum 38.3%), no bad channels, no mastoid flags;
+  - eligible: 24 of 25 confirmatory (1052 has 14 unseen) and 14 of 15 pilot (1008 has 19 seen).
 - **Run gates:** `run` also refuses unless:
   - the alignment check passed on all 40 subjects;
   - `align.json` and `calibration.json` match the hashes in the sealed `prep_hashes.json`;
