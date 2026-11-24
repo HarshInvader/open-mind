@@ -165,3 +165,7 @@ d3429a12e5dc52632ab1c100ee38e77400f643a101e1afdbd8c83b09a394e2aa  experiments/th
 6016d4beffda667ee4d3ce903601ae394009bb9b2a65bc4eddea3db02417a161  experiments/theory_postcutoff/packets/recog_sonnet_key.json  2026-11-24T19:23:41Z
 a37e39ed7b1f1c160a64316572af452de80d4bc9898c379cd0cebdd3371d2afd  experiments/theory_postcutoff/planted.json  2026-11-24T19:23:41Z
 5a9eb760f06813ab786d00abb83905602a30ac67185df7fdd8d8b2ecaff2e4e7  experiments/theory_postcutoff/abstract_hashes.json  2026-11-24T19:23:41Z
+661225d836c60b9e5636f1b176c8fcc566019e0f45278308359659d72978a920  docs/prereg/2026-11-24_cohen_van_arousal_control.md  2026-11-24T20:07:59Z
+722314dbb22d63a2bd389a755a8cec40c1eda4b6ce6a6ab7ebea1ef1c33e60ee  experiments/cohen_fixed_soa/arousal_control.py  2026-11-24T20:07:59Z
+8341c7132dbf2eccd13715bceeed6a002fdbcbf4365aba18de03693f9f345e25  experiments/cohen_fixed_soa/out/arousal_calibration.json  2026-11-24T20:07:59Z
+cafd265adfc62e83ca69b7e27ecdfe4335b0395d78d8f3ab3d661eeedafd808e  experiments/cohen_fixed_soa/out/arousal_covars.npz  2026-11-24T20:07:59Z

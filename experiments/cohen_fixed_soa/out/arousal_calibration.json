@@ -1,0 +1,31 @@
+{
+ "subjects": 24,
+ "runs": 300,
+ "plant_uv": 1.16,
+ "retain_bar": 0.5,
+ "rates": {
+  "null_shuffled": {
+   "INCONCLUSIVE": 0.9633333333333334,
+   "REDUCED": 0.03,
+   "ROBUST": 0.006666666666666667
+  },
+  "planted_direct_clean": {
+   "ROBUST": 1.0
+  },
+  "planted_direct_coupled": {
+   "REDUCED": 0.9533333333333334,
+   "ROBUST": 0.04666666666666667
+  },
+  "planted_confound": {
+   "EXPLAINED": 0.9833333333333333,
+   "REDUCED": 0.016666666666666666
+  }
+ },
+ "confound_mean_unadjusted_uv": -2.196493077173912,
+ "coupled_mean_unadjusted_uv": -2.196493077173912,
+ "coupled_mean_adjusted_uv": -1.1272900350000896,
+ "false_robust_null": 0.03666666666666667,
+ "false_robust_confound": 0,
+ "power_direct": 1.0,
+ "PASS": true
+}
