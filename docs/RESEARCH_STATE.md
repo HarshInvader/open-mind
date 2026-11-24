@@ -374,6 +374,18 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
   - **Prior-art expectation:** early negativities will not transfer across senses (topography), while late effects may. A clean result would therefore mostly separate "late, content-free" from "early, sense-specific" signatures.
   - **Next:** read Reteig et al. on ds001810 (what EEG they report), then the strongest kill test: does any screen survivor beat a label-shuffled null on held-out ds001810 subjects before touching ds001785?
 
+### Ledger knowledge-cutoff DiD: power check. DiD underpowered with current items (2026-11-24)
+- **Models we can call:**
+  - Current: Fable 5.2/5.1/5, Opus 5.5/5, Sonnet 5.5, Haiku 5.5.
+  - Older: Opus 4.8/4.7, and Haiku 4.5 via OpenCode, with a published cutoff of Feb 2025.
+  - Only Haiku 4.5's and Opus 5.5's (June 2026) cutoffs are documented. The recognition gate would sort knowers from non-knowers empirically anyway.
+- **Ledger items whose outcome first became public between those cutoffs (roughly 2025 to mid-2026): 0 of 59.**
+  - By Crossref year of key sources, only C16 and C17 cite a 2025 paper (the DREAM consortium, Nat Commun 2025).
+  - Both outcomes were established earlier: Siclari 2017, and C16's 2000 BBS source.
+  - P02–P04 (Jul–Oct 2026) fall after every callable model's cutoff, so they are unknowable to all of them, not split between them.
+- **Verdict: DiD underpowered with current items.** With 0 informative items (2 at most if the dating were generous, from one source cluster), there is no item-level variance to bootstrap. A 0.25-bit leak cannot be detected at any reasonable power.
+- **Decision: parked.** It reopens only if we build at least about 10 new items from findings first published between Feb 2025 and the newer models' cutoffs, in several independent clusters, and the recognition gate splits the models on them.
+
 ### Site deploy deferred (2026-11-24)
 
 The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:
