@@ -560,3 +560,13 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
 - **Descriptive only:** IIT leads on the famous items in the same run (+0.50) and not on the new ones (−0.14 all, −0.45 split). Hindsight BOUNDED (D_H −0.006), so seeing outcomes did not favour IIT.
 - **Next options:** a larger, splitting-first post-cutoff item pool; human expert raters on the same packets.
 - **Write-up:** `experiments/theory_postcutoff/RESULTS.md`.
+
+### Cohen VAN arousal/attention control: ROBUST (2026-11-24)
+
+- Sealed 20:07:59Z (ec0a8f7), run once. Adjusted VAN −1.20 µV [−1.63, −0.77], retained 1.03 [0.90, 1.17]. Pilot also ROBUST. Details in `experiments/cohen_fixed_soa/RESULTS.md`.
+
+### Splitting-first post-cutoff pool: stop rule fired (2026-11-24)
+
+- Selection rules sealed 20:20:24Z (9497381) before any outcome lookup.
+- 45 items written from 157 screened records. A blind selector passed only 5 at |p − 0.5| ≥ 0.25; the rule needed 12. Not rated.
+- With the ledger result, the out-of-sample test of the IIT lead is blocked: AI-read theories rarely commit on recent findings. Details in `experiments/theory_splitfirst/RESULTS.md`.

@@ -9,7 +9,8 @@ Closed routes, each with the effect size the test could have caught. Empty until
 - **Result:** UNINFORMATIVE. 4/15 findings split the theories, in 3 clusters (bar: 8 and 6). 89% of post-cutoff cells sat in p 0.4–0.6. Gates passed. Hindsight BOUNDED, D_H −0.006 [−0.061, 0.049].
 - **Descriptive:** IIT lead +0.50 on famous items, −0.14 [−0.29, 0.02] on all post-cutoff items, in the same run.
 - **What it could catch:** planted lead 0.55 with no elastic items: SURVIVES 80%; null: false SURVIVES 1–6%. Planted IIT-only hindsight of 0.40 bits: caught 100%.
-- **Not closed:** a splitting-first item pool; human raters.
+- **Splitting-first follow-up (stop rule fired):** a blind selector, choosing from 45 new findings, found only 5 with any theory committing |p − 0.5| ≥ 0.25 (maximum 0.30). See `experiments/theory_splitfirst/RESULTS.md`.
+- **Not closed:** human raters; purpose-built adversarial studies.
 - **Details:** `experiments/theory_postcutoff/RESULTS.md`.
 
 ## AI theory raters do not follow a disowned outcome cue (theory leak probe, 2026-11-23)
