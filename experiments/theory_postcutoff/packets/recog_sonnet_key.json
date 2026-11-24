@@ -1,0 +1,142 @@
+{
+ "R01": {
+  "item": "N03",
+  "real_is_a": true,
+  "control": false
+ },
+ "R02": {
+  "item": "C14",
+  "real_is_a": true,
+  "control": true
+ },
+ "R03": {
+  "item": "N18",
+  "real_is_a": true,
+  "control": false
+ },
+ "R04": {
+  "item": "C11",
+  "real_is_a": false,
+  "control": true
+ },
+ "R05": {
+  "item": "N15",
+  "real_is_a": false,
+  "control": false
+ },
+ "R06": {
+  "item": "N14",
+  "real_is_a": true,
+  "control": false
+ },
+ "R07": {
+  "item": "N02",
+  "real_is_a": false,
+  "control": false
+ },
+ "R08": {
+  "item": "C28",
+  "real_is_a": true,
+  "control": true
+ },
+ "R09": {
+  "item": "C21",
+  "real_is_a": false,
+  "control": true
+ },
+ "R10": {
+  "item": "N07",
+  "real_is_a": false,
+  "control": false
+ },
+ "R11": {
+  "item": "N08",
+  "real_is_a": true,
+  "control": false
+ },
+ "R12": {
+  "item": "C31",
+  "real_is_a": true,
+  "control": true
+ },
+ "R13": {
+  "item": "N12",
+  "real_is_a": true,
+  "control": false
+ },
+ "R14": {
+  "item": "N10",
+  "real_is_a": true,
+  "control": false
+ },
+ "R15": {
+  "item": "C32",
+  "real_is_a": true,
+  "control": true
+ },
+ "R16": {
+  "item": "N13",
+  "real_is_a": false,
+  "control": false
+ },
+ "R17": {
+  "item": "N17",
+  "real_is_a": false,
+  "control": false
+ },
+ "R18": {
+  "item": "N09",
+  "real_is_a": true,
+  "control": false
+ },
+ "R19": {
+  "item": "N06",
+  "real_is_a": false,
+  "control": false
+ },
+ "R20": {
+  "item": "C08",
+  "real_is_a": false,
+  "control": true
+ },
+ "R21": {
+  "item": "N05",
+  "real_is_a": true,
+  "control": false
+ },
+ "R22": {
+  "item": "N04",
+  "real_is_a": true,
+  "control": false
+ },
+ "R23": {
+  "item": "C55",
+  "real_is_a": false,
+  "control": true
+ },
+ "R24": {
+  "item": "N11",
+  "real_is_a": false,
+  "control": false
+ },
+ "R25": {
+  "item": "C17",
+  "real_is_a": false,
+  "control": true
+ },
+ "R26": {
+  "item": "C05",
+  "real_is_a": false,
+  "control": true
+ },
+ "R27": {
+  "item": "N16",
+  "real_is_a": true,
+  "control": false
+ },
+ "R28": {
+  "item": "N19",
+  "real_is_a": false,
+  "control": false
+ }
+}

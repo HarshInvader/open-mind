@@ -1,0 +1,94 @@
+This is a memory check about published research. Do not use any tools, files or web searches.
+
+For each finding below you see two possible outcomes, A and B. One of them was reported by a published study. For each,
+give p = your probability that outcome A (rather than B) is what was actually reported, and say whether you
+specifically recall the study ("recall": true or false). If you do not know, give 0.5 and recall false. Do not guess
+from what theories predict; answer only from memory of the actual study.
+
+Return ONLY a JSON array with keys "finding", "p", "recall". There are 28 findings; include every one.
+
+FINDINGS
+R01
+  A: In binocular rivalry, frontal fMRI activity relates to reporting switches, not to the switches themselves.
+  B: In binocular rivalry, frontal fMRI activity relates to the perceptual switches themselves and persists when switches are not reported.
+R02
+  A: With EEG frequency tagging of a stream of made-up three-syllable words, neural tracking of the hidden word structure was present in healthy controls and minimally conscious patients but was not significant in patients with unresponsive wakefulness syndrome.
+  B: With EEG frequency tagging of a stream of made-up three-syllable words, neural tracking of the hidden word structure was present in healthy controls and minimally conscious patients and was also significant in patients with unresponsive wakefulness syndrome.
+R03
+  A: Losing the cerebellum, which holds most of the brain's neurons, substantially impairs or abolishes consciousness, not only movement.
+  B: The cerebellum holds most of the brain's neurons, yet losing it impairs movement and not, as far as anyone reports, consciousness.
+R04
+  A: In a placebo-controlled crossover study, psilocybin acutely lowered alpha and beta power and lowered the diversity of the gamma-band EEG signal, and people with larger falls in diversity reported stronger acute psychological effects.
+  B: In a placebo-controlled crossover study, psilocybin acutely lowered alpha and beta power and raised the diversity of the gamma-band EEG signal, and people with larger rises in diversity reported stronger acute psychological effects.
+R05
+  A: In large language models, the representations a model is poised to put into words were used to carry the intermediate steps of silent reasoning, while automatic processing such as text parsing and routine inference proceeded without them.
+  B: In large language models, the representations a model is poised to put into words were used to carry automatic processing such as text parsing and routine inference, while the intermediate steps of silent reasoning proceeded without them.
+R06
+  A: In rats recorded with hemisphere-wide electrocorticography, cortical states typical of deep desflurane anaesthesia showed, compared with the awake state, a weakened feedback dominance of theta-band travelling waves.
+  B: In rats recorded with hemisphere-wide electrocorticography, cortical states typical of deep desflurane anaesthesia showed, compared with the awake state, a preserved feedback dominance of theta-band travelling waves.
+R07
+  A: In healthy adults, low-intensity focused ultrasound aimed at the thalamus changed how long people took to categorise the stimulus, depending on target and pulsing pattern, but did not change how long they took to report their subjective visual experience.
+  B: In healthy adults, low-intensity focused ultrasound aimed at the thalamus changed how long people took to report their subjective visual experience, depending on target and pulsing pattern, but did not change how long they took to categorise the stimulus.
+R08
+  A: Within both NREM and REM, dream reports are not linked to any local change in posterior cortex; they follow a local drop in low-frequency power over frontal cortex instead.
+  B: Within both NREM and REM, dream reports follow a local drop in low-frequency EEG power over posterior cortex; high-frequency activity there tracks specific contents.
+R09
+  A: The P3b disappears when people see a stimulus but do not have to report it; it tracks report and task relevance, not awareness.
+  B: The P3b persists when people see a stimulus but do not have to report it; it tracks awareness, not report or task relevance.
+R10
+  A: When cortex was probed with transcranial magnetic stimulation and EEG, blind people compared with sighted controls showed stronger occipital-to-frontal effective connectivity, while frontal-to-occipital propagation was unchanged.
+  B: When cortex was probed with transcranial magnetic stimulation and EEG, blind people compared with sighted controls showed stronger frontal-to-occipital effective connectivity, while occipital-to-frontal propagation was unchanged.
+R11
+  A: When an unexpected task-irrelevant stimulus made people miss a visual or auditory probe shortly afterwards, the misses were accompanied by a late parietal positivity to the surprising stimulus that shrank over trials together with the behavioural deficit, whereas early perceptual components did not habituate.
+  B: When an unexpected task-irrelevant stimulus made people miss a visual or auditory probe shortly afterwards, the misses were accompanied by enlarged early perceptual components to the surprising stimulus that shrank over trials together with the behavioural deficit, whereas the late parietal positivity did not habituate.
+R12
+  A: In long-term meditators, deep absorptive meditation compared with eyes-open rest raised beta and gamma EEG power without changing delta, theta or alpha power, and model fits to the spectra placed the cortex in a more inhibition-dominant regime.
+  B: In long-term meditators, deep absorptive meditation compared with eyes-open rest raised delta, theta and alpha EEG power without changing beta or gamma power, and model fits to the spectra placed the cortex in a more excitation-dominant regime.
+R13
+  A: In rats under deep desflurane anaesthesia, a spontaneously occurring cortical state with awake-like spectral properties, during which the animals stayed behaviourally unresponsive, showed travelling-wave dynamics that shifted partly toward those of the awake state.
+  B: In rats under deep desflurane anaesthesia, a spontaneously occurring cortical state with awake-like spectral properties, during which the animals stayed behaviourally unresponsive, showed travelling-wave dynamics that stayed like those of the other deep-anaesthesia states.
+R14
+  A: When language models that reuse the same weights across depth (looped, recurrent transformers) were tested with the suite used on a standard feedforward model, verbalisable, causally potent representations formed in the recurrent part of each architecture.
+  B: When language models that reuse the same weights across depth (looped, recurrent transformers) were tested with the suite used on a standard feedforward model, verbalisable, causally potent representations did not form in the recurrent part of either architecture.
+R15
+  A: Large prefrontal lesions abolish consciousness.
+  B: Large prefrontal lesions do not abolish consciousness.
+R16
+  A: Across fMRI datasets, closed-loop connectivity motifs among thalamic nuclei increased during non-REM sleep stages 2 and 3, but no such increase was seen during propofol anaesthesia or in unresponsive wakefulness syndrome.
+  B: Across fMRI datasets, closed-loop connectivity motifs among thalamic nuclei increased during non-REM sleep stages 2 and 3, and the same increase was seen during propofol anaesthesia and in unresponsive wakefulness syndrome.
+R17
+  A: Stimulating lateral prefrontal cortex often changes experience; orbitofrontal and anterior cingulate stimulation seldom does.
+  B: Stimulating lateral prefrontal cortex seldom changes experience; orbitofrontal and anterior cingulate stimulation often does.
+R18
+  A: Simultaneous scalp and intracranial recordings during median-nerve stimulation showed that the scalp negativity near 140 ms that has been linked to tactile awareness is the scalp manifestation of a primary somatosensory field potential that follows the initial phasic response there.
+  B: Simultaneous scalp and intracranial recordings during median-nerve stimulation showed that the scalp negativity near 140 ms that has been linked to tactile awareness is the scalp manifestation of an insulo-opercular field potential that follows a sustained high-frequency response there.
+R19
+  A: Prefrontal neurons in macaques do not track the content of rivalry switches when there is no report; contents cannot be decoded from them.
+  B: Prefrontal neurons in macaques track the content of rivalry switches with no report, enough to decode contents single-trial.
+R20
+  A: Anaesthetic-dose ketamine makes people unresponsive, yet they report long vivid dreams afterwards, and their TMS-EEG complexity stays wake-like; propofol and xenon give low complexity and no reports.
+  B: Anaesthetic-dose ketamine makes people unresponsive, and like propofol and xenon it leaves no dream reports afterwards and gives low TMS-EEG complexity.
+R21
+  A: In placebo-controlled crossover experiments with transcranial magnetic stimulation and EEG in healthy people, the sedative zolpidem reduced perturbational complexity in the late response window, whereas the benzodiazepine alprazolam did not change it.
+  B: In placebo-controlled crossover experiments with transcranial magnetic stimulation and EEG in healthy people, the benzodiazepine alprazolam reduced perturbational complexity in the late response window, whereas the sedative zolpidem did not change it.
+R22
+  A: In a meta-analysis of several hundred neuroimaging studies of self-related processing sorted into ten forms of self, no single brain location was significant across all ten maps; each form occupied different parts of the cortical midline and insula.
+  B: In a meta-analysis of several hundred neuroimaging studies of self-related processing sorted into ten forms of self, one shared set of midline and insular locations was significant across all ten maps; the forms differed mainly outside that common core.
+R23
+  A: In large language models, the representations a model is poised to put into words carried coherent content across nearly all layers, and the model's weights broadcast them no more widely than other representations.
+  B: In large language models, the representations a model is poised to put into words carried coherent content only in an intermediate band of layers, and the model's weights broadcast them more widely than other representations.
+R24
+  A: Children born without most of the cerebral cortex (hydranencephaly) show no emotional or orienting responses.
+  B: Children born without most of the cerebral cortex (hydranencephaly) show emotional and orienting responses that some clinicians read as conscious.
+R25
+  A: Wakefulness and awareness dissociate: patients in the vegetative / unresponsive wakefulness state open their eyes and have sleep-wake cycles without behavioural signs of awareness.
+  B: Wakefulness and awareness do not dissociate: patients who open their eyes and have sleep-wake cycles always show behavioural signs of awareness.
+R26
+  A: In simulated mean-field networks progressively rewired to vary the balance between integration and differentiation, complexity measured from spontaneous activity peaked at intermediate, small-world wiring, while measures computed from responses to perturbation behaved inconsistently, some tracking integration and others differentiation.
+  B: In simulated mean-field networks progressively rewired to vary the balance between integration and differentiation, complexity measured from responses to perturbation peaked at intermediate, small-world wiring, while measures computed from spontaneous activity behaved inconsistently, some tracking integration and others differentiation.
+R27
+  A: In a large cohort of patients with disorders of consciousness, spontaneous high-amplitude EEG slow waves were more frequent in unresponsive patients than in minimally conscious patients, and more frequent, steeper slow waves predicted poorer recovery at one year.
+  B: In a large cohort of patients with disorders of consciousness, spontaneous high-amplitude EEG slow waves were more frequent in minimally conscious patients than in unresponsive patients, and more frequent, steeper slow waves predicted better recovery at one year.
+R28
+  A: In a visual masking task, people with mild to moderate Alzheimer's disease, compared with healthy older adults, showed a preserved early visual awareness negativity but a reduced late positivity and reduced fronto-parietal activation.
+  B: In a visual masking task, people with mild to moderate Alzheimer's disease, compared with healthy older adults, showed a reduced early visual awareness negativity as well as a reduced late positivity and reduced fronto-parietal activation.

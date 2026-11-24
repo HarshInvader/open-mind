@@ -1,0 +1,142 @@
+{
+ "R01": {
+  "item": "N02",
+  "real_is_a": true,
+  "control": false
+ },
+ "R02": {
+  "item": "C14",
+  "real_is_a": false,
+  "control": true
+ },
+ "R03": {
+  "item": "N18",
+  "real_is_a": true,
+  "control": false
+ },
+ "R04": {
+  "item": "C31",
+  "real_is_a": true,
+  "control": true
+ },
+ "R05": {
+  "item": "C17",
+  "real_is_a": false,
+  "control": true
+ },
+ "R06": {
+  "item": "C28",
+  "real_is_a": false,
+  "control": true
+ },
+ "R07": {
+  "item": "C21",
+  "real_is_a": false,
+  "control": true
+ },
+ "R08": {
+  "item": "C55",
+  "real_is_a": true,
+  "control": true
+ },
+ "R09": {
+  "item": "N13",
+  "real_is_a": true,
+  "control": false
+ },
+ "R10": {
+  "item": "N09",
+  "real_is_a": false,
+  "control": false
+ },
+ "R11": {
+  "item": "N12",
+  "real_is_a": false,
+  "control": false
+ },
+ "R12": {
+  "item": "N04",
+  "real_is_a": true,
+  "control": false
+ },
+ "R13": {
+  "item": "N03",
+  "real_is_a": false,
+  "control": false
+ },
+ "R14": {
+  "item": "N06",
+  "real_is_a": false,
+  "control": false
+ },
+ "R15": {
+  "item": "N15",
+  "real_is_a": false,
+  "control": false
+ },
+ "R16": {
+  "item": "N07",
+  "real_is_a": true,
+  "control": false
+ },
+ "R17": {
+  "item": "N11",
+  "real_is_a": true,
+  "control": false
+ },
+ "R18": {
+  "item": "N14",
+  "real_is_a": false,
+  "control": false
+ },
+ "R19": {
+  "item": "C08",
+  "real_is_a": false,
+  "control": true
+ },
+ "R20": {
+  "item": "N08",
+  "real_is_a": false,
+  "control": false
+ },
+ "R21": {
+  "item": "C05",
+  "real_is_a": true,
+  "control": true
+ },
+ "R22": {
+  "item": "C32",
+  "real_is_a": true,
+  "control": true
+ },
+ "R23": {
+  "item": "N19",
+  "real_is_a": true,
+  "control": false
+ },
+ "R24": {
+  "item": "N05",
+  "real_is_a": false,
+  "control": false
+ },
+ "R25": {
+  "item": "N16",
+  "real_is_a": true,
+  "control": false
+ },
+ "R26": {
+  "item": "C11",
+  "real_is_a": false,
+  "control": true
+ },
+ "R27": {
+  "item": "N10",
+  "real_is_a": false,
+  "control": false
+ },
+ "R28": {
+  "item": "N17",
+  "real_is_a": false,
+  "control": false
+ }
+}

@@ -151,3 +151,17 @@ ff8a7993d78740c93b8034edc769645349ed0eef89d30a814a5808b7c0228a88  experiments/co
 ab36c20594f6da4e7c9258194a669ab5f77d2af9a9946cac567cd839b6a5cc40  experiments/cohen_fixed_soa/out/prep_hashes.json  2026-11-24T18:18:22Z
 794e21e640a59fc3d74826ed95615037742b12a8158b86e7616dc5131b5352eb  experiments/cohen_fixed_soa/out/align.json  2026-11-24T18:18:22Z
 06dc45530a2e9ee494edfcbbd92d28b37f64943e2b71005fc0dc15b7996ca193  experiments/cohen_fixed_soa/out/calibration.json  2026-11-24T18:18:22Z
+a158ee682821d429957523128c4c52c09f61c06d040432d36c8ebf7d3a81daa7  docs/prereg/2026-11-24_theory_postcutoff_ledger.md  2026-11-24T19:23:41Z
+db3dad2536e4b53473e9b1a637f1e5ebde538d9d245dcf9ab0db153969ab4062  experiments/theory_postcutoff/draft_items.json  2026-11-24T19:23:41Z
+d5cc6edd206c303015fea63fb19db7746fc21b174d796d807830ff2f3ca319d9  experiments/theory_postcutoff/toy_z.json  2026-11-24T19:23:41Z
+f208cb4160b8cd021578bc315ba95f310de75d5d4cfd6cb2366628e65422e133  experiments/theory_postcutoff/items.json  2026-11-24T19:23:41Z
+440dec0e7ea135b6b9fd04b7dc3d8888e682fa17af9cf60d759b2527ca404462  experiments/theory_postcutoff/make_packets.py  2026-11-24T19:23:41Z
+c2d9694bf65124b5e7812cf34a25854b85d6654453b5c6dcdae799de369bdacd  experiments/theory_postcutoff/score.py  2026-11-24T19:23:41Z
+6de3cb9b1a182c52bafc3d004708618d30a6b99d9bfe3635c759786dd0a4247c  experiments/theory_postcutoff/packets/recog_fable.txt  2026-11-24T19:23:41Z
+806dfc25d435fd2e80acd464f64321445d690da497ad42ea98ea5ad10524309a  experiments/theory_postcutoff/packets/recog_opus.txt  2026-11-24T19:23:41Z
+1660e0b43a7f6eff25d9d392885fa7d38f450e284f9cc6e23f6d2839e2765746  experiments/theory_postcutoff/packets/recog_sonnet.txt  2026-11-24T19:23:41Z
+d3429a12e5dc52632ab1c100ee38e77400f643a101e1afdbd8c83b09a394e2aa  experiments/theory_postcutoff/packets/recog_fable_key.json  2026-11-24T19:23:41Z
+59d96eb1ca15e97615e245c4e79a9e68ff832d5ffa2f7182ebd3be984f51b770  experiments/theory_postcutoff/packets/recog_opus_key.json  2026-11-24T19:23:41Z
+6016d4beffda667ee4d3ce903601ae394009bb9b2a65bc4eddea3db02417a161  experiments/theory_postcutoff/packets/recog_sonnet_key.json  2026-11-24T19:23:41Z
+a37e39ed7b1f1c160a64316572af452de80d4bc9898c379cd0cebdd3371d2afd  experiments/theory_postcutoff/planted.json  2026-11-24T19:23:41Z
+5a9eb760f06813ab786d00abb83905602a30ac67185df7fdd8d8b2ecaff2e4e7  experiments/theory_postcutoff/abstract_hashes.json  2026-11-24T19:23:41Z
