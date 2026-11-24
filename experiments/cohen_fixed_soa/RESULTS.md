@@ -74,3 +74,32 @@ The same masked face was shown at SOA 50 ms and only the report differed. On tho
   - One partial subject was lost in a server restart and re-read. That adds at most about 5.9 MB, uncounted (the largest subject is 133 trials × 44,100 bytes).
 - **Headers and markers:** 9,812,193 bytes.
 - **Project total with ds001810:** 1,488,284,157 bytes counted, at most about 1.494 GB with the lost partial. This is within the 1.5 GB budget.
+
+## Robustness: arousal and attention covariates (sealed 2026-11-24T20:07:59Z, commit ec0a8f7; run once)
+
+Prereg `docs/prereg/2026-11-24_cohen_van_arousal_control.md`; script `arousal_control.py`; output `out/arousal_result.json`.
+
+- **Question:** is the seen/unseen VAN difference a by-product of trial-to-trial arousal or attention, which could change both seeing and the early visual response?
+- **Covariates, named before the run:**
+  - local seen rate over neighbouring trials, adjusted for SOA;
+  - previous-trial seen;
+  - time on task;
+  - P1 amplitude;
+  - prestimulus posterior SD.
+- **Model:** per-subject OLS of the VAN on seen plus all five covariates.
+- **Verdict: ROBUST.**
+  - Confirm, n = 24: adjusted −1.20 µV [−1.63, −0.77], against −1.16 µV unadjusted.
+  - Retained fraction 1.03 [0.90, 1.17]; 21 of 24 subjects negative.
+  - Pilot, n = 14: ROBUST, −1.69 µV, retained 0.83 [0.62, 1.05].
+- **The covariates did carry state information.**
+  - Seen trials sat in stretches with a higher local seen rate (+0.35 z) and followed seen trials more often (+0.21 z).
+  - They also came earlier in the session (−0.20 z).
+  - Even so, adjusting for them left the VAN effect unchanged.
+  - P1 differed little between seen and unseen (+0.07 z). Adjusting for P1 alone made the effect slightly larger (−1.37 µV).
+- **Calibration** (fake labels):
+  - Null: false ROBUST/REDUCED 3.7%.
+  - Planted covariate confound: EXPLAINED 98%, false ROBUST 0%.
+  - Planted direct effect: ROBUST 100%.
+- **Limits:**
+  - Only the measured covariates are controlled. The prestimulus measure is crude, because the epochs start at −100 ms.
+  - This is still a report-block result.
