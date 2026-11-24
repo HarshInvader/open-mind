@@ -466,6 +466,26 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
   - The decoder's weak held-out signal (0.53) suggests some outcome information is there, but not in the predicted P3b form.
 - **Coordinator decision (2026-11-24):** closed. No redesign of this test with new baselines or labels, since that would be fishing after a sealed failure. Recorded in `docs/NEGATIVE_ATLAS.md` with the three untested explanations as lessons. The Fable round 13 list is now spent (items 1 and 3 done, 2 demoted, 4 no-go, 5 and 6 low ceiling or novelty), so one Fable agent is asked for 5–10 new studies on open data. Concurrency cap: at most 3 subagents at once, because of the gateway rate limit.
 
+### Fable round 14: new ranked studies; study 1 (Cohen 2024 fixed-SOA seen vs unseen) started (2026-11-24)
+- **Ranking (one Fable agent; the top 3 verified for access, counts and prior art):**
+  1. **Fixed-SOA seen vs unseen on Cohen 2024's raw EEG** (OSF 6d5av, public; 40 subjects; 63 ch at 500 Hz, int16; HTTP range reads work). At SOA 50 the same face is seen on about half of report trials. Cohen picked the N2 as "report-free" by tracking the psychometric curve across SOAs, which mixes stimulus strength with awareness. A fixed-SOA contrast asks whether the N2, the posterior N170/VAN or only the P3b separates seen from unseen. At stake: GNWT's "no divergence before about 270 ms" (ledger C35/C28) and RPT's posterior correlate at about 200 ms.
+  2. **Valid cue vs seen/unseen onset, ds006171** (Melloni 2011 replication with a spatial cue). The budget is tight: 73 GB, 128 ch.
+  3. **False alarms, early vs late, ds005273.** Only 369 usable false alarms, so "inconclusive" is likely.
+  4. **Study 1's awareness axis carried into no-report** (a follow-on).
+  5–8. Weaker: ds006171 location decoding, ds001785 tactile, mind-blanking Zenodo, ds008959 sEEG (8 patients).
+- **Study 1 setup:**
+  - `experiments/cohen_fixed_soa/fetch_cohen.py` indexes OSF and fetches headers and markers only (about 10 MB). It found 40 recordings, 9.76 GB of `.eeg`. The `delcul1016` and `delcul1022` headers point to the `delcul10162` and `delcul2022` data files.
+  - `count_trials.py` parses the markers:
+    - face onset S101–140 (report) and S161–200 (no-report);
+    - SOA code at mask onset;
+    - response S1 = seen, S2 = unseen.
+  - **Mapping check:** response 1 = seen matches the authors' hit-rate sheet in all 200 subject×SOA cells, in direction. The small gaps (≤0.057) come from the sheet counting no-response trials in the denominator; subject 1031 has about 10.
+  - **Counts at SOA 50, report:** median 70.5 seen and 57 unseen per subject (2,666 and 2,413 in total). 37 subjects have at least 30 per cell, and 30 have at least 40.
+- **Next:** prior art (Fable agent: the authors' prereg windows and their 15 window-defining subjects, the Reed 2025 thesis, Gnodde 2026, the masking seen/unseen literature). Then the kill test:
+  - a label-free alignment check;
+  - the P3b seen > unseen positive control at SOA 50 on the 15 window-defining subjects, used as a spent pilot set;
+  - stop if it fails.
+
 ### Site deploy deferred (2026-11-24)
 
 The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:

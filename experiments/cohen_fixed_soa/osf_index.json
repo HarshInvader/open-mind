@@ -1,0 +1,806 @@
+{
+ "_behaviour.xlsx": {
+  "size": 18039,
+  "url": "https://osf.io/download/j34yf/"
+ },
+ "delcul1001.eeg": {
+  "size": 232705620,
+  "url": "https://osf.io/download/x26zb/"
+ },
+ "delcul1001.ehst2": {
+  "size": 45787136,
+  "url": "https://osf.io/download/cv8wh/"
+ },
+ "delcul1001.hfinf2": {
+  "size": 102768,
+  "url": "https://osf.io/download/rx92e/"
+ },
+ "delcul1001.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/jnmyp/"
+ },
+ "delcul1001.vmrk": {
+  "size": 227985,
+  "url": "https://osf.io/download/2rczj/"
+ },
+ "delcul1002.eeg": {
+  "size": 254565360,
+  "url": "https://osf.io/download/vwtx4/"
+ },
+ "delcul1002.ehst2": {
+  "size": 45445120,
+  "url": "https://osf.io/download/yu3bs/"
+ },
+ "delcul1002.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/gsx3y/"
+ },
+ "delcul1002.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/8saed/"
+ },
+ "delcul1002.vmrk": {
+  "size": 226666,
+  "url": "https://osf.io/download/5263z/"
+ },
+ "delcul1003.eeg": {
+  "size": 254278080,
+  "url": "https://osf.io/download/4g96x/"
+ },
+ "delcul1003.ehst2": {
+  "size": 45610496,
+  "url": "https://osf.io/download/rj479/"
+ },
+ "delcul1003.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/mw9p3/"
+ },
+ "delcul1003.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/xewy2/"
+ },
+ "delcul1003.vmrk": {
+  "size": 227814,
+  "url": "https://osf.io/download/cbz62/"
+ },
+ "delcul1004.eeg": {
+  "size": 210609000,
+  "url": "https://osf.io/download/mzav4/"
+ },
+ "delcul1004.ehst2": {
+  "size": 45493248,
+  "url": "https://osf.io/download/fxjyd/"
+ },
+ "delcul1004.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/82e7v/"
+ },
+ "delcul1004.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/x3ykm/"
+ },
+ "delcul1004.vmrk": {
+  "size": 225982,
+  "url": "https://osf.io/download/kv3pt/"
+ },
+ "delcul1005.eeg": {
+  "size": 241739820,
+  "url": "https://osf.io/download/mkxbq/"
+ },
+ "delcul1005.ehst2": {
+  "size": 42651136,
+  "url": "https://osf.io/download/64b822ecb49dcb035e736a1e/"
+ },
+ "delcul1005.hfinf2": {
+  "size": 95053,
+  "url": "https://osf.io/download/a4vey/"
+ },
+ "delcul1005.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/dgrcf/"
+ },
+ "delcul1005.vmrk": {
+  "size": 227923,
+  "url": "https://osf.io/download/pjd4u/"
+ },
+ "delcul1007.eeg": {
+  "size": 252739620,
+  "url": "https://osf.io/download/gxhjz/"
+ },
+ "delcul1007.ehst2": {
+  "size": 41076736,
+  "url": "https://osf.io/download/scu3h/"
+ },
+ "delcul1007.hfinf2": {
+  "size": 95053,
+  "url": "https://osf.io/download/jqcpz/"
+ },
+ "delcul1007.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/45wyn/"
+ },
+ "delcul1007.vmrk": {
+  "size": 228568,
+  "url": "https://osf.io/download/pvy9k/"
+ },
+ "delcul1008.eeg": {
+  "size": 219045960,
+  "url": "https://osf.io/download/6q5cs/"
+ },
+ "delcul1008.ehst2": {
+  "size": 45257728,
+  "url": "https://osf.io/download/hpfsw/"
+ },
+ "delcul1008.hfinf2": {
+  "size": 102768,
+  "url": "https://osf.io/download/hkz9w/"
+ },
+ "delcul1008.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/caq7k/"
+ },
+ "delcul1008.vmrk": {
+  "size": 225370,
+  "url": "https://osf.io/download/r4wn3/"
+ },
+ "delcul1009.eeg": {
+  "size": 225847440,
+  "url": "https://osf.io/download/2hzwa/"
+ },
+ "delcul1009.ehst2": {
+  "size": 41738240,
+  "url": "https://osf.io/download/k78wn/"
+ },
+ "delcul1009.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/t2jna/"
+ },
+ "delcul1009.vhdr": {
+  "size": 16866,
+  "url": "https://osf.io/download/wxbmf/"
+ },
+ "delcul1009.vmrk": {
+  "size": 227509,
+  "url": "https://osf.io/download/zes29/"
+ },
+ "delcul1014.eeg": {
+  "size": 235791360,
+  "url": "https://osf.io/download/tsduk/"
+ },
+ "delcul1014.ehst2": {
+  "size": 44466176,
+  "url": "https://osf.io/download/cfjwb/"
+ },
+ "delcul1014.hfinf2": {
+  "size": 102768,
+  "url": "https://osf.io/download/yxq4h/"
+ },
+ "delcul1014.vhdr": {
+  "size": 18350,
+  "url": "https://osf.io/download/mz5vf/"
+ },
+ "delcul1014.vmrk": {
+  "size": 224959,
+  "url": "https://osf.io/download/txd3y/"
+ },
+ "delcul1015.eeg": {
+  "size": 245747880,
+  "url": "https://osf.io/download/64b8229ff29691035df06fda/"
+ },
+ "delcul1015.ehst2": {
+  "size": 42631168,
+  "url": "https://osf.io/download/64b8229b903ac10323dcc981/"
+ },
+ "delcul1015.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b8229fb49dcb035a736b4e/"
+ },
+ "delcul1015.vhdr": {
+  "size": 19417,
+  "url": "https://osf.io/download/64b822a4465d14035da31861/"
+ },
+ "delcul1015.vmrk": {
+  "size": 228142,
+  "url": "https://osf.io/download/64b822a3bfc49b0354312ae4/"
+ },
+ "delcul1016.ehst2": {
+  "size": 44200960,
+  "url": "https://osf.io/download/q3nzs/"
+ },
+ "delcul1016.hfinf2": {
+  "size": 102769,
+  "url": "https://osf.io/download/nhye9/"
+ },
+ "delcul1016.vhdr": {
+  "size": 19332,
+  "url": "https://osf.io/download/64b82365bfc49b0357312c21/"
+ },
+ "delcul10162.eeg": {
+  "size": 249408180,
+  "url": "https://osf.io/download/64b82360f29691035ff0719e/"
+ },
+ "delcul10162.vmrk": {
+  "size": 227011,
+  "url": "https://osf.io/download/64b8235d903ac10328dcc478/"
+ },
+ "delcul1017.eeg": {
+  "size": 219179520,
+  "url": "https://osf.io/download/64b8237d465d14035ea319c5/"
+ },
+ "delcul1017.ehst2": {
+  "size": 43530240,
+  "url": "https://osf.io/download/64b8236ab49dcb035e736a55/"
+ },
+ "delcul1017.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b8236df296910354f0758d/"
+ },
+ "delcul1017.vhdr": {
+  "size": 18072,
+  "url": "https://osf.io/download/64b82372b49dcb034d736acf/"
+ },
+ "delcul1017.vmrk": {
+  "size": 227444,
+  "url": "https://osf.io/download/64b82375b49dcb03627363d9/"
+ },
+ "delcul1018.eeg": {
+  "size": 243298440,
+  "url": "https://osf.io/download/64b8237e465d14035ea319c7/"
+ },
+ "delcul1018.ehst2": {
+  "size": 42686976,
+  "url": "https://osf.io/download/64b82334bfc49b03623126c7/"
+ },
+ "delcul1018.hfinf2": {
+  "size": 109995,
+  "url": "https://osf.io/download/64b82332b49dcb034d736ab5/"
+ },
+ "delcul1018.vhdr": {
+  "size": 20623,
+  "url": "https://osf.io/download/64b82335f29691035ff07186/"
+ },
+ "delcul1018.vmrk": {
+  "size": 227109,
+  "url": "https://osf.io/download/64b82338f296910360f0729b/"
+ },
+ "delcul1020.eeg": {
+  "size": 224804160,
+  "url": "https://osf.io/download/vwbf6/"
+ },
+ "delcul1020.ehst2": {
+  "size": 43335168,
+  "url": "https://osf.io/download/6fy8z/"
+ },
+ "delcul1020.hfinf2": {
+  "size": 95053,
+  "url": "https://osf.io/download/mpy2w/"
+ },
+ "delcul1020.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/baqxp/"
+ },
+ "delcul1020.vmrk": {
+  "size": 227098,
+  "url": "https://osf.io/download/u4mq5/"
+ },
+ "delcul1022.ehst2": {
+  "size": 40787456,
+  "url": "https://osf.io/download/64b82349bfc49b0354312af3/"
+ },
+ "delcul1022.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b8234eb49dcb035a736bb1/"
+ },
+ "delcul1022.vhdr": {
+  "size": 19695,
+  "url": "https://osf.io/download/64b82351903ac10323dccacf/"
+ },
+ "delcul1023.eeg": {
+  "size": 255414600,
+  "url": "https://osf.io/download/64b823d9465d140358a31a12/"
+ },
+ "delcul1023.ehst2": {
+  "size": 41888256,
+  "url": "https://osf.io/download/64b823d6f29691035ff071f4/"
+ },
+ "delcul1023.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b823da903ac10329dcc806/"
+ },
+ "delcul1023.vhdr": {
+  "size": 18072,
+  "url": "https://osf.io/download/64b823ddbfc49b0357312c44/"
+ },
+ "delcul1023.vmrk": {
+  "size": 227400,
+  "url": "https://osf.io/download/64b823debfc49b0362312736/"
+ },
+ "delcul1024.eeg": {
+  "size": 227370780,
+  "url": "https://osf.io/download/64b823fcbfc49b036231274d/"
+ },
+ "delcul1024.ehst2": {
+  "size": 43495936,
+  "url": "https://osf.io/download/64b823e7903ac10328dcc4e2/"
+ },
+ "delcul1024.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b823ebf296910359f06e77/"
+ },
+ "delcul1024.vhdr": {
+  "size": 18211,
+  "url": "https://osf.io/download/64b823eebfc49b0363312a97/"
+ },
+ "delcul1024.vmrk": {
+  "size": 226349,
+  "url": "https://osf.io/download/64b823f1b49dcb034d736ae4/"
+ },
+ "delcul1025.eeg": {
+  "size": 215410860,
+  "url": "https://osf.io/download/64b823f9b49dcb0362736549/"
+ },
+ "delcul1025.ehst2": {
+  "size": 44122112,
+  "url": "https://osf.io/download/64b823fdf29691035ff07200/"
+ },
+ "delcul1025.hfinf2": {
+  "size": 102768,
+  "url": "https://osf.io/download/67buj/"
+ },
+ "delcul1025.vhdr": {
+  "size": 16866,
+  "url": "https://osf.io/download/64b82401b49dcb036273654b/"
+ },
+ "delcul1025.vmrk": {
+  "size": 227146,
+  "url": "https://osf.io/download/64b82406f29691035ff0720b/"
+ },
+ "delcul1026.eeg": {
+  "size": 228540060,
+  "url": "https://osf.io/download/64b8240df296910354f0759f/"
+ },
+ "delcul1026.ehst2": {
+  "size": 41928192,
+  "url": "https://osf.io/download/64b8240d465d14035da319af/"
+ },
+ "delcul1026.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b82411bfc49b0362312777/"
+ },
+ "delcul1026.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/64b82411bfc49b0362312779/"
+ },
+ "delcul1026.vmrk": {
+  "size": 226262,
+  "url": "https://osf.io/download/64b82415903ac1031adcc7be/"
+ },
+ "delcul1028.eeg": {
+  "size": 210059640,
+  "url": "https://osf.io/download/64b8242dbfc49b035e312859/"
+ },
+ "delcul1028.ehst2": {
+  "size": 42538496,
+  "url": "https://osf.io/download/64b8241a465d14035ba318e7/"
+ },
+ "delcul1028.hfinf2": {
+  "size": 99774,
+  "url": "https://osf.io/download/64b8241db49dcb035e736ae0/"
+ },
+ "delcul1028.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/64b82421b49dcb035e736ae3/"
+ },
+ "delcul1028.vmrk": {
+  "size": 225645,
+  "url": "https://osf.io/download/64b82423bfc49b0363312ab8/"
+ },
+ "delcul1029.eeg": {
+  "size": 226284660,
+  "url": "https://osf.io/download/64b8242e465d14035ea31a47/"
+ },
+ "delcul1029.ehst2": {
+  "size": 41333248,
+  "url": "https://osf.io/download/64b82434bfc49b0363312b09/"
+ },
+ "delcul1029.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b82434465d14035ea31a49/"
+ },
+ "delcul1029.vhdr": {
+  "size": 19556,
+  "url": "https://osf.io/download/64b82437bfc49b035e31285f/"
+ },
+ "delcul1029.vmrk": {
+  "size": 227771,
+  "url": "https://osf.io/download/64b82437903ac10329dcc86d/"
+ },
+ "delcul1030.eeg": {
+  "size": 207779040,
+  "url": "https://osf.io/download/8qdps/"
+ },
+ "delcul1030.ehst2": {
+  "size": 44090368,
+  "url": "https://osf.io/download/64b82441903ac10328dcc52b/"
+ },
+ "delcul1030.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b82445903ac10323dccb2e/"
+ },
+ "delcul1030.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/64b82449903ac10328dcc53f/"
+ },
+ "delcul1030.vmrk": {
+  "size": 226838,
+  "url": "https://osf.io/download/64b8244bbfc49b0363312b1d/"
+ },
+ "delcul1031.eeg": {
+  "size": 209497680,
+  "url": "https://osf.io/download/64b82452bfc49b0363312b23/"
+ },
+ "delcul1031.ehst2": {
+  "size": 43086336,
+  "url": "https://osf.io/download/64b8244f465d140358a31a2a/"
+ },
+ "delcul1031.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b82453903ac10328dcc54f/"
+ },
+ "delcul1031.vhdr": {
+  "size": 16866,
+  "url": "https://osf.io/download/pfxwg/"
+ },
+ "delcul1031.vmrk": {
+  "size": 226452,
+  "url": "https://osf.io/download/64b82456bfc49b0363312b28/"
+ },
+ "delcul1032.eeg": {
+  "size": 220906980,
+  "url": "https://osf.io/download/64b8245e903ac10322dcc88f/"
+ },
+ "delcul1032.ehst2": {
+  "size": 42434048,
+  "url": "https://osf.io/download/64b8245cb49dcb035e736afd/"
+ },
+ "delcul1032.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b8245f903ac10322dcc891/"
+ },
+ "delcul1032.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/64b82462903ac10329dcc8a0/"
+ },
+ "delcul1032.vmrk": {
+  "size": 226813,
+  "url": "https://osf.io/download/64b82463f29691035ff0725e/"
+ },
+ "delcul1033.eeg": {
+  "size": 229897080,
+  "url": "https://osf.io/download/az43k/"
+ },
+ "delcul1033.ehst2": {
+  "size": 44707840,
+  "url": "https://osf.io/download/64b82468465d14034ba31ebe/"
+ },
+ "delcul1033.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b8246af296910360f073a7/"
+ },
+ "delcul1033.vhdr": {
+  "size": 17005,
+  "url": "https://osf.io/download/64b8246ebfc49b0354312b0e/"
+ },
+ "delcul1033.vmrk": {
+  "size": 228219,
+  "url": "https://osf.io/download/qd7xw/"
+ },
+ "delcul1034.eeg": {
+  "size": 240927120,
+  "url": "https://osf.io/download/64b82478903ac10329dcc8ae/"
+ },
+ "delcul1034.ehst2": {
+  "size": 43734528,
+  "url": "https://osf.io/download/64b82474903ac1031fdcc83a/"
+ },
+ "delcul1034.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b82478f296910360f073bd/"
+ },
+ "delcul1034.vhdr": {
+  "size": 19556,
+  "url": "https://osf.io/download/64b8247cbfc49b03623127dc/"
+ },
+ "delcul1034.vmrk": {
+  "size": 227907,
+  "url": "https://osf.io/download/64b8247cf296910359f06eb6/"
+ },
+ "delcul1038.eeg": {
+  "size": 220300920,
+  "url": "https://osf.io/download/64b82486f296910354f075c9/"
+ },
+ "delcul1038.ehst2": {
+  "size": 44869120,
+  "url": "https://osf.io/download/dsxqu/"
+ },
+ "delcul1038.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b82485903ac10323dccb5c/"
+ },
+ "delcul1038.vhdr": {
+  "size": 16866,
+  "url": "https://osf.io/download/64b82489903ac10323dccb5e/"
+ },
+ "delcul1038.vmrk": {
+  "size": 227327,
+  "url": "https://osf.io/download/64b8248a903ac10329dcc8cc/"
+ },
+ "delcul1040.eeg": {
+  "size": 243016200,
+  "url": "https://osf.io/download/64b82493f29691035ff072a5/"
+ },
+ "delcul1040.ehst2": {
+  "size": 42648064,
+  "url": "https://osf.io/download/64b82490903ac10323dccb64/"
+ },
+ "delcul1040.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b82494b49dcb035e736b1f/"
+ },
+ "delcul1040.vhdr": {
+  "size": 18350,
+  "url": "https://osf.io/download/64b82498903ac1031fdcc84c/"
+ },
+ "delcul1040.vmrk": {
+  "size": 226412,
+  "url": "https://osf.io/download/64b82498b49dcb035a736c34/"
+ },
+ "delcul1042.eeg": {
+  "size": 247235940,
+  "url": "https://osf.io/download/64b824a1b49dcb0362736639/"
+ },
+ "delcul1042.ehst2": {
+  "size": 43024896,
+  "url": "https://osf.io/download/64b8249d465d14035ea31a93/"
+ },
+ "delcul1042.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b824a1f29691035df0726a/"
+ },
+ "delcul1042.vhdr": {
+  "size": 17006,
+  "url": "https://osf.io/download/64b824a7903ac10323dccb6e/"
+ },
+ "delcul1042.vmrk": {
+  "size": 226323,
+  "url": "https://osf.io/download/s9n75/"
+ },
+ "delcul1043.eeg": {
+  "size": 233394840,
+  "url": "https://osf.io/download/64b824c5b49dcb034d736b08/"
+ },
+ "delcul1043.ehst2": {
+  "size": 45386240,
+  "url": "https://osf.io/download/64b824ad903ac10328dcc55f/"
+ },
+ "delcul1043.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b824b1f296910360f07409/"
+ },
+ "delcul1043.vhdr": {
+  "size": 16866,
+  "url": "https://osf.io/download/64b824b5f29691035ff072bd/"
+ },
+ "delcul1043.vmrk": {
+  "size": 227662,
+  "url": "https://osf.io/download/64b824ba465d14035ba31945/"
+ },
+ "delcul1044.eeg": {
+  "size": 233108820,
+  "url": "https://osf.io/download/64b824c2f29691035ff072bf/"
+ },
+ "delcul1044.ehst2": {
+  "size": 42067968,
+  "url": "https://osf.io/download/64b824c7bfc49b0363312bc2/"
+ },
+ "delcul1044.hfinf2": {
+  "size": 95053,
+  "url": "https://osf.io/download/64b824c9903ac10329dcc8fe/"
+ },
+ "delcul1044.vhdr": {
+  "size": 16727,
+  "url": "https://osf.io/download/64b824caf296910360f07417/"
+ },
+ "delcul1044.vmrk": {
+  "size": 226734,
+  "url": "https://osf.io/download/64b824cc465d14035da31a38/"
+ },
+ "delcul1045.eeg": {
+  "size": 278528040,
+  "url": "https://osf.io/download/64b824d4f29691035df0729f/"
+ },
+ "delcul1045.ehst2": {
+  "size": 43662848,
+  "url": "https://osf.io/download/64b824d1bfc49b0362312805/"
+ },
+ "delcul1045.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/46vah/"
+ },
+ "delcul1045.vhdr": {
+  "size": 16071,
+  "url": "https://osf.io/download/64b824daf296910359f06ec5/"
+ },
+ "delcul1045.vmrk": {
+  "size": 227386,
+  "url": "https://osf.io/download/64b824d8f296910354f075ce/"
+ },
+ "delcul1046.eeg": {
+  "size": 258320160,
+  "url": "https://osf.io/download/7qu39/"
+ },
+ "delcul1046.ehst2": {
+  "size": 42375168,
+  "url": "https://osf.io/download/r7x6c/"
+ },
+ "delcul1046.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b824e4f296910360f07420/"
+ },
+ "delcul1046.vhdr": {
+  "size": 13937,
+  "url": "https://osf.io/download/64b824e7465d14035ea31aba/"
+ },
+ "delcul1046.vmrk": {
+  "size": 227104,
+  "url": "https://osf.io/download/64b824e8903ac1031fdcc85d/"
+ },
+ "delcul1047.eeg": {
+  "size": 280225260,
+  "url": "https://osf.io/download/64b82507465d14035ea31ad0/"
+ },
+ "delcul1047.ehst2": {
+  "size": 42497024,
+  "url": "https://osf.io/download/64b824ecf296910360f07426/"
+ },
+ "delcul1047.hfinf2": {
+  "size": 98018,
+  "url": "https://osf.io/download/64b824eebfc49b0363312bd8/"
+ },
+ "delcul1047.vhdr": {
+  "size": 19317,
+  "url": "https://osf.io/download/au3me/"
+ },
+ "delcul1047.vmrk": {
+  "size": 229749,
+  "url": "https://osf.io/download/64b824f5bfc49b0363312be2/"
+ },
+ "delcul1050.eeg": {
+  "size": 264824280,
+  "url": "https://osf.io/download/64b824fff296910360f07432/"
+ },
+ "delcul1050.ehst2": {
+  "size": 42341888,
+  "url": "https://osf.io/download/64b82504465d140358a31a50/"
+ },
+ "delcul1050.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/j8n3u/"
+ },
+ "delcul1050.vhdr": {
+  "size": 16488,
+  "url": "https://osf.io/download/t67jq/"
+ },
+ "delcul1050.vmrk": {
+  "size": 227501,
+  "url": "https://osf.io/download/a8g2f/"
+ },
+ "delcul1051.eeg": {
+  "size": 277453260,
+  "url": "https://osf.io/download/64b82515b49dcb034d736b12/"
+ },
+ "delcul1051.ehst2": {
+  "size": 44002304,
+  "url": "https://osf.io/download/ykzj7/"
+ },
+ "delcul1051.hfinf2": {
+  "size": 95597,
+  "url": "https://osf.io/download/64b82514f29691035ff072f9/"
+ },
+ "delcul1051.vhdr": {
+  "size": 15281,
+  "url": "https://osf.io/download/64b82519bfc49b0363312bf0/"
+ },
+ "delcul1051.vmrk": {
+  "size": 229593,
+  "url": "https://osf.io/download/64b82519465d14035da31a7a/"
+ },
+ "delcul1052.eeg": {
+  "size": 276499440,
+  "url": "https://osf.io/download/cw892/"
+ },
+ "delcul1052.ehst2": {
+  "size": 41513472,
+  "url": "https://osf.io/download/64b82397bfc49b035e312814/"
+ },
+ "delcul1052.hfinf2": {
+  "size": 99502,
+  "url": "https://osf.io/download/64b82396903ac10322dcc851/"
+ },
+ "delcul1052.vhdr": {
+  "size": 19317,
+  "url": "https://osf.io/download/64b82399bfc49b0363312a2d/"
+ },
+ "delcul1052.vmrk": {
+  "size": 227579,
+  "url": "https://osf.io/download/64b8239bf29691035df071d7/"
+ },
+ "delcul1053.eeg": {
+  "size": 333389700,
+  "url": "https://osf.io/download/vxnpm/"
+ },
+ "delcul1053.ehst2": {
+  "size": 42360832,
+  "url": "https://osf.io/download/72axk/"
+ },
+ "delcul1053.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b823a3903ac10328dcc4af/"
+ },
+ "delcul1053.vhdr": {
+  "size": 16488,
+  "url": "https://osf.io/download/64b823a7465d14035da3192e/"
+ },
+ "delcul1053.vmrk": {
+  "size": 230027,
+  "url": "https://osf.io/download/64b823aa465d14035da31930/"
+ },
+ "delcul1055.eeg": {
+  "size": 301830480,
+  "url": "https://osf.io/download/ax4y9/"
+ },
+ "delcul1055.ehst2": {
+  "size": 42286080,
+  "url": "https://osf.io/download/nxe3u/"
+ },
+ "delcul1055.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b823be465d14035ba318d2/"
+ },
+ "delcul1055.vhdr": {
+  "size": 17971,
+  "url": "https://osf.io/download/trnq3/"
+ },
+ "delcul1055.vmrk": {
+  "size": 229399,
+  "url": "https://osf.io/download/64b823c3903ac10322dcc86a/"
+ },
+ "delcul1056.eeg": {
+  "size": 281738520,
+  "url": "https://osf.io/download/64b823cd465d14035ba318d6/"
+ },
+ "delcul1056.ehst2": {
+  "size": 45148160,
+  "url": "https://osf.io/download/64b823cb903ac1031adcc7b5/"
+ },
+ "delcul1056.hfinf2": {
+  "size": 98574,
+  "url": "https://osf.io/download/64b823cfbfc49b0363312a68/"
+ },
+ "delcul1056.vhdr": {
+  "size": 16626,
+  "url": "https://osf.io/download/64b823d0b49dcb0362736445/"
+ },
+ "delcul1056.vmrk": {
+  "size": 228317,
+  "url": "https://osf.io/download/xej87/"
+ },
+ "delcul2022.eeg": {
+  "size": 252708120,
+  "url": "https://osf.io/download/64b82359465d14035ea319ad/"
+ },
+ "delcul2022.vmrk": {
+  "size": 226801,
+  "url": "https://osf.io/download/64b82356bfc49b03633129df/"
+ }
+}
