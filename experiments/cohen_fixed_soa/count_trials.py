@@ -54,10 +54,11 @@ def trials(mrk):
             elif cj >= 100:
                 break
             j += 1
+        rt = None
         if j < len(ev) and ev[j][0] in (1, 2) and block == "report":
-            resp = ev[j][0]
+            resp, rt = ev[j][0], ev[j][1] - s
         rows.append(dict(block=block, kind=kind, ident=ident, soa=soa or "", onset=s, mask=mask or "",
-                         resp=resp or ""))
+                         resp=resp or "", rt_samples=rt if rt is not None else ""))
         i = j
     return rows
 
@@ -100,7 +101,7 @@ def main():
         c["nr_face_soa50"] = sum(1 for r in rows if r["block"] == "noreport" and r["kind"] == "face" and r["soa"] == 50)
         counts.append(c)
     with open(HERE / "trials.csv", "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["sub", "block", "kind", "ident", "soa", "onset", "mask", "resp"])
+        w = csv.DictWriter(f, fieldnames=["sub", "block", "kind", "ident", "soa", "onset", "mask", "resp", "rt_samples"])
         w.writeheader()
         w.writerows(allrows)
     with open(HERE / "trial_counts.csv", "w", newline="") as f:
