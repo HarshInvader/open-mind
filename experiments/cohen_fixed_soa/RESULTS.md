@@ -123,3 +123,26 @@ Prereg `docs/prereg/2026-11-24_cohen_van_arousal_control.md`; script `arousal_co
 - **Decision:** the bar was 0.8 power for both patterns, so the study stops. With this many trials the test cannot separate graded, arousal and two-state accounts at realistic effect sizes, and it cannot call a flat result.
 - **Real RT was never used against the VAN.** The arousal-covariate result above already argues against the arousal account in a different way.
 - **Files:** `out/rt_power_confirm24.json`, `out/rt_power.json` (38 subjects).
+
+## Robustness: within the same face image, and under an average reference (sealed 2026-11-24T21:41:49Z, commit 5257fa6; run once)
+
+Prereg: `docs/prereg/2026-11-24_cohen_van_identity_avgref.md`. Script: `van_identity.py`. Output: `out/identity_result.json`.
+
+| Test (24 confirm subjects) | Unadjusted | Identity-adjusted [95% CI] | Retained [95% CI] | Verdict |
+|---|---|---|---|---|
+| VAN within image (primary) | −1.16 µV | −0.95 [−1.54, −0.36] | 0.82 [0.47, 1.10] | **REDUCED** |
+| VAN, average reference | −2.60 | −2.15 [−2.99, −1.30] | 0.83 [0.60, 1.03] | present (ROBUST) |
+| Fronto-central VPP, average reference | +0.85 | +0.63 [−0.03, +1.29] | 0.74 [0.07, 1.19] | not present |
+
+- **Pilot replication (14 subjects):**
+  - within image: ROBUST, −1.86 µV, retained 0.91;
+  - average-reference VAN: ROBUST, −3.68;
+  - VPP: present, +1.11 [0.39, 1.82].
+- **Reading:**
+  - The seen/unseen VAN difference survives within the same face image: its CI excludes 0. The lower bound on the retained fraction (0.47) sits just under the 0.5 bar. So differences between images may account for up to about half of the effect, though the point estimate keeps 82%.
+  - The effect is not a mastoid-reference artefact. Under an average reference it is larger (−2.15 µV), as expected, because the mastoid partly picks up the posterior negativity.
+  - The fronto-central positive counterpart is not clear in the confirm set (CI touches 0) but is clear in the pilot. That is consistent with one generator seen from both ends, but not shown here.
+- **Calibration** (fake labels): null 4.3% false calls; between-image confound EXPLAINED 79% with 0% false ROBUST; within-image effect ROBUST 96%.
+- **Limits:**
+  - The within-image control removes stimulus differences between images, not trial-to-trial state (the arousal control covers part of that).
+  - This is still a report-block result.

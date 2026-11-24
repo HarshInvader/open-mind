@@ -570,3 +570,13 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
 - Selection rules sealed 20:20:24Z (9497381) before any outcome lookup.
 - 45 items written from 157 screened records. A blind selector passed only 5 at |p − 0.5| ≥ 0.25; the rule needed 12. Not rated.
 - With the ledger result, the out-of-sample test of the IIT lead is blocked: AI-read theories rarely commit on recent findings. Details in `experiments/theory_splitfirst/RESULTS.md`.
+
+### Fable round 15: four zero-byte studies; item 3 skipped, item 2b stopped, then two started (2026-11-24)
+
+- **Item 3 skipped:** whether the P3b is response-locked is already established (Pereira 2021, Twomey 2015). Our epochs end at +600 ms.
+- **Item 2b stopped at the power gate:** the RT-gradient study reached power 0.56 on 24 subjects and 0.71 on 38. No real RT was used.
+- **Round 15, study 2 (VAN within image and under an average reference):**
+  - Sealed (5257fa6) and run once.
+  - Within image REDUCED: −0.95 µV [−1.54, −0.36], retained 0.82 [0.47, 1.10].
+  - The average-reference VAN is present (−2.15 µV). The fronto-central VPP is not clear in the confirm set.
+- **Round 15, study 1 (specificity audit of the Sergent 2021 bifurcation test, simulation only):** step 0 prior art is running. The coordinator allows fetching their OSF analysis code (under 5 MB, no data) if the methods text is ambiguous.
