@@ -169,3 +169,4 @@ a37e39ed7b1f1c160a64316572af452de80d4bc9898c379cd0cebdd3371d2afd  experiments/th
 722314dbb22d63a2bd389a755a8cec40c1eda4b6ce6a6ab7ebea1ef1c33e60ee  experiments/cohen_fixed_soa/arousal_control.py  2026-11-24T20:07:59Z
 8341c7132dbf2eccd13715bceeed6a002fdbcbf4365aba18de03693f9f345e25  experiments/cohen_fixed_soa/out/arousal_calibration.json  2026-11-24T20:07:59Z
 cafd265adfc62e83ca69b7e27ecdfe4335b0395d78d8f3ab3d661eeedafd808e  experiments/cohen_fixed_soa/out/arousal_covars.npz  2026-11-24T20:07:59Z
+e0832e57e52ed8f9cf2ef37c249ecb4c68e825079b4888639ae1d0c5ff9e1c19  docs/prereg/2026-11-24_theory_splitfirst_pool_A.md  2026-11-24T20:20:24Z
