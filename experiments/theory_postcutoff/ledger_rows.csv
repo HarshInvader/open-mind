@@ -1,0 +1,3 @@
+id,claim,area,file,statistic,p_value,p_source,ci,n,distinct_subjects,split,mode,family,family_size,replicated_independently,readme_claim,ground_truth,q_global,q_area,q_hier,q_all,note
+PCL-LEAD,IIT lead over GNWT/HOT holds on post-cutoff findings (AI raters),theory_postcutoff,experiments/theory_postcutoff/result.json,UNINFORMATIVE: 4/15 items split (3 clusters); lead all-post -0.136,,"bootstrap over models x clusters, t-scaled","[-0.287, 0.015]",15,3,dataset,confirmatory,,,no,no,none,,,,,raters are AI models; distinct_subjects = models
+PCL-HINDSIGHT,Hindsight favours IIT (informed - blind),theory_postcutoff,experiments/theory_postcutoff/result.json,D_H -0.006,,"bootstrap, t-scaled","[-0.061, 0.049]",15,3,dataset,confirmatory,,,,,none,,,,,BOUNDED

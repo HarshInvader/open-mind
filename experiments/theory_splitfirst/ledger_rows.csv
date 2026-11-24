@@ -1,0 +1,2 @@
+id,claim,area,file,statistic,p_value,p_source,ci,n,distinct_subjects,split,mode,family,family_size,replicated_independently,readme_claim,ground_truth,q_global,q_area,q_hier,q_all,note
+SFP-POOL,Blind selector finds >=12 recent findings on which a theory commits |p-0.5|>=0.25,theory_splitfirst,experiments/theory_splitfirst/selected.json,5/45 pass; max 0.30,,,,,,none,method_check,,,,,none,,,,,stop rule fired; pool not rated

@@ -17,6 +17,7 @@ Goal: see `README.md`. We test theories of consciousness by what they predict ab
 7. **Nulls, power and multiple tests.** Use permutation nulls, give the detectable effect size for every negative, and add a row to the project test ledger for every test.
 8. **Confounds.** Check age, drug-specific EEG signatures, muscle artefact, eyes open or closed, site and amplifier.
 9. Write plainly. Lead with the conclusion.
+10. **Calibration fallbacks in advance.** The prereg states every fallback rule before calibration runs (for example "if null false calls exceed 5%, switch to a t-interval over subjects"). Calibration may apply only those rules; any other change after calibration makes the study INVALID, not revised (coordinator, 2026-11-24).
 
 ## Output
 Work in `experiments/<area>/` and give each area a `RESULTS.md`:

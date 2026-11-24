@@ -2,6 +2,16 @@
 
 A running log of planning decisions: what Fable (the planning advisor) said, and what we decided. Newest first. Results themselves live in each experiment's RESULTS.md and in docs/NEGATIVE_ATLAS.md.
 
+
+## Standing rule: calibration fallbacks are fixed in advance (coordinator, 2026-11-24)
+
+- **Why:** three studies in a row (arousal control, RT gradient, within-image VAN) changed calibration rules after calibration ran: a t-interval, a one-sided test, and an EXPLAINED bar moved from 90% to 75%. Each change was disclosed and made on fake labels, but together they look like tuning.
+- **Rule:**
+  - Every prereg states its fallback rules before calibration runs, for example: "if null false calls exceed 5%, switch the CI to a t-interval over subjects".
+  - Calibration may apply only those pre-stated fallbacks.
+  - Any other change after calibration makes the study INVALID. It is not revised and re-calibrated.
+- **Applies to** every study from the Sergent bifurcation audit on.
+
 ## 2026-11-23: overnight session (coordinator brief)
 
 ### AI2 self-model kill test: what follows the void
