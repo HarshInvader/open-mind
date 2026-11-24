@@ -445,6 +445,27 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
   - Planted frontal effect beyond the P3b: passes in 18 of 20 runs at 1.0 µV.
 - **Sealed 2026-11-24T09:55:23Z.** Prereg, script, split, eligibility and prep hashes. 42 eligible subjects, 21 + 21; 76 of 84 blocks; 43 frozen decoder channels.
 
+### Hypothesis generator, step 3: kill test result INVALID; ds001785 skipped (2026-11-24)
+- **Discovery** (21 subjects; sealed `survivors.json` at 09:55:55Z): no target survived.
+  - C5 frontal 0.499, C6 GFP 0.489, C7 late posterior 0.497.
+  - Of the controls, only C1 P3b showed an effect, and a small one: AUC 0.530, p = 0.002.
+  - C2 posterior N2 was 0.495.
+- **Held-out** (21 subjects, run once): **INVALID**. The C1 P3b gate failed: AUC 0.491 [0.468, 0.512], p = 0.78.
+  - C2 0.495, C3 0.493, C4 0.498, C8 0.510.
+  - The descriptive C9 decoder was 0.529 [0.507, 0.548], p = 0.009. It cannot earn a PASS, and is reported only.
+  - No null-control flag.
+- **What the sealed rules say:**
+  - Nothing is interpreted, and the line stops.
+  - ds001785 is skipped: no tactile download, and the budget exception is unused.
+  - Any rerun needs a new prereg. This held-out half is no longer untouched.
+- **Not a finding, but worth knowing:** the known P3b effect for T2 is far weaker here than the attentional-blink literature leads one to expect. The likely reasons are untested:
+  1. The whole-epoch-mean measure basis, chosen to avoid the T1-laden baseline, subtracts a broad late P3b from itself. The T1 P3 also overlaps.
+  2. "T2 identification" is a noisy label: guesses count as correct, and seen-but-misnamed trials as incorrect.
+  3. An alignment fault in the range-read epochs. The planted check tests the pipeline after preprocessing, not the T2 event alignment.
+  4. Untested: whether the effect is small in this dataset itself.
+  - The decoder's weak held-out signal (0.53) suggests some outcome information is there, but not in the predicted P3b form.
+- **Decision for the coordinator:** close the generator line on this dataset pair, or write a new prereg with a pre-T1 baseline. The latter needs an extra fetch of about 0.38 GB, over budget, and an alignment check first. Recommendation: close it. The redesign spends the budget on a dataset whose outcome label is not awareness, and the transfer target (touch) was the only novel part.
+
 ### Site deploy deferred (2026-11-24)
 
 The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:
