@@ -19,6 +19,12 @@ HERE = ROOT / "datasets"
 LOCAL = HERE / "local"
 UA = {"User-Agent": "open-mind-dataset-fetch (+https://github.com/HarshInvader/open-mind)"}
 BUDGET = 1.5e9
+# Budget log (outside this script):
+# - ds001810 (2026-11-24): experiments/hypothesis_generator/fetch_ab_epochs.py range-read 8,391 T2-locked epochs
+#   from 84 pre-tDCS blocks, exactly 1,254,488,064 bytes (1.2545 GB) of EEG plus small events/vhdr/channels files.
+#   On disk, compressed: 0.63 GB in datasets/local/ds001810_epochs/. Inside the 1.5 GB budget; no exception used.
+# - ds001785 (tactile): one-off exception approved by the coordinator only if the ds001810 kill test passes:
+#   range-read epochs only, disk peak < 1 GB, exact GB to be logged here and in docs/RESEARCH_STATE.md.
 CHENNU_ZIP = "https://api.repository.cam.ac.uk/server/api/core/bitstreams/e94a6722-da5b-4e53-8673-5e8ec106e0f7/content"
 
 # id -> how to get the subset our results use.

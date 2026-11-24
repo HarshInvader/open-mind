@@ -1,0 +1,28 @@
+{
+ "null_runs": 200,
+ "any_target_pass_rate": 0.0,
+ "stage1_p05_rate": {
+  "C1_P3b": 0.045,
+  "C2_posterior_N2": 0.065,
+  "C3_P1": 0.04,
+  "C4_N1": 0.07,
+  "C5_frontal_late": 0.025,
+  "C6_GFP": 0.055,
+  "C7_late_posterior": 0.04,
+  "C8_preT2": 0.035
+ },
+ "heldout_p05_rate": {
+  "C1_P3b": 0.05,
+  "C2_posterior_N2": 0.075,
+  "C3_P1": 0.04,
+  "C4_N1": 0.04,
+  "C8_preT2": 0.04,
+  "C9_decoder": 0.055
+ },
+ "plant_runs": 50,
+ "plant_uV": 1.5,
+ "plant_recovered": 1.0,
+ "pass_null": true,
+ "pass_stage1": true,
+ "pass_plant": true
+}

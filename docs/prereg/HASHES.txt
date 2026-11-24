@@ -139,3 +139,8 @@ d1aae22a4f927567469dd6b7bad7bf2c0a7bb9e37207f0f1c7e5ae748992fed1  experiments/th
 17c251c59f491edf922068f8a498ea168bff6439197b9b6433683fb6285656d8  experiments/theory_leak/packets/mc_sonnet_2_key.json  2026-11-24T04:06:50Z
 f8cf498b2a297204cbb9b8636a4d53ecd5f8f792c3fa87c67641305376c75c85  experiments/theory_leak/packets/mc_sonnet_3_key.json  2026-11-24T04:06:50Z
 4120c39da8c74ccfed5ae0ab23ef38fe7d61171199c82283fdd36b6c5dc883ed  experiments/theory_leak/packets/mc_sonnet_4_key.json  2026-11-24T04:06:50Z
+65a36b37d894f5dd9dacc3a53d5547e77f9e19298971153fc6488b1e31c6b410  docs/prereg/2026-11-24_ab_t2_identification_killtest.md  2026-11-24T09:55:23Z
+dbc0a130f555487e78b2a1e0132894d8190ffb6fe1edbf572e7e020811d125ce  experiments/hypothesis_generator/ab_killtest.py  2026-11-24T09:55:23Z
+54af2da99f298b4a99ee0f2de37c8311d377500363f8e3bd417c77fea83f5bb9  experiments/hypothesis_generator/ab_out/split.json  2026-11-24T09:55:23Z
+e0e84a03197cb9207759e8f6b4f0268aafa499cf97bd1fa278797786083dc4a9  experiments/hypothesis_generator/ab_out/eligibility.csv  2026-11-24T09:55:23Z
+0698424c85ebfd804ab0496eb71246ee40047e9e41aa27fe0e0ac8c44d16c281  experiments/hypothesis_generator/ab_out/prep_hashes.json  2026-11-24T09:55:23Z

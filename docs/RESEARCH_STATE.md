@@ -419,6 +419,32 @@ The leak probe showed that raters ignore an outcome cue that is labelled random.
   - **Gates:** P3b must survive or the run is INVALID. PASS needs a non-control survivor. FAIL skips ds001785.
   - **Before sealing:** shuffled-label false-positive calibration and a planted-answer check, then a fresh Fable pre-seal review.
 
+### Hypothesis generator, step 2: fetch done, Fable pre-seal review applied, calibrated and sealed (2026-11-24)
+- **Fetch:** 84 of 84 pre blocks, 8,391 epochs, exactly 1,254,488,064 bytes (1.2545 GB) read by range requests, plus small sidecar files. That is inside the 1.5 GB budget, with 0.63 GB on disk. The first background run died on a time limit at 58 of 84 blocks, and the resume finished the rest.
+- **Fable pre-seal review: do not seal as written.**
+  - FAIL was impossible, because the P3b was both the gate and a finding.
+  - Shuffles ran across the two visits.
+  - The −200 to 0 baseline holds the T1 response, which differs by T2 outcome.
+  - C8 could earn a PASS.
+  - Only the .md was sealed.
+  - The planted check sat on scalars.
+  - "VAN" and the theory labels overclaimed.
+  - **All must-fixes were applied:**
+    - P3b and N2 became controls. PASS needs a target (C5 frontal, C6 GFP, C7 late posterior) that clears Holm, a subject CI and residualisation on P3b/N2.
+    - Statistics are within block.
+    - Measures use the whole-epoch mean, with no T1-contaminated baseline.
+    - The script, split, eligibility and data hashes are sealed, and the survivors are sealed before held-out runs once.
+    - The 30 Hz low-pass, VEOG rule and block floor were added, and rejection fell from about 18% to 8.4%.
+  - **Not taken:** fetching pre-T1 samples (about 0.38 GB more). It would break the budget, and the in-window T1 overlap remains either way; the prereg states it as a limit.
+- **Two changes beyond the review:**
+  - **C9 decoder demoted to held-out-only omnibus.** A synthetic check showed that it passes on a pure-P3b effect even after residualising. Calibration then showed that its leave-one-subject-out discovery null was too narrow (11.5% false positives): fold models share subjects' labels, so per-subject AUCs correlate.
+- **Calibration (real epochs, shuffled labels): all pass.**
+  - Any-target false PASS: 0 of 200 runs.
+  - Per-candidate p < 0.05 rates: 0.025–0.075.
+  - Planted P3b/N2: recovered in 50 of 50 runs.
+  - Planted frontal effect beyond the P3b: passes in 18 of 20 runs at 1.0 µV.
+- **Sealed 2026-11-24T09:55:23Z.** Prereg, script, split, eligibility and prep hashes. 42 eligible subjects, 21 + 21; 76 of 84 blocks; 43 frozen decoder channels.
+
 ### Site deploy deferred (2026-11-24)
 
 The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belong to other threads. Per the coordinator, nothing was rebuilt over them. These Mind-side changes go live at the next hub build:

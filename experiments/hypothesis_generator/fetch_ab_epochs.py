@@ -116,8 +116,9 @@ def main(mode):
     log = OUT / "fetch_log.jsonl"
     for sub, ses, tr in plan:
         dst = OUT / f"sub-{sub}_{ses}.npz"
-        if dst.exists():
-            used += dst.stat().st_size
+        if dst.exists():                         # count bytes read over the network, not compressed size
+            with np.load(dst) as d:
+                used += d["X"].size * 4
             continue
         nch, fs, names = header(sub, ses)
         a, b = int(round(TMIN * fs)), int(round(TMAX * fs))
