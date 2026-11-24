@@ -1,6 +1,6 @@
 {
  "_about": "Open Mind paper library. One record per paper or dataset. read_depth says whether the full text or only the abstract was read. verified=true means the DOI was opened and its title and authors matched (Crossref or DataCite, 2026-11-19); numbers come from the text that was read. Generated LIBRARY.md and site/library.html read this file.",
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "topics": [
   "Theories tested",
   "Measuring consciousness",
@@ -5370,6 +5370,81 @@
    ],
    "relevance": "useful",
    "url": "https://doi.org/10.1038/s41467-021-23540-y"
+  },
+  {
+   "kind": "Paper",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "bifurcation-audit"
+   ],
+   "id": "doll-2024-awareness-scales-gradually",
+   "title": "Perceptual awareness of near-threshold tones scales gradually with auditory cortex activity and pupil dilation",
+   "authors": "Doll L, Dykstra AR, Gutschalk A",
+   "year": 2024,
+   "venue": "iScience",
+   "doi": "10.1016/j.isci.2024.110530",
+   "url": "https://doi.org/10.1016/j.isci.2024.110530",
+   "topic": "Measuring consciousness",
+   "question": "Does the auditory awareness negativity need a non-linear threshold, or does it scale with perception?",
+   "tried": "Awareness tracks a graded signal, in line with signal detection theory.",
+   "method_data": "MEG, EEG and pupillometry; near-threshold tones, task-relevant vs irrelevant; six-point perception ratings.",
+   "key_results": "Task-irrelevant tones gave no awareness negativity or pupil dilation. Task-relevant tones gave both, stronger for hits but present for misses, and responses fell gradually with lower ratings.",
+   "limits": "Read at abstract level only.",
+   "ideas_for_us": "Graded counterpart to Sergent 2021 in the same modality; motivates graded generators in our bifurcation audit.",
+   "relevance": "useful"
+  },
+  {
+   "kind": "Paper",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "bifurcation-audit"
+   ],
+   "id": "stockart-2025-evidence-accumulation-irrespective-reports",
+   "title": "Cortical evidence accumulation for visual perception occurs irrespective of reports",
+   "authors": "Stockart F, Msheik R, Robin A, et al.",
+   "year": 2025,
+   "venue": "Nature Communications",
+   "doi": "10.1038/s41467-025-63255-y",
+   "url": "https://doi.org/10.1038/s41467-025-63255-y",
+   "topic": "Measuring consciousness",
+   "question": "Does evidence accumulation in cortex explain perception without report?",
+   "tried": "A leaky accumulator explains both detection and confidence, with or without reports.",
+   "method_data": "sEEG, 29 participants, three preregistered experiments (immediate response, delayed detection, passive viewing).",
+   "key_results": "High-gamma build-up slope in visual, inferior frontal and insular cortex tracks RT; the ventral visual signal separates seen/unseen, high/low intensity, and confidence levels.",
+   "limits": "Read at abstract level only.",
+   "ideas_for_us": "Same group as Sergent 2021, with a graded-accumulation account; relevant to whether single-trial bifurcation and accumulation can be told apart.",
+   "relevance": "useful"
+  },
+  {
+   "kind": "Paper",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "bifurcation-audit"
+   ],
+   "id": "bauer-curran-2003-spurious-mixture-classes",
+   "title": "Distributional assumptions of growth mixture models: implications for overextraction of latent trajectory classes",
+   "authors": "Bauer DJ, Curran PJ",
+   "year": 2003,
+   "venue": "Psychological Methods",
+   "doi": "10.1037/1082-989x.8.3.338",
+   "url": "https://doi.org/10.1037/1082-989x.8.3.338",
+   "topic": "Measuring consciousness",
+   "question": "Can mixture models find latent classes when only one group exists?",
+   "tried": "Non-normal data alone can make multi-class mixtures look optimal.",
+   "method_data": "Statistical theory of finite normal mixtures plus simulation.",
+   "key_results": "Multiple trajectory classes are estimated and appear optimal for non-normal single-population data; within-class estimates are largely uninterpretable.",
+   "limits": "Read at abstract level only; growth-mixture setting, not EEG.",
+   "ideas_for_us": "The general statistical principle behind our finding that the Sergent 2021 two-state model wins on heavy-tailed or threshold-jittered graded data.",
+   "relevance": "core"
   }
  ]
 }

@@ -602,3 +602,8 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
     - skew: 0.04;
     - jitter SD 0.5: 0.01.
   - A Model 3 win alone cannot tell discrete states from a graded signal with a jittery threshold or heavy tails. See `experiments/bifurcation_specificity/RESULTS.md`.
+- **Follow-up (the coordinator's pick, ahead of items 3 and 4): can an extended model set fix the test?**
+  - Prior art: no published critique or fix among the 122 works citing Sergent 2021, or in a full-text search. Boyer 2026 (bioRxiv) reuses the method on fMRI. The general principle is Bauer & Curran 2003 (non-normal data gives spurious mixture classes).
+  - Design: adds J (jittered-threshold graded) and T (t-noise graded), and two held-out graded generators (jitter plus t noise; gain jitter).
+  - Verdicts fixed in advance: FIX WORKS, UNDECIDABLE, STILL NOT SPECIFIC or FAILS BOTH. J nests two states as a limit, so UNDECIDABLE is a named outcome.
+  - Prereg sealed 23:26:07Z (40d99e9), no fallbacks. Running: 10 cells × 150 studies.

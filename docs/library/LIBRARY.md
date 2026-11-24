@@ -1,8 +1,8 @@
 # Open Mind library
 
-Generated from `library.json` on 2026-11-24. Do not edit by hand.
+Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-211 entries: 34 read in full, 177 from the abstract only. Every DOI was opened and its title and authors checked.
+214 entries: 34 read in full, 180 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -781,7 +781,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (87)
+## Measuring consciousness (90)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -971,6 +971,18 @@ Sergent C, Dehaene S (2004). *Psychological Science 15(11)*. [doi:10.1111/j.0956
 - **For us:** The founding behavioural case for all-or-none access. It also shows graded visibility under masking, so a graded result on masking data would not count against the global workspace theory.
 - **Touches:** Fable#13 item 4, all-or-none vs graded
 
+### Distributional assumptions of growth mixture models: implications for overextraction of latent trajectory classes
+
+Bauer DJ, Curran PJ (2003). *Psychological Methods*. [doi:10.1037/1082-989x.8.3.338](https://doi.org/10.1037/1082-989x.8.3.338). Paper, abstract only, **core**.
+
+- **Question:** Can mixture models find latent classes when only one group exists?
+- **Idea tested:** Non-normal data alone can make multi-class mixtures look optimal.
+- **Data and method:** Statistical theory of finite normal mixtures plus simulation.
+- **Results:** Multiple trajectory classes are estimated and appear optimal for non-normal single-population data; within-class estimates are largely uninterpretable.
+- **Limits:** Read at abstract level only; growth-mixture setting, not EEG.
+- **For us:** The general statistical principle behind our finding that the Sergent 2021 two-state model wins on heavy-tailed or threshold-jittered graded data.
+- **Touches:** bifurcation-audit
+
 ### "The self" as shifting coalitions of brain systems in a continuous configuration space
 
 Skipper JI, Blackburne G, Cooper G, Jaglinska M, Jedlovszky K, Kuc J, McAlpine R, Timmermann C (2026). *bioRxiv*. [doi:10.64898/2026.11.12.766263](https://doi.org/10.64898/2026.11.12.766263). Preprint, abstract only, **useful**.
@@ -1078,6 +1090,18 @@ Mazzonetto I, Celli M, Pini L, et al. (2026). *bioRxiv (24 Aug 2026)*. [doi:10.6
 - **For us:** The aperiodic exponent steepens with disconnection in conscious people, one more reason the exponent is a confound to control, not a consciousness marker. Ledger: large activity changes with consciousness intact (C42-type).
 - **Touches:** constraint_ledger, lz_slope
 
+### Cortical evidence accumulation for visual perception occurs irrespective of reports
+
+Stockart F, Msheik R, Robin A, et al. (2025). *Nature Communications*. [doi:10.1038/s41467-025-63255-y](https://doi.org/10.1038/s41467-025-63255-y). Paper, abstract only, **useful**.
+
+- **Question:** Does evidence accumulation in cortex explain perception without report?
+- **Idea tested:** A leaky accumulator explains both detection and confidence, with or without reports.
+- **Data and method:** sEEG, 29 participants, three preregistered experiments (immediate response, delayed detection, passive viewing).
+- **Results:** High-gamma build-up slope in visual, inferior frontal and insular cortex tracks RT; the ventral visual signal separates seen/unseen, high/low intensity, and confidence levels.
+- **Limits:** Read at abstract level only.
+- **For us:** Same group as Sergent 2021, with a graded-accumulation account; relevant to whether single-trial bifurcation and accumulation can be told apart.
+- **Touches:** bifurcation-audit
+
 ### Perceptual and attentional impairments of conscious access involve distinct neural mechanisms despite equal task performance
 
 Noorman S, Stein T, Fahrenfort JJ, van Gaal S (2025). *eLife*. [doi:10.7554/eLife.97900](https://doi.org/10.7554/eLife.97900). Paper, abstract only, **useful**.
@@ -1121,6 +1145,18 @@ Ma X, Qi Y, Xu C, et al. (2024). *Human Brain Mapping*. [doi:10.1002/hbm.26586](
 - **Limits:** One clinical cohort; DoC only; abstract only read here.
 - **For us:** A many-marker screen already exists for DoC, and simple spectral power won. Supports our habit of requiring every marker to beat the spectrum.
 - **Touches:** Hypothesis tournament
+
+### Perceptual awareness of near-threshold tones scales gradually with auditory cortex activity and pupil dilation
+
+Doll L, Dykstra AR, Gutschalk A (2024). *iScience*. [doi:10.1016/j.isci.2024.110530](https://doi.org/10.1016/j.isci.2024.110530). Paper, abstract only, **useful**.
+
+- **Question:** Does the auditory awareness negativity need a non-linear threshold, or does it scale with perception?
+- **Idea tested:** Awareness tracks a graded signal, in line with signal detection theory.
+- **Data and method:** MEG, EEG and pupillometry; near-threshold tones, task-relevant vs irrelevant; six-point perception ratings.
+- **Results:** Task-irrelevant tones gave no awareness negativity or pupil dilation. Task-relevant tones gave both, stronger for hits but present for misses, and responses fell gradually with lower ratings.
+- **Limits:** Read at abstract level only.
+- **For us:** Graded counterpart to Sergent 2021 in the same modality; motivates graded generators in our bifurcation audit.
+- **Touches:** bifurcation-audit
 
 ### Low frequency oscillations drive EEG's complexity changes during wakefulness and sleep
 
