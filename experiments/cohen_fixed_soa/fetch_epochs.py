@@ -32,8 +32,11 @@ def get(url, rng):
     h = dict(UA, Range=f"bytes={rng[0]}-{rng[1]}")
     for attempt in range(5):
         try:
+            wait = 1.0 - (time.time() - _last[0])
+            if wait > 0:
+                time.sleep(wait)
+            _last[0] = time.time()                       # start-to-start spacing: at most one request per second
             with urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=120) as r:
-                _last[0] = time.time()
                 if r.status != 206:
                     raise RuntimeError(f"no range support: HTTP {r.status}")
                 return r.read()

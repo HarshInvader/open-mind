@@ -1,10 +1,11 @@
 """Fixed-SOA seen vs unseen kill test on Cohen et al. 2024 (SOA 50 ms, report block). Prereg:
 docs/prereg/2026-11-24_cohen_fixed_soa_killtest.md
 
-    python -I cohen_killtest.py prep        # label-free: preprocessing, rejection, bad channels -> out/prep.npz, out/prep_summary.json
+    python -I cohen_killtest.py prep        # label-free: preprocessing, rejection, bad channels -> out/prep.npz, out/prep_summary.csv
     python -I cohen_killtest.py align       # label-free: pooled ERP checks (visual response present, timing) -> out/align.json
     python -I cohen_killtest.py eligibility # behaviour counts after rejection -> out/eligibility.csv
     python -I cohen_killtest.py calibrate   # shuffled labels only: false-PASS rate and planted-effect power -> out/calibration.json
+    python -I cohen_killtest.py hashes      # sha256 of prep.npz, align.json, calibration.json -> out/prep_hashes.json (seal it)
     python -I cohen_killtest.py run         # real labels; refuses unless the prereg and this script are sealed -> out/result.json
 
 Channel numbers are the authors' (1-63, EasyCap M10). Ch58 = left mastoid (recorded against the right mastoid),
@@ -104,7 +105,7 @@ def prep():
         rows.append(dict(sub=s, n=p["n"], kept=int(k.sum()), rejected_pct=round(100 * (1 - k.mean()), 1),
                          bad_channels=" ".join(map(str, p["bad"])), min_roi_cover=round(min(p["cover"].values()), 2),
                          van_cover=p["cover"]["VAN"], mastoid_ratio=round(p["mastoid_ratio"], 2),
-                         mastoid_flag=int(p["mastoid_ratio"] > BAD_CH)))
+                         mastoid_flag=int(p["mastoid_ratio"] > BAD_CH or p["mastoid_ratio"] < 0.2)))
         for name, v in p["vals"].items():
             store[f"{s}|{name}"] = v[k]
         store[f"{s}|resp"] = p["resp"][k]
@@ -137,18 +138,25 @@ def align():
     occ = [SCALP.index(c) for c in COMP["P1"][0]]
     o = erp[:, occ, :].mean(axis=1)
     g = o.mean(axis=0)
-    w1 = (t >= 80) & (t <= 140)
     w2 = (t >= 130) & (t <= 220)
-    p1_t = float(t[w1][np.argmax(g[w1])])
     n1_t = float(t[w2][np.argmin(g[w2])])
-    n1 = o[:, samp(140):samp(200)].mean(axis=1)
+    w1 = (t >= 80) & (t <= 160)
+    p1_t = float(t[w1][np.argmax(g[w1])])
+    early = o[:, samp(100):samp(160)].mean(axis=1)
+    pre = o[:, :samp(0)]
+    onset = float(t[np.argmax((t > 0) & (g > 1.0))])                      # first post-0 sample above 1 uV
     from scipy import stats
-    tt = stats.ttest_1samp(n1, 0.0)                                       # baseline-corrected, so 0 = baseline
+    tt = stats.ttest_1samp(early, 0.0)                                    # baseline-corrected, so 0 = baseline
+    old = o[:, samp(140):samp(200)].mean(axis=1)
     late = erp[:, [SCALP.index(c) for c in COMP["P3b"][0]], :].mean(axis=1).mean(axis=0)
-    ok = bool(140 <= n1_t <= 200 and tt.statistic < 0 and tt.pvalue < 0.01)
-    res = dict(n_subjects=len(D), PASS=ok, criterion="grand occipital N1 trough in 140-200 ms and 140-200 ms mean < 0, p < .01",
-               occipital_p1_peak_ms=p1_t, occipital_n1_trough_ms=n1_t,
-               occipital_140_200_uv=float(n1.mean()), t=float(tt.statistic), p=float(tt.pvalue),
+    ok = bool(60 <= onset <= 120 and 100 <= p1_t <= 160 and tt.statistic > 0 and tt.pvalue < 0.01)
+    res = dict(n_subjects=len(D), PASS=ok,
+               criterion="grand occipital response onset (> 1 uV) in 60-120 ms, positive peak in 100-160 ms, "
+                         "100-160 ms mean > 0 across subjects with p < .01 (revised label-free; see prereg section 2)",
+               occipital_onset_ms=onset, occipital_p1_peak_ms=p1_t, occipital_n1_trough_ms=n1_t,
+               occipital_100_160_uv=float(early.mean()), t=float(tt.statistic), p=float(tt.pvalue),
+               prestim_abs_max_uv=float(np.abs(pre.mean(axis=0)).max()),
+               old_criterion_140_200_uv=float(old.mean()),
                grand_occipital_uv_every_20ms={int(t[i]): round(float(g[i]), 2) for i in range(0, NS, 10)},
                grand_p3b_roi_uv_every_20ms={int(t[i]): round(float(late[i]), 2) for i in range(0, NS, 10)})
     (OUT / "align.json").write_text(json.dumps(res, indent=1) + "\n")
@@ -260,6 +268,8 @@ def analyse(D, subs, labels, P, rng, comps=None, by_ident=False, mask=None):
             null[c] += a[1:]
             diff[c].append(float(v[y].mean() - v[~y].mean()))
     n = len(used)
+    if n < 2:
+        return {c: dict(n_subjects=n, note="too few subjects") for c in comps}
     for c in per:
         a = np.array(per[c])
         nl = null[c] / n
@@ -290,9 +300,9 @@ def decide(r):
     if not (g["p"] < ALPHA and g["mean_auc_predicted_direction"] > 0.5):
         return dict(verdict="INVALID", reason="P3b positive-control gate failed")
     ps = sorted((r[t]["p"], t) for t in TARGETS)
-    holm, passed, stop = {}, {}, False
+    holm, passed, stop, prev = {}, {}, False, 0.0
     for i, (p, t) in enumerate(ps):
-        adj = min(1.0, p * (len(ps) - i))
+        adj = prev = max(prev, min(1.0, p * (len(ps) - i)))               # monotone Holm
         holm[t] = adj
         passed[t] = (not stop) and adj < ALPHA
         stop = stop or not passed[t]
@@ -318,7 +328,7 @@ def calibrate():
     comps = ["P3b", "N2", "VAN", "P1", "N2roi_0_60"]
     fp, killed0 = 0, {t: 0 for t in TARGETS}
     plant = {t: {"PASS": 0, "KILLED": 0} for t in TARGETS}
-    runs, pruns = 200, 50
+    runs, pruns = 200, 200
     for k in range(runs):
         lab = {s: rng.permutation(D[s]["resp"] == 1) for s in subs}
         r = analyse(D, subs, lab, P, rng, comps=comps)
@@ -353,11 +363,13 @@ def run():
         require_sealed(str(f))
     import hashlib
     h = json.loads((OUT / "prep_hashes.json").read_text())
-    assert hashlib.sha256((OUT / "prep.npz").read_bytes()).hexdigest() == h["prep.npz"], "prep.npz changed"
+    for f in ("prep.npz", "align.json", "calibration.json"):
+        assert hashlib.sha256((OUT / f).read_bytes()).hexdigest() == h[f], f"{f} changed since sealing"
     al = json.loads((OUT / "align.json").read_text())
     assert al["PASS"] and al["n_subjects"] == 40, "label-free alignment check not passed on all 40 subjects"
     cal = json.loads((OUT / "calibration.json").read_text())
     assert cal["false_rate"] <= MAX_FALSE, "calibration false-pass rate too high"
+    assert cal["subjects"] == len(eligible("confirm")) and cal["planted_bound_uv"] == KILL_BOUND, "stale calibration"
     D = load()
     rng = np.random.default_rng(SEED)
     res = {}
@@ -369,7 +381,11 @@ def run():
             identity_strata=analyse(D, subs, lab, NPERM, rng, comps=["P3b"] + TARGETS, by_ident=True),
             rt_over_500ms=analyse(D, subs, lab, NPERM, rng, comps=["P3b"] + TARGETS,
                                   mask={s: D[s]["rt"] > RT_MIN for s in subs}))
-        res[group] = dict(stats=r, decision=decide(r), sensitivity=sens)
+        dec = decide(r)
+        for tg, st in dec.get("targets", {}).items():
+            if st == "KILLED" and cal["planted_killed_rate"][tg] > 0.05:
+                dec["targets"][tg] = "KILLED_NOT_CALIBRATED"              # prereg section 7
+        res[group] = dict(stats=r, decision=dec, sensitivity=sens)
     res["verdict_from"] = "confirm (pilot is a secondary replication; its 15 subjects set the authors' windows)"
     (OUT / "result.json").write_text(json.dumps(res, indent=1) + "\n")
     print(json.dumps(res, indent=1))
@@ -378,7 +394,8 @@ def run():
 def hashes():
     import hashlib
     (OUT / "prep_hashes.json").write_text(json.dumps(
-        {"prep.npz": hashlib.sha256((OUT / "prep.npz").read_bytes()).hexdigest()}, indent=1) + "\n")
+        {f: hashlib.sha256((OUT / f).read_bytes()).hexdigest() for f in ("prep.npz", "align.json", "calibration.json")},
+        indent=1) + "\n")
 
 
 if __name__ == "__main__":

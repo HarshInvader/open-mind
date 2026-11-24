@@ -10,7 +10,7 @@ Agent: Open Mind thread   Date: 2026-11-24   Status: DRAFT (not sealed; revised 
   - this file;
   - the script;
   - `out/eligibility.csv`;
-  - `out/prep_hashes.json` (sha256 of `out/prep.npz`, the frozen per-trial component values).
+  - `out/prep_hashes.json`: sha256 of `out/prep.npz` (the frozen per-trial component values), `out/align.json` and `out/calibration.json`.
 - **Before sealing, label-free only:**
   - prep (rejection, bad channels);
   - the alignment check on pooled ERPs;
@@ -71,8 +71,20 @@ Agent: Open Mind thread   Date: 2026-11-24   Status: DRAFT (not sealed; revised 
 - **Trial value:** the mean over ROI channels and window samples. These values are frozen in `out/prep.npz` and hashed.
 
 - **Label-free alignment check** (pooled over seen and unseen; must pass before sealing):
-  - the grand-average occipital (P1 ROI) N1 trough falls in 140–200 ms;
-  - the 140–200 ms mean is below baseline across subjects (t-test, p < 0.01).
+  - the grand-average occipital response (P1 ROI) first exceeds 1 µV between 60 and 120 ms after face onset;
+  - its positive peak falls in 100–160 ms;
+  - the 100–160 ms mean is above baseline across subjects (t-test, p < 0.01).
+  - **Revised before sealing, on label-free data.** The first criterion asked for an occipital N1 below baseline at 140–200 ms. On the first 11 subjects it failed even though the timing was right:
+    - the N1 dip was at 186 ms;
+    - the baseline was flat;
+    - the response started at about 80 ms with a peak at about 140 ms.
+  - The 140–200 ms mean stayed positive (+4.2 µV) because the response to the first mask (onset 50 ms) overlaps the face N1. The old criterion's value is still written to `out/align.json`.
+  - The face-to-mask marker gap (25 samples in 5,091 of 5,116 trials) is a second, independent alignment check.
+  - **What the revision saw:** only pooled ERPs over all SOA-50 trials (seen and unseen together). No seen/unseen labels, ratings or condition contrasts were opened to make it.
+  - **Frozen (coordinator, 2026-11-24):**
+    - the revised criterion must pass on all 40 subjects exactly as written;
+    - if it fails, it is not revised again and the test is logged INVALID;
+    - the results report that the original criterion failed and why, next to the revised one.
 
 ## 3. Components (authors' electrode numbers)
 
@@ -114,7 +126,7 @@ Agent: Open Mind thread   Date: 2026-11-24   Status: DRAFT (not sealed; revised 
 
 ## 6. Limits fixed in advance
 
-- **P3b overlap.** At 250–290 ms the P3b may already push seen trials positive on the shared electrodes, which would cancel an N2 difference. N2_frontal and N2_resid_P3b address this only partly. A KILLED N2 means "this window and ROI do not show it", not "no frontal awareness signal exists".
+- **P3b overlap.** At 250–290 ms the P3b may already push seen trials positive on the shared electrodes, which would cancel an N2 difference. N2_frontal addresses this only partly. A KILLED N2 means "this window and ROI do not show it", not "no frontal awareness signal exists".
 - **Seen and unseen are reports.** A "seen" answer includes guesses and a criterion. Confidence was not recorded.
 - **Face identity** varies across trials, and some faces may be more visible. The identity-strata sensitivity analysis addresses this only partly.
 - **Motor responses** can fall inside the P3b window: the earliest answer in subject 1001 is 318 ms. Different buttons mean different motor potentials, which can inflate the P3b gate. The late-answer sensitivity analysis addresses this.
@@ -129,14 +141,17 @@ Agent: Open Mind thread   Date: 2026-11-24   Status: DRAFT (not sealed; revised 
 
 - **False positives:** 200 runs with labels shuffled within subject. We count how often any target passes (2,000 permutations per run, gate forced open). It must be ≤ 0.06; `run` refuses otherwise.
 - **KILLED under a true zero:** the rate is reported.
-- **Planted bound:** a −1.0 µV seen effect planted into N2 and VAN separately, 50 runs each.
+- **Planted bound:** a −1.0 µV seen effect planted into N2 and VAN separately, 200 runs each.
   - The PASS rate (power) and the KILLED rate are reported.
-  - If the KILLED rate under the planted bound is above 0.05, KILLED for that target is reported as "not calibrated" rather than as a kill.
-- **Run gates:** `run` also refuses unless the alignment check passed on all 40 subjects.
+  - If the KILLED rate under the planted bound is above 0.05, KILLED for that target is reported as "not calibrated" rather than as a kill. `run` applies this automatically.
+- **Run gates:** `run` also refuses unless:
+  - the alignment check passed on all 40 subjects;
+  - `align.json` and `calibration.json` match the hashes in the sealed `prep_hashes.json`;
+  - calibration was run on the sealed confirmatory set at the sealed bound.
 
 ## 8. Run order
 
-1. prep, hashes, align, eligibility, calibrate (label-free);
+1. prep, align, eligibility, calibrate, then hashes (label-free; hashes last, so they cover the alignment and calibration outputs);
 2. a Fable pre-seal review;
 3. fixes;
 4. seal;
@@ -165,3 +180,14 @@ Agent: Open Mind thread   Date: 2026-11-24   Status: DRAFT (not sealed; revised 
   - masks are identical across seen and unseen at a fixed SOA;
   - channel roles from the `.vhdr` coordinates;
   - the 15 + 25 split matches the 40 files.
+- **Second Fable re-check (2026-11-24):**
+  - Blockers fixed:
+    - stale residualised-N2 text removed;
+    - "not calibrated" applied in code;
+    - align and calibration outputs hashed and checked.
+  - Minor fixes:
+    - planted runs raised to 200;
+    - a flat-mastoid flag (ratio < 0.2) added;
+    - Holm made monotone;
+    - a guard added for empty sensitivity subsets.
+  - Its verdict on the alignment revision: label-free and reasonable, not goal-seeking.
