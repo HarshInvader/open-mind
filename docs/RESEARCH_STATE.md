@@ -589,4 +589,16 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - Sealed (5257fa6) and run once.
   - Within image REDUCED: −0.95 µV [−1.54, −0.36], retained 0.82 [0.47, 1.10].
   - The average-reference VAN is present (−2.15 µV). The fronto-central VPP is not clear in the confirm set.
-- **Round 15, study 1 (specificity audit of the Sergent 2021 bifurcation test, simulation only):** step 0 prior art is running. The coordinator allows fetching their OSF analysis code (under 5 MB, no data) if the methods text is ambiguous.
+- **Round 15, study 1 (specificity audit of the Sergent 2021 bifurcation test, simulation only):**
+  - Step 0 found the methods text ambiguous (inits, CV folds, Model 3 on noise trials), so we fetched their OSF analysis code under the coordinator's allowance: 13 .m scripts, **315,806 bytes**, no data files. The code was read and never run. Its sha256 values are in the local `datasets/local/sergent2021_code/FETCH_LOG.json`.
+  - A Python port (likelihoods, inits, 5-fold block CV, spm_BMS with pxp) passed the smoke test: Model 3 data give pxp3 = 1, Model 2B data give 0.
+  - Prereg sealed 21:52:47Z (6aac4dc). It states no calibration fallbacks: a validity failure means VOID.
+  - **Result: NOT SPECIFIC.** Validity passed: two-state data called 1.00, Model 2B data 0.00.
+  - Graded generators with no discrete states, bifurcation call rate (Model 3 pxp > 0.95):
+    - threshold jitter SD 1.0: 0.74;
+    - threshold jitter SD 1.5: 0.98;
+    - t(4) noise: 0.67, a lower bound, since 3 of 300 studies hit a −inf LLH;
+    - drift: 0.27;
+    - skew: 0.04;
+    - jitter SD 0.5: 0.01.
+  - A Model 3 win alone cannot tell discrete states from a graded signal with a jittery threshold or heavy tails. See `experiments/bifurcation_specificity/RESULTS.md`.
