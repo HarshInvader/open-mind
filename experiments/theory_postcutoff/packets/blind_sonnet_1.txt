@@ -1,0 +1,104 @@
+You are rating how strongly scientific theories of consciousness predict experimental outcomes.
+
+Rules:
+- Do not use any tools, files or web searches. Answer from your own knowledge of each theory.
+- For each theory and each finding you see two possible outcomes, A and B. Exactly one of them describes what was
+  observed in the real world, but you are not told which, and it does not matter: rate what the THEORY implies.
+- Give p = the probability that outcome A rather than B would be observed IF the theory (as stated in the canonical
+  reference given, by its proponents' core commitments) were true. Use 0.01-0.99.
+- p near 0.5 means the theory does not discriminate between A and B (it is silent, or it fits both equally well).
+- Do not reward a theory for having been adjusted after the fact to fit one outcome unless that adjustment is part of
+  the canonical reference. For the two made-up theories (Z and Q), use only the text given.
+- Be calibrated: reserve values below 0.1 or above 0.9 for cases where the theory's core commitments clearly entail
+  one outcome.
+
+Return ONLY a JSON array, one object per (theory, finding) pair, with keys "theory", "finding", "p", "why"
+("why" at most 10 words). Use each theory id exactly as given (for example "GNWT", "TOY_Z"). There are 200 pairs;
+include every one.
+
+THEORIES
+- RPT: Recurrent processing theory. Canonical reference: Lamme 2006, Trends Cogn Sci, doi:10.1016/j.tics.2006.09.001.
+- GNWT: Global neuronal workspace theory. Canonical reference: Mashour, Roelfsema, Changeux & Dehaene 2020, Neuron, doi:10.1016/j.neuron.2020.01.026.
+- AST: Attention schema theory. Canonical reference: Graziano & Webb 2015, Front Psychol, doi:10.3389/fpsyg.2015.00500.
+- IIT: Integrated information theory (IIT 4.0). Canonical reference: Albantakis et al. 2023, PLoS Comput Biol, doi:10.1371/journal.pcbi.1011465.
+- TOY_Z: Theory Z (a made-up control theory). Canonical reference: none; its full content is given here. Theory Z makes exactly these claims and no others: (1) The cerebellum plays no part in consciousness. (2) Consciousness requires an intact prefrontal cortex; large prefrontal lesions abolish it. (3) Lateral prefrontal cortex generates conscious contents, so stimulating it alters experience; orbitofrontal and cingulate cortex play no role in experience. (4) Every anaesthetic, including ketamine, abolishes experience (no dreams) and lowers brain complexity. (5) Dreams are generated in posterior cortex, which becomes locally activated, with less slow-wave activity, when we dream. (6) Being awake is sufficient for being conscious. (7) The P3b wave is the signature of conscious experience, whether or not anything is reported. (8) Frontal activity tracks experience itself, not report. (9) Prefrontal neurons carry the current contents of experience. (10) The thalamus plays no part in reporting experience; it only sets how fast stimuli are categorised. (11) Psychedelics make brain signals less diverse, and the stronger the drug's effect on experience, the larger the fall. (12) Meditative absorption is a slow-wave state: it raises delta, theta and alpha power and leaves beta and gamma power unchanged. (13) Blindness strengthens bottom-up signalling from occipital to frontal cortex and leaves top-down signalling from frontal to occipital cortex unchanged. (14) A surprising event disrupts perception only through late parietal processing, never through early sensory responses. (15) In language models, representations that can be put into words exist only in a middle band of layers. Theory Z says nothing else.
+- PLACEBO_Q: Theory Q (a made-up control theory). Canonical reference: none; its full content is given here. Theory Q claims only that consciousness depends on the concentration of a particular molecule in the liver. It makes no claims about the brain, sleep, drugs, lesions, stimulation or behaviour.
+- HOT: Higher-order theories (higher-order representation / perceptual reality monitoring family). Canonical reference: Brown, Lau & LeDoux 2019, Trends Cogn Sci, doi:10.1016/j.tics.2019.06.009.
+- PP: Predictive processing as a theory for consciousness. Canonical reference: Seth & Hohwy 2020, Cogn Neurosci, doi:10.1080/17588928.2020.1838467.
+
+FINDINGS (use the finding id in your answer)
+F01
+  A: Simultaneous scalp and intracranial recordings during median-nerve stimulation showed that the scalp negativity near 140 ms that has been linked to tactile awareness is the scalp manifestation of an insulo-opercular field potential that follows a sustained high-frequency response there.
+  B: Simultaneous scalp and intracranial recordings during median-nerve stimulation showed that the scalp negativity near 140 ms that has been linked to tactile awareness is the scalp manifestation of a primary somatosensory field potential that follows the initial phasic response there.
+F02
+  A: In a meta-analysis of several hundred neuroimaging studies of self-related processing sorted into ten forms of self, no single brain location was significant across all ten maps; each form occupied different parts of the cortical midline and insula.
+  B: In a meta-analysis of several hundred neuroimaging studies of self-related processing sorted into ten forms of self, one shared set of midline and insular locations was significant across all ten maps; the forms differed mainly outside that common core.
+F03
+  A: When language models that reuse the same weights across depth (looped, recurrent transformers) were tested with the suite used on a standard feedforward model, verbalisable, causally potent representations did not form in the recurrent part of either architecture.
+  B: When language models that reuse the same weights across depth (looped, recurrent transformers) were tested with the suite used on a standard feedforward model, verbalisable, causally potent representations formed in the recurrent part of each architecture.
+F04
+  A: In large language models, the representations a model is poised to put into words were used to carry automatic processing such as text parsing and routine inference, while the intermediate steps of silent reasoning proceeded without them.
+  B: In large language models, the representations a model is poised to put into words were used to carry the intermediate steps of silent reasoning, while automatic processing such as text parsing and routine inference proceeded without them.
+F05
+  A: Prefrontal neurons in macaques do not track the content of rivalry switches when there is no report; contents cannot be decoded from them.
+  B: Prefrontal neurons in macaques track the content of rivalry switches with no report, enough to decode contents single-trial.
+F06
+  A: The P3b disappears when people see a stimulus but do not have to report it; it tracks report and task relevance, not awareness.
+  B: The P3b persists when people see a stimulus but do not have to report it; it tracks awareness, not report or task relevance.
+F07
+  A: Losing the cerebellum, which holds most of the brain's neurons, substantially impairs or abolishes consciousness, not only movement.
+  B: The cerebellum holds most of the brain's neurons, yet losing it impairs movement and not, as far as anyone reports, consciousness.
+F08
+  A: When cortex was probed with transcranial magnetic stimulation and EEG, blind people compared with sighted controls showed stronger frontal-to-occipital effective connectivity, while occipital-to-frontal propagation was unchanged.
+  B: When cortex was probed with transcranial magnetic stimulation and EEG, blind people compared with sighted controls showed stronger occipital-to-frontal effective connectivity, while frontal-to-occipital propagation was unchanged.
+F09
+  A: In binocular rivalry, frontal fMRI activity relates to the perceptual switches themselves and persists when switches are not reported.
+  B: In binocular rivalry, frontal fMRI activity relates to reporting switches, not to the switches themselves.
+F10
+  A: When an unexpected task-irrelevant stimulus made people miss a visual or auditory probe shortly afterwards, the misses were accompanied by a late parietal positivity to the surprising stimulus that shrank over trials together with the behavioural deficit, whereas early perceptual components did not habituate.
+  B: When an unexpected task-irrelevant stimulus made people miss a visual or auditory probe shortly afterwards, the misses were accompanied by enlarged early perceptual components to the surprising stimulus that shrank over trials together with the behavioural deficit, whereas the late parietal positivity did not habituate.
+F11
+  A: In rats under deep desflurane anaesthesia, a spontaneously occurring cortical state with awake-like spectral properties, during which the animals stayed behaviourally unresponsive, showed travelling-wave dynamics that stayed like those of the other deep-anaesthesia states.
+  B: In rats under deep desflurane anaesthesia, a spontaneously occurring cortical state with awake-like spectral properties, during which the animals stayed behaviourally unresponsive, showed travelling-wave dynamics that shifted partly toward those of the awake state.
+F12
+  A: Stimulating lateral prefrontal cortex often changes experience; orbitofrontal and anterior cingulate stimulation seldom does.
+  B: Stimulating lateral prefrontal cortex seldom changes experience; orbitofrontal and anterior cingulate stimulation often does.
+F13
+  A: Within both NREM and REM, dream reports follow a local drop in low-frequency EEG power over posterior cortex; high-frequency activity there tracks specific contents.
+  B: Within both NREM and REM, dream reports are not linked to any local change in posterior cortex; they follow a local drop in low-frequency power over frontal cortex instead.
+F14
+  A: In a large cohort of patients with disorders of consciousness, spontaneous high-amplitude EEG slow waves were more frequent in minimally conscious patients than in unresponsive patients, and more frequent, steeper slow waves predicted better recovery at one year.
+  B: In a large cohort of patients with disorders of consciousness, spontaneous high-amplitude EEG slow waves were more frequent in unresponsive patients than in minimally conscious patients, and more frequent, steeper slow waves predicted poorer recovery at one year.
+F15
+  A: With EEG frequency tagging of a stream of made-up three-syllable words, neural tracking of the hidden word structure was present in healthy controls and minimally conscious patients but was not significant in patients with unresponsive wakefulness syndrome.
+  B: With EEG frequency tagging of a stream of made-up three-syllable words, neural tracking of the hidden word structure was present in healthy controls and minimally conscious patients and was also significant in patients with unresponsive wakefulness syndrome.
+F16
+  A: Large prefrontal lesions do not abolish consciousness.
+  B: Large prefrontal lesions abolish consciousness.
+F17
+  A: In large language models, the representations a model is poised to put into words carried coherent content only in an intermediate band of layers, and the model's weights broadcast them more widely than other representations.
+  B: In large language models, the representations a model is poised to put into words carried coherent content across nearly all layers, and the model's weights broadcast them no more widely than other representations.
+F18
+  A: In healthy adults, low-intensity focused ultrasound aimed at the thalamus changed how long people took to categorise the stimulus, depending on target and pulsing pattern, but did not change how long they took to report their subjective visual experience.
+  B: In healthy adults, low-intensity focused ultrasound aimed at the thalamus changed how long people took to report their subjective visual experience, depending on target and pulsing pattern, but did not change how long they took to categorise the stimulus.
+F19
+  A: In placebo-controlled crossover experiments with transcranial magnetic stimulation and EEG in healthy people, the sedative zolpidem reduced perturbational complexity in the late response window, whereas the benzodiazepine alprazolam did not change it.
+  B: In placebo-controlled crossover experiments with transcranial magnetic stimulation and EEG in healthy people, the benzodiazepine alprazolam reduced perturbational complexity in the late response window, whereas the sedative zolpidem did not change it.
+F20
+  A: In long-term meditators, deep absorptive meditation compared with eyes-open rest raised beta and gamma EEG power without changing delta, theta or alpha power, and model fits to the spectra placed the cortex in a more inhibition-dominant regime.
+  B: In long-term meditators, deep absorptive meditation compared with eyes-open rest raised delta, theta and alpha EEG power without changing beta or gamma power, and model fits to the spectra placed the cortex in a more excitation-dominant regime.
+F21
+  A: Children born without most of the cerebral cortex (hydranencephaly) show no emotional or orienting responses.
+  B: Children born without most of the cerebral cortex (hydranencephaly) show emotional and orienting responses that some clinicians read as conscious.
+F22
+  A: Across fMRI datasets, closed-loop connectivity motifs among thalamic nuclei increased during non-REM sleep stages 2 and 3, and the same increase was seen during propofol anaesthesia and in unresponsive wakefulness syndrome.
+  B: Across fMRI datasets, closed-loop connectivity motifs among thalamic nuclei increased during non-REM sleep stages 2 and 3, but no such increase was seen during propofol anaesthesia or in unresponsive wakefulness syndrome.
+F23
+  A: Anaesthetic-dose ketamine makes people unresponsive, yet they report long vivid dreams afterwards, and their TMS-EEG complexity stays wake-like; propofol and xenon give low complexity and no reports.
+  B: Anaesthetic-dose ketamine makes people unresponsive, and like propofol and xenon it leaves no dream reports afterwards and gives low TMS-EEG complexity.
+F24
+  A: Wakefulness and awareness dissociate: patients in the vegetative / unresponsive wakefulness state open their eyes and have sleep-wake cycles without behavioural signs of awareness.
+  B: Wakefulness and awareness do not dissociate: patients who open their eyes and have sleep-wake cycles always show behavioural signs of awareness.
+F25
+  A: In a visual masking task, people with mild to moderate Alzheimer's disease, compared with healthy older adults, showed a preserved early visual awareness negativity but a reduced late positivity and reduced fronto-parietal activation.
+  B: In a visual masking task, people with mild to moderate Alzheimer's disease, compared with healthy older adults, showed a reduced early visual awareness negativity as well as a reduced late positivity and reduced fronto-parietal activation.

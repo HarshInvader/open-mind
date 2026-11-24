@@ -1,0 +1,1 @@
+The sonnet reply wrapped the JSON array in a markdown code fence; the array inside was complete and is saved unchanged.

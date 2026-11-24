@@ -2,6 +2,16 @@
 
 Closed routes, each with the effect size the test could have caught. Empty until the first tests land.
 
+## AI-rated theories mostly do not commit on post-cutoff findings (post-cutoff ledger, 2026-11-24)
+
+- **Route closed (for now):** "test whether IIT's lead in the AI-rated theory ledger carries over to findings published after the raters' cutoff" with a pool of 15 recent findings. Too few split the theories.
+- **Data:** 15 kept post-cutoff findings (12 clusters) and 10 famous findings; 3 models × 2 runs; blind and informed arms. Sealed prereg `docs/prereg/2026-11-24_theory_postcutoff_ledger.md`.
+- **Result:** UNINFORMATIVE. 4/15 findings split the theories, in 3 clusters (bar: 8 and 6). 89% of post-cutoff cells sat in p 0.4–0.6. Gates passed. Hindsight BOUNDED, D_H −0.006 [−0.061, 0.049].
+- **Descriptive:** IIT lead +0.50 on famous items, −0.14 [−0.29, 0.02] on all post-cutoff items, in the same run.
+- **What it could catch:** planted lead 0.55 with no elastic items: SURVIVES 80%; null: false SURVIVES 1–6%. Planted IIT-only hindsight of 0.40 bits: caught 100%.
+- **Not closed:** a splitting-first item pool; human raters.
+- **Details:** `experiments/theory_postcutoff/RESULTS.md`.
+
 ## AI theory raters do not follow a disowned outcome cue (theory leak probe, 2026-11-23)
 
 - **Route closed:** "LLM raters bend a theory's predicted outcome toward an outcome they are told was reported", for a cue they are told is random, on unknowable findings (post-cutoff results and pending outcomes).

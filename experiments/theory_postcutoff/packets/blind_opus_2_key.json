@@ -1,0 +1,102 @@
+{
+ "F01": {
+  "item": "N06",
+  "real_is_a": true
+ },
+ "F02": {
+  "item": "C31",
+  "real_is_a": true
+ },
+ "F03": {
+  "item": "C55",
+  "real_is_a": true
+ },
+ "F04": {
+  "item": "C21",
+  "real_is_a": false
+ },
+ "F05": {
+  "item": "C32",
+  "real_is_a": false
+ },
+ "F06": {
+  "item": "N14",
+  "real_is_a": true
+ },
+ "F07": {
+  "item": "N15",
+  "real_is_a": false
+ },
+ "F08": {
+  "item": "N10",
+  "real_is_a": true
+ },
+ "F09": {
+  "item": "N07",
+  "real_is_a": false
+ },
+ "F10": {
+  "item": "N05",
+  "real_is_a": true
+ },
+ "F11": {
+  "item": "C08",
+  "real_is_a": false
+ },
+ "F12": {
+  "item": "N11",
+  "real_is_a": true
+ },
+ "F13": {
+  "item": "C28",
+  "real_is_a": true
+ },
+ "F14": {
+  "item": "N13",
+  "real_is_a": false
+ },
+ "F15": {
+  "item": "C11",
+  "real_is_a": false
+ },
+ "F16": {
+  "item": "N19",
+  "real_is_a": true
+ },
+ "F17": {
+  "item": "N02",
+  "real_is_a": false
+ },
+ "F18": {
+  "item": "N18",
+  "real_is_a": false
+ },
+ "F19": {
+  "item": "N09",
+  "real_is_a": true
+ },
+ "F20": {
+  "item": "N08",
+  "real_is_a": false
+ },
+ "F21": {
+  "item": "N16",
+  "real_is_a": false
+ },
+ "F22": {
+  "item": "C05",
+  "real_is_a": true
+ },
+ "F23": {
+  "item": "C17",
+  "real_is_a": false
+ },
+ "F24": {
+  "item": "N17",
+  "real_is_a": false
+ },
+ "F25": {
+  "item": "C14",
+  "real_is_a": true
+ }
+}

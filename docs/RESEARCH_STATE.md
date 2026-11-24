@@ -546,3 +546,17 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
 - the leak-probe and manipulation-check `site/updates.json` entries;
 - the library additions (+8 earlier, the P02–P04 key results, and +4 for the Cohen fixed-SOA study);
 - the paper pages that follow from them.
+
+### Study 4 (Cohen no-report block): prereg drafted, parked (2026-11-24)
+
+- Simulations (`experiments/cohen_fixed_soa/study4_sim*.py`) showed the default read (no-report face trials only, 129.6 MB) cannot survive a block offset. A double difference with mask-only trials can: 0/500 wrong calls, power 0.6–0.8.
+- Draft prereg `docs/prereg/2026-11-24_cohen_noreport_study4.md` recommends option B (250.6 MB). Parked: the budget is spent and no exception is approved.
+
+### Post-cutoff theory ledger: sealed, run, UNINFORMATIVE (2026-11-24)
+
+- **Why:** a zero-byte study from the Fable list. Does the pilot's IIT lead on famous findings hold on findings published after the raters' training cutoff?
+- **Sealed** 19:23:41Z (commit 5ede8d9) after a Fable pre-seal review (5 must-fixes applied). Recognition gate PASS 30/30; N03, N04, N12 excluded.
+- **Result:** UNINFORMATIVE. Only 4 of 15 post-cutoff findings split the theories (3 clusters); 89% of cells were elastic (42% on famous items). All gates passed (α 0.84, placebo bias 0).
+- **Descriptive only:** IIT leads on the famous items in the same run (+0.50) and not on the new ones (−0.14 all, −0.45 split). Hindsight BOUNDED (D_H −0.006), so seeing outcomes did not favour IIT.
+- **Next options:** a larger, splitting-first post-cutoff item pool; human expert raters on the same packets.
+- **Write-up:** `experiments/theory_postcutoff/RESULTS.md`.
