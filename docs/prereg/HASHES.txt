@@ -200,3 +200,6 @@ a4d9e2e918b8922813d98ff2bfd17cf6bfd096a722cf3431a8a55939493b3e5a  docs/prereg/20
 8465c8a48f17a55abcc0449d5edfe077b6d288a4528163af8be50c3e5223f3e8  experiments/bifurcation_specificity/jitter_onset.py  2026-11-25T14:17:20Z
 048cf650ea5f4126078b2ff10f9cbf9c0dfab15595ccc4caa9267b46774cb971  docs/prereg/2026-11-25_sergent_observer_jitter.md  2026-11-25T16:58:50Z
 d155122d2518cd14dfb441a49ab17f1e941582b220014847173a056f7b5bcaf9  experiments/sergent_jitter/jitter_recovery.py  2026-11-25T16:58:50Z
+de640140b6a1cc76a4990498b68c3a4afffeb0fdfaf4e3c71a07f41dd0b06fe2  docs/prereg/2026-11-25_cohen_noreport_dd.md  2026-11-25T17:19:35Z
+47d55f3556c47f5b3d3396a53e81515ca31d3d5225d749d0c86326e82a5f3d3b  experiments/cohen_fixed_soa/study4.py  2026-11-25T17:19:35Z
+f1907ce0543efb3653a980c368759b1a5fe0df47de717f6150c97278bad5b16c  experiments/cohen_fixed_soa/fetch_noreport.py  2026-11-25T17:19:35Z

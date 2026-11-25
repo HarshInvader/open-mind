@@ -47,3 +47,28 @@ Coordinator's condition: a montage-transfer control inside ds001810 must keep at
 ## 6. Cost
 
 No streaming. Features are small (≈ 13 bins × 63 channels × ~10k trials). Minutes on 1–2 workers, so no coordinator launch is needed for the kill test itself.
+
+## 7. Coordinator decision (2026-11-25, about 17:15Z)
+
+- **ds001810 dropped as the target.** With a within-dataset ceiling near 0.53, a transfer test there could only fail on power. It would also reopen the hypothesis-generator line, closed with "no redesign with new labels".
+- **One-hour search** for a blink dataset that has:
+  - an open licence;
+  - single-trial EEG or MEG;
+  - a per-trial seen or visibility report on T2;
+  - at least 15 subjects.
+- **Download exception:** up to 3 GB, only while free disk stays above 10 GB afterwards.
+- **If found:** the 80%-of-excess-over-0.5 montage rule is kept, and the native lower bound must be above 0.5. The timing prediction is stated in the prereg: weak transfer at 200–250 ms, transfer at ≥ 300 ms.
+- **If nothing qualifies within the hour:** item 3 is dropped.
+
+## 8. Outcome of the search: item 3 dropped (2026-11-25, about 17:20Z)
+
+A search of about one hour (OSF, OpenNeuro, NEMAR, Zenodo, Figshare, Dryad, GIN, DANDI, Donders, plus paper data statements; metadata only, nothing downloaded) found no attentional-blink dataset that meets all four criteria.
+
+| Candidate | Licence | N | Per-trial T2 visibility | Single-trial EEG/MEG | Verdict |
+|---|---|---|---|---|---|
+| Eiserbeck et al. 2022 Cereb Cortex, OSF e85hn | CC-BY 4.0 | 32 | 4-point PAS | No: only window-mean single-trial amplitudes (4 windows), exported as one file per window; no continuous or epoched EEG | closest; fails |
+| OpenNeuro ds001810 | CC0 | 42 | identification only | yes | excluded earlier (§7) |
+| Karabay et al. 2022 JEP:General, OSF x5dru | CC-BY 4.0 | ? | graded | behavioural only, as far as we can tell (not confirmed) | fails |
+| Sergent et al. 2005; Pincham et al.; NeuroImage 2022 gradual-awareness AB | n/a | n/a | yes | no open data found | fails |
+
+The coordinator's rule applies: item 3 is dropped. The Eiserbeck windows (90–130, 150–220, 220–300, 400–800 ms) could carry a coarse window-level transfer test. But the 400–800 ms window lies outside the Cohen epoch (which ends at 600 ms), and the per-subject structure is unknown. That would be a redesign, not this study.
