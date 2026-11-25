@@ -652,3 +652,9 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - **Verdicts.** Fixed in advance; the INVALID check at DMAX 2.0 runs first. SEES WEAK TWO-STATE SIGNALS / BLIND ZONE REACHES AUC 0.70 / NEITHER CONDITION MET.
   - **Review and seal.** The Fable pre-seal review found four blockers, all fixed: the INVALID check was missing; the blind zone counted null-model wins; the non-finite rule was unstated; and the verdicts were renamed to describe the method, since Sergent's early AUC is not fetched. Sealed 03:31:22Z.
   - **Run.** Detached (`snr_chain.sh`, `snr.pid`, `snr_run.log`), 3 workers alongside the design gate.
+  - **Result: BLIND ZONE REACHES AUC 0.70 (run once; the validity check passed, with Model 3 top in 100/100 at AUC 0.91).**
+    - True two-state data read as "unimodal" under the 3-model comparison at weak signal sizes. At max-level AUC 0.64, 2B was top in 91/100 studies and called (pxp > 0.95) in 63/100. At AUC 0.70, 2B was top in 55/100; the rule's margin there is within noise.
+    - Model 3 is top in at least 80% of studies only from AUC 0.85. Graded data (M2) read as 2B at every size.
+    - **Meaning:** a unimodal win at modest decoding strength does not show unimodal dynamics on its own. This says nothing about whether Sergent's early windows were that weak; their window AUCs are in their Fig. 2 source data, which has not been fetched.
+    - Write-up: RESULTS.md "Follow-up 2"; ledger rows BIF-SNR-*. The 5-model secondary is still running.
+- **Design gate, full option at DMAX 2: FAIL** (G_jitter_hi called 0.18 against a bar of 0.10; B 0.99; jitter_mid 0.02; heavy and H_jitter_t 0). With 38 subjects the random-effects comparison is more confident, so narrow Model 3 wins over J clear 0.95 more often. The remaining gate cells are still running.

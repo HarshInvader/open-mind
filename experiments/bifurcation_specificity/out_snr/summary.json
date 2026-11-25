@@ -1,0 +1,117 @@
+{
+ "verdict": "BLIND ZONE REACHES AUC 0.70",
+ "rows": [
+  {
+   "dmax": 0.25,
+   "auc": 0.569059991975,
+   "share_m3_top": 0.12,
+   "share_2b_top": 0.87,
+   "share_null_top": 0.01,
+   "nonfinite": 0,
+   "call3": 0.0,
+   "call2b": 0.0
+  },
+  {
+   "dmax": 0.5,
+   "auc": 0.63572060665,
+   "share_m3_top": 0.09,
+   "share_2b_top": 0.91,
+   "share_null_top": 0.0,
+   "nonfinite": 0,
+   "call3": 0.02,
+   "call2b": 0.63
+  },
+  {
+   "dmax": 0.75,
+   "auc": 0.698334890475,
+   "share_m3_top": 0.45,
+   "share_2b_top": 0.55,
+   "share_null_top": 0.0,
+   "nonfinite": 0,
+   "call3": 0.11,
+   "call2b": 0.37
+  },
+  {
+   "dmax": 1.0,
+   "auc": 0.75531812115,
+   "share_m3_top": 0.57,
+   "share_2b_top": 0.43,
+   "share_null_top": 0.0,
+   "nonfinite": 0,
+   "call3": 0.28,
+   "call2b": 0.13
+  },
+  {
+   "dmax": 1.5,
+   "auc": 0.848508754575,
+   "share_m3_top": 0.99,
+   "share_2b_top": 0.01,
+   "share_null_top": 0.0,
+   "nonfinite": 0,
+   "call3": 0.96,
+   "call2b": 0.0
+  },
+  {
+   "dmax": 2.0,
+   "auc": 0.912606944325,
+   "share_m3_top": 1.0,
+   "share_2b_top": 0.0,
+   "share_null_top": 0.0,
+   "nonfinite": 0,
+   "call3": 1.0,
+   "call2b": 0.0
+  }
+ ],
+ "auc_where_m3_first_top_in_80pct": 0.848508754575,
+ "m2_unimodal": {
+  "0.25": {
+   "auc": 0.564165949175,
+   "win3": [
+    0,
+    95,
+    5
+   ]
+  },
+  "0.5": {
+   "auc": 0.62357939485,
+   "win3": [
+    0,
+    99,
+    1
+   ]
+  },
+  "0.75": {
+   "auc": 0.676800024775,
+   "win3": [
+    0,
+    99,
+    1
+   ]
+  },
+  "1.0": {
+   "auc": 0.7236611094,
+   "win3": [
+    0,
+    100,
+    0
+   ]
+  },
+  "1.5": {
+   "auc": 0.799370159725,
+   "win3": [
+    0,
+    100,
+    0
+   ]
+  },
+  "2.0": {
+   "auc": 0.85455957675,
+   "win3": [
+    0,
+    100,
+    0
+   ]
+  }
+ },
+ "five_model": {}
+}

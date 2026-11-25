@@ -84,3 +84,46 @@
 - One time window. Their analysis spans many windows.
 - A pass is relative to these ten generators. It does not cover every graded mechanism.
 - This is a property of the method under simulation. It says nothing about whether the original data are two-state.
+
+---
+
+# Follow-up 2: would weak two-state data look "unimodal"? (signal-strength grid)
+
+**Verdict: BLIND ZONE REACHES AUC 0.70.** We simulated true two-state data and ran it through the authors' 3-model comparison. Until the strongest level is decoded at an AUC of about 0.85, the unimodal model often wins, and often wins confidently. The run was sealed (03:31:22Z, aaa6458) and run once. The validity check passed: at the strongest grid point Model 3 was top in 100/100 studies, matching the sealed audit.
+
+- **Prereg:** `docs/prereg/2026-11-25_bifurcation_snr_timing.md`.
+- **Script:** `snr_timing.py`, which imports the sealed `audit.py` unchanged.
+- **Outputs:** `out_snr/m3_*.json` and `out_snr/summary.json`.
+- **Setup:** 100 simulated 20-subject studies per row, 150 trials per level. AUC is the separation between the strongest level and no target in the simulated window values.
+
+| Max-level AUC | Two-state data: Model 3 top | 2B top | Model 3 called (> 0.95) | **2B called (> 0.95)** | Graded data (Model 2B shape): 2B top |
+|---|---|---|---|---|---|
+| 0.57 | 12 | 87 | 0 | 0 | 95 (AUC 0.56) |
+| 0.64 | 9 | 91 | 2 | **63** | 99 (0.62) |
+| 0.70 | 45 | **55** | 11 | **37** | 99 (0.68) |
+| 0.76 | 57 | 43 | 28 | 13 | 100 (0.72) |
+| 0.85 | 99 | 1 | 96 | 0 | 100 (0.80) |
+| 0.91 | 100 | 0 | 100 | 0 | 100 (0.86) |
+
+Counts are per 100 studies. No study was non-finite.
+
+- **Decision rule (sealed):** the result is BLIND ZONE if 2B is top in more than 50% of two-state studies at some grid point with AUC ≥ 0.69. At AUC 0.70, 55 of 100 meets the rule. That margin is within sampling noise of 50. The rest of the table does not depend on that one cell:
+  - at AUC 0.64, 2B is top in 91/100 two-state studies and is *called* with pxp > 0.95 in 63/100;
+  - Model 3 does not reliably win until AUC is about 0.85.
+
+## What it means
+
+- **Sergent et al. 2021 read the two weak-signal periods as findings.** The unimodal model "showed the highest probability" from 0 to 250 ms and from 700 to 900 ms. They described early processing as non-linear "but … the underlying dynamics were unimodal".
+- **In this simulation, a genuine two-state signal whose strongest level decodes below about AUC 0.75–0.85 produces that same picture.** It often produces a confident unimodal call.
+- **So a unimodal win at modest decoding strength cannot, on its own, show unimodal dynamics.** It is what the comparison returns for weak data of either kind.
+- **What this does not show:**
+  - It does not show that early processing is two-state.
+  - It does not show that their early windows were weak enough to fall in the blind zone. Their window AUCs are in their Fig. 2 source data, which we have not fetched.
+  - Their late-window Model 3 result is not affected, because strong signals are classified correctly.
+
+## Limits
+
+- **Separation-scaled weakness only.** Two states that are close together. A weak signal from rare but well-separated high-state trials would look more mixture-like.
+- **AUC definition.** Ours is computed on window values. Theirs is per time sample after a 10 Hz low-pass, so the two are comparable but not identical.
+- **One design.** 20 subjects and 150 trials per level, as in their study.
+- **Pending.** The 5-model secondary (with J and T) is still running and will be added.
