@@ -745,9 +745,9 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - **Pre-seal review:** three blockers, all fixed (count-dependent gate; "stream" overclaim; NaN rule). The ROI moved to Zauner's central–parietal region, and the calibration was re-run.
   - **Seal:** 14:02:18Z, commit dcb588a.
   - **Gate:** PASS (median ρ 0.21).
-  - **Result: NO DIFFERENCE, EQUIVALENT WITHIN ±0.02.**
-    - Δ −0.0019 [−0.017, 0.013], p 0.80, TOST p 0.010, 42 subjects.
+  - **Result: no detectable difference at n = 42.** The EQUIVALENT ±0.02 clause is INVALID by coordinator ruling: the bound was changed after calibration and was not a pre-stated fallback. Nothing is re-run and no bound is re-picked.
+    - Δ −0.0019 [−0.017, 0.013], p 0.80, 42 subjects.
     - Power and evoked amplitude are null.
     - The between-subject r is −0.22 (n.s.), in Kranczioch's sign.
-    - The bound lies below a 1 µV phase-locked plant.
-  - **Meaning:** this counts against within-trial alpha entrainment as "the critical factor" (Zauner 2012) at lag 3. The data are CC0, so it is eligible for the site (no Cohen hold).
+    - The CI (descriptive) excludes a 1 µV phase-locked plant.
+  - **Meaning:** no support for within-trial alpha entrainment as "the critical factor" (Zauner 2012) at lag 3. The site write-up is cleared, with the wording "no detectable difference at n=42".

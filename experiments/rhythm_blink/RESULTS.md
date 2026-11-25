@@ -5,7 +5,13 @@ Prereg: `docs/prereg/2026-11-25_rhythm_blink.md`, sealed 2026-11-25T14:02:18Z.
 - **Run:** the gate, then the real-label run, once each at about 14:03Z, on 1 process at nice 20.
 - **Data:** ds001810 is CC0 and is not Cohen data, so the Cohen hold does not apply.
 
-## Sealed verdict: NO DIFFERENCE: EQUIVALENT WITHIN ±0.02
+## Verdict: NO DETECTABLE DIFFERENCE at n = 42; the equivalence clause is INVALID
+
+- **The sealed script printed "EQUIVALENT WITHIN ±0.02". That clause is INVALID** (coordinator ruling, 2026-11-25).
+  - The ±0.02 bound replaced the original ±0.05 after the first shuffled-label calibration.
+  - That change was not one of the pre-stated fallbacks. Under the standing rule, any such post-calibration change makes the affected part INVALID, even though it was conservative and made before the seal.
+  - Nothing was re-run, and no bound is re-picked.
+- **What stands:** the two-sided difference test, which was unchanged. It finds no detectable difference. The CI below is descriptive.
 
 - **Gate:** PASS. Label-free, count-independent, debiased all-trial phase-locking: median subject ρ 0.21 (floor 0.10), t(41) = 9.2.
 - **Primary.** Count-matched ITC in the ±50 ms around T2, over the central–parietal ROI (C1, Cz, C2, CP1, CPz, CP2, P3, Pz, P4), with a 3-cycle Morlet at 10.9 Hz (about 7–15 Hz). Blink minus no-blink, 42 subjects, 76 blocks:
@@ -16,10 +22,10 @@ Prereg: `docs/prereg/2026-11-25_rhythm_blink.md`, sealed 2026-11-25T14:02:18Z.
 | SE | 0.0075 |
 | 95% CI | [−0.017, +0.013] |
 | t(41), p | −0.25, 0.80 |
-| TOST p (±0.02) | 0.010 |
+| TOST p (±0.02) | 0.010, INVALID (bound changed after calibration) |
 | Subjects dropped | 0 |
 
-- **What ±0.02 rules out:** in calibration, a 1 µV 10.9 Hz signal phase-locked to T2 and added to blink trials gave Δ 0.029–0.138, depending on its phase. An amplitude-preserving 5% phase concentration gave Δ 0.037. Both lie outside the CI. Shuffled-label directional false positives were 5.5%.
+- **How large the CI is, descriptively:** in calibration, a 1 µV 10.9 Hz signal phase-locked to T2 and added to blink trials gave Δ 0.029–0.138, depending on its phase. An amplitude-preserving 5% phase concentration gave Δ 0.037. Both lie outside the 95% CI. Shuffled-label directional false positives were 5.5%.
 
 ## Secondaries (no verdicts)
 
@@ -30,7 +36,10 @@ Prereg: `docs/prereg/2026-11-25_rhythm_blink.md`, sealed 2026-11-25T14:02:18Z.
 
 ## What this does and does not mean
 
-- **Means:** at lag 3 in 42 people, the trials where T2 was missed are not more phase-locked in the alpha band around T2 than the trials where it was identified. Any difference is smaller than what a 1 µV phase-locked signal would produce. This counts against Zauner et al.'s conclusion that alpha entrainment is "the critical factor" for the blink, at least in its within-trial form.
+- **Means:** at lag 3 in 42 people, there is no detectable difference in alpha-band phase-locking around T2 between trials where T2 was missed and trials where it was identified.
+  - The 95% CI excludes the differences a 1 µV phase-locked signal produced in calibration.
+  - This does not support Zauner et al.'s conclusion that alpha entrainment is "the critical factor" for the blink, at least in its within-trial form.
+  - No formal equivalence claim is made.
 - **Context:** Zauner's own pairwise PLI test was significant only for AB vs control, not AB vs NoAB.
 - **Does not mean:** that entrainment plays no role at other lags, in pre-T1 periods (Petro & Keil 2015 report effects there), at the exact stream frequency, or with Zauner's 7-cycle wavelet and linked-ear reference.
 - **Limits:**
