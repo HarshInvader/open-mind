@@ -636,3 +636,19 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - Cost: J takes about 5 of 20 subjects on true two-state data. At jitter SD 1.5, Model 3 still had the top exceedance in 51/150 studies, but passed 0.95 only once.
   - Rule from the simulation: bifurcation claims should include jittered-threshold and heavy-tailed graded rivals. Write-up in `experiments/bifurcation_specificity/RESULTS.md`; ledger rows BIF-EXT-*.
   - **Real-data prereg sealed** after the verdict, as the coordinator required. A pre-fetch design gate (full vs half bytes; signal size grid 2/1/3) is running detached: `gate_chain.sh`, log `gate_run.log`, outputs `out_gate/`.
+
+### Fable round 16: new zero-byte list; study 1 (bifurcation timing vs SNR) sealed and running (2026-11-25)
+- **Round 15 list spent.** Fable round 16 ranked seven new zero-byte studies:
+  1. Is "early unimodal, late bifurcated" an SNR effect? (simulation)
+  2. Temporal-generalisation "square" specificity (Hutchinson, Dehaene, Slagter & Pitts 2026 preprint). Risk: Sandhaeger & Siegel 2023 and van Driel 2021 cover neighbouring pitfalls.
+  3. Audit of the "tracks the psychometric curve across SOAs" criterion (Del Cul 2007, Cohen 2024).
+  4. How much threshold jitter real observers have (trials.csv).
+  5. Specificity of Schurger 2015's stability measure.
+  6. Sensitivity vs criterion in Cohen seen rates (weak).
+  7. ds001810 alignment (housekeeping).
+- **Study 1:**
+  - **Claim tested.** Sergent 2021 (PMC7895979) says the unimodal model "showed the highest probability" from 0 to 250 ms and again from 700 to 900 ms, which are the weak-signal periods. Decoding was significant only from about 100 ms.
+  - **Design.** True two-state data on a grid of 6 signal sizes (max-level AUC 0.57–0.91), compared with their 3 models. M2 is a comparison cell, and the 5-model run is secondary.
+  - **Verdicts.** Fixed in advance; the INVALID check at DMAX 2.0 runs first. SEES WEAK TWO-STATE SIGNALS / BLIND ZONE REACHES AUC 0.70 / NEITHER CONDITION MET.
+  - **Review and seal.** The Fable pre-seal review found four blockers, all fixed: the INVALID check was missing; the blind zone counted null-model wins; the non-finite rule was unstated; and the verdicts were renamed to describe the method, since Sergent's early AUC is not fetched. Sealed 03:31:22Z.
+  - **Run.** Detached (`snr_chain.sh`, `snr.pid`, `snr_run.log`), 3 workers alongside the design gate.

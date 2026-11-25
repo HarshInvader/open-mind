@@ -183,3 +183,5 @@ a24699ec486a4bd7dade0d56c1d779c56440ec4a888fbb1dc0893f5ed80e64cb  docs/prereg/20
 8737be2f3dae66880f48c9ec2f408a2ed6fd8b2f0a8e76bf344bb27044a78f7d  experiments/cohen_fixed_soa/out/prior_calibration.json  2026-11-25T01:42:37Z
 d12ee40469ab6923f23a02a4d08509d49dfd858fa425960d9a20306f12b59b28  docs/prereg/2026-11-25_bifurcation_real_data_cohen.md  2026-11-25T03:17:37Z
 22235cdc58286a81a975d30e0b2cb94035bc571e875de0a500772d5b57d5389b  experiments/bifurcation_specificity/gate_design.py  2026-11-25T03:17:37Z
+415ac5bf1409ece97eae7428ec8a67216afb7dfe6752e958409ed9c594123c8f  docs/prereg/2026-11-25_bifurcation_snr_timing.md  2026-11-25T03:31:22Z
+8be2741894998211453b9eb9b2b2209d512307b4ffa70116e788372f4d25602c  experiments/bifurcation_specificity/snr_timing.py  2026-11-25T03:31:22Z
