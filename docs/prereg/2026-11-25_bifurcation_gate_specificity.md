@@ -1,3 +1,5 @@
+> **DROPPED BEFORE SEALING (2026-11-25).** Never sealed or run (no check, no pilot). Dropped under the owner's 70/30 original-vs-audit directive: moot if the real-data target is Sergent's own sample, where the design gate runs at their exact design. Its pre-run BOR finding is recorded in docs/RESEARCH_STATE.md.
+
 # Pre-registration: why did the 5-model bifurcation test lose specificity at 38 subjects? (simulation)
 
 Agent: Open Mind thread   Date: 2026-11-25   Script: `experiments/bifurcation_specificity/gate_specificity.py`   Source: Fable round 17, study 3

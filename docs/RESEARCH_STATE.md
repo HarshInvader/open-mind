@@ -755,3 +755,15 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
 ### Round 17 #2 run log (2026-11-25)
 - Attempt 1 (pid 21589, started 14:17Z) died silently during a machine-wide event (load about 380, then 4; Origins runners died in the same window). Its log was empty and no cell file had been written. The sealed hashes were re-checked and matched.
 - Relaunched at 14:58:55Z with the same sealed script and seeds via `jitter_chain.sh` (nice 20, 4 workers, heartbeat every 10 min, summary on exit). The relaunch is not a design change; it will be recorded in RESULTS.md.
+- Attempts 3 and 4 also died silently (SIGKILL; attempt 4 was launched by the coordinator's session and its chain was gone at 16:13:22Z). No cell file was ever written, so no outcome exists.
+
+### Round 17 #2 and #3 DROPPED (2026-11-25, coordinator, new owner directive)
+- **Owner directive:** about 70% original findings, 30% audits. Audit only a claim that carries a theory or widely reused method, with a generic flaw, and only when the audit ends in a real-data application. No audits of audits, no single old papers, no preprints.
+- **#2 (onset jitter vs the bifurcation call): dropped.** It was an audit of our own audit with no real-data endpoint, and four launches died before any cell finished. The prereg, script and disclosure addendum stay sealed and committed as a record; no outcome was ever computed.
+- **#3 (why the 5-model gate lost specificity at 38 subjects): dropped before sealing.** It is moot if the real-data target is Sergent's own sample, where the design gate is run at their exact subject count. Its one pre-run finding (from the sealed N = 20 outputs, no new fitting): the 20-subject specificity of the 5-model fix came largely from the omnibus-risk protection. Unprotected xp(M3) > 0.95 occurred in 0.10 of G_jitter_hi studies, but BOR < 0.0625 (needed for pxp > 0.95) in only 0.073, giving pxp calls in 0.007. Any real-data gate must store BOR and xp.
+- **New order (coordinator, from Fable):**
+  1. Sergent 2021 source data (11.3 MB xlsx, approved budget exception): real observers' threshold jitter vs our false-call map. Kill test first: recover planted jitter from synthetic psychometric data at their trial counts.
+  2. Sergent's own EEG under the 5-model set (flagship; gated by 1; streamed range reads keeping decoder outputs only; stop if free disk < 10 GB). Kill test first: the design gate at their exact subject count and levels.
+  3. Cross-paradigm awareness decoder, masking (Cohen) to blink (ds001810). Kill test first: a montage-transfer control inside ds001810 must keep at least 80% of AUC. The Cohen hold applies to publication.
+  4. Cohen no-report block (about 200 MB), after that.
+- Long jobs are launched by the coordinator on request.

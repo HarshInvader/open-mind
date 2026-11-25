@@ -173,3 +173,15 @@ The real-data prereg (`docs/prereg/2026-11-25_bifurcation_real_data_cohen.md`, s
   - The winner counts look alike: Model 3 had the top exceedance in 51/150 and 38/100 studies. More subjects make a narrow Model 3 edge more often pass 0.95.
   - So the FIX WORKS result holds for the 20-subject design. It does not carry over to larger samples without a design-matched check.
 - **Half option:** it loses recall because J absorbs true two-state subjects when there are 64 trials per level.
+
+---
+
+# Dropped follow-ups (round 17 #2 and #3, 2026-11-25)
+
+- **#2, onset jitter vs the bifurcation call** (`jitter_onset.py`, sealed prereg `docs/prereg/2026-11-25_bifurcation_onset_jitter.md`).
+  - **Disclosure** (dated addendum committed before any output): the round 17 planner's throwaway 16-study simulation (σ 60/100 ms, windows 0/+50/+100) was known before the design. The grid and bars were not taken from it. See the addendum.
+  - **Runs:** four launches with the sealed script and the same seeds (14:17Z, 14:58Z and 16:00Z from this thread, and 16:10Z from the coordinator's session). All were SIGKILLed before any cell finished, so no outcome exists.
+  - **Dropped** under the owner's 70/30 original-vs-audit directive: it audits our own audit and has no real-data endpoint.
+- **#3, why the 5-model gate lost specificity at 38 subjects** (`gate_specificity.py`, prereg never sealed).
+  - Dropped before sealing as moot: the real-data target is now Sergent's own sample, where the design gate runs at their exact design.
+  - **Pre-run finding from the sealed N = 20 outputs** (back-solved from stored pxp, with no new fitting): in `G_jitter_hi`, the unprotected xp(M3) was above 0.95 in 0.10 of studies. A call needs BOR < 0.0625, and BOR was that low in only 0.073 (median 0.16), so pxp calls fell to 0.007. The 20-subject specificity therefore came largely from the omnibus-risk protection, which shrinks as subjects are added. Any real-data gate must store BOR and xp.

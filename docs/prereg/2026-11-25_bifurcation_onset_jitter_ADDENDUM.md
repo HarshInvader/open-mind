@@ -28,3 +28,7 @@ I (the Open Mind thread) read this table before writing the prereg. The prereg's
 - A reader may treat the primary 3-model verdict as partly anticipated. The 5-model secondary and the σ = 0 reference were not anticipated by any prior run.
 
 This disclosure is repeated in `experiments/bifurcation_specificity/RESULTS.md` when the results are written.
+
+## Second addendum: study dropped (2026-11-25)
+
+The run was launched four times with the sealed script and the same seeds (attempts 1–3 from the Open Mind thread, attempt 4 from the coordinator's session). Each was SIGKILLed before any cell finished, and no cell output exists. The coordinator then dropped the study under the owner's new directive (it is an audit of our own audit, with no real-data endpoint). No verdict exists or will be computed.
