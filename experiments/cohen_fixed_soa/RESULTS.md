@@ -146,3 +146,19 @@ Prereg: `docs/prereg/2026-11-24_cohen_van_identity_avgref.md`. Script: `van_iden
 - **Limits:**
   - The within-image control removes stimulus differences between images, not trial-to-trial state (the arousal control covers part of that).
   - This is still a report-block result.
+
+## Do stronger earlier showings of a face make it easier to see later? Stopped at the calibration gate (2026-11-25; real statistic never computed)
+
+- **Prereg:** `docs/prereg/2026-11-25_cohen_prior_showings.md`, sealed 2026-11-25T01:41:25Z (a4a6c42). Behaviour only, from `trials.csv`.
+- **Question:** at SOA 50, is a face seen more often when more of its earlier showings were strong (SOA 67/83) rather than weak (17/33), with the number of earlier showings held fixed?
+- **Calibration** (`out/prior_calibration.json`, 300 runs):
+
+| Check | Result | Bar |
+|---|---|---|
+| Randomisation null on real responses (per-face strong↔weak swap) | false calls **7.7%** | ≤ 5% ✗ |
+| Fake-response null (drift, image offsets, streaks, item practice) | false calls 4.3% | ≤ 5% ✓ |
+| Planted 1.5 points per net strong showing | EFFECT+ 92% | ≥ 80% ✓ |
+
+- **Verdict:** the gate failed. The prereg stated no fallback, so the real slope was not computed and will not be.
+- **Possible causes:** 23 of 300 runs is about 2 SE above 5%, so it may be chance. It may also be heavy-tailed per-subject slopes making a 40-subject t-interval slightly anti-conservative. We did not investigate further, to avoid tuning on a failed gate.
+- **Process note:** the Fable pre-seal review rejected two earlier nulls before calibration. A free permutation doubled the spread of D. A within-quarter permutation left D almost unchanged, which would have leaked the answer.

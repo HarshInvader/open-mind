@@ -614,3 +614,7 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
     - Confound 1: attention quenches variability (Arazi 2019).
     - Confound 2: label selection. Seen rate at SOA 50 (report block) has median 0.57 (range 0.21–0.86). A first count of 0.23 was wrong: it counted blank no-report responses as unseen. A graded signal truncated by the report changes each class's variance on its own, in a direction set by the subject's seen rate. For the VAN the implied correlation is small (about 0.1), but the prereg must include a selection-matched graded null per subject.
   - **Item 3 (item-specific prior visible showings):** no prior equivalent found. Berger 2026 shows that visibility ratings rise with general practice, so trial rank must be controlled, which the design already does.
+- **Item 3, reframed and run to the gate (2026-11-25):**
+  - Prior art: repetition and earlier exposure already raise visibility (Atas 2013; Jacoby & Dallas 1981; Whittlesea 1990). The test was reframed to the strength of earlier showings (strong vs weak SOA) at a fixed number of showings.
+  - Sealed a4a6c42 after a Fable pre-seal review that rejected two invalid nulls.
+  - **Stopped at the calibration gate:** the real-response randomisation null gave 7.7% false calls (bar 5%). The fake null (4.3%) and power (0.92) passed. No fallback was stated, so the real slope was never computed.

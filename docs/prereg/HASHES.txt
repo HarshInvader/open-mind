@@ -180,3 +180,4 @@ a24699ec486a4bd7dade0d56c1d779c56440ec4a888fbb1dc0893f5ed80e64cb  docs/prereg/20
 83006cb71803bdc2e1e81a74f45e8a3f77bbb925c194fe0bb2ab3fe9200531c4  experiments/bifurcation_specificity/extended.py  2026-11-24T23:26:07Z
 22a80fd17c94d0f83465d9f5a9c8cf062a67aafe32d317e7b18fe252fd3fb758  docs/prereg/2026-11-25_cohen_prior_showings.md  2026-11-25T01:41:25Z
 386904e748676c4a92fa02c093c9f6d47dadee29c80e76e30b6b48a8ad9f3402  experiments/cohen_fixed_soa/prior_showings.py  2026-11-25T01:41:25Z
+8737be2f3dae66880f48c9ec2f408a2ed6fd8b2f0a8e76bf344bb27044a78f7d  experiments/cohen_fixed_soa/out/prior_calibration.json  2026-11-25T01:42:37Z
