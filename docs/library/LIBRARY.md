@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-214 entries: 34 read in full, 180 from the abstract only. Every DOI was opened and its title and authors checked.
+217 entries: 34 read in full, 183 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -781,7 +781,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (90)
+## Measuring consciousness (93)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -947,6 +947,18 @@ Rausch M, Zehetleitner M (2016). *Frontiers in Psychology*. [doi:10.3389/fpsyg.2
 - **For us:** The only open dataset that can test the Persaud-style claim in healthy people with continuous scales. Our power gate decides whether n=20 is enough.
 - **Touches:** Metacognition and awareness
 
+### Cortical activity is more stable when sensory stimuli are consciously perceived
+
+Schurger A, Sarigiannidis I, Naccache L, et al. (2015). *PNAS*. [doi:10.1073/pnas.1418730112](https://doi.org/10.1073/pnas.1418730112). Paper, abstract only, **core**.
+
+- **Question:** Is cortical activity less variable across and within trials when a threshold stimulus is seen?
+- **Idea tested:** Conscious perception goes with a stable activity pattern, as in attractor states.
+- **Data and method:** Simultaneous MEG and EEG, threshold-level visual stimuli; pattern-similarity on MEG gradiometers; EEG metric also applied to disorders-of-consciousness patients.
+- **Results:** Variability drops after stimulus onset, then diverges by report: seen trials are less variable, coinciding with within-trial stability; stability alone classifies single trials seen/unseen.
+- **Limits:** Read at abstract level only.
+- **For us:** Direct prior art for round 15 item 4. Their measure is pattern-based MEG; an amplitude-based healthy-EEG version at a fixed stimulus, with a selection-matched null, is not in the abstract.
+- **Touches:** round15-priorart
+
 ### Large scale screening of neural signatures of consciousness in patients in a vegetative or minimally conscious state
 
 Sitt JD, King JR, El Karoui I, Rohaut B, Faugeras F, Gramfort A, Cohen L, Sigman M, Dehaene S, Naccache L (2014). *Brain 137:2258-2270*. [doi:10.1093/brain/awu141](https://doi.org/10.1093/brain/awu141). Paper, abstract only, **core**.
@@ -1077,6 +1089,18 @@ Gnodde S, Aslanov V, Hogan A, Francken JC, Olcese U, Stein T (2026). *Journal of
 - **Limits:** Location decoding, not an awareness contrast at a fixed ERP window; different stimuli and data.
 - **For us:** Supports testing the posterior VAN window at fixed SOA in Cohen 2024; not a pre-emption of that test.
 - **Touches:** cohen-fixed-soa
+
+### Trial-wise awareness ratings do not capture the dynamics of masked priming
+
+Berger A, Rohr M, Wentura D, Kiefer M (2026). *Neuroscience of Consciousness*. [doi:10.1093/nc/niag034](https://doi.org/10.1093/nc/niag034). Paper, abstract only, **useful**.
+
+- **Question:** Do trial-wise PAS changes track changes in masked priming?
+- **Idea tested:** Awareness ratings drift with practice independently of priming.
+- **Data and method:** Reanalysis of three masked priming experiments, with and without trial-wise PAS.
+- **Results:** PAS ratings rose with practice, even on catch trials, without matching changes in priming; ratings also altered priming dynamics.
+- **Limits:** Read at abstract level only.
+- **For us:** For item 3: practice raises reported visibility in general, so prior-showing effects must be item-specific and control trial rank.
+- **Touches:** round15-priorart
 
 ### White-matter disconnection shapes distributed cortical spectral dynamics after stroke
 
@@ -1217,6 +1241,18 @@ Alilović J, van Moorselaar D, Graetz M, van Gaal S, Slagter HA (2021). *NeuroIm
 - **Limits:** Abstract and secondary summary only.
 - **For us:** The closest design to our ds001810 screen; its effects are our within-dataset positive controls, not findings.
 - **Touches:** hypothesis-generator
+
+### Neural Variability Is Quenched by Attention
+
+Arazi A, Yeshurun Y, Dinstein I (2019). *Journal of Neuroscience*. [doi:10.1523/jneurosci.0355-19.2019](https://doi.org/10.1523/jneurosci.0355-19.2019). Paper, abstract only, **useful**.
+
+- **Question:** Do alertness and spatial attention reduce trial-by-trial EEG variability?
+- **Idea tested:** Attention raises signal-to-noise partly by quenching variability.
+- **Data and method:** EEG with alerting and spatial cues.
+- **Results:** Cues reduced trial-by-trial variability, specific to visual cortex and larger contralateral to the attended field; larger quenching went with larger behavioural benefit.
+- **Limits:** Read at abstract level only.
+- **For us:** Main confound for item 4: seen trials may be more attended, so lower variance on seen trials need not be about consciousness.
+- **Touches:** round15-priorart
 
 ### The EEG signature of sensory evidence accumulation during decision formation closely tracks subjective perceptual experience
 

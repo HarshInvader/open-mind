@@ -607,3 +607,10 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - Design: adds J (jittered-threshold graded) and T (t-noise graded), and two held-out graded generators (jitter plus t noise; gain jitter).
   - Verdicts fixed in advance: FIX WORKS, UNDECIDABLE, STILL NOT SPECIFIC or FAILS BOTH. J nests two states as a limit, so UNDECIDABLE is a named outcome.
   - Prereg sealed 23:26:07Z (40d99e9), no fallbacks. Running: 10 cells × 150 studies.
+  - The first job hit the 2 h shell limit after 5 of 10 cells. The rest resume as a detached nohup job (pid file and log in the study folder), with the same seeds and finished cells kept. No write-up from partial results.
+- **Round 15 items 3 and 4, prior art (2026-11-25; Europe PMC, the 113 works citing Schurger 2015, abstracts):**
+  - **Item 4 (residual variance, seen vs unseen):** partly established.
+    - Schurger 2015 (MEG pattern similarity) already shows that seen trials are less variable. What remains new is an amplitude-based, healthy-subject EEG version at a fixed stimulus, with timing (VAN vs late).
+    - Confound 1: attention quenches variability (Arazi 2019).
+    - Confound 2: label selection. Seen rate at SOA 50 has median 0.23 (range 0.08–0.36). A graded signal truncated by the report lowers seen-class variance on its own. For the VAN, the implied correlation is about 0.09, so the drop is under 1%, but the prereg must include a selection-matched graded null.
+  - **Item 3 (item-specific prior visible showings):** no prior equivalent found. Berger 2026 shows that visibility ratings rise with general practice, so trial rank must be controlled, which the design already does.

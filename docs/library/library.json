@@ -5445,6 +5445,81 @@
    "limits": "Read at abstract level only; growth-mixture setting, not EEG.",
    "ideas_for_us": "The general statistical principle behind our finding that the Sergent 2021 two-state model wins on heavy-tailed or threshold-jittered graded data.",
    "relevance": "core"
+  },
+  {
+   "kind": "Paper",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "round15-priorart"
+   ],
+   "topic": "Measuring consciousness",
+   "limits": "Read at abstract level only.",
+   "id": "schurger-2015-cortical-activity-more-stable-seen",
+   "title": "Cortical activity is more stable when sensory stimuli are consciously perceived",
+   "authors": "Schurger A, Sarigiannidis I, Naccache L, et al.",
+   "year": 2015,
+   "venue": "PNAS",
+   "doi": "10.1073/pnas.1418730112",
+   "url": "https://doi.org/10.1073/pnas.1418730112",
+   "question": "Is cortical activity less variable across and within trials when a threshold stimulus is seen?",
+   "tried": "Conscious perception goes with a stable activity pattern, as in attractor states.",
+   "method_data": "Simultaneous MEG and EEG, threshold-level visual stimuli; pattern-similarity on MEG gradiometers; EEG metric also applied to disorders-of-consciousness patients.",
+   "key_results": "Variability drops after stimulus onset, then diverges by report: seen trials are less variable, coinciding with within-trial stability; stability alone classifies single trials seen/unseen.",
+   "ideas_for_us": "Direct prior art for round 15 item 4. Their measure is pattern-based MEG; an amplitude-based healthy-EEG version at a fixed stimulus, with a selection-matched null, is not in the abstract.",
+   "relevance": "core"
+  },
+  {
+   "kind": "Paper",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "round15-priorart"
+   ],
+   "topic": "Measuring consciousness",
+   "limits": "Read at abstract level only.",
+   "id": "arazi-2019-variability-quenched-attention",
+   "title": "Neural Variability Is Quenched by Attention",
+   "authors": "Arazi A, Yeshurun Y, Dinstein I",
+   "year": 2019,
+   "venue": "Journal of Neuroscience",
+   "doi": "10.1523/jneurosci.0355-19.2019",
+   "url": "https://doi.org/10.1523/jneurosci.0355-19.2019",
+   "question": "Do alertness and spatial attention reduce trial-by-trial EEG variability?",
+   "tried": "Attention raises signal-to-noise partly by quenching variability.",
+   "method_data": "EEG with alerting and spatial cues.",
+   "key_results": "Cues reduced trial-by-trial variability, specific to visual cortex and larger contralateral to the attended field; larger quenching went with larger behavioural benefit.",
+   "ideas_for_us": "Main confound for item 4: seen trials may be more attended, so lower variance on seen trials need not be about consciousness.",
+   "relevance": "useful"
+  },
+  {
+   "kind": "Paper",
+   "read_depth": "abstract",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "round15-priorart"
+   ],
+   "topic": "Measuring consciousness",
+   "limits": "Read at abstract level only.",
+   "id": "berger-2026-pas-ratings-masked-priming",
+   "title": "Trial-wise awareness ratings do not capture the dynamics of masked priming",
+   "authors": "Berger A, Rohr M, Wentura D, Kiefer M",
+   "year": 2026,
+   "venue": "Neuroscience of Consciousness",
+   "doi": "10.1093/nc/niag034",
+   "url": "https://doi.org/10.1093/nc/niag034",
+   "question": "Do trial-wise PAS changes track changes in masked priming?",
+   "tried": "Awareness ratings drift with practice independently of priming.",
+   "method_data": "Reanalysis of three masked priming experiments, with and without trial-wise PAS.",
+   "key_results": "PAS ratings rose with practice, even on catch trials, without matching changes in priming; ratings also altered priming dynamics.",
+   "ideas_for_us": "For item 3: practice raises reported visibility in general, so prior-showing effects must be item-specific and control trial rank.",
+   "relevance": "useful"
   }
  ]
 }
