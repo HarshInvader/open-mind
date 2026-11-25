@@ -679,4 +679,4 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - A chain of four 50 ms codes makes a square only at 75 ms jitter; at 50 ms SQ is 0.69, square in 0/40.
   - A single 50 ms code (their own stated alternative, descriptive) makes a full square at 50 ms jitter (SQ 0.90, SPAN 224 ms, 40/40). Their verbal dismissal does not rule it out.
   - The proposed CPL test is confounded: a sustained code with 60 ms onset jitter gives negative coupling in 78%.
-  - Write-up in `experiments/tg_square_specificity/RESULTS.md`; ledger rows TGS-*. The key unknown is the real single-trial latency spread in their datasets.
+  - Write-up in `experiments/tg_square_specificity/RESULTS.md`; ledger rows TGS-* (`experiments/tg_square_specificity/ledger_rows.csv`). The key unknown is the real single-trial latency spread in their datasets.
