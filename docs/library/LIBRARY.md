@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-223 entries: 39 read in full, 184 from the abstract only. Every DOI was opened and its title and authors checked.
+230 entries: 46 read in full, 184 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -817,7 +817,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (96)
+## Measuring consciousness (103)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -959,6 +959,18 @@ Pereira M, Megevand P, Tan MX, Chang W, Wang S, Rezai A, Seeck M, Corniola M, et
 - **For us:** The strongest open trial-level seen/unseen EEG set we have. A preregistered, theory-tagged component screen on it is not in the paper.
 - **Touches:** hypothesis-generator
 
+### All-or-none face categorization in the human brain
+
+Retter TL, Jiang F, Webster MA, Rossion B (2020). *NeuroImage*. [doi:10.1016/j.neuroimage.2020.116685](https://doi.org/10.1016/j.neuroimage.2020.116685). Paper, full text, **core**.
+
+- **Question:** Is face categorization in the brain all-or-none across stimulus strength?
+- **Idea tested:** Frequency-tagged EEG with faces at graded visibility; single-trial classification of responses.
+- **Data and method:** Scalp EEG, fast periodic visual stimulation.
+- **Results:** The graded average response reflects the proportion of absent and full responses: a mixture of all-or-none trials, not a graded single-trial response.
+- **Limits:** Faces and frequency tagging, not masking SOA curves.
+- **For us:** States the mixture identity that makes 'tracks the seen rate' follow from any seen/unseen difference, the core of the psychometric-criterion audit.
+- **Touches:** psychometric_criterion
+
 ### An electrophysiological marker of arousal level in humans
 
 Lendner JD et al. (2020). *eLife*. [doi:10.7554/eLife.55092](https://doi.org/10.7554/eLife.55092). Journal article, abstract only, **core**.
@@ -1018,6 +1030,18 @@ Sitt JD, King JR, El Karoui I, Rohaut B, Faugeras F, Gramfort A, Cohen L, Sigman
 - **Limits:** Single centre at the time; spectral and complexity features were not nested.
 - **For us:** The source of wSMI and the 'many markers' design that #42 inherits; our nesting rule asks what each adds beyond spectrum.
 - **Touches:** #42, Study 2
+
+### A Spatiotemporal Filtering Methodology for Single-Trial ERP Component Estimation
+
+Li R, Principe JC, et al. (2009). *IEEE Transactions on Biomedical Engineering*. [doi:10.1109/TBME.2008.2002153](https://doi.org/10.1109/TBME.2008.2002153). Paper, full text, **core**.
+
+- **Question:** How well do Woody-type and spatiotemporal methods recover single-trial ERP latency at low SNR?
+- **Idea tested:** Simulations with known latency at a range of SNRs; compares Woody filtering to a spatiotemporal filter.
+- **Data and method:** Simulated ERPs plus real EEG.
+- **Results:** With the true latency fixed, Woody estimates still spread by about 60 ms SD at -20 dB and 15 ms at 12 dB: at low SNR the estimator reports noise as jitter.
+- **Limits:** Simulation SNRs are not ours; single component.
+- **For us:** Why the latency-spread study calibrates against each subject's own noise instead of reading a raw lag SD.
+- **Touches:** latency_spread
 
 ### Is Consciousness a Gradual Phenomenon? Evidence for an All-or-None Bifurcation During the Attentional Blink
 
@@ -1186,6 +1210,18 @@ Noorman S, Stein T, Fahrenfort JJ, van Gaal S (2025). *eLife*. [doi:10.7554/eLif
 - **For us:** A caution for transfer: an attentional-blink signature need not carry to near-threshold tactile detection.
 - **Touches:** hypothesis-generator
 
+### Adiposity influences intraindividual variability in behavioral and neuroelectric indices of attentional inhibition
+
+Kim J, et al. (2024). *Psychophysiology*. [doi:10.1111/psyp.14677](https://doi.org/10.1111/psyp.14677). Paper, full text, **useful**.
+
+- **Question:** Is intraindividual variability in P3b latency linked to adiposity?
+- **Idea tested:** RIDE-based single-trial P3b latency in a flanker task; SDs of single-trial latencies.
+- **Data and method:** Flanker EEG in adults.
+- **Results:** Single-trial P3b latency SDs of about 77-84 ms, not corrected for the estimator's noise floor.
+- **Limits:** Flanker task, not masking; raw SDs include estimation noise.
+- **For us:** A published range for raw P3b latency SD, which brackets our 50 and 75 ms cases.
+- **Touches:** latency_spread
+
 ### Critical dynamics in spontaneous EEG predict anesthetic-induced loss of consciousness and perturbational complexity
 
 Maschke C, O'Byrne J, Colombo MA, Boly M, Gosseries O, Laureys S, Rosanova M, Jerbi K, Blain-Moraes S (2024). *Communications Biology 7, 946*. [doi:10.1038/s42003-024-06613-8](https://doi.org/10.1038/s42003-024-06613-8). Paper, abstract only, **useful**.
@@ -1229,6 +1265,18 @@ Doll L, Dykstra AR, Gutschalk A (2024). *iScience*. [doi:10.1016/j.isci.2024.110
 - **Limits:** Read at abstract level only.
 - **For us:** Graded counterpart to Sergent 2021 in the same modality; motivates graded generators in our bifurcation audit.
 - **Touches:** bifurcation-audit
+
+### Trial-by-trial detection of cognitive events in neural time-series
+
+Weindel G, et al. (2024). *Imaging Neuroscience*. [doi:10.1162/imag_a_00400](https://doi.org/10.1162/imag_a_00400). Paper, full text, **useful**.
+
+- **Question:** Can the trial-by-trial timing of cognitive events be recovered from EEG?
+- **Idea tested:** Hidden multivariate pattern (HMP) model fitting event onsets per trial.
+- **Data and method:** Simulations and oddball-type EEG.
+- **Results:** Condition-averaged ERPs are distorted by between-trial time jitter; later components inherit the jitter of earlier ones; HMP recovers by-trial event times.
+- **Limits:** Assumes a fixed sequence of events; not masking.
+- **For us:** An alternative to Woody estimation if our gate says the method is blind.
+- **Touches:** latency_spread
 
 ### Testing the generalization of neural representations
 
@@ -1314,6 +1362,18 @@ Alilović J, van Moorselaar D, Graetz M, van Gaal S, Slagter HA (2021). *NeuroIm
 - **For us:** The closest design to our ds001810 screen; its effects are our within-dataset positive controls, not findings.
 - **Touches:** hypothesis-generator
 
+### Characterizing the brain's dynamical response from scalp-level neural electrical signals: a review of methodology development
+
+Ouyang G, et al. (2020). *Cognitive Neurodynamics*. [doi:10.1007/s11571-020-09631-4](https://doi.org/10.1007/s11571-020-09631-4). Paper, full text, **useful**.
+
+- **Question:** What methods separate single-trial latency variability from ERP averages?
+- **Idea tested:** Review of Woody, RIDE and related decomposition methods.
+- **Data and method:** Review.
+- **Results:** Latency variability smears averaged components; RIDE decomposes stimulus-locked, response-locked and latency-variable parts.
+- **Limits:** Review; method author's perspective.
+- **For us:** Our report-block data have response-locked activity, which the single-code ladder does not model (stated as a limit).
+- **Touches:** latency_spread
+
 ### Neural Variability Is Quenched by Attention
 
 Arazi A, Yeshurun Y, Dinstein I (2019). *Journal of Neuroscience*. [doi:10.1523/jneurosci.0355-19.2019](https://doi.org/10.1523/jneurosci.0355-19.2019). Paper, abstract only, **useful**.
@@ -1325,6 +1385,18 @@ Arazi A, Yeshurun Y, Dinstein I (2019). *Journal of Neuroscience*. [doi:10.1523/
 - **Limits:** Read at abstract level only.
 - **For us:** Main confound for item 4: seen trials may be more attended, so lower variance on seen trials need not be about consciousness.
 - **Touches:** round15-priorart
+
+### Single-Trial Mechanisms Underlying Changes in Averaged P300 ERP Amplitude and Latency in Military Service Members After Combat Deployment
+
+Trongnetrpunya A, Rapp P, Wang C, et al. (2019). *Frontiers in Human Neuroscience*. [doi:10.3389/fnhum.2019.00377](https://doi.org/10.3389/fnhum.2019.00377). Paper, full text, **useful**.
+
+- **Question:** Do averaged P300 changes come from single-trial amplitude or latency changes?
+- **Idea tested:** Single-trial P300 latency and amplitude estimation before and after deployment.
+- **Data and method:** Oddball EEG in service members.
+- **Results:** Separates amplitude from latency effects in averages; warns that the maximum-correlation lag can come from a signal component that is due to noise.
+- **Limits:** Clinical sample; not masking.
+- **For us:** Noise-driven lag bias, the same issue our calibration ladder handles.
+- **Touches:** latency_spread
 
 ### The EEG signature of sensory evidence accumulation during decision formation closely tracks subjective perceptual experience
 
@@ -1913,6 +1985,18 @@ Vyazovskiy et al. (2011). *Nature 472:443-447*. [doi:10.1038/nature10009](https:
 - **Limits:** Vyazovskiy 2011 in rats (performance dropped). Human evidence is one intracranial case of confusional arousal (Terzaghi 2009).
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C44
+
+### Neural “Ignition”: Enhanced Activation Linked to Perceptual Awareness in Human Ventral Stream Visual Cortex
+
+Fisch L, Privman E, Ramot M, et al. (2009). *Neuron*. [doi:10.1016/j.neuron.2009.11.001](https://doi.org/10.1016/j.neuron.2009.11.001). Paper, full text, **context**.
+
+- **Question:** Do ventral visual responses to masked images show an all-or-none jump with recognition?
+- **Idea tested:** Intracranial recordings during backward masking at several SOAs, split by recognition.
+- **Data and method:** Human iEEG (epilepsy patients).
+- **Results:** Recognized trials show a sharp, sustained gamma increase ('ignition') in high-order visual cortex; unrecognized trials do not.
+- **Limits:** Clinical sample; electrode coverage varies.
+- **For us:** Background for the single-trial reading of SOA curves; no critique of the psychometric criterion.
+- **Touches:** psychometric_criterion
 
 ### Temporal dynamics of access to consciousness in the attentional blink
 

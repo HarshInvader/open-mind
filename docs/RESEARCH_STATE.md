@@ -680,3 +680,14 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - A single 50 ms code (their own stated alternative, descriptive) makes a full square at 50 ms jitter (SQ 0.90, SPAN 224 ms, 40/40). Their verbal dismissal does not rule it out.
   - The proposed CPL test is confounded: a sustained code with 60 ms onset jitter gives negative coupling in 78%.
   - Write-up in `experiments/tg_square_specificity/RESULTS.md`; ledger rows TGS-* (`experiments/tg_square_specificity/ledger_rows.csv`). The key unknown is the real single-trial latency spread in their datasets.
+
+### Round 16 item 3: psychometric-curve criterion, prior art done (2026-11-25)
+- **Gap confirmed.** Nobody has audited whether "the signal tracks the seen rate across SOA" (Del Cul 2007; Cohen 2024's four-part rule) is specific. The mean at each SOA is p(SOA)·μ_seen + (1−p)·μ_unseen, so any signal with a seen/unseen difference and flat within-class means passes; Del Cul's two criteria are not independent. Retter 2020 states the mixture identity but uses it the other way.
+- **Cohen 2024's post hoc nonlinear-vs-linear MSE test** has no complexity penalty; a throwaway (unsealed) check had it favour "nonlinear" in 100% of linear-truth runs. Their four-part rule itself rejected linear truth (0–5% pass).
+- **Planned kill test (zero data, after latency-spread):** signal = b_stim·SOA + b_aware·seen with seen drawn from Cohen's curve; map the four-part rule's pass rate over b_aware/b_stim. Prediction: a real awareness step with a VAN-like stimulus slope fails rule (i). Real-data follow-up needs re-epoching SOAs 33/67 (thin at 33).
+- Texts in `datasets/local/r16_priorart/`; library +Retter 2020, +Fisch 2009.
+
+### Latency-spread study (Cohen SOA 50): sealed 11:35:53Z after a pre-seal review (2026-11-25)
+- **Question:** how much does the late seen-trial signal jitter in latency? It settles which TG-square reading is open (single code needs ~50 ms, chain ~75 ms).
+- **Review changed the design:** unseen-only residual noise (seen residuals carry the real signal's own variability and biased estimates low); a gate that must pass under nominal, CV 0, CV 0.6 and 30%-absent amplitude generators read on the nominal curve (the 50-to-75 gap is only ~6 ms of apparent SD, the same size as amplitude misspecification); per-subject amplitude; RT checks for response-locked activity.
+- **Chain:** `experiments/latency_spread/run_chain.sh` (shape → ladder → gate → real only on GATE PASS), 4 workers, nice 20.
