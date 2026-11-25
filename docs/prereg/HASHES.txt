@@ -189,3 +189,7 @@ d12ee40469ab6923f23a02a4d08509d49dfd858fa425960d9a20306f12b59b28  docs/prereg/20
 f13976bd29a666720a1658732d2fb5fb5687edefcdff46070523a5ee871e21b1  experiments/tg_square_specificity/tg_square.py  2026-11-25T06:37:56Z
 736b65a7f650bce39bb00839e7706878e7c3f87291f75aa8fc6b375450c27c54  docs/prereg/2026-11-25_latency_spread_cohen.md  2026-11-25T11:35:53Z
 29fe44f07f358f13d5b472ee2622ce18eab93c5078434c80b804a78054049065  experiments/latency_spread/latency_spread.py  2026-11-25T11:35:53Z
+a2ad5b60ed0bc7922f12eeff7276931fc9cc2aaf5f9b7bc2bef3fb1c394028f4  docs/prereg/2026-11-25_psych_criterion_sim.md  2026-11-25T11:40:06Z
+bdd127b8a76084c52488b5eca24017c776f53207338bf51dc7dd3cbf6cbab812  experiments/psych_criterion/criterion_sim.py  2026-11-25T11:40:06Z
+0152c3e518007870caf5a33a48f73301297582b457d16b125a4556d0e24dbe69  docs/prereg/2026-11-25_psych_criterion_sim.md  2026-11-25T11:44:42Z
+471a79173c382b7d7a480ea58b907807fa3fb1f4c5abcdd9fbd6971afc897462  experiments/psych_criterion/criterion_sim.py  2026-11-25T11:44:42Z
