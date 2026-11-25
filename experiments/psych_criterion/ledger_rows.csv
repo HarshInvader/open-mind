@@ -1,0 +1,6 @@
+id,study,claim,status,evidence
+PSY-AW-SWEEP,psych_criterion,A pure seen/unseen-mixture signal fails Cohen 2024's four-part rule often at N=25 (sealed: REJECTS AT t=3.0),SUPPORTED (simulation),"pass 0.33/0.75/0.74/0.41 at part-(ii) t 3/4.49/6/7.5; weak end power on (iii), strong end part (iv) as seen rate rises 0.87->0.94"
+PSY-SLOPE,psych_criterion,A stimulus slope of 0.1 of the awareness step halves the rule's pass rate,DESCRIPTIVE (simulation),"MIX_0.1 pass 0.48; AWSAT_0.5 0.16"
+PSY-SIG,psych_criterion,The rule passes a purely sensory psychometric-shaped signal as often as awareness,DESCRIPTIVE (simulation),"SIG 0.75 vs AW_4.49 0.75; LIN and SAT 0.00"
+PSY-MSE-RAW,psych_criterion,Uncorrected-MSE linear-vs-nonlinear test calls pure noise nonlinear,SUPPORTED (simulation),"NULL 1.00 (logistic and quadratic); sealed logistic-raw SPECIFIC verdict is a fit-failure-fallback artefact (528/1000 LIN studies; 0.99 among valid)"
+PSY-MSE-CORR,psych_criterion,df-corrected MSE test is specific but nearly blind at N2 strength,DESCRIPTIVE (simulation),"AW_4.49 nonlinear 0.01 logistic, 0.00 quadratic; NULL 0.00-0.01"
