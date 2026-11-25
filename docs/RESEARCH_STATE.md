@@ -658,3 +658,17 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
     - **Meaning:** a unimodal win at modest decoding strength does not show unimodal dynamics on its own. This says nothing about whether Sergent's early windows were that weak; their window AUCs are in their Fig. 2 source data, which has not been fetched.
     - Write-up: RESULTS.md "Follow-up 2"; ledger rows BIF-SNR-*. The 5-model secondary is still running.
 - **Design gate, full option at DMAX 2: FAIL** (G_jitter_hi called 0.18 against a bar of 0.10; B 0.99; jitter_mid 0.02; heavy and H_jitter_t 0). With 38 subjects the random-effects comparison is more confident, so narrow Model 3 wins over J clear 0.95 more often. The remaining gate cells are still running.
+- **Sergent source data:** a single workbook for all figures (MOESM4 .xlsx), 11,262,796 bytes by HEAD request. Not fetched; this is the owner's decision.
+
+### Round 16 item 2: TG-square specificity, sealed 06:37:56Z and queued after the 5-model run (2026-11-25)
+- **Prior art (in the library):**
+  - Hutchinson et al. 2026 read a no-report TG square as "a single neural code … sustained". They dismiss latency jitter in words only and give no square metric.
+  - Already established: jitter smooths TG (King & Dehaene 2014), and jitter across a chain of codes fakes persistence (Vidaurre 2019, generic).
+- **Design:**
+  - Simulated 64-channel EEG through their pipeline (0.1 Hz causal high-pass, −100 to 0 baseline, 250 Hz, LDA TG).
+  - Cells: SUS, SUS_j60 and NULL as controls; **CH4** (a chain of four 50 ms codes, jitter SD 0/25/50/75) is primary; J1 is descriptive.
+  - Every cell is calibrated to the same mean diagonal AUC, 0.58.
+  - Square = SQ ≥ 0.80 and SPAN ≥ 150 ms.
+  - The new CPL single-trial coupling test checks whether the two can be told apart in existing data.
+- **Review:** the Fable pre-seal review found 4 blockers (SUS could never be square; J1_s75 could not be calibrated; CPL was underpowered; J1 was arithmetic). All were fixed, and the reviewer's throwaway peeks are disclosed in the prereg.
+- **Run:** `tg_chain.sh` (`tg.pid`, `tg_run.log`) waits on `snr.pid`.

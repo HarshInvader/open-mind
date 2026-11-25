@@ -185,3 +185,5 @@ d12ee40469ab6923f23a02a4d08509d49dfd858fa425960d9a20306f12b59b28  docs/prereg/20
 22235cdc58286a81a975d30e0b2cb94035bc571e875de0a500772d5b57d5389b  experiments/bifurcation_specificity/gate_design.py  2026-11-25T03:17:37Z
 415ac5bf1409ece97eae7428ec8a67216afb7dfe6752e958409ed9c594123c8f  docs/prereg/2026-11-25_bifurcation_snr_timing.md  2026-11-25T03:31:22Z
 8be2741894998211453b9eb9b2b2209d512307b4ffa70116e788372f4d25602c  experiments/bifurcation_specificity/snr_timing.py  2026-11-25T03:31:22Z
+6c4826631f7fdbae4d0064568cd63fcb5840ab2e3b2122b821674522c37703a5  docs/prereg/2026-11-25_tg_square_specificity.md  2026-11-25T06:37:56Z
+f13976bd29a666720a1658732d2fb5fb5687edefcdff46070523a5ee871e21b1  experiments/tg_square_specificity/tg_square.py  2026-11-25T06:37:56Z
