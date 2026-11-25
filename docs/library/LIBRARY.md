@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-230 entries: 46 read in full, 184 from the abstract only. Every DOI was opened and its title and authors checked.
+233 entries: 47 read in full, 186 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -817,7 +817,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (103)
+## Measuring consciousness (106)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -1017,7 +1017,7 @@ Schurger A, Sarigiannidis I, Naccache L, et al. (2015). *PNAS*. [doi:10.1073/pna
 - **Results:** Variability drops after stimulus onset, then diverges by report: seen trials are less variable, coinciding with within-trial stability; stability alone classifies single trials seen/unseen.
 - **Limits:** Read at abstract level only.
 - **For us:** Direct prior art for round 15 item 4. Their measure is pattern-based MEG; an amplitude-based healthy-EEG version at a fixed stimulus, with a selection-matched null, is not in the abstract.
-- **Touches:** round15-priorart
+- **Touches:** round15-priorart, stability_specificity
 
 ### Large scale screening of neural signatures of consciousness in patients in a vegetative or minimally conscious state
 
@@ -1384,7 +1384,7 @@ Arazi A, Yeshurun Y, Dinstein I (2019). *Journal of Neuroscience*. [doi:10.1523/
 - **Results:** Cues reduced trial-by-trial variability, specific to visual cortex and larger contralateral to the attended field; larger quenching went with larger behavioural benefit.
 - **Limits:** Read at abstract level only.
 - **For us:** Main confound for item 4: seen trials may be more attended, so lower variance on seen trials need not be about consciousness.
-- **Touches:** round15-priorart
+- **Touches:** round15-priorart, stability_specificity
 
 ### Single-Trial Mechanisms Underlying Changes in Averaged P300 ERP Amplitude and Latency in Military Service Members After Combat Deployment
 
@@ -1433,6 +1433,18 @@ Engemann DA, Raimondo F, King JR, Rohaut B, Louppe G, Faugeras F, Annen J, Casso
 - **Limits:** Spectral markers carried much of the performance.
 - **For us:** A benchmark for what held-out DoC classification achieves; the bar Study 2's DoC arm would need to meet.
 - **Touches:** Study 2, #14
+
+### Initial-state-dependent, robust, transient neural dynamics encode conscious visual perception
+
+Baria AT, Maniscalco B, He BJ (2017). *PLOS Computational Biology*. [doi:10.1371/journal.pcbi.1005806](https://doi.org/10.1371/journal.pcbi.1005806). Paper, abstract only, **useful**.
+
+- **Question:** What dynamics of slow cortical activity distinguish seen from unseen threshold stimuli?
+- **Idea tested:** Dynamic-pattern (state-space) analysis of whole-brain slow (<5 Hz) MEG during a threshold visual task; across-trial variability split into norm and angle.
+- **Data and method:** Human MEG, threshold-level visual detection.
+- **Results:** Pre-stimulus patterns predict later seen reports; seen and unseen trials follow separated trajectories; stimulus-induced across-trial variability reduction is mainly in pattern angle, matching Schurger 2015; 5-15 Hz trajectories slow down only in seen trials.
+- **Limits:** Partly replicates Schurger's across-trial effect; no amplitude- or SNR-matched control of the angle measure.
+- **For us:** Their 'angle, not norm' result has the same SNR blind spot as Schurger's norm control; the injection test applies to it too.
+- **Touches:** stability_specificity
 
 ### Are there levels of consciousness?
 
@@ -1838,6 +1850,18 @@ Nicolacoudis A (2025). *Reed College BA thesis (advisor M Pitts)*. [doi:](https:
 - **For us:** Supports holding the stimulus fixed (one SOA) rather than comparing across SOAs; does not pre-empt our test.
 - **Touches:** cohen-fixed-soa
 
+### Neural activity patterns stabilize during wakefulness and conscious experience
+
+van Gaal S (2025). *PLOS Biology*. [doi:10.1371/journal.pbio.3003252](https://doi.org/10.1371/journal.pbio.3003252). Paper, full text, **context**.
+
+- **Question:** Is stable neural activity a common marker of wakefulness and of conscious content?
+- **Idea tested:** Primer on Leung et al.'s preregistered fly study (>7,700 time-series markers across wake, sleep and anaesthesia), linked to human stability findings (King, Schurger).
+- **Data and method:** Commentary; fly LFP study plus human MEG literature.
+- **Results:** Autocorrelation (stable, consistent processing) best marks loss of consciousness in flies; argues stable, sustained patterns are a cross-species marker of arousal and conscious content, plausibly from long-range recurrence.
+- **Limits:** Commentary; does not address whether stability measures are confounded by evoked amplitude or SNR.
+- **For us:** Shows how widely 'stability' is now used as a marker, which raises the value of a specificity test.
+- **Touches:** stability_specificity
+
 ### Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms
 
 Breyton M et al. (2025). *eLife*. [doi:10.7554/eLife.98920](https://doi.org/10.7554/eLife.98920). Journal article, abstract only, **context**.
@@ -1953,6 +1977,18 @@ Weidemann CT, Kahana MJ (2016). *Royal Society Open Science 3, 150670*. [doi:10.
 - **Limits:** Recognition memory, not perception; RT is a noisy proxy at the single-trial level.
 - **For us:** Supports RT as a weak confidence proxy in the Cohen data, which recorded no confidence.
 - **Touches:** cohen-fixed-soa
+
+### General Markers of Conscious Visual Perception and Their Timing
+
+Rutiku R, Aru J, Bachmann T (2016). *Frontiers in Human Neuroscience*. [doi:10.3389/fnhum.2016.00023](https://doi.org/10.3389/fnhum.2016.00023). Paper, abstract only, **context**.
+
+- **Question:** How variable are the onset times of EEG markers of conscious perception within one study?
+- **Idea tested:** Seen vs unseen contrasts on 100 balanced subsets of heterogeneous threshold-contrast stimuli.
+- **Data and method:** Human EEG, threshold-contrast visual stimuli.
+- **Results:** N200 and P300 are the reliable general markers; their onset varies strongly across subsets; they argue that unseen-trial instability (Schurger 2015) changes how seen/unseen contrasts behave.
+- **Limits:** Raises the stability-comparison worry but does not test whether stability differences reduce to amplitude or SNR.
+- **For us:** Prior statement of the concern our injection test settles.
+- **Touches:** stability_specificity
 
 ### Subjective visibility depends on level of processing
 

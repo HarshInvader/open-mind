@@ -5453,7 +5453,8 @@
    "added": "2026-11-25",
    "verified": true,
    "touches": [
-    "round15-priorart"
+    "round15-priorart",
+    "stability_specificity"
    ],
    "topic": "Measuring consciousness",
    "limits": "Read at abstract level only.",
@@ -5478,7 +5479,8 @@
    "added": "2026-11-25",
    "verified": true,
    "touches": [
-    "round15-priorart"
+    "round15-priorart",
+    "stability_specificity"
    ],
    "topic": "Measuring consciousness",
    "limits": "Read at abstract level only.",
@@ -5845,6 +5847,81 @@
    "ideas_for_us": "Background for the single-trial reading of SOA curves; no critique of the psychometric criterion.",
    "relevance": "context",
    "url": "https://doi.org/10.1016/j.neuron.2009.11.001"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "stability_specificity"
+   ],
+   "kind": "Paper",
+   "topic": "Measuring consciousness",
+   "id": "baria-2017-initial-state-transient-dynamics",
+   "title": "Initial-state-dependent, robust, transient neural dynamics encode conscious visual perception",
+   "authors": "Baria AT, Maniscalco B, He BJ",
+   "year": 2017,
+   "venue": "PLOS Computational Biology",
+   "doi": "10.1371/journal.pcbi.1005806",
+   "read_depth": "partial",
+   "question": "What dynamics of slow cortical activity distinguish seen from unseen threshold stimuli?",
+   "tried": "Dynamic-pattern (state-space) analysis of whole-brain slow (<5 Hz) MEG during a threshold visual task; across-trial variability split into norm and angle.",
+   "method_data": "Human MEG, threshold-level visual detection.",
+   "key_results": "Pre-stimulus patterns predict later seen reports; seen and unseen trials follow separated trajectories; stimulus-induced across-trial variability reduction is mainly in pattern angle, matching Schurger 2015; 5-15 Hz trajectories slow down only in seen trials.",
+   "limits": "Partly replicates Schurger's across-trial effect; no amplitude- or SNR-matched control of the angle measure.",
+   "ideas_for_us": "Their 'angle, not norm' result has the same SNR blind spot as Schurger's norm control; the injection test applies to it too.",
+   "relevance": "useful",
+   "url": "https://doi.org/10.1371/journal.pcbi.1005806"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "stability_specificity"
+   ],
+   "kind": "Paper",
+   "topic": "Measuring consciousness",
+   "id": "rutiku-2016-general-markers-timing",
+   "title": "General Markers of Conscious Visual Perception and Their Timing",
+   "authors": "Rutiku R, Aru J, Bachmann T",
+   "year": 2016,
+   "venue": "Frontiers in Human Neuroscience",
+   "doi": "10.3389/fnhum.2016.00023",
+   "read_depth": "partial",
+   "question": "How variable are the onset times of EEG markers of conscious perception within one study?",
+   "tried": "Seen vs unseen contrasts on 100 balanced subsets of heterogeneous threshold-contrast stimuli.",
+   "method_data": "Human EEG, threshold-contrast visual stimuli.",
+   "key_results": "N200 and P300 are the reliable general markers; their onset varies strongly across subsets; they argue that unseen-trial instability (Schurger 2015) changes how seen/unseen contrasts behave.",
+   "limits": "Raises the stability-comparison worry but does not test whether stability differences reduce to amplitude or SNR.",
+   "ideas_for_us": "Prior statement of the concern our injection test settles.",
+   "relevance": "context",
+   "url": "https://doi.org/10.3389/fnhum.2016.00023"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "stability_specificity"
+   ],
+   "kind": "Paper",
+   "topic": "Measuring consciousness",
+   "id": "vangaal-2025-stable-patterns-primer",
+   "title": "Neural activity patterns stabilize during wakefulness and conscious experience",
+   "authors": "van Gaal S",
+   "year": 2025,
+   "venue": "PLOS Biology",
+   "doi": "10.1371/journal.pbio.3003252",
+   "read_depth": "full",
+   "question": "Is stable neural activity a common marker of wakefulness and of conscious content?",
+   "tried": "Primer on Leung et al.'s preregistered fly study (>7,700 time-series markers across wake, sleep and anaesthesia), linked to human stability findings (King, Schurger).",
+   "method_data": "Commentary; fly LFP study plus human MEG literature.",
+   "key_results": "Autocorrelation (stable, consistent processing) best marks loss of consciousness in flies; argues stable, sustained patterns are a cross-species marker of arousal and conscious content, plausibly from long-range recurrence.",
+   "limits": "Commentary; does not address whether stability measures are confounded by evoked amplitude or SNR.",
+   "ideas_for_us": "Shows how widely 'stability' is now used as a marker, which raises the value of a specificity test.",
+   "relevance": "context",
+   "url": "https://doi.org/10.1371/journal.pbio.3003252"
   }
  ]
 }
