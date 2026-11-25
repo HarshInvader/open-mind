@@ -618,3 +618,10 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - Prior art: repetition and earlier exposure already raise visibility (Atas 2013; Jacoby & Dallas 1981; Whittlesea 1990). The test was reframed to the strength of earlier showings (strong vs weak SOA) at a fixed number of showings.
   - Sealed a4a6c42 after a Fable pre-seal review that rejected two invalid nulls.
   - **Stopped at the calibration gate:** the real-response randomisation null gave 7.7% false calls (bar 5%). The fake null (4.3%) and power (0.92) passed. No fallback was stated, so the real slope was never computed.
+- **Item 4, designed and dropped before sealing (2026-11-25):**
+  - Draft: `docs/prereg/2026-11-25_cohen_variance_truncation.md` and `experiments/cohen_fixed_soa/variance_truncation.py`. Not sealed and never run on real labels. Only label-free amplitude statistics were computed (`out/var_design.json`: 38 subjects, near-Gaussian amplitudes).
+  - The Fable pre-seal review (synthetic data only) found two problems that remove the study's point:
+    - **The truncation correction does almost nothing.** At the implied correlations (VAN about 0.17, P3b about 0.24) the predicted log ratio is about ±0.01 per subject and averages about 0 over seen rates of 0.21–0.77. The test reduces to a raw variance comparison, which Schurger 2015 already reported.
+    - **Drift and state-dependent noise give false positives.** Slow session drift, or a state that raises visibility and lowers noise, gave false QUENCHED calls in 36–89% of simulated studies, as large as the planted effect.
+  - A drift-robust version (a rolling-SD normalisation plus a drift calibration cell) would still not separate attention from seeing, and could at most replicate Schurger in scalar ERPs.
+  - **Decision:** dropped as not worth a sealed run. Reported to the coordinator.

@@ -1,0 +1,24 @@
+{
+ "VAN": {
+  "median_sd_uv": 4.233875971306466,
+  "median_skew": 0.07783735813339729,
+  "median_excess_kurtosis": 0.018702666705897153
+ },
+ "P3b": {
+  "median_sd_uv": 8.690129797921777,
+  "median_skew": -0.044388042470769676,
+  "median_excess_kurtosis": -0.21771406962092232
+ },
+ "P1": {
+  "median_sd_uv": 5.278928095329247,
+  "median_skew": 0.008693626849469921,
+  "median_excess_kurtosis": 0.23114552797783583
+ },
+ "N2": {
+  "median_sd_uv": 9.321532184844738,
+  "median_skew": -0.008015356706970206,
+  "median_excess_kurtosis": 0.017159128780481314
+ },
+ "subjects": 38,
+ "median_trials": 109.5
+}
