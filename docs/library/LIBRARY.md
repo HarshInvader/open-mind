@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-241 entries: 50 read in full, 191 from the abstract only. Every DOI was opened and its title and authors checked.
+245 entries: 52 read in full, 193 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -841,7 +841,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (110)
+## Measuring consciousness (114)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -900,6 +900,18 @@ Núñez P, Kumar G, Gotti C, Wang P, Martineau L, Bonaventure PL, Hoyer R, Miši
 - **Limits:** Abstract only; preprint.
 - **For us:** A mechanism for our own result: our waveform-asymmetry marker tra_x separated wake from N3 but not REM from N3. If asymmetry indexes local kinetics, it should track arousal-linked synaptic changes, not experience. Cite it in the nonequilibrium write-up.
 - **Touches:** nonequilibrium, #41
+
+### Perceptual and attentional impairments of conscious access involve distinct neural mechanisms despite equal task performance
+
+Noorman S, Stein T, Fahrenfort JJ, van Gaal S (2025). *eLife*. [doi:10.7554/eLife.97900](https://doi.org/10.7554/eLife.97900). Paper, full text, **core**.
+
+- **Question:** With task performance matched, do masking and the attentional blink impair conscious access through the same neural stages?
+- **Idea tested:** Kanizsa targets in an RSVP stream; T2 masked (staircased to match the blink) or presented in the blink, in the same blocks; EEG decoders for local contrast, collinearity and the illusory triangle.
+- **Data and method:** EEG, 30 participants, all trials and all participants kept; classifiers trained on T1 or an independent set and tested on T2 per condition.
+- **Results:** Early local-contrast decoding (~80 ms) was spared by both. Late integration of collinearity and the illusory triangle (~200-250 ms) was impaired by masking but spared by the blink, at equal d' and metacognition.
+- **Limits:** Decodes stimulus features, not seen vs unseen; no awareness decoder is transferred between the two manipulations.
+- **For us:** The closest prior art for item 3: it predicts that a masking-trained awareness decoder may NOT transfer to the blink if it rides on integration stages that the blink spares. A transfer failure would then be theory-consistent, not just a montage problem.
+- **Touches:** round 18 item 3, cross-paradigm decoder
 
 ### The role of etiology in the identification of clinical markers of consciousness: comparing EEG alpha power, complexity, and spectral exponent
 
@@ -1006,6 +1018,18 @@ Lendner JD et al. (2020). *eLife*. [doi:10.7554/eLife.55092](https://doi.org/10.
 - **Limits:** Separate classifier per contrast; no shared threshold or transfer.
 - **For us:** Our REM-placement test uses frozen cutoffs, which Lendner did not.
 - **Touches:** Task #5 transfer
+
+### Decoding across sensory modalities reveals common supramodal signatures of conscious perception
+
+Sanchez G, Hartmann T, Fuscà M, Demarchi G, Weisz N (2020). *PNAS*. [doi:10.1073/pnas.1912584117](https://doi.org/10.1073/pnas.1912584117). Paper, full text, **core**.
+
+- **Question:** Does a decoder of conscious perception trained in one sensory modality predict detection in another?
+- **Idea tested:** Near-threshold tactile, visual and auditory detection blocks in the same MEG session; train on one modality, test on another, with temporal generalisation; control experiment varying the report.
+- **Data and method:** MEG, 16 participants plus 14 in the control experiment; within-subject, within-session cross-modal decoding.
+- **Results:** Detected vs undetected decoders generalised across modalities in the late post-stimulus period, with supramodal patterns including task-unrelated primary sensory cortex; the patterns did not depend on report type.
+- **Limits:** Same subjects, session, sensors and detection task across modalities; near-threshold detection only; no cross-paradigm (masking vs attention) or cross-lab transfer.
+- **For us:** Sets the bar item 3 goes beyond: zero-shot transfer across labs, caps, subjects and access-failure mechanisms (masking to blink).
+- **Touches:** round 18 item 3, cross-paradigm decoder
 
 ### Temporally unconstrained decoding reveals consistent but time-varying stages of stimulus processing
 
@@ -1494,6 +1518,18 @@ Baria AT, Maniscalco B, He BJ (2017). *PLOS Computational Biology*. [doi:10.1371
 - **For us:** Their 'angle, not norm' result has the same SNR blind spot as Schurger's norm control; the injection test applies to it too.
 - **Touches:** stability_specificity
 
+### Perceptual integration without conscious access
+
+Fahrenfort JJ, van Leeuwen J, Olivers CNL, Hogendoorn H (2017). *PNAS*. [doi:10.1073/pnas.1617268114](https://doi.org/10.1073/pnas.1617268114). Paper, abstract only, **useful**.
+
+- **Question:** Are objects that are not consciously accessed still represented in a perceptually rich, integrated way?
+- **Idea tested:** Manipulated access with masking and the attentional blink while decoding figure-ground (integration) signatures from EEG.
+- **Data and method:** EEG decoding; masking and attentional blink in one design.
+- **Results:** Under the blink, unaccessed objects could carry an integration signature indistinguishable from accessed ones; masking removed it.
+- **Limits:** Read at abstract level (full text not retrieved).
+- **For us:** With Noorman 2025: masking and the blink fail at different stages, so a single awareness decoder transferring between them is a real test, not a formality.
+- **Touches:** round 18 item 3, cross-paradigm decoder
+
 ### Are there levels of consciousness?
 
 Bayne T, Hohwy J, Owen AM (2016). *Trends in Cognitive Sciences 20:405-413*. [doi:10.1016/j.tics.2016.03.009](https://doi.org/10.1016/j.tics.2016.03.009). Review, abstract only, **useful**.
@@ -1527,6 +1563,18 @@ Casarotto S, Comanducci A, Rosanova M and others; senior author Massimini M (201
 - **Results:** The team first set a threshold using 150 people whose state was known from their own reports. That threshold then caught almost all minimally conscious patients, and showed 9 of 43 patients judged vegetative with scores like conscious people.
 - **For us:** The strongest published L2 result. No open TMS-EEG set of this kind exists, which is the biggest data gap in our plan.
 - **Touches:** news
+
+### Distinct cortical codes and temporal dynamics for conscious and unconscious percepts
+
+Salti M, Monto S, Charles L, King JR, Parkkonen L, Dehaene S (2015). *eLife*. [doi:10.7554/eLife.05652](https://doi.org/10.7554/eLife.05652). Paper, abstract only, **useful**.
+
+- **Question:** With behaviour held fixed, what neural coding is unique to consciously seen stimuli?
+- **Idea tested:** EEG and MEG while participants localised a brief target and rated its visibility; MVPA of location on seen vs blindsight trials.
+- **Data and method:** Simultaneous M/EEG, time-resolved decoding and temporal generalisation.
+- **Results:** Location information spread through cortex even on unseen trials; from about 270 ms, information unique to seen trials appeared in superior parietal and frontal regions, as a series of time-limited stages.
+- **Limits:** Single paradigm (masking-like near-threshold); read at abstract level.
+- **For us:** Puts the expected window for a transferable access signature at ~270 ms onwards.
+- **Touches:** round 18 item 3, cross-paradigm decoder
 
 ### Neural signatures of conscious face perception in an inattentional blindness paradigm
 
