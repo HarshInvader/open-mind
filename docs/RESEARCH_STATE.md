@@ -672,3 +672,5 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - The new CPL single-trial coupling test checks whether the two can be told apart in existing data.
 - **Review:** the Fable pre-seal review found 4 blockers (SUS could never be square; J1_s75 could not be calibrated; CPL was underpowered; J1 was arithmetic). All were fixed, and the reviewer's throwaway peeks are disclosed in the prereg.
 - **Run:** `tg_chain.sh` (`tg.pid`, `tg_run.log`) waits on `snr.pid`.
+- **Design gate: stopped after DMAX 2 by coordinator decision.** Full FAIL (G_jitter_hi 0.18), half FAIL (recall 0.62). No fetch. DMAX 1 and 3 were not run; DMAX 3 on the full option alone is a possible later follow-up. Ledger rows BIF-GATE-SPEC38 and BIF-GATE-HALF. Method finding: at 38 subjects the comparison loses specificity against large-jitter graded data (0.18 vs 0.007 at 20 subjects).
+- **Compute rule (coordinator):** Open Mind runs at most 4 workers in total, at nice 20 without `-b`. `experiments/om_chain.sh` runs the SNR 5-model run and then TG-square, with WORKERS overridden at import (sealed files unedited).

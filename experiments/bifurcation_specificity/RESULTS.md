@@ -127,3 +127,30 @@ Counts are per 100 studies. No study was non-finite.
 - **AUC definition.** Ours is computed on window values. Theirs is per time sample after a 10 Hz low-pass, so the two are comparable but not identical.
 - **One design.** 20 subjects and 150 trials per level, as in their study.
 - **Pending.** The 5-model secondary (with J and T) is still running and will be added.
+
+---
+
+# Follow-up 3: design gate for the real-data test (Cohen report block). FAIL at the reference size; stopped early
+
+The real-data prereg (`docs/prereg/2026-11-25_bifurcation_real_data_cohen.md`, sealed) requires a simulation gate at the real design before any byte is fetched. The design is 38 subjects with the real per-level trial counts ("full", 1.12 GB) or 64 per level ("half", 0.54 GB). The gate PASSES when B recall is ≥ 0.80 and every graded cell is ≤ 0.10, the same rule as the sealed simulation. Script: `gate_design.py`. Outputs: `out_gate/*.json` and `out_gate/summary.json`. 100 studies per cell.
+
+**Results at DMAX 2 (the sealed simulation's signal size).** Call rate is Model 3 pxp > 0.95 in the 5-model comparison. Winner counts are [non-finite, M0, 2B, M3, J, T].
+
+| Cell | Full: call rate | Full: winners | Half: call rate | Half: winners |
+|---|---|---|---|---|
+| B_bifurcation (recall) | **0.99** | [0,0,0,100,0,0] | **0.62** | [0,0,0,76,24,0] |
+| G_jitter_mid | 0.02 | [0,0,1,12,87,0] | 0.01 | [0,0,1,13,86,0] |
+| G_jitter_hi | **0.18** | [0,0,0,38,62,0] | 0.06 | [0,0,0,25,71,4] |
+| G_heavy | 0 | [3,0,0,0,0,97] | 0 | [2,0,0,0,0,98] |
+| H_jitter_t | 0 | [5,0,0,0,0,95] | 0 | [2,0,0,0,0,98] |
+| H_gain | 0 | [0,0,0,0,0,100] | 0 | [0,0,0,0,0,100] |
+| **Gate** | **FAIL** (specificity) | | **FAIL** (recall) | |
+
+- **Stopped early by coordinator decision (2026-11-25).** Neither byte option passes at the reference signal size. That answers the byte question, so nothing is fetched.
+- **Not run:** DMAX 1 and DMAX 3. A later DMAX 3 run on the full option alone is a possible follow-up. It would show whether a stronger real signal would pass.
+- **Finding about the method:** with more subjects, the random-effects comparison loses specificity against large-jitter graded data.
+  - At 20 subjects and 150 trials per level (sealed extended simulation), G_jitter_hi was called 0.007.
+  - At 38 subjects with the real counts, it was called **0.18**.
+  - The winner counts look alike: Model 3 had the top exceedance in 51/150 and 38/100 studies. More subjects make a narrow Model 3 edge more often pass 0.95.
+  - So the FIX WORKS result holds for the 20-subject design. It does not carry over to larger samples without a design-matched check.
+- **Half option:** it loses recall because J absorbs true two-state subjects when there are 64 trials per level.

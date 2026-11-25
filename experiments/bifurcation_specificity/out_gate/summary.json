@@ -1,0 +1,20 @@
+{
+ "full_d2": {
+  "B_bifurcation": 0.99,
+  "G_heavy": 0.0,
+  "G_jitter_hi": 0.18,
+  "G_jitter_mid": 0.02,
+  "H_gain": 0.0,
+  "H_jitter_t": 0.0,
+  "PASS": false
+ },
+ "half_d2": {
+  "B_bifurcation": 0.62,
+  "G_heavy": 0.0,
+  "G_jitter_hi": 0.06,
+  "G_jitter_mid": 0.01,
+  "H_gain": 0.0,
+  "H_jitter_t": 0.0,
+  "PASS": false
+ }
+}
