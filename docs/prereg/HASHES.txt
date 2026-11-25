@@ -196,3 +196,5 @@ bdd127b8a76084c52488b5eca24017c776f53207338bf51dc7dd3cbf6cbab812  experiments/ps
 b1fc60aeec554690c59f5ea7a091e831ad54ecd5ca0e7f871a5d29d2e5e038d8  docs/prereg/2026-11-25_rhythm_blink.md  2026-11-25T14:02:18Z
 65e7da96cf6bd0274a31d6463a87940ee55ffc39d745cc88704094a219842ea8  experiments/rhythm_blink/rhythm_blink.py  2026-11-25T14:02:18Z
 098868b41535b7afc1fb5217d8c58d2618d841ffce010652802cbcc3410cab84  experiments/rhythm_blink/out/calibration.json  2026-11-25T14:02:18Z
+a4d9e2e918b8922813d98ff2bfd17cf6bfd096a722cf3431a8a55939493b3e5a  docs/prereg/2026-11-25_bifurcation_onset_jitter.md  2026-11-25T14:17:20Z
+8465c8a48f17a55abcc0449d5edfe077b6d288a4528163af8be50c3e5223f3e8  experiments/bifurcation_specificity/jitter_onset.py  2026-11-25T14:17:20Z
