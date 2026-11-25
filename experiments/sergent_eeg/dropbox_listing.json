@@ -1,0 +1,1012 @@
+[
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_01_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/e6kqu/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_02_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/xvcqt/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_03_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/k5j2e/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_04_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/zgth8/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_05_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/k5gpv/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_06_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/4hwec/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_07_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/arfyg/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_08_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/xk9ej/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_09_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/g6xmz/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_10_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/qgufe/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_11_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd0023499322/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_12_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd0023499324/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_13_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd0023499326/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_14_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd0023499328/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_15_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd002349932a/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_16_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd002349932c/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_17_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd002349932e/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_18_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd0023499330/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_19_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd0023499332/"
+},
+{
+"path": "/Bifurcation_OSF_BehaviouralData_ActiveSessions/Subject_20_Active.mat",
+"size": null,
+"dl": "https://osf.io/download/630ff1448e3ebd0023499334/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/Readme.rtf",
+"size": null,
+"dl": "https://osf.io/download/mn7vx/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S10_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/qywd4/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S10_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/m6rwf/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S11_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/hb3j8/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S11_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/xydsk/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S12_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/gyad3/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S12_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/ecjsw/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S13_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/zkb2m/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S13_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/2jg3x/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S14_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/4dsj6/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S14_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/7gkwe/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S15_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/ws6dz/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S15_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/84gpj/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S16_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/2f68d/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S16_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/4nvh7/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S17_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/7cvp4/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S17_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/jgfvq/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S18_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/gep9r/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S18_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/95dae/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S19_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/pesk9/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S19_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/ugv84/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S1_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/q28d3/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S1_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/2b7ry/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S20_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/ewxz7/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S20_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/q4ux5/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S2_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/3ax9q/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S2_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/bhe2r/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S3_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/aufh5/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S3_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/6r5v2/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S4_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/z6a8q/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S4_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/rb73e/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S5_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/wa3hy/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S5_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/vd2qs/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S6_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/dxwp5/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S6_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/xhsmu/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S7_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/5f3bn/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S7_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/ezvcf/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S8_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/wnpbk/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S8_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/sa2ek/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S9_Active_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/n4zsu/"
+},
+{
+"path": "/Bifurcation_OSF_PreprocessedData/S9_Passive_data_ref.mat",
+"size": null,
+"dl": "https://osf.io/download/h2my3/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_10_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/rc6wy/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_10_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/khd2e/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_10_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/zewht/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_10_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/bhpx3/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_10_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5185d/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_10_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51806/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_11_Active_part1.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517ba/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_11_Active_part1.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5185f/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_11_Active_part1.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5183a/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_11_Active_part2.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517f4/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_11_Active_part2.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51861/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_11_Active_part2.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517ed/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_11_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51799/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_11_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51863/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_11_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517dc/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_12_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/x6qpk/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_12_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/mzsd7/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_12_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51808/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_12_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517cc/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_12_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51866/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_12_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517d8/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_13_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51832/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_13_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51868/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_13_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5181a/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_13_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517a1/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_13_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d5186a/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_13_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517d0/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_14_Active_part1.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517eb/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_14_Active_part1.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d5186c/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_14_Active_part1.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517ca/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_14_Active_part2.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517e7/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_14_Active_part2.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d5186e/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_14_Active_part2.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51825/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_14_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/nuyqa/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_14_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/s7wuz/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_14_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/kwp3a/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_15_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51810/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_15_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51871/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_15_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51814/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_15_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517da/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_15_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51873/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_15_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517e3/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_16_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517ae/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_16_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51875/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_16_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517ce/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_16_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51802/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_16_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51877/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_16_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51816/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_17_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517bd/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_17_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51879/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_17_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517f0/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_17_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517b2/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_17_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d5187b/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_17_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517c5/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_18_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5183c/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_18_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d5187d/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_18_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517b0/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_18_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51838/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_18_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d5187f/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_18_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517de/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_19_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5182f/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_19_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51881/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_19_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/yjmu3/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_19_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5179d/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_19_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/g5vqk/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_19_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517c7/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_1_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517f6/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_1_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5183f/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_1_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517e9/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_1_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51800/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_20_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517b4/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_20_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51884/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_20_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517a5/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_20_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517d6/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_20_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd6c622cb5278d51886/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_20_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51827/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_2_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51822/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_2_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51841/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_2_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517e1/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_2_Passive_part1.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517b8/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_2_Passive_part2.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51820/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_3_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/vtn7x/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_3_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/yqf7d/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_3_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/exs3t/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_3_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51829/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_4_Active_part1.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51818/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_4_Active_part1.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51844/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_4_Active_part1.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517b6/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_4_Active_part2.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5180a/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_4_Active_part2.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51846/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_4_Active_part2.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5182b/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_4_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517bf/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_5_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517fe/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_5_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51848/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_5_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517c1/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_5_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517fa/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_5_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5184a/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_5_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517ac/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_6_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517e5/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_6_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5184c/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_6_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5179b/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_6_Passive_part1.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5180c/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_6_Passive_part1.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5184e/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_6_Passive_part1.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5179f/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_6_Passive_part2.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51836/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_6_Passive_part2.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51850/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_6_Passive_part2.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517a3/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_7_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517a9/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_7_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51852/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_7_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5181e/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_7_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517f8/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_7_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51854/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_7_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5181c/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_8_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51804/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_8_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51856/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_8_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517c3/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_8_Passive_part1.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517f2/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_8_Passive_part1.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51858/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_8_Passive_part1.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5182d/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_8_Passive_part2.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51812/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_8_Passive_part2.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d51834/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_8_Passive_part2.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517a7/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_9_Active.eeg",
+"size": null,
+"dl": "https://osf.io/download/ubx3v/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_9_Active.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6fdhm/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_9_Active.vmrk",
+"size": null,
+"dl": "https://osf.io/download/baznr/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_9_Passive.eeg",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d517d2/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_9_Passive.vhdr",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5185b/"
+},
+{
+"path": "/Bifurcation_OSF_RawFiles/Subject_9_Passive.vmrk",
+"size": null,
+"dl": "https://osf.io/download/6800bbd5c622cb5278d5180e/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/LLH_fun_logisbimodalfixedsigma.m",
+"size": null,
+"dl": "https://osf.io/download/7ygmn/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/LLH_fun_logisticB.m",
+"size": null,
+"dl": "https://osf.io/download/nv72p/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/LLH_fun_null.m",
+"size": null,
+"dl": "https://osf.io/download/kcf92/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/README.rtf",
+"size": null,
+"dl": "https://osf.io/download/9s7be/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/SoundConsc_AnalyzeActiveResponses.m",
+"size": null,
+"dl": "https://osf.io/download/6pqwu/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/SoundConsc_AnalyzePassiveResponses_AllPassiveSb.m",
+"size": null,
+"dl": "https://osf.io/download/ex38a/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/SoundConscEEG_SingleTrialPred_ModelFitting_Twind30ms_batch.m",
+"size": null,
+"dl": "https://osf.io/download/rxfn4/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/SoundConsciousEEG_GroupOfElec_Mean_and_STD.m",
+"size": null,
+"dl": "https://osf.io/download/ak3wf/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/SoundConsciousEEG_MNE_GAT_SingleTrials.py",
+"size": null,
+"dl": "https://osf.io/download/5zy9c/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/SoundConsciousEEG_MNE_SingleTrialPredict.m",
+"size": null,
+"dl": "https://osf.io/download/7rhcb/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/SoundConsciousEEG_Params.m",
+"size": null,
+"dl": "https://osf.io/download/qkvdw/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/SoundConsciousEEG_PreProcessing.m",
+"size": null,
+"dl": "https://osf.io/download/djc36/"
+},
+{
+"path": "/Bifurcation_OSF_Scripts/SoundConsciousEEG_SingleTrialPredict_ModelComp_Twind_PlotFig.m",
+"size": null,
+"dl": "https://osf.io/download/ck6sy/"
+}
+]

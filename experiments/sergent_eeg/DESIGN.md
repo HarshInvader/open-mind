@@ -1,6 +1,6 @@
 # Item 2 (round 18): Sergent et al. 2021's own EEG under the 5-model set. DESIGN (not a prereg, not sealed)
 
-Status 2026-11-25, about 17:30Z: design numbers pinned from the source data and code on disk; design gate specified; nothing streamed.
+Status 2026-11-25, about 17:30Z: design numbers pinned from the source data and code on disk; design gate specified; nothing streamed. The prereg (`docs/prereg/2026-11-25_sergent_eeg_five_models.md`) supersedes §4 and §7 where they differ.
 
 ## 1. Question
 
@@ -19,7 +19,7 @@ Status 2026-11-25, about 17:30Z: design numbers pinned from the source data and 
 | Trials per level, before EEG rejection | 168 for 18 subjects, 176 for 2 (all six levels) | inferred exactly: every identification percentage in Fig 1D is a multiple of 100/168 or 100/176 |
 | Trials per level, after rejection | about 150 (the sealed audit's value, from the paper); exact counts are only in `data_ref.trialinfo` | audit.py `N_PER` |
 | CV | 20 blocks, 5 folds of 4 blocks | `SoundConscEEG_SingleTrialPred_ModelFitting_Twind30ms_batch.m` |
-| Signal | decoder decision values: decimate 5 (500 → 100 Hz), StandardScaler + LogisticRegression per time sample, trained on no sound vs −5 dB, 10-fold StratifiedKFold; intermediate levels scored by fold; then 10 Hz low-pass and 30 ms window means | GAT script, fitting script |
+| Signal | decoder decision values on the 500 Hz diagonal (not decimated; the decimated GAT is only for Fig 2), StandardScaler + LogisticRegression per time sample, trained on no sound vs −5 dB, 10-fold StratifiedKFold; intermediate levels scored by fold; then 10 Hz low-pass and 30 ms window means | GAT script (diagonal section), fitting script |
 | Published max-level decoding | the diagonal of Fig 2B (no sound vs −5 dB, AUC per decimated sample, group mean) peaks at **0.731** (sample 69 of 176); 0.69–0.73 over its plateau | `source_data.xlsx`, sheet "Figure 2 Panel B" |
 | Their 3-model result | Model 3 exceedance > 0.99 in a run of late windows | sheet "Figure 3 Panel E" (53 windows) |
 
@@ -69,10 +69,10 @@ Status 2026-11-25, about 17:30Z: design numbers pinned from the source data and 
 - **Plan:** stream one subject at a time.
   1. Download to a fresh scratch directory (about 0.55 GB).
   2. Load with `scipy.io.loadmat` under `python -I`.
-  3. Compute the decoder outputs with their method: the diagonal only, all 176 decimated samples, float32.
+  3. Compute the decoder outputs with their method: the diagonal only, every 500 Hz sample, float32.
   4. Keep the trialinfo columns (block, snr, audibility).
   5. Delete the `.mat` before the next subject.
-- **Kept per subject:** about 1,000 trials × 176 samples × 4 bytes ≈ 0.7 MB. All 20: about 15 MB.
+- **Kept per subject:** about 1,000 trials × about 1,000 samples × 4 bytes ≈ 4 MB, plus the 53 window values. All 20: about 80 MB.
 - **Disk:** peak extra use about 1.5 GB (one file plus the loaded arrays), far above the 10 GB guard at the current 19 GB free. Each subject starts only if free disk minus 1 GB is above 10 GB.
 - **Network:** about 11.4 GB in total. This needs the coordinator's or owner's OK: it is above the 3 GB item-3 exception, though not a disk problem.
 - **Range reads:** checked. OSF's Dropbox proxy answers Range with 206, so a resumable chunked download is possible.
@@ -89,11 +89,11 @@ Status 2026-11-25, about 17:30Z: design numbers pinned from the source data and 
 
 ## 7. Real-data analysis (to be fixed in the prereg)
 
-- **Primary windows (pinned from Fig 3E):** their fitting script uses `TWOI = 101:15:901`, 30 ms windows from −300 ms (window j covers −300 + 30j to −270 + 30j ms).
-  - Their longest run with Model 3 exceedance > 0.95 is windows 22–27, i.e. **360–540 ms**; pxp there is 0.95–1.00.
-  - Isolated windows also pass: window 20 (300–330 ms, 0.99) and window 31 (630–660 ms, 0.97).
-  - 2B wins at windows 32–37 (660–840 ms, up to 0.99): their "late unimodal" period.
-  - **The prereg will fix the primary set as windows 22–27.** Candidate decision rule: a verdict needs the same outcome in at least 4 of the 6 windows. The prereg states it before streaming.
+- **Primary windows (pinned from Fig 3E):** their fitting script uses `TWOI = 101:15:901`, 30 ms windows from −300 ms (1-based window j covers −330 + 30j to −300 + 30j ms).
+  - Their longest run with Model 3 exceedance > 0.95 is 1-based windows 23–28, i.e. **360–540 ms** (an earlier draft said 22–27, which counted from 0); pxp there is 0.990–0.999.
+  - Isolated windows also pass: 1-based window 21 (300–330 ms, 0.99) and window 32 (630–660 ms, 0.97).
+  - 2B exceeds 0.95 at 1-based windows 18, 33 and 37 (0.985–0.991): their "late unimodal" period begins at 660 ms.
+  - **The prereg fixes the primary set as 1-based windows 23–28.** Candidate decision rule: a verdict needs the same outcome in at least 4 of the 6 windows. The prereg states it before streaming.
 - **Verdicts:**
   - TWO-STATE SURVIVES: 5-model Model 3 pxp > 0.95.
   - GRADED RIVAL WINS: J or T > 0.95.
