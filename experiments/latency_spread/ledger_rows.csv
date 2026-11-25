@@ -1,0 +1,3 @@
+id,study,claim,status,evidence
+LAT-SHAPE-INVALID,latency_spread,Seen-trial latency SD of the late P3b-ROI signal (Cohen SOA 50 report block),INVALID,"Sealed shape gate: single-Gaussian fit R2 0.693 < 0.70; no ladder, gate or real lags run"
+LAT-PLATEAU,latency_spread,Group seen-minus-unseen P3b-ROI wave is a plateau from ~320 ms to epoch end,DESCRIPTIVE,"~2 uV at 580 ms; early 160-200 ms deflection; out/shape.json"
