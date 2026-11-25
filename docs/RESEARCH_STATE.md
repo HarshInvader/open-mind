@@ -779,3 +779,15 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - Attempt 2 started at 17:08:32Z inside a detached tmux server (wrapper 95901).
 - **Item 3:** prior art read (Noorman 2025 and Sanchez 2020 full; Fahrenfort 2017 and Salti 2015 abstracts; library now 245 entries). The design draft is in `experiments/cross_paradigm/DESIGN.md`.
   - **Open question to the coordinator:** ds001810's T2-identification label is weak (held-out decoder 0.529) and comes from a closed failure line.
+
+### Round 18 items 3 and 4 (2026-11-25, about 17:20Z)
+- **Item 3 dropped.** The coordinator ruled ds001810 unusable as a target: its ceiling is about 0.53, and it comes from a closed failure line.
+  - A one-hour search for an open blink dataset found none that meets all criteria: single-trial EEG/MEG, per-trial T2 visibility, N ≥ 15. The closest was Eiserbeck 2022 (OSF e85hn), which shares only window-mean exports.
+  - Details: `experiments/cross_paradigm/DESIGN.md` §8.
+- **Item 4 sealed** at 17:19:35Z (commit 985e6d8): `docs/prereg/2026-11-25_cohen_noreport_dd.md`, `study4.py`, `fetch_noreport.py`.
+  - **Statistic:** the double difference (no-report face − no-report mask-only) − (report face − report mask-only) at the VAN, scaled so that AWARE = 0 and REPORT = 1.
+  - **Time-locking:** S150/S250 mark mask onset, so mask-only epochs are locked 50 ms earlier.
+  - **Gate:** planted seen shares in held-out halves of the report block only, plus block-offset, τ_int and face-only-shift worlds.
+  - **Review:** one Fable round with 4 blockers, all fixed before the seal.
+  - **Fetch:** launched by the coordinator at 17:12:32Z (9,944 trials, 250.6 MB, about 4.4 h at the observed speed). No no-report value has been looked at.
+  - **Hold:** the Cohen hold until 2026-12-08 applies.
