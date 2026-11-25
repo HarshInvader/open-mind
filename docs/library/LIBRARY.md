@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-239 entries: 50 read in full, 189 from the abstract only. Every DOI was opened and its title and authors checked.
+241 entries: 50 read in full, 191 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -2130,7 +2130,7 @@ Vogel EK, Luck SJ, Shapiro KL (1998). *Journal of Experimental Psychology: Human
 - **For us:** Background for which ERPs should not differ in a T2 identification contrast.
 - **Touches:** hypothesis-generator
 
-## Sleep and dreams (22)
+## Sleep and dreams (24)
 
 ### Cross-Laboratory Validation of EEG Classification of Reported Dream Experience
 
@@ -2247,6 +2247,18 @@ Han J, Xie Q, Huang Y, Li M, Hu X, Northoff G, Li Y, Zhang J, Qin P (2026). *bio
 - **For us:** Arousability is a separate axis from experience. In #42, delta before waking is in the baseline; this paper suggests delta may index how close the sleeper is to waking, a covariate worth reporting.
 - **Touches:** #42, Study 2
 
+### Local sleep in wake is widespread across the rat cortex and tracks sleep need
+
+Findlay G, Cavelli ML, Bugnon T, Marshall W, Tononi G, Cirelli C (2026). *bioRxiv*. [doi:10.64898/2026.11.22.768422](https://doi.org/10.64898/2026.11.22.768422). Preprint, abstract only, **useful**.
+
+- **Question:** Do OFF periods ('local sleep') occur during extended wake in every cortical area, and do they track sleep need?
+- **Idea tested:** Detect spatially restricted OFF periods with a new method across many cortical areas during sleep deprivation.
+- **Data and method:** High-density Neuropixels recordings from 11 cortical areas and the claustrum in 15 rats, through sleep deprivation and recovery sleep.
+- **Results:** OFF periods appeared during extended wake in every region tested; no area was spared. Across sleep deprivation they became more frequent, longer, larger and quieter, and their overlap across areas grew. Per event, their features correlated with delta power in wake and NREM. The rate of medium and large OFF periods during deprivation correlated negatively with the rebound in recovery sleep. (abstract only)
+- **Limits:** Abstract only (bioRxiv returned 429). Rats; no report of experience. Not peer reviewed.
+- **For us:** Bears on the closed T1 route (OFF-period recency before N2 awakenings, t1_dream). If OFF periods are local and irregular, our scalp detector may miss many of them, which is one honest reason the strong form failed. Note it in the atlas entry's scope; it is not a reason to reopen without intracranial data.
+- **Touches:** t1_dream
+
 ### Multisensory integration in peripersonal space indexes consciousness states in sleep and disorders of consciousness
 
 Bertoni T, Ricci G, Jöhr J, Donno B, Cataldi J, et al. (2026). *Cell Reports Medicine 7:102705*. [doi:10.1016/j.xcrm.2026.102705](https://doi.org/10.1016/j.xcrm.2026.102705). Paper, full text, **useful**.
@@ -2339,6 +2351,18 @@ Vashin V, Magana-Tellez O, Ahrens E, Mosher JC, Lacuey N, Tallavajhula S, Schies
 - **Results:** SWA slope was negative in all subjects; about 7-day and 28-day rhythms appeared in most. (abstract only)
 - **Limits:** Small; device-specific.
 - **For us:** Context.
+
+### Transcranial temporal interference stimulation increases slow waves during human NREM sleep
+
+Haber I, Schaeffer EL, Bruno S, Fan Z, Mat B, Albantakis L, Jones SG, Boly M, Cirelli C, Tononi G (2026). *bioRxiv*. [doi:10.64898/2026.11.21.768349](https://doi.org/10.64898/2026.11.21.768349). Preprint, abstract only, **context**.
+
+- **Question:** Does 1 Hz temporal interference stimulation change discrete slow waves in NREM sleep, and does the field each brain receives predict the response?
+- **Idea tested:** tTIS aimed at the left insula / ventromedial prefrontal cortex, against a carrier-only control.
+- **Data and method:** 32 participants with 1 Hz tTIS and 11 carrier-only controls, 3-min episodes in NREM sleep; high-density EEG, source reconstruction and individual field models.
+- **Results:** Slow-wave density rose about 20% during and 30% after stimulation, across shallow and deep waves, with little change in shape. No density change was detected in the control. Each wave involved more cortex in both arms; wave origins did not change. Participants with a stronger modelled field moved further toward N3. (abstract only)
+- **Limits:** Abstract only (bioRxiv returned 429). Unequal arms (32 vs 11). No awakenings or dream reports, so nothing about experience yet.
+- **For us:** A causal handle on slow waves that could, in a future study by others, test whether more posterior slow waves cut dream reports. We cannot run that; it is context for the sleep line (t1_dream, the GNWT frontal-dream prereg).
+- **Touches:** t1_dream
 
 ### Using real-time reporting to investigate visual experiences in dreams
 

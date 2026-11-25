@@ -6073,6 +6073,60 @@
    "added": "2026-11-25",
    "verified": true,
    "in_news": false
+  },
+  {
+   "id": "findlay-2026-local-sleep-rat-cortex",
+   "title": "Local sleep in wake is widespread across the rat cortex and tracks sleep need",
+   "authors": "Findlay G, Cavelli ML, Bugnon T, Marshall W, Tononi G, Cirelli C",
+   "year": 2026,
+   "venue": "bioRxiv",
+   "doi": "10.64898/2026.11.22.768422",
+   "url": "https://doi.org/10.64898/2026.11.22.768422",
+   "kind": "Preprint",
+   "topic": "Sleep and dreams",
+   "read_depth": "abstract",
+   "date": "2026-11-24",
+   "question": "Do OFF periods ('local sleep') occur during extended wake in every cortical area, and do they track sleep need?",
+   "tried": "Detect spatially restricted OFF periods with a new method across many cortical areas during sleep deprivation.",
+   "method_data": "High-density Neuropixels recordings from 11 cortical areas and the claustrum in 15 rats, through sleep deprivation and recovery sleep.",
+   "key_results": "OFF periods appeared during extended wake in every region tested; no area was spared. Across sleep deprivation they became more frequent, longer, larger and quieter, and their overlap across areas grew. Per event, their features correlated with delta power in wake and NREM. The rate of medium and large OFF periods during deprivation correlated negatively with the rebound in recovery sleep. (abstract only)",
+   "limits": "Abstract only (bioRxiv returned 429). Rats; no report of experience. Not peer reviewed.",
+   "ideas_for_us": "Bears on the closed T1 route (OFF-period recency before N2 awakenings, t1_dream). If OFF periods are local and irregular, our scalp detector may miss many of them, which is one honest reason the strong form failed. Note it in the atlas entry's scope; it is not a reason to reopen without intracranial data.",
+   "touches": [
+    "t1_dream"
+   ],
+   "relevance": "useful",
+   "source_opened": "abstract (Europe PMC)",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true
+  },
+  {
+   "id": "haber-2026-ttis-slow-waves-nrem",
+   "title": "Transcranial temporal interference stimulation increases slow waves during human NREM sleep",
+   "authors": "Haber I, Schaeffer EL, Bruno S, Fan Z, Mat B, Albantakis L, Jones SG, Boly M, Cirelli C, Tononi G",
+   "year": 2026,
+   "venue": "bioRxiv",
+   "doi": "10.64898/2026.11.21.768349",
+   "url": "https://doi.org/10.64898/2026.11.21.768349",
+   "kind": "Preprint",
+   "topic": "Sleep and dreams",
+   "read_depth": "abstract",
+   "date": "2026-11-23",
+   "question": "Does 1 Hz temporal interference stimulation change discrete slow waves in NREM sleep, and does the field each brain receives predict the response?",
+   "tried": "tTIS aimed at the left insula / ventromedial prefrontal cortex, against a carrier-only control.",
+   "method_data": "32 participants with 1 Hz tTIS and 11 carrier-only controls, 3-min episodes in NREM sleep; high-density EEG, source reconstruction and individual field models.",
+   "key_results": "Slow-wave density rose about 20% during and 30% after stimulation, across shallow and deep waves, with little change in shape. No density change was detected in the control. Each wave involved more cortex in both arms; wave origins did not change. Participants with a stronger modelled field moved further toward N3. (abstract only)",
+   "limits": "Abstract only (bioRxiv returned 429). Unequal arms (32 vs 11). No awakenings or dream reports, so nothing about experience yet.",
+   "ideas_for_us": "A causal handle on slow waves that could, in a future study by others, test whether more posterior slow waves cut dream reports. We cannot run that; it is context for the sleep line (t1_dream, the GNWT frontal-dream prereg).",
+   "touches": [
+    "t1_dream"
+   ],
+   "relevance": "context",
+   "source_opened": "abstract (Europe PMC)",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true
   }
  ]
 }
