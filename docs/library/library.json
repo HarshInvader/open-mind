@@ -5520,6 +5520,31 @@
    "key_results": "PAS ratings rose with practice, even on catch trials, without matching changes in priming; ratings also altered priming dynamics.",
    "ideas_for_us": "For item 3: practice raises reported visibility in general, so prior-showing effects must be item-specific and control trial rank.",
    "relevance": "useful"
+  },
+  {
+   "kind": "Paper",
+   "read_depth": "full",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "bifurcation_specificity"
+   ],
+   "topic": "Theories tested",
+   "id": "sergent-2021-bifurcation",
+   "title": "Bifurcation in brain dynamics reveals a signature of conscious processing independent of report",
+   "authors": "Sergent C, Corazzol M, Labouret G, Stockart F, Wexler M, King JR, Meyniel F, Pressnitzer D",
+   "year": 2021,
+   "venue": "Nature Communications",
+   "doi": "10.1038/s41467-021-21393-z",
+   "url": "https://doi.org/10.1038/s41467-021-21393-z",
+   "question": "Does single-trial EEG at threshold show a bifurcation into two states (conscious access), and does this hold without report?",
+   "tried": "Auditory vowel detection in noise at 6 SNRs, active (report) and passive (mind-wandering probes) sessions; MVPA projections modelled trial by trial.",
+   "method_data": "20 subjects, EEG. Decoder trained on no-sound vs max SNR, generalised to intermediate SNRs; per 30 ms window, Model 0 (null), Model 2 (unimodal, logistic mean) and Model 3 (two-state mixture) fitted with 5-fold block CV; random-effects BMS with protected exceedance.",
+   "key_results": "Model 3 protected exceedance above 0.95 from about 250 to 700 ms; the unimodal model had the highest probability from 0 to 250 ms and again from 700 to 900 ms. The bifurcation fit predicted reports (AUC > 0.75) and mind-wandering probe content without report.",
+   "limits": "The model set has no graded rival with a jittered threshold or heavy tails: our simulation found the comparison calls bifurcation on such graded data (74-98% of studies), fixed once those rivals are added. The early-unimodal period coincides with weak decoding.",
+   "ideas_for_us": "Source of our bifurcation audit (NOT SPECIFIC), the extended-model fix (FIX WORKS), the SNR-timing study and the real-data Cohen prereg. Data and code on OSF aw3t5 (Dropbox-linked; 11.4 GB preprocessed active).",
+   "relevance": "core"
   }
  ]
 }

@@ -2,11 +2,11 @@
 
 Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-217 entries: 34 read in full, 183 from the abstract only. Every DOI was opened and its title and authors checked.
+218 entries: 35 read in full, 183 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (69)
+## Theories tested (70)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -97,6 +97,18 @@ Melloni L, Mudrik L, Pitts MA, Bendtz K, Ferrante O, Górska U, Hirschhorn R, Kh
 - **Limits:** Frequent awareness probes make the 'unattended' stimuli partly task-relevant, which blurs the inattention manipulation. Experiment 2 results were not public as of 2026-11-21.
 - **For us:** Basis for our sealed forecasts of experiment 2 (docs/prereg/2026-11-21_cogitate_exp2_forecasts.md, 17 items, scored against each theory as a forecaster).
 - **Touches:** COGITATE forecasts, COGITATE audit
+
+### Bifurcation in brain dynamics reveals a signature of conscious processing independent of report
+
+Sergent C, Corazzol M, Labouret G, Stockart F, Wexler M, King JR, Meyniel F, Pressnitzer D (2021). *Nature Communications*. [doi:10.1038/s41467-021-21393-z](https://doi.org/10.1038/s41467-021-21393-z). Paper, full text, **core**.
+
+- **Question:** Does single-trial EEG at threshold show a bifurcation into two states (conscious access), and does this hold without report?
+- **Idea tested:** Auditory vowel detection in noise at 6 SNRs, active (report) and passive (mind-wandering probes) sessions; MVPA projections modelled trial by trial.
+- **Data and method:** 20 subjects, EEG. Decoder trained on no-sound vs max SNR, generalised to intermediate SNRs; per 30 ms window, Model 0 (null), Model 2 (unimodal, logistic mean) and Model 3 (two-state mixture) fitted with 5-fold block CV; random-effects BMS with protected exceedance.
+- **Results:** Model 3 protected exceedance above 0.95 from about 250 to 700 ms; the unimodal model had the highest probability from 0 to 250 ms and again from 700 to 900 ms. The bifurcation fit predicted reports (AUC > 0.75) and mind-wandering probe content without report.
+- **Limits:** The model set has no graded rival with a jittered threshold or heavy tails: our simulation found the comparison calls bifurcation on such graded data (74-98% of studies), fixed once those rivals are added. The early-unimodal period coincides with weak decoding.
+- **For us:** Source of our bifurcation audit (NOT SPECIFIC), the extended-model fix (FIX WORKS), the SNR-timing study and the real-data Cohen prereg. Data and code on OSF aw3t5 (Dropbox-linked; 11.4 GB preprocessed active).
+- **Touches:** bifurcation_specificity
 
 ### Decoding across sensory modalities reveals common supramodal signatures of conscious perception
 
