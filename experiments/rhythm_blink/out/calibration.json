@@ -1,0 +1,56 @@
+{
+ "null_runs": 200,
+ "null_verdicts": {
+  "NO DIFFERENCE: EQUIVALENT WITHIN +/-0.02": 140,
+  "INCONCLUSIVE": 49,
+  "BLINK TRIALS LESS ALPHA-BAND PHASE-LOCKED AT T2": 7,
+  "BLINK TRIALS MORE ALPHA-BAND PHASE-LOCKED AT T2": 4
+ },
+ "null_mean_sd": 0.007469692653417399,
+ "eq_bound": 0.02,
+ "plant_runs": 25,
+ "planted": {
+  "add_1.0uV_phase0.0pi": {
+   "detect_more": 1.0,
+   "mean_delta": 0.08965763276249611
+  },
+  "add_1.0uV_phase0.5pi": {
+   "detect_more": 1.0,
+   "mean_delta": 0.13786877475659376
+  },
+  "add_1.0uV_phase1.0pi": {
+   "detect_more": 1.0,
+   "mean_delta": 0.08591998024769343
+  },
+  "add_1.0uV_phase1.5pi": {
+   "detect_more": 0.72,
+   "mean_delta": 0.029372802279526815
+  },
+  "add_2.0uV_phase0.0pi": {
+   "detect_more": 1.0,
+   "mean_delta": 0.2438568649843383
+  },
+  "add_2.0uV_phase0.5pi": {
+   "detect_more": 1.0,
+   "mean_delta": 0.2982377649730719
+  },
+  "add_2.0uV_phase1.0pi": {
+   "detect_more": 1.0,
+   "mean_delta": 0.24712910877721378
+  },
+  "add_2.0uV_phase1.5pi": {
+   "detect_more": 1.0,
+   "mean_delta": 0.1795989286033663
+  },
+  "conc_kappa0.05": {
+   "detect_more": 1.0,
+   "mean_delta": 0.036929621025882056
+  },
+  "conc_kappa0.1": {
+   "detect_more": 1.0,
+   "mean_delta": 0.07751023725321483
+  }
+ },
+ "subjects": 42,
+ "blocks": 76
+}

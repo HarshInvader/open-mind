@@ -4939,7 +4939,8 @@
    "limits": "Behavioural paper only; the EEG is unpublished.",
    "ideas_for_us": "Our discovery set for the hypothesis generator: the pre-tDCS blocks give about 45 T2-correct and 55 T2-incorrect lag-3 trials per block, and the T2-correct vs incorrect EEG contrast has never been published on this dataset. Outcome is T2 identification, not seen vs unseen.",
    "touches": [
-    "hypothesis-generator"
+    "hypothesis-generator",
+    "rhythm_blink"
    ],
    "relevance": "core",
    "in_news": false,
@@ -5922,6 +5923,106 @@
    "ideas_for_us": "Shows how widely 'stability' is now used as a marker, which raises the value of a specificity test.",
    "relevance": "context",
    "url": "https://doi.org/10.1371/journal.pbio.3003252"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "rhythm_blink"
+   ],
+   "kind": "Paper",
+   "topic": "Measuring consciousness",
+   "id": "zauner-2012-alpha-entrainment-blink",
+   "title": "Alpha entrainment is responsible for the attentional blink phenomenon",
+   "authors": "Zauner A, Fellinger R, Gross J, Hanslmayr S, Shapiro K, Gruber W, Müller S, Klimesch W",
+   "year": 2012,
+   "venue": "NeuroImage",
+   "doi": "10.1016/j.neuroimage.2012.06.075",
+   "read_depth": "full",
+   "question": "Is entrainment of alpha to the ~10 Hz RSVP stream the cause of the attentional blink?",
+   "tried": "EEG during a 10 Hz RSVP blink task (fixed and jittered SOA); phase-locking index (7-cycle Morlet, 8-12 Hz) within +/-50 ms of T2, AB vs NoAB vs control trials.",
+   "method_data": "Human EEG, 14 analysed subjects, lag about 300 ms.",
+   "key_results": "Alpha phase-locking and evoked alpha larger for AB (T2 missed) than NoAB trials at T2; no whole-power difference; concludes entrainment 'may be considered the critical factor'.",
+   "limits": "14 subjects; ROI electrodes chosen from the data; the control comparison was not count-matched although PLI depends on trial count.",
+   "ideas_for_us": "Claim tested by the rhythm_blink study on ds001810 (42 subjects, count-matched).",
+   "relevance": "core",
+   "url": "https://doi.org/10.1016/j.neuroimage.2012.06.075"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "rhythm_blink"
+   ],
+   "kind": "Paper",
+   "topic": "Measuring consciousness",
+   "id": "kranczioch-2017-entrainment-individual-differences",
+   "title": "Individual differences in dual-target RSVP task performance relate to entrainment but not to individual alpha frequency",
+   "authors": "Kranczioch C",
+   "year": 2017,
+   "venue": "PLOS ONE",
+   "doi": "10.1371/journal.pone.0178934",
+   "read_depth": "full",
+   "question": "Do people whose visual cortex entrains more to the RSVP stream show a larger blink?",
+   "tried": "Between-subject correlations of inter-trial coherence and power with dual-target performance; individual alpha frequency vs stream rate.",
+   "method_data": "Human EEG, 51 participants.",
+   "key_results": "Contrary to prediction, ITC correlated positively with performance (for targets not preceded by targets); no mediation by individual alpha frequency.",
+   "limits": "Between-subject only; no trial-level blink vs no-blink comparison.",
+   "ideas_for_us": "Opposite-signed evidence to Zauner; its between-subject design is our pre-declared secondary.",
+   "relevance": "useful",
+   "url": "https://doi.org/10.1371/journal.pone.0178934"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "rhythm_blink"
+   ],
+   "kind": "Paper",
+   "topic": "Measuring consciousness",
+   "id": "janson-2014-rsvp-alpha-blink",
+   "title": "Endogenous and rapid serial visual presentation-induced alpha band oscillations in the attentional blink",
+   "authors": "Janson J, De Vos M, Thorne JD, Kranczioch C",
+   "year": 2014,
+   "venue": "Journal of Cognitive Neuroscience",
+   "doi": "10.1162/jocn_a_00551",
+   "read_depth": "abstract",
+   "question": "Are alpha effects in the blink endogenous alpha or the stream's steady-state response?",
+   "tried": "Blink paradigms with and without 12 Hz pre-target distracter streams; alpha power and intertrial coherence.",
+   "method_data": "Human EEG.",
+   "key_results": "Streams raise coherence and lower power; ssVEP-related power tended to be higher when both targets were detected, endogenous alpha lower.",
+   "limits": "Abstract only; trends.",
+   "ideas_for_us": "Separates steady-state from endogenous alpha; an opposite-direction trend to Zauner.",
+   "relevance": "context",
+   "url": "https://doi.org/10.1162/jocn_a_00551"
+  },
+  {
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "touches": [
+    "rhythm_blink"
+   ],
+   "kind": "Paper",
+   "topic": "Measuring consciousness",
+   "id": "petro-keil-2015-pretarget-blink",
+   "title": "Pre-target oscillatory brain activity and the attentional blink",
+   "authors": "Petro NM, Keil A",
+   "year": 2015,
+   "venue": "Experimental Brain Research",
+   "doi": "10.1007/s00221-015-4418-2",
+   "read_depth": "abstract",
+   "question": "Do pre-target alpha and ssVEP phase locking differ between correctly and incorrectly reported T2?",
+   "tried": "Pre-T1 alpha power and ssVEP inter-trial phase locking, correct vs incorrect trials, word RSVP.",
+   "method_data": "Human EEG.",
+   "key_results": "Incorrect trials: lower alpha power and greater ssVEP phase locking long before T1.",
+   "limits": "Abstract only; pre-T1 window, which our T2-locked epochs do not cover.",
+   "ideas_for_us": "Same direction as Zauner but before T1; our test is at T2.",
+   "relevance": "context",
+   "url": "https://doi.org/10.1007/s00221-015-4418-2"
   }
  ]
 }

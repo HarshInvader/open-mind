@@ -705,3 +705,39 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - The reviewer's checks were label-free: plant() plus a replica on 6 subjects with pseudo-labels; real labels were used only for the seen count.
   - Draft files kept unsealed in `experiments/stability_specificity/` and `docs/prereg/2026-11-25_stability_specificity.md`, each marked DROPPED.
 - **Round 16 used up** (item 6 weak, item 7 housekeeping). Per the coordinator, Fable round 17 is being drafted: 5–10 zero-download studies, prior art read, highest ceiling first, and each must show both verdicts are informative.
+- **Coordinator ruling (2026-11-25):**
+  - **The hold covers all public use of results built on the Cohen data (OSF 6d5av, no licence stated), whatever claim they test.** It lasts until Cohen replies on reuse terms or until 2026-12-08. Repo commits continue as usual.
+  - **Round 17 ranking:** where studies are close in value, prefer clearly licensed open data or simulation.
+
+### Fable round 17: new zero-download list; study 1 (rhythm-locking vs blink, ds001810 CC0) in pre-seal review (2026-11-25)
+- **Ranked list** (prior-art texts in `datasets/local/r17_priorart/`):
+  1. **Rhythm-locking vs blink.** Zauner 2012: alpha entrainment at T2 is larger for blink trials, the "critical factor". Data: ds001810, CC0. Planner's power sim: 0.83 at ΔITC 0.05.
+  2. **Timing jitter vs the bifurcation tests** (simulation).
+  3. **Why the 5-model gate lost specificity at 38 subjects** (simulation). Read Rigoux 2014 first.
+  4. **T1-P3 vs T2 miss** (ds001810). High INVALID risk: the planner found no clear T1-P3 label-free.
+  5. **Between-subject locking vs blink rate.** Weak, so it runs only as a secondary of #1.
+- **Dropped by the planner:**
+  - Fixed-point test (not identifiable);
+  - Cohen N2 unmasking (unidentifiable, and tests Cohen);
+  - VAN vs N170 topography (mask confound);
+  - selection-bound ratio (underpowered);
+  - RT conditional independence (both accounts predict the same);
+  - DREAM features (closed);
+  - COGITATE audit (blocked).
+- **Planner's throwaway simulation for #2** (record kept for the #2 prereg). The repo's audit/extended code, true two-state generator with jittered onset, 16 studies per cell; "called" means pxp > 0.95:
+
+  | Latency SD | Window | 3-model called | 5-model called |
+  |---|---|---|---|
+  | 60 ms | +50 | 1.00 | 0.31 |
+  | 100 ms | +100 | 1.00 | 0.94 |
+  | 100 ms | +50 | 1.00 | 0.56 |
+  | 60 ms | 0 | 0.56 | 0.00 |
+
+  The 5-model fix loses decisiveness near onset but still ranks two-state first in 12–13 of 16 studies.
+- **Study 1 design:** `experiments/rhythm_blink/`, prereg `docs/prereg/2026-11-25_rhythm_blink.md`.
+  - **Measure:** count-matched 10.9 Hz ITC (3-cycle Morlet) at T2 ±50 ms over a posterior ROI, blink minus no-blink, 42 subjects. Preprocessing is the sealed hypothesis-generator code.
+  - **Gate:** label-free ITC must exceed chance.
+  - **Verdicts:** MORE / LESS / EQUIVALENT within ±0.02 / INCONCLUSIVE.
+  - **Shuffled-label calibration:** directional false positives 3%, equivalence 72%. Planted 1 µV gives Δ 0.026 (detected in 54%); 2 µV is detected in 100%.
+  - **Bound:** tightened from ±0.05 to ±0.02 before sealing, from the shuffled-label SD of 0.007.
+- **Library:** Zauner 2012, Kranczioch 2017, Janson 2014, Petro & Keil 2015.

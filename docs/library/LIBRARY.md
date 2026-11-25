@@ -2,7 +2,7 @@
 
 Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-233 entries: 47 read in full, 186 from the abstract only. Every DOI was opened and its title and authors checked.
+237 entries: 49 read in full, 188 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
@@ -817,7 +817,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (106)
+## Measuring consciousness (110)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -933,7 +933,7 @@ Reteig LC, Newman LA, Ridderinkhof KR, Slagter HA (2022). *PLOS ONE*. [doi:10.13
 - **Results:** No tDCS effect on the blink. The authors did not analyse the EEG 'given the absence of a behavioral effect'. Lags 3 and 8 were chosen to give about equal numbers of seen and missed T2 for EEG.
 - **Limits:** Behavioural paper only; the EEG is unpublished.
 - **For us:** Our discovery set for the hypothesis generator: the pre-tDCS blocks give about 45 T2-correct and 55 T2-incorrect lag-3 trials per block, and the T2-correct vs incorrect EEG contrast has never been published on this dataset. Outcome is T2 identification, not seen vs unseen.
-- **Touches:** hypothesis-generator
+- **Touches:** hypothesis-generator, rhythm_blink
 
 ### Neural complexity is a common denominator of human consciousness across diverse regimes of cortical dynamics
 
@@ -1030,6 +1030,18 @@ Sitt JD, King JR, El Karoui I, Rohaut B, Faugeras F, Gramfort A, Cohen L, Sigman
 - **Limits:** Single centre at the time; spectral and complexity features were not nested.
 - **For us:** The source of wSMI and the 'many markers' design that #42 inherits; our nesting rule asks what each adds beyond spectrum.
 - **Touches:** #42, Study 2
+
+### Alpha entrainment is responsible for the attentional blink phenomenon
+
+Zauner A, Fellinger R, Gross J, Hanslmayr S, Shapiro K, Gruber W, Müller S, Klimesch W (2012). *NeuroImage*. [doi:10.1016/j.neuroimage.2012.06.075](https://doi.org/10.1016/j.neuroimage.2012.06.075). Paper, full text, **core**.
+
+- **Question:** Is entrainment of alpha to the ~10 Hz RSVP stream the cause of the attentional blink?
+- **Idea tested:** EEG during a 10 Hz RSVP blink task (fixed and jittered SOA); phase-locking index (7-cycle Morlet, 8-12 Hz) within +/-50 ms of T2, AB vs NoAB vs control trials.
+- **Data and method:** Human EEG, 14 analysed subjects, lag about 300 ms.
+- **Results:** Alpha phase-locking and evoked alpha larger for AB (T2 missed) than NoAB trials at T2; no whole-power difference; concludes entrainment 'may be considered the critical factor'.
+- **Limits:** 14 subjects; ROI electrodes chosen from the data; the control comparison was not count-matched although PLI depends on trial count.
+- **For us:** Claim tested by the rhythm_blink study on ds001810 (42 subjects, count-matched).
+- **Touches:** rhythm_blink
 
 ### A Spatiotemporal Filtering Methodology for Single-Trial ERP Component Estimation
 
@@ -1433,6 +1445,18 @@ Engemann DA, Raimondo F, King JR, Rohaut B, Louppe G, Faugeras F, Annen J, Casso
 - **Limits:** Spectral markers carried much of the performance.
 - **For us:** A benchmark for what held-out DoC classification achieves; the bar Study 2's DoC arm would need to meet.
 - **Touches:** Study 2, #14
+
+### Individual differences in dual-target RSVP task performance relate to entrainment but not to individual alpha frequency
+
+Kranczioch C (2017). *PLOS ONE*. [doi:10.1371/journal.pone.0178934](https://doi.org/10.1371/journal.pone.0178934). Paper, full text, **useful**.
+
+- **Question:** Do people whose visual cortex entrains more to the RSVP stream show a larger blink?
+- **Idea tested:** Between-subject correlations of inter-trial coherence and power with dual-target performance; individual alpha frequency vs stream rate.
+- **Data and method:** Human EEG, 51 participants.
+- **Results:** Contrary to prediction, ITC correlated positively with performance (for targets not preceded by targets); no mediation by individual alpha frequency.
+- **Limits:** Between-subject only; no trial-level blink vs no-blink comparison.
+- **For us:** Opposite-signed evidence to Zauner; its between-subject design is our pre-declared secondary.
+- **Touches:** rhythm_blink
 
 ### Initial-state-dependent, robust, transient neural dynamics encode conscious visual perception
 
@@ -1989,6 +2013,30 @@ Rutiku R, Aru J, Bachmann T (2016). *Frontiers in Human Neuroscience*. [doi:10.3
 - **Limits:** Raises the stability-comparison worry but does not test whether stability differences reduce to amplitude or SNR.
 - **For us:** Prior statement of the concern our injection test settles.
 - **Touches:** stability_specificity
+
+### Pre-target oscillatory brain activity and the attentional blink
+
+Petro NM, Keil A (2015). *Experimental Brain Research*. [doi:10.1007/s00221-015-4418-2](https://doi.org/10.1007/s00221-015-4418-2). Paper, abstract only, **context**.
+
+- **Question:** Do pre-target alpha and ssVEP phase locking differ between correctly and incorrectly reported T2?
+- **Idea tested:** Pre-T1 alpha power and ssVEP inter-trial phase locking, correct vs incorrect trials, word RSVP.
+- **Data and method:** Human EEG.
+- **Results:** Incorrect trials: lower alpha power and greater ssVEP phase locking long before T1.
+- **Limits:** Abstract only; pre-T1 window, which our T2-locked epochs do not cover.
+- **For us:** Same direction as Zauner but before T1; our test is at T2.
+- **Touches:** rhythm_blink
+
+### Endogenous and rapid serial visual presentation-induced alpha band oscillations in the attentional blink
+
+Janson J, De Vos M, Thorne JD, Kranczioch C (2014). *Journal of Cognitive Neuroscience*. [doi:10.1162/jocn_a_00551](https://doi.org/10.1162/jocn_a_00551). Paper, abstract only, **context**.
+
+- **Question:** Are alpha effects in the blink endogenous alpha or the stream's steady-state response?
+- **Idea tested:** Blink paradigms with and without 12 Hz pre-target distracter streams; alpha power and intertrial coherence.
+- **Data and method:** Human EEG.
+- **Results:** Streams raise coherence and lower power; ssVEP-related power tended to be higher when both targets were detected, endogenous alpha lower.
+- **Limits:** Abstract only; trends.
+- **For us:** Separates steady-state from endogenous alpha; an opposite-direction trend to Zauner.
+- **Touches:** rhythm_blink
 
 ### Subjective visibility depends on level of processing
 
