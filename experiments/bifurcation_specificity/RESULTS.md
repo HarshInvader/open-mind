@@ -126,7 +126,25 @@ Counts are per 100 studies. No study was non-finite.
 - **Separation-scaled weakness only.** Two states that are close together. A weak signal from rare but well-separated high-state trials would look more mixture-like.
 - **AUC definition.** Ours is computed on window values. Theirs is per time sample after a 10 Hz low-pass, so the two are comparable but not identical.
 - **One design.** 20 subjects and 150 trials per level, as in their study.
-- **Pending.** The 5-model secondary (with J and T) is still running and will be added.
+- **5-model secondary (descriptive, B_bifurcation only, separate seeds; `out_snr/m5_*.json`).** In the same studies, the 3-model and 5-model comparisons give these top-model counts out of 100. The last column is the share where Model 3 is called (pxp > 0.95) in the 5-model comparison.
+
+| Max-level AUC | 3-model: 2B / M3 top | 5-model: 2B / M3 / J / T top | 5-model: M3 called |
+|---|---|---|---|
+| 0.57 | 83 / 17 | 7 / 3 / 69 / 21 | 0 |
+| 0.64 | 90 / 10 | 21 / 3 / 50 / 26 | 0 |
+| 0.70 | 66 / 34 | 14 / 8 / 59 / 19 | 0 |
+| 0.76 | 40 / 60 | 14 / 19 / 60 / 7 | 0 |
+| 0.85 | 2 / 98 | 1 / 79 / 20 / 0 | **1** |
+| 0.91 | 0 / 100 | 0 / 100 / 0 / 0 | **93** |
+
+  - **Adding the fair graded rivals does not remove the blind zone. It moves it.** In weak two-state data the jittered-threshold model J now takes most wins (50–69%), replacing 2B.
+  - **The cost of specificity is sensitivity.**
+    - At AUC 0.85, Model 3 is top in 79/100 but called in only 1/100.
+    - A confident two-state call with the extended set needs about AUC 0.9 at 20 subjects.
+    - Without J and T, Model 3 is called in 96% at AUC 0.85.
+  - **What a weak-signal result means under each model set:**
+    - A J win in a weak window is as uninformative as a 2B win.
+    - A Model 3 call, when it comes, is specific (Follow-up 1).
 
 ---
 
