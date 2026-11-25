@@ -2,11 +2,11 @@
 
 Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-218 entries: 35 read in full, 183 from the abstract only. Every DOI was opened and its title and authors checked.
+223 entries: 39 read in full, 184 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (70)
+## Theories tested (72)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -17,6 +17,18 @@ Bryant AG, Whyte CJ (2026). *Neuroscience of Consciousness 2026(1), niag029*. [d
 - **Results:** Rather than pick one connectivity measure, the authors tried 246 of them on the same public recordings, found the family that best tells pictures apart, and then built small brain models of each theory to see which reproduced it. Both models fit; the authors lean slightly towards the workspace theory.
 - **For us:** A second independent reanalysis of the same data, from a different angle. Its 246-measure sweep is a template for our pre-registered multiverse; we would hash the measure list first.
 - **Touches:** news
+
+### A late meta-stable code of conscious access in the absence of report
+
+Hutchinson BT, Dehaene S, Slagter HA, Pitts MA (2026). *bioRxiv*. [doi:10.64898/2026.01.30.702733](https://doi.org/10.64898/2026.01.30.702733). Preprint, full text, **core**.
+
+- **Question:** Without report (and without a P3b), is there still a late, sustained neural code for seen stimuli?
+- **Idea tested:** Reanalysis of four no-report EEG datasets with temporal-generalisation (TG) decoding of seen vs unseen.
+- **Data and method:** Four EEG datasets; per-timepoint decoders, TG matrices, cluster statistics; 0.1 Hz online high-pass in three datasets, baseline -100 to 0 ms, 250 Hz.
+- **Results:** Seen stimuli gave a TG 'square' at about 200-400 ms without report or P3b; read as a single code sustained over time (GNW ignition). For faces, a decoder trained at 200 ms generalised from about 180 to 400 ms.
+- **Limits:** Latency jitter is raised and rejected in words, not by simulation. Square vs diagonal is judged by eye; the authors call for a quantitative metric. The pipeline's high-pass and baseline are known to create cross-time generalisation (van Driel 2021).
+- **For us:** Source of round 16 item 2: does jitter across non-stable transient codes reproduce their square under their pipeline?
+- **Touches:** tg_square_specificity
 
 ### Integrated information and predictive processing theories of consciousness: an adversarial collaborative review (INTREPID)
 
@@ -145,6 +157,18 @@ Jachs B, Blanco MJ, Grantham-Hill S, Soto D (2015). *J Exp Psychol Hum Percept P
 - **Limits:** Small samples; binary awareness; no stimulus manipulation; abstract only read here (paywalled).
 - **For us:** The single-study version of our planned metacognition test, so its data cannot be reused as new evidence. Our test needs a simulated signal-detection null because rating-defined 'unseen' trials are biased.
 - **Touches:** Metacognition and awareness, Can AI be conscious?
+
+### Characterizing the dynamics of mental representations: the temporal generalization method
+
+King JR, Dehaene S (2014). *Trends in Cognitive Sciences*. [doi:10.1016/j.tics.2014.01.002](https://doi.org/10.1016/j.tics.2014.01.002). Review, full text, **core**.
+
+- **Question:** How can decoding across train and test times reveal the dynamics of a mental representation?
+- **Idea tested:** Simulations of different neural dynamics and the TG matrices they produce.
+- **Data and method:** Taxonomy of TG patterns (diagonal, square, chains, reactivation) from simulated sources.
+- **Results:** Sustained codes give a square; a chain of transient codes gives a diagonal. Onset jitter smooths the matrix horizontally and vertically.
+- **Limits:** Asks, but leaves open, which factors make operations appear diagonal or square.
+- **For us:** Baseline taxonomy for the TG-square specificity simulation.
+- **Touches:** tg_square_specificity
 
 ### Have grand theories of consciousness earned their keep?
 
@@ -793,7 +817,7 @@ Botvinick et al. (1998). *Nature 391:756-756*. [doi:10.1038/35784](https://doi.o
 - **For us:** Evidence grade B in the constraint ledger; every theory on the scorecard is checked against it.
 - **Touches:** constraint_ledger, C53
 
-## Measuring consciousness (93)
+## Measuring consciousness (96)
 
 ### Bifurcation dynamics in a shared network beyond sensory areas characterize conscious auditory perception independently of report
 
@@ -946,6 +970,18 @@ Lendner JD et al. (2020). *eLife*. [doi:10.7554/eLife.55092](https://doi.org/10.
 - **Limits:** Separate classifier per contrast; no shared threshold or transfer.
 - **For us:** Our REM-placement test uses frozen cutoffs, which Lendner did not.
 - **Touches:** Task #5 transfer
+
+### Temporally unconstrained decoding reveals consistent but time-varying stages of stimulus processing
+
+Vidaurre D, Myers NE, Stokes M, Nobre AC, Woolrich MW (2019). *Cerebral Cortex*. [doi:10.1093/cercor/bhy290](https://doi.org/10.1093/cercor/bhy290). Paper, full text, **core**.
+
+- **Question:** Does standard TG decoding mistake growing trial-to-trial timing variability for persistent coding?
+- **Idea tested:** Simulated a chain of five states with equal durations and increasing onset variability; proposed an HMM-based temporally unconstrained decoder.
+- **Data and method:** Simulation plus MEG data; standard TG vs a decoder that lets stage timing vary per trial.
+- **Results:** Standard TG suggests an artificial increase in persistence as the trial goes on: apparently stable patterns can come from increasing onset variability of the same code.
+- **Limits:** Generic simulation, not EEG-scale and not matched to any consciousness study's pipeline.
+- **For us:** Closest prior art for TG-square specificity; our gap is a pipeline-matched test of Hutchinson 2026's footprint.
+- **Touches:** tg_square_specificity
 
 ### Visibility Is Not Equivalent to Confidence in a Low Contrast Orientation Discrimination Task
 
@@ -1194,6 +1230,18 @@ Doll L, Dykstra AR, Gutschalk A (2024). *iScience*. [doi:10.1016/j.isci.2024.110
 - **For us:** Graded counterpart to Sergent 2021 in the same modality; motivates graded generators in our bifurcation audit.
 - **Touches:** bifurcation-audit
 
+### Testing the generalization of neural representations
+
+Sandhaeger F, Siegel M (2023). *NeuroImage*. [doi:10.1016/j.neuroimage.2023.120258](https://doi.org/10.1016/j.neuroimage.2023.120258). Paper, full text, **useful**.
+
+- **Question:** Can significant cross-condition or cross-time generalisation arise when the underlying codes are orthogonal?
+- **Idea tested:** Simulations of signal mixing in EEG/MEG-like data; a test comparing observed generalisation with what identical codes would give.
+- **Data and method:** Simulation and analytic arguments; proposed identity-expected generalisation benchmark.
+- **Results:** Signal mixing and dependencies can drive significant generalisation between orthogonal representations; spurious generalisation is markedly lower than expected under identical codes. High-pass filtering can give below-chance TG.
+- **Limits:** Does not model latency jitter.
+- **For us:** Their observed-vs-identity-expected ratio is a candidate pre-set square metric.
+- **Touches:** tg_square_specificity
+
 ### Low frequency oscillations drive EEG's complexity changes during wakefulness and sleep
 
 González J, Mateos D, Cavelli M, Mondino A, Pascovich C, Torterolo P, Rubido N (2022). *Neuroscience*. [doi:10.1016/j.neuroscience.2022.04.025](https://doi.org/10.1016/j.neuroscience.2022.04.025). Article, abstract only, **useful**.
@@ -1229,6 +1277,18 @@ Pereira M, Megevand P, Tan MX, et al., Faivre N (2021). *Nature Communications 1
 - **Limits:** Tactile, near-threshold detection; one intracranial participant.
 - **For us:** Covers the seen-vs-unseen response-locked P3b/CPP question at a fixed stimulus, so our item 3 (P3b response-locking on Cohen data) was skipped as established.
 - **Touches:** cohen-fixed-soa
+
+### High-pass filtering artifacts in multivariate classification of neural time series data
+
+van Driel J, Olivers CNL, Fahrenfort JJ (2021). *Journal of Neuroscience Methods*. [doi:10.1016/j.jneumeth.2021.109080](https://doi.org/10.1016/j.jneumeth.2021.109080). Paper, abstract only, **useful**.
+
+- **Question:** Do high-pass filtering and baseline correction distort decoding time courses?
+- **Idea tested:** Simulations and EEG data with varied high-pass cut-offs and baselines.
+- **Data and method:** Decoding and TG under filtering settings.
+- **Results:** High-pass filtering and baseline correction displace multivariate patterns into activity-silent periods, most visibly in TG, even at 0.05 Hz.
+- **Limits:** Read at abstract level only (bioRxiv rate limit).
+- **For us:** Secondary arm of TG-square study: filter/baseline ablation.
+- **Touches:** tg_square_specificity
 
 ### Modelling visibility judgments using models of decision confidence
 
