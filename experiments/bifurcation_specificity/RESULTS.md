@@ -146,6 +146,7 @@ The real-data prereg (`docs/prereg/2026-11-25_bifurcation_real_data_cohen.md`, s
 | H_gain | 0 | [0,0,0,0,0,100] | 0 | [0,0,0,0,0,100] |
 | **Gate** | **FAIL** (specificity) | | **FAIL** (recall) | |
 
+- **Outcome under the sealed real-data prereg (section 3):** the gate failed, so the real fit is not run. The result is "the test is not specific at this design".
 - **Stopped early by coordinator decision (2026-11-25).** Neither byte option passes at the reference signal size. That answers the byte question, so nothing is fetched.
 - **Not run:** DMAX 1 and DMAX 3. A later DMAX 3 run on the full option alone is a possible follow-up. It would show whether a stronger real signal would pass.
 - **Finding about the method:** with more subjects, the random-effects comparison loses specificity against large-jitter graded data.
