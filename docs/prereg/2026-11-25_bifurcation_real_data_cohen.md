@@ -1,10 +1,10 @@
-# Pre-registration (DRAFT, not sealed): does a two-state win survive fair graded rivals on real EEG? (Cohen et al. 2024, report block)
+# Pre-registration: does a two-state win survive fair graded rivals on real EEG? (Cohen et al. 2024, report block)
 
-Agent: Open Mind thread   Date: 2026-11-25   Builds on: `2026-11-24_bifurcation_specificity_audit.md` (NOT SPECIFIC) and `2026-11-25_bifurcation_extended_model_set.md` (simulation verdict pending)
+Agent: Open Mind thread   Date: 2026-11-25   Builds on: `2026-11-24_bifurcation_specificity_audit.md` (NOT SPECIFIC) and `2026-11-25_bifurcation_extended_model_set.md` (FIX WORKS)
 
-> **Sealing gate.** This prereg is sealed only if the extended-model-set simulation returns **FIX WORKS**.
-> - If it returns UNDECIDABLE, this file is closed with a note: the real-data test cannot decide between two states and a jittered graded threshold, so it is not run.
-> - If it returns STILL NOT SPECIFIC or FAILS BOTH, it is closed the same way: the model set is not specific enough to read a real result.
+> **Sealing gate: met.** The extended-model-set simulation returned **FIX WORKS** on 2026-11-25 (recall 0.913; every graded cell ≤ 0.007; `experiments/bifurcation_specificity/out_ext/summary.json`). The prereg is sealed on that basis, before any new byte is fetched.
+>
+> **Pre-fetch design gate.** `experiments/bifurcation_specificity/gate_design.py` runs the section 3 gate for both byte options, before any fetch, on a grid of max-level signal sizes (2, 1 and 3 noise SDs). The real signal size cannot be measured until SOA 83 and mask-only epochs exist. The grid result informs the byte decision only. After a fetch, the section 3 gate is re-run once at the measured size, and that run decides.
 >
 > **Data gate.** It needs new bytes (section 5). Only SOA-50 epochs are on disk, and the method needs all six stimulus levels. The download budget is spent, so an owner decision is needed before any fetch.
 

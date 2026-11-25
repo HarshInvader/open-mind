@@ -630,3 +630,9 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - **Design:** the Cohen report-block levels map one-to-one onto Sergent's six (mask only + SOA 17/33/50/67/83). The decoder follows their code (mask only vs SOA 83, 10-fold, decision values). The primary window is 300–500 ms. A simulation gate at the real design runs before the real fit.
   - **Needs new bytes:** only SOA-50 epochs are on disk. Full option 1,121,242,500 bytes; half option 536,256,000. Owner decision needed.
   - **Sergent's data:** OSF aw3t5 on a linked Dropbox. Preprocessed active `.mat` files 11.4 GB (23.8 GB with passive); raw active `.eeg` 24.3 GB, which can be range-read per trial. Sizes from HEAD requests only.
+- **Extended model set: FIX WORKS (2026-11-25, sealed 40d99e9, run once).**
+  - Two-state recall: 0.913.
+  - Graded call rates, all ≤ 0.007: jitter 0.5/1.0/1.5 → 0/0/0.007; skew, t(4), drift → 0; held-out jitter+t and gain → 0; Model 2B → 0.
+  - Cost: J takes about 5 of 20 subjects on true two-state data. At jitter SD 1.5, Model 3 still had the top exceedance in 51/150 studies, but passed 0.95 only once.
+  - Rule from the simulation: bifurcation claims should include jittered-threshold and heavy-tailed graded rivals. Write-up in `experiments/bifurcation_specificity/RESULTS.md`; ledger rows BIF-EXT-*.
+  - **Real-data prereg sealed** after the verdict, as the coordinator required. A pre-fetch design gate (full vs half bytes; signal size grid 2/1/3) is running detached: `gate_chain.sh`, log `gate_run.log`, outputs `out_gate/`.
