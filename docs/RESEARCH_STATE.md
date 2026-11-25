@@ -625,3 +625,8 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
     - **Drift and state-dependent noise give false positives.** Slow session drift, or a state that raises visibility and lowers noise, gave false QUENCHED calls in 36–89% of simulated studies, as large as the planted effect.
   - A drift-robust version (a rolling-SD normalisation plus a drift calibration cell) would still not separate attention from seeing, and could at most replicate Schurger in scalar ERPs.
   - **Decision:** dropped as not worth a sealed run. Reported to the coordinator.
+- **Real-data application of the extended model set, drafted (2026-11-25):** `docs/prereg/2026-11-25_bifurcation_real_data_cohen.md`, not sealed.
+  - It is sealed only if the simulation returns FIX WORKS. UNDECIDABLE or worse closes it with a note.
+  - **Design:** the Cohen report-block levels map one-to-one onto Sergent's six (mask only + SOA 17/33/50/67/83). The decoder follows their code (mask only vs SOA 83, 10-fold, decision values). The primary window is 300–500 ms. A simulation gate at the real design runs before the real fit.
+  - **Needs new bytes:** only SOA-50 epochs are on disk. Full option 1,121,242,500 bytes; half option 536,256,000. Owner decision needed.
+  - **Sergent's data:** OSF aw3t5 on a linked Dropbox. Preprocessed active `.mat` files 11.4 GB (23.8 GB with passive); raw active `.eeg` 24.3 GB, which can be range-read per trial. Sizes from HEAD requests only.
