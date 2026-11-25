@@ -3,8 +3,8 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; scroll-padding-top: 84px; }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 "Iowan Old Style", "Charter", Georgia, serif; overflow-x: hidden; }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-@media (min-width: 720px) { .wrap { padding: 0 40px; } }
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 720px) { .wrap { padding: 0 44px; } }
 a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
@@ -479,3 +479,6 @@ main > section.landscape::before { display: none; }
 .updpage { padding-bottom: clamp(40px, 6vw, 80px); }
 .updpage .upds { margin-top: 0; }
 @media (max-width: 600px) { .upd { padding-left: 22px; } .upd h3 { font-size: 17px; } .upd-body { font-size: 15.5px; } }
+
+/* hero kicker: "<Project>, part of Open Citizen Science" */
+.kicker a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.25em; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); } .kicker a:hover { text-decoration-color: currentColor; }
