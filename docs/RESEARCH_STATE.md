@@ -675,3 +675,8 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
 - **Design gate: stopped after DMAX 2 by coordinator decision.** Full FAIL (G_jitter_hi 0.18), half FAIL (recall 0.62). No fetch. DMAX 1 and 3 were not run; DMAX 3 on the full option alone is a possible later follow-up. Ledger rows BIF-GATE-SPEC38 and BIF-GATE-HALF. Method finding: at 38 subjects the comparison loses specificity against large-jitter graded data (0.18 vs 0.007 at 20 subjects).
 - **Compute rule (coordinator):** Open Mind runs at most 4 workers in total, at nice 20 without `-b`. `experiments/om_chain.sh` runs the SNR 5-model run and then TG-square, with WORKERS overridden at import (sealed files unedited).
 - **SNR 5-model secondary done (descriptive).** With J and T in the set, weak true two-state data are mostly won by J (50–69% at AUC ≤ 0.76). Model 3 is called (pxp > 0.95) in 1% at AUC 0.85 and 93% at AUC 0.91. The extended set trades sensitivity for specificity. Ledger row BIF-SNR-5M-SENS. TG-square started at 09:50Z (4 workers).
+- **TG-square result: SQUARE NOT SPECIFIC ONLY AT LARGE JITTER (75 ms); CPL UNINFORMATIVE.** Validity passed.
+  - A chain of four 50 ms codes makes a square only at 75 ms jitter; at 50 ms SQ is 0.69, square in 0/40.
+  - A single 50 ms code (their own stated alternative, descriptive) makes a full square at 50 ms jitter (SQ 0.90, SPAN 224 ms, 40/40). Their verbal dismissal does not rule it out.
+  - The proposed CPL test is confounded: a sustained code with 60 ms onset jitter gives negative coupling in 78%.
+  - Write-up in `experiments/tg_square_specificity/RESULTS.md`; ledger rows TGS-*. The key unknown is the real single-trial latency spread in their datasets.
