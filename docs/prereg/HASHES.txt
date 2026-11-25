@@ -178,3 +178,5 @@ f7f592ae4eb875e99ba931897bd000abff133a717df3c8a33a9cab2a621fc53a  docs/prereg/20
 e02601f8f2a5fb176150b021e7be509e661187622ac73dfba2a8c83c4d15737f  experiments/bifurcation_specificity/audit.py  2026-11-24T21:52:47Z
 a24699ec486a4bd7dade0d56c1d779c56440ec4a888fbb1dc0893f5ed80e64cb  docs/prereg/2026-11-25_bifurcation_extended_model_set.md  2026-11-24T23:26:07Z
 83006cb71803bdc2e1e81a74f45e8a3f77bbb925c194fe0bb2ab3fe9200531c4  experiments/bifurcation_specificity/extended.py  2026-11-24T23:26:07Z
+22a80fd17c94d0f83465d9f5a9c8cf062a67aafe32d317e7b18fe252fd3fb758  docs/prereg/2026-11-25_cohen_prior_showings.md  2026-11-25T01:41:25Z
+386904e748676c4a92fa02c093c9f6d47dadee29c80e76e30b6b48a8ad9f3402  experiments/cohen_fixed_soa/prior_showings.py  2026-11-25T01:41:25Z
