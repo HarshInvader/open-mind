@@ -751,3 +751,7 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
     - The between-subject r is −0.22 (n.s.), in Kranczioch's sign.
     - The CI (descriptive) excludes a 1 µV phase-locked plant.
   - **Meaning:** no support for within-trial alpha entrainment as "the critical factor" (Zauner 2012) at lag 3. The site write-up is cleared, with the wording "no detectable difference at n=42".
+
+### Round 17 #2 run log (2026-11-25)
+- Attempt 1 (pid 21589, started 14:17Z) died silently during a machine-wide event (load about 380, then 4; Origins runners died in the same window). Its log was empty and no cell file had been written. The sealed hashes were re-checked and matched.
+- Relaunched at 14:58:55Z with the same sealed script and seeds via `jitter_chain.sh` (nice 20, 4 workers, heartbeat every 10 min, summary on exit). The relaunch is not a design change; it will be recorded in RESULTS.md.
