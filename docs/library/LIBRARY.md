@@ -2,11 +2,11 @@
 
 Generated from `library.json` on 2026-11-25. Do not edit by hand.
 
-237 entries: 49 read in full, 188 from the abstract only. Every DOI was opened and its title and authors checked.
+239 entries: 50 read in full, 189 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (72)
+## Theories tested (74)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -158,6 +158,18 @@ Jachs B, Blanco MJ, Grantham-Hill S, Soto D (2015). *J Exp Psychol Hum Percept P
 - **For us:** The single-study version of our planned metacognition test, so its data cannot be reused as new evidence. Our test needs a simulated signal-detection null because rating-defined 'unseen' trials are biased.
 - **Touches:** Metacognition and awareness, Can AI be conscious?
 
+### Bayesian model selection for group studies - revisited
+
+Rigoux L, Stephan KE, Friston KJ, Daunizeau J (2014). *NeuroImage*. [doi:10.1016/j.neuroimage.2013.08.065](https://doi.org/10.1016/j.neuroimage.2013.08.065). Paper, abstract only, **core**.
+
+- **Question:** How should random-effects Bayesian model selection be done and protected at the group level?
+- **Idea tested:** Extends Stephan et al. 2009 random-effects BMS: Bayesian omnibus risk, protected exceedance probabilities, between-group comparisons.
+- **Data and method:** Methods paper with simulations.
+- **Results:** Introduces the Bayesian omnibus risk (chance likelihood of apparent differences in model frequencies) and protected exceedance probabilities; guidance on BMS vs classical second-level tests.
+- **Limits:** Abstract only read (not open access). Exceedance asks which model is most frequent in the population, not whether models are distinguishable within a subject.
+- **For us:** Our Sergent port uses pxp; near-equivalent models per subject can still yield confident population calls as N grows. Basis for round 17 #3.
+- **Touches:** bifurcation_specificity
+
 ### Characterizing the dynamics of mental representations: the temporal generalization method
 
 King JR, Dehaene S (2014). *Trends in Cognitive Sciences*. [doi:10.1016/j.tics.2014.01.002](https://doi.org/10.1016/j.tics.2014.01.002). Review, full text, **core**.
@@ -277,6 +289,18 @@ Klatzmann U, Froudist-Walsh S, Bliss DP, Theodoni P, Mejías JF, Niu M, Rapan L,
 - **Limits:** Model only, no human EEG test of single-trial bimodality.
 - **For us:** The 'cortex-wide bifurcation' paper the coordinator asked about (not by Garnier-Allain). Gives the theory behind the bifurcation kill test; does not pre-empt it.
 - **Touches:** bifurcation
+
+### Addressing low statistical power in computational modelling studies in psychology and neuroscience
+
+Piray P (2025). *Nature Human Behaviour*. [doi:10.1038/s41562-025-02348-6](https://doi.org/10.1038/s41562-025-02348-6). Paper, full text, **useful**.
+
+- **Question:** How much power do model-selection studies have, and how does it depend on sample size and model-space size?
+- **Idea tested:** Power-analysis framework for random-effects Bayesian model selection; review of 52 studies; analysis of fixed-effects selection.
+- **Data and method:** Simulation framework plus literature review (52 studies).
+- **Results:** Power increases with sample size but decreases as more models are considered; 41 of 52 studies had under 80% probability of identifying the true model; fixed-effects selection has high false positive rates and outlier sensitivity.
+- **Limits:** Uses unprotected xp and draws each subject's best model as given (no fitting, no near-equivalent pair); false positives controlled only under a uniform null. Does not address confident wrong calls growing with N when two models are near-equivalent per subject, or optimizer budgets.
+- **For us:** Adding J and T to Sergent's set costs power (seen as the AUC 0.85 recall loss); the round 17 #3 question is the opposite failure, a growing false call.
+- **Touches:** bifurcation_specificity
 
 ### Integrated information theory (IIT) 4.0: formulating the properties of phenomenal existence in physical terms
 

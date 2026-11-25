@@ -6023,6 +6023,56 @@
    "ideas_for_us": "Same direction as Zauner but before T1; our test is at T2.",
    "relevance": "context",
    "url": "https://doi.org/10.1007/s00221-015-4418-2"
+  },
+  {
+   "id": "rigoux-2014-bms-revisited",
+   "title": "Bayesian model selection for group studies - revisited",
+   "authors": "Rigoux L, Stephan KE, Friston KJ, Daunizeau J",
+   "year": 2014,
+   "venue": "NeuroImage",
+   "doi": "10.1016/j.neuroimage.2013.08.065",
+   "url": "https://doi.org/10.1016/j.neuroimage.2013.08.065",
+   "question": "How should random-effects Bayesian model selection be done and protected at the group level?",
+   "tried": "Extends Stephan et al. 2009 random-effects BMS: Bayesian omnibus risk, protected exceedance probabilities, between-group comparisons.",
+   "method_data": "Methods paper with simulations.",
+   "key_results": "Introduces the Bayesian omnibus risk (chance likelihood of apparent differences in model frequencies) and protected exceedance probabilities; guidance on BMS vs classical second-level tests.",
+   "limits": "Abstract only read (not open access). Exceedance asks which model is most frequent in the population, not whether models are distinguishable within a subject.",
+   "ideas_for_us": "Our Sergent port uses pxp; near-equivalent models per subject can still yield confident population calls as N grows. Basis for round 17 #3.",
+   "relevance": "core",
+   "touches": [
+    "bifurcation_specificity"
+   ],
+   "kind": "Paper",
+   "topic": "Theories tested",
+   "read_depth": "abstract",
+   "added": "2026-11-25",
+   "verified": true,
+   "in_news": false
+  },
+  {
+   "id": "piray-2025-bms-power",
+   "title": "Addressing low statistical power in computational modelling studies in psychology and neuroscience",
+   "authors": "Piray P",
+   "year": 2025,
+   "venue": "Nature Human Behaviour",
+   "doi": "10.1038/s41562-025-02348-6",
+   "url": "https://doi.org/10.1038/s41562-025-02348-6",
+   "question": "How much power do model-selection studies have, and how does it depend on sample size and model-space size?",
+   "tried": "Power-analysis framework for random-effects Bayesian model selection; review of 52 studies; analysis of fixed-effects selection.",
+   "method_data": "Simulation framework plus literature review (52 studies).",
+   "key_results": "Power increases with sample size but decreases as more models are considered; 41 of 52 studies had under 80% probability of identifying the true model; fixed-effects selection has high false positive rates and outlier sensitivity.",
+   "limits": "Uses unprotected xp and draws each subject's best model as given (no fitting, no near-equivalent pair); false positives controlled only under a uniform null. Does not address confident wrong calls growing with N when two models are near-equivalent per subject, or optimizer budgets.",
+   "ideas_for_us": "Adding J and T to Sergent's set costs power (seen as the AUC 0.85 recall loss); the round 17 #3 question is the opposite failure, a growing false call.",
+   "relevance": "useful",
+   "touches": [
+    "bifurcation_specificity"
+   ],
+   "kind": "Paper",
+   "topic": "Theories tested",
+   "read_depth": "full",
+   "added": "2026-11-25",
+   "verified": true,
+   "in_news": false
   }
  ]
 }
