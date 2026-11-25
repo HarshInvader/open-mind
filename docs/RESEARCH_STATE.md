@@ -741,3 +741,13 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - **Shuffled-label calibration:** directional false positives 3%, equivalence 72%. Planted 1 µV gives Δ 0.026 (detected in 54%); 2 µV is detected in 100%.
   - **Bound:** tightened from ±0.05 to ±0.02 before sealing, from the shuffled-label SD of 0.007.
 - **Library:** Zauner 2012, Kranczioch 2017, Janson 2014, Petro & Keil 2015.
+- **Study 1:**
+  - **Pre-seal review:** three blockers, all fixed (count-dependent gate; "stream" overclaim; NaN rule). The ROI moved to Zauner's central–parietal region, and the calibration was re-run.
+  - **Seal:** 14:02:18Z, commit dcb588a.
+  - **Gate:** PASS (median ρ 0.21).
+  - **Result: NO DIFFERENCE, EQUIVALENT WITHIN ±0.02.**
+    - Δ −0.0019 [−0.017, 0.013], p 0.80, TOST p 0.010, 42 subjects.
+    - Power and evoked amplitude are null.
+    - The between-subject r is −0.22 (n.s.), in Kranczioch's sign.
+    - The bound lies below a 1 µV phase-locked plant.
+  - **Meaning:** this counts against within-trial alpha entrainment as "the critical factor" (Zauner 2012) at lag 3. The data are CC0, so it is eligible for the site (no Cohen hold).

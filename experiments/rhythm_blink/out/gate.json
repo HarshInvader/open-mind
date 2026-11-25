@@ -1,0 +1,9 @@
+{
+ "gate": "PASS",
+ "n": 42,
+ "t": 9.248825855049796,
+ "mean_rho2": 0.06583305341885544,
+ "median_rho": 0.21467969820780108,
+ "script_sha": "65e7da96cf6bd0274a31d6463a87940ee55ffc39d745cc88704094a219842ea8",
+ "prereg_sha": "b1fc60aeec554690c59f5ea7a091e831ad54ecd5ca0e7f871a5d29d2e5e038d8"
+}
