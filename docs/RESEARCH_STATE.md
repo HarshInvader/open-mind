@@ -767,3 +767,15 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   3. Cross-paradigm awareness decoder, masking (Cohen) to blink (ds001810). Kill test first: a montage-transfer control inside ds001810 must keep at least 80% of AUC. The Cohen hold applies to publication.
   4. Cohen no-report block (about 200 MB), after that.
 - Long jobs are launched by the coordinator on request.
+
+### Round 18 item 1 (Sergent observer jitter) sealed; item 3 design drafted (2026-11-25)
+- **Item 1 sealed** at 16:58:50Z (commit 7b7cd4b): prereg `docs/prereg/2026-11-25_sergent_observer_jitter.md` and script `experiments/sergent_jitter/jitter_recovery.py`.
+  - **Pre-seal review:** two Fable rounds. The key catch: Sergent's exported heard/not-heard decoder means are raw decision values, not baseline-subtracted, so a free offset was added.
+  - **Other fixes:** wider decoder noise, a free rating gain, simulated lapses, a validity envelope, and placement through the sealed `audit.py` at the fitted parameters instead of the old map.
+  - **Fallback:** "τ not identifiable from Sergent's published summaries". Item 2 then proceeds on its own gate.
+  - **Cohen:** stated as not placeable from on-disk data (one neural level).
+- **Kill-test launches (coordinator):**
+  - Attempt 1 started at 17:01:44Z and was SIGKILLed within about 5 min. There was no SIGNAL or RUN EXIT line, and no output.
+  - Attempt 2 started at 17:08:32Z inside a detached tmux server (wrapper 95901).
+- **Item 3:** prior art read (Noorman 2025 and Sanchez 2020 full; Fahrenfort 2017 and Salti 2015 abstracts; library now 245 entries). The design draft is in `experiments/cross_paradigm/DESIGN.md`.
+  - **Open question to the coordinator:** ds001810's T2-identification label is weak (held-out decoder 0.529) and comes from a closed failure line.
