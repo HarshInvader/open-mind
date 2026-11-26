@@ -92,6 +92,22 @@ The scripts read codes 11–32 and 128 only, never 124/125.
 - **Timing.** The same photodiode rule applies to all classes.
 - **Hemisphere asymmetry.** Removed by equal left/right weighting.
 
+## 5b. EOG and recording facts from label-blind checks (2026-11-26; no awareness labels read)
+- **Two recording layouts:**
+  - 32 subjects: 144 channels;
+  - sub-02, 04, 05: 256-channel mode. Banks E–H are unused, with a 10-s SD of 0.00 µV, and are dropped. Their channels.tsv lists the 144 in use.
+- **Bipolar EOG SD at 0.5–30 Hz** (30 s mid-recording, all subjects):
+  - HEOG is broken in sub-01 (H1 SD 1,373 µV) and sub-13 (412 µV, VEOG also bad).
+  - VEOG is broken or flat in sub-19, 24, 29 and 30. Sub-29's HEOG is also high (238).
+  - Elsewhere the bipolar HEOG SD is 7–125 µV.
+- **Smoke test** on sub-01, 02, 04 and 10 with the 20 µV HEOG step rule:
+  - Rejection is 2%, 15% and 16% in sub-04, sub-10 and sub-02, but 97% in sub-01.
+  - Low-passing HEOG at 10 or 6 Hz before the step function changes this little, so it is not adopted.
+- **Rule to fix before sealing (label-blind):**
+  - A subject whose HEOG step rule rejects > 50% of trials has unusable HEOG and is excluded. Saccades are the main threat to a lateralised measure, so there is no fallback channel.
+  - A subject whose VEOG step or peak-to-peak rejects > 50% is excluded on the same logic.
+  - Exclusions are counted before labels are read. They count against the 24-subject minimum.
+
 ## 9. Not verified yet
 - Whether a cue or placeholder marked a side on no-cue catch trials (Melcón methods).
 - The HEOG thresholds, and HEOG polarity.

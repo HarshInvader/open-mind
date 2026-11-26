@@ -852,3 +852,8 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - **New rival, the N2pc:** this task cannot separate it, so the claim is "awareness-linked lateralised negativity".
   - **Graded vs residue cannot be separated:** R_lat is descriptive unless its kill test passes unchanged.
   - **Next:** check the HEOG thresholds and Melcón's catch-cue methods against opened sources, then write the label-free kill test. It runs when the Mind lock is free, after item 1, then item 4.
+- **#2 label-blind pipeline smoke test** (`experiments/ds006171_van/prep.py`, stimulus and photodiode codes only):
+  - The photodiode was found on 400/400 trials.
+  - Three subjects were recorded in 256-channel mode; the unused banks are dropped.
+  - EOG is broken in about 6 subjects (HEOG: sub-01, sub-13; VEOG: sub-13, 19, 24, 29, 30). A label-blind exclusion rule (step rejection > 50%) is now in the prereg draft §5b.
+  - The full prep (about 35 × 25 s) waits for the Mind lock, after items 1 and 4.
