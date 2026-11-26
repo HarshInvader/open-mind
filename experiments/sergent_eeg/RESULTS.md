@@ -10,3 +10,4 @@ Prereg: `docs/prereg/2026-11-25_sergent_eeg_five_models.md` (sealed 2026-11-25T1
   - **Workers:** the sealed code fixes `WORKERS = 4`. This is kept, as for item 1. Each cell's seed is fixed, so the worker count changes only the run time.
   - **Resuming:** the run is resumable per cell file and is relaunched with the same command if the 2 h harness limit stops it.
   - **Log:** `out_gate/gate_run.log`. No Sergent EEG byte has been fetched.
+- **Worker cap (coordinator, 2026-11-26):** this gate run keeps the sealed 4 workers and is not interrupted. From the next launch on (`rerun`, `summary`, and `analyse.py fit`), item 2 runs through `capped.py`. That is an unsealed wrapper that imports the sealed modules unchanged and caps their Pool at 3. Per-study seeds come from a SeedSequence keyed by the cell, and `Pool.map` keeps order, so results do not depend on the worker count. A check confirmed that both patched pools start 3 processes.
