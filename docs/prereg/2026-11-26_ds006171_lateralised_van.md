@@ -2,7 +2,7 @@
 
 Agent: Open Mind thread. Date: 2026-11-26.
 
-Status: draft. Seal only after the label-free kill test (§7) passes and a Fable pre-seal review is done.
+Status: **DROPPED before sealing (2026-11-26).** The label-free kill test failed; see §10. No seen/unseen label was ever read.
 
 No EEG has been read. Behaviour files have been read for counts and contrasts only.
 
@@ -127,3 +127,11 @@ The scripts read codes 11–32 and 128 only, never 124/125.
 - Whether a cue or placeholder marked a side on no-cue catch trials (Melcón methods).
 - The HEOG thresholds, and HEOG polarity.
 - The participants.tsv ID scheme (sub-001, 54 rows) against the EEG subject IDs.
+
+## 10. Kill test result and decision: DROPPED (2026-11-26, label-free)
+`experiments/ds006171_van/killtest.py`, full run on all 35 prepped subjects (`out/killtest.json`, `out/killtest_full.log`, `out/prep_all.log`). Codes 124/125 were never read.
+- **EOG exclusions:** 13 of 35 (8 for > 45% HEOG/VEOG rejection or broken EOG; 5 for side-locked residual HEOG beyond the subject's own shuffled q95, of which sub-25, 30 and 34 by that rule alone). 22 subjects used: **below the 24 minimum (§6).**
+- **Catch check:** PASS, mean 0.32 µV, 95% CI [−0.42, 0.97].
+- **Pooled check:** PASS, first reliably negative at 128 ms, minimum mean −1.24 µV. Pipeline validation only.
+- **Planted gate (200 runs):** false calls 0.045 at 0 (≤ 0.05, pass); detection **0.42** at −0.4 µV (criterion ≥ 0.80): **FAIL.** This is optimistic, since the gate does not apply the ≥ 60-pair eligibility rule.
+- **Decision (Fable pre-seal review agreed):** drop, as §7 pre-stated. Two independent stops fire. Restoring the excluded subjects is not legitimate (the EOG rules were fixed label-blind before power was seen, and saccades are the main threat) and would not rescue it: back-solved dz ≈ 0.375 gives about 0.47 detection at 25 subjects, about 0.60 at 35, and 0.80 needs about 56. No change to window, ROI, plant size or test.

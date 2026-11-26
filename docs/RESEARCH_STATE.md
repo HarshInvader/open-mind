@@ -862,3 +862,10 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - Equal hemifield weighting is now applied everywhere.
   - The full prep and the kill test run after item 2's gate and item 4, then go to the Fable pre-seal review.
 - **Item 4:** fetch complete (40/40). `run_study4.sh` is queued behind item 2's design gate.
+
+### Round 19 #2 (ds006171 lateralised VAN) DROPPED before sealing (2026-11-26 ~21:35Z)
+- Label-free kill test on all 35 subjects: 13 excluded by the pre-fixed EOG rules, so 22 used (< 24 minimum); planted gate detection 0.42 at −0.4 µV against ≥ 0.80. Catch and pooled checks passed. No seen/unseen label read. Details: prereg §10.
+- Fable pre-seal review agreed: drop, no rescue (loosening EOG would be goalpost-moving and reaches only about 0.60 at 35 subjects).
+- **Item 4 (Cohen no-report DD):** ran 21:25Z; outcome held privately until 2026-12-08 (Cohen hold).
+- **Item 2:** gate TIER 2 at d0.89; remaining het0.89 cells resume via `capped.py` (3 workers), then streaming once per prereg. Expect UNRESOLVED; run once, do not extend.
+- **Ranked list now:** (1) item 2 finish gate → stream → fit, once; (2) ds006171 bilateral unseen-vs-catch R, kill test only (likely fails: ~36 CRs/subject; R cannot separate graded from residue; drop on fail, no re-cut); (3) new Fable round 20, since round 19 is spent.

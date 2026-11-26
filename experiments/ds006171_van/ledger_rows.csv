@@ -1,0 +1,2 @@
+id,study,claim,status,evidence
+DS6171-LATVAN-KILL,ds006171_van,"ds006171 no-cue Gabors: lateralised (contra-ipsi) 180-280 ms negativity separates seen from unseen at matched contrast",DROPPED (kill test failed before sealing),"label-free: 13/35 excluded by EOG rules -> 22 < 24 minimum; planted gate detection 0.42 at -0.4 uV (criterion >= 0.80), false calls 0.045; catch and pooled checks passed"

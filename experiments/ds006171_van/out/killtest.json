@@ -1,0 +1,69 @@
+{
+ "n_prepped": 35,
+ "excluded": {
+  "sub-01": [
+   "heog-rej 0.97",
+   "heog-resid mean 6.47"
+  ],
+  "sub-03": [
+   "heog-sidelocked max 7.20 > shuffled q95 6.20",
+   "heog-resid mean 4.35"
+  ],
+  "sub-08": [
+   "heog-rej 0.59"
+  ],
+  "sub-09": [
+   "heog-rej 0.94",
+   "heog-resid mean 4.04"
+  ],
+  "sub-13": [
+   "veog-rej 0.62"
+  ],
+  "sub-14": [
+   "veog-rej 0.57",
+   "heog-sidelocked max 8.33 > shuffled q95 4.50",
+   "heog-resid mean 3.91"
+  ],
+  "sub-19": [
+   "veog-rej 1.00"
+  ],
+  "sub-21": [
+   "heog-rej 0.51"
+  ],
+  "sub-24": [
+   "veog-rej 0.95",
+   "heog-resid mean 4.09"
+  ],
+  "sub-25": [
+   "heog-sidelocked max 2.24 > shuffled q95 2.00"
+  ],
+  "sub-29": [
+   "heog-rej 0.99"
+  ],
+  "sub-30": [
+   "heog-sidelocked max 3.19 > shuffled q95 3.00"
+  ],
+  "sub-34": [
+   "heog-sidelocked max 4.68 > shuffled q95 4.33"
+  ]
+ },
+ "n_used": 22,
+ "catch": {
+  "mean": 0.31852638721466064,
+  "ci95": [
+   -0.42096239924430845,
+   0.9720136806368821
+  ],
+  "PASS": true
+ },
+ "pooled": {
+  "PASS": true,
+  "first_ms": 127.9296875,
+  "min_mean_uV": -1.2373374700546265
+ },
+ "planted": {
+  "0.0": 0.045,
+  "-0.4": 0.42
+ },
+ "PASS": false
+}
