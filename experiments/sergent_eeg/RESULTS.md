@@ -28,3 +28,7 @@ Prereg: `docs/prereg/2026-11-25_sergent_eeg_five_models.md` (sealed 2026-11-25T1
   - **Note (descriptive):** the 3-model comparison (null, 2B, M3) would falsely call Model 3 in 73% (G_heavy) and 70% (H_jitter_t) of graded studies. This is why the sealed call uses the 5-model set; it is the reason the 3-model column is not used for any call.
   - het0.89 (partial): B_bifurcation 0.00 (3-model 0.30), G_jitter_mid 0.00 (0.05).
 - **2026-11-26T21:31:33Z: gate resumed** with `capped.py sergent_gate run` at nice 20. The process list shows 3 spawn workers plus multiprocessing's resource tracker. Finished cell files are skipped. Output is appended to `out_gate/gate_run.log`. After this: `summary`, then streaming once, per the prereg.
+- **2026-11-26T23:31:44Z: resumed gate stopped at the 2 h harness limit; 1 cell left.**
+  - Newly done: all 6 het0.89 cells and d1.0 B_bifurcation. With between-subject DMAX spread, every graded cell's 5-model call rate is still 0.00 (3-model: G_heavy 0.76, H_jitter_t 0.77, G_jitter_hi 0.04, H_gain 0.00). B_bifurcation recall stays 0.00 at d1.0 (3-model 0.37).
+  - Remaining: d1.25 B_bifurcation (sensitivity only; it does not change the tier). Resumable with the same `capped.py sergent_gate run` command, about 25 min.
+  - The summary is unchanged: **TIER 2** at d0.89.
