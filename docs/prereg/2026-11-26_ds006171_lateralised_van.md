@@ -111,6 +111,13 @@ The scripts read codes 11–32 and 128 only, never 124/125.
     - The absolute ±25 µV HEOG rule of Constant et al. 2025 (doi:10.1016/j.cortex.2025.05.014) was tested label-blind and rejected: it removed 41% and 39% of trials in sub-02 and sub-10, which is broadband EMG at the canthi, against 12–15% for the step rule.
     - The step threshold of 20 µV is our choice, not a sourced value.
   - **Subject-level control (sourced):** the residual HEOG difference wave (left-target minus right-target trials, kept trials, 0–300 ms) must stay within 3.2 µV (Papaioannou & Luck 2020, about ±0.1°). A subject over this is excluded. Averaging removes EMG, so this is the real saccade control. It is computed label-blind by target side, before labels are read.
+- **Residual-HEOG rule, revised before sealing (label-blind smoke test, 4 subjects).**
+  - A fixed 3.2 µV cut on the *maximum* of the residual difference wave measures noise here. With target sides shuffled, the maximum has a median of about 2.5 µV and a 95th percentile of about 5.3 µV (sub-02, sub-10), so it would exclude subjects with clean but EMG-noisy HEOG.
+  - Revised rule, on the 6 Hz low-passed residual. A subject is excluded if either:
+    - its maximum exceeds the subject's own shuffled-side 95th percentile (500 shuffles), so a side-locked eye movement is detectable; or
+    - its *mean* over 0–300 ms exceeds 3.2 µV (the sourced size).
+  - The awareness-specific control stays as before: the hit − miss HEOG lateralisation CI includes 0, and HEOG is a covariate.
+- **Equal hemifield weighting** applies to every statistic: catch, pooled, planted and primary. The smoke test showed large left/right differences in Gabor L within subjects (sub-02: +1.04 vs −2.26 µV).
 - **Rule to fix before sealing (label-blind):**
   - A subject whose HEOG step rule rejects > 45% of trials has unusable HEOG and is excluded. The 45% is Melcón et al.'s own exclusion rule on this dataset. Saccades are the main threat to a lateralised measure, so there is no fallback channel.
   - A subject whose VEOG rule rejects > 45% is excluded on the same logic.

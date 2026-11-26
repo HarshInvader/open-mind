@@ -857,3 +857,8 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - Three subjects were recorded in 256-channel mode; the unused banks are dropped.
   - EOG is broken in about 6 subjects (HEOG: sub-01, sub-13; VEOG: sub-13, 19, 24, 29, 30). A label-blind exclusion rule (step rejection > 50%) is now in the prereg draft §5b.
   - The full prep (about 35 × 25 s) waits for the Mind lock, after items 1 and 4.
+- **#2 kill-test script drafted** (`experiments/ds006171_van/killtest.py`; label-free; smoke-tested on 4 subjects).
+  - The sourced 3.2 µV residual-HEOG maximum turned out to measure noise in this dataset (shuffled-side q95 about 5.3 µV). It is replaced, pre-seal and label-blind, by a rule calibrated to each subject's own noise.
+  - Equal hemifield weighting is now applied everywhere.
+  - The full prep and the kill test run after item 2's gate and item 4, then go to the Fable pre-seal review.
+- **Item 4:** fetch complete (40/40). `run_study4.sh` is queued behind item 2's design gate.
