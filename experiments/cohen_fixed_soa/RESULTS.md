@@ -178,3 +178,5 @@ Prereg: `docs/prereg/2026-11-24_cohen_van_identity_avgref.md`. Script: `van_iden
   - No fetch process is alive, so F1 is satisfied: `prep` may now run, once.
   - `run_study4.sh` is queued behind item 2's design gate, which holds the Mind lock (one heavy job per project).
   - No NF or NM value has been looked at.
+- **2026-11-26T21:26:03Z: study 4 pipeline launched** (`sh run_study4.sh 99913`; fetch pid 99913 confirmed dead, fetch complete 40/40). One process at nice 20 (study4.py uses no worker pool). Log: `out/run_study4.log`. The Mind lock owner was updated to this job.
+  - Completed 21:25:47Z, exit 0 (prep, align, gate, run all ran; no fallback needed). Run time 10 s: prep reads the epoch files already on disk, and the gate loop is small (200 runs). Under the Cohen hold the outcome is not published here before 2026-12-08; output files stay untracked until then.
