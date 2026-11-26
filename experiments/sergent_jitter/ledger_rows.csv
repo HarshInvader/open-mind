@@ -1,0 +1,2 @@
+id,study,claim,status,evidence
+SJ-TAU,sergent_jitter,"Sergent 2021 observers' threshold jitter (tau, k*tau) is recoverable from their published summaries at their trial counts",NOT IDENTIFIABLE (pre-stated outcome),"100 simulated subjects per cell, 21 cells; worst core-cell joint recovery P 0.014, S 0.000 vs bar 0.90"

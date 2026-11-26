@@ -1,45 +1,114 @@
 [
-  {"date": "2026-11-25", "kind": "result", "title": "Missing the second target: no detectable link to brain rhythm locking at n=42", "body": "In the attentional blink, people often miss a second target that comes a quarter-second after the first. A 2012 study of 14 people proposed that the brain locking onto the rhythm of the letter stream is the critical cause. We tested this on 42 people in an open EEG dataset, comparing trials where the second target was missed with trials where it was caught. At n=42 we found no detectable difference in that locking around the second target, and no difference in rhythm strength either. A difference as large as the one a small 1 µV rhythmic signal would cause is outside our confidence interval. This does not rule out a role for the rhythm at other gaps between targets or before the first target.", "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/rhythm_blink/RESULTS.md"},
-  {"date": "2026-11-24", "kind": "result", "title": "Told to assume an outcome, AI raters barely shift what theories predict",
-   "body": "We gave the same AI raters the same unknowable findings, but this time told them each outcome was what the experiment observed, and checked that they took it in. Their ratings of what six consciousness theories predict moved toward that outcome by only a few hundredths of a bit, about evenly across theories, so a stated outcome does not create IIT's lead. But the raters only assumed the outcome; they did not come to believe it. So this does not yet test results they actually remember, which is the next check.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/theory_leak/MC_RESULTS.md"},
-  {"date": "2026-11-23", "kind": "result", "title": "AI raters ignore a random 'reported outcome' label when scoring theories",
-   "body": "We showed AI raters findings that have no known result yet, each with a 'reported outcome' line we told them was random. Their ratings of what six consciousness theories predict did not move with that line, for any theory. But most ratings said the theory was silent, and a stronger test, where the raters believe the outcome, comes first. So we are not scaling the ledger to 59 findings yet.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/theory_leak/RESULTS.md"},
-  {"date": "2026-11-23", "kind": "result", "title": "Blind AI raters can score theories against real vs mirrored outcomes",
-   "body": "Three AI raters, blind to which outcome was real, said how likely six theories made each of 10 key findings. Our checks passed: they recovered a made-up theory, gave a placebo theory 50/50 every time, and agreed with each other. IIT came out ahead, but these raters know the literature and the items lean posterior, so the 59-finding run comes next with leak checks.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/theory_likelihood/RESULTS.md"},
-  {"date": "2026-11-23", "kind": "result", "title": "Sleep measures all call REM 'awake', for spectral reasons only",
-   "body": "We froze wake-vs-deep-sleep cutoffs on one sleep lab and tested them on 143 people from another. Five of nine measures carried over, and all five put REM with waking, not in between as we predicted. Nothing they saw in REM went beyond the power spectrum, so they read missing slow waves, not experience.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/transfer_5/RESULTS.md"},
-  {"date": "2026-11-23", "kind": "void", "title": "AI self-model test came out void",
-   "body": "Our sealed check needed a planted agent to show the effect, and it didn't: both trained agents learned to suppress every distractor. So the run says nothing either way, and the next design has to block the action, not just the input.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/self_model_agents/RESULTS.md"},
-  {"date": "2026-11-21", "kind": "sealed", "title": "17 forecasts sealed for COGITATE experiment 2",
-   "body": "The largest test of two leading theories has a second experiment whose results aren't out yet. We locked 17 probability forecasts on GitHub first, so we can score them when the results appear.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/prereg/2026-11-21_cogitate_exp2_forecasts.md"},
-  {"date": "2026-11-21", "kind": "started", "title": "New sub-project: can AI be conscious?",
-   "body": "Before using any consciousness test on AI, we check whether the test can tell a real self-model from a system that only acts like it has one.",
-   "link": "ai.html"},
-  {"date": "2026-11-20", "kind": "result", "title": "An unseen-distractor effect can't prove a self-model on its own",
-   "body": "In a sealed model test, controllers that optimise for evidence never showed the effect, while simple fixed-threshold ones did. So the effect alone can't tell what a system knows about its own attention.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/self_model_agents/RESULTS.md"},
-  {"date": "2026-11-20", "kind": "killed", "title": "No-report bifurcation study stopped before it began",
-   "body": "We planted a two-state brain response in simulated data with real trial counts. The analysis found it in 0 of 50 tries, so a test on the real data could not have found it either.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/NEGATIVE_ATLAS.md"},
-  {"date": "2026-11-19", "kind": "killed", "title": "Dream-report benchmark stopped before unblinding",
-   "body": "Two recent studies already found that sleep EEG barely tells, within a person, whether they will report a dream (AUC about 0.5). We stopped and never opened the labels, so the sealed plan can still be run blind later.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/NEGATIVE_ATLAS.md"},
-  {"date": "2026-11-19", "kind": "blocked", "title": "COGITATE null audit is ready but waiting on data access",
-   "body": "Nobody has checked whether COGITATE's null results could have detected a real effect. The plan is ready; it needs a free data account in the project lead's name.",
-   "link": "https://github.com/HarshInvader/open-mind/tree/main/experiments/cogitate_audit"},
-  {"date": "2026-11-19", "kind": "killed", "title": "Our theory T4 parked: its main prediction can't be tested on open data",
-   "body": "With the trial counts in the best open intracranial dataset, the method caught a planted two-state signal 0% of the time at realistic strengths.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/NEGATIVE_ATLAS.md"},
-  {"date": "2026-11-18", "kind": "result", "title": "Arrow-of-time EEG measures add nothing over the spectrum",
-   "body": "On sleep and anaesthesia recordings from 95 people, measures of time-irreversibility told conscious from unconscious no better than the simple mix of slow and fast waves.",
-   "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/NEGATIVE_ATLAS.md"},
-  {"date": "2026-11-18", "kind": "killed", "title": "Our first theory failed its sealed test",
-   "body": "We sealed a test of our settling-window theory and ran it on 237 awakenings from 35 sleepers. All four measures came out flat.",
-   "link": "findings.html"}
+ {
+  "date": "2026-11-26",
+  "kind": "result",
+  "title": "Sergent 2021's published summaries cannot measure how much observers' thresholds jitter",
+  "body": "In a sealed simulation at their trial counts, neither of two fitting methods recovered the jitter parameters (best worst-case recovery 1% against a 90% bar). So no jitter estimate is made from their data, and the follow-up EEG study runs without one.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/sergent_jitter/RESULTS.md"
+ },
+ {
+  "date": "2026-11-25",
+  "kind": "result",
+  "title": "Missing the second target: no detectable link to brain rhythm locking at n=42",
+  "body": "In the attentional blink, people often miss a second target that comes a quarter-second after the first. A 2012 study of 14 people proposed that the brain locking onto the rhythm of the letter stream is the critical cause. We tested this on 42 people in an open EEG dataset, comparing trials where the second target was missed with trials where it was caught. At n=42 we found no detectable difference in that locking around the second target, and no difference in rhythm strength either. A difference as large as the one a small 1 µV rhythmic signal would cause is outside our confidence interval. This does not rule out a role for the rhythm at other gaps between targets or before the first target.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/rhythm_blink/RESULTS.md"
+ },
+ {
+  "date": "2026-11-24",
+  "kind": "result",
+  "title": "Told to assume an outcome, AI raters barely shift what theories predict",
+  "body": "We gave the same AI raters the same unknowable findings, but this time told them each outcome was what the experiment observed, and checked that they took it in. Their ratings of what six consciousness theories predict moved toward that outcome by only a few hundredths of a bit, about evenly across theories, so a stated outcome does not create IIT's lead. But the raters only assumed the outcome; they did not come to believe it. So this does not yet test results they actually remember, which is the next check.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/theory_leak/MC_RESULTS.md"
+ },
+ {
+  "date": "2026-11-23",
+  "kind": "result",
+  "title": "AI raters ignore a random 'reported outcome' label when scoring theories",
+  "body": "We showed AI raters findings that have no known result yet, each with a 'reported outcome' line we told them was random. Their ratings of what six consciousness theories predict did not move with that line, for any theory. But most ratings said the theory was silent, and a stronger test, where the raters believe the outcome, comes first. So we are not scaling the ledger to 59 findings yet.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/theory_leak/RESULTS.md"
+ },
+ {
+  "date": "2026-11-23",
+  "kind": "result",
+  "title": "Blind AI raters can score theories against real vs mirrored outcomes",
+  "body": "Three AI raters, blind to which outcome was real, said how likely six theories made each of 10 key findings. Our checks passed: they recovered a made-up theory, gave a placebo theory 50/50 every time, and agreed with each other. IIT came out ahead, but these raters know the literature and the items lean posterior, so the 59-finding run comes next with leak checks.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/theory_likelihood/RESULTS.md"
+ },
+ {
+  "date": "2026-11-23",
+  "kind": "result",
+  "title": "Sleep measures all call REM 'awake', for spectral reasons only",
+  "body": "We froze wake-vs-deep-sleep cutoffs on one sleep lab and tested them on 143 people from another. Five of nine measures carried over, and all five put REM with waking, not in between as we predicted. Nothing they saw in REM went beyond the power spectrum, so they read missing slow waves, not experience.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/transfer_5/RESULTS.md"
+ },
+ {
+  "date": "2026-11-23",
+  "kind": "void",
+  "title": "AI self-model test came out void",
+  "body": "Our sealed check needed a planted agent to show the effect, and it didn't: both trained agents learned to suppress every distractor. So the run says nothing either way, and the next design has to block the action, not just the input.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/self_model_agents/RESULTS.md"
+ },
+ {
+  "date": "2026-11-21",
+  "kind": "sealed",
+  "title": "17 forecasts sealed for COGITATE experiment 2",
+  "body": "The largest test of two leading theories has a second experiment whose results aren't out yet. We locked 17 probability forecasts on GitHub first, so we can score them when the results appear.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/prereg/2026-11-21_cogitate_exp2_forecasts.md"
+ },
+ {
+  "date": "2026-11-21",
+  "kind": "started",
+  "title": "New sub-project: can AI be conscious?",
+  "body": "Before using any consciousness test on AI, we check whether the test can tell a real self-model from a system that only acts like it has one.",
+  "link": "ai.html"
+ },
+ {
+  "date": "2026-11-20",
+  "kind": "result",
+  "title": "An unseen-distractor effect can't prove a self-model on its own",
+  "body": "In a sealed model test, controllers that optimise for evidence never showed the effect, while simple fixed-threshold ones did. So the effect alone can't tell what a system knows about its own attention.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/experiments/self_model_agents/RESULTS.md"
+ },
+ {
+  "date": "2026-11-20",
+  "kind": "killed",
+  "title": "No-report bifurcation study stopped before it began",
+  "body": "We planted a two-state brain response in simulated data with real trial counts. The analysis found it in 0 of 50 tries, so a test on the real data could not have found it either.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/NEGATIVE_ATLAS.md"
+ },
+ {
+  "date": "2026-11-19",
+  "kind": "killed",
+  "title": "Dream-report benchmark stopped before unblinding",
+  "body": "Two recent studies already found that sleep EEG barely tells, within a person, whether they will report a dream (AUC about 0.5). We stopped and never opened the labels, so the sealed plan can still be run blind later.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/NEGATIVE_ATLAS.md"
+ },
+ {
+  "date": "2026-11-19",
+  "kind": "blocked",
+  "title": "COGITATE null audit is ready but waiting on data access",
+  "body": "Nobody has checked whether COGITATE's null results could have detected a real effect. The plan is ready; it needs a free data account in the project lead's name.",
+  "link": "https://github.com/HarshInvader/open-mind/tree/main/experiments/cogitate_audit"
+ },
+ {
+  "date": "2026-11-19",
+  "kind": "killed",
+  "title": "Our theory T4 parked: its main prediction can't be tested on open data",
+  "body": "With the trial counts in the best open intracranial dataset, the method caught a planted two-state signal 0% of the time at realistic strengths.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/NEGATIVE_ATLAS.md"
+ },
+ {
+  "date": "2026-11-18",
+  "kind": "result",
+  "title": "Arrow-of-time EEG measures add nothing over the spectrum",
+  "body": "On sleep and anaesthesia recordings from 95 people, measures of time-irreversibility told conscious from unconscious no better than the simple mix of slow and fast waves.",
+  "link": "https://github.com/HarshInvader/open-mind/blob/main/docs/NEGATIVE_ATLAS.md"
+ },
+ {
+  "date": "2026-11-18",
+  "kind": "killed",
+  "title": "Our first theory failed its sealed test",
+  "body": "We sealed a test of our settling-window theory and ran it on 237 awakenings from 35 sleepers. All four measures came out flat.",
+  "link": "findings.html"
+ }
 ]

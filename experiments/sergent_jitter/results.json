@@ -1,0 +1,11 @@
+{
+ "study": "sergent_jitter",
+ "verdict": "TAU NOT IDENTIFIABLE FROM SERGENT'S PUBLISHED SUMMARIES",
+ "subjects_per_cell": 100,
+ "worst_core_kt_and_tau": {
+  "P": 0.014,
+  "S": 0.0
+ },
+ "bar": 0.9,
+ "source": "out/killtest/killtest_summary.json"
+}

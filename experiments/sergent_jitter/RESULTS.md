@@ -1,4 +1,6 @@
-# Item 1 (round 18): can Sergent's observers' threshold jitter be identified? RESULTS (in progress)
+# Item 1 (round 18): can Sergent's observers' threshold jitter be identified? RESULTS
+
+**Verdict: τ is not identifiable from Sergent's published summaries.** Neither estimator meets the sealed recovery bar, so no real-data estimate is made. This is the pre-stated outcome for this case (prereg fallback table). Item 2 (Sergent's EEG) runs its design gate without k·τ cells.
 
 Prereg: `docs/prereg/2026-11-25_sergent_observer_jitter.md` (sealed). Code: `jitter_recovery.py` (sealed).
 
@@ -21,6 +23,20 @@ Prereg: `docs/prereg/2026-11-25_sergent_observer_jitter.md` (sealed). Code: `jit
   - Workers: the sealed code fixes `Pool(4)`, and we kept it, as the coordinator allowed. This is one more than Mind's cap of 3. Each cell is seeded by `SeedSequence([SEED, kt, tau])`, so the worker count changes only the run time.
   - The harness limits a background command to 2 h. Cells are written atomically, so the run is relaunched with the same command until all 21 cells exist.
 
-## Results
+- **2026-11-26, about 19:2xZ:** the run finished, with all 21 cells and the summary written by the sealed code (`out/killtest/killtest_summary.json`). The 2 h harness limit did not interrupt the run.
 
-Pending.
+## Results (100 simulated subjects per cell; 21 cells: k·τ ∈ {0.25 … 3.0} × τ ∈ {1, 2, 3})
+- **Recovery bar (prereg §3).** The core cells are k·τ ∈ {0.5, 0.75, 1.0, 1.5, 2.25}, at every τ. In each, at least 90% of studies must have both the median k·τ and the median τ within ±25%.
+- **Estimator P:** worst core-cell joint recovery **0.014**. The best cell anywhere was 0.41 (k·τ 1.5, τ 3), and 45–83 of 100 subjects per cell ended at a parameter bound.
+- **Estimator S:** worst core-cell joint recovery **0.000**. It recovers well only at large k·τ with τ = 1 (0.73–0.89 at k·τ ≥ 1.5), and fails at small k·τ (0.00–0.06).
+- **Envelope (validity range of the fits):** fitted τ runs from 0.1 (the floor) to 6.3 (P) or 3.7 (S).
+- **What the bar would have needed:** ≥ 0.90 in every core cell. Both estimators are far below it, so the verdict does not hang on the threshold.
+
+## What this means
+- Sergent's published per-condition summaries (behaviour plus decoder means) cannot separate how much observers' thresholds jitter from the rate of the underlying accumulation. Any placement of their data on our false-call map that needs τ is unsupported.
+- This does not say that their observers lack jitter, only that these summaries cannot measure it.
+- This closes the gate input for item 2. Item 2's prereg (§6 table) says: "τ not identifiable → the gate runs without k·τ cells."
+
+## Not checked
+- Trial-level behaviour, if the authors shared it, might identify τ. It is not in the public package; only summaries are.
+- With 200 subjects per cell (the pre-stated primary size), recovery could be higher. The 100-subject fallback was triggered by run time. Since the worst core cells are at 0.00–0.01, against a 0.90 bar, doubling the subjects would not close the gap.
