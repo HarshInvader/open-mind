@@ -1,0 +1,74 @@
+# Round 19 #1: is an unseen face's VAN the same as mask-only? (design draft, not sealed)
+
+Status: draft, 2026-11-26. This must be sealed before item 4's `gate` or `run` reads report mask-only (RM) VAN values.
+Item 4's `prep` is label-free and prints counts only, so it may run first. Study 1 then reads `out/s4_prep.npz`.
+Cohen hold: nothing public before 2026-12-08.
+
+## 1. Question
+In Cohen et al. 2024 at SOA 50 (report block), is the visual awareness negativity (VAN) all-or-none or graded?
+- All-or-none: an unseen face's VAN equals the mask-only baseline.
+- Graded: an unseen face's VAN lies part of the way to a seen face's.
+
+This bears on two theories:
+- **Recurrent processing (RPT):** the VAN marks awareness.
+- **Global workspace (GNWT):** early stages are graded and preconscious; only later activity is all-or-none.
+
+It also bears on reading our own sealed VAN PASS (seen − unseen at fixed SOA) as an awareness marker.
+
+Statistic: R = (miss − CR) / (hit − CR), from VAN window means.
+- **Hit:** face shown, reported seen.
+- **Miss:** face shown, reported unseen.
+- **CR:** report mask-only trial. Item 4's prep does not keep mask-only responses. False alarms are 69 of 6,126 (1.1%), so using all mask-only trials moves R by at most about 0.01. This is stated in advance and not corrected.
+
+## 2. Rival explanations and what each predicts for R
+Behaviour, from `trials.csv` (report block): mask-only false alarms are 1.13%, so the criterion is c = 2.28. SOA-50 hits are 52.5%.
+Predictions are derived in `predictions.py` (to be added; the numbers below are from the same code run inline on 2026-11-26).
+
+| Rival | R predicted |
+|---|---|
+| A. All-or-none, lapses λ (aware trials reported unseen) | 0.02 (λ = 0.02), 0.06 (λ = 0.05), 0.12 (λ = 0.10) |
+| B. Graded signal, report = threshold on the VAN's own variable (β = 1), signal SD σs | 0.49 (σs = 1), 0.40 (1.25), 0.32 (1.5), 0.19 (2.0) |
+| B'. Graded, VAN carries only a share β of the decision variance | higher: β = 0.5 gives 0.50–0.71; β = 0.2 gives 0.77–0.87 |
+| C. All-or-none awareness plus stimulus-driven residue (an unseen face still evokes an N170-like response in the window) | R > 0, of any size |
+| D. Artefact: mask-only epochs misaligned (virtual onset 25 samples before the mask) | the P1 check also gives miss = CR, or a shifted mask P1 |
+
+Fable's round 19 note gave 0.49 as a floor for B. That holds only at σs = 1 and β = 1. Unequal variance lowers it: detection z-ROC slopes of about 0.8 give σs of about 1.25.
+
+## 3. Where the rivals disagree, and the decision rule (draft)
+- **R is decisive in one direction only.** A small R rejects B with σs ≤ 1.5, and B'. A large R cannot separate B from C.
+- **Primary call (bootstrap over subjects, 95% CI):**
+  - Upper bound < 0.20: **ALL-OR-NONE-COMPATIBLE**. A is supported, and graded with σs ≤ 1.5 is rejected. An upper bound of 0.20 sits above A at λ ≤ 0.10, and the threshold should sit above A. σs = 2 is not rejected, and that is stated.
+  - Lower bound > 0.20: **NOT ALL-OR-NONE AT THE VAN**. This is either B or C; §4 separates them.
+  - Otherwise: **INCONCLUSIVE**.
+  - Open for review: whether 0.20 or 0.25 is the right cut.
+- **Separating B from C: shape test.** Under B, every trial class reads one latent variable. So the miss − CR waveform at the VAN electrodes over 100–300 ms must be a scaled copy of the hit − miss waveform. Under C, the miss − CR difference is stimulus-driven: earlier (P1/N1) with a different time course.
+  - Statistic: the correlation between the two subject-averaged difference waveforms, against a split-half reliability ceiling.
+  - Needs per-sample waveforms, not window means. That means a small sealed re-cut using item 4's exact preprocessing rules (draft).
+
+## 4. Independent checks (each states why it tracks its target)
+- **P1 (100–140 ms), miss > CR.** A face was physically shown on miss trials, so early visual cortex should respond more than to the mask alone. If P1 miss = CR, the alignment or the cells are wrong (D), and the study is INVALID.
+- **Hit − miss VAN must reproduce the sealed VAN PASS sign.** These are the same RF trials, so this is a consistency check, not new evidence.
+- **The P3b check is dropped.** Mask-only epochs end at +300 ms, and fetching more would mean a new download under the hold.
+
+## 5. Kill test (before sealing; does not touch RM values)
+- Take the real RF hit and miss VAN values from s4_prep. Draw synthetic RM from the RF-unseen trial SD at real per-subject RM counts (about 60, fewer after rejection), with the CR mean planted at R = 0 and at R = 0.4.
+- Required: a 95% CI half-width of R ≤ 0.12, and correct calls in ≥ 80% of runs at both plants. Otherwise drop the study before sealing.
+- Problem: s4_prep does not exist until item 4's `prep` runs (after the fetch exits). Until then, the kill test can use the report-face epochs already on disk (`cohen2024_epochs`), with the sealed preprocessing re-applied to RF only.
+
+## 6. Likely artefacts if a surprise appears
+- **R ≈ 0 from wrong time-locking of mask-only trials:** P1 check, plus a label-free mask-P1 latency match between RM and RF.
+- **R > 1 or < 0 with a large CI:** a near-zero denominator in some subjects. Use the group ratio of means, never the mean of per-subject ratios.
+- **Rejection rates differ between RF and RM (blinks around the mask):** report both.
+
+## 7. Prior art (to read before sealing)
+On disk:
+- Sergent 2021 Fig 3C (`datasets/local/r16_priorart/sergent2021.txt`);
+- Fisch 2009;
+- Cohen 2024.
+
+Not yet opened:
+- Koivisto & Grassini 2016 (unverified);
+- Lamy 2009 (unverified);
+- any study that tested an unseen-versus-absent VAN in masking (to search).
+
+The novelty sentence is written after reading.
