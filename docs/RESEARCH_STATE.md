@@ -816,3 +816,10 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - Item 2 is unchanged (sealed tier rule).
   - Item 1 runs to completion through the 2 h harness relaunches. These are resumes of one run, not new attempts.
   - Audit share: items 1 and 2 are audits, so round 19 is all original, as Fable argued.
+- **Round 19 feasibility kill tests (behaviour and event files only, about 3 MB, 2026-11-26 ~18:00Z).** Files are in `datasets/local/r19_ds006171/` and `r19_ds008959/` (untrusted, gitignored). No EEG or iEEG was read.
+  - **#2, ds006171 no-cue task: PASS.** 35 subjects. 27 have at least 30 misses and at least 25 catch CRs; the criterion was at least 24. Medians per subject: 164 hits, 180 misses, 36 CRs, 1 false alarm.
+    - Contrast overlap is close to complete: the online calibration gives hits and misses nearly the same median contrast (for example 0.0282 vs 0.0276), and almost every miss lies inside the hit contrast range. The contrast rival is therefore weak by design.
+    - The photodiode rule from the events sidecar applies: code 128 replaces the next trigger's time.
+    - Next: byte-range sizing of the no-cue BDF reads, before any download.
+  - **#3, ds008959 MetaMosquito: KILLED at feasibility.** Only 3 patients have at least 30 visual misses (sub-01 30, sub-04 55, sub-10 36), and only 2 have at least 30 auditory misses (sub-03 30, sub-04 43); the criterion was at least 5. The criterion is not relaxed. A contact-level design on 2–3 patients cannot support the question.
+  - **Order now:** #1 (Cohen, must be sealed before item 4's `prep`), then #2 (ds006171, CC0, no hold, publishable sooner), then #4 (conditional on item 4).
