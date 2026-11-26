@@ -173,3 +173,8 @@ Prereg: `docs/prereg/2026-11-24_cohen_van_identity_avgref.md`. Script: `van_iden
   - When the fetch exits, the next step is `sh run_study4.sh <fetch pid>`, unchanged.
 - **2026-11-26 ~18:02Z:** the fetch exited with `RuntimeError` on one OSF range request. `get()` gave up after 5 retries (about 31 s of backoff) during subject 1027; 1001–1026 are complete (20 of 40). Subjects are written whole, so nothing partial exists. A probe of the same URL at 18:03Z returned 206, so the error was transient. Relaunched with the same command at ~18:04Z; not a design change. Under F1, `prep` still runs once, after the last fetch process has exited.
 - **18:06Z:** the same OSF file (subject 1027's .eeg) failed again, about 3 min into the subject. Probes of that URL at 18:07Z returned 502, 206 and 206, so OSF is serving it intermittently. The sealed `fetch_noreport.py` is unchanged; its hash is part of the seal. It is now run inside an outside retry loop (`fetch_loop.sh`, not sealed, orchestration only): up to 15 attempts, 120 s apart, each resuming per subject. Retrying requests the same byte ranges, so the data cannot differ.
+- **19:53:44Z: fetch complete.**
+  - All 40 subjects were fetched, at exactly 250,588,800 bytes, as projected by `plan`. The retry loop needed one attempt.
+  - No fetch process is alive, so F1 is satisfied: `prep` may now run, once.
+  - `run_study4.sh` is queued behind item 2's design gate, which holds the Mind lock (one heavy job per project).
+  - No NF or NM value has been looked at.
