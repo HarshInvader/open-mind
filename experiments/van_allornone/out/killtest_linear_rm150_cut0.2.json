@@ -1,0 +1,25 @@
+{
+ "R=0.0": {
+  "calls": {
+   "ALL-OR-NONE-COMPATIBLE": 0.725,
+   "NOT-ALL-OR-NONE": 0.0,
+   "INCONCLUSIVE": 0.275
+  },
+  "half_width_median": 0.15839558361414874,
+  "half_width_q90": 0.1952874484617303
+ },
+ "R=0.4": {
+  "calls": {
+   "ALL-OR-NONE-COMPATIBLE": 0.0,
+   "NOT-ALL-OR-NONE": 0.995,
+   "INCONCLUSIVE": 0.005
+  },
+  "half_width_median": 0.08970108740466565,
+  "half_width_q90": 0.10757319067623453
+ },
+ "n_subjects": 39,
+ "PASS": false,
+ "stat": "linear",
+ "n_rm": 150,
+ "cut": 0.2
+}

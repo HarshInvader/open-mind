@@ -72,3 +72,20 @@ Not yet opened:
 - any study that tested an unseen-versus-absent VAN in masking (to search).
 
 The novelty sentence is written after reading.
+
+## 8. Kill test results (2026-11-26, pre-seal; no mask-only value read)
+`killtest.py`: 39 eligible subjects; median 59 synthetic mask-only trials per subject after rejection; 200 runs × 2,000 bootstraps.
+Outputs are in `out/killtest_*.json`. The pre-stated criteria were a median 95% half-width ≤ 0.12 on the R scale and ≥ 80% correct calls at both plants.
+
+| Version | Mask-only trials | Cut | R = 0: correct, wrong | R = 0.4: correct, wrong | Half-width at R = 0, R = 0.4 | Verdict |
+|---|---|---|---|---|---|---|
+| 1: ratio bootstrap | 60 | 0.20 | 69.5%, 0% | 96.5%, 0% | 0.19, 0.10 | FAIL |
+| 2: linear contrast | 60 | 0.20 | 69.5%, 0% | 96.5%, 0% | 0.19, 0.10 | FAIL |
+| 2 | 150 | 0.20 | 72.5%, 0% | 99.5%, 0% | 0.16, 0.09 | FAIL |
+| 2 | 60 | 0.25 | 87%, 0% | 83%, 0% | 0.19, 0.10 | FAIL (half-width) |
+| 2 | 150 | 0.25 | 85.5%, 0% | 93.5%, 0% | 0.16, 0.09 | FAIL (half-width) |
+
+- **Version 2's first run was a bug.** The VAN is a negativity, so the contrast's sign was flipped and every call was mirrored. The signs are now fixed in the awareness direction set by the sealed VAN PASS. After the fix, version 2 gives the same results as version 1.
+- **More mask-only trials help little.** Most of the noise is in the miss and hit means, which cannot be increased.
+- **A cut of 0.25 passes the call-rate criteria but not the half-width.** It would also call a graded signal with σs = 2 (R ≈ 0.19) all-or-none-compatible.
+- **Decision pending.** Fable's review will decide whether to drop the study, re-cut it, or redesign it. As written, the study fails its kill test.
