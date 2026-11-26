@@ -11,3 +11,19 @@ Prereg: `docs/prereg/2026-11-25_sergent_eeg_five_models.md` (sealed 2026-11-25T1
   - **Resuming:** the run is resumable per cell file and is relaunched with the same command if the 2 h harness limit stops it.
   - **Log:** `out_gate/gate_run.log`. No Sergent EEG byte has been fetched.
 - **Worker cap (coordinator, 2026-11-26):** this gate run keeps the sealed 4 workers and is not interrupted. From the next launch on (`rerun`, `summary`, and `analyse.py fit`), item 2 runs through `capped.py`. That is an unsealed wrapper that imports the sealed modules unchanged and caps their Pool at 3. Per-study seeds come from a SeedSequence keyed by the cell, and `Pool.map` keeps order, so results do not depend on the worker count. A check confirmed that both patched pools start 3 processes.
+- **2026-11-26, about 21:30Z: gate stopped at the 2 h harness limit; tier-deciding cells complete.**
+  - Done: all 6 d0.89 cells (B_bifurcation plus the 5 graded cells), and het0.89 B_bifurcation and G_jitter_mid. Remaining het0.89 cells and B sensitivity points are resumable with `capped.py sergent_gate run` (3 workers).
+  - `summary` (run through `capped.py`) gives **TIER 2** at d0.89: every graded cell's 5-model Model 3 call rate is 0.00 (spec ≤ 0.10 met), but B_bifurcation recall is also 0.00 (< 0.80).
+  - Per prereg, tier 2 means: streaming is allowed, and the reading is one-sided. Only a Model 3 call on the real data counts; anything else is UNRESOLVED, never evidence against bifurcation.
+
+  | d0.89 cell | 5-model call | 3-model call | winner counts (none, M1..M5) |
+  |---|---|---|---|
+  | B_bifurcation | 0.00 | 0.22 | 0,0,15,16,58,11 |
+  | G_heavy | 0.00 | 0.73 | 0,0,0,0,0,100 |
+  | G_jitter_hi | 0.00 | 0.02 | 0,0,7,6,52,35 |
+  | G_jitter_mid | 0.00 | 0.05 | 0,0,21,6,48,25 |
+  | H_gain | 0.00 | 0.00 | 0,0,76,0,0,24 |
+  | H_jitter_t | 0.00 | 0.70 | 0,0,0,0,0,100 |
+
+  - **Note (descriptive):** the 3-model comparison (null, 2B, M3) would falsely call Model 3 in 73% (G_heavy) and 70% (H_jitter_t) of graded studies. This is why the sealed call uses the 5-model set; it is the reason the 3-model column is not used for any call.
+  - het0.89 (partial): B_bifurcation 0.00 (3-model 0.30), G_jitter_mid 0.00 (0.05).
