@@ -833,3 +833,14 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - R is secondary under the unchanged criteria, with a plant at 0.25–0.32.
   - Fable's count-only estimate: R's kill test will probably fail, because 36 catch CRs per subject is the binding limit. It then becomes an estimate only.
   - First step: size the no-cue BDF range reads and read the prior art.
+- **#2 ds006171: prior art read** (`experiments/ds006171_van/PRIORART.md`; sources opened are listed with URLs).
+  - **Melcón et al. 2024** (Psychophysiology, doi:10.1111/psyp.14525) analysed prestimulus alpha only.
+  - **An existing GitHub reanalysis** (itsxiatong/eeg-awareness-ds006171, Oct 2026, no preprint) already reports:
+    - a two-sided (not lateralised) VAN, seen vs unseen, also at matched contrast (−0.72 µV, p = .014);
+    - P3b unseen = catch (BF10 0.2).
+  - **So a non-lateralised seen/unseen VAN is replication, not new.**
+  - **Still new:** the contra − ipsi VAN at matched contrast (Dembski, Koch & Pitts 2021 argue the awareness negativity is lateralised), and a lateralised unseen-vs-catch test.
+  - **Catch trials have a side** (codes 31/32, "absent Gabor after a left/right cue"), so contra − ipsi is defined for them.
+  - **Open design risk, as in #1:** an unseen Gabor still drives a contralateral sensory response. Unseen > catch cannot separate graded awareness from stimulus residue unless the design adds a window or check that does. Fable's count-only estimate also expects the R kill test to fail.
+  - **Download:** the 35 whole no-cue BDF files (20.3 GB, CC0) are downloading to `datasets/local/r19_ds006171/` (gitignored).
+  - **Next:** a Fable design pass for #2 before any EEG is read.
