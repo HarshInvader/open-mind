@@ -63,3 +63,6 @@ experiments/experience_benchmark/raw_boas/
 
 # Cohen et al. 2024 trial table rebuilt from their marker files (third-party data, not ours to republish)
 experiments/cohen_fixed_soa/trials.csv
+
+# Item 4 outputs held until 2026-12-08 (Cohen hold)
+experiments/cohen_fixed_soa/out/s4_*
