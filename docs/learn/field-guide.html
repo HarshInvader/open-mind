@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}[hidden]{display:none!important}</style>
+<title>Consciousness Field Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column like a lab notebook; each stop = claim heading, short text, one instrument (a plot the learner operates), then a named idea. */
+:root{
+  --bg:#F2F4F6; --surface:#FFFFFF; --ink:#15202B; --muted:#5A6875; --line:#D5DCE2;
+  --seen:#C9661A; --missed:#4F6D8A; --ok:#2F7D4A; --bad:#B0412C; --tint:#E7ECF0;
+  --f-display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --f-body:"Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F151B; --surface:#172029; --ink:#E6EBEF; --muted:#93A1AE; --line:#2A3540;
+  --seen:#F0954A; --missed:#8AA9C8; --ok:#5CC27F; --bad:#E2735E; --tint:#1D2833; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F151B; --surface:#172029; --ink:#E6EBEF; --muted:#93A1AE; --line:#2A3540;
+  --seen:#F0954A; --missed:#8AA9C8; --ok:#5CC27F; --bad:#E2735E; --tint:#1D2833; color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:64px}
+header{padding-top:48px;display:flex;flex-direction:column;gap:14px}
+.eyebrow{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(34px,6vw,52px)/1.05 var(--f-display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h2{font:700 clamp(24px,3.6vw,31px)/1.15 var(--f-display);letter-spacing:-.01em;margin:0;text-wrap:balance}
+h3{font:600 15px/1.3 var(--f-body);margin:0}
+p{margin:0;max-width:65ch}
+a{color:inherit;text-decoration-color:var(--muted);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ink)}
+.lede{font-size:19px;color:var(--muted)}
+.route{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:8px}
+.route a{display:flex;flex-direction:column;gap:4px;padding:10px;border-top:2px solid var(--line);text-decoration:none;font-size:13px;line-height:1.3;color:var(--muted)}
+.route a b{font:500 12px var(--f-mono);color:var(--ink)}
+.route a:hover{border-color:var(--ink);color:var(--ink)}
+@media (max-width:560px){.route{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+section{display:flex;flex-direction:column;gap:18px;scroll-margin-top:24px}
+.stop{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--seen)}
+.you{font-size:15px;padding:12px 14px;background:var(--tint);border-radius:8px;color:var(--ink)}
+.you b{font-weight:600}
+.instrument{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.task{font-weight:600;font-size:16px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:600 14px/1 var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:10px 14px;cursor:pointer}
+button:hover{border-color:var(--ink)}
+button:focus-visible,input:focus-visible,canvas:focus-visible{outline:2px solid var(--seen);outline-offset:2px}
+button.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:disabled{opacity:.45;cursor:default}
+label.slider{display:flex;align-items:center;gap:10px;font:500 13px var(--f-mono);color:var(--muted)}
+input[type=range]{width:160px;accent-color:var(--seen)}
+canvas{width:100%;display:block;border-radius:6px;touch-action:manipulation}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font:500 12px var(--f-mono);color:var(--muted)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.tally{font:500 13px var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.fb{font-size:15px;line-height:1.5;padding:10px 12px;border-radius:7px;border:1px solid var(--line)}
+.fb.ok{border-color:var(--ok)} .fb.bad{border-color:var(--bad)}
+.fb b.ok{color:var(--ok)} .fb b.bad{color:var(--bad)}
+.idea{border-left:3px solid var(--ink);padding:2px 0 2px 14px;font-weight:600}
+.src{font-size:13px;color:var(--muted)}
+.note{font-size:13px;color:var(--muted)}
+
+/* stop 2 grid */
+.g2{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;font-size:14px;min-width:0}
+.g2 .hd{font:500 12px/1.3 var(--f-mono);color:var(--muted);padding:6px 4px;align-self:end}
+.g2 .rh{font-weight:600;padding:6px 4px;align-self:center;font-size:13px;max-width:130px}
+.cell{border:1px solid var(--line);border-radius:7px;padding:10px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.cell button{padding:8px 10px;font-size:13px}
+.cell .res{font:500 12px/1.4 var(--f-mono)}
+.cell.right{border-color:var(--ok)} .cell.wrong{border-color:var(--bad)}
+
+/* stop 3 map */
+.map{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;font-size:13px}
+.map .hd{font:500 12px var(--f-mono);color:var(--muted);padding:4px;align-self:end}
+.map .rh{font:500 12px var(--f-mono);color:var(--muted);align-self:center;padding:4px}
+.map .zone{background:var(--tint);border-radius:7px;padding:8px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start;min-height:58px}
+.chip{font:600 12px/1 var(--f-body);padding:7px 9px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+.theories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.theories div{display:flex;flex-direction:column;gap:4px;font-size:14px;line-height:1.45;min-width:0}
+.theories b{font-family:var(--f-display);font-size:17px}
+@media (max-width:560px){.theories{grid-template-columns:1fr}}
+.bet{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.bet:first-of-type{border-top:0}
+.bet .who{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.bet .res{grid-column:1/-1;font-size:14px}
+@media (max-width:480px){.bet{grid-template-columns:1fr}}
+
+/* stop 4 */
+.echoes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.echo{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:8px;padding:8px;background:var(--surface);cursor:pointer;text-align:left;font-weight:400}
+.echo span{font-size:12.5px;line-height:1.35;color:var(--muted)}
+.echo .zip{font:500 12px var(--f-mono);color:var(--ink)}
+.echo.right{border-color:var(--ok)} .echo.wrong{border-color:var(--bad)}
+@media (max-width:520px){.echoes{grid-template-columns:1fr}}
+
+/* stop 5 */
+.ai{display:grid;grid-template-columns:minmax(0,150px) 1fr;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.ai:first-of-type{border-top:0}
+.ai .opts{display:flex;flex-wrap:wrap;gap:6px}
+.ai .opts button{font-size:13px;padding:8px 10px}
+.ai .res{grid-column:1/-1;font-size:14px}
+@media (max-width:480px){.ai{grid-template-columns:1fr}}
+
+.mapsum{display:flex;flex-direction:column;gap:10px;counter-reset:s}
+.mapsum div{display:grid;grid-template-columns:28px 1fr;gap:8px;font-size:16px}
+.mapsum div::before{counter-increment:s;content:counter(s);font:500 13px/1.6 var(--f-mono);color:var(--seen)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Open Mind · lesson 1 · the map</div>
+  <h1>Consciousness research in five stops</h1>
+  <p class="lede">You'll run each idea yourself: flash a face, test which brain wave is real, bet against the big theories, zap a brain, then judge two new cases.</p>
+  <nav class="route" aria-label="Stops">
+    <a href="#s1"><b>1</b>Seen vs missed</a>
+    <a href="#s2"><b>2</b>The task trap</a>
+    <a href="#s3"><b>3</b>The theories</a>
+    <a href="#s4"><b>4</b>Awake vs not</a>
+    <a href="#s5"><b>5</b>Could AI be?</a>
+  </nav>
+</header>
+
+<!-- STOP 1 -->
+<section id="s1">
+  <div class="stop">Stop 1 · the main trick</div>
+  <h2>An unseen face still reaches the brain, then dies out after about 250 ms</h2>
+  <p>Flash a face for a few hundredths of a second and cover it with a pattern. Near the right flash length, people see the identical face on some trials and miss it on others. Same input, different experience. Whatever differs in the brain is a candidate signal of consciousness.</p>
+  <div class="instrument">
+    <div class="task">Flash the face 10 or more times. Then click the plot where seen and missed trials first split apart.</div>
+    <div class="row">
+      <button class="primary" id="flash">Flash a face</button>
+      <button id="flash10">Flash 10</button>
+      <label class="slider" for="dur">flash <input id="dur" type="range" min="17" max="67" step="1" value="33"> <span id="durv">33 ms</span></label>
+    </div>
+    <canvas id="scope" height="260" tabindex="0" aria-label="EEG traces of each trial; click to mark where seen and missed split"></canvas>
+    <div class="row" style="justify-content:space-between">
+      <div class="legend"><span><i class="dot" style="background:var(--seen)"></i>seen</span><span><i class="dot" style="background:var(--missed)"></i>missed</span><span id="markleg" hidden>| your mark</span></div>
+      <div class="tally" id="tally">0 trials</div>
+    </div>
+    <div class="row">
+      <button id="avg" aria-pressed="false">Average seen and missed separately</button>
+      <button id="avgall" aria-pressed="false">Average all trials together</button>
+    </div>
+    <div class="fb" id="fb1" hidden></div>
+    <p class="note">Simplified model: a voltage over the back of the head (EEG). The shapes follow the published pattern, not real data.</p>
+  </div>
+  <div class="you" id="you1">In our chat you said an unseen face gets a response that is <b>"yes, but weaker."</b> Press <i>Average all trials together</i> and look.</div>
+  <p class="idea">The field's main tool is a contrast: same stimulus, seen vs missed. Early processing is shared. The difference shows up late.</p>
+  <p class="src">Sources: <a href="https://opencitizenscience.pages.dev/mind/paper-ledger-c35-sergent-2005" target="_blank" rel="noopener">Sergent 2005</a> (split at about 150–300 ms); <a href="https://opencitizenscience.pages.dev/mind/paper-ledger-c29-sergent-2021" target="_blank" rel="noopener">Sergent 2021</a> (single trials fork, even without a task). Our own outside test could not confirm the fork: at realistic signal strength no pipeline could tell a fork from a dial (<a href="https://github.com/HarshInvader/open-mind/tree/main/experiments/bifurcation" target="_blank" rel="noopener">bifurcation study, killed</a>).</p>
+</section>
+
+<!-- STOP 2 -->
+<section id="s2">
+  <div class="stop">Stop 2 · the trap in the trick</div>
+  <h2>The big late wave (the P3) follows the task, not the seeing</h2>
+  <p>In stop 1, people pressed "seen" or "missed" after every flash. So seen trials differ in two ways: the person saw the face, <i>and</i> they had something to report. To pull these apart, some studies make the faces irrelevant: people do another task and are asked about the faces only afterwards.</p>
+  <div class="instrument">
+    <div class="task">For each case, will the P3 (a big wave at 300–500 ms) appear?</div>
+    <div class="g2" id="g2">
+      <div></div><div class="hd">Face seen</div><div class="hd">Face missed</div>
+      <div class="rh">Faces are the task</div><div class="cell" data-k="ts"></div><div class="cell" data-k="tm"></div>
+      <div class="rh">Faces irrelevant</div><div class="cell" data-k="is"></div><div class="cell" data-k="im"></div>
+    </div>
+    <div class="row"><button class="primary" id="check2" disabled>Check</button></div>
+    <div class="fb" id="fb2" hidden></div>
+  </div>
+  <div class="you">In chat you said: <b>"Maybe it's the task"</b>, fairly sure. Check whether your four answers agree with that.</div>
+  <p class="idea">Any seen-minus-missed difference mixes three things: what comes before seeing (attention, expectation), the seeing itself, and what comes after (deciding, reporting, remembering). Good studies remove the before and after.</p>
+  <p class="src">Sources: <a href="https://opencitizenscience.pages.dev/mind/paper-shafto-pitts-2015-face-ib" target="_blank" rel="noopener">Shafto &amp; Pitts 2015</a>, <a href="https://opencitizenscience.pages.dev/mind/paper-pitts-2014-gamma-p3-postperceptual" target="_blank" rel="noopener">Pitts et al. 2014</a>, <a href="https://opencitizenscience.pages.dev/mind/paper-ledger-c28-pitts-2014" target="_blank" rel="noopener">Pitts et al. 2014 (review)</a>. This comes mostly from one line of labs, so treat it as strong but not settled.</p>
+</section>
+
+<!-- STOP 3 -->
+<section id="s3">
+  <div class="stop">Stop 3 · the theories</div>
+  <h2>The biggest head-to-head test broke a key prediction of each leading theory</h2>
+  <p>Each theory bets on a place and a time for the seen-vs-missed difference. Its true claim goes further: what it is about that activity that makes it an experience.</p>
+  <div class="instrument">
+    <div class="task">Where each theory looks</div>
+    <div class="map" aria-label="Theories placed by brain region and timing">
+      <div></div><div class="hd">Early (before ~250 ms)</div><div class="hd">Late and sustained</div>
+      <div class="rh">Front</div><div class="zone"></div><div class="zone"><span class="chip">GNW</span><span class="chip">HOT</span></div>
+      <div class="rh">Back</div><div class="zone"><span class="chip">RPT</span></div><div class="zone"><span class="chip">IIT</span></div>
+    </div>
+    <div class="theories">
+      <div><b>GNW</b> Global neuronal workspace. A content becomes conscious when it "ignites" and is broadcast through front and parietal areas to the whole brain.</div>
+      <div><b>IIT</b> Integrated information theory. Experience is a physical structure of cause and effect that is both unified and highly specific. Its best candidate in the brain is the back of the cortex.</div>
+      <div><b>RPT</b> Recurrent processing theory. Feedback loops inside visual cortex are enough for seeing. The front of the brain is for reporting.</div>
+      <div><b>HOT</b> Higher-order theories. You are conscious of a perception when your brain represents it as your own, which involves the front of the brain.</div>
+    </div>
+  </div>
+  <p>COGITATE (2025) made GNW and IIT agree in advance what would count against them. 256 people looked at clearly visible pictures while their brains were recorded three ways.</p>
+  <div class="instrument" id="bets">
+    <div class="task">Bet on each prediction before you see the result.</div>
+    <div class="bet" data-k="a"><div><div class="who">GNW predicted</div>The front of the brain carries what the picture is (face vs object).</div><div class="row"><button data-v="1">Found</button><button data-v="0">Not found</button></div><div class="res" hidden></div></div>
+    <div class="bet" data-k="b"><div><div class="who">GNW predicted</div>The front of the brain "ignites" again when the picture disappears.</div><div class="row"><button data-v="1">Found</button><button data-v="0">Not found</button></div><div class="res" hidden></div></div>
+    <div class="bet" data-k="c"><div><div class="who">IIT predicted</div>The back of the brain stays in sync for as long as the picture is seen.</div><div class="row"><button data-v="1">Found</button><button data-v="0">Not found</button></div><div class="res" hidden></div></div>
+    <div class="fb" id="fb3" hidden></div>
+  </div>
+  <p>GNW's team replied that experiment 1 never tested their central claim, because every picture was visible: there were no missed trials. Experiment 2 has them (faces in the background of a video game) and its results aren't out yet. On 2026-11-21 we <a href="https://github.com/HarshInvader/open-mind/blob/main/docs/prereg/2026-11-21_cogitate_exp2_forecasts.md" target="_blank" rel="noopener">sealed 17 forecasts</a> for it. When results arrive, we'll score whether our reading of the field beats each theory as a forecaster.</p>
+  <p class="idea">The theories agree on most of the data. They disagree on which part of the seen-vs-missed difference <i>is</i> the experience. Tests win only when the theories have signed up in advance to different predictions.</p>
+  <p class="src">Sources: <a href="https://opencitizenscience.pages.dev/mind/paper-adversarial-testing-of-global-neuronal-workspace" target="_blank" rel="noopener">Cogitate Consortium 2025</a>, <a href="https://opencitizenscience.pages.dev/mind/paper-naccache-2025-gnw-reply-cogitate" target="_blank" rel="noopener">Naccache et al. 2025 (GNW reply)</a>, <a href="https://opencitizenscience.pages.dev/mind/paper-melloni-2023-cogitate-protocol" target="_blank" rel="noopener">Melloni et al. 2023 (protocol)</a>, <a href="https://opencitizenscience.pages.dev/mind/paper-iit-4-0" target="_blank" rel="noopener">IIT 4.0</a>.</p>
+</section>
+
+<!-- STOP 4 -->
+<section id="s4">
+  <div class="stop">Stop 4 · the other question</div>
+  <h2>A conscious brain answers a magnetic pulse with an echo that is both widespread and varied</h2>
+  <p>Stops 1–3 ask what makes one content conscious. A second question asks whether a person is conscious at all: awake, in deep sleep, anaesthetised, in a coma. You can't ask someone in a coma. So researchers knock on the brain: a magnetic pulse (TMS) to one spot, with EEG recording the echo.</p>
+  <div class="instrument">
+    <div class="task">Three echoes from the same pulse. Which brain is awake?</div>
+    <div class="echoes" id="echoes">
+      <button class="echo" data-k="A"><canvas height="110" aria-hidden="true"></canvas><span>Spreads everywhere, but every site does the same thing.</span><span class="zip" hidden></span></button>
+      <button class="echo" data-k="B"><canvas height="110" aria-hidden="true"></canvas><span>Stays near the pulse and dies out fast.</span><span class="zip" hidden></span></button>
+      <button class="echo" data-k="C"><canvas height="110" aria-hidden="true"></canvas><span>Spreads, and each site does something different.</span><span class="zip" hidden></span></button>
+    </div>
+    <p class="note">Rows are recording sites, left to right is 0–300 ms after the pulse. Toy patterns. The score is a real compression count (Lempel-Ziv) run on these toy patterns, the same idea PCI uses on real data.</p>
+    <div class="fb" id="fb4" hidden></div>
+  </div>
+  <p>This is the <b>perturbational complexity index (PCI)</b>: "zap and zip". A threshold set on 150 people with known states later flagged 9 of 43 patients diagnosed as vegetative with scores like conscious people. Under ketamine, volunteers stop responding, but the echo stays complex, and afterwards they report long, vivid dreams.</p>
+  <p class="idea">PCI measures the brain's capacity for experience, separately from behaviour. Not responding is not the same as not experiencing.</p>
+  <p class="src">Sources: <a href="https://opencitizenscience.pages.dev/mind/paper-casali-pci-2013" target="_blank" rel="noopener">Casali 2013</a>, <a href="https://opencitizenscience.pages.dev/mind/paper-casarotto-pci-stratification" target="_blank" rel="noopener">Casarotto 2016</a>, <a href="https://opencitizenscience.pages.dev/mind/paper-sarasso-ketamine-pci" target="_blank" rel="noopener">Sarasso 2015 (ketamine)</a>, <a href="https://opencitizenscience.pages.dev/mind/paper-massimini-2005-sleep-effective-connectivity" target="_blank" rel="noopener">Massimini 2005 (sleep)</a>.</p>
+</section>
+
+<!-- STOP 5 -->
+<section id="s5">
+  <div class="stop">Stop 5 · AI</div>
+  <h2>Whether AI could be conscious depends on whether a theory cares what a system computes or how it is physically built</h2>
+  <p>Take a future AI running on ordinary computer chips, with whatever software you like.</p>
+  <div class="instrument" id="aiq">
+    <div class="task">What would each theory say about it?</div>
+    <div class="ai" data-k="GNW" data-a="d"><b>GNW</b><div class="opts"><button data-v="d">Depends on its design</button><button data-v="n">No, not on these chips</button></div><div class="res" hidden></div></div>
+    <div class="ai" data-k="HOT" data-a="d"><b>HOT</b><div class="opts"><button data-v="d">Depends on its design</button><button data-v="n">No, not on these chips</button></div><div class="res" hidden></div></div>
+    <div class="ai" data-k="RPT" data-a="d"><b>RPT</b><div class="opts"><button data-v="d">Depends on its design</button><button data-v="n">No, not on these chips</button></div><div class="res" hidden></div></div>
+    <div class="ai" data-k="IIT" data-a="n"><b>IIT</b><div class="opts"><button data-v="d">Depends on its design</button><button data-v="n">No, not on these chips</button></div><div class="res" hidden></div></div>
+  </div>
+  <p>Butlin and colleagues turned the computing theories into a checklist of "indicator properties" (a workspace, recurrence, self-monitoring, and so on) and check an AI's machinery against it, rather than asking the chatbot how it feels. Their 2023 report found no current system was a strong candidate. Our <i>Can AI be conscious?</i> sub-project runs kill tests on this.</p>
+  <p class="idea">Most theories are functionalist: the right organisation, in any material, would be enough. IIT is the main exception. So a theory's verdict on AI follows from what it says consciousness is.</p>
+  <p class="src">Sources: <a href="https://opencitizenscience.pages.dev/mind/paper-butlin-indicators-consciousness-ai" target="_blank" rel="noopener">Butlin et al. 2025</a>, <a href="https://opencitizenscience.pages.dev/mind/paper-iit-4-0" target="_blank" rel="noopener">IIT 4.0</a>.</p>
+</section>
+
+<!-- TRANSFER -->
+<section id="s6">
+  <div class="stop">Use the map</div>
+  <h2>Two new cases</h2>
+  <div class="instrument" id="t1">
+    <div class="task">A new paper: when people report seeing a word, a frontal wave appears at 400 ms. On missed trials it doesn't. The authors say they found consciousness in the frontal lobe. What do you check first?</div>
+    <div class="row" style="flex-direction:column;align-items:stretch">
+      <button data-v="a">Whether more people would make the result stronger</button>
+      <button data-v="b">Whether the wave appears when the word is seen but doesn't need reporting</button>
+      <button data-v="c">Whether fMRI finds the same frontal area</button>
+    </div>
+    <div class="fb" hidden></div>
+  </div>
+  <div class="instrument" id="t2">
+    <div class="task">A patient has never responded to a command since their injury. Their TMS echo spreads widely and differs at every site. What follows?</div>
+    <div class="row" style="flex-direction:column;align-items:stretch">
+      <button data-v="a">They are unconscious: no response means no experience</button>
+      <button data-v="b">They may be conscious and unable to show it</button>
+      <button data-v="c">The measurement must be broken</button>
+    </div>
+    <div class="fb" hidden></div>
+  </div>
+</section>
+
+<section>
+  <div class="stop">Your map</div>
+  <h2>Five sentences to keep</h2>
+  <div class="mapsum">
+    <div>Hold the stimulus fixed and compare seen with missed. Early processing is shared and the split comes late, around 250–300 ms.</div>
+    <div>Part of that split is not the seeing but the task and the report. Remove them and the big late P3 goes away. An earlier awareness wave stays.</div>
+    <div>GNW looks for late frontal broadcast and IIT for integrated structure at the back. The first head-to-head test broke a key bet on each side.</div>
+    <div>Whether someone is conscious at all can be measured without their behaviour: a complex, varied echo to a pulse (PCI).</div>
+    <div>A theory's verdict on AI follows from whether it cares what a system computes or what it is physically.</div>
+  </div>
+  <p class="note">Next lessons go deep on single papers from the <a href="https://opencitizenscience.pages.dev/mind/library" target="_blank" rel="noopener">library</a>, starting with whichever stop felt shakiest.</p>
+</section>
+</div>
+
+<script>
+(function(){
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function rgb(hex){hex=hex.replace('#','');return [0,2,4].map(i=>parseInt(hex.substr(i,2),16));}
+function fit(c){const dpr=window.devicePixelRatio||1,w=c.clientWidth,h=+c.getAttribute('height');c.width=Math.round(w*dpr);c.height=Math.round(h*dpr);c.style.height=h+'px';const x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x,w,h};}
+const G=(t,m,s)=>Math.exp(-0.5*((t-m)/s)**2);
+
+/* ---------- STOP 1 ---------- */
+const scope=document.getElementById('scope'),durI=document.getElementById('dur'),durV=document.getElementById('durv');
+const T=[];for(let t=-100;t<=600;t+=4)T.push(t);
+let trials=[],showAvg=false,showAll=false,mark=null;
+function makeTrial(){
+  const d=+durI.value,p=1/(1+Math.exp(-(d-33)/4.5)),seen=Math.random()<p,A=0.75+0.5*(d-17)/50;
+  const ns=[0,1,2,3].map(()=>({a:0.08+Math.random()*0.1,f:3+Math.random()*10,ph:Math.random()*6.28}));
+  const amp=0.85+Math.random()*0.3;
+  const v=T.map(t=>{let e=A*(1.0*G(t,100,18)-1.5*G(t,170,22)+0.5*G(t,225,28));
+    let l=seen?amp*2.1/(1+Math.exp(-(t-285)/22))*(t>520?Math.max(0.6,1-(t-520)/300):1):0.45*G(t,270,35);
+    let n=ns.reduce((s,q)=>s+q.a*Math.sin(2*Math.PI*q.f*t/1000+q.ph),0);return e+l+n;});
+  return {seen,v};
+}
+function drawScope(){
+  const {x,w,h}=fit(scope),L=40,R=10,Tp=12,B=28,ink=css('--ink'),mut=css('--muted'),line=css('--line'),sc=css('--seen'),mc=css('--missed');
+  const X=t=>L+(t+100)/700*(w-L-R),Y=v=>Tp+(3.2-v)/5.4*(h-Tp-B);
+  x.clearRect(0,0,w,h);x.font='11px "JetBrains Mono", monospace';x.fillStyle=mut;x.strokeStyle=line;x.lineWidth=1;
+  for(let t=0;t<=600;t+=100){x.beginPath();x.moveTo(X(t),Tp);x.lineTo(X(t),h-B);x.stroke();x.textAlign='center';x.fillText(t===0?'0':t,X(t),h-B+15);}
+  x.textAlign='right';x.fillText('ms',w-R,h-4);
+  x.beginPath();x.moveTo(L,Y(0));x.lineTo(w-R,Y(0));x.stroke();
+  const d=+durI.value;x.fillStyle=sc;x.globalAlpha=.18;x.fillRect(X(0),Tp,X(d)-X(0),h-Tp-B);x.fillStyle=mut;x.globalAlpha=.12;x.fillRect(X(d),Tp,X(d+100)-X(d),h-Tp-B);x.globalAlpha=1;
+  x.fillStyle=mut;x.textAlign='left';x.fillText('face',X(0)+2,Tp+10);x.fillText('mask',X(d)+3,Tp+10);
+  const path=(v,col,lw,a)=>{x.beginPath();T.forEach((t,i)=>{const px=X(t),py=Y(v[i]);i?x.lineTo(px,py):x.moveTo(px,py);});x.strokeStyle=col;x.lineWidth=lw;x.globalAlpha=a;x.stroke();x.globalAlpha=1;};
+  const recent=trials.slice(-14);
+  recent.forEach((tr,i)=>path(tr.v,tr.seen?sc:mc,i===recent.length-1?2:1.2,(showAvg||showAll)?0.12:(i===recent.length-1?1:0.4)));
+  const mean=arr=>T.map((_,i)=>arr.reduce((s,a)=>s+a.v[i],0)/arr.length);
+  const S=trials.filter(t=>t.seen),M=trials.filter(t=>!t.seen);
+  if(showAvg){if(S.length)path(mean(S),sc,3,1);if(M.length)path(mean(M),mc,3,1);}
+  if(showAll&&trials.length)path(mean(trials),ink,3,1);
+  if(mark!==null){x.setLineDash([4,4]);x.strokeStyle=ink;x.lineWidth=1.5;x.beginPath();x.moveTo(X(mark),Tp);x.lineTo(X(mark),h-B);x.stroke();x.setLineDash([]);x.fillStyle=ink;x.textAlign='center';x.fillText(Math.round(mark)+' ms',X(mark),Tp+24);}
+  x.save();x.translate(12,(h-B+Tp)/2);x.rotate(-Math.PI/2);x.textAlign='center';x.fillStyle=mut;x.fillText('voltage',0,0);x.restore();
+  scope._X=X;scope._L=L;scope._R=R;
+  const n=trials.length;document.getElementById('tally').textContent=n+' trials · '+S.length+' seen · '+M.length+' missed';
+}
+function flash(k){for(let i=0;i<k;i++)trials.push(makeTrial());if(trials.length>200)trials=trials.slice(-200);drawScope();}
+document.getElementById('flash').onclick=()=>flash(1);
+document.getElementById('flash10').onclick=()=>flash(10);
+durI.oninput=()=>{durV.textContent=durI.value+' ms';drawScope();};
+const avgB=document.getElementById('avg'),allB=document.getElementById('avgall'),fb1=document.getElementById('fb1');
+avgB.onclick=()=>{showAvg=!showAvg;avgB.setAttribute('aria-pressed',showAvg);drawScope();};
+allB.onclick=()=>{showAll=!showAll;allB.setAttribute('aria-pressed',showAll);drawScope();
+  if(showAll&&trials.length){const y=document.getElementById('you1');y.innerHTML='You said <b>"yes, but weaker."</b> That is exactly what the average shows: a smaller late wave. But no single trial looks like that. Each one either takes off or dies. Averaging blends a fork into what looks like a dial, which is why single-trial analysis matters.';}};
+scope.addEventListener('click',e=>{
+  const r=scope.getBoundingClientRect(),px=e.clientX-r.left,w=r.width;
+  const t=(px-scope._L)/(w-scope._L-scope._R)*700-100;if(t<0||t>600)return;mark=t;document.getElementById('markleg').hidden=false;drawScope();
+  const S=trials.filter(t=>t.seen).length,M=trials.length-S;fb1.hidden=false;
+  if(S<2||M<2){fb1.className='fb';fb1.innerHTML='Flash more first: you need a few seen <i>and</i> a few missed trials to compare. Try a flash of 30–36 ms.';return;}
+  if(t>=220&&t<=330){fb1.className='fb ok';fb1.innerHTML='<b class="ok">Right.</b> Before about 250 ms both kinds of trial carry the same early waves: the visual cortex processed the face either way. After that, seen trials rise and stay up, and missed ones fade.';}
+  else if(t<220){fb1.className='fb bad';fb1.innerHTML='<b class="bad">Too early.</b> Look at the first bumps around 100–200 ms: orange and blue lie on top of each other there. Find where they stop overlapping.';}
+  else{fb1.className='fb bad';fb1.innerHTML='<b class="bad">Too late.</b> By then they have been apart for a while. Find where the orange lines first start to climb away from the blue ones.';}
+});
+flash(6);
+
+/* ---------- STOP 2 ---------- */
+const truth={ts:1,tm:0,is:0,im:0},guess={};
+const why={ts:'P3 present: seen and needed for the task.',tm:'No P3: missed.',is:'No P3, even though they saw the face.',im:'No P3: missed and irrelevant.'};
+document.querySelectorAll('#g2 .cell').forEach(c=>{
+  const k=c.dataset.k;c.innerHTML='<div class="row"><button data-v="1">P3</button><button data-v="0">No P3</button></div><div class="res" hidden></div>';
+  c.querySelectorAll('button').forEach(b=>b.onclick=()=>{guess[k]=+b.dataset.v;c.querySelectorAll('button').forEach(o=>o.setAttribute('aria-pressed',o===b));
+    document.getElementById('check2').disabled=Object.keys(guess).length<4;});
+});
+document.getElementById('check2').onclick=()=>{
+  let right=0;document.querySelectorAll('#g2 .cell').forEach(c=>{const k=c.dataset.k,ok=guess[k]===truth[k];right+=ok;c.classList.toggle('right',ok);c.classList.toggle('wrong',!ok);
+    const r=c.querySelector('.res');r.hidden=false;r.textContent=why[k];});
+  const fb=document.getElementById('fb2');fb.hidden=false;
+  const missIS=guess.is!==truth.is;
+  fb.className='fb '+(right===4?'ok':'bad');
+  fb.innerHTML=(right===4?'<b class="ok">4 of 4.</b> ':'<b class="bad">'+right+' of 4.</b> ')+
+   (missIS?'The surprise is the bottom-left cell: people <i>saw</i> the face, but with no task the P3 was absent. So the P3 tracks the task, not the seeing. ':'The bottom-left cell is the key one: seen, but no task, and no P3. ')+
+   'What does survive without a task is an earlier wave over the back of the head, at about 200–300 ms (the "visual awareness negativity"). It is there whenever the face is seen, task or not. That makes it the better candidate signal of seeing itself.';
+};
+
+/* ---------- STOP 3 ---------- */
+const betTruth={a:[1,'Found. The picture\'s category (face vs object) could be read from frontal areas about 0.2–0.4 s after it appeared. Finer detail (which face) could not. GNW counts this as a win.'],
+  b:[0,'Mostly not found. When pictures disappeared, frontal areas did not flare up again. GNW\'s team now says this was never a core prediction, although they signed off on it beforehand.'],
+  c:[0,'Not found. The back of the brain did not stay in sync for as long as the picture was seen. This was IIT\'s key prediction.']};
+let betN=0,betR=0;
+document.querySelectorAll('#bets .bet').forEach(b=>{const k=b.dataset.k;b.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
+  if(b.dataset.done)return;b.dataset.done=1;const ok=+btn.dataset.v===betTruth[k][0];betN++;betR+=ok;
+  btn.setAttribute('aria-pressed','true');b.querySelectorAll('button').forEach(o=>o.disabled=true);
+  const r=b.querySelector('.res');r.hidden=false;r.innerHTML='<b class="'+(ok?'ok':'bad')+'" style="color:var(--'+(ok?'ok':'bad')+')">'+(ok?'Your bet was right.':'Your bet was wrong.')+'</b> '+betTruth[k][1];
+  if(betN===3){const fb=document.getElementById('fb3');fb.hidden=false;fb.className='fb';fb.innerHTML='You called '+betR+' of 3. Score: each theory got one hit and lost a central bet. Neither won. Both camps still argue the failed prediction was not core to their theory.';}
+});});
+
+/* ---------- STOP 4 ---------- */
+const CH=12,NB=60;
+function pattern(k){const m=[];for(let c=0;c<CH;c++){const row=[];for(let b=0;b<NB;b++){const t=b*5;let v=0;
+  if(k==='A')v=2.4*G(t,110,40)-1.4*G(t,240,35);
+  else if(k==='B')v=c<2?(c?1.1:1.6)*(G(t,25,12)-0.4*G(t,60,14)):0;
+  else{const d=c*11+(c%3)*9;if(t>=d){const s=t-d,f=7+((c*5)%11)*1.6;v=1.7*Math.exp(-s/170)*Math.sin(2*Math.PI*f*s/1000+c*1.3);}}
+  row.push(v);}m.push(row);}return m;}
+function lzc(s){const n=s.length;let c=1,l=1,i=0,k=1,kmax=1;while(true){if(s[i+k-1]===s[l+k-1]){k++;if(l+k>n){c++;break;}}else{if(k>kmax)kmax=k;i++;if(i===l){c++;l+=kmax;if(l+1>n)break;i=0;k=1;kmax=1;}else k=1;}}return c;}
+function score(m){const s=m.map(r=>r.map(v=>Math.abs(v)>0.45?'1':'0').join('')).join('');const n=s.length;return lzc(s)*Math.log2(n)/n;}
+const pats={A:pattern('A'),B:pattern('B'),C:pattern('C')},scores={};Object.keys(pats).forEach(k=>scores[k]=score(pats[k]));
+const maxS=Math.max(...Object.values(scores));
+function drawEchoes(){document.querySelectorAll('#echoes .echo').forEach(e=>{const c=e.querySelector('canvas'),{x,w,h}=fit(c),m=pats[e.dataset.k];
+  const pos=rgb(css('--seen')),neg=rgb(css('--missed')),cw=w/NB,chh=h/CH;x.fillStyle=css('--tint');x.fillRect(0,0,w,h);
+  for(let r=0;r<CH;r++)for(let b=0;b<NB;b++){const v=m[r][b],a=Math.min(1,Math.abs(v)/1.6),col=v>0?pos:neg;if(a<0.03)continue;x.fillStyle='rgba('+col.join(',')+','+a.toFixed(3)+')';x.fillRect(b*cw,r*chh,Math.ceil(cw),Math.ceil(chh)-1);}
+  x.fillStyle=css('--ink');x.fillRect(0,0,2,chh*1);});}
+const labels={A:'Unconscious: deep sleep or anaesthesia. Big, but every site does the same thing, so it compresses well.',B:'Unconscious: deep sleep. The echo stays local and short.',C:'Awake. Widespread and different at each site: hard to compress.'};
+let picked=false;
+document.querySelectorAll('#echoes .echo').forEach(e=>e.onclick=()=>{
+  if(picked)return;picked=true;const k=e.dataset.k;
+  document.querySelectorAll('#echoes .echo').forEach(o=>{const z=o.querySelector('.zip');z.hidden=false;const s=scores[o.dataset.k]/maxS;z.textContent='complexity '+s.toFixed(2)+' · '+(o.dataset.k==='C'?'awake':'unconscious');o.classList.toggle('right',o.dataset.k==='C');if(o===e&&k!=='C')o.classList.add('wrong');});
+  const fb=document.getElementById('fb4');fb.hidden=false;
+  if(k==='C'){fb.className='fb ok';fb.innerHTML='<b class="ok">Right.</b> '+labels.C+' Consciousness needs both: the parts must talk to each other (it spreads) and each must have something different to say (it varies).';}
+  else if(k==='A'){fb.className='fb bad';fb.innerHTML='<b class="bad">Tempting, but no.</b> '+labels.A+' Size and spread are not enough: if every part says the same thing, the brain is unified but has little to say.';}
+  else{fb.className='fb bad';fb.innerHTML='<b class="bad">No.</b> '+labels.B+' The parts are cut off from each other. The awake echo is the one that spreads and varies.';}
+});
+
+/* ---------- STOP 5 ---------- */
+const aiWhy={GNW:'Depends on design. GNW is about function: a limited workspace whose contents get broadcast to many specialist systems. Build that architecture and GNW has no reason to object to the material.',
+  HOT:'Depends on design. A system that represents its own perceptual states as its own would meet the requirement, in any material.',
+  RPT:'Depends on design. It needs real feedback loops in perception. A purely one-pass (feedforward) network would fail. A recurrent one might pass.',
+  IIT:'No. IIT scores the physical cause-and-effect structure of the hardware, not the software. On ordinary chips that structure barely integrates, so the system would have almost no experience whatever it computes. The flip side: IIT says a system could be conscious while behaving like nothing.'};
+document.querySelectorAll('#aiq .ai').forEach(r=>r.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  if(r.dataset.done)return;r.dataset.done=1;const ok=b.dataset.v===r.dataset.a;b.setAttribute('aria-pressed','true');r.querySelectorAll('button').forEach(o=>o.disabled=true);
+  const res=r.querySelector('.res');res.hidden=false;res.innerHTML='<b style="color:var(--'+(ok?'ok':'bad')+')">'+(ok?'Right.':'Not quite.')+'</b> '+aiWhy[r.dataset.k];}));
+
+/* ---------- TRANSFER ---------- */
+const tr={t1:{a:'b',fb:{a:'More people makes the same confound more certain. Stop 2: the wave could be the report, not the seeing.',b:'Yes. That is stop 2 in action. If the wave disappears when the word is seen but needs no report, it was about the report. If it survives, the claim gets much stronger.',c:'A second method would show the same confound again. The problem is the design, not the recording method.'}},
+  t2:{a:'b',fb:{a:'Stop 4: ketamine volunteers did not respond either, yet had vivid dreams. No response does not mean no experience.',b:'Yes. A complex echo means the brain has the capacity for experience. Casarotto found 9 of 43 "vegetative" patients like this. That changes care decisions.',c:'There is no sign the device is broken. The point of PCI is that it works without the patient\'s behaviour, so it can disagree with what the bedside shows.'}}};
+['t1','t2'].forEach(id=>{const box=document.getElementById(id),fb=box.querySelector('.fb');box.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  box.querySelectorAll('button').forEach(o=>o.setAttribute('aria-pressed',o===b));const ok=b.dataset.v===tr[id].a;fb.hidden=false;fb.className='fb '+(ok?'ok':'bad');
+  fb.innerHTML='<b class="'+(ok?'ok':'bad')+'">'+(ok?'Right.':'Try again.')+'</b> '+tr[id].fb[b.dataset.v];});});
+
+function redraw(){drawScope();drawEchoes();}
+let rt;window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(redraw,120);});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',redraw);
+new MutationObserver(redraw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(redraw);
+drawEchoes();
+})();
+</script>
+
+</html>

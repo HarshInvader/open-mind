@@ -162,3 +162,12 @@ Prereg: `docs/prereg/2026-11-24_cohen_van_identity_avgref.md`. Script: `van_iden
 - **Verdict:** the gate failed. The prereg stated no fallback, so the real slope was not computed and will not be.
 - **Possible causes:** 23 of 300 runs is about 2 SE above 5%, so it may be chance. It may also be heavy-tailed per-subject slopes making a 40-subject t-interval slightly anti-conservative. We did not investigate further, to avoid tuning on a failed gate.
 - **Process note:** the Fable pre-seal review rejected two earlier nulls before calibration. A free permutation doubled the spread of D. A within-quarter permutation left D almost unchanged, which would have leaked the answer.
+
+## Item 4: no-report double difference, run log (sealed 2026-11-25T17:19:35Z, commit 985e6d8)
+
+- **2026-11-25 (old Mac):** `fetch_noreport.py fetch` started. When the old Mac stopped, 16 of 40 subjects were in `datasets/local/cohen2024_nr_epochs/`. Nothing in the no-report data has been looked at.
+- **2026-11-26, 17:39:12Z (new Mac, resume): not a design change.**
+  - The sealed hashes match the files on disk.
+  - `fetch_noreport.py plan` gives 40 subjects, 9,944 trials and 250,588,800 projected bytes, against a budget of 260,000,000. Free disk is 778 GB.
+  - Relaunched `fetch_noreport.py fetch` at `nice -n 20` from `.venv` (Python 3.15.2, numpy 2.5.5), pid 99913. Output is appended to `datasets/local/cohen2024_nr_fetch.out`. The fetch resumes per subject, and about 1.7 h remain at 1 request/s.
+  - When the fetch exits, the next step is `sh run_study4.sh <fetch pid>`, unchanged.

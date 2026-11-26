@@ -60,3 +60,6 @@ experiments/*/features.jsonl
 # Dataset downloads (datasets/fetch.py); never committed
 datasets/local/
 experiments/experience_benchmark/raw_boas/
+
+# Cohen et al. 2024 trial table rebuilt from their marker files (third-party data, not ours to republish)
+experiments/cohen_fixed_soa/trials.csv
