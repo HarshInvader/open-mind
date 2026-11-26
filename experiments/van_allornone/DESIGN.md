@@ -89,3 +89,13 @@ Outputs are in `out/killtest_*.json`. The pre-stated criteria were a median 95% 
 - **More mask-only trials help little.** Most of the noise is in the miss and hit means, which cannot be increased.
 - **A cut of 0.25 passes the call-rate criteria but not the half-width.** It would also call a graded signal with σs = 2 (R ≈ 0.19) all-or-none-compatible.
 - **Decision pending.** Fable's review will decide whether to drop the study, re-cut it, or redesign it. As written, the study fails its kill test.
+
+## 9. Decision: DROPPED before sealing (2026-11-26)
+- **Kill test:** failed its pre-stated criteria (§5, §8). §5 already said "otherwise drop the study before sealing". The cut is not moved and the half-width criterion is not removed.
+- **Fable review:** agreed, and added four reasons:
+  - The planted R was the same in every subject, so real between-subject spread would make the half-width wider still.
+  - A trial-distribution (mixture vs graded) likelihood reduces to the means. Report-face trials only, 39 subjects: hit − miss −1.55 µV (between-subject SD 1.27), single-trial SD 4.08 µV, hit/miss variance ratio 0.995. Mixture variance adds 1–4%, against a standard error of about 3%.
+  - The VAN electrodes and window (PO9/PO10, 140–200 ms) are N170 territory. Stimulus residue (rival C) is therefore the expected outcome, and only R ≈ 0 would be informative, which is where power is worst.
+  - The waveform-shape test is underpowered and not diagnostic.
+- **Fixed now, before item 4 reads any mask-only value:** item 4's output lets miss − CR be computed. If R is ever reported, it is a description only: point estimate and 95% CI, with no call, no claim and no cut chosen afterwards. This file is hashed in `docs/prereg/HASHES.txt` to fix that rule.
+- **Next:** round 19 #2 (ds006171). The primary test is a second-lab, no-mask replication of seen vs unseen at matched contrast. R is secondary, under unchanged kill-test criteria plus a plant at 0.25–0.32. If R's kill test fails, R is reported as an estimate only.

@@ -207,3 +207,4 @@ f1907ce0543efb3653a980c368759b1a5fe0df47de717f6150c97278bad5b16c  experiments/co
 cf1e69e1b773a4dd7c54b312769a7f435beeafcf311b08581af956c539421de9  experiments/sergent_eeg/sergent_gate.py  2026-11-25T18:02:49Z
 2bb552790d2484d908bceecd6bb3488c920fde7e0c8a91c2b4efd77dabac3e71  experiments/sergent_eeg/stream_decode.py  2026-11-25T18:02:49Z
 7da43e22ddd9ac4866cd62b8b301e754e5ed670cbe64872e4a36554b39d323e8  experiments/sergent_eeg/analyse.py  2026-11-25T18:02:49Z
+987f68e8da2023fcfa8c136b72de81c5aedf43c1cc07b1fff12e965bcd888174  experiments/van_allornone/DESIGN.md  2026-11-26T18:13:33Z

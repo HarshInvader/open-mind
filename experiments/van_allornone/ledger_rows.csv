@@ -1,0 +1,2 @@
+id,study,claim,status,evidence
+VAN-AON-KILL,van_allornone,"Cohen 2024 SOA-50 VAN: an unseen face equals mask-only (all-or-none) vs graded, R = (miss-CR)/(hit-CR)",DROPPED (kill test failed before sealing),"synthetic mask-only, 39 subjects: median 95% half-width of R at R=0 0.19 (60 mask-only) / 0.16 (150); criterion <= 0.12; rivals differ by 0.20-0.28 (all-or-none <= 0.12 vs graded 0.32-0.40)"

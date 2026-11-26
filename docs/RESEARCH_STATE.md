@@ -823,3 +823,13 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
     - Next: byte-range sizing of the no-cue BDF reads, before any download.
   - **#3, ds008959 MetaMosquito: KILLED at feasibility.** Only 3 patients have at least 30 visual misses (sub-01 30, sub-04 55, sub-10 36), and only 2 have at least 30 auditory misses (sub-03 30, sub-04 43); the criterion was at least 5. The criterion is not relaxed. A contact-level design on 2–3 patients cannot support the question.
   - **Order now:** #1 (Cohen, must be sealed before item 4's `prep`), then #2 (ds006171, CC0, no hold, publishable sooner), then #4 (conditional on item 4).
+- **Round 19 #1 (Cohen VAN all-or-none) DROPPED before sealing (18:13Z).**
+  - Fable's 0.49 graded floor was corrected: it holds only at equal variance. The graded prediction is 0.32–0.40 at σs 1.25–1.5, against at most 0.12 for all-or-none.
+  - The kill test failed: half-width of R at R = 0 was 0.16–0.19, criterion ≤ 0.12. A sign bug in the linear version was found and fixed; the ratio and linear versions then agree.
+  - Fable's decision review: drop; do not re-cut to 0.25. The VAN window is N170 territory, so a positive R cannot separate graded processing from stimulus residue.
+  - DESIGN.md is hashed with the drop. Any later R is a description only, so item 4 can run without opening a fork. The ledger row is in `experiments/van_allornone/ledger_rows.csv`.
+- **Next: #2 ds006171.**
+  - Primary test: seen vs unseen at matched contrast, a second-lab, no-mask transfer of the sealed VAN PASS.
+  - R is secondary under the unchanged criteria, with a plant at 0.25–0.32.
+  - Fable's count-only estimate: R's kill test will probably fail, because 36 catch CRs per subject is the binding limit. It then becomes an estimate only.
+  - First step: size the no-cue BDF range reads and read the prior art.
