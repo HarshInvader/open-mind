@@ -27,3 +27,4 @@ Prereg: `docs/prereg/2026-11-25_sergent_eeg_five_models.md` (sealed 2026-11-25T1
 
   - **Note (descriptive):** the 3-model comparison (null, 2B, M3) would falsely call Model 3 in 73% (G_heavy) and 70% (H_jitter_t) of graded studies. This is why the sealed call uses the 5-model set; it is the reason the 3-model column is not used for any call.
   - het0.89 (partial): B_bifurcation 0.00 (3-model 0.30), G_jitter_mid 0.00 (0.05).
+- **2026-11-26T21:31:33Z: gate resumed** with `capped.py sergent_gate run` at nice 20. The process list shows 3 spawn workers plus multiprocessing's resource tracker. Finished cell files are skipped. Output is appended to `out_gate/gate_run.log`. After this: `summary`, then streaming once, per the prereg.
