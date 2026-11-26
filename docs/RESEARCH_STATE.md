@@ -791,3 +791,28 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - **Review:** one Fable round with 4 blockers, all fixed before the seal.
   - **Fetch:** launched by the coordinator at 17:12:32Z (9,944 trials, 250.6 MB, about 4.4 h at the observed speed). No no-report value has been looked at.
   - **Hold:** the Cohen hold until 2026-12-08 applies.
+
+### New Mac resume; Fable round 19 ranked list (2026-11-26)
+- **Resume (17:39Z):** sealed hashes match on the new Mac. `.venv` is built (Python 3.15.2, numpy 2.5.5, scipy 1.18.1). Recomputing subject 1 of a finished kill-test cell gave bit-identical output.
+  - Item 1 kill test resumed from 8/21 cells (pid 99902). The sealed `Pool(4)` is kept, as the coordinator allowed.
+  - Item 4 fetch resumed from 16/40 subjects (pid 99913).
+  - Run logs are in each RESULTS.md. Commit 14299f7.
+- **Fable round 19.** All four candidates are original. Every one uses R = (miss − CR) / (hit − CR) at the stage under test, where CR is a correct rejection (no stimulus, reported unseen). R near 0 means the stage is all-or-none; R well above 0 means it is graded.
+  1. **Cohen VAN: does an unseen face equal mask-only?** Data are on disk (report-block RF unseen vs RM unseen).
+     - Rivals: all-or-none (R ≈ 0); selection on a graded signal (R ≥ ~0.49, Fable's figure, to be re-derived by us before sealing); misaligned epochs (P1 would also show miss = CR).
+     - Checks: P1 miss > CR, and P3b R ≈ 0.
+  2. **The same test in a second lab without a mask:** ds006171 (CC0, Gabor detection with catch trials, about 4–9 GB of range reads). Kill test: counts from the behaviour/events files only.
+  3. **Where cortex becomes all-or-none:** MetaMosquito sEEG, ds008959 (CC0, 1.37 GB). Kill test: behaviour CSVs only (at least 30 misses per modality in at least 5 patients).
+  4. **Cohen without report: threshold shift or scale?** Runs only if item 4 does not return REPORT, and needs about 0.5 GB more.
+  - Rejected because every rival predicts the same: seen-class amplitude across SOA; EEG vs rating within heard trials. Rejected because blocked: Cohen false alarms (69 in total). Rejected because underpowered: previous-trial criterion.
+- **Fable on the queue:**
+  - Item 4's report-block output plus the known seen − unseen step gives #1's miss − CR by algebra, so #1 must be sealed before item 4's `prep` runs.
+  - Item 2's design already expects a recall FAIL (tier 2, one-sided).
+  - Item 1: let it finish, but do not relaunch if it dies again.
+  - Fresh eyes: one audit has driven rounds 15–18. ds006171 was skipped in round 14 only because of a 1.5 GB cap that no longer applies. The PLAN's dissociation question has not been touched since 20 Nov.
+- **Decisions (Mind thread):**
+  - #1 goes first. It is designed and sealed (prior art, prereg, calibration, Fable pre-seal review) before `run_study4.sh` is launched. Item 4 cannot start before item 1 releases the Mind lock anyway (3–4 h), so this costs no time. If #1 is not sealed in time, its report-block result is recorded as descriptive only, never confirmatory.
+  - The behaviour-only kill tests for #2 and #3 (a few MB, network only) run now.
+  - Item 2 is unchanged (sealed tier rule).
+  - Item 1 runs to completion through the 2 h harness relaunches. These are resumes of one run, not new attempts.
+  - Audit share: items 1 and 2 are audits, so round 19 is all original, as Fable argued.
