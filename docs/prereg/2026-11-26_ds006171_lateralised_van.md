@@ -103,9 +103,17 @@ The scripts read codes 11–32 and 128 only, never 124/125.
 - **Smoke test** on sub-01, 02, 04 and 10 with the 20 µV HEOG step rule:
   - Rejection is 2%, 15% and 16% in sub-04, sub-10 and sub-02, but 97% in sub-01.
   - Low-passing HEOG at 10 or 6 Hz before the step function changes this little, so it is not adopted.
+- **Sourced thresholds** (follow-up checks in `experiments/ds006171_van/PRIORART.md`):
+  - **No side marker on no-cue catch trials** (Melcón et al. 2024: "No cue preceded the Gabor stimulus"; the targets are 50/50). L(catch) = 0 in expectation is therefore confirmed.
+  - **The photodiode (128) fires on catch trials too** (about 38 ms), so all classes share the timing rule.
+  - **Trial rule kept as a step function.**
+    - Papaioannou & Luck 2020 (doi:10.1111/psyp.13532) use a step function on uncorrected HEOG and VEOG; the step size is not stated there.
+    - The absolute ±25 µV HEOG rule of Constant et al. 2025 (doi:10.1016/j.cortex.2025.05.014) was tested label-blind and rejected: it removed 41% and 39% of trials in sub-02 and sub-10, which is broadband EMG at the canthi, against 12–15% for the step rule.
+    - The step threshold of 20 µV is our choice, not a sourced value.
+  - **Subject-level control (sourced):** the residual HEOG difference wave (left-target minus right-target trials, kept trials, 0–300 ms) must stay within 3.2 µV (Papaioannou & Luck 2020, about ±0.1°). A subject over this is excluded. Averaging removes EMG, so this is the real saccade control. It is computed label-blind by target side, before labels are read.
 - **Rule to fix before sealing (label-blind):**
-  - A subject whose HEOG step rule rejects > 50% of trials has unusable HEOG and is excluded. Saccades are the main threat to a lateralised measure, so there is no fallback channel.
-  - A subject whose VEOG step or peak-to-peak rejects > 50% is excluded on the same logic.
+  - A subject whose HEOG step rule rejects > 45% of trials has unusable HEOG and is excluded. The 45% is Melcón et al.'s own exclusion rule on this dataset. Saccades are the main threat to a lateralised measure, so there is no fallback channel.
+  - A subject whose VEOG rule rejects > 45% is excluded on the same logic.
   - Exclusions are counted before labels are read. They count against the 24-subject minimum.
 
 ## 9. Not verified yet
