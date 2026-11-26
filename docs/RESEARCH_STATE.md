@@ -844,3 +844,11 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
   - **Open design risk, as in #1:** an unseen Gabor still drives a contralateral sensory response. Unseen > catch cannot separate graded awareness from stimulus residue unless the design adds a window or check that does. Fable's count-only estimate also expects the R kill test to fail.
   - **Download:** the 35 whole no-cue BDF files (20.3 GB, CC0) are downloading to `datasets/local/r19_ds006171/` (gitignored).
   - **Next:** a Fable design pass for #2 before any EEG is read.
+- **#2 ds006171: Fable design pass; prereg drafted (not sealed).** Draft: `docs/prereg/2026-11-26_ds006171_lateralised_van.md`. All 35 no-cue BDF files are downloaded (19 GB, every file size checked). No EEG has been read.
+  - **Correction to my feasibility count:** the `subjective_r` column is blank for 107–364 trials in nine subjects. The raw response codes 124/125 are complete, so all 35 subjects are usable, not 27. Verified by us.
+  - **Contrast is not matched by the staircase:** hits are a median 4.1% higher (verified), so matching is done within hemifield with a 1:1 caliper.
+  - **Orientation probe:** unseen accuracy is at chance (50.7%), so that split is dead.
+  - **Catch side is nominal in the no-cue task:** catch trials become a negative control (L = 0), and unseen-vs-catch becomes unseen vs 0.
+  - **New rival, the N2pc:** this task cannot separate it, so the claim is "awareness-linked lateralised negativity".
+  - **Graded vs residue cannot be separated:** R_lat is descriptive unless its kill test passes unchanged.
+  - **Next:** check the HEOG thresholds and Melcón's catch-cue methods against opened sources, then write the label-free kill test. It runs when the Mind lock is free, after item 1, then item 4.
