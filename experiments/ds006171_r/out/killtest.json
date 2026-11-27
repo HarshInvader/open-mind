@@ -1,0 +1,310 @@
+{
+ "n_used": 26,
+ "n_prepped": 35,
+ "behaviour": {
+  "sub-01": {
+   "hit": 188,
+   "miss": 172,
+   "cr": 40,
+   "fa": 0,
+   "kept_gabor": 8,
+   "kept_catch": 1
+  },
+  "sub-02": {
+   "hit": 135,
+   "miss": 225,
+   "cr": 40,
+   "fa": 0,
+   "kept_gabor": 292,
+   "kept_catch": 38
+  },
+  "sub-03": {
+   "hit": 186,
+   "miss": 172,
+   "cr": 36,
+   "fa": 4,
+   "kept_gabor": 164,
+   "kept_catch": 14
+  },
+  "sub-04": {
+   "hit": 150,
+   "miss": 210,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 324,
+   "kept_catch": 35
+  },
+  "sub-05": {
+   "hit": 171,
+   "miss": 189,
+   "cr": 35,
+   "fa": 5,
+   "kept_gabor": 255,
+   "kept_catch": 29
+  },
+  "sub-06": {
+   "hit": 176,
+   "miss": 184,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 348,
+   "kept_catch": 37
+  },
+  "sub-07": {
+   "hit": 161,
+   "miss": 199,
+   "cr": 40,
+   "fa": 0,
+   "kept_gabor": 350,
+   "kept_catch": 40
+  },
+  "sub-08": {
+   "hit": 181,
+   "miss": 178,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 115,
+   "kept_catch": 10
+  },
+  "sub-09": {
+   "hit": 183,
+   "miss": 177,
+   "cr": 34,
+   "fa": 6,
+   "kept_gabor": 20,
+   "kept_catch": 4
+  },
+  "sub-10": {
+   "hit": 162,
+   "miss": 198,
+   "cr": 31,
+   "fa": 9,
+   "kept_gabor": 305,
+   "kept_catch": 30
+  },
+  "sub-11": {
+   "hit": 178,
+   "miss": 182,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 243,
+   "kept_catch": 27
+  },
+  "sub-12": {
+   "hit": 180,
+   "miss": 180,
+   "cr": 36,
+   "fa": 4,
+   "kept_gabor": 345,
+   "kept_catch": 39
+  },
+  "sub-13": {
+   "hit": 167,
+   "miss": 192,
+   "cr": 36,
+   "fa": 4,
+   "kept_gabor": 129,
+   "kept_catch": 11
+  },
+  "sub-14": {
+   "hit": 176,
+   "miss": 183,
+   "cr": 38,
+   "fa": 2,
+   "kept_gabor": 148,
+   "kept_catch": 22
+  },
+  "sub-15": {
+   "hit": 178,
+   "miss": 181,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 337,
+   "kept_catch": 38
+  },
+  "sub-16": {
+   "hit": 129,
+   "miss": 230,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 344,
+   "kept_catch": 36
+  },
+  "sub-17": {
+   "hit": 161,
+   "miss": 199,
+   "cr": 38,
+   "fa": 2,
+   "kept_gabor": 343,
+   "kept_catch": 40
+  },
+  "sub-18": {
+   "hit": 157,
+   "miss": 202,
+   "cr": 38,
+   "fa": 2,
+   "kept_gabor": 339,
+   "kept_catch": 40
+  },
+  "sub-19": {
+   "hit": 181,
+   "miss": 177,
+   "cr": 33,
+   "fa": 6,
+   "kept_gabor": 0,
+   "kept_catch": 0
+  },
+  "sub-20": {
+   "hit": 166,
+   "miss": 193,
+   "cr": 36,
+   "fa": 4,
+   "kept_gabor": 296,
+   "kept_catch": 34
+  },
+  "sub-21": {
+   "hit": 190,
+   "miss": 170,
+   "cr": 31,
+   "fa": 9,
+   "kept_gabor": 177,
+   "kept_catch": 23
+  },
+  "sub-22": {
+   "hit": 186,
+   "miss": 174,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 263,
+   "kept_catch": 33
+  },
+  "sub-23": {
+   "hit": 167,
+   "miss": 193,
+   "cr": 38,
+   "fa": 2,
+   "kept_gabor": 342,
+   "kept_catch": 39
+  },
+  "sub-24": {
+   "hit": 182,
+   "miss": 177,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 18,
+   "kept_catch": 2
+  },
+  "sub-25": {
+   "hit": 158,
+   "miss": 202,
+   "cr": 38,
+   "fa": 2,
+   "kept_gabor": 358,
+   "kept_catch": 40
+  },
+  "sub-26": {
+   "hit": 140,
+   "miss": 220,
+   "cr": 40,
+   "fa": 0,
+   "kept_gabor": 220,
+   "kept_catch": 21
+  },
+  "sub-27": {
+   "hit": 179,
+   "miss": 181,
+   "cr": 33,
+   "fa": 7,
+   "kept_gabor": 251,
+   "kept_catch": 24
+  },
+  "sub-28": {
+   "hit": 188,
+   "miss": 172,
+   "cr": 38,
+   "fa": 2,
+   "kept_gabor": 181,
+   "kept_catch": 22
+  },
+  "sub-29": {
+   "hit": 177,
+   "miss": 181,
+   "cr": 38,
+   "fa": 2,
+   "kept_gabor": 2,
+   "kept_catch": 0
+  },
+  "sub-30": {
+   "hit": 161,
+   "miss": 199,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 290,
+   "kept_catch": 39
+  },
+  "sub-31": {
+   "hit": 167,
+   "miss": 193,
+   "cr": 31,
+   "fa": 9,
+   "kept_gabor": 336,
+   "kept_catch": 38
+  },
+  "sub-32": {
+   "hit": 164,
+   "miss": 196,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 331,
+   "kept_catch": 36
+  },
+  "sub-33": {
+   "hit": 183,
+   "miss": 177,
+   "cr": 38,
+   "fa": 2,
+   "kept_gabor": 250,
+   "kept_catch": 26
+  },
+  "sub-34": {
+   "hit": 173,
+   "miss": 187,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 300,
+   "kept_catch": 35
+  },
+  "sub-36": {
+   "hit": 180,
+   "miss": 180,
+   "cr": 39,
+   "fa": 1,
+   "kept_gabor": 348,
+   "kept_catch": 38
+  }
+ },
+ "sd_true": 1.3437817096710205,
+ "sampling_sd": 0.6665212512016296,
+ "median_cr": 34.5,
+ "plants": {
+  "0.0": {
+   "correct": 0.24,
+   "wrong": 0.0,
+   "inconclusive": 0.76,
+   "median_halfwidth": 0.45981901772320233
+  },
+  "0.32": {
+   "correct": 0.195,
+   "wrong": 0.005,
+   "inconclusive": 0.8,
+   "median_halfwidth": 0.282740094512701
+  },
+  "0.4": {
+   "correct": 0.51,
+   "wrong": 0.0,
+   "inconclusive": 0.49,
+   "median_halfwidth": 0.20693564915563906
+  }
+ },
+ "PASS": false
+}

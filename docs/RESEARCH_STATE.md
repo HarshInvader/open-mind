@@ -869,3 +869,7 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
 - **Item 4 (Cohen no-report DD):** ran 21:25Z; outcome held privately until 2026-12-08 (Cohen hold).
 - **Item 2:** gate TIER 2 at d0.89; remaining het0.89 cells resume via `capped.py` (3 workers), then streaming once per prereg. Expect UNRESOLVED; run once, do not extend.
 - **Ranked list now:** (1) item 2 finish gate → stream → fit, once; (2) ds006171 bilateral unseen-vs-catch R, kill test only (likely fails: ~36 CRs/subject; R cannot separate graded from residue; drop on fail, no re-cut); (3) new Fable round 20, since round 19 is spent.
+
+### Round 19 #3 (ds006171 bilateral unseen vs absent R) DROPPED (2026-11-26)
+- Label-free kill test: R half-width at R = 0 is 0.46 (criterion ≤ 0.12); correct calls 0.24 / 0.195 / 0.51 at R = 0 / 0.32 / 0.40. Dropped, as Fable predicted. Round 19 is now spent (#1, #2, #3 all dropped at kill test, before sealing).
+- Item 2 gate complete (TIER 2); streaming pass started. Next: Fable round 20 (new candidates), while streaming runs.

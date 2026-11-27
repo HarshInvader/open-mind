@@ -1,0 +1,2 @@
+id,study,claim,status,evidence
+DS6171-R-KILL,ds006171_r,"ds006171 no-cue: bilateral 180-280 ms VAN of an unseen Gabor equals target-absent (R = (miss-CR)/(hit-CR))",DROPPED (kill test failed before sealing),"label-free, 26 subjects, ~35 CR each, plant hit-miss -0.69 uV (sourced): median 95% half-width of R at R=0 0.46 (criterion <= 0.12); correct calls 0.24 / 0.195 / 0.51 at R = 0 / 0.32 / 0.40"
