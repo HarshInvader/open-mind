@@ -162,7 +162,7 @@ if __name__ == "__main__":
     if a == ["positions"]:
         positions()
     else:
-        subs = sorted(p.name for p in RAW.glob("sub-*")) if a == ["all"] else a
+        subs = P.subjects() if a == ["all"] else a          # subjects with a no-cue BDF (35)
         for s in subs:
             if not (OUT / "feat" / f"{s}.npz").exists():
                 features(s)

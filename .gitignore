@@ -66,3 +66,6 @@ experiments/cohen_fixed_soa/trials.csv
 
 # Item 4 outputs held until 2026-12-08 (Cohen hold)
 experiments/cohen_fixed_soa/out/s4_*
+
+# Round 20 #1 outputs contain Cohen-derived numbers (Cohen hold until 2026-12-08)
+experiments/xfer_cohen_ds006171/out/

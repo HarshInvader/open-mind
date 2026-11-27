@@ -64,3 +64,49 @@ The transfer crosses lab, cap, subjects, stimulus (central face vs lateral Gabor
 - Prior-art search for cross-lab or cross-paradigm awareness decoder transfer.
 - Confirm Cohen's recording reference and the θ/φ convention in BC-63-X1.
 - Check the eligibility counts in code.
+
+## 8. Kill test results (2026-11-26; label-free: no ds006171 seen/unseen label read)
+Numbers derived from Cohen's data (the training ceiling and the plant pattern's size) are held privately until 2026-12-08 (Cohen hold). `out/` is gitignored.
+
+**Step 1, montage retention: PASS.**
+- 31 subjects after the VEOG > 45% rule (sub-13, 14, 19 and 24 out).
+- Leave-one-subject-out present-vs-catch AUC: native 128 channels 0.587; mapped and symmetrised 0.645. Retention 1.67, one-sided lower bound 1.43.
+- **Surprise checked.** Mapped unsymmetrised gives 0.627. Native reduced to 5 bins gives 0.596. So the spline map onto 55 sites acts as spatial smoothing, which helps decoding across subjects. It is not a leak: only stimulus codes are used.
+- **Map rules fixed before any label:** 4 low-temporal Cohen sites are dropped (Ch 51, 52, 59, 60; more than 15° from any ds006171 electrode). This leaves 55 sites in 32 symmetrised groups (23 pairs, 9 midline). On smooth test fields over the kept sites, the median error is under 1% of the range and the maximum about 16%.
+
+**Step 2, planted transfer (200 runs, 31 subjects). Two result sets, both kept.**
+
+| Run | Early detection | Late detection | False calls, early / late |
+|---|---|---|---|
+| As run (first) | 0.79 | 0.805 | 0.025 / 0.01 |
+| To spec (second, same seed) | **0.815** | **1.00** | 0.02 / 0.05 |
+
+- **Monte Carlo SE is about 0.028**, so the two early rates do not differ.
+- **The first run deviated from §5–6 in three ways:**
+  - Bonferroni was used instead of Holm;
+  - the late plant was scaled with the early factor instead of the sourced P3b dz 1.67;
+  - a between-subject amplitude rule, a_s ~ N(1, sd_rel), was used that §6.2 did not state.
+- **Corrected after seeing 0.79** (Fable decision): the second run uses Holm and the late dz rule. The a_s rule is now written here.
+  - The between-subject SD is matched to the sourced dz 0.46. This figure is a univariate bilateral-ROI value (GitHub reanalysis), borrowed for a multivariate decoder output, so it is flagged.
+  - The late dz 1.67 is **not reachable**: the plant at the Pz-nearest site (0.92 µV) is below the sampling SD (1.78 µV). The late plant therefore has no between-subject spread, so late detection is optimistic.
+- **Sensitivity (reported, not gating; to-spec run):**
+  - Plant restricted to the posterior ROI groups: early 0.30, late 0.985.
+  - Half-size plant: early 0.785, late 1.00.
+  - Power is set by dz and N, not by plant size (the spread scales with the amplitude).
+  - **Realistic-case reading:** if the Gabor VAN is local to the posterior ROI, early detection is near-blind (0.30).
+- **Provenance.**
+  - The smoke run (10 runs, detection 1.0) used the script after the import fix only.
+  - The sensitivity variants were then added, and the first full run is `killtest_planted_asrun1.*`.
+  - The Holm and late-dz edits followed, and the to-spec run is `killtest_planted.*`.
+
+**Rule fixed now, before sealing (Fable):**
+- Positive calls are protected (false calls ≤ 0.05).
+- Early power is borderline (0.815 against 0.80), and near-blind in the ROI-local case.
+- So an early NO TRANSFER, or LATE ONLY, is reported as **uninformative about rival A** (a shared early signature). It is never evidence against it.
+- Late-only is not a legitimate reduction of the test: both windows stay, with Holm.
+
+**Still open before sealing (§7):**
+- prior-art search;
+- Cohen recording reference and θ/φ convention (the frame is confirmed by MNE's reader code; the reference is removed by the average reference);
+- eligibility counts;
+- Fable pre-seal review.
