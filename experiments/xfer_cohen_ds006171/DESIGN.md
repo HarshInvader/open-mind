@@ -110,3 +110,39 @@ Numbers derived from Cohen's data (the training ceiling and the plant pattern's 
 - Cohen recording reference and θ/φ convention (the frame is confirmed by MNE's reader code; the reference is removed by the average reference);
 - eligibility counts;
 - Fable pre-seal review.
+
+## 9. Pre-seal amendments (Fable pre-seal review, 2026-11-26). These override §4–§6 where they differ. `run.py` implements them.
+1. **§4 as actually run (the text is amended, nothing is re-prepped):**
+   - ds006171: photodiode-locked; baseline −200..0 ms; resampled to 256 Hz; 0.1–30 Hz FIR on the continuous data.
+   - Cohen: trigger-locked (display lag unknown); baseline −100..0 ms; 500 Hz; 30 Hz 4th-order Butterworth on 700 ms epochs; no software high-pass; 60 positioned channels, 55 kept.
+   - These mismatches, and the timing difference, bias toward a null, most in the early window. They cannot create a positive. No shifted-bin analyses.
+2. **Eligibility:**
+   - VEOG rejection on Gabor trials ≤ 45% (label-blind; leaves 31);
+   - and a median of ≥ 20 matched pairs over the 200 matchings.
+   - With fewer than 24 eligible: INCONCLUSIVE. Every exclusion is listed with its reason.
+3. **Decoder:** as in `killtest_planted.py`: one shrinkage LDA per window, trained on all Cohen subjects pooled, each z-scored within subject.
+   - Test features are z-scored per subject over all its kept Gabor trials (codes 11–22), once, before matching. Catch trials use the same mean and SD.
+   - This is transductive and label-free.
+4. **Statistics:**
+   - 10,000 sign-flips, with p = (1 + k)/(1 + n); a two-sided 95% percentile bootstrap (10,000); Holm over the two windows; fixed seeds.
+   - Calls: EARLY TRANSFER (both windows pass), EARLY ONLY (early passes, late fails; predicted by no rival), LATE ONLY, NO TRANSFER (neither passes and both CI upper bounds < 0.53), otherwise INCONCLUSIVE.
+5. **Reading of nulls:**
+   - NO TRANSFER excludes only transfer of about full-pattern size: the planted mean AUC is about 0.62, or 0.57 at half size.
+   - An effect local to the posterior ROI (planted mean AUC 0.509 early, 0.529 late) would also read as "no transfer", so it is **not excluded in either window**.
+   - An early null, or LATE ONLY, is uninformative about rival A (§8).
+6. **Rival F (generic evoked amplitude):** two pre-stated checks.
+   - **Unseen vs CR:** AUC of the decoder output on unseen Gabors vs catch trials reported unseen, with a CI.
+   - **Residual:** per subject, regress the decoder score on the score of a leave-one-subject-out present-vs-catch decoder (ds006171, same window and features), then take the matched AUC of the residual.
+   - **Rule:** a positive call is tagged "F not excluded" unless the residual passes one-sided p < .05. F cannot be fully separated from A.
+7. **Rival D (ocular):**
+   - Posterior groups are those whose mean site y < −0.25 (listed by `run.py check`). The Cohen decoder is retrained on them, and the matched AUC is recomputed.
+   - A positive call is tagged "ocular not excluded" unless posterior-only passes p < .05.
+   - The seen-vs-unseen AUC of VEOG peak-to-peak (−100..400 ms) is reported.
+8. **Rivals C and E:**
+   - The mean matched Δ ln c (hit − miss) is reported.
+   - The two per-hemifield group-mean AUCs must both exceed 0.5, or the call is tagged "hemifield".
+   - 1:1 within-hemifield matching balances hemifield, so lateralisation that survives symmetrisation cannot produce a positive.
+9. **Hold:** the prereg is public; results are private until 2026-12-08. Cohen-derived kill-test numbers are in a private appendix (SHA-256 below). `run.py` writes only to `out/`, which is gitignored.
+10. **Novelty:** provisional. The two bioRxiv preprints in PRIORART.md were not opened; the sealed text claims no novelty beyond "no cross-lab zero-shot transfer found in a search".
+11. **Answer join:** each trial is joined to its events.tsv stimulus row by code and onset (|onset − trigger/fs| < 5 ms, fs from the BDF header; the `sample` column has unparseable entries in every file and is not used). `run.py check` verified the join before sealing without reading any answer. The answer is the next 124/125 before the next stimulus code.
+   Private appendix: `.local/mind_r20_cohen_appendix.md` (hub), sha256 627f7e12af6c8b564674c9e9e19bdd8be132f34f42f616a1fe99343d9976268f.

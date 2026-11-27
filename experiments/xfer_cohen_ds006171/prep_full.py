@@ -5,7 +5,8 @@ DRAFT, not sealed. Reads stimulus codes 11-32 and photodiode 128 only (never 124
     python -I prep_full.py SUB [SUB ...]    # -> out/feat/<sub>.npz
     python -I prep_full.py all
 
-Per trial: mean voltage in 12 bins of 50 ms over 0-600 ms after the photodiode, for the native 128 EEG channels
+Per trial (stored with its stimulus-trigger sample `trig`, for joining answers after sealing, and VEOG p-p / HEOG
+step values for the ocular checks): mean voltage in 12 bins of 50 ms over 0-600 ms after the photodiode, for the native 128 EEG channels
 (average reference) and for the 60 Cohen positions (spherical-spline map of the 128, then average reference).
 Same photodiode rule, filter, epoching and trial rejection as ../ds006171_van/prep.py (ROI p-p 150 uV, VEOG 80 uV;
 the HEOG step flag is stored but the primary features are hemisphere-symmetrised, so it is not applied here).
@@ -151,9 +152,14 @@ def features(sub):
     rej_veog = np.ptp(veog[:, w], axis=1) > P.VEOG_PP
     rej_heog = P.step(heog[:, w], P.SF_OUT) > P.HEOG_STEP
     (OUT / "feat").mkdir(parents=True, exist_ok=True)
+    sel = ep.selection                                            # indices into the photodiode-ok trials (drops, if any)
+    con_ok, trig_ok = np.array(con)[ok_pd][sel], np.array([s for s, _, _ in trials])[ok_pd][sel]
+    assert len(con_ok) == len(fn) == len(trig_ok), sub
     np.savez_compressed(OUT / "feat" / f"{sub}.npz", native=fn, mapped=fm, code=ep.events[:, 2], side=side,
-                        sample=ep.events[:, 0], contrast=np.array(con)[ok_pd], keep=~(rej_roi | rej_veog),
-                        rej_roi=rej_roi, rej_veog=rej_veog, rej_heog=rej_heog, bad=np.array(bad, dtype=str))
+                        sample=ep.events[:, 0], trig=trig_ok, contrast=con_ok, keep=~(rej_roi | rej_veog),
+                        rej_roi=rej_roi, rej_veog=rej_veog, rej_heog=rej_heog, bad=np.array(bad, dtype=str),
+                        veog_pp=np.ptp(veog[:, w], axis=1).astype(np.float32),
+                        heog_step=P.step(heog[:, w], P.SF_OUT).astype(np.float32))
     print(f"{sub}: trials {len(ep)}, kept {int((~(rej_roi | rej_veog)).sum())}, bad {bad}", flush=True)
 
 
