@@ -32,3 +32,4 @@ Prereg: `docs/prereg/2026-11-25_sergent_eeg_five_models.md` (sealed 2026-11-25T1
   - Newly done: all 6 het0.89 cells and d1.0 B_bifurcation. With between-subject DMAX spread, every graded cell's 5-model call rate is still 0.00 (3-model: G_heavy 0.76, H_jitter_t 0.77, G_jitter_hi 0.04, H_gain 0.00). B_bifurcation recall stays 0.00 at d1.0 (3-model 0.37).
   - Remaining: d1.25 B_bifurcation (sensitivity only; it does not change the tier). Resumable with the same `capped.py sergent_gate run` command, about 25 min.
   - The summary is unchanged: **TIER 2** at d0.89.
+- **2026-11-27T00:02:14Z: design gate complete.** d1.25 B_bifurcation: 5-model call 0.00 (3-model 0.64). Bifurcation is never called at 5 models even at DMAX 1.25. Final pre-stream tier at d0.89: **TIER 2**. Next: one streaming pass, `stream_decode.py run` (tier guard checks the summary itself), then `rerun` → `measure` → `fit` → `readout` via `capped.py`.
