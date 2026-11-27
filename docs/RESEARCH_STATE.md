@@ -893,3 +893,7 @@ Ranked list. All four use data already on disk. Novelty is unverified until a ci
   3. **ORIGINAL (new):** a preregistered follow-up testing a late seen/unseen code against decision build-up. Stimulus-locked vs response-locked, RT-matched, with temporal generalisation and a planted-ramp kill test. Draft after the appendix; the design does not depend on the held outcome being public.
   4. Round 20 #3 audit: does late temporal generalisation survive a latency-jitter null?
   5. Round 20 #2 (needs a blind author) and #4 (likely drop) as before.
+- **ds006171 paradigm fact** (Melcón et al. 2024 methods, read 2026-11-27):
+  - The yes/no screen appears 250–350 ms after the 50 ms Gabor. The answer positions are randomised per trial (no motor preparation), and response time is unlimited.
+  - There is no screen trigger in the events.
+  - Any ds006171 analysis past 250 ms overlaps the report screen. Future designs on this dataset must treat post-250 ms effects as report-stage.
