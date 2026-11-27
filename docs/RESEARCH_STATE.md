@@ -873,3 +873,13 @@ The hub repo (`open-citizen-science`) has uncommitted `dist/` changes that belon
 ### Round 19 #3 (ds006171 bilateral unseen vs absent R) DROPPED (2026-11-26)
 - Label-free kill test: R half-width at R = 0 is 0.46 (criterion ≤ 0.12); correct calls 0.24 / 0.195 / 0.51 at R = 0 / 0.32 / 0.40. Dropped, as Fable predicted. Round 19 is now spent (#1, #2, #3 all dropped at kill test, before sealing).
 - Item 2 gate complete (TIER 2); streaming pass started. Next: Fable round 20 (new candidates), while streaming runs.
+
+### Fable round 20 (2026-11-26 ~19:20Z)
+Ranked list. All four use data already on disk. Novelty is unverified until a citation search is done.
+1. **ORIGINAL: zero-shot transfer** of a Cohen (masked-face) seen/unseen decoder to ds006171 (unmasked Gabor) seen/unseen, early 150–300 ms vs late 300–600 ms. Design draft: `experiments/xfer_cohen_ds006171/DESIGN.md`. Results fall under the Cohen hold.
+2. **ORIGINAL:** a ds006171-trained decoder applied to Cohen no-report face vs mask-only. Item 4's held outcome is already known to this thread, so the prereg needs a blind author, or the result is descriptive only.
+3. **AUDIT:** does the late "square" temporal-generalisation pattern survive a latency-jitter null on real data (ds006171 P3b, dz 1.67)?
+4. **ORIGINAL, weak:** does prestimulus alpha act on early evoked gain? Prior art is dense, so a likely drop.
+- **Download exception worth asking for later:** Cohen all-SOA report epochs, 1.12 GB, after the hold ends.
+
+**Item 2 streaming:** S10 ok. S11 was skipped by the sealed coding check (21 blocks, not 20; F1/F3 make this final). At least 18 decoded subjects are needed.
