@@ -10,10 +10,11 @@ Only the worker count changes:
 - analyse's literal Pool(4), replaced by a Pool capped at 3 workers.
 """
 import multiprocessing
+import os
 import sys
 from pathlib import Path
 
-CAP = 3
+CAP = min(3, int(os.environ.get("MIND_WORKERS", "3")))   # lower it when other Mind jobs run (cap is 3 in total)
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 

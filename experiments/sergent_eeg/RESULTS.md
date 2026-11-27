@@ -33,3 +33,8 @@ Prereg: `docs/prereg/2026-11-25_sergent_eeg_five_models.md` (sealed 2026-11-25T1
   - Remaining: d1.25 B_bifurcation (sensitivity only; it does not change the tier). Resumable with the same `capped.py sergent_gate run` command, about 25 min.
   - The summary is unchanged: **TIER 2** at d0.89.
 - **2026-11-27T00:02:14Z: design gate complete.** d1.25 B_bifurcation: 5-model call 0.00 (3-model 0.64). Bifurcation is never called at 5 models even at DMAX 1.25. Final pre-stream tier at d0.89: **TIER 2**. Next: one streaming pass, `stream_decode.py run` (tier guard checks the summary itself), then `rerun` → `measure` → `fit` → `readout` via `capped.py`.
+- **2026-11-27T00:36:45Z: streaming and measure done.**
+  - Streaming (one pass): 18 subjects ok. S4 and S11 were skipped (coding: block 21 problem). 18 is exactly the minimum.
+  - `capped.py analyse measure` → `out_real/measured.json` (frozen once written): 18 subjects, DMAX median **1.219**, log-SD **0.280**, 0 non-positive DMAX, none excluded.
+  - Next: `capped.py sergent_gate rerun` at the measured DMAX, then `summary`, `analyse fit` and `readout`.
+  - Orchestration change (unsealed): `capped.py` now reads `MIND_WORKERS` (≤ 3), so the rerun uses 2 workers while one other Mind job runs. Results do not depend on the worker count (see above).
