@@ -88,7 +88,7 @@ Numbers derived from Cohen's data (the training ceiling and the plant pattern's 
   - a between-subject amplitude rule, a_s ~ N(1, sd_rel), was used that §6.2 did not state.
 - **Corrected after seeing 0.79** (Fable decision): the second run uses Holm and the late dz rule. The a_s rule is now written here.
   - The between-subject SD is matched to the sourced dz 0.46. This figure is a univariate bilateral-ROI value (GitHub reanalysis), borrowed for a multivariate decoder output, so it is flagged.
-  - The late dz 1.67 is **not reachable**: the plant at the Pz-nearest site (0.92 µV) is below the sampling SD (1.78 µV). The late plant therefore has no between-subject spread, so late detection is optimistic.
+  - The late dz 1.67 is **not reachable**: the plant at the Pz-nearest site is smaller than its sampling SD (1.78 µV; the plant size is held, being Cohen-derived). The late plant therefore has no between-subject spread, so late detection is optimistic.
 - **Sensitivity (reported, not gating; to-spec run):**
   - Plant restricted to the posterior ROI groups: early 0.30, late 0.985.
   - Half-size plant: early 0.785, late 1.00.
