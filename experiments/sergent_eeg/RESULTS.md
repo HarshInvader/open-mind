@@ -38,3 +38,10 @@ Prereg: `docs/prereg/2026-11-25_sergent_eeg_five_models.md` (sealed 2026-11-25T1
   - `capped.py analyse measure` → `out_real/measured.json` (frozen once written): 18 subjects, DMAX median **1.219**, log-SD **0.280**, 0 non-positive DMAX, none excluded.
   - Next: `capped.py sergent_gate rerun` at the measured DMAX, then `summary`, `analyse fit` and `readout`.
   - Orchestration change (unsealed): `capped.py` now reads `MIND_WORKERS` (≤ 3), so the rerun uses 2 workers while one other Mind job runs. Results do not depend on the worker count (see above).
+- **2026-11-27T02:29:34Z: gate rerun at the measured DMAX (1.219) stopped at the 2 h limit, 4 cells done.**
+  - Done, 5-model call rate (3-model in brackets): B_bifurcation 0.00 (0.61), G_jitter_mid 0.00 (0.20), G_jitter_hi 0.00 (0.19), G_heavy 0.00 (0.73).
+  - Remaining: H_gain, H_jitter_t and the meas_het cell. Resuming with `capped.py sergent_gate rerun` (3 workers); finished cell files are skipped.
+- **2026-11-27T03:36:00Z: gate rerun at the measured DMAX complete; summary gives TIER 2.**
+  - All 6 meas cells have a 5-model call rate of 0.00. 3-model rates (in brackets) are descriptive only: H_jitter_t (0.69), H_gain (0.00), G_jitter_mid (0.20), G_jitter_hi (0.19), G_heavy (0.73), B_bifurcation (0.61). meas_het B_bifurcation is also 0.00 (3-model 0.74).
+  - The spec is met, but bifurcation recall is 0.00 < 0.80, so the tier is 2. readout can therefore only return a Model 3 call or UNRESOLVED (tier 2, low power).
+  - Next: `capped.py analyse fit` (3 workers), then `readout`, once.

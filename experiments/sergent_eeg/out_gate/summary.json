@@ -21,5 +21,17 @@
   "G_jitter_mid": 0.0,
   "H_gain": 0.0,
   "H_jitter_t": 0.0
+ },
+ "meas": {
+  "B_bifurcation": 0.0,
+  "G_heavy": 0.0,
+  "G_jitter_hi": 0.0,
+  "G_jitter_mid": 0.0,
+  "H_gain": 0.0,
+  "H_jitter_t": 0.0,
+  "TIER": 2
+ },
+ "meas_het": {
+  "B_bifurcation": 0.0
  }
 }
