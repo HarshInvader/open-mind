@@ -883,3 +883,13 @@ Ranked list. All four use data already on disk. Novelty is unverified until a ci
 - **Download exception worth asking for later:** Cohen all-SOA report epochs, 1.12 GB, after the hold ends.
 
 **Item 2 streaming:** S10 ok. S11 was skipped by the sealed coding check (21 blocks, not 20; F1/F3 make this final). At least 18 decoded subjects are needed.
+
+### 2026-11-27 (about 00:30–01:40Z)
+- **Item 2:** streaming done (18 ok; S4 and S11 skipped by the sealed coding check). Measure gives 18 subjects, DMAX median 1.219, log-SD 0.280. Gate rerun at the measured DMAX is running (2 workers). Then summary, fit and readout, once.
+- **Round 20 #1:** sealed (4c7397b, hashes 2026-11-27T00:30:41Z) and run once. **The outcome is held until 2026-12-08 (Cohen hold); it is not recorded here.** A post-hoc shuffled-label null through the full pipeline came out as expected. A Fable review of the reading is done (private notes).
+- **Ranked list now:**
+  1. Item 2: rerun → summary → fit → readout, once.
+  2. Round 20 #1 post-hoc appendix, labelled exploratory and held. Checks: present vs catch, FA vs CR, RT-matched pairs, VEOG to 600 ms, paired hemifield test, ds006171 ceiling.
+  3. **ORIGINAL (new):** a preregistered follow-up testing a late seen/unseen code against decision build-up. Stimulus-locked vs response-locked, RT-matched, with temporal generalisation and a planted-ramp kill test. Draft after the appendix; the design does not depend on the held outcome being public.
+  4. Round 20 #3 audit: does late temporal generalisation survive a latency-jitter null?
+  5. Round 20 #2 (needs a blind author) and #4 (likely drop) as before.
