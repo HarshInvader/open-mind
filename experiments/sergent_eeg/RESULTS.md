@@ -45,3 +45,4 @@ Prereg: `docs/prereg/2026-11-25_sergent_eeg_five_models.md` (sealed 2026-11-25T1
   - All 6 meas cells have a 5-model call rate of 0.00. 3-model rates (in brackets) are descriptive only: H_jitter_t (0.69), H_gain (0.00), G_jitter_mid (0.20), G_jitter_hi (0.19), G_heavy (0.73), B_bifurcation (0.61). meas_het B_bifurcation is also 0.00 (3-model 0.74).
   - The spec is met, but bifurcation recall is 0.00 < 0.80, so the tier is 2. readout can therefore only return a Model 3 call or UNRESOLVED (tier 2, low power).
   - Next: `capped.py analyse fit` (3 workers), then `readout`, once.
+- **2026-11-27T03:37:36Z: paused on owner request.** `analyse fit` was stopped after about 1.5 min, before any `lme_*.npz` was written. Nothing is partial: fit skips only complete files, so it restarts cleanly. Resume with `capped.py analyse fit`, then `readout`.
