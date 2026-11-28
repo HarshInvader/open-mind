@@ -1,12 +1,12 @@
 # Open Mind library
 
-Generated from `library.json` on 2026-11-25. Do not edit by hand.
+Generated from `library.json` on 2026-11-28. Do not edit by hand.
 
-245 entries: 52 read in full, 193 from the abstract only. Every DOI was opened and its title and authors checked.
+246 entries: 52 read in full, 194 from the abstract only. Every DOI was opened and its title and authors checked.
 
 Relevance: **core** bears on a current study; **useful** may shape one; **context** is background.
 
-## Theories tested (74)
+## Theories tested (75)
 
 ### A data-driven approach to identifying and evaluating connectivity-based neural correlates of conscious visual perception
 
@@ -181,6 +181,18 @@ King JR, Dehaene S (2014). *Trends in Cognitive Sciences*. [doi:10.1016/j.tics.2
 - **Limits:** Asks, but leaves open, which factors make operations appear diagonal or square.
 - **For us:** Baseline taxonomy for the TG-square specificity simulation.
 - **Touches:** tg_square_specificity
+
+### A mesoscale cortical lattice
+
+Boly M, Jeong M, Murace L, Driessen K, Findlay G, Albantakis L, Birn R, Cirelli C, Marshall W, Sasai S, Sporns O, Tononi G (2026). *bioRxiv*. [doi:10.64898/2026.11.24.768659](https://doi.org/10.64898/2026.11.24.768659). Preprint, abstract only, **useful**.
+
+- **Question:** What does whole-cortex functional connectivity look like near the mesoscale, at the level of vertices rather than parcels?
+- **Idea tested:** Keep only strong, short-range (3-20 mm) resting-state fMRI correlations between cortical vertices and examine their graph structure.
+- **Data and method:** Vertex-level resting-state fMRI correlation matrices from 151 Human Connectome Project 7T subjects; replications during movie watching, at 3T and in individuals scanned with precision fMRI.
+- **Results:** A partition between posterior-central cortex and prefrontal cortex along a belt just anterior to the central sulcus. Posterior-central cortex has dense local, hierarchical connectivity ('lattice cortex'); prefrontal connectivity is more distributed ('paralattice cortex'). A subset of vertices in higher lateral and medial lattice areas links the two. The partition largely matches a basic anatomical subdivision of the thalamus and associated basal ganglia and cerebellar circuits.
+- **Limits:** (abstract only) bioRxiv full text returned 429 and was not retried. Correlational fMRI with no measure of consciousness. From the integrated information theory group, which predicts a posterior, grid-like substrate, so the lattice/paralattice framing is not theory-neutral.
+- **For us:** An anatomical prior for the posterior-versus-prefrontal question in our theory scorecard: if the lattice map is released, test whether conscious-content decoding in open COGITATE fMRI sits in lattice vertices more than size-matched paralattice vertices, with the split fixed before looking.
+- **Touches:** theory_scorecard, constraint_ledger, C08
 
 ### Have grand theories of consciousness earned their keep?
 

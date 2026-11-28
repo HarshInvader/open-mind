@@ -91,3 +91,12 @@ Source: arXiv:2609.33366 (doi:10.48550/arXiv.2609.33366, full text read). Their 
 - **What is untested.** Whether the network measure carries anything beyond alpha power. Coherence comes from the cross-spectrum, which our multichannel phase-randomised surrogates keep, so it should count as spectral in the surrogate gate.
 - **Open data.** Chennu propofol EEG (task #21).
 - **Bears on a current study.** Yes, #8 (surrogate gate) as a classification note; a test would need a sealed prereg.
+
+## Added 2026-11-28 (paper watch)
+
+### Lattice versus paralattice cortex as a fixed split for posterior-versus-prefrontal tests (bears on the theory scorecard)
+
+- **Source.** Boly, ... Sporns, Tononi 2026, bioRxiv, doi:10.64898/2026.11.24.768659 (abstract only). Strong short-range resting-state connections in 151 HCP 7T subjects split cortex into a dense, hierarchical posterior-central "lattice" and a distributed prefrontal "paralattice".
+- **What is untested.** Whether conscious-content decoding sits in lattice vertices more than in size-matched paralattice vertices. This split comes from connectivity alone, so it is not chosen with the consciousness data in view, unlike the usual hand-drawn posterior and prefrontal ROIs.
+- **Open data.** COGITATE fMRI (its data account is still an owner step; see docs/ACCOUNTS.md) and the HCP. It needs the lattice map, which the abstract does not say is released.
+- **Bears on a current study.** Not yet. It would need a sealed prereg once the map is available.

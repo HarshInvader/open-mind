@@ -1,6 +1,6 @@
 {
  "_about": "Open Mind paper library. One record per paper or dataset. read_depth says whether the full text or only the abstract was read. verified=true means the DOI was opened and its title and authors matched (Crossref or DataCite, 2026-11-19); numbers come from the text that was read. Generated LIBRARY.md and site/library.html read this file.",
- "updated": "2026-11-25",
+ "updated": "2026-11-28",
  "topics": [
   "Theories tested",
   "Measuring consciousness",
@@ -6231,6 +6231,33 @@
     "round 18 item 3",
     "cross-paradigm decoder"
    ]
+  },
+  {
+   "id": "boly-2026-mesoscale-cortical-lattice",
+   "title": "A mesoscale cortical lattice",
+   "authors": "Boly M, Jeong M, Murace L, Driessen K, Findlay G, Albantakis L, Birn R, Cirelli C, Marshall W, Sasai S, Sporns O, Tononi G",
+   "year": 2026,
+   "venue": "bioRxiv",
+   "doi": "10.64898/2026.11.24.768659",
+   "url": "https://doi.org/10.64898/2026.11.24.768659",
+   "kind": "Preprint",
+   "topic": "Theories tested",
+   "read_depth": "abstract",
+   "question": "What does whole-cortex functional connectivity look like near the mesoscale, at the level of vertices rather than parcels?",
+   "tried": "Keep only strong, short-range (3-20 mm) resting-state fMRI correlations between cortical vertices and examine their graph structure.",
+   "method_data": "Vertex-level resting-state fMRI correlation matrices from 151 Human Connectome Project 7T subjects; replications during movie watching, at 3T and in individuals scanned with precision fMRI.",
+   "key_results": "A partition between posterior-central cortex and prefrontal cortex along a belt just anterior to the central sulcus. Posterior-central cortex has dense local, hierarchical connectivity ('lattice cortex'); prefrontal connectivity is more distributed ('paralattice cortex'). A subset of vertices in higher lateral and medial lattice areas links the two. The partition largely matches a basic anatomical subdivision of the thalamus and associated basal ganglia and cerebellar circuits.",
+   "limits": "(abstract only) bioRxiv full text returned 429 and was not retried. Correlational fMRI with no measure of consciousness. From the integrated information theory group, which predicts a posterior, grid-like substrate, so the lattice/paralattice framing is not theory-neutral.",
+   "ideas_for_us": "An anatomical prior for the posterior-versus-prefrontal question in our theory scorecard: if the lattice map is released, test whether conscious-content decoding in open COGITATE fMRI sits in lattice vertices more than size-matched paralattice vertices, with the split fixed before looking.",
+   "touches": [
+    "theory_scorecard",
+    "constraint_ledger",
+    "C08"
+   ],
+   "relevance": "useful",
+   "in_news": false,
+   "added": "2026-11-28",
+   "verified": true
   }
  ]
 }
